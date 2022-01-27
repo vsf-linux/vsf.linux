@@ -43,9 +43,6 @@
     <Filter Include="vsf\service\heap">
       <UniqueIdentifier>{729e011a-7470-4abd-8f0d-f7238adc6e88}</UniqueIdentifier>
     </Filter>
-    <Filter Include="usrapp">
-      <UniqueIdentifier>{923bd60b-ab0d-419d-9593-9e5197a6513e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="vsf\component">
       <UniqueIdentifier>{14fd5089-ee4f-48ef-86c6-b6a181482b5b}</UniqueIdentifier>
     </Filter>
@@ -151,12 +148,6 @@
     <Filter Include="vsf\component\mal\driver\mim_mal">
       <UniqueIdentifier>{f23d0275-0e2b-47c5-8826-646665e344dc}</UniqueIdentifier>
     </Filter>
-    <Filter Include="usrapp\config">
-      <UniqueIdentifier>{3411cde8-49f6-4b42-a579-309b58c60276}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="usrapp\demo">
-      <UniqueIdentifier>{96584acd-ec84-4f2c-92e8-fe915a96c865}</UniqueIdentifier>
-    </Filter>
     <Filter Include="vsf\hal">
       <UniqueIdentifier>{ce83bca0-746b-470b-b45c-bbd1948088cb}</UniqueIdentifier>
     </Filter>
@@ -195,9 +186,6 @@
     </Filter>
     <Filter Include="vsf\osa_service\msg_tree">
       <UniqueIdentifier>{713a8449-b95a-45cd-bc22-b2fd8ca99a76}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="usrapp\demo\common">
-      <UniqueIdentifier>{0c93947b-9457-4311-b604-cec4f89df0bb}</UniqueIdentifier>
     </Filter>
     <Filter Include="vsf\component\av">
       <UniqueIdentifier>{875c3863-d532-449e-aae1-c5e522bff330}</UniqueIdentifier>
@@ -454,9 +442,6 @@
     <Filter Include="vsf\component\3rd-party\lwip\port">
       <UniqueIdentifier>{7e6a67f8-43ac-4d42-a5d3-9ebb1ec7ca4c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="usrapp\demo\lwip_demo">
-      <UniqueIdentifier>{1156c2e5-9595-4816-9ea7-5e9ba5c4caa4}</UniqueIdentifier>
-    </Filter>
     <Filter Include="vsf\component\crypto">
       <UniqueIdentifier>{270587e0-572c-4c46-9608-b3b54844bb21}</UniqueIdentifier>
     </Filter>
@@ -673,14 +658,26 @@
     <Filter Include="vsf\shell\sys\linux\include\libusb">
       <UniqueIdentifier>{784b5957-573e-44c4-9a61-b945c0abc23d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="usrapp\config\target">
-      <UniqueIdentifier>{7a0bf13b-5d81-4073-8ec0-eeb513a736b7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="usrapp\demo\linux_demo">
-      <UniqueIdentifier>{bdef3085-2c67-4ad5-8d54-fdc92e9bfd51}</UniqueIdentifier>
-    </Filter>
     <Filter Include="vsf\service\simple_stream\queue_stream">
       <UniqueIdentifier>{0c37687f-ffae-4fbe-9d1f-ffe4b61847f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="config">
+      <UniqueIdentifier>{6b9636e5-4193-4bc4-91b9-1b5c7b8e7976}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application">
+      <UniqueIdentifier>{498c9fc9-5f6c-435b-889e-761dda41ec44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="config\target">
+      <UniqueIdentifier>{265ebe6a-dc37-4d1f-9201-e5eda32b57ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\common">
+      <UniqueIdentifier>{fe8346e1-2695-4651-89b2-e631f691edf1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\linux_demo">
+      <UniqueIdentifier>{6513e7a6-e11a-4355-918f-bb18f7826795}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\lwip_demo">
+      <UniqueIdentifier>{250cfb9d-06ba-45b7-92df-93b4be102974}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -1779,32 +1776,32 @@
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\libusb\libusb.h">
       <Filter>vsf\shell\sys\linux\include\libusb</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\vsf\example\template\demo\common\usrapp_audio_common.h">
-      <Filter>usrapp\demo\common</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\vsf\example\template\demo\common\usrapp_common.h">
-      <Filter>usrapp\demo\common</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\vsf\example\template\demo\common\usrapp_net_common.h">
-      <Filter>usrapp\demo\common</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\vsf\example\template\demo\common\usrapp_ui_common.h">
-      <Filter>usrapp\demo\common</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\vsf\example\template\demo\common\usrapp_usbd_common.h">
-      <Filter>usrapp\demo\common</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\vsf\example\template\demo\common\usrapp_usbh_common.h">
-      <Filter>usrapp\demo\common</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\config\vsf_usr_cfg.h">
-      <Filter>usrapp\config</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\config\target\vsf_usr_cfg_win.h">
-      <Filter>usrapp\config\target</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\vsf\source\service\simple_stream\queue_stream\vsf_queue_stream.h">
       <Filter>vsf\service\simple_stream\queue_stream</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\config\vsf_usr_cfg.h">
+      <Filter>config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\config\target\vsf_usr_cfg_win.h">
+      <Filter>config\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\example\template\demo\common\usrapp_audio_common.h">
+      <Filter>application\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\example\template\demo\common\usrapp_common.h">
+      <Filter>application\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\example\template\demo\common\usrapp_net_common.h">
+      <Filter>application\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\example\template\demo\common\usrapp_ui_common.h">
+      <Filter>application\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\example\template\demo\common\usrapp_usbd_common.h">
+      <Filter>application\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\example\template\demo\common\usrapp_usbh_common.h">
+      <Filter>application\common</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -2819,41 +2816,41 @@
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\devfs\vsf_linux_devfs.c">
       <Filter>vsf\shell\sys\linux\kernel\fs\vfs\devfs</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\vsf\example\template\demo\common\usrapp_audio_common.c">
-      <Filter>usrapp\demo\common</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\example\template\demo\common\usrapp_common.c">
-      <Filter>usrapp\demo\common</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\example\template\demo\common\usrapp_net_common.c">
-      <Filter>usrapp\demo\common</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\example\template\demo\common\usrapp_ui_common.c">
-      <Filter>usrapp\demo\common</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\example\template\demo\common\usrapp_usbd_common.c">
-      <Filter>usrapp\demo\common</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\example\template\demo\common\usrapp_usbh_common.c">
-      <Filter>usrapp\demo\common</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\example\template\demo\lwip_demo\lwip_demo.c">
-      <Filter>usrapp\demo\lwip_demo</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\demo\vsf_main.c">
-      <Filter>usrapp\demo</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\example\template\demo\linux_demo\libusb_demo.c">
-      <Filter>usrapp\demo\linux_demo</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\example\template\demo\linux_demo\mount_demo.c">
-      <Filter>usrapp\demo\linux_demo</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\vsf\source\kernel\task\vsf_task.c">
       <Filter>vsf\kernel\task</Filter>
     </ClCompile>
     <ClCompile Include="..\..\vsf\source\service\simple_stream\queue_stream\vsf_queue_stream.c">
       <Filter>vsf\service\simple_stream\queue_stream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\example\template\demo\common\usrapp_audio_common.c">
+      <Filter>application\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\example\template\demo\common\usrapp_common.c">
+      <Filter>application\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\example\template\demo\common\usrapp_net_common.c">
+      <Filter>application\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\example\template\demo\common\usrapp_ui_common.c">
+      <Filter>application\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\example\template\demo\common\usrapp_usbd_common.c">
+      <Filter>application\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\example\template\demo\common\usrapp_usbh_common.c">
+      <Filter>application\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\example\template\demo\linux_demo\libusb_demo.c">
+      <Filter>application\linux_demo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\example\template\demo\linux_demo\mount_demo.c">
+      <Filter>application\linux_demo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\example\template\demo\lwip_demo\lwip_demo.c">
+      <Filter>application\lwip_demo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\vsf_main.c">
+      <Filter>application</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

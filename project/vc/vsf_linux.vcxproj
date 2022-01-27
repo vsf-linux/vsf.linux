@@ -387,7 +387,7 @@
     <ClInclude Include="..\..\vsf\source\vsf_cfg.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\demo\vsf_main.c" />
+    <ClCompile Include="..\..\application\vsf_main.c" />
     <ClCompile Include="..\..\vsf\example\template\demo\common\usrapp_audio_common.c" />
     <ClCompile Include="..\..\vsf\example\template\demo\common\usrapp_common.c" />
     <ClCompile Include="..\..\vsf\example\template\demo\common\usrapp_net_common.c" />
