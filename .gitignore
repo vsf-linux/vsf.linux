@@ -1,0 +1,33 @@
+# private user configurations files(mdk will generate user configuration files)
+*.SimonQian
+
+#basic compiler output
+*.o
+*.obj
+*.hex
+*.map
+
+# for llvm
+*.d
+
+# for visual studio
+.vs
+*.user
+
+# for cmake
+CMakeFiles
+CmakeCache.txt
+
+# for iar
+.metadata
+*.ewt
+*.dep
+
+# for mdk
+*.lst
+*.iex
+*.scvd
+
+# for vscode
+.cortex-debug.registers.state.json
+.cortex-debug.peripherals.state.json

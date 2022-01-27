@@ -1,0 +1,3 @@
+[submodule "vsf"]
+	path = vsf
+	url = https://github.com/vsfteam/vsf
