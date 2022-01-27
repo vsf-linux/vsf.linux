@@ -706,6 +706,18 @@
     <Filter Include="application\3rd-party\ncurses\raw\ncurses\trace">
       <UniqueIdentifier>{a43ba84d-d287-4ac3-9c3a-fc24d430bf3c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="application\3rd-party\less">
+      <UniqueIdentifier>{4e39b441-15ab-4d37-a66d-d1296c0faf4e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\less\raw">
+      <UniqueIdentifier>{ef15d893-df89-4be0-bf10-065da29f5d08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\less\port">
+      <UniqueIdentifier>{a02ed001-19ac-416c-8904-712b03423052}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\less\autogen">
+      <UniqueIdentifier>{ab023237-12be-44ea-bcd6-d790bc41bbc9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vsf\source\vsf.h">
@@ -1856,6 +1868,45 @@
     </ClInclude>
     <ClInclude Include="..\..\application\3rd-party\ncurses\awk\unctrl.h">
       <Filter>application\3rd-party\ncurses\awk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\less\port\defines.h">
+      <Filter>application\3rd-party\less\port</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\less\raw\charset.h">
+      <Filter>application\3rd-party\less\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\less\raw\cmd.h">
+      <Filter>application\3rd-party\less\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\less\raw\less.h">
+      <Filter>application\3rd-party\less\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\less\raw\lesskey.h">
+      <Filter>application\3rd-party\less\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\less\raw\lglob.h">
+      <Filter>application\3rd-party\less\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\less\raw\option.h">
+      <Filter>application\3rd-party\less\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\less\raw\pattern.h">
+      <Filter>application\3rd-party\less\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\less\raw\pckeys.h">
+      <Filter>application\3rd-party\less\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\less\raw\position.h">
+      <Filter>application\3rd-party\less\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\less\raw\regexp.h">
+      <Filter>application\3rd-party\less\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\less\raw\xbuf.h">
+      <Filter>application\3rd-party\less\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\less\autogen\funcs.h">
+      <Filter>application\3rd-party\less\autogen</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -3391,6 +3442,123 @@
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\trace\visbuf.c">
       <Filter>application\3rd-party\ncurses\raw\ncurses\trace</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\less\raw\brac.c">
+      <Filter>application\3rd-party\less\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\less\raw\ch.c">
+      <Filter>application\3rd-party\less\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\less\raw\charset.c">
+      <Filter>application\3rd-party\less\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\less\raw\cmdbuf.c">
+      <Filter>application\3rd-party\less\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\less\raw\command.c">
+      <Filter>application\3rd-party\less\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\less\raw\cvt.c">
+      <Filter>application\3rd-party\less\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\less\raw\decode.c">
+      <Filter>application\3rd-party\less\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\less\raw\edit.c">
+      <Filter>application\3rd-party\less\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\less\raw\filename.c">
+      <Filter>application\3rd-party\less\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\less\raw\forwback.c">
+      <Filter>application\3rd-party\less\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\less\raw\ifile.c">
+      <Filter>application\3rd-party\less\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\less\raw\input.c">
+      <Filter>application\3rd-party\less\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\less\raw\jump.c">
+      <Filter>application\3rd-party\less\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\less\raw\lessecho.c">
+      <Filter>application\3rd-party\less\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\less\raw\lesskey.c">
+      <Filter>application\3rd-party\less\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\less\raw\lesskey_parse.c">
+      <Filter>application\3rd-party\less\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\less\raw\line.c">
+      <Filter>application\3rd-party\less\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\less\raw\linenum.c">
+      <Filter>application\3rd-party\less\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\less\raw\lsystem.c">
+      <Filter>application\3rd-party\less\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\less\raw\main.c">
+      <Filter>application\3rd-party\less\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\less\raw\mark.c">
+      <Filter>application\3rd-party\less\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\less\raw\optfunc.c">
+      <Filter>application\3rd-party\less\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\less\raw\option.c">
+      <Filter>application\3rd-party\less\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\less\raw\opttbl.c">
+      <Filter>application\3rd-party\less\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\less\raw\os.c">
+      <Filter>application\3rd-party\less\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\less\raw\output.c">
+      <Filter>application\3rd-party\less\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\less\raw\pattern.c">
+      <Filter>application\3rd-party\less\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\less\raw\position.c">
+      <Filter>application\3rd-party\less\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\less\raw\prompt.c">
+      <Filter>application\3rd-party\less\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\less\raw\regexp.c">
+      <Filter>application\3rd-party\less\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\less\raw\screen.c">
+      <Filter>application\3rd-party\less\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\less\raw\scrsize.c">
+      <Filter>application\3rd-party\less\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\less\raw\search.c">
+      <Filter>application\3rd-party\less\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\less\raw\signal.c">
+      <Filter>application\3rd-party\less\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\less\raw\tags.c">
+      <Filter>application\3rd-party\less\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\less\raw\ttyin.c">
+      <Filter>application\3rd-party\less\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\less\raw\version.c">
+      <Filter>application\3rd-party\less\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\less\raw\xbuf.c">
+      <Filter>application\3rd-party\less\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\less\autogen\help.c">
+      <Filter>application\3rd-party\less\autogen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
