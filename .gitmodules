@@ -4,3 +4,6 @@
 [submodule "application/3rd-party/ncurses/raw"]
 	path = application/3rd-party/ncurses/raw
 	url = ../ncurses
+[submodule "application/3rd-party/less/raw"]
+	path = application/3rd-party/less/raw
+	url = ../less
