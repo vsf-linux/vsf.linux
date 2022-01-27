@@ -277,7 +277,7 @@
 #define HAVE_POLL 1
 
 /* Define to 1 if you have the `popen' function. */
-#undef HAVE_POPEN
+#define HAVE_POPEN 1
 
 /* POSIX regcomp() and regex.h */
 #undef HAVE_POSIX_REGCOMP
