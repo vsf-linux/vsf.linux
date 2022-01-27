@@ -679,6 +679,33 @@
     <Filter Include="application\lwip_demo">
       <UniqueIdentifier>{250cfb9d-06ba-45b7-92df-93b4be102974}</UniqueIdentifier>
     </Filter>
+    <Filter Include="application\3rd-party">
+      <UniqueIdentifier>{bff067ae-7ad6-42c8-8d4f-be9441b9c908}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\ncurses">
+      <UniqueIdentifier>{06a4d769-5595-4cc6-8c3f-edd8f8acfec3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\ncurses\raw">
+      <UniqueIdentifier>{79295f03-1e8e-4299-a060-a94cd824437c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\ncurses\raw\ncurses">
+      <UniqueIdentifier>{9ba8494c-58ac-4fe2-8b54-5f4a02af9ae7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\ncurses\raw\ncurses\base">
+      <UniqueIdentifier>{e5b79fb7-3a3f-44aa-95ec-f02e4a8d0b89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\ncurses\raw\ncurses\tinfo">
+      <UniqueIdentifier>{17224862-b520-4658-9c7b-1e08d07a9dac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\ncurses\raw\ncurses\tty">
+      <UniqueIdentifier>{1bc3ebb9-bba0-4661-a0a1-ea6fee520ae7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\ncurses\awk">
+      <UniqueIdentifier>{87b4907d-a227-43c7-99fe-677b1a051a74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\ncurses\raw\ncurses\trace">
+      <UniqueIdentifier>{a43ba84d-d287-4ac3-9c3a-fc24d430bf3c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vsf\source\vsf.h">
@@ -1803,6 +1830,33 @@
     <ClInclude Include="..\..\vsf\example\template\demo\common\usrapp_usbh_common.h">
       <Filter>application\common</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\ncurses\awk\curses.h">
+      <Filter>application\3rd-party\ncurses\awk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\ncurses\awk\hashsize.h">
+      <Filter>application\3rd-party\ncurses\awk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\ncurses\awk\init_keytry.h">
+      <Filter>application\3rd-party\ncurses\awk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\ncurses\awk\ncurses_cfg.h">
+      <Filter>application\3rd-party\ncurses\awk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\ncurses\awk\ncurses_def.h">
+      <Filter>application\3rd-party\ncurses\awk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\ncurses\awk\ncurses_dll.h">
+      <Filter>application\3rd-party\ncurses\awk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\ncurses\awk\term.h">
+      <Filter>application\3rd-party\ncurses\awk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\ncurses\awk\termcap.h">
+      <Filter>application\3rd-party\ncurses\awk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\ncurses\awk\unctrl.h">
+      <Filter>application\3rd-party\ncurses\awk</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\vsf\source\utilities\template\vsf_bitmap.c">
@@ -2851,6 +2905,492 @@
     </ClCompile>
     <ClCompile Include="..\..\application\vsf_main.c">
       <Filter>application</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\define_key.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\key_defined.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\keybound.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\keyok.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\legacy_coding.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_addch.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_addstr.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_beep.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_bkgd.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_box.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_chgat.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_clear.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_clearok.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_clrbot.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_clreol.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_color.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_colorset.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_delch.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_delwin.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_dft_fgbg.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_driver.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_echo.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_endwin.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_erase.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_flash.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_freeall.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_getch.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_getstr.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_hline.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_immedok.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_inchstr.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_initscr.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_insch.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_insdel.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_insnstr.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_instr.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_isendwin.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_leaveok.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_mouse.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_move.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_mvwin.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_newterm.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_newwin.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_nl.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_overlay.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_pad.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_printw.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_redrawln.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_refresh.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_restart.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_scanw.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_screen.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_scroll.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_scrollok.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_scrreg.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_set_term.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_slk.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_slkatr_set.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_slkatrof.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_slkatron.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_slkatrset.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_slkattr.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_slkclear.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_slkcolor.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_slkinit.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_slklab.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_slkrefr.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_slkset.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_slktouch.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_touch.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_ungetch.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_vline.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_wattroff.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_wattron.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_winch.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_window.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\nc_panel.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\new_pair.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\resizeterm.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\safe_sprintf.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\sigaction.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\tries.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\use_window.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\version.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\vsscanf.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\wresize.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tty\hardscroll.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\tty</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tty\hashmap.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\tty</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tty\lib_mvcur.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\tty</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tty\lib_tstp.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\tty</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tty\lib_twait.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\tty</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tty\lib_vidattr.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\tty</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tty\tty_update.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\tty</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\access.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\tinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\add_tries.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\tinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\alloc_entry.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\tinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\alloc_ttype.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\tinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\captoinfo.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\tinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\comp_error.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\tinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\comp_expand.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\tinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\comp_hash.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\tinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\comp_parse.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\tinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\comp_scan.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\tinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\db_iterator.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\tinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\doalloc.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\tinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\entries.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\tinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\free_ttype.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\tinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\getenv_num.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\tinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\hashed_db.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\tinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\home_terminfo.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\tinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\init_keytry.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\tinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\lib_acs.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\tinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\lib_baudrate.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\tinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\lib_cur_term.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\tinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\lib_data.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\tinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\lib_has_cap.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\tinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\lib_kernel.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\tinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\lib_longname.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\tinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\lib_napms.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\tinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\lib_options.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\tinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\lib_print.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\tinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\lib_raw.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\tinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\lib_setup.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\tinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\lib_termcap.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\tinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\lib_termname.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\tinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\lib_tgoto.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\tinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\lib_ti.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\tinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\lib_tparm.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\tinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\lib_tputs.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\tinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\lib_ttyflags.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\tinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\lib_win32con.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\tinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\lib_win32util.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\tinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\make_hash.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\tinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\make_keys.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\tinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\name_match.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\tinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\obsolete.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\tinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\parse_entry.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\tinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\read_entry.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\tinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\read_termcap.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\tinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\strings.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\tinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\tinfo_driver.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\tinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\trim_sgr0.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\tinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\use_screen.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\tinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\write_entry.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\tinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\awk\codes.c">
+      <Filter>application\3rd-party\ncurses\awk</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\awk\comp_captab.c">
+      <Filter>application\3rd-party\ncurses\awk</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\awk\comp_userdefs.c">
+      <Filter>application\3rd-party\ncurses\awk</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\awk\fallback.c">
+      <Filter>application\3rd-party\ncurses\awk</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\awk\lib_gen.c">
+      <Filter>application\3rd-party\ncurses\awk</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\awk\unctrl.c">
+      <Filter>application\3rd-party\ncurses\awk</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\awk\names.c">
+      <Filter>application\3rd-party\ncurses\awk</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\trace\lib_trace.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\trace</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\trace\lib_traceatr.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\trace</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\trace\lib_tracebits.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\trace</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\trace\lib_tracechr.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\trace</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\trace\lib_tracedmp.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\trace</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\trace\lib_tracemse.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\trace</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\trace\trace_buf.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\trace</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\trace\trace_tries.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\trace</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\trace\trace_xnames.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\trace</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\trace\varargs.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\trace</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\trace\visbuf.c">
+      <Filter>application\3rd-party\ncurses\raw\ncurses\trace</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

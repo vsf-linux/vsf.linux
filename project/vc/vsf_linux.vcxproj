@@ -11,6 +11,15 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\application\3rd-party\ncurses\awk\curses.h" />
+    <ClInclude Include="..\..\application\3rd-party\ncurses\awk\hashsize.h" />
+    <ClInclude Include="..\..\application\3rd-party\ncurses\awk\init_keytry.h" />
+    <ClInclude Include="..\..\application\3rd-party\ncurses\awk\ncurses_cfg.h" />
+    <ClInclude Include="..\..\application\3rd-party\ncurses\awk\ncurses_def.h" />
+    <ClInclude Include="..\..\application\3rd-party\ncurses\awk\ncurses_dll.h" />
+    <ClInclude Include="..\..\application\3rd-party\ncurses\awk\term.h" />
+    <ClInclude Include="..\..\application\3rd-party\ncurses\awk\termcap.h" />
+    <ClInclude Include="..\..\application\3rd-party\ncurses\awk\unctrl.h" />
     <ClInclude Include="..\..\config\target\vsf_usr_cfg_win.h" />
     <ClInclude Include="..\..\config\vsf_usr_cfg.h" />
     <ClInclude Include="..\..\vsf\example\template\demo\common\usrapp_audio_common.h" />
@@ -387,6 +396,183 @@
     <ClInclude Include="..\..\vsf\source\vsf_cfg.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\awk\codes.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\awk\comp_captab.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\awk\comp_userdefs.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\awk\fallback.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\awk\lib_gen.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\awk\names.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\awk\unctrl.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\define_key.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\keybound.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\keyok.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\key_defined.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\legacy_coding.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_addch.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_addstr.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_beep.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_bkgd.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_box.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_chgat.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_clear.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_clearok.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_clrbot.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_clreol.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_color.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_colorset.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_delch.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_delwin.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_dft_fgbg.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_driver.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_echo.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_endwin.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_erase.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_flash.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_freeall.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_getch.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_getstr.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_hline.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_immedok.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_inchstr.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_initscr.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_insch.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_insdel.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_insnstr.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_instr.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_isendwin.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_leaveok.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_mouse.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_move.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_mvwin.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_newterm.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_newwin.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_nl.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_overlay.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_pad.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_printw.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_redrawln.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_refresh.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_restart.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_scanw.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_screen.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_scroll.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_scrollok.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_scrreg.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_set_term.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_slk.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_slkatrof.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_slkatron.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_slkatrset.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_slkatr_set.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_slkattr.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_slkclear.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_slkcolor.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_slkinit.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_slklab.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_slkrefr.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_slkset.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_slktouch.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_touch.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_ungetch.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_vline.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_wattroff.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_wattron.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_winch.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\lib_window.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\nc_panel.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\new_pair.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\resizeterm.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\safe_sprintf.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\sigaction.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\tries.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\use_window.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\version.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\vsscanf.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\base\wresize.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\access.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\add_tries.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\alloc_entry.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\alloc_ttype.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\captoinfo.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\comp_error.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\comp_expand.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\comp_hash.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\comp_parse.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\comp_scan.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\db_iterator.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\doalloc.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\entries.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\free_ttype.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\getenv_num.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\hashed_db.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\home_terminfo.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\init_keytry.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\lib_acs.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\lib_baudrate.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\lib_cur_term.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\lib_data.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\lib_has_cap.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\lib_kernel.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\lib_longname.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\lib_napms.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\lib_options.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\lib_print.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\lib_raw.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\lib_setup.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\lib_termcap.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\lib_termname.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\lib_tgoto.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\lib_ti.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\lib_tparm.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\lib_tputs.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\lib_ttyflags.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\lib_win32con.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\lib_win32util.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\make_hash.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\make_keys.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\name_match.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\obsolete.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\parse_entry.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\read_entry.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\read_termcap.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\strings.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\tinfo_driver.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\trim_sgr0.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\use_screen.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tinfo\write_entry.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\trace\lib_trace.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\trace\lib_traceatr.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\trace\lib_tracebits.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\trace\lib_tracechr.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\trace\lib_tracedmp.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\trace\lib_tracemse.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\trace\trace_buf.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\trace\trace_tries.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\trace\trace_xnames.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\trace\varargs.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\trace\visbuf.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tty\hardscroll.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tty\hashmap.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tty\lib_mvcur.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tty\lib_tstp.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tty\lib_twait.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tty\lib_vidattr.c" />
+    <ClCompile Include="..\..\application\3rd-party\ncurses\raw\ncurses\tty\tty_update.c" />
     <ClCompile Include="..\..\application\vsf_main.c" />
     <ClCompile Include="..\..\vsf\example\template\demo\common\usrapp_audio_common.c" />
     <ClCompile Include="..\..\vsf\example\template\demo\common\usrapp_common.c" />
@@ -798,7 +984,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>__VSF__;__CPU_X86__;__WIN__;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\vsf\example\template\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\config\3rd-party\lwip;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;$(ProjectDir)..\..\vsf\source\component\3rd-party\lwip\raw\src\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\lwip\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\lwip\port\vsf;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\ncurses\awk;$(ProjectDir)..\..\application\3rd-party\ncurses\raw\include;$(ProjectDir)..\..\application\3rd-party\ncurses\raw\ncurses;$(ProjectDir)..\..\vsf\example\template\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\config\3rd-party\lwip;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;$(ProjectDir)..\..\vsf\source\component\3rd-party\lwip\raw\src\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\lwip\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\lwip\port\vsf;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-fms-extensions %(AdditionalOptions)</AdditionalOptions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <ExceptionHandling>false</ExceptionHandling>
