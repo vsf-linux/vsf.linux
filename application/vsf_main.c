@@ -34,6 +34,9 @@ int vsf_linux_create_fhs(void)
     busybox_bind(VSF_LINUX_CFG_BIN_PATH "/mount", mount_main);
 #endif
 
+    extern int less_main(int argc, char *argv[]);
+    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/less", less_main);
+
     return 0;
 }
 

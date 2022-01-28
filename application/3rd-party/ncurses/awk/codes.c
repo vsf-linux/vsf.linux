@@ -59,7 +59,11 @@ static const short _nc_offset_boolcodes[] = {
 45, 48, 51, 54, 57, 60, 63, 66, 69, 72, 75, 78, 81, 84, 87,
 90, 93, 96, 99, 102, 105, 108, 1401, 1404, 1407, 1422, 1425, 1443, 1446, };
 
+#ifdef __VSF__
+#	define ptr_boolcodes		(ncurses_ctx->codes.__ptr_boolcodes)
+#else
 static NCURSES_CONST char ** ptr_boolcodes = 0;
+#endif
 
 static const short _nc_offset_numcodes[] = {
 111, 114, 117, 120, 123, 126,
@@ -67,7 +71,11 @@ static const short _nc_offset_numcodes[] = {
 165, 168, 171, 174, 177, 180, 183, 186, 189, 192, 195, 198,
 201, 204, 207, 1398, 1410, 1413, 1428, 1431, 1434, };
 
+#ifdef __VSF__
+#	define ptr_numcodes			(ncurses_ctx->codes.__ptr_numcodes)
+#else
 static NCURSES_CONST char ** ptr_numcodes = 0;
+#endif
 
 static const short _nc_offset_strcodes[] = {
 210, 213, 216, 219, 222, 225, 228, 231, 234,
@@ -109,7 +117,11 @@ static const short _nc_offset_strcodes[] = {
 1455, 1458, 1461, 1464, 1467, 1470, 1473, 1476, 1479, 1482, 1485,
 1488, };
 
+#ifdef __VSF__
+#	define ptr_strcodes			(ncurses_ctx->codes.__ptr_strcodes)
+#else
 static NCURSES_CONST char ** ptr_strcodes = 0;
+#endif
 
 
 static IT *

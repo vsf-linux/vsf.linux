@@ -52,10 +52,26 @@ extern "C"
 #undef  NCURSES_OSPEED
 #define NCURSES_OSPEED short
 
+#ifdef __VSF__
+struct ncurses_termcap_ctx_t {
+    NCURSES_EXPORT_VAR(char) __PC;
+    NCURSES_EXPORT_VAR(char *) __UP;
+    NCURSES_EXPORT_VAR(char *) __BC;
+    NCURSES_EXPORT_VAR(NCURSES_OSPEED) __ospeed;
+};
+#endif
+
+#ifdef __VSF__
+#	define PC				(ncurses_termcap_ctx->__PC)
+#	define UP				(ncurses_termcap_ctx->__UP)
+#	define BC				(ncurses_termcap_ctx->__BC)
+#	define ospeed			(ncurses_termcap_ctx->__ospeed)
+#else
 extern NCURSES_EXPORT_VAR(char) PC;
 extern NCURSES_EXPORT_VAR(char *) UP;
 extern NCURSES_EXPORT_VAR(char *) BC;
 extern NCURSES_EXPORT_VAR(NCURSES_OSPEED) ospeed;
+#endif
 
 #if !defined(NCURSES_TERM_H_incl)
 extern NCURSES_EXPORT(char *) tgetstr (const char *, char **);

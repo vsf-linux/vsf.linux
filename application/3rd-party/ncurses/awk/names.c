@@ -181,12 +181,20 @@ static const short _nc_offset_boolfnames[] = {
 617, 645, 666, 686, 714, 735,
 8193, 8217, 8239, 8364, 8386, 8535, 8558, };
 
+#ifdef __VSF__
+#	define ptr_boolfnames	(ncurses_ctx->names.__ptr_boolfnames)
+#else
 static NCURSES_CONST char ** ptr_boolfnames = 0;
+#endif
 
 static const short _nc_offset_boolnames[] = {
 0, 20, 41, 57, 82, 106, 126, 142, 155, 171, 190, 212, 228, 244, 265, 289, 304, 329, 353, 369, 394, 407, 427, 444, 461, 481, 497, 526, 541, 562, 591, 612, 639, 661, 682, 709, 730, 8188, 8212, 8234, 8359, 8381, 8530, 8553, };
 
+#ifdef __VSF__
+#	define ptr_boolnames	(ncurses_ctx->names.__ptr_boolnames)
+#else
 static NCURSES_CONST char ** ptr_boolnames = 0;
+#endif
 
 static const short _nc_offset_numfnames[] = {
 756, 767, 783, 792, 812, 835,
@@ -196,14 +204,22 @@ static const short _nc_offset_numfnames[] = {
 8268, 8295, 8411, 8432,
 8458, };
 
+#ifdef __VSF__
+#	define ptr_numfnames	(ncurses_ctx->names.__ptr_numfnames)
+#else
 static NCURSES_CONST char ** ptr_numfnames = 0;
+#endif
 
 static const short _nc_offset_numnames[] = {
 751, 764, 777, 789, 808, 832, 853, 873, 895, 911, 927, 942, 960, 981, 999, 1015, 1034, 1056,
 1079, 1102, 1126, 1147, 1166, 1186, 1207, 1227, 1247, 1273, 1299,
 1314, 1335, 1348, 1375, 8160, 8263, 8290, 8406, 8427, 8453, };
 
+#ifdef __VSF__
+#	define ptr_numnames		(ncurses_ctx->names.__ptr_numnames)
+#else
 static NCURSES_CONST char ** ptr_numnames = 0;
+#endif
 
 static const short _nc_offset_strfnames[] = {
 1401,
@@ -245,7 +261,11 @@ static const short _nc_offset_strfnames[] = {
 7923, 7954, 7980, 8004, 8030, 8054, 8082, 8107, 8127, 8146, 8315, 8339, 8487, 8516, 8583, 8601, 8619, 8637, 8655, 8669,
 8683, 8697, 8711, 8726, 8741, 8755, 8772, 8791, };
 
+#ifdef __VSF__
+#	define ptr_strfnames	(ncurses_ctx->names.__ptr_strfnames)
+#else
 static NCURSES_CONST char ** ptr_strfnames = 0;
+#endif
 
 static const short _nc_offset_strnames[] = {
 1397, 1410, 1419, 1438, 1463, 1482, 1501,
@@ -289,7 +309,11 @@ static const short _nc_offset_strnames[] = {
 8596, 8614, 8632, 8650, 8664, 8678, 8692, 8706, 8721, 8736, 8750,
 8767, 8786, };
 
+#ifdef __VSF__
+#	define ptr_strnames	(ncurses_ctx->names.__ptr_strnames)
+#else
 static NCURSES_CONST char ** ptr_strnames = 0;
+#endif
 
 
 static IT *

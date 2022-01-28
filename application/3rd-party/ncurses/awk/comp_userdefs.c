@@ -131,7 +131,11 @@ static user_table_data const user_names_data[] =
 	{             459,	(1<<STRING),	0,0,	 96,  96 } 
 };
 
+#ifdef __VSF__
+#	define _nc_user_table			(ncurses_tic_ctx->___nc_user_table)
+#else
 static struct user_table_entry *_nc_user_table = 0;
+#endif
 
 static const HashValue _nc_user_hash_table[995] =
 {

@@ -734,7 +734,11 @@ extern NCURSES_EXPORT_VAR(TERMINAL *) cur_term;
 NCURSES_WRAPPED_VAR(TERMINAL *, cur_term);
 #define cur_term   NCURSES_PUBLIC_VAR(cur_term())
 #else
+#ifdef __VSF__
+#   define cur_term         (ncurses_ctx->lib_cur_term.__cur_term)
+#else
 extern NCURSES_EXPORT_VAR(TERMINAL *) cur_term;
+#endif
 #endif
 
 #if 0 || 0
