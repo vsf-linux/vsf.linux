@@ -13,6 +13,7 @@
   <ItemGroup>
     <ClInclude Include="..\..\application\3rd-party\less\autogen\funcs.h" />
     <ClInclude Include="..\..\application\3rd-party\less\port\defines.h" />
+    <ClInclude Include="..\..\application\3rd-party\less\port\less_port_vsf.h" />
     <ClInclude Include="..\..\application\3rd-party\less\raw\charset.h" />
     <ClInclude Include="..\..\application\3rd-party\less\raw\cmd.h" />
     <ClInclude Include="..\..\application\3rd-party\less\raw\less.h" />
@@ -411,6 +412,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\application\3rd-party\less\autogen\help.c" />
+    <ClCompile Include="..\..\application\3rd-party\less\port\less_port_vsf.c" />
     <ClCompile Include="..\..\application\3rd-party\less\raw\brac.c" />
     <ClCompile Include="..\..\application\3rd-party\less\raw\ch.c" />
     <ClCompile Include="..\..\application\3rd-party\less\raw\charset.c" />

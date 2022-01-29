@@ -469,5 +469,6 @@
 
 /* rename APIs to avoid collision */
 #define clear           less_clear
+#define winch           less_winch
 #undef main
 #define main            less_main

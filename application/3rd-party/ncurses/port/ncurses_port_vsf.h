@@ -1,5 +1,5 @@
-#ifdef __VSF_HEADER_SHOW_APP_CTX__
-#undef __VSF_HEADER_SHOW_APP_CTX__
+#ifdef __VSF_HEADER_SHOW_NCURSES_CTX__
+#undef __VSF_HEADER_SHOW_NCURSES_CTX__
 
 #define NEW_PAIR_INTERNAL
 #include <curses.priv.h>
@@ -15,7 +15,7 @@ struct ncurses_lib_ctx_t {
 };
 
 extern int ncurses_lib_init(struct ncurses_lib_ctx_t *ctx);
-#endif      // __VSF_HEADER_SHOW_APP_CTX__
+#endif      // __VSF_HEADER_SHOW_NCURSES_CTX__
 
 void * __ncurses_ctx(void);
 #define ncurses_ctx             ((struct ncurses_ctx_t *)__ncurses_ctx())

@@ -1,4 +1,6 @@
-#define __VSF_HEADER_SHOW_APP_CTX__
+#ifdef __VSF__
+
+#define __VSF_HEADER_SHOW_NCURSES_CTX__
 #include "./ncurses_port_vsf.h"
 
 static int __ncurses_lib_idx = -1;
@@ -207,3 +209,5 @@ void * __ncurses_termcap_ctx(void)
 {
     return (void *)&ncurses_lib_ctx->__termcap_ctx;
 }
+
+#endif      // __VSF__
