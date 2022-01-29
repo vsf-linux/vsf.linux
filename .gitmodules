@@ -7,3 +7,6 @@
 [submodule "application/3rd-party/less/raw"]
 	path = application/3rd-party/less/raw
 	url = ../less
+[submodule "application/3rd-party/curl/raw"]
+	path = application/3rd-party/curl/raw
+	url = ../curl
