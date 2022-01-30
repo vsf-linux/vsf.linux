@@ -6,6 +6,12 @@
 #undef _UNICODE
 #undef main
 #define main                    curl_main
+
+#ifdef __WIN__
+// clang in visual stdio does not have __STDC__, but it's necessary in curl
+#   define __STDC__             1
+#endif
+
 #define OS                      "vsf"
 #define BSD
 #define __OpenBSD__
