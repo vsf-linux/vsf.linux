@@ -470,5 +470,7 @@
 /* rename APIs to avoid collision */
 #define clear           less_clear
 #define winch           less_winch
+#define error           less_error
+#define cmd_reset       less_cmd_reset
 #undef main
 #define main            less_main
