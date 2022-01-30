@@ -12,4 +12,6 @@ Porting linux applications to VSF
     - PLOOC
     - zlib
     - mbedlts
-2. TODO: add applications
+2. ncurses
+3. less
+4. curl
