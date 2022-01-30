@@ -329,7 +329,7 @@
 #define HAVE_STDLIB_H 1
 
 /* Define HAVE_STRERROR if you have the strerror() function. */
-#undef HAVE_STRERROR
+#define HAVE_STRERROR 1
 
 /* Define to 1 if you have the <strings.h> header file. */
 #undef HAVE_STRINGS_H
