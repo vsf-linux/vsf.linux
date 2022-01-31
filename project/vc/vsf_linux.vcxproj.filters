@@ -802,6 +802,9 @@
     <Filter Include="application\3rd-party\git\raw\compat\linux">
       <UniqueIdentifier>{534a9369-696c-42d1-aa96-b63c7e78540e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="vsf\hal\driver\x86\win\rtc">
+      <UniqueIdentifier>{e1d6f9b3-7b4b-4969-a4ea-90e22317b2b5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vsf\source\vsf.h">
@@ -3233,6 +3236,9 @@
     </ClInclude>
     <ClInclude Include="..\..\application\3rd-party\git\raw\compat\regex\regex.h">
       <Filter>application\3rd-party\git\raw\compat\regex</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\driver\x86\win\rtc\rtc.h">
+      <Filter>vsf\hal\driver\x86\win\rtc</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -6619,6 +6625,9 @@
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\git\raw\compat\qsort_s.c">
       <Filter>application\3rd-party\git\raw\compat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\hal\driver\x86\win\rtc\rtc.c">
+      <Filter>vsf\hal\driver\x86\win\rtc</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

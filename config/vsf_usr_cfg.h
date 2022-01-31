@@ -61,6 +61,7 @@
 #   define VSF_LINUX_CFG_FD_BITMAP_SIZE                 256
 #   define VSF_LINUX_USE_LIBUSB                         VSF_USE_USB_HOST
 #   define VSF_LINUX_CFG_LIB_NUM                        8
+#   define VSF_LINUX_CFG_RTC                            vsf_hw_rtc0
 
 // APP configuration
 #define APP_USE_LINUX_DEMO                              ENABLED
