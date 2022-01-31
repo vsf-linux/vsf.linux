@@ -805,6 +805,9 @@
     <Filter Include="vsf\hal\driver\x86\win\rtc">
       <UniqueIdentifier>{e1d6f9b3-7b4b-4969-a4ea-90e22317b2b5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="vsf\shell\sys\linux\app\ntp">
+      <UniqueIdentifier>{9ed50bd1-815a-4d78-96a1-9b1e23e0dc00}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vsf\source\vsf.h">
@@ -3239,6 +3242,9 @@
     </ClInclude>
     <ClInclude Include="..\..\vsf\source\hal\driver\x86\win\rtc\rtc.h">
       <Filter>vsf\hal\driver\x86\win\rtc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\app\ntp\vsf_linux_ntp.h">
+      <Filter>vsf\shell\sys\linux\app\ntp</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -6628,6 +6634,12 @@
     </ClCompile>
     <ClCompile Include="..\..\vsf\source\hal\driver\x86\win\rtc\rtc.c">
       <Filter>vsf\hal\driver\x86\win\rtc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\app\ntp\vsf_linux_ntp.c">
+      <Filter>vsf\shell\sys\linux\app\ntp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\example\template\demo\linux_demo\ntpdate_demo.c">
+      <Filter>application\linux_demo</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

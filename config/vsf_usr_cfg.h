@@ -67,11 +67,13 @@
 #define APP_USE_LINUX_DEMO                              ENABLED
 #define APP_USE_LINUX_MOUNT_DEMO                        ENABLED
 #define APP_USE_LINUX_LIBUSB_DEMO                       ENABLED
+#define APP_USE_LINUX_NTPDATE_DEMO                      ENABLED
 #define APP_USE_LWIP_DEMO                               ENABLED
 
 // for debug and test only
 #define VSF_LINUX_CFG_INIT_SCRIPTS                                              \
-            "lwip",
+            "lwip",                                                             \
+            "ntpdate cn.pool.ntp.org"
 
 /*============================ TYPES =========================================*/
 /*============================ GLOBAL VARIABLES ==============================*/
