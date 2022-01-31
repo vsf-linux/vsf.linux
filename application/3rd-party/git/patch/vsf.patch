@@ -1,0 +1,73 @@
+ builtin/fetch-pack.c          | 2 +-
+ builtin/send-pack.c           | 2 +-
+ compat/regex/regex_internal.h | 4 ++++
+ git-compat-util.h             | 7 +++++++
+ 4 files changed, 13 insertions(+), 2 deletions(-)
+
+diff --git a/builtin/fetch-pack.c b/builtin/fetch-pack.c
+index c2d96f4c89..11f08c7408 100644
+--- a/builtin/fetch-pack.c
++++ b/builtin/fetch-pack.c
+@@ -2,7 +2,7 @@
+ #include "pkt-line.h"
+ #include "fetch-pack.h"
+ #include "remote.h"
+-#include "connect.h"
++#include "../connect.h"
+ #include "oid-array.h"
+ #include "protocol.h"
+ 
+diff --git a/builtin/send-pack.c b/builtin/send-pack.c
+index 69c432ef1a..df7da21017 100644
+--- a/builtin/send-pack.c
++++ b/builtin/send-pack.c
+@@ -6,7 +6,7 @@
+ #include "sideband.h"
+ #include "run-command.h"
+ #include "remote.h"
+-#include "connect.h"
++#include "../connect.h"
+ #include "send-pack.h"
+ #include "quote.h"
+ #include "transport.h"
+diff --git a/compat/regex/regex_internal.h b/compat/regex/regex_internal.h
+index 0bad8b841e..ff11859da3 100644
+--- a/compat/regex/regex_internal.h
++++ b/compat/regex/regex_internal.h
+@@ -20,6 +20,10 @@
+ #ifndef _REGEX_INTERNAL_H
+ #define _REGEX_INTERNAL_H 1
+ 
++#ifdef __VSF__
++#   include "git_config.h"
++#endif
++
+ #include <assert.h>
+ #include <ctype.h>
+ #include <stdio.h>
+diff --git a/git-compat-util.h b/git-compat-util.h
+index 1229c8296b..b5dafad9a7 100644
+--- a/git-compat-util.h
++++ b/git-compat-util.h
+@@ -1,6 +1,10 @@
+ #ifndef GIT_COMPAT_UTIL_H
+ #define GIT_COMPAT_UTIL_H
+ 
++#ifdef __VSF__
++#	include "git_config.h"
++#endif
++
+ #if __STDC_VERSION__ - 0 < 199901L
+ /*
+  * Git is in a testing period for mandatory C99 support in the compiler.  If
+@@ -1364,7 +1368,10 @@ int cmd_main(int, const char **);
+  * optionally emit a message before calling the real exit().
+  */
+ int trace2_cmd_exit_fl(const char *file, int line, int code);
++#ifndef __VSF__
++// in VSF raw exit maybe the real exit in host_os, vsf will be exited if called
+ #define exit(code) exit(trace2_cmd_exit_fl(__FILE__, __LINE__, (code)))
++#endif
+ 
+ /*
+  * You can mark a stack variable with UNLEAK(var) to avoid it being
