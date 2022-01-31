@@ -13,3 +13,6 @@
 [submodule "application/3rd-party/git/raw"]
 	path = application/3rd-party/git/raw
 	url = ../git
+[submodule "application/3rd-party/openssl/raw"]
+	path = application/3rd-party/openssl/raw
+	url = ../openssl
