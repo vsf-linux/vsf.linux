@@ -39,6 +39,11 @@ int vsf_linux_create_fhs(void)
     extern int curl_main(int argc, char *argv[]);
     busybox_bind(VSF_LINUX_CFG_BIN_PATH "/curl", curl_main);
 
+    extern int git_main(int argc, char **argv);
+    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/git", git_main);
+    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/git-remote-https", git_main);
+    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/git-remote-http", git_main);
+
     return 0;
 }
 

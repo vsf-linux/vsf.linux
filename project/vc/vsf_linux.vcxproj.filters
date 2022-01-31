@@ -757,6 +757,51 @@
     <Filter Include="config\3rd-party\mbedtls">
       <UniqueIdentifier>{baa7dcf2-cbf6-4e65-83e2-b9d03681bef5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="application\3rd-party\git">
+      <UniqueIdentifier>{bcb3d9dd-0f60-42dc-8814-c4813b20b82c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\git\raw">
+      <UniqueIdentifier>{98a77060-1198-443b-92b4-9b2ae000ae27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\git\raw\block-sha1">
+      <UniqueIdentifier>{451e0c28-c4c1-4ac7-b620-2b585cf0496f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\git\raw\builtin">
+      <UniqueIdentifier>{21da4ad0-4acf-41bb-ad59-561043c5314c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\git\raw\ewah">
+      <UniqueIdentifier>{5d7fd0a5-5417-46db-a02f-29f1059c01e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\git\raw\negotiator">
+      <UniqueIdentifier>{f871fa78-de61-4c74-a74f-d8299b451a52}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\git\raw\refs">
+      <UniqueIdentifier>{601b11b9-20f5-4652-bbde-6abce468a720}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\git\raw\sha256">
+      <UniqueIdentifier>{723cde8d-9ca6-476b-b7c8-908b2e03d97e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\git\raw\sha256\block">
+      <UniqueIdentifier>{d8b96a3e-de92-4876-a658-64d9a3ea183b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\git\raw\trace2">
+      <UniqueIdentifier>{95e599e6-8ab7-4355-8855-fd40332730d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\git\raw\xdiff">
+      <UniqueIdentifier>{8c821f4b-ccd4-4add-ac12-72f01bcd8e5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\git\port">
+      <UniqueIdentifier>{f9ae9a75-8f78-4481-8e98-5c833143fff0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\git\raw\compat">
+      <UniqueIdentifier>{f8da3426-561b-41ec-b456-1bfbe5e66ab9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\git\raw\compat\regex">
+      <UniqueIdentifier>{1b6ae9b8-a0ad-4ba1-bbc1-c48f5ba2cb38}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\git\raw\compat\linux">
+      <UniqueIdentifier>{534a9369-696c-42d1-aa96-b63c7e78540e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vsf\source\vsf.h">
@@ -2552,6 +2597,642 @@
     </ClInclude>
     <ClInclude Include="..\..\config\3rd-party\mbedtls\config.h">
       <Filter>config\3rd-party\mbedtls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\block-sha1\sha1.h">
+      <Filter>application\3rd-party\git\raw\block-sha1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\ewah\ewok.h">
+      <Filter>application\3rd-party\git\raw\ewah</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\ewah\ewok_rlw.h">
+      <Filter>application\3rd-party\git\raw\ewah</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\negotiator\default.h">
+      <Filter>application\3rd-party\git\raw\negotiator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\negotiator\noop.h">
+      <Filter>application\3rd-party\git\raw\negotiator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\negotiator\skipping.h">
+      <Filter>application\3rd-party\git\raw\negotiator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\refs\packed-backend.h">
+      <Filter>application\3rd-party\git\raw\refs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\refs\ref-cache.h">
+      <Filter>application\3rd-party\git\raw\refs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\refs\refs-internal.h">
+      <Filter>application\3rd-party\git\raw\refs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\sha256\gcrypt.h">
+      <Filter>application\3rd-party\git\raw\sha256</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\sha256\block\sha256.h">
+      <Filter>application\3rd-party\git\raw\sha256\block</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\trace2\tr2_cfg.h">
+      <Filter>application\3rd-party\git\raw\trace2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\trace2\tr2_cmd_name.h">
+      <Filter>application\3rd-party\git\raw\trace2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\trace2\tr2_dst.h">
+      <Filter>application\3rd-party\git\raw\trace2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\trace2\tr2_sid.h">
+      <Filter>application\3rd-party\git\raw\trace2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\trace2\tr2_sysenv.h">
+      <Filter>application\3rd-party\git\raw\trace2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\trace2\tr2_tbuf.h">
+      <Filter>application\3rd-party\git\raw\trace2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\trace2\tr2_tgt.h">
+      <Filter>application\3rd-party\git\raw\trace2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\trace2\tr2_tls.h">
+      <Filter>application\3rd-party\git\raw\trace2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\xdiff\xdiff.h">
+      <Filter>application\3rd-party\git\raw\xdiff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\xdiff\xdiffi.h">
+      <Filter>application\3rd-party\git\raw\xdiff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\xdiff\xemit.h">
+      <Filter>application\3rd-party\git\raw\xdiff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\xdiff\xinclude.h">
+      <Filter>application\3rd-party\git\raw\xdiff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\xdiff\xmacros.h">
+      <Filter>application\3rd-party\git\raw\xdiff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\xdiff\xprepare.h">
+      <Filter>application\3rd-party\git\raw\xdiff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\xdiff\xtypes.h">
+      <Filter>application\3rd-party\git\raw\xdiff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\xdiff\xutils.h">
+      <Filter>application\3rd-party\git\raw\xdiff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\add-interactive.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\advice.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\alias.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\alloc.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\apply.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\archive.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\attr.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\banned.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\bisect.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\blame.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\blob.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\bloom.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\branch.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\builtin.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\bulk-checkin.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\bundle.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\cache.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\cache-tree.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\cbtree.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\chdir-notify.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\checkout.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\chunk-format.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\color.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\column.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\commit.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\commit-graph.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\commit-reach.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\commit-slab.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\commit-slab-decl.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\commit-slab-impl.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\config.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\connect.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\connected.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\convert.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\credential.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\csum-file.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\decorate.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\delta.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\delta-islands.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\diff.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\diffcore.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\diff-merges.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\dir.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\dir-iterator.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\entry.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\environment.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\exec-cmd.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\fetch-negotiator.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\fetch-pack.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\fmt-merge-msg.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\fsck.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\fsmonitor.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\gettext.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\git-compat-util.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\git-curl-compat.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\gpg-interface.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\graph.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\grep.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\hash.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\hash-lookup.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\hashmap.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\help.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\hook.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\http.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\iterator.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\json-writer.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\khash.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\kwset.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\levenshtein.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\linear-assignment.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\line-log.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\line-range.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\list.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\list-objects.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\list-objects-filter.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\list-objects-filter-options.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\ll-merge.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\lockfile.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\log-tree.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\ls-refs.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\mailinfo.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\mailmap.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\mem-pool.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\merge-blobs.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\merge-ort.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\merge-ort-wrappers.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\merge-recursive.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\mergesort.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\midx.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\notes.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\notes-cache.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\notes-merge.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\notes-utils.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\object.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\object-store.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\oid-array.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\oidmap.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\oidset.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\oidtree.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\pack.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\pack-bitmap.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\packfile.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\pack-objects.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\pack-revindex.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\parallel-checkout.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\parse-options.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\patch-ids.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\path.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\pathspec.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\pkt-line.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\pretty.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\prio-queue.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\progress.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\promisor-remote.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\prompt.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\protocol.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\protocol-caps.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\prune-packed.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\quote.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\range-diff.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\reachable.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\rebase.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\rebase-interactive.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\ref-filter.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\reflog-walk.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\refs.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\refspec.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\remote.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\replace-object.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\repository.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\rerere.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\reset.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\resolve-undo.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\revision.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\run-command.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\send-pack.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\sequencer.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\serve.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\sha1dc_git.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\shallow.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\shortlog.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\sideband.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\sigchain.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\simple-ipc.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\sparse-index.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\split-index.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\strbuf.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\streaming.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\string-list.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\strmap.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\strvec.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\submodule.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\submodule-config.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\sub-process.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\tag.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\tar.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\tempfile.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\thread-utils.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\tmp-objdir.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\trace.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\trace2.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\trailer.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\transport.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\transport-internal.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\tree.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\tree-walk.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\unicode-width.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\unix-socket.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\unix-stream-server.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\unpack-trees.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\upload-pack.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\url.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\urlmatch.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\userdiff.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\utf8.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\varint.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\version.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\walker.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\wildmatch.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\worktree.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\wt-status.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\xdiff-interface.h">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\port\git_config.h">
+      <Filter>application\3rd-party\git\port</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\port\git_port_vsf.h">
+      <Filter>application\3rd-party\git\port</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\git\raw\compat\regex\regex.h">
+      <Filter>application\3rd-party\git\raw\compat\regex</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -4801,6 +5482,1143 @@
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\curl\port\curl_port_vsf.c">
       <Filter>application\3rd-party\curl\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\block-sha1\sha1.c">
+      <Filter>application\3rd-party\git\raw\block-sha1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\add.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\am.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\annotate.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\apply.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\archive.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\bisect--helper.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\blame.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\branch.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\bugreport.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\bundle.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\cat-file.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\check-attr.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\check-ignore.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\check-mailmap.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\checkout.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\checkout-index.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\checkout--worker.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\check-ref-format.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\clean.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\clone.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\column.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\commit.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\commit-graph.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\commit-tree.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\config.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\count-objects.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\credential.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\credential-cache.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\credential-cache--daemon.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\credential-store.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\describe.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\diff.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\diff-files.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\diff-index.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\difftool.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\diff-tree.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\env--helper.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\fast-export.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\fast-import.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\fetch.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\fetch-pack.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\fmt-merge-msg.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\for-each-ref.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\for-each-repo.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\fsck.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\gc.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\get-tar-commit-id.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\grep.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\hash-object.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\help.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\index-pack.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\init-db.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\interpret-trailers.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\log.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\ls-files.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\ls-remote.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\ls-tree.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\mailinfo.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\mailsplit.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\merge.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\merge-base.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\merge-file.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\merge-index.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\merge-ours.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\merge-recursive.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\merge-tree.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\mktag.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\mktree.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\multi-pack-index.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\mv.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\name-rev.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\notes.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\pack-objects.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\pack-redundant.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\pack-refs.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\patch-id.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\prune.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\prune-packed.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\pull.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\push.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\range-diff.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\read-tree.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\rebase.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\receive-pack.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\reflog.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\remote.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\remote-ext.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\remote-fd.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\repack.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\replace.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\rerere.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\reset.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\revert.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\rev-list.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\rev-parse.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\rm.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\send-pack.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\shortlog.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\show-branch.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\show-index.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\show-ref.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\sparse-checkout.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\stash.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\stripspace.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\submodule--helper.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\symbolic-ref.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\tag.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\unpack-file.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\unpack-objects.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\update-index.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\update-ref.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\update-server-info.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\upload-archive.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\upload-pack.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\var.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\verify-commit.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\verify-pack.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\verify-tag.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\worktree.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\builtin\write-tree.c">
+      <Filter>application\3rd-party\git\raw\builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\ewah\bitmap.c">
+      <Filter>application\3rd-party\git\raw\ewah</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\ewah\ewah_bitmap.c">
+      <Filter>application\3rd-party\git\raw\ewah</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\ewah\ewah_io.c">
+      <Filter>application\3rd-party\git\raw\ewah</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\ewah\ewah_rlw.c">
+      <Filter>application\3rd-party\git\raw\ewah</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\negotiator\default.c">
+      <Filter>application\3rd-party\git\raw\negotiator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\negotiator\noop.c">
+      <Filter>application\3rd-party\git\raw\negotiator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\negotiator\skipping.c">
+      <Filter>application\3rd-party\git\raw\negotiator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\refs\debug.c">
+      <Filter>application\3rd-party\git\raw\refs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\refs\files-backend.c">
+      <Filter>application\3rd-party\git\raw\refs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\refs\iterator.c">
+      <Filter>application\3rd-party\git\raw\refs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\refs\packed-backend.c">
+      <Filter>application\3rd-party\git\raw\refs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\refs\ref-cache.c">
+      <Filter>application\3rd-party\git\raw\refs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\sha256\block\sha256.c">
+      <Filter>application\3rd-party\git\raw\sha256\block</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\trace2\tr2_cfg.c">
+      <Filter>application\3rd-party\git\raw\trace2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\trace2\tr2_cmd_name.c">
+      <Filter>application\3rd-party\git\raw\trace2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\trace2\tr2_dst.c">
+      <Filter>application\3rd-party\git\raw\trace2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\trace2\tr2_sid.c">
+      <Filter>application\3rd-party\git\raw\trace2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\trace2\tr2_sysenv.c">
+      <Filter>application\3rd-party\git\raw\trace2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\trace2\tr2_tbuf.c">
+      <Filter>application\3rd-party\git\raw\trace2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\trace2\tr2_tgt_event.c">
+      <Filter>application\3rd-party\git\raw\trace2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\trace2\tr2_tgt_normal.c">
+      <Filter>application\3rd-party\git\raw\trace2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\trace2\tr2_tgt_perf.c">
+      <Filter>application\3rd-party\git\raw\trace2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\trace2\tr2_tls.c">
+      <Filter>application\3rd-party\git\raw\trace2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\xdiff\xdiffi.c">
+      <Filter>application\3rd-party\git\raw\xdiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\xdiff\xemit.c">
+      <Filter>application\3rd-party\git\raw\xdiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\xdiff\xhistogram.c">
+      <Filter>application\3rd-party\git\raw\xdiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\xdiff\xmerge.c">
+      <Filter>application\3rd-party\git\raw\xdiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\xdiff\xpatience.c">
+      <Filter>application\3rd-party\git\raw\xdiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\xdiff\xprepare.c">
+      <Filter>application\3rd-party\git\raw\xdiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\xdiff\xutils.c">
+      <Filter>application\3rd-party\git\raw\xdiff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\abspath.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\add-interactive.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\add-patch.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\advice.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\alias.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\alloc.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\apply.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\archive.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\archive-tar.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\archive-zip.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\attr.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\base85.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\bisect.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\blame.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\blob.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\bloom.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\branch.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\bulk-checkin.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\bundle.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\cache-tree.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\cbtree.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\chdir-notify.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\checkout.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\chunk-format.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\color.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\column.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\combine-diff.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\commit.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\commit-graph.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\commit-reach.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\common-main.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\config.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\connect.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\connected.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\convert.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\copy.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\credential.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\csum-file.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\ctype.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\daemon.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\date.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\decorate.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\delta-islands.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\diff.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\diffcore-break.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\diffcore-delta.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\diffcore-order.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\diffcore-pickaxe.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\diffcore-rename.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\diffcore-rotate.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\diff-delta.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\diff-lib.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\diff-merges.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\diff-no-index.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\dir.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\dir-iterator.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\editor.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\entry.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\environment.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\exec-cmd.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\fetch-negotiator.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\fetch-pack.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\fmt-merge-msg.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\fsck.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\fsmonitor.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\gettext.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\git.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\gpg-interface.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\graph.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\grep.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\hash-lookup.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\hashmap.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\help.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\hex.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\hook.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\http.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\http-backend.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\http-fetch.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\http-push.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\http-walker.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\ident.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\imap-send.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\json-writer.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\kwset.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\levenshtein.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\linear-assignment.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\line-log.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\line-range.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\list-objects.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\list-objects-filter.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\list-objects-filter-options.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\ll-merge.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\lockfile.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\log-tree.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\ls-refs.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\mailinfo.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\mailmap.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\match-trees.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\mem-pool.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\merge.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\merge-blobs.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\merge-ort.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\merge-ort-wrappers.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\merge-recursive.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\mergesort.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\midx.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\name-hash.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\notes.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\notes-cache.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\notes-merge.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\notes-utils.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\object.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\object-file.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\object-name.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\oid-array.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\oidmap.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\oidset.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\oidtree.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\pack-bitmap.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\pack-bitmap-write.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\pack-check.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\packfile.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\pack-objects.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\pack-revindex.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\pack-write.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\pager.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\parallel-checkout.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\parse-options.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\parse-options-cb.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\patch-delta.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\patch-ids.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\path.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\pathspec.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\pkt-line.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\preload-index.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\pretty.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\prio-queue.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\progress.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\promisor-remote.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\prompt.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\protocol.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\protocol-caps.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\prune-packed.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\quote.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\range-diff.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\reachable.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\read-cache.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\rebase.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\rebase-interactive.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\ref-filter.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\reflog-walk.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\refs.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\refspec.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\remote.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\remote-curl.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\replace-object.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\repo-settings.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\repository.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\rerere.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\reset.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\resolve-undo.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\revision.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\run-command.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\send-pack.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\sequencer.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\serve.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\server-info.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\setup.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\sha1dc_git.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\shallow.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\shell.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\sh-i18n--envsubst.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\sideband.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\sigchain.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\sparse-index.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\split-index.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\stable-qsort.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\strbuf.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\streaming.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\string-list.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\strmap.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\strvec.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\submodule.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\submodule-config.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\sub-process.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\symlinks.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\tag.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\tempfile.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\thread-utils.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\tmp-objdir.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\trace.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\trace2.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\trailer.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\transport.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\transport-helper.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\tree.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\tree-diff.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\tree-walk.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\unix-socket.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\unix-stream-server.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\unpack-trees.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\upload-pack.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\url.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\urlmatch.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\usage.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\userdiff.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\utf8.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\varint.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\version.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\versioncmp.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\walker.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\wildmatch.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\worktree.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\wrapper.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\write-or-die.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\ws.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\wt-status.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\xdiff-interface.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\zlib.c">
+      <Filter>application\3rd-party\git\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\port\git_port_vsf.c">
+      <Filter>application\3rd-party\git\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\compat\regex\regex.c">
+      <Filter>application\3rd-party\git\raw\compat\regex</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\compat\memmem.c">
+      <Filter>application\3rd-party\git\raw\compat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\compat\terminal.c">
+      <Filter>application\3rd-party\git\raw\compat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\compat\mmap.c">
+      <Filter>application\3rd-party\git\raw\compat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\compat\linux\procinfo.c">
+      <Filter>application\3rd-party\git\raw\compat\linux</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\compat\strcasestr.c">
+      <Filter>application\3rd-party\git\raw\compat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\compat\obstack.c">
+      <Filter>application\3rd-party\git\raw\compat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\git\raw\compat\qsort_s.c">
+      <Filter>application\3rd-party\git\raw\compat</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
