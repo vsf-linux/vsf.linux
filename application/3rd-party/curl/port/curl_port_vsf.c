@@ -1,6 +1,7 @@
 #ifdef __VSF__
 
 #include "vsf.h"
+#define __VSF_HEADER_SHOW_CURL_CTX__
 #include "3rd-party/curl/raw/src/tool_setup.h"
 
 #ifdef USE_OPENSSL
@@ -10,13 +11,6 @@
 
 static int __curl_lib_idx = -1;
 
-struct curl_lib_ctx_t {
-#ifdef USE_OPENSSL
-    struct openssl_lib_ctx_t openssl_lib_ctx;
-#endif
-    struct curl_ctx_t __curl_ctx;
-};
-
 #define curl_lib_ctx     ((struct curl_lib_ctx_t *)vsf_linux_library_ctx(__curl_lib_idx))
 
 void hugehelp(void)
@@ -25,10 +19,8 @@ void hugehelp(void)
 }
 
 
-int vsf_linux_curl_init(void)
+int curl_lib_init(struct curl_lib_ctx_t *ctx)
 {
-    struct curl_lib_ctx_t *ctx = calloc(1, sizeof(struct curl_lib_ctx_t));
-    if (NULL == ctx) { return -1; }
     int err = vsf_linux_library_init(&__curl_lib_idx, ctx);
     if (err) { return err; }
 #ifdef USE_OPENSSL
@@ -166,7 +158,14 @@ extern const char * const protocols[];
   NULL  /* gsasl version */
 };
 
-    return err;
+    return 0;
+}
+
+int vsf_linux_curl_init(void)
+{
+    struct curl_lib_ctx_t *ctx = calloc(1, sizeof(struct curl_lib_ctx_t));
+    if (NULL == ctx) { return -1; }
+    return curl_lib_init(ctx);
 }
 
 void * __curl_ctx(void)

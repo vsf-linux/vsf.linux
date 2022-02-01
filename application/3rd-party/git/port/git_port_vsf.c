@@ -7,6 +7,10 @@
 #include <fcntl.h>
 #include <spawn.h>
 
+#define __VSF_HEADER_SHOW_CURL_CTX__
+//#include "3rd-party/curl/raw/include/curl/curl.h"
+#include "3rd-party/curl/raw/src/tool_setup.h"
+
 #include "./git_port_vsf.h"
 
 #if 1
@@ -75,6 +79,7 @@ pid_t mingw_spawnvpe(const char *cmd, const char **argv, char **deltaenv,
 static int __git_lib_idx = -1;
 
 struct git_lib_ctx_t {
+    struct curl_lib_ctx_t curl_lib_ctx;
     struct git_ctx_t __git_ctx;
 };
 
@@ -85,6 +90,8 @@ int vsf_linux_git_init(void)
     struct git_lib_ctx_t *ctx = calloc(1, sizeof(struct git_lib_ctx_t));
     if (NULL == ctx) { return -1; }
     int err = vsf_linux_library_init(&__git_lib_idx, ctx);
+    if (err) { return err; }
+    err = curl_lib_init(&ctx->curl_lib_ctx);
     if (err) { return err; }
 
     // initializer

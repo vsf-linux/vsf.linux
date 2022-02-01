@@ -73,7 +73,11 @@
 // for debug and test only
 #define VSF_LINUX_CFG_INIT_SCRIPTS                                              \
             "lwip",                                                             \
-            "ntpdate cn.pool.ntp.org"
+            "ntpdate cn.pool.ntp.org",                                          \
+            "mkdir -p /mnt/hostfs",                                             \
+            "mount -t winfs z:\\test /mnt/hostfs",                              \
+            "cd /mnt/hostfs",                                                   \
+            "git clone https://gitee.com/vsfos/vsf.git",
 
 /*============================ TYPES =========================================*/
 /*============================ GLOBAL VARIABLES ==============================*/

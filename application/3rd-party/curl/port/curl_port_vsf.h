@@ -158,5 +158,18 @@ struct curl_ctx_t {
     } tool_progress;
 };
 
+#ifdef __VSF_HEADER_SHOW_CURL_CTX__
+#undef __VSF_HEADER_SHOW_CURL_CTX__
+
+struct curl_lib_ctx_t {
+#ifdef USE_OPENSSL
+    struct openssl_lib_ctx_t openssl_lib_ctx;
+#endif
+    struct curl_ctx_t __curl_ctx;
+};
+
+extern int curl_lib_init(struct curl_lib_ctx_t *ctx);
+#endif      // __VSF_HEADER_SHOW_CURL_CTX__
+
 void * __curl_ctx(void);
 #define curl_ctx                ((struct curl_ctx_t *)__curl_ctx())
