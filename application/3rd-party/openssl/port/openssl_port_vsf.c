@@ -1,20 +1,16 @@
 #ifdef __VSF__
 
 #include "vsf.h"
+
+#define __VSF_HEADER_SHOW_OPENSSL_CTX__
 #include "./openssl_port_vsf.h"
 
 static int __openssl_lib_idx = -1;
 
-struct openssl_lib_ctx_t {
-    struct openssl_ctx_t __openssl_ctx;
-};
-
 #define openssl_lib_ctx     ((struct openssl_lib_ctx_t *)vsf_linux_library_ctx(__openssl_lib_idx))
 
-int vsf_linux_openssl_init(void)
+int openssl_lib_init(struct openssl_lib_ctx_t *ctx)
 {
-    struct openssl_lib_ctx_t *ctx = calloc(1, sizeof(struct openssl_lib_ctx_t));
-    if (NULL == ctx) { return -1; }
     int err = vsf_linux_library_init(&__openssl_lib_idx, ctx);
     if (err) { return err; }
 

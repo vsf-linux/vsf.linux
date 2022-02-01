@@ -3,9 +3,17 @@
 #include "vsf.h"
 #include "3rd-party/curl/raw/src/tool_setup.h"
 
+#ifdef USE_OPENSSL
+#   define __VSF_HEADER_SHOW_OPENSSL_CTX__
+#   include "3rd-party/openssl/port/openssl_port_vsf.h"
+#endif
+
 static int __curl_lib_idx = -1;
 
 struct curl_lib_ctx_t {
+#ifdef USE_OPENSSL
+    struct openssl_lib_ctx_t openssl_lib_ctx;
+#endif
     struct curl_ctx_t __curl_ctx;
 };
 
@@ -23,6 +31,10 @@ int vsf_linux_curl_init(void)
     if (NULL == ctx) { return -1; }
     int err = vsf_linux_library_init(&__curl_lib_idx, ctx);
     if (err) { return err; }
+#ifdef USE_OPENSSL
+    err = openssl_lib_init(&ctx->openssl_lib_ctx);
+    if (err) { return err; }
+#endif
 
     // initializer
     curl_ctx->easy.__Curl_cmalloc = (curl_malloc_callback)vsf_heap_malloc;
