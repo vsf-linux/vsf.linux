@@ -77,6 +77,7 @@
             "mkdir -p /mnt/hostfs",                                             \
             "mount -t winfs z:\\test /mnt/hostfs",                              \
             "cd /mnt/hostfs",                                                   \
+            "export GIT_SSL_NO_VERIFY=" ,                                       \
             "git clone https://gitee.com/vsfos/vsf.git",
 
 /*============================ TYPES =========================================*/
