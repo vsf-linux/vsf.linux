@@ -43,10 +43,12 @@ int vsf_linux_create_fhs(void)
     extern int curl_main(int argc, char *argv[]);
     busybox_bind(VSF_LINUX_CFG_BIN_PATH "/curl", curl_main);
 
+#if APP_USE_LINUX_GIT_DEMO == ENABLED
     extern int git_main(int argc, char **argv);
     busybox_bind(VSF_LINUX_CFG_BIN_PATH "/git", git_main);
     busybox_bind(VSF_LINUX_CFG_BIN_PATH "/git-remote-https", git_main);
     busybox_bind(VSF_LINUX_CFG_BIN_PATH "/git-remote-http", git_main);
+#endif
 
     return 0;
 }
