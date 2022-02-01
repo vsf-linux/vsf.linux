@@ -1111,6 +1111,9 @@
     <Filter Include="application\3rd-party\openssl\autogen\providers\common\der">
       <UniqueIdentifier>{ed9916f3-6ed0-45cb-b227-415fb8d81c4a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="application\3rd-party\openssl\port">
+      <UniqueIdentifier>{92e1d2e6-a4b2-460d-b9f4-f080f16a7ca4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vsf\source\vsf.h">
@@ -4013,6 +4016,9 @@
     </ClInclude>
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\utsname.h">
       <Filter>vsf\shell\sys\linux\include\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openssl\port\openssl_port_vsf.h">
+      <Filter>application\3rd-party\openssl\port</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -10390,6 +10396,9 @@
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\openssl\autogen\providers\common\der\der_wrap_gen.c">
       <Filter>application\3rd-party\openssl\autogen\providers\common\der</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openssl\port\openssl_port_vsf.c">
+      <Filter>application\3rd-party\openssl\port</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
