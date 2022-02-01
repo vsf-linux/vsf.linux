@@ -2613,7 +2613,6 @@
     <ClCompile Include="..\..\application\3rd-party\openssl\raw\crypto\store\store_strings.c" />
     <ClCompile Include="..\..\application\3rd-party\openssl\raw\crypto\threads_lib.c" />
     <ClCompile Include="..\..\application\3rd-party\openssl\raw\crypto\threads_none.c" />
-    </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\openssl\raw\crypto\threads_pthread.c" />
     <ClCompile Include="..\..\application\3rd-party\openssl\raw\crypto\threads_win.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
