@@ -46,6 +46,8 @@ int openssl_lib_init(struct openssl_lib_ctx_t *ctx)
 #  endif
 # endif
 #endif
+    openssl_ctx->o_name.__names_type_num = OBJ_NAME_TYPE_NUM;
+    openssl_ctx->o_name.__init = CRYPTO_ONCE_STATIC_INIT;
 
     return err;
 }

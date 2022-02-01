@@ -1,4 +1,7 @@
 #include <openssl/crypto.h>
+#include <openssl/lhash.h>
+#include <openssl/objects.h>
+#include <openssl/safestack.h>
 
 struct openssl_ctx_t {
     struct {
@@ -64,6 +67,15 @@ struct openssl_ctx_t {
         } CRYPTO_THREAD_init_local;
     } threads_none;
 #endif
+
+    struct {
+        LHASH_OF(OBJ_NAME) *__names_lh;
+        int __names_type_num;                   // = OBJ_NAME_TYPE_NUM;
+        CRYPTO_RWLOCK *__obj_lock;
+        STACK_OF(NAME_FUNCS) *__name_funcs_stack;
+        CRYPTO_ONCE __init;                     // = CRYPTO_ONCE_STATIC_INIT;
+        int __free_type;
+    } o_name;
 };
 
 #ifdef __VSF_HEADER_SHOW_OPENSSL_CTX__
