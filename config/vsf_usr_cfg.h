@@ -60,7 +60,8 @@
 #       define VSF_LINUX_DEVFS_USE_RAND                 ENABLED
 #   define VSF_LINUX_CFG_FD_BITMAP_SIZE                 256
 #   define VSF_LINUX_USE_LIBUSB                         VSF_USE_USB_HOST
-#   define VSF_LINUX_CFG_LIB_NUM                        8
+#   define VSF_LINUX_CFG_PLS_NUM                        16
+#   define VSF_LINUX_CFG_TLS_NUM                        64
 #   define VSF_LINUX_CFG_RTC                            vsf_hw_rtc0
 
 // APP configuration
