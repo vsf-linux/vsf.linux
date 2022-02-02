@@ -15,6 +15,13 @@
 #include "lockfile.h"
 #include "commit-graph.h"
 #include "config.h"
+#include "credential.h"
+#include "commit-slab.h"
+#include "commit.h"
+#include "decorate.h"
+#include "refspec.h"
+#include "revision.h"
+#include "pack.h"
 
 #include "ewah/ewok.h"
 #include "refs/refs-internal.h"
@@ -57,6 +64,36 @@ struct tr2_sysenv_entry {
 struct color_field {
 	timestamp_t hop;
 	char col[COLOR_MAXLEN];
+};
+
+// builtin_credential_cache_daemon
+struct credential_cache_entry {
+	struct credential item;
+	timestamp_t expiration;
+};
+
+// builtin_describe
+define_commit_slab(commit_names, struct commit_name *);
+
+// builtin_fast_import
+struct last_object {
+	struct strbuf data;
+	off_t offset;
+	unsigned int depth;
+	unsigned no_swap : 1;
+};
+
+typedef enum {
+	WHENSPEC_RAW = 1,
+	WHENSPEC_RAW_PERMISSIVE,
+	WHENSPEC_RFC2822,
+	WHENSPEC_NOW
+} whenspec_type;
+
+struct recent_command {
+	struct recent_command *prev;
+	struct recent_command *next;
+	char *buf;
 };
 
 struct git_ctx_t {
@@ -463,6 +500,218 @@ struct git_ctx_t {
         unsigned long __loose, __packed, __packed_loose;
         off_t __loose_size;
     } builtin_count_objects;
+    struct {
+        struct credential_cache_entry *__entries;
+        int __entries_nr;
+        int __entries_alloc;
+        struct {
+            timestamp_t __wait_for_entry_until;
+        } check_expirations;
+        struct {
+            struct strbuf __item;               // = STRBUF_INIT;
+        } read_request;
+    } builtin_credential_cahce_daemon;
+    struct {
+        struct lock_file __credential_lock;
+    } builtin_credential_store;
+    struct {
+        int __debug;
+        int __all;
+        int __tags;
+        int __longformat;
+        int __first_parent;
+        int __abbrev;                           // = -1;
+        int __max_candidates;                   // = 10;
+        struct hashmap __names;
+        int __have_util;
+        struct string_list __patterns;          // = STRING_LIST_INIT_NODUP;
+        struct string_list __exclude_patterns;  // = STRING_LIST_INIT_NODUP;
+        int __always;
+        const char *__suffix, *__dirty, *__broken;
+        struct commit_names __commit_names;
+        struct {
+            int __label_width;                  // = -1;
+        } describe_commit;
+    } builtin_describe;
+    struct {
+        int __trust_exit_code;
+        struct {
+            char *__difftool_cmd, *__extcmd;
+        } cmd_difftool;
+    } builtin_difftool;
+    struct {
+        struct rev_info __log_tree_opt;
+        struct {
+            struct rev_info *__opt;             // = &log_tree_opt;
+        } cmd_diff_tree;
+    } builtin_diff_tree;
+    struct {
+        int __progress;
+        enum { SIGNED_TAG_ABORT, VERBATIM, WARN, WARN_STRIP, STRIP } __signed_tag_mode; // = SIGNED_TAG_ABORT;
+        enum { TAG_FILTERING_ABORT, DROP, REWRITE } __tag_of_filtered_mode;             // = TAG_FILTERING_ABORT;
+        enum { REENCODE_ABORT, REENCODE_YES, REENCODE_NO } __reencode_mode;             // = REENCODE_ABORT;
+        int __fake_missing_tagger;
+        int __use_done_feature;
+        int __no_data;
+        int __full_tree;
+        int __reference_excluded_commits;
+        int __show_original_ids;
+        int __mark_tags;
+        struct string_list __extra_refs;        // = STRING_LIST_INIT_NODUP;
+        struct string_list __tag_refs;          // = STRING_LIST_INIT_NODUP;
+        struct refspec __refspecs;              // = REFSPEC_INIT_FETCH;
+        int __anonymize;
+        struct hashmap __anonymized_seeds;
+        struct revision_sources __revision_sources;
+        struct decoration __idnums;
+        uint32_t __last_idnum;
+        struct {
+            int __counter;
+        } show_progress;
+        struct {
+            int __counter;
+        } anonymize_blob;
+        struct {
+            int __counter;
+        } anonymize_path_component;
+        struct {
+            struct hashmap __paths;
+		    struct strbuf __anon;               // = STRBUF_INIT;
+        } print_path;
+        struct {
+            uint32_t __counter;                 // = -1;
+        } generate_fake_oid;
+        struct {
+            struct hashmap __objs;
+        } anonymize_oid;
+        struct {
+            int __counter;
+        } anonymize_ref_component;
+        struct {
+            struct hashmap __refs;
+	        struct strbuf __anon;               // = STRBUF_INIT;
+        } anonymize_refname;
+        struct {
+            int __counter;
+        } anonymize_commit_message;
+        struct {
+            int __counter;
+        } anonymize_ident;
+        struct {
+            struct hashmap __idents;
+	        struct strbuf __buffers[2];         // = { STRBUF_INIT, STRBUF_INIT };
+	        unsigned __which_buffer;
+        } anonymize_ident_line;
+        struct {
+            int __counter;
+        } anonymize_tag;
+    } builtin_fast_export;
+    struct {
+        unsigned long __max_depth;              // = 50;
+        off_t __max_packsize;
+        int __unpack_limit;                     // = 100;
+        int __force_update;
+        uintmax_t __alloc_count;
+        uintmax_t __marks_set_count;
+        uintmax_t __object_count_by_type[1 << TYPE_BITS];
+        uintmax_t __duplicate_count_by_type[1 << TYPE_BITS];
+        uintmax_t __delta_count_by_type[1 << TYPE_BITS];
+        uintmax_t __delta_count_attempts_by_type[1 << TYPE_BITS];
+        unsigned long __object_count;
+        unsigned long __branch_count;
+        unsigned long __branch_load_count;
+        int __failure;
+        FILE *__pack_edges;
+        unsigned int __show_stats;              // = 1;
+        int __global_argc;
+        const char **__global_argv;
+        struct mem_pool __fi_mem_pool;          // =  {NULL, 2*1024*1024 - sizeof(struct mp_block), 0};
+        unsigned int __atom_table_sz;           // = 4451;
+        unsigned int __atom_cnt;
+        struct atom_str **__atom_table;
+        struct pack_idx_option __pack_idx_opts;
+        unsigned int __pack_id;
+        struct hashfile *__pack_file;
+        struct packed_git *__pack_data;
+        struct packed_git **__all_packs;
+        off_t __pack_size;
+        unsigned int __object_entry_alloc;      // = 5000;
+        struct object_entry_pool *__blocks;
+        struct hashmap __object_table;
+        struct mark_set *__marks;
+        const char *__export_marks_file;
+        const char *__import_marks_file;
+        int __import_marks_file_from_stream;
+        int __import_marks_file_ignore_missing;
+        int __import_marks_file_done;
+        int __relative_marks_paths;
+        struct last_object __last_blob;         // = { STRBUF_INIT, 0, 0, 0 };
+        unsigned int __tree_entry_alloc;        // = 1000;
+        void *__avail_tree_entry;
+        unsigned int __avail_tree_table_sz;     // = 100;
+        struct avail_tree_content **__avail_tree_table;
+        size_t __tree_entry_allocd;
+        struct strbuf __old_tree;               // = STRBUF_INIT;
+        struct strbuf __new_tree;               // = STRBUF_INIT;
+        unsigned long __max_active_branches;    // = 5;
+        unsigned long __cur_active_branches;
+        unsigned long __branch_table_sz;        // = 1039;
+        struct branch **__branch_table;
+        struct branch *__active_branches;
+        struct tag *__first_tag;
+        struct tag *__last_tag;
+        whenspec_type __whenspec;               // = WHENSPEC_RAW;
+        struct strbuf __command_buf;            // = STRBUF_INIT;
+        int __unread_command_buf;
+        struct recent_command __cmd_hist;       // = {&cmd_hist, &cmd_hist, NULL};
+        struct recent_command *__cmd_tail;      // = &cmd_hist;
+        struct recent_command *__rc_free;
+        unsigned int __cmd_save;                // = 100;
+        uintmax_t __next_mark;
+        struct strbuf __new_data;               // = STRBUF_INIT;
+        int __seen_data_command;
+        int __require_explicit_termination;
+        int __allow_unsafe_features;
+        volatile sig_atomic_t __checkpoint_requested;
+        struct string_list __sub_marks_from;    // = STRING_LIST_INIT_DUP;
+        struct string_list __sub_marks_to;      // = STRING_LIST_INIT_DUP;
+        kh_oid_map_t *__sub_oid_map;
+        int __cat_blob_fd;                      // = STDOUT_FILENO;
+        struct {
+            int __running;
+        } end_packfile;
+        struct {
+            int __stdin_eof;
+        } read_next_command;
+        struct {
+            struct strbuf __buf;                // = STRBUF_INIT;
+        } parse_and_store_blob;
+        struct {
+            struct strbuf __uq;                 // = STRBUF_INIT;
+        } file_change_m;
+        struct {
+            struct strbuf __uq;                 // = STRBUF_INIT;
+        } file_change_d;
+        struct {
+            struct strbuf __s_uq;               // = STRBUF_INIT;
+	        struct strbuf __d_uq;               // = STRBUF_INIT;
+        } file_change_cr;
+        struct {
+            struct strbuf __uq;                 // = STRBUF_INIT;
+        } note_change_n;
+        struct {
+            struct strbuf __msg;                // = STRBUF_INIT;
+        } parse_new_commit;
+        struct {
+            struct strbuf __msg;                // = STRBUF_INIT;
+        } parse_new_tag;
+        struct {
+            struct strbuf __line;               // = STRBUF_INIT;
+        } print_ls;
+        struct {
+            struct strbuf __uq;                 // = STRBUF_INIT;
+        } parse_ls;
+    } builtin_fast_import;
 
     // src
 };
