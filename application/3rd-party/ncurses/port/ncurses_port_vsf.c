@@ -9,7 +9,7 @@ static int __ncurses_lib_idx = -1;
 
 int ncurses_lib_init(struct ncurses_lib_ctx_t *ctx)
 {
-    int err = vsf_linux_library_init(&__ncurses_lib_idx, ctx);
+    int err = vsf_linux_library_init(&__ncurses_lib_idx, ctx, NULL);
     if (!err) {
         // initialize
         ncurses_ctx->__TABSIZE = 8;

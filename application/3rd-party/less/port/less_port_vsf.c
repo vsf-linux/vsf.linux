@@ -24,7 +24,7 @@ int vsf_linux_less_init(void)
 {
     struct less_lib_ctx_t *ctx = calloc(1, sizeof(struct less_lib_ctx_t));
     if (NULL == ctx) { return -1; }
-    int err = vsf_linux_library_init(&__less_lib_idx, ctx);
+    int err = vsf_linux_library_init(&__less_lib_idx, ctx, free);
     if (err) { return err; }
     err = ncurses_lib_init(&ctx->ncurses_lib_ctx);
     if (err) { return err; }

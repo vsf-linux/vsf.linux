@@ -89,7 +89,7 @@ int vsf_linux_git_init(void)
 {
     struct git_lib_ctx_t *ctx = calloc(1, sizeof(struct git_lib_ctx_t));
     if (NULL == ctx) { return -1; }
-    int err = vsf_linux_library_init(&__git_lib_idx, ctx);
+    int err = vsf_linux_library_init(&__git_lib_idx, ctx, free);
     if (err) { return err; }
     err = curl_lib_init(&ctx->curl_lib_ctx);
     if (err) { return err; }
@@ -183,6 +183,188 @@ struct tr2_tgt *__tr2_tgt_builtins[] =
         return -1;
     }
     memcpy(git_ctx->trace2.__tr2_tgt_builtins, __tr2_tgt_builtins, sizeof(__tr2_tgt_builtins));
+
+    git_ctx->builtin_add.__warn_on_embedded_repo = 1;
+    git_ctx->builtin_add.__addremove = ADDREMOVE_DEFAULT;
+    git_ctx->builtin_add.__addremove_explicit = -1;
+    git_ctx->builtin_am.msgnum.__sb = (struct strbuf)STRBUF_INIT;
+    git_ctx->builtin_blame.format_time.__time_buf = (struct strbuf)STRBUF_INIT;
+    git_ctx->builtin_blame.__abbrev = -1;
+    git_ctx->builtin_blame.__ignore_revs_file_list = (struct string_list)STRING_LIST_INIT_NODUP;
+    git_ctx->builtin_blame.__blame_date_mode = (struct date_mode){ DATE_ISO8601 };
+    git_ctx->builtin_blame.__mailmap = (struct string_list)STRING_LIST_INIT_NODUP;
+    git_ctx->builtin_branch.__output = (struct string_list)STRING_LIST_INIT_DUP;
+    git_ctx->builtin_branch.__branch_use_color = -1;
+    git_ctx->builtin_branch.quote_literal_for_format.__buf = (struct strbuf)STRBUF_INIT;
+
+# define all_attrs (git_ctx->builtin_check_attr.__all_attrs)
+# define cached_attrs (git_ctx->builtin_check_attr.__cached_attrs)
+# define stdin_paths (git_ctx->builtin_check_attr.__stdin_paths)
+# define nul_term_line (git_ctx->builtin_check_attr.__nul_term_line)
+struct option __check_attr_options[] = {
+    OPT_BOOL('a', "all", &all_attrs, N_("report all attributes set on file")),
+    OPT_BOOL(0,  "cached", &cached_attrs, N_("use .gitattributes only from the index")),
+    OPT_BOOL(0 , "stdin", &stdin_paths, N_("read file names from stdin")),
+    OPT_BOOL('z', NULL, &nul_term_line, N_("terminate input and output records by a NUL character")),
+    OPT_END()
+};
+    if (dimof(__check_attr_options) > dimof(git_ctx->builtin_check_attr.__check_attr_options)) {
+        VSF_LINUX_ASSERT(false);
+        return -1;
+    }
+    memcpy(git_ctx->builtin_check_attr.__check_attr_options, __check_attr_options, sizeof(__check_attr_options));
+
+    git_ctx->builtin_checkout.__cb_option = 'b';
+    git_ctx->builtin_checkout_index.__state = (struct checkout)CHECKOUT_INIT;
+    git_ctx->builtin_clean.__force = -1;
+    git_ctx->builtin_clean.__del_list = (struct string_list)STRING_LIST_INIT_DUP;
+    git_ctx->builtin_clean.__clean_use_color = -1;
+    git_ctx->builtin_clone.__option_single_branch = -1;
+    git_ctx->builtin_clone.__option_local = -1;
+    git_ctx->builtin_clone.__option_reject_shallow = -1;
+    git_ctx->builtin_clone.__config_reject_shallow = -1;
+    git_ctx->builtin_clone.__option_not = (struct string_list)STRING_LIST_INIT_NODUP;
+    git_ctx->builtin_clone.__option_upload_pack = "git-upload-pack";
+    git_ctx->builtin_clone.__option_progress = -1;
+    git_ctx->builtin_clone.__option_config = (struct string_list)STRING_LIST_INIT_NODUP;
+    git_ctx->builtin_clone.__option_required_reference = (struct string_list)STRING_LIST_INIT_NODUP;
+    git_ctx->builtin_clone.__option_optional_reference = (struct string_list)STRING_LIST_INIT_NODUP;
+    git_ctx->builtin_clone.__max_jobs = -1;
+    git_ctx->builtin_clone.__option_recurse_submodules = (struct string_list)STRING_LIST_INIT_NODUP;
+    git_ctx->builtin_clone.__server_options = (struct string_list)STRING_LIST_INIT_NODUP;
+    git_ctx->builtin_commit.__edit_flag = -1;
+    git_ctx->builtin_commit.__config_commit_verbose = -1;
+    git_ctx->builtin_commit.__trailer_args = (struct strvec)STRVEC_INIT;
+    git_ctx->builtin_commit.__use_editor = 1;
+    git_ctx->builtin_commit.__include_status = 1;
+    git_ctx->builtin_commit.__message = (struct strbuf)STRBUF_INIT;
+    git_ctx->builtin_commit.__status_format = STATUS_FORMAT_UNSPECIFIED;
+    git_ctx->builtin_commit.__status_deferred_config = (struct status_deferred_config) {
+        STATUS_FORMAT_UNSPECIFIED,
+        -1, /* unspecified */
+        AHEAD_BEHIND_UNSPECIFIED,
+    };
+    git_ctx->builtin_commit.cmd_status.__no_renames = -1;
+    git_ctx->builtin_commit.cmd_status.__rename_score_arg = (const char *)-1;
+
+struct option __common_opts[] = {
+	OPT_STRING(0, "object-dir", &git_ctx->builtin_commit_graph.__opts.obj_dir,
+		   N_("dir"),
+		   N_("the object directory to store the graph")),
+	OPT_END()
+};
+    if (dimof(__common_opts) > dimof(git_ctx->builtin_commit_graph.__common_opts)) {
+        VSF_LINUX_ASSERT(false);
+        return -1;
+    }
+    memcpy(git_ctx->builtin_commit_graph.__common_opts, __common_opts, sizeof(__common_opts));
+
+    git_ctx->builtin_commit_tree.cmd_commit_tree.__buffer = (struct strbuf)STRBUF_INIT;
+
+# define key (git_ctx->builtin_config.__key)
+# define key_regexp (git_ctx->builtin_config.__key_regexp)
+# define value_pattern (git_ctx->builtin_config.__value_pattern)
+# define regexp (git_ctx->builtin_config.__regexp)
+# define show_keys (git_ctx->builtin_config.__show_keys)
+# define omit_values (git_ctx->builtin_config.__omit_values)
+# define use_key_regexp (git_ctx->builtin_config.__use_key_regexp)
+# define do_all (git_ctx->builtin_config.__do_all)
+# define do_not_match (git_ctx->builtin_config.__do_not_match)
+# define delim (git_ctx->builtin_config.__delim)
+# define key_delim (git_ctx->builtin_config.__key_delim)
+# define term (git_ctx->builtin_config.__term)
+# define use_global_config (git_ctx->builtin_config.__use_global_config)
+# define use_system_config (git_ctx->builtin_config.__use_system_config)
+# define use_local_config (git_ctx->builtin_config.__use_local_config)
+# define use_worktree_config (git_ctx->builtin_config.__use_worktree_config)
+# define given_config_source (git_ctx->builtin_config.__given_config_source)
+# define actions (git_ctx->builtin_config.__actions)
+# define type (git_ctx->builtin_config.__type)
+# define default_value (git_ctx->builtin_config.__default_value)
+# define end_nul (git_ctx->builtin_config.__end_nul)
+# define respect_includes_opt (git_ctx->builtin_config.__respect_includes_opt)
+# define config_options (git_ctx->builtin_config.__config_options)
+# define show_origin (git_ctx->builtin_config.__show_origin)
+# define show_scope (git_ctx->builtin_config.__show_scope)
+# define fixed_value (git_ctx->builtin_config.__fixed_value)
+#define ACTION_GET (1<<0)
+#define ACTION_GET_ALL (1<<1)
+#define ACTION_GET_REGEXP (1<<2)
+#define ACTION_REPLACE_ALL (1<<3)
+#define ACTION_ADD (1<<4)
+#define ACTION_UNSET (1<<5)
+#define ACTION_UNSET_ALL (1<<6)
+#define ACTION_RENAME_SECTION (1<<7)
+#define ACTION_REMOVE_SECTION (1<<8)
+#define ACTION_LIST (1<<9)
+#define ACTION_EDIT (1<<10)
+#define ACTION_SET (1<<11)
+#define ACTION_SET_ALL (1<<12)
+#define ACTION_GET_COLOR (1<<13)
+#define ACTION_GET_COLORBOOL (1<<14)
+#define ACTION_GET_URLMATCH (1<<15)
+#define TYPE_BOOL		1
+#define TYPE_INT		2
+#define TYPE_BOOL_OR_INT	3
+#define TYPE_PATH		4
+#define TYPE_EXPIRY_DATE	5
+#define TYPE_COLOR		6
+#define TYPE_BOOL_OR_STR	7
+#define OPT_CALLBACK_VALUE(s, l, v, h, i) \
+	{ OPTION_CALLBACK, (s), (l), (v), NULL, (h), PARSE_OPT_NOARG | \
+	PARSE_OPT_NONEG, option_parse_type, (i) }
+extern int option_parse_type(const struct option *opt, const char *arg, int unset);
+struct option __builtin_config_options[] = {
+	OPT_GROUP(N_("Config file location")),
+	OPT_BOOL(0, "global", &use_global_config, N_("use global config file")),
+	OPT_BOOL(0, "system", &use_system_config, N_("use system config file")),
+	OPT_BOOL(0, "local", &use_local_config, N_("use repository config file")),
+	OPT_BOOL(0, "worktree", &use_worktree_config, N_("use per-worktree config file")),
+	OPT_STRING('f', "file", &given_config_source.file, N_("file"), N_("use given config file")),
+	OPT_STRING(0, "blob", &given_config_source.blob, N_("blob-id"), N_("read config from given blob object")),
+	OPT_GROUP(N_("Action")),
+	OPT_BIT(0, "get", &actions, N_("get value: name [value-pattern]"), ACTION_GET),
+	OPT_BIT(0, "get-all", &actions, N_("get all values: key [value-pattern]"), ACTION_GET_ALL),
+	OPT_BIT(0, "get-regexp", &actions, N_("get values for regexp: name-regex [value-pattern]"), ACTION_GET_REGEXP),
+	OPT_BIT(0, "get-urlmatch", &actions, N_("get value specific for the URL: section[.var] URL"), ACTION_GET_URLMATCH),
+	OPT_BIT(0, "replace-all", &actions, N_("replace all matching variables: name value [value-pattern]"), ACTION_REPLACE_ALL),
+	OPT_BIT(0, "add", &actions, N_("add a new variable: name value"), ACTION_ADD),
+	OPT_BIT(0, "unset", &actions, N_("remove a variable: name [value-pattern]"), ACTION_UNSET),
+	OPT_BIT(0, "unset-all", &actions, N_("remove all matches: name [value-pattern]"), ACTION_UNSET_ALL),
+	OPT_BIT(0, "rename-section", &actions, N_("rename section: old-name new-name"), ACTION_RENAME_SECTION),
+	OPT_BIT(0, "remove-section", &actions, N_("remove a section: name"), ACTION_REMOVE_SECTION),
+	OPT_BIT('l', "list", &actions, N_("list all"), ACTION_LIST),
+	OPT_BOOL(0, "fixed-value", &fixed_value, N_("use string equality when comparing values to 'value-pattern'")),
+	OPT_BIT('e', "edit", &actions, N_("open an editor"), ACTION_EDIT),
+	OPT_BIT(0, "get-color", &actions, N_("find the color configured: slot [default]"), ACTION_GET_COLOR),
+	OPT_BIT(0, "get-colorbool", &actions, N_("find the color setting: slot [stdout-is-tty]"), ACTION_GET_COLORBOOL),
+	OPT_GROUP(N_("Type")),
+	OPT_CALLBACK('t', "type", &type, "", N_("value is given this type"), option_parse_type),
+	OPT_CALLBACK_VALUE(0, "bool", &type, N_("value is \"true\" or \"false\""), TYPE_BOOL),
+	OPT_CALLBACK_VALUE(0, "int", &type, N_("value is decimal number"), TYPE_INT),
+	OPT_CALLBACK_VALUE(0, "bool-or-int", &type, N_("value is --bool or --int"), TYPE_BOOL_OR_INT),
+	OPT_CALLBACK_VALUE(0, "bool-or-str", &type, N_("value is --bool or string"), TYPE_BOOL_OR_STR),
+	OPT_CALLBACK_VALUE(0, "path", &type, N_("value is a path (file or directory name)"), TYPE_PATH),
+	OPT_CALLBACK_VALUE(0, "expiry-date", &type, N_("value is an expiry date"), TYPE_EXPIRY_DATE),
+	OPT_GROUP(N_("Other")),
+	OPT_BOOL('z', "null", &end_nul, N_("terminate values with NUL byte")),
+	OPT_BOOL(0, "name-only", &omit_values, N_("show variable names only")),
+	OPT_BOOL(0, "includes", &respect_includes_opt, N_("respect include directives on lookup")),
+	OPT_BOOL(0, "show-origin", &show_origin, N_("show origin of config (file, standard input, blob, command line)")),
+	OPT_BOOL(0, "show-scope", &show_scope, N_("show scope of config (worktree, local, global, system, command)")),
+	OPT_STRING(0, "default", &default_value, N_("value"), N_("with --get, use default value when missing entry")),
+	OPT_END(),
+};
+    if (dimof(__builtin_config_options) > dimof(git_ctx->builtin_config.__builtin_config_options)) {
+        VSF_LINUX_ASSERT(false);
+        return -1;
+    }
+    memcpy(git_ctx->builtin_config.__builtin_config_options, __builtin_config_options, sizeof(__builtin_config_options));
+
+    git_ctx->builtin_config.__delim = '=';
+    git_ctx->builtin_config.__key_delim = ' ';
+    git_ctx->builtin_config.__term = '\n';
+    git_ctx->builtin_config.__respect_includes_opt = -1;
 
     return err;
 }
