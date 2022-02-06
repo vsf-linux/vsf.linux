@@ -728,20 +728,16 @@ typedef struct term {		/* describe an actual terminal */
 #endif /* NCURSES_INTERNALS */
 
 
-#if 0 && !0
+#if 0 && !USE_REENTRANT
 extern NCURSES_EXPORT_VAR(TERMINAL *) cur_term;
-#elif 0
+#elif USE_REENTRANT
 NCURSES_WRAPPED_VAR(TERMINAL *, cur_term);
 #define cur_term   NCURSES_PUBLIC_VAR(cur_term())
 #else
-#ifdef __VSF__
-#   define cur_term         (ncurses_ctx->lib_cur_term.__cur_term)
-#else
 extern NCURSES_EXPORT_VAR(TERMINAL *) cur_term;
 #endif
-#endif
 
-#if 0 || 0
+#if 0 || USE_REENTRANT
 NCURSES_WRAPPED_VAR(NCURSES_CONST char * const *, boolnames);
 NCURSES_WRAPPED_VAR(NCURSES_CONST char * const *, boolcodes);
 NCURSES_WRAPPED_VAR(NCURSES_CONST char * const *, boolfnames);

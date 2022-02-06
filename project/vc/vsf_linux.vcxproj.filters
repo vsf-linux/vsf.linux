@@ -715,9 +715,6 @@
     <Filter Include="application\3rd-party\less\port">
       <UniqueIdentifier>{a02ed001-19ac-416c-8904-712b03423052}</UniqueIdentifier>
     </Filter>
-    <Filter Include="application\3rd-party\ncurses\port">
-      <UniqueIdentifier>{64473b5e-8c76-41c0-8323-f7914378947c}</UniqueIdentifier>
-    </Filter>
     <Filter Include="application\3rd-party\less\autogen">
       <UniqueIdentifier>{ab023237-12be-44ea-bcd6-d790bc41bbc9}</UniqueIdentifier>
     </Filter>
@@ -1952,9 +1949,6 @@
     </ClInclude>
     <ClInclude Include="..\..\application\3rd-party\less\autogen\funcs.h">
       <Filter>application\3rd-party\less\autogen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\ncurses\port\ncurses_port_vsf.h">
-      <Filter>application\3rd-party\ncurses\port</Filter>
     </ClInclude>
     <ClInclude Include="..\..\application\3rd-party\less\port\less_port_vsf.h">
       <Filter>application\3rd-party\less\port</Filter>
@@ -4222,9 +4216,6 @@
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\less\autogen\help.c">
       <Filter>application\3rd-party\less\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\ncurses\port\ncurses_port_vsf.c">
-      <Filter>application\3rd-party\ncurses\port</Filter>
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\less\port\less_port_vsf.c">
       <Filter>application\3rd-party\less\port</Filter>

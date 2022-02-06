@@ -7,14 +7,10 @@
 #undef clear
 #undef winch
 
-#define __VSF_HEADER_SHOW_NCURSES_CTX__
-#include "ncurses_port_vsf.h"
-
 #include "cmd.h"
 #include "option.h"
 
 struct less_lib_ctx_t {
-    struct ncurses_lib_ctx_t ncurses_lib_ctx;
     struct less_ctx_t __less_ctx;
 };
 
@@ -25,8 +21,6 @@ int vsf_linux_less_init(void)
     struct less_lib_ctx_t *ctx = calloc(1, sizeof(struct less_lib_ctx_t));
     if (NULL == ctx) { return -1; }
     int err = vsf_linux_library_init(&__less_lib_idx, ctx, free);
-    if (err) { return err; }
-    err = ncurses_lib_init(&ctx->ncurses_lib_ctx);
     if (err) { return err; }
 
     // initialize

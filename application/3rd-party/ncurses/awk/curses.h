@@ -167,7 +167,7 @@
  * The reentrant code relies on the opaque setting, but adds features.
  */
 #ifndef NCURSES_REENTRANT
-#define NCURSES_REENTRANT 0
+#define NCURSES_REENTRANT 1
 #endif
 
 /*
@@ -341,11 +341,7 @@ extern "C" {
 NCURSES_WRAPPED_VAR(chtype*, acs_map);
 #define acs_map NCURSES_PUBLIC_VAR(acs_map())
 #else
-#ifdef __VSF__
-#	define acs_map		(ncurses_ctx->lib_acs.__acs_map)
-#else
 extern NCURSES_EXPORT_VAR(chtype) acs_map[];
-#endif
 #endif
 
 #define NCURSES_ACS(c)	(acs_map[NCURSES_CAST(unsigned char,(c))])
@@ -1478,18 +1474,6 @@ NCURSES_WRAPPED_VAR(int, TABSIZE);
 
 #else
 
-#ifdef __VSF__
-#	define curscr				(ncurses_ctx->__curscr)
-#	define newscr				(ncurses_ctx->__newscr)
-#	define stdscr				(ncurses_ctx->__stdscr)
-#	define ttytype				(ncurses_ctx->__ttytype)
-#	define COLORS				(ncurses_ctx->__COLORS)
-#	define COLOR_PAIRS			(ncurses_ctx->__COLOR_PAIRS)
-#	define COLS					(ncurses_ctx->__COLS)
-#	define ESCDELAY				(ncurses_ctx->__ESCDELAY)
-#	define LINES				(ncurses_ctx->__LINES)
-#	define TABSIZE				(ncurses_ctx->__TABSIZE)
-#else
 extern NCURSES_EXPORT_VAR(WINDOW *) curscr;
 extern NCURSES_EXPORT_VAR(WINDOW *) newscr;
 extern NCURSES_EXPORT_VAR(WINDOW *) stdscr;
@@ -1500,7 +1484,6 @@ extern NCURSES_EXPORT_VAR(int) COLS;
 extern NCURSES_EXPORT_VAR(int) ESCDELAY;
 extern NCURSES_EXPORT_VAR(int) LINES;
 extern NCURSES_EXPORT_VAR(int) TABSIZE;
-#endif
 
 #endif
 
