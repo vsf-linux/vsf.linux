@@ -1953,9 +1953,6 @@
     <ClInclude Include="..\..\application\3rd-party\less\autogen\funcs.h">
       <Filter>application\3rd-party\less\autogen</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\less\port\less_port_vsf.h">
-      <Filter>application\3rd-party\less\port</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\application\3rd-party\curl\raw\lib\vtls\bearssl.h">
       <Filter>application\3rd-party\curl\raw\lib\vtls</Filter>
     </ClInclude>
@@ -4222,9 +4219,6 @@
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\less\autogen\help.c">
       <Filter>application\3rd-party\less\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\less\port\less_port_vsf.c">
-      <Filter>application\3rd-party\less\port</Filter>
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\curl\raw\lib\vtls\bearssl.c">
       <Filter>application\3rd-party\curl\raw\lib\vtls</Filter>

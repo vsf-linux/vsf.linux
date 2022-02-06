@@ -211,7 +211,6 @@
     <ClInclude Include="..\..\application\3rd-party\curl\raw\src\tool_xattr.h" />
     <ClInclude Include="..\..\application\3rd-party\less\autogen\funcs.h" />
     <ClInclude Include="..\..\application\3rd-party\less\port\defines.h" />
-    <ClInclude Include="..\..\application\3rd-party\less\port\less_port_vsf.h" />
     <ClInclude Include="..\..\application\3rd-party\less\raw\charset.h" />
     <ClInclude Include="..\..\application\3rd-party\less\raw\cmd.h" />
     <ClInclude Include="..\..\application\3rd-party\less\raw\less.h" />
@@ -813,7 +812,6 @@
     <ClCompile Include="..\..\application\3rd-party\curl\raw\src\tool_writeout_json.c" />
     <ClCompile Include="..\..\application\3rd-party\curl\raw\src\tool_xattr.c" />
     <ClCompile Include="..\..\application\3rd-party\less\autogen\help.c" />
-    <ClCompile Include="..\..\application\3rd-party\less\port\less_port_vsf.c" />
     <ClCompile Include="..\..\application\3rd-party\less\raw\brac.c" />
     <ClCompile Include="..\..\application\3rd-party\less\raw\ch.c" />
     <ClCompile Include="..\..\application\3rd-party\less\raw\charset.c" />
