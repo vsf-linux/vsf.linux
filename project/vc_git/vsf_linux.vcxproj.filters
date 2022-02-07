@@ -3231,9 +3231,6 @@
     <ClInclude Include="..\..\application\3rd-party\git\port\git_config.h">
       <Filter>application\3rd-party\git\port</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\git\port\git_port_vsf.h">
-      <Filter>application\3rd-party\git\port</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\application\3rd-party\git\raw\compat\regex\regex.h">
       <Filter>application\3rd-party\git\raw\compat\regex</Filter>
     </ClInclude>

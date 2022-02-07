@@ -210,7 +210,6 @@
     <ClInclude Include="..\..\application\3rd-party\curl\raw\src\tool_writeout_json.h" />
     <ClInclude Include="..\..\application\3rd-party\curl\raw\src\tool_xattr.h" />
     <ClInclude Include="..\..\application\3rd-party\git\port\git_config.h" />
-    <ClInclude Include="..\..\application\3rd-party\git\port\git_port_vsf.h" />
     <ClInclude Include="..\..\application\3rd-party\git\raw\add-interactive.h" />
     <ClInclude Include="..\..\application\3rd-party\git\raw\advice.h" />
     <ClInclude Include="..\..\application\3rd-party\git\raw\alias.h" />
