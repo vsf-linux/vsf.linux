@@ -15,6 +15,7 @@
 //  _LIBC
 // git:
 //  HAVE_DEV_TTY
+//  GIT_WINDOWS_NATIVE
 
 #define NO_MBSUPPORT
 #define GAWK

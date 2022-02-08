@@ -56,7 +56,8 @@
 #endif
 
 #define VSF_LINUX_USE_SIMPLE_LIBC                       ENABLED
-#   define VSF_LINUX_CFG_STACKSIZE                      (60 * 1024)
+#   define VSF_KERNEL_CFG_THREAD_STACK_LARGE            ENABLED
+#   define VSF_LINUX_CFG_STACKSIZE                      (128 * 1024)
 #   define VSF_LINUX_CFG_PRINT_BUFF_SIZE                4096
 // if VSF_LINUX_USE_SIMPLE_LIBC is enabled, need VSF_USE_SIMPLE_SSCANF and VSF_USE_SIMPLE_SPRINTF
 #if VSF_LINUX_USE_SIMPLE_LIBC == ENABLED
