@@ -55,7 +55,8 @@
 #   pragma clang diagnostic ignored "-Wimplicit-function-declaration"
 #endif
 
-#define VSF_LINUX_USE_SIMPLE_LIBC                       ENABLED
+#   define VSF_LINUX_CFG_WRAPPER                        ENABLED
+#   define VSF_LINUX_USE_SIMPLE_LIBC                    ENABLED
 #   define VSF_KERNEL_CFG_THREAD_STACK_LARGE            ENABLED
 #   define VSF_LINUX_CFG_STACKSIZE                      (128 * 1024)
 #   define VSF_LINUX_CFG_PRINT_BUFF_SIZE                4096
