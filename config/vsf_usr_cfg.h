@@ -48,7 +48,6 @@
 #   define VSF_USBH_USE_LIBUSB                          ENABLED
 
 #define VSF_USE_TCPIP                                   ENABLED
-#   define VSF_USE_LWIP                                 ENABLED
 
 #define VSF_USE_LINUX                                   ENABLED
 #   define VSF_USE_POSIX                                ENABLED
@@ -76,7 +75,6 @@
 
 // for debug and test only
 #define VSF_LINUX_CFG_INIT_SCRIPTS                                              \
-            "lwip",                                                             \
             "ntpdate cn.pool.ntp.org",                                          \
             "mkdir -p /mnt/hostfs",                                             \
             "mount -t winfs z:\\test /mnt/hostfs",                              \

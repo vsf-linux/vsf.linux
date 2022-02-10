@@ -412,36 +412,6 @@
     <Filter Include="vsf\component\tcpip\netdrv\driver\wpcap">
       <UniqueIdentifier>{817ac589-42f7-44d9-8df0-1b3361bc0419}</UniqueIdentifier>
     </Filter>
-    <Filter Include="vsf\component\3rd-party\lwip">
-      <UniqueIdentifier>{a49b4cbf-a23a-438c-bbe3-47d3c4e99fb6}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="vsf\component\3rd-party\lwip\raw">
-      <UniqueIdentifier>{087a3b0c-6425-40f9-ad53-ec8d631675d0}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="vsf\component\3rd-party\lwip\raw\src">
-      <UniqueIdentifier>{776aac50-94c3-4aa2-8295-24f7a91c3408}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="vsf\component\3rd-party\lwip\raw\src\api">
-      <UniqueIdentifier>{3a4d99c7-7a72-4404-9181-218d924e1832}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="vsf\component\3rd-party\lwip\raw\src\apps">
-      <UniqueIdentifier>{f632b7ce-7bf2-4827-882f-0f92ba836d0f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="vsf\component\3rd-party\lwip\raw\src\core">
-      <UniqueIdentifier>{1f043116-9908-4b91-b3cf-d1ac63c9667b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="vsf\component\3rd-party\lwip\raw\src\core\ipv4">
-      <UniqueIdentifier>{b5c0d298-108d-4d3c-a1f1-95cd2b20c0bd}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="vsf\component\3rd-party\lwip\raw\src\core\ipv6">
-      <UniqueIdentifier>{37341559-6f22-441d-bc73-c76c5fb824c2}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="vsf\component\3rd-party\lwip\raw\src\netif">
-      <UniqueIdentifier>{682b3ece-63f1-4f28-958a-8c5265f6bd4d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="vsf\component\3rd-party\lwip\port">
-      <UniqueIdentifier>{7e6a67f8-43ac-4d42-a5d3-9ebb1ec7ca4c}</UniqueIdentifier>
-    </Filter>
     <Filter Include="vsf\component\crypto">
       <UniqueIdentifier>{270587e0-572c-4c46-9608-b3b54844bb21}</UniqueIdentifier>
     </Filter>
@@ -610,17 +580,8 @@
     <Filter Include="vsf\shell\sys\linux\app\httpd\urihandler\file">
       <UniqueIdentifier>{db4d93ae-56a4-4006-93c1-82939993e973}</UniqueIdentifier>
     </Filter>
-    <Filter Include="vsf\component\3rd-party\lwip\raw\src\apps\mdns">
-      <UniqueIdentifier>{3e1d822c-7261-46f8-8faa-fa16f78304fb}</UniqueIdentifier>
-    </Filter>
     <Filter Include="vsf\component\debugger\segger">
       <UniqueIdentifier>{d42ea5e5-b341-45be-b5d9-74b32e93eeaf}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="vsf\component\3rd-party\lwip\port\vsf">
-      <UniqueIdentifier>{d23aa601-6aaa-49a0-a956-b56ba3ff0137}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="vsf\component\3rd-party\lwip\port\vsf\arch">
-      <UniqueIdentifier>{8fc42111-22c6-4f6f-98ea-2e7d2f6720aa}</UniqueIdentifier>
     </Filter>
     <Filter Include="vsf\shell\sys\linux\include\netinet">
       <UniqueIdentifier>{d801a6c7-2b10-488c-a835-6d8643c6f558}</UniqueIdentifier>
@@ -747,9 +708,6 @@
     </Filter>
     <Filter Include="config\3rd-party">
       <UniqueIdentifier>{1fc49c1d-d61c-49e1-aad2-b3fe36abd23f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="config\3rd-party\lwip">
-      <UniqueIdentifier>{72f42b66-9c08-45cb-b87a-b043722cfc41}</UniqueIdentifier>
     </Filter>
     <Filter Include="config\3rd-party\mbedtls">
       <UniqueIdentifier>{baa7dcf2-cbf6-4e65-83e2-b9d03681bef5}</UniqueIdentifier>
@@ -1674,12 +1632,6 @@
     <ClInclude Include="..\..\vsf\source\component\3rd-party\zlib\raw\zutil.h">
       <Filter>vsf\component\3rd-party\zlib\raw</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\vsf\source\component\3rd-party\lwip\port\lwip_netdrv_adapter.h">
-      <Filter>vsf\component\3rd-party\lwip\port</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\vsf\source\component\3rd-party\lwip\port\lwippools.h">
-      <Filter>vsf\component\3rd-party\lwip\port</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\vsf\source\service\distbus\vsf_distbus.h">
       <Filter>vsf\service\distbus</Filter>
     </ClInclude>
@@ -1799,15 +1751,6 @@
     </ClInclude>
     <ClInclude Include="..\..\vsf\source\component\debugger\segger\segger_rtt_stream.h">
       <Filter>vsf\component\debugger\segger</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\vsf\source\component\3rd-party\lwip\port\vsf\arch\cc.h">
-      <Filter>vsf\component\3rd-party\lwip\port\vsf\arch</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\vsf\source\component\3rd-party\lwip\port\vsf\arch\perf.h">
-      <Filter>vsf\component\3rd-party\lwip\port\vsf\arch</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\vsf\source\component\3rd-party\lwip\port\vsf\arch\sys_arch.h">
-      <Filter>vsf\component\3rd-party\lwip\port\vsf\arch</Filter>
     </ClInclude>
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\un.h">
       <Filter>vsf\shell\sys\linux\include\sys</Filter>
@@ -2547,9 +2490,6 @@
     <ClInclude Include="..\..\application\3rd-party\curl\port\curl_port_vsf.h">
       <Filter>application\3rd-party\curl\port</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\config\3rd-party\lwip\lwipopts.h">
-      <Filter>config\3rd-party\lwip</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\config\3rd-party\mbedtls\config.h">
       <Filter>config\3rd-party\mbedtls</Filter>
     </ClInclude>
@@ -2945,147 +2885,6 @@
     <ClCompile Include="..\..\vsf\source\component\tcpip\netdrv\driver\wpcap\vsf_netdrv_wpcap.c">
       <Filter>vsf\component\tcpip\netdrv\driver\wpcap</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\api\api_lib.c">
-      <Filter>vsf\component\3rd-party\lwip\raw\src\api</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\api\api_msg.c">
-      <Filter>vsf\component\3rd-party\lwip\raw\src\api</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\api\err.c">
-      <Filter>vsf\component\3rd-party\lwip\raw\src\api</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\api\if_api.c">
-      <Filter>vsf\component\3rd-party\lwip\raw\src\api</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\api\netbuf.c">
-      <Filter>vsf\component\3rd-party\lwip\raw\src\api</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\api\netdb.c">
-      <Filter>vsf\component\3rd-party\lwip\raw\src\api</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\api\netifapi.c">
-      <Filter>vsf\component\3rd-party\lwip\raw\src\api</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\api\sockets.c">
-      <Filter>vsf\component\3rd-party\lwip\raw\src\api</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\api\tcpip.c">
-      <Filter>vsf\component\3rd-party\lwip\raw\src\api</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\altcp.c">
-      <Filter>vsf\component\3rd-party\lwip\raw\src\core</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\altcp_alloc.c">
-      <Filter>vsf\component\3rd-party\lwip\raw\src\core</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\altcp_tcp.c">
-      <Filter>vsf\component\3rd-party\lwip\raw\src\core</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\def.c">
-      <Filter>vsf\component\3rd-party\lwip\raw\src\core</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\dns.c">
-      <Filter>vsf\component\3rd-party\lwip\raw\src\core</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\inet_chksum.c">
-      <Filter>vsf\component\3rd-party\lwip\raw\src\core</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\init.c">
-      <Filter>vsf\component\3rd-party\lwip\raw\src\core</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\ip.c">
-      <Filter>vsf\component\3rd-party\lwip\raw\src\core</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\mem.c">
-      <Filter>vsf\component\3rd-party\lwip\raw\src\core</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\memp.c">
-      <Filter>vsf\component\3rd-party\lwip\raw\src\core</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\netif.c">
-      <Filter>vsf\component\3rd-party\lwip\raw\src\core</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\pbuf.c">
-      <Filter>vsf\component\3rd-party\lwip\raw\src\core</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\raw.c">
-      <Filter>vsf\component\3rd-party\lwip\raw\src\core</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\stats.c">
-      <Filter>vsf\component\3rd-party\lwip\raw\src\core</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\sys.c">
-      <Filter>vsf\component\3rd-party\lwip\raw\src\core</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\tcp.c">
-      <Filter>vsf\component\3rd-party\lwip\raw\src\core</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\tcp_in.c">
-      <Filter>vsf\component\3rd-party\lwip\raw\src\core</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\tcp_out.c">
-      <Filter>vsf\component\3rd-party\lwip\raw\src\core</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\timeouts.c">
-      <Filter>vsf\component\3rd-party\lwip\raw\src\core</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\udp.c">
-      <Filter>vsf\component\3rd-party\lwip\raw\src\core</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\ipv4\autoip.c">
-      <Filter>vsf\component\3rd-party\lwip\raw\src\core\ipv4</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\ipv4\dhcp.c">
-      <Filter>vsf\component\3rd-party\lwip\raw\src\core\ipv4</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\ipv4\etharp.c">
-      <Filter>vsf\component\3rd-party\lwip\raw\src\core\ipv4</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\ipv4\icmp.c">
-      <Filter>vsf\component\3rd-party\lwip\raw\src\core\ipv4</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\ipv4\igmp.c">
-      <Filter>vsf\component\3rd-party\lwip\raw\src\core\ipv4</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\ipv4\ip4.c">
-      <Filter>vsf\component\3rd-party\lwip\raw\src\core\ipv4</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\ipv4\ip4_addr.c">
-      <Filter>vsf\component\3rd-party\lwip\raw\src\core\ipv4</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\ipv4\ip4_frag.c">
-      <Filter>vsf\component\3rd-party\lwip\raw\src\core\ipv4</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\ipv6\dhcp6.c">
-      <Filter>vsf\component\3rd-party\lwip\raw\src\core\ipv6</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\ipv6\ethip6.c">
-      <Filter>vsf\component\3rd-party\lwip\raw\src\core\ipv6</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\ipv6\icmp6.c">
-      <Filter>vsf\component\3rd-party\lwip\raw\src\core\ipv6</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\ipv6\inet6.c">
-      <Filter>vsf\component\3rd-party\lwip\raw\src\core\ipv6</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\ipv6\ip6.c">
-      <Filter>vsf\component\3rd-party\lwip\raw\src\core\ipv6</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\ipv6\ip6_addr.c">
-      <Filter>vsf\component\3rd-party\lwip\raw\src\core\ipv6</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\ipv6\ip6_frag.c">
-      <Filter>vsf\component\3rd-party\lwip\raw\src\core\ipv6</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\ipv6\mld6.c">
-      <Filter>vsf\component\3rd-party\lwip\raw\src\core\ipv6</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\ipv6\nd6.c">
-      <Filter>vsf\component\3rd-party\lwip\raw\src\core\ipv6</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\netif\ethernet.c">
-      <Filter>vsf\component\3rd-party\lwip\raw\src\netif</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\vsf\source\component\crypto\hash\crc\vsf_crc.c">
       <Filter>vsf\component\crypto\hash\crc</Filter>
     </ClCompile>
@@ -3229,9 +3028,6 @@
     </ClCompile>
     <ClCompile Include="..\..\vsf\source\component\3rd-party\zlib\raw\zutil.c">
       <Filter>vsf\component\3rd-party\zlib\raw</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\port\lwip_netdrv_adapter.c">
-      <Filter>vsf\component\3rd-party\lwip\port</Filter>
     </ClCompile>
     <ClCompile Include="..\..\vsf\source\component\usb\driver\dcd\usbip_dcd\backend\vsf_usbip_dcd_lwip.c">
       <Filter>vsf\component\usb\driver\dcd\usbip_dcd\backend</Filter>
@@ -3551,14 +3347,8 @@
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\vsf_linux.c">
       <Filter>vsf\shell\sys\linux</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\apps\mdns\mdns.c">
-      <Filter>vsf\component\3rd-party\lwip\raw\src\apps\mdns</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\vsf\source\component\debugger\segger\segger_rtt_stream.c">
       <Filter>vsf\component\debugger\segger</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\port\vsf\arch\sys_arch.c">
-      <Filter>vsf\component\3rd-party\lwip\port\vsf\arch</Filter>
     </ClCompile>
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\kernel\socket\vsf_linux_socket.c">
       <Filter>vsf\shell\sys\linux\kernel\socket</Filter>
@@ -4822,6 +4612,9 @@
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\ncurses\port\ncurses_port_vsf.c">
       <Filter>application\3rd-party\ncurses\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\kernel\socket\inet\vsf_linux_socket_inet_hostsock.c">
+      <Filter>vsf\shell\sys\linux\kernel\socket\inet</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -232,7 +232,6 @@
     <ClInclude Include="..\..\application\3rd-party\ncurses\awk\termcap.h" />
     <ClInclude Include="..\..\application\3rd-party\ncurses\awk\unctrl.h" />
     <ClInclude Include="..\..\application\3rd-party\ncurses\port\ncurses_port_vsf.h" />
-    <ClInclude Include="..\..\config\3rd-party\lwip\lwipopts.h" />
     <ClInclude Include="..\..\config\3rd-party\mbedtls\config.h" />
     <ClInclude Include="..\..\config\target\vsf_usr_cfg_win.h" />
     <ClInclude Include="..\..\config\vsf_usr_cfg.h" />
@@ -242,11 +241,6 @@
     <ClInclude Include="..\..\vsf\example\template\demo\common\usrapp_ui_common.h" />
     <ClInclude Include="..\..\vsf\example\template\demo\common\usrapp_usbd_common.h" />
     <ClInclude Include="..\..\vsf\example\template\demo\common\usrapp_usbh_common.h" />
-    <ClInclude Include="..\..\vsf\source\component\3rd-party\lwip\port\lwippools.h" />
-    <ClInclude Include="..\..\vsf\source\component\3rd-party\lwip\port\lwip_netdrv_adapter.h" />
-    <ClInclude Include="..\..\vsf\source\component\3rd-party\lwip\port\vsf\arch\cc.h" />
-    <ClInclude Include="..\..\vsf\source\component\3rd-party\lwip\port\vsf\arch\perf.h" />
-    <ClInclude Include="..\..\vsf\source\component\3rd-party\lwip\port\vsf\arch\sys_arch.h" />
     <ClInclude Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\check_crypto_config.h" />
     <ClInclude Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\common.h" />
     <ClInclude Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_core.h" />
@@ -1059,62 +1053,6 @@
     <ClCompile Include="..\..\vsf\example\template\demo\linux_demo\mount_demo.c" />
     <ClCompile Include="..\..\vsf\example\template\demo\linux_demo\ntpdate_demo.c" />
     <ClCompile Include="..\..\vsf\example\template\demo\lwip_demo\lwip_demo.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\port\lwip_netdrv_adapter.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\port\vsf\arch\sys_arch.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\api\api_lib.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\api\api_msg.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\api\err.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\api\if_api.c">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\api\netbuf.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\api\netdb.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\api\netifapi.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\api\sockets.c">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\api\tcpip.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\apps\mdns\mdns.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\altcp.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\altcp_alloc.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\altcp_tcp.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\def.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\dns.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\inet_chksum.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\init.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\ip.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\ipv4\autoip.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\ipv4\dhcp.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\ipv4\etharp.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\ipv4\icmp.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\ipv4\igmp.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\ipv4\ip4.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\ipv4\ip4_addr.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\ipv4\ip4_frag.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\ipv6\dhcp6.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\ipv6\ethip6.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\ipv6\icmp6.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\ipv6\inet6.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\ipv6\ip6.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\ipv6\ip6_addr.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\ipv6\ip6_frag.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\ipv6\mld6.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\ipv6\nd6.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\mem.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\memp.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\netif.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\pbuf.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\raw.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\stats.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\sys.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\tcp.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\tcp_in.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\tcp_out.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\timeouts.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\core\udp.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\lwip\raw\src\netif\ethernet.c" />
     <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\aes.c" />
     <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\aesni.c" />
     <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\arc4.c" />
@@ -1379,6 +1317,7 @@
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\devfs\vsf_linux_devfs.c" />
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\vsf_linux_vfs.c" />
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\kernel\fs\vsf_linux_fs.c" />
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\kernel\socket\inet\vsf_linux_socket_inet_hostsock.c" />
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\kernel\socket\inet\vsf_linux_socket_inet_lwip.c" />
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\kernel\socket\unix\vsf_linux_socket_unix.c" />
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\kernel\socket\vsf_linux_socket.c" />
@@ -1462,7 +1401,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>__VSF__;__CPU_X86__;__WIN__;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\ncurses\port;$(ProjectDir)..\..\application\3rd-party\ncurses\awk;$(ProjectDir)..\..\application\3rd-party\ncurses\raw\include;$(ProjectDir)..\..\application\3rd-party\ncurses\raw\ncurses;$(ProjectDir)..\..\application\3rd-party\less\port;$(ProjectDir)..\..\application\3rd-party\less\autogen;$(ProjectDir)..\..\application\3rd-party\less\raw;$(ProjectDir)..\..\application\3rd-party\curl\port;$(ProjectDir)..\..\application\3rd-party\curl\raw\include;$(ProjectDir)..\..\application\3rd-party\curl\raw\lib;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\config\3rd-party\lwip;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;$(ProjectDir)..\..\vsf\source\component\3rd-party\lwip\raw\src\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\lwip\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\lwip\port\vsf;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\ncurses\port;$(ProjectDir)..\..\application\3rd-party\ncurses\awk;$(ProjectDir)..\..\application\3rd-party\ncurses\raw\include;$(ProjectDir)..\..\application\3rd-party\ncurses\raw\ncurses;$(ProjectDir)..\..\application\3rd-party\less\port;$(ProjectDir)..\..\application\3rd-party\less\autogen;$(ProjectDir)..\..\application\3rd-party\less\raw;$(ProjectDir)..\..\application\3rd-party\curl\port;$(ProjectDir)..\..\application\3rd-party\curl\raw\include;$(ProjectDir)..\..\application\3rd-party\curl\raw\lib;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;$(ProjectDir)..\..\vsf\source\component\3rd-party\lwip\raw\src\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-fms-extensions %(AdditionalOptions)</AdditionalOptions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <ExceptionHandling>false</ExceptionHandling>
@@ -1474,8 +1413,8 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(ProjectDir)\lib\npcap\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>wpcap.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
       <UACExecutionLevel>
       </UACExecutionLevel>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
@@ -1492,7 +1431,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>__VSF__;__CPU_X86__;__WIN__;__OOC_RELEASE__;__OOC_CPP__;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\ncurses\port;$(ProjectDir)..\..\application\3rd-party\ncurses\awk;$(ProjectDir)..\..\application\3rd-party\ncurses\raw\include;$(ProjectDir)..\..\application\3rd-party\ncurses\raw\ncurses;$(ProjectDir)..\..\application\3rd-party\less\port;$(ProjectDir)..\..\application\3rd-party\less\autogen;$(ProjectDir)..\..\application\3rd-party\less\raw;$(ProjectDir)..\..\application\3rd-party\curl\port;$(ProjectDir)..\..\application\3rd-party\curl\raw\include;$(ProjectDir)..\..\application\3rd-party\curl\raw\lib;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\config\3rd-party\lwip;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;$(ProjectDir)..\..\vsf\source\component\3rd-party\lwip\raw\src\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\lwip\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\lwip\port\vsf;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\ncurses\port;$(ProjectDir)..\..\application\3rd-party\ncurses\awk;$(ProjectDir)..\..\application\3rd-party\ncurses\raw\include;$(ProjectDir)..\..\application\3rd-party\ncurses\raw\ncurses;$(ProjectDir)..\..\application\3rd-party\less\port;$(ProjectDir)..\..\application\3rd-party\less\autogen;$(ProjectDir)..\..\application\3rd-party\less\raw;$(ProjectDir)..\..\application\3rd-party\curl\port;$(ProjectDir)..\..\application\3rd-party\curl\raw\include;$(ProjectDir)..\..\application\3rd-party\curl\raw\lib;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;$(ProjectDir)..\..\vsf\source\component\3rd-party\lwip\raw\src\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <AssemblerListingLocation>$(IntDir)/__sub0/__sub1/__sub2/__sub3/%(RelativeDir)</AssemblerListingLocation>
@@ -1503,8 +1442,8 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(ProjectDir)\lib\SDL2\lib\x86;$(ProjectDir)\lib\npcap\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;wpcap.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
       <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
     </Link>
   </ItemDefinitionGroup>

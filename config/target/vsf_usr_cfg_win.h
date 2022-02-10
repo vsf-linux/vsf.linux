@@ -56,6 +56,7 @@
 #endif
 
 #   define VSF_LINUX_CFG_WRAPPER                        ENABLED
+#   define VSF_LINUX_SOCKET_CFG_WRAPPER                 ENABLED
 #   define VSF_LINUX_USE_SIMPLE_LIBC                    ENABLED
 #   define VSF_KERNEL_CFG_THREAD_STACK_LARGE            ENABLED
 #   define VSF_LINUX_CFG_STACKSIZE                      (128 * 1024)
@@ -78,12 +79,14 @@
 #   define VSF_HEAP_SIZE                                0x2000000
 #   define VSF_HEAP_CFG_MCB_ALIGN_BIT                   12      // 4K alignment
 
-#define VSF_NETDRV_USE_WPCAP                            ENABLED
-#   ifdef __VSF_X86_WIN_SINGLE_PRIORITY
-#       define VSF_NETDRV_WPCAP_CFG_HW_PRIORITY         vsf_arch_prio_0
-#   else
-#       define VSF_NETDRV_WPCAP_CFG_HW_PRIORITY         vsf_arch_prio_1
-#endif
+// using vsf_linux_socket_inet_winsock2 now
+//#   define VSF_USE_LWIP                                 ENABLED
+//#define VSF_NETDRV_USE_WPCAP                            ENABLED
+//#   ifdef __VSF_X86_WIN_SINGLE_PRIORITY
+//#       define VSF_NETDRV_WPCAP_CFG_HW_PRIORITY         vsf_arch_prio_0
+//#   else
+//#       define VSF_NETDRV_WPCAP_CFG_HW_PRIORITY         vsf_arch_prio_1
+//#endif
 
 #define VSF_USE_TRACE                                   ENABLED
 #define VSF_ASSERT(...)                                 assert(__VA_ARGS__)
