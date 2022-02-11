@@ -8,22 +8,6 @@
 #include <fcntl.h>
 #include <spawn.h>
 
-struct tm *localtime_r(const time_t *t, struct tm *result)
-{
-    return NULL;
-}
-
-struct tm *gmtime_r(const time_t *t, struct tm *result)
-{
-    return NULL;
-}
-
-int ftruncate(int fildes, off_t length)
-{
-    VSF_LINUX_ASSERT(false);
-    return -1;
-}
-
 pid_t tcgetpgrp(int fd)
 {
     return -1;
