@@ -62,7 +62,7 @@
 #   define VSF_LINUX_CFG_PLS_NUM                        16
 #   define VSF_LINUX_CFG_TLS_NUM                        64
 #   define VSF_LINUX_SIMPLE_STDLIB_CFG_HEAP_MONITOR     ENABLED
-#       define VSF_LINUX_SIMPLE_STDLIB_HEAP_MONITOR_TRACE_DEPTH 8192
+#       define VSF_LINUX_SIMPLE_STDLIB_HEAP_MONITOR_TRACE_DEPTH (32 * 1024)
 #       define VSF_LINUX_SIMPLE_STDLIB_HEAP_MONITOR_QUIET       ENABLED
 #   define VSF_LINUX_CFG_RTC                            vsf_hw_rtc0
 
