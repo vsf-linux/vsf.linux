@@ -76,7 +76,7 @@
 // component configure
 #define VSF_USE_HEAP                                    ENABLED
 #   define VSF_HEAP_CFG_MCB_MAGIC_EN                    ENABLED
-#   define VSF_HEAP_SIZE                                (128 * 1024 * 1024)
+#   define VSF_HEAP_SIZE                                (256 * 1024 * 1024)
 #   define VSF_HEAP_CFG_MCB_ALIGN_BIT                   12      // 4K alignment
 
 // using vsf_linux_socket_inet_winsock2 now
