@@ -28,10 +28,6 @@
 
 /*============================ MACROS ========================================*/
 
-#ifdef __CPU_X64__
-#   error x64 is currently not supported
-#endif
-
 // enable the 4 configurations below to use simple implementation for x86
 //  simple implementation will not use ThreadSuspend and ThreadResume and has better CPU usage
 //  **** but preempt is not supported ****
