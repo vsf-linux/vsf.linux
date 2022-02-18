@@ -6446,4 +6446,9 @@
       <Filter>vsf\shell\sys\linux\app\httpd\urihandler\file</Filter>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\vsf\source\hal\arch\x86\win\setjmp_x64.asm">
+      <Filter>vsf\hal\arch\x86\win</Filter>
+    </CustomBuild>
+  </ItemGroup>
 </Project>
