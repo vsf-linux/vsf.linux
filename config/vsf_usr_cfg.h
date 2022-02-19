@@ -74,14 +74,12 @@
 #define APP_USE_LWIP_DEMO                               ENABLED
 
 // for debug and test only
-/*
 #define VSF_LINUX_CFG_INIT_SCRIPTS                                              \
-            "ntpdate cn.pool.ntp.org",                                          \
             "mkdir -p /mnt/hostfs",                                             \
-            "mount -t winfs z:\\test /mnt/hostfs",                              \
+            "mount -t winfs . /mnt/hostfs",                                     \
             "cd /mnt/hostfs",                                                   \
-            "GIT_SSL_NO_VERIFY= git clone https://gitee.com/vsfos/vsf.git",
-*/
+            "export GIT_SSL_NO_VERIFY=",
+
 /*============================ TYPES =========================================*/
 /*============================ GLOBAL VARIABLES ==============================*/
 /*============================ LOCAL VARIABLES ===============================*/
