@@ -119,14 +119,15 @@
 
 #define VSF_FS_USE_WINFS                                ENABLED
 
-#define VSF_DISP_USE_SDL2                               ENABLED
-#   define VSF_DISP_SDL2_CFG_INCLUDE                    "lib\SDL2\include\SDL.h"
-#   define VSF_DISP_SDL2_CFG_MOUSE_AS_TOUCHSCREEN       ENABLED
-#   ifdef __VSF_X86_WIN_SINGLE_PRIORITY
-#       define VSF_DISP_SDL2_CFG_HW_PRIORITY            vsf_arch_prio_0
-#   else
-#       define VSF_DISP_SDL2_CFG_HW_PRIORITY            vsf_arch_prio_1
-#   endif
+#define VSF_DISP_USE_WINGDI                             ENABLED
+//#define VSF_DISP_USE_SDL2                               ENABLED
+//#   define VSF_DISP_SDL2_CFG_INCLUDE                    "lib\SDL2\include\SDL.h"
+//#   define VSF_DISP_SDL2_CFG_MOUSE_AS_TOUCHSCREEN       ENABLED
+//#   ifdef __VSF_X86_WIN_SINGLE_PRIORITY
+//#       define VSF_DISP_SDL2_CFG_HW_PRIORITY            vsf_arch_prio_0
+//#   else
+//#       define VSF_DISP_SDL2_CFG_HW_PRIORITY            vsf_arch_prio_1
+//#   endif
 
 #define VSF_USE_WINSOUND                                ENABLED
 #   define VSF_WINSOUND_CFG_TRACE                       DISABLED

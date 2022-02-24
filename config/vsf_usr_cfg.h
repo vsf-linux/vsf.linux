@@ -48,6 +48,7 @@
 #   define VSF_USBH_USE_LIBUSB                          ENABLED
 
 #define VSF_USE_TCPIP                                   ENABLED
+#define VSF_USE_UI                                      ENABLED
 
 #define VSF_USE_LINUX                                   ENABLED
 #   define VSF_USE_POSIX                                ENABLED
@@ -71,7 +72,7 @@
 #define APP_USE_LINUX_MOUNT_DEMO                        ENABLED
 #define APP_USE_LINUX_LIBUSB_DEMO                       ENABLED
 #define APP_USE_LINUX_NTPDATE_DEMO                      ENABLED
-#define APP_USE_LWIP_DEMO                               ENABLED
+#define APP_USE_LINUX_TELNETD_DEMO                      ENABLED
 
 // for debug and test only
 #define VSF_LINUX_CFG_INIT_SCRIPTS                                              \

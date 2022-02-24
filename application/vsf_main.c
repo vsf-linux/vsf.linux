@@ -37,12 +37,19 @@ int vsf_linux_create_fhs(void)
     extern int ntpdate_main(int argc, char *argv[]);
     busybox_bind(VSF_LINUX_CFG_BIN_PATH "/ntpdate", ntpdate_main);
 #endif
+#if APP_USE_LINUX_TELNETD_DEMO == ENABLED
+    extern int telnetd_main(int argc, char *argv[]);
+    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/telnetd", telnetd_main);
+#endif
 
+#if APP_USE_LINUX_LESS_DEMO == ENABLED
     extern int less_main(int argc, char *argv[]);
     busybox_bind(VSF_LINUX_CFG_BIN_PATH "/less", less_main);
+#endif
+#if APP_USE_LINUX_CURL_DEMO == ENABLED
     extern int curl_main(int argc, char *argv[]);
     busybox_bind(VSF_LINUX_CFG_BIN_PATH "/curl", curl_main);
-
+#endif
 #if APP_USE_LINUX_GIT_DEMO == ENABLED
     extern int git_main(int argc, char **argv);
     busybox_bind(VSF_LINUX_CFG_BIN_PATH "/git", git_main);

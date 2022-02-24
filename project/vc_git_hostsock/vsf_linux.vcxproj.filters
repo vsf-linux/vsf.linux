@@ -769,6 +769,12 @@
     <Filter Include="vsf\shell\sys\linux\app\ntp">
       <UniqueIdentifier>{9ed50bd1-815a-4d78-96a1-9b1e23e0dc00}</UniqueIdentifier>
     </Filter>
+    <Filter Include="vsf\component\ui\disp\driver\wingdi">
+      <UniqueIdentifier>{53813e46-8647-4054-a4c2-438833308c6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\shell\sys\linux\app\telnetd">
+      <UniqueIdentifier>{dc89605d-4ce0-497c-be73-b475d1fb282f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vsf\source\vsf.h">
@@ -3191,6 +3197,12 @@
     </ClInclude>
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\utsname.h">
       <Filter>vsf\shell\sys\linux\include\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\component\ui\disp\driver\wingdi\vsf_disp_wingdi.h">
+      <Filter>vsf\component\ui\disp\driver\wingdi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\app\telnetd\vsf_linux_telnetd.h">
+      <Filter>vsf\shell\sys\linux\app\telnetd</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -6436,6 +6448,15 @@
     </ClCompile>
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\kernel\socket\inet\vsf_linux_socket_inet_hostsock.c">
       <Filter>vsf\shell\sys\linux\kernel\socket\inet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\component\ui\disp\driver\wingdi\vsf_disp_wingdi.c">
+      <Filter>vsf\component\ui\disp\driver\wingdi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\app\telnetd\vsf_linux_telnetd.c">
+      <Filter>vsf\shell\sys\linux\app\telnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\example\template\demo\linux_demo\telnetd_demo.c">
+      <Filter>application\linux_demo</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

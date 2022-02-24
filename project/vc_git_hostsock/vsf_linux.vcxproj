@@ -542,6 +542,7 @@
     <ClInclude Include="..\..\vsf\source\component\ui\disp\driver\solomon-systech\ssd1306\vsf_disp_ssd1306.h" />
     <ClInclude Include="..\..\vsf\source\component\ui\disp\driver\usbd_uvc\vsf_disp_usbd_uvc.h" />
     <ClInclude Include="..\..\vsf\source\component\ui\disp\driver\vga\m480\vsf_disp_vga_m480.h" />
+    <ClInclude Include="..\..\vsf\source\component\ui\disp\driver\wingdi\vsf_disp_wingdi.h" />
     <ClInclude Include="..\..\vsf\source\component\ui\disp\vsf_disp.h" />
     <ClInclude Include="..\..\vsf\source\component\ui\tgui\controls\vsf_msg_tree_cfg.h" />
     <ClInclude Include="..\..\vsf\source\component\ui\tgui\controls\vsf_tgui_button.h" />
@@ -728,6 +729,7 @@
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\app\httpd\urihandler\file\__vsf_linux_urihandler_file.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\app\httpd\vsf_linux_httpd.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\app\ntp\vsf_linux_ntp.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\app\telnetd\vsf_linux_telnetd.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\arpa\inet.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\dirent.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\err.h" />
@@ -1725,6 +1727,7 @@
     <ClCompile Include="..\..\vsf\example\template\demo\linux_demo\libusb_demo.c" />
     <ClCompile Include="..\..\vsf\example\template\demo\linux_demo\mount_demo.c" />
     <ClCompile Include="..\..\vsf\example\template\demo\linux_demo\ntpdate_demo.c" />
+    <ClCompile Include="..\..\vsf\example\template\demo\linux_demo\telnetd_demo.c" />
     <ClCompile Include="..\..\vsf\example\template\demo\lwip_demo\lwip_demo.c" />
     <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\aes.c" />
     <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\aesni.c" />
@@ -1872,6 +1875,7 @@
     <ClCompile Include="..\..\vsf\source\component\ui\disp\driver\solomon-systech\ssd1306\vsf_disp_ssd1306.c" />
     <ClCompile Include="..\..\vsf\source\component\ui\disp\driver\usbd_uvc\vsf_disp_usbd_uvc.c" />
     <ClCompile Include="..\..\vsf\source\component\ui\disp\driver\vga\m480\vsf_disp_vga_m480.c" />
+    <ClCompile Include="..\..\vsf\source\component\ui\disp\driver\wingdi\vsf_disp_wingdi.c" />
     <ClCompile Include="..\..\vsf\source\component\ui\disp\vsf_disp.c" />
     <ClCompile Include="..\..\vsf\source\component\ui\tgui\controls\vsf_tgui_button.c" />
     <ClCompile Include="..\..\vsf\source\component\ui\tgui\controls\vsf_tgui_control.c" />
@@ -1987,6 +1991,7 @@
     <ClCompile Include="..\..\vsf\source\shell\media\sdl2\vsf_sdl2_pixelformat.c" />
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\app\httpd\vsf_linux_httpd.c" />
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\app\ntp\vsf_linux_ntp.c" />
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\app\telnetd\vsf_linux_telnetd.c" />
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\devfs\vsf_linux_devfs.c" />
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\vsf_linux_vfs.c" />
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\kernel\fs\vsf_linux_fs.c" />
