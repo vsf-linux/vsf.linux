@@ -721,6 +721,9 @@
     <Filter Include="application\3rd-party\ncurses\port">
       <UniqueIdentifier>{86225859-7e82-4938-9e37-ad9837d01aff}</UniqueIdentifier>
     </Filter>
+    <Filter Include="vsf\shell\sys\linux\app\telnetd">
+      <UniqueIdentifier>{2809d891-c260-4606-bc8e-47652e00bd49}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vsf\source\vsf.h">
@@ -2507,6 +2510,9 @@
     </ClInclude>
     <ClInclude Include="..\..\application\3rd-party\ncurses\port\ncurses_port_vsf.h">
       <Filter>application\3rd-party\ncurses\port</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\app\telnetd\vsf_linux_telnetd.h">
+      <Filter>vsf\shell\sys\linux\app\telnetd</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -4616,6 +4622,12 @@
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\kernel\socket\inet\vsf_linux_socket_inet_hostsock.c">
       <Filter>vsf\shell\sys\linux\kernel\socket\inet</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\app\telnetd\vsf_linux_telnetd.c">
+      <Filter>vsf\shell\sys\linux\app\telnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\example\template\demo\linux_demo\telnetd_demo.c">
+      <Filter>application\linux_demo</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\vsf\source\hal\arch\common\arch_without_thread_suspend\vsf_arch_without_thread_suspend_template.inc">
@@ -4624,5 +4636,10 @@
     <None Include="..\..\vsf\source\shell\sys\linux\app\httpd\urihandler\file\__vsf_linux_urihandler_file.inc">
       <Filter>vsf\shell\sys\linux\app\httpd\urihandler\file</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\vsf\source\hal\arch\x86\win\setjmp_x64.asm">
+      <Filter>vsf\hal\arch\x86\win</Filter>
+    </CustomBuild>
   </ItemGroup>
 </Project>
