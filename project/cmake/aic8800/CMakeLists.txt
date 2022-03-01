@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
+cmake_policy(SET CMP0076 NEW)
 
 if(NOT DEFINED ENV{VSF_PATH})
     message(FATAL_ERROR "Please define environment VSF_PATH")
@@ -78,9 +79,12 @@ target_link_options(${CMAKE_PROJECT_NAME} PRIVATE
 )
 
 # add user application source code/include directories
-# add template directory
 add_subdirectory(../../../application ${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_PROJECT_NAME}_app)
-add_subdirectory($ENV{VSF_PATH}/example/template/demo/aic8800 ${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_PROJECT_NAME}_app)
+add_subdirectory($ENV{VSF_PATH}/example/template/demo/aic8800 ${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_PROJECT_NAME}_app/aic8800)
+add_subdirectory($ENV{VSF_PATH}/example/template/demo/common ${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_PROJECT_NAME}_app/common)
+target_include_directories(${CMAKE_PROJECT_NAME} PUBLIC
+    $ENV{VSF_PATH}/example/template/demo/common
+)
 
 # type conversion and show size
 set_target_properties(${CMAKE_PROJECT_NAME} PROPERTIES

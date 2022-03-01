@@ -28,6 +28,8 @@
 #   include "./target/vsf_usr_cfg_win.h"
 #elif   defined(__LINUX__)
 #   include "./target/vsf_usr_cfg_linux.h"
+#elif   defined(__AIC8800__)
+#   include "./target/vsf_usr_cfg_aic8800.h"
 #endif
 
 // components
@@ -65,7 +67,6 @@
 #   define VSF_LINUX_SIMPLE_STDLIB_CFG_HEAP_MONITOR     ENABLED
 #       define VSF_LINUX_SIMPLE_STDLIB_HEAP_MONITOR_TRACE_DEPTH (32 * 1024)
 #       define VSF_LINUX_SIMPLE_STDLIB_HEAP_MONITOR_QUIET       ENABLED
-#   define VSF_LINUX_CFG_RTC                            vsf_hw_rtc0
 
 // APP configuration
 #define APP_USE_LINUX_DEMO                              ENABLED
