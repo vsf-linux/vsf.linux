@@ -7,7 +7,8 @@ Porting linux applications to VSF
     - Visual Studio 2022
     - npcap
 
-## Submodule
+## x86/x64
+### submodules
 1. vsf
     - PLOOC
     - zlib
@@ -15,3 +16,13 @@ Porting linux applications to VSF
 2. ncurses
 3. less
 4. curl
+
+## aic8800m
+### submodules
+1. vsf
+    - PLOOC
+    - CMSIS
+    - AIC8800M/vendor
+    - mbedtls
+    - btstack
+2. curl
