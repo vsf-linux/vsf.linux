@@ -11,6 +11,10 @@ int vsf_linux_create_fhs(void)
     busybox_install();
 
     // 1. hardware driver related demo
+#ifdef __AIC8800__
+    extern void aic8800_demo_init(void);
+    aic8800_demo_init();
+#endif
 #if VSF_USE_USB_HOST == ENABLED
     usrapp_usbh_common_init();
 #   if VSF_LINUX_USE_LIBUSB == ENABLED
@@ -21,7 +25,7 @@ int vsf_linux_create_fhs(void)
     // 2. fs
 
     // 3. install executables
-#if VSF_USE_LWIP == ENABLED
+#if VSF_USE_LWIP == ENABLED && !defined(__AIC8800__)
     extern int lwip_main(int argc, char *argv[]);
     busybox_bind(VSF_LINUX_CFG_BIN_PATH "/lwip", lwip_main);
 #endif

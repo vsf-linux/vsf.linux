@@ -58,6 +58,8 @@
 // AIC8800 demos
 #define AIC8800_APP_USE_WIFI_DEMO                       ENABLED
 #define AIC8800_APP_USE_BT_DEMO                         ENABLED
+#   define APP_USE_BTSTACK_DEMO                         ENABLED
+#       define VSF_USE_BTSTACK                          ENABLED
 
 // component configure
 #define VSF_USE_LWIP                                    ENABLED

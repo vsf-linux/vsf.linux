@@ -82,8 +82,15 @@ target_link_options(${CMAKE_PROJECT_NAME} PRIVATE
 add_subdirectory(../../../application ${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_PROJECT_NAME}_app)
 add_subdirectory($ENV{VSF_PATH}/example/template/demo/aic8800 ${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_PROJECT_NAME}_app/aic8800)
 add_subdirectory($ENV{VSF_PATH}/example/template/demo/common ${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_PROJECT_NAME}_app/common)
+add_subdirectory($ENV{VSF_PATH}/example/template/demo/btstack_demo ${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_PROJECT_NAME}_app/btstack)
 target_include_directories(${CMAKE_PROJECT_NAME} PUBLIC
     $ENV{VSF_PATH}/example/template/demo/common
+)
+target_sources(${CMAKE_PROJECT_NAME} PUBLIC
+    $ENV{VSF_PATH}/example/template/demo/linux_demo/libusb_demo.c
+    $ENV{VSF_PATH}/example/template/demo/linux_demo/mount_demo.c
+    $ENV{VSF_PATH}/example/template/demo/linux_demo/ntpdate_demo.c
+    $ENV{VSF_PATH}/example/template/demo/linux_demo/telnetd_demo.c
 )
 
 # type conversion and show size
