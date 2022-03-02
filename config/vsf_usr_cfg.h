@@ -73,11 +73,17 @@
 #define APP_USE_LINUX_TELNETD_DEMO                      ENABLED
 
 // for debug and test only
-#define VSF_LINUX_CFG_INIT_SCRIPTS                                              \
+#ifdef __WIN__
+#   define VSF_LINUX_CFG_INIT_SCRIPTS                                           \
+            "echo vsf build on " __DATE__,                                      \
             "mkdir -p /mnt/hostfs",                                             \
             "mount -t winfs . /mnt/hostfs",                                     \
             "cd /mnt/hostfs",                                                   \
             "export GIT_SSL_NO_VERIFY=",
+#else
+#   define VSF_LINUX_CFG_INIT_SCRIPTS                                           \
+            "echo vsf build on " __DATE__,
+#endif
 
 /*============================ TYPES =========================================*/
 /*============================ GLOBAL VARIABLES ==============================*/
