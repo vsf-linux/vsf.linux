@@ -62,6 +62,7 @@ set(APP_USE_LINUX_CURL_DEMO 1)
 set(VSF_CONFIG_PATH ../../../config)
 get_filename_component(VSF_LVGL_CONFIG_PATH ${VSF_CONFIG_PATH}/3rd-party/lvgl ABSOLUTE)
 get_filename_component(VSF_BTSTACK_CONFIG_PATH ${VSF_CONFIG_PATH}/3rd-party/btstack ABSOLUTE)
+get_filename_component(VSF_MBEDTLS_CONFIG_PATH ${VSF_CONFIG_PATH}/3rd-party ABSOLUTE)
 include($ENV{VSF_PATH}/script/cmake/vsf.cmake)
 
 # user compiler definitions
