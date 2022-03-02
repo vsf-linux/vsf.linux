@@ -62,6 +62,8 @@
 #   define APP_USE_BTSTACK_DEMO                         ENABLED
 #       define VSF_USE_BTSTACK                          ENABLED
 
+#define APP_USE_LINUX_CURL_DEMO                         ENABLED
+
 // component configure
 #define VSF_USE_LWIP                                    ENABLED
 #define VSF_USE_WIFI                                    ENABLED

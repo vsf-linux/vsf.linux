@@ -1,7 +1,7 @@
 #ifdef __VSF__
 
 // for puts only
-#include "3rd-party/curl/raw/src/tool_setup.h"
+#include "../raw/src/tool_setup.h"
 
 int vsf_curl_dynlib_idx = -1;
 
