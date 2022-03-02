@@ -43,11 +43,16 @@
 #define VSF_USE_MAL                                     ENABLED
 #   define VSF_MAL_USE_FILE_MAL                         ENABLED
 #define VSF_USE_FS                                      ENABLED
+#   define VSF_FS_USE_FATFS                             ENABLED
 #define VSF_USE_INPUT                                   ENABLED
 #define VSF_USE_SCSI                                    ENABLED
 #define VSF_USE_USB_HOST                                ENABLED
-//#   define VSF_USBH_USE_ECM                             ENABLED
 #   define VSF_USBH_USE_LIBUSB                          ENABLED
+#   define VSF_USBH_USE_MSC                             ENABLED
+#   define VSF_USBH_USE_HID                             ENABLED
+#   define VSF_USBH_USE_DS4                             ENABLED
+#   define VSF_USBH_USE_NSPRO                           ENABLED
+#   define VSF_USBH_USE_XB360                           ENABLED
 
 #define VSF_USE_TCPIP                                   ENABLED
 #define VSF_USE_UI                                      ENABLED
