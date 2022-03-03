@@ -31,6 +31,9 @@
 #if __IS_COMPILER_IAR__
 #   define VSF_KERNEL_CFG_THREAD_STACK_CHECK            ENABLED
 #   define VSF_KERNEL_GET_STACK_FROM_JMPBUF(__JMPBUF)   ((*(__JMPBUF))[4] & 0xFFFFFFFF)
+#elif __IS_COMPILER_GCC__
+// strtoxxx in newlib has dependency issues, implement in simple_stdlib
+#   define VSF_LINUX_SIMPLE_STDLIB_USE_STRTOXX          ENABLED
 #endif
 
 #define VSF_SYSTIMER_FREQ                               (240UL * 1000 * 1000)
@@ -42,6 +45,8 @@
 #define VSF_EDA_QUEUE_CFG_REGION                        ENABLED
 #define VSF_EDA_QUEUE_CFG_SUPPORT_ISR                   ENABLED
 #define __USE_LOCAL_STDIO__
+#define VSF_USE_SIMPLE_SPRINTF                          ENABLED
+#define VSF_USE_SIMPLE_SSCANF                           ENABLED
 
 // Use unused interrupt as SWI
 #define VSF_DEV_SWI_NUM                                 4

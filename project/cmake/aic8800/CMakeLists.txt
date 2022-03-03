@@ -65,15 +65,6 @@ get_filename_component(VSF_BTSTACK_CONFIG_PATH ${VSF_CONFIG_PATH}/3rd-party/btst
 get_filename_component(VSF_MBEDTLS_CONFIG_PATH ${VSF_CONFIG_PATH}/3rd-party ABSOLUTE)
 include($ENV{VSF_PATH}/script/cmake/vsf.cmake)
 
-# user compiler definitions
-# add APIs here if conflistc with libc
-set(VSF_TARGET_WRAPPER_LIST "fprintf" "fflush" "vfprintf")
-foreach(api ${VSF_TARGET_WRAPPER_LIST})
-    target_compile_definitions(${CMAKE_PROJECT_NAME} PRIVATE
-        "${api}=__wrap_${api}"
-    )
-endforeach()
-
 # linker script
 target_link_options(${CMAKE_PROJECT_NAME} PRIVATE
     LINKER:-T${CMAKE_CURRENT_SOURCE_DIR}/linker.ld
