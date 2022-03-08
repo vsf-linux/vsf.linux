@@ -33,6 +33,7 @@
 
 #   define VSF_LINUX_CFG_WRAPPER                        ENABLED
 #   define VSF_LINUX_SOCKET_CFG_WRAPPER                 ENABLED
+#   define VSF_LINUX_LIBUSB_CFG_WRAPPER                 ENABLED
 #   define VSF_LINUX_USE_SIMPLE_LIBC                    ENABLED
 #   define VSF_KERNEL_CFG_THREAD_STACK_LARGE            ENABLED
 #   define VSF_LINUX_CFG_STACKSIZE                      (128 * 1024)
@@ -86,6 +87,8 @@
 #   define APP_DISP_SDL2_AMPLIFIER                      1
 
 #define VSF_TRACE_CFG_COLOR_EN                          ENABLED
+
+#define APP_USE_LINUX_CURL_DEMO                         ENABLED
 
 /*============================ TYPES =========================================*/
 /*============================ GLOBAL VARIABLES ==============================*/

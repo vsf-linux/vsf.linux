@@ -19,6 +19,7 @@ set(VSF_USE_LINUX 1)
 set(VSF_USE_DISP 1)
     set(VSF_DISP_USE_SDL2 1)
 set(VSF_USE_MBEDTLS 0)
+set(APP_USE_LINUX_CURL_DEMO 1)
 
 # include vsf cmake script
 set(VSF_CONFIG_PATH ../../../config)
