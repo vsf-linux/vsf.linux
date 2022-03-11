@@ -42,10 +42,12 @@
 
 #define VSF_USE_MAL                                     ENABLED
 #   define VSF_MAL_USE_FILE_MAL                         ENABLED
+#   define VSF_MAL_USE_SCSI_MAL                         ENABLED
 #define VSF_USE_FS                                      ENABLED
 #   define VSF_FS_USE_FATFS                             ENABLED
 #define VSF_USE_INPUT                                   ENABLED
 #define VSF_USE_SCSI                                    ENABLED
+#   define VSF_SCSI_USE_MAL_SCSI                        ENABLED
 #define VSF_USE_USB_HOST                                ENABLED
 #   define VSF_USBH_USE_LIBUSB                          ENABLED
 #   define VSF_USBH_USE_MSC                             ENABLED
@@ -76,6 +78,7 @@
 #define APP_USE_LINUX_LIBUSB_DEMO                       ENABLED
 #define APP_USE_LINUX_NTPDATE_DEMO                      ENABLED
 #define APP_USE_LINUX_TELNETD_DEMO                      ENABLED
+#define APP_USE_SCSI_DEMO                               ENABLED
 
 // for debug and test only
 #ifdef __WIN__

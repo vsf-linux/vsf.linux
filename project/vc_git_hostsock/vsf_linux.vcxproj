@@ -1729,6 +1729,7 @@
     <ClCompile Include="..\..\vsf\example\template\demo\linux_demo\ntpdate_demo.c" />
     <ClCompile Include="..\..\vsf\example\template\demo\linux_demo\telnetd_demo.c" />
     <ClCompile Include="..\..\vsf\example\template\demo\lwip_demo\lwip_demo.c" />
+    <ClCompile Include="..\..\vsf\example\template\demo\scsi_demo\scsi_demo.c" />
     <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\aes.c" />
     <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\aesni.c" />
     <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\arc4.c" />

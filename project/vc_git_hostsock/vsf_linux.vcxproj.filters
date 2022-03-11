@@ -775,6 +775,9 @@
     <Filter Include="vsf\shell\sys\linux\app\telnetd">
       <UniqueIdentifier>{dc89605d-4ce0-497c-be73-b475d1fb282f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="application\scsi_demo">
+      <UniqueIdentifier>{16647ed1-5e38-4b7c-b4fd-2bbc700b2ff7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vsf\source\vsf.h">
@@ -6457,6 +6460,9 @@
     </ClCompile>
     <ClCompile Include="..\..\vsf\example\template\demo\linux_demo\telnetd_demo.c">
       <Filter>application\linux_demo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\example\template\demo\scsi_demo\scsi_demo.c">
+      <Filter>application\scsi_demo</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

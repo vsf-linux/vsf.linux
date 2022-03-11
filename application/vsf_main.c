@@ -23,6 +23,9 @@ int vsf_linux_create_fhs(void)
 #endif
 
     // 2. fs
+#if APP_USE_SCSI_DEMO == ENABLED
+    mkdir("/scsi", 0);
+#endif
 
     // 3. install executables
 #if VSF_USE_LWIP == ENABLED && !defined(__AIC8800__)
