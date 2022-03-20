@@ -72,6 +72,7 @@
 #   define VSF_USE_SIMPLE_SSCANF                        DISABLED
 #   define VSF_USE_SIMPLE_SPRINTF                       DISABLED
 #endif
+#   define VSH_CMD_SIZE                                 512
 
 // component configure
 #define VSF_USE_HEAP                                    ENABLED
