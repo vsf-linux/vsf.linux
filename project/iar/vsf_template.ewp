@@ -304,7 +304,7 @@
                 <option>
                     <name>CCAllowList</name>
                     <version>1</version>
-                    <state>00000000</state>
+                    <state>11111110</state>
                 </option>
                 <option>
                     <name>CCDebugInfo</name>
@@ -437,7 +437,7 @@
                 </option>
                 <option>
                     <name>CCOptLevel</name>
-                    <state>1</state>
+                    <state>3</state>
                 </option>
                 <option>
                     <name>CCOptStrategy</name>
@@ -446,7 +446,7 @@
                 </option>
                 <option>
                     <name>CCOptLevelSlave</name>
-                    <state>1</state>
+                    <state>3</state>
                 </option>
                 <option>
                     <name>CompilerMisraRules98</name>
@@ -1128,39 +1128,6 @@
             <data />
         </settings>
     </configuration>
-    <group>
-        <name>config</name>
-        <group>
-            <name>3rd-party</name>
-            <group>
-                <name>btstack</name>
-                <file>
-                    <name>$PROJ_DIR$\..\..\config\3rd-party\btstack\btstack_config.h</name>
-                </file>
-            </group>
-            <group>
-                <name>lwip</name>
-                <file>
-                    <name>$PROJ_DIR$\..\..\config\3rd-party\lwip\lwipopts.h</name>
-                </file>
-            </group>
-            <group>
-                <name>mbedtls</name>
-                <file>
-                    <name>$PROJ_DIR$\..\..\config\3rd-party\mbedtls\config.h</name>
-                </file>
-            </group>
-        </group>
-        <group>
-            <name>target</name>
-            <file>
-                <name>$PROJ_DIR$\..\..\config\target\vsf_usr_cfg_aic8800.h</name>
-            </file>
-        </group>
-        <file>
-            <name>$PROJ_DIR$\..\..\config\vsf_usr_cfg.h</name>
-        </file>
-    </group>
     <group>
         <name>application</name>
         <group>
@@ -2497,6 +2464,39 @@
         </group>
         <file>
             <name>$PROJ_DIR$\..\..\application\vsf_main.c</name>
+        </file>
+    </group>
+    <group>
+        <name>config</name>
+        <group>
+            <name>3rd-party</name>
+            <group>
+                <name>btstack</name>
+                <file>
+                    <name>$PROJ_DIR$\..\..\config\3rd-party\btstack\btstack_config.h</name>
+                </file>
+            </group>
+            <group>
+                <name>lwip</name>
+                <file>
+                    <name>$PROJ_DIR$\..\..\config\3rd-party\lwip\lwipopts.h</name>
+                </file>
+            </group>
+            <group>
+                <name>mbedtls</name>
+                <file>
+                    <name>$PROJ_DIR$\..\..\config\3rd-party\mbedtls\config.h</name>
+                </file>
+            </group>
+        </group>
+        <group>
+            <name>target</name>
+            <file>
+                <name>$PROJ_DIR$\..\..\config\target\vsf_usr_cfg_aic8800.h</name>
+            </file>
+        </group>
+        <file>
+            <name>$PROJ_DIR$\..\..\config\vsf_usr_cfg.h</name>
         </file>
     </group>
     <group>
