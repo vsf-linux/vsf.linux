@@ -1,0 +1,41 @@
+ lib/{base64.c => curl_base64.c}   | 0
+ lib/{md4.c => curl_md4.c}         | 0
+ lib/{md5.c => curl_md5.c}         | 0
+ lib/curl_setup.h                  | 2 +-
+ lib/{sha256.c => curl_sha256.c}   | 0
+ lib/{version.c => curl_version.c} | 0
+ 6 files changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/lib/base64.c b/lib/curl_base64.c
+similarity index 100%
+rename from lib/base64.c
+rename to lib/curl_base64.c
+diff --git a/lib/md4.c b/lib/curl_md4.c
+similarity index 100%
+rename from lib/md4.c
+rename to lib/curl_md4.c
+diff --git a/lib/md5.c b/lib/curl_md5.c
+similarity index 100%
+rename from lib/md5.c
+rename to lib/curl_md5.c
+diff --git a/lib/curl_setup.h b/lib/curl_setup.h
+index 05971206f..04f571455 100644
+--- a/lib/curl_setup.h
++++ b/lib/curl_setup.h
+@@ -523,7 +523,7 @@
+ #  define DIR_CHAR      "/"
+ 
+ #  ifndef fileno /* sunos 4 have this as a macro! */
+-     int fileno(FILE *stream);
++     _FD_TYPE fileno(FILE *stream);
+ #  endif
+ 
+ #endif /* WIN32 */
+diff --git a/lib/sha256.c b/lib/curl_sha256.c
+similarity index 100%
+rename from lib/sha256.c
+rename to lib/curl_sha256.c
+diff --git a/lib/version.c b/lib/curl_version.c
+similarity index 100%
+rename from lib/version.c
+rename to lib/curl_version.c
