@@ -15,13 +15,12 @@
 #define OS                      "vsf"
 #define BSD
 #define __OpenBSD__
+#define HAVE_VARIADIC_MACROS_C99
 #define USE_SSL
 #define USE_MBEDTLS
 #define USE_THREADS_POSIX
 #define CURL_STATICLIB
 #define CURL_STRICTER
-#define CURL_DISABLE_LDAP
-#define CURL_DISABLE_SOCKETPAIR
 #define HAVE_ERRNO_H
 #define HAVE_SYS_TYPES_H
 #define HAVE_SYS_STAT_H
@@ -84,5 +83,8 @@
 #define SIZEOF_TIME_T           8
 #define SIZEOF_OFF_T            4
 #define SIZEOF_CURL_OFF_T       4
+
+// CURL disable
+#include "3rd-party/curl/curl_cfg_disable.h"
 
 #endif      // __CURL_CONFIG_VSF_H__
