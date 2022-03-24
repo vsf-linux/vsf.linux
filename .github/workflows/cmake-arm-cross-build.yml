@@ -1,0 +1,52 @@
+name: cmake-arm-cross-build
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  arm-cross-build:
+    strategy:
+      fail-fast: false
+      matrix:
+        target: [aic8800]
+        cc: ['10-2021.10', '9-2019-q4', '8-2019-q3']
+        os: [ubuntu-latest]
+
+    runs-on: ${{matrix.os}}
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        submodules: true # without recursive
+    - name: update vsf submodules
+      run: |
+        cd vsf
+        git submodule update --init
+
+    - name: get latest cmake and ninja
+      uses: lukka/get-cmake@latest
+
+    - name: arm-none-eabi-gcc
+      uses: ryanwinter/arm-none-eabi-gcc@master
+      with:
+        release: ${{matrix.cc}}
+
+    - name: install depends
+      run: |
+          sudo apt-get update
+          sudo apt-get install -y libsdl2-dev
+      shell: bash
+
+    - name: configure cmake
+      working-directory: ${{github.workspace}}/project/cmake/${{matrix.target}}
+      run: |
+        cmake --version
+        cmake -GNinja -B ./build
+      env:
+        VSF_PATH: ${{github.workspace}}/vsf
+
+    - name: build
+      working-directory: ${{github.workspace}}/project/cmake/${{matrix.target}}
+      run: cmake --build ./build -v
