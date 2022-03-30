@@ -1,0 +1,71 @@
+ lib/{base64.c => curl_base64.c}   | 0
+ lib/{md4.c => curl_md4.c}         | 0
+ lib/{md5.c => curl_md5.c}         | 0
+ lib/curl_setup.h                  | 2 +-
+ lib/{sha256.c => curl_sha256.c}   | 0
+ lib/{version.c => curl_version.c} | 0
+ lib/urldata.h                     | 4 ++--
+ src/tool_operate.c                | 2 +-
+ 8 files changed, 4 insertion(+), 4 deletion(-)
+
+diff --git a/lib/base64.c b/lib/curl_base64.c
+similarity index 100%
+rename from lib/base64.c
+rename to lib/curl_base64.c
+diff --git a/lib/md4.c b/lib/curl_md4.c
+similarity index 100%
+rename from lib/md4.c
+rename to lib/curl_md4.c
+diff --git a/lib/md5.c b/lib/curl_md5.c
+similarity index 100%
+rename from lib/md5.c
+rename to lib/curl_md5.c
+diff --git a/lib/curl_setup.h b/lib/curl_setup.h
+index 05971206f..04f571455 100644
+--- a/lib/curl_setup.h
++++ b/lib/curl_setup.h
+@@ -523,7 +523,7 @@
+ #  define DIR_CHAR      "/"
+ 
+ #  ifndef fileno /* sunos 4 have this as a macro! */
+-     int fileno(FILE *stream);
++     _FD_TYPE fileno(FILE *stream);
+ #  endif
+ 
+ #endif /* WIN32 */
+diff --git a/lib/sha256.c b/lib/curl_sha256.c
+similarity index 100%
+rename from lib/sha256.c
+rename to lib/curl_sha256.c
+diff --git a/lib/version.c b/lib/curl_version.c
+similarity index 100%
+rename from lib/version.c
+rename to lib/curl_version.c
+diff --git a/lib/urldata.h b/lib/urldata.h
+index cc9c88870..552c66134 100644
+--- a/lib/urldata.h
++++ b/lib/urldata.h
+@@ -172,8 +172,8 @@ typedef CURLcode (*Curl_datastream)(struct Curl_easy *data,
+    libcurl able to do significantly faster uploads in some circumstances. Even
+    larger buffers can help further, but this is deemed a fair memory/speed
+    compromise. */
+-#define UPLOADBUFFER_DEFAULT 65536
+-#define UPLOADBUFFER_MAX (2*1024*1024)
++#define UPLOADBUFFER_DEFAULT 16384
++#define UPLOADBUFFER_MAX (16384)
+ #define UPLOADBUFFER_MIN CURL_MAX_WRITE_SIZE
+ 
+ #define CURLEASY_MAGIC_NUMBER 0xc0dedbadU
+diff --git a/src/tool_operate.c b/src/tool_operate.c
+index 5f4b76b0b..01e90fae5 100644
+--- a/src/tool_operate.c
++++ b/src/tool_operate.c
+@@ -205,7 +205,7 @@ static curl_off_t VmsSpecialSize(const char *name,
+ }
+ #endif /* __VMS */
+ 
+-#define BUFFER_SIZE (100*1024)
++#define BUFFER_SIZE (32*1024)
+ 
+ #ifdef __VSF__
+ #   define transfersl               (curl_tool_operate_ctx->transfersl)
