@@ -48,7 +48,9 @@
 #define VSF_USE_INPUT                                   ENABLED
 #define VSF_USE_SCSI                                    ENABLED
 #   define VSF_SCSI_USE_MAL_SCSI                        ENABLED
+#ifndef __CPU_WEBASSEMBLY__
 #define VSF_USE_USB_HOST                                ENABLED
+#endif
 #   define VSF_USBH_USE_LIBUSB                          ENABLED
 #   define VSF_USBH_USE_MSC                             ENABLED
 #   define VSF_USBH_USE_HID                             ENABLED
