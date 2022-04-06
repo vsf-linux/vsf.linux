@@ -77,7 +77,9 @@
 // APP configuration
 #define APP_USE_LINUX_DEMO                              ENABLED
 #define APP_USE_LINUX_MOUNT_DEMO                        ENABLED
-#define APP_USE_LINUX_LIBUSB_DEMO                       ENABLED
+#if VSF_USE_USB_HOST == ENABLED && VSF_LINUX_USE_LIBUSB == ENABLED
+#   define APP_USE_LINUX_LIBUSB_DEMO                    ENABLED
+#endif
 #define APP_USE_LINUX_NTPDATE_DEMO                      ENABLED
 #define APP_USE_LINUX_TELNETD_DEMO                      ENABLED
 #define APP_USE_SCSI_DEMO                               ENABLED

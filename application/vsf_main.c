@@ -68,7 +68,7 @@ int vsf_linux_create_fhs(void)
 }
 
 // TODO: SDL require that main need argc and argv
-int VSF_USER_ENTRY(int argc, char *argv[])
+int VSF_USER_ENTRY(void)
 {
     VSF_STREAM_INIT(&VSF_DEBUG_STREAM_RX);
     VSF_STREAM_INIT(&VSF_DEBUG_STREAM_TX);
