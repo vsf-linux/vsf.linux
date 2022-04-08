@@ -1,0 +1,47 @@
+ source/hal/arch/x86/linux/linux_generic.c         | 12 ++++++------
+ source/shell/sys/linux/include/simple_libc/time.h |  2 ++
+ 2 files changed, 8 insertions(+), 6 deletions(-)
+
+diff --git a/source/hal/arch/x86/linux/linux_generic.c b/source/hal/arch/x86/linux/linux_generic.c
+index 333415c0..e3e60f1b 100644
+--- a/source/hal/arch/x86/linux/linux_generic.c
++++ b/source/hal/arch/x86/linux/linux_generic.c
+@@ -324,11 +324,11 @@ vsf_err_t vsf_systimer_init(void)
+ #if __VSF_ARCH_LINUX_CFG_SYSTIMER_SIGNAL == ENABLED
+     signal(SIGUSR1, __vsf_systimer_on_notify);
+ #endif
+-    if (timer_create(CLOCK_MONOTONIC, &evp, &ctx->timer)) {
+-        VSF_HAL_ASSERT(false);
+-        __vsf_arch_irq_fini(&ctx->use_as__vsf_arch_irq_thread_t);
+-        return VSF_ERR_FAIL;
+-    }
++//    if (timer_create(CLOCK_MONOTONIC, &evp, &ctx->timer)) {
++//        VSF_HAL_ASSERT(false);
++//        __vsf_arch_irq_fini(&ctx->use_as__vsf_arch_irq_thread_t);
++//        return VSF_ERR_FAIL;
++//    }
+     __vsf_arch_irq_request_init(&__vsf_arch.systimer.due_request);
+     return VSF_ERR_NONE;
+ }
+@@ -359,7 +359,7 @@ bool vsf_systimer_set(vsf_systimer_tick_t due)
+     ts.tv_sec = due / 1000000;
+     ts.tv_nsec = (due % 1000000) * 1000;
+     its.it_value = ts;
+-    timer_settime(__vsf_arch.systimer.timer, TIMER_ABSTIME, &its, NULL);
++//    timer_settime(__vsf_arch.systimer.timer, TIMER_ABSTIME, &its, NULL);
+     return true;
+ }
+ 
+diff --git a/source/shell/sys/linux/include/simple_libc/time.h b/source/shell/sys/linux/include/simple_libc/time.h
+index 3971d6ae..59d41b84 100644
+--- a/source/shell/sys/linux/include/simple_libc/time.h
++++ b/source/shell/sys/linux/include/simple_libc/time.h
+@@ -15,6 +15,8 @@ extern "C" {
+ #define clock_gettime       VSF_LINUX_LIBC_WRAPPER(clock_gettime)
+ #define nanosleep           VSF_LINUX_LIBC_WRAPPER(nanosleep)
+ #define clock               VSF_LINUX_LIBC_WRAPPER(clock)
++#define time                VSF_LINUX_LIBC_WRAPPER(time)
++#define mktime              VSF_LINUX_LIBC_WRAPPER(mktime)
+ #endif
+ 
+ struct tm {
