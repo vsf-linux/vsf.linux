@@ -88,11 +88,10 @@
 #   define APP_DISP_SDL2_COLOR                          VSF_DISP_COLOR_RGB565
 #   define APP_DISP_SDL2_AMPLIFIER                      1
 
-#define VSF_TRACE_CFG_COLOR_EN                          ENABLED
-
 // TODO: enable curl if ready for webassembly
 #ifndef __CPU_WEBASSEMBLY__
-#define APP_USE_LINUX_CURL_DEMO                         ENABLED
+#   define VSF_TRACE_CFG_COLOR_EN                       ENABLED
+#   define APP_USE_LINUX_CURL_DEMO                      ENABLED
 #endif
 
 /*============================ TYPES =========================================*/
