@@ -69,12 +69,6 @@
 // libusb does not support hub
 #define VSF_USBH_CFG_ENABLE_ROOT_HUB                    DISABLED
 #define VSF_USBH_USE_HUB                                DISABLED
-#ifndef __CPU_WEBASSEMBLY__
-#define VSF_USBH_USE_HCD_LIBUSB                         ENABLED
-#endif
-#   define VSF_LIBUSB_HCD_CFG_DEV_NUM                   1
-#   define VSF_LIBUSB_HCD_DEV0_VID                      0x0A12      // CSR8510 bthci
-#   define VSF_LIBUSB_HCD_DEV0_PID                      0x0001
 
 #define VSF_FS_USE_LINFS                                ENABLED
 
@@ -88,10 +82,15 @@
 #   define APP_DISP_SDL2_COLOR                          VSF_DISP_COLOR_RGB565
 #   define APP_DISP_SDL2_AMPLIFIER                      1
 
-// TODO: enable curl if ready for webassembly
 #ifndef __CPU_WEBASSEMBLY__
 #   define VSF_TRACE_CFG_COLOR_EN                       ENABLED
+// TODO: enable curl if ready for webassembly
 #   define APP_USE_LINUX_CURL_DEMO                      ENABLED
+
+#   define VSF_USBH_USE_HCD_LIBUSB                      ENABLED
+#       define VSF_LIBUSB_HCD_CFG_DEV_NUM               1
+#       define VSF_LIBUSB_HCD_DEV0_VID                  0x0A12      // CSR8510 bthci
+#       define VSF_LIBUSB_HCD_DEV0_PID                  0x0001
 #endif
 
 /*============================ TYPES =========================================*/
