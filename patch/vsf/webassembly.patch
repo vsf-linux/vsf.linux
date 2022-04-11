@@ -3,10 +3,10 @@
  2 files changed, 8 insertions(+), 6 deletions(-)
 
 diff --git a/source/hal/arch/x86/linux/linux_generic.c b/source/hal/arch/x86/linux/linux_generic.c
-index 333415c0..e3e60f1b 100644
+index 95eeb937..0cdb58da 100644
 --- a/source/hal/arch/x86/linux/linux_generic.c
 +++ b/source/hal/arch/x86/linux/linux_generic.c
-@@ -324,11 +324,11 @@ vsf_err_t vsf_systimer_init(void)
+@@ -371,11 +371,11 @@ vsf_err_t vsf_systimer_init(void)
  #if __VSF_ARCH_LINUX_CFG_SYSTIMER_SIGNAL == ENABLED
      signal(SIGUSR1, __vsf_systimer_on_notify);
  #endif
@@ -23,7 +23,7 @@ index 333415c0..e3e60f1b 100644
      __vsf_arch_irq_request_init(&__vsf_arch.systimer.due_request);
      return VSF_ERR_NONE;
  }
-@@ -359,7 +359,7 @@ bool vsf_systimer_set(vsf_systimer_tick_t due)
+@@ -406,7 +406,7 @@ bool vsf_systimer_set(vsf_systimer_tick_t due)
      ts.tv_sec = due / 1000000;
      ts.tv_nsec = (due % 1000000) * 1000;
      its.it_value = ts;
