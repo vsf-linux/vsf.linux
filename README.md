@@ -26,3 +26,10 @@ Porting linux applications to VSF
     - mbedtls
     - btstack
 2. curl
+
+## WebAssembly
+### submodules
+1. vsf
+   - PLOOC
+### patches
+1. /patch/vsf/webassembly.patch to /vsf
