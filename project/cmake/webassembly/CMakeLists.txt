@@ -48,4 +48,4 @@ set_target_properties(${CMAKE_PROJECT_NAME} PROPERTIES
     SUFFIX ".html"
 )
 
-#set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O3")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O3")
