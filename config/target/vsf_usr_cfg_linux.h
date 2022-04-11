@@ -42,16 +42,10 @@
 #   define VSF_LINUX_SIMPLE_STDLIB_CFG_HEAP_MONITOR     ENABLED
 #       define VSF_LINUX_SIMPLE_STDLIB_HEAP_MONITOR_TRACE_DEPTH (32 * 1024)
 #       define VSF_LINUX_SIMPLE_STDLIB_HEAP_MONITOR_QUIET       ENABLED
-// if VSF_LINUX_USE_SIMPLE_LIBC is enabled, need VSF_USE_SIMPLE_SSCANF and VSF_USE_SIMPLE_SPRINTF
 #if VSF_LINUX_USE_SIMPLE_LIBC == ENABLED
 #   define VSF_LINUX_LIBC_CFG_CPP                       ENABLED
 // VSF_LINUX_LIBC_CFG_WRAPPER is required on __LINUX__ to avoid API confliction
 #   define VSF_LINUX_LIBC_CFG_WRAPPER                   ENABLED
-#   define VSF_USE_SIMPLE_SSCANF                        ENABLED
-#   define VSF_USE_SIMPLE_SPRINTF                       ENABLED
-#else
-#   define VSF_USE_SIMPLE_SSCANF                        DISABLED
-#   define VSF_USE_SIMPLE_SPRINTF                       DISABLED
 #endif
 
 // component configure
@@ -91,6 +85,11 @@
 #       define VSF_LIBUSB_HCD_CFG_DEV_NUM               1
 #       define VSF_LIBUSB_HCD_DEV0_VID                  0x0A12      // CSR8510 bthci
 #       define VSF_LIBUSB_HCD_DEV0_PID                  0x0001
+
+#   if VSF_LINUX_USE_SIMPLE_LIBC == ENABLED
+#       define VSF_USE_SIMPLE_SSCANF                    ENABLED
+#       define VSF_USE_SIMPLE_SPRINTF                   ENABLED
+#   endif
 #endif
 
 /*============================ TYPES =========================================*/
