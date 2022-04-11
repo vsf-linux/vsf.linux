@@ -90,6 +90,8 @@
 #       define VSF_USE_SIMPLE_SSCANF                    ENABLED
 #       define VSF_USE_SIMPLE_SPRINTF                   ENABLED
 #   endif
+#else
+#   define VSH_HAS_COLOR                                0
 #endif
 
 /*============================ TYPES =========================================*/
