@@ -78,8 +78,6 @@
 
 #ifndef __CPU_WEBASSEMBLY__
 #   define VSF_TRACE_CFG_COLOR_EN                       ENABLED
-// TODO: enable curl if ready for webassembly
-#   define APP_USE_LINUX_CURL_DEMO                      ENABLED
 
 #   define VSF_USBH_USE_HCD_LIBUSB                      ENABLED
 #       define VSF_LIBUSB_HCD_CFG_DEV_NUM               1
@@ -93,6 +91,9 @@
 #else
 #   define VSH_HAS_COLOR                                0
 #endif
+
+// application configuration
+#define APP_USE_LINUX_CURL_DEMO                      ENABLED
 
 /*============================ TYPES =========================================*/
 /*============================ GLOBAL VARIABLES ==============================*/
