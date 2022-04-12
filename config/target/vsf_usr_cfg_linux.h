@@ -67,7 +67,6 @@
 #define VSF_FS_USE_LINFS                                ENABLED
 
 #define VSF_DISP_USE_SDL2                               ENABLED
-#   define VSF_DISP_SDL2_CFG_INCLUDE                    <SDL2/SDL.h>
 #   define VSF_DISP_SDL2_CFG_MOUSE_AS_TOUCHSCREEN       ENABLED
 #       define VSF_DISP_SDL2_CFG_HW_PRIORITY            vsf_arch_prio_0
 #   define APP_DISP_SDL2_HEIGHT                         768
@@ -90,8 +89,17 @@
 #       define VSF_USE_SIMPLE_SSCANF                    ENABLED
 #       define VSF_USE_SIMPLE_SPRINTF                   ENABLED
 #   endif
+
+#   if VSF_DISP_USE_SDL2
+#       define VSF_DISP_SDL2_CFG_INCLUDE                <SDL2/SDL.h>
+#   endif
 #else
 #   define VSH_HAS_COLOR                                0
+
+#   if VSF_DISP_USE_SDL2
+#       define VSF_DISP_SDL2_CFG_INCLUDE                <SDL.h>
+#       define VSF_DISP_SDL2_USE_CONTROLLER             DISABLED
+#   endif
 #endif
 
 /*============================ TYPES =========================================*/
