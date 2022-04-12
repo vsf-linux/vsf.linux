@@ -31,5 +31,7 @@ Porting linux applications to VSF
 ### submodules
 1. vsf
    - PLOOC
+   - mbedtls
+2. curl
 ### patches
 1. /patch/vsf/webassembly.patch to /vsf
