@@ -4,19 +4,6 @@
 #include "wasm_export.h"
 #include "aot_export.h"
 
-static int app_argc;
-static char **app_argv;
-
-static void * app_instance_main(wasm_module_inst_t module_inst)
-{
-    const char *exception;
-
-    wasm_application_execute_main(module_inst, app_argc, app_argv);
-    if ((exception = wasm_runtime_get_exception(module_inst)))
-        printf("%s\n", exception);
-    return NULL;
-}
-
 int wamr_run_main(int argc, char *argv[])
 {
     uint8_t *wasm_file_buf = NULL;
@@ -29,8 +16,8 @@ int wamr_run_main(int argc, char *argv[])
     int log_verbose_level = 2;
 #endif
 
-    if (argc != 2) {
-        printf("format: %s wasm_file|aot_file\n", argv[0]);
+    if (argc < 2) {
+        printf("format: %s wasm_file|aot_file [APP_ARG...]\n", argv[0]);
         return -1;
     }
 
@@ -84,7 +71,13 @@ int wamr_run_main(int argc, char *argv[])
         goto fail2;
     }
 
-    app_instance_main(wasm_module_inst);
+    {
+        const char *exception;
+
+        wasm_application_execute_main(wasm_module_inst, argc - 2, argv + 2);
+        if ((exception = wasm_runtime_get_exception(wasm_module_inst)))
+            printf("%s\n", exception);
+    }
 
     /* destroy the module instance */
     wasm_runtime_deinstantiate(wasm_module_inst);
