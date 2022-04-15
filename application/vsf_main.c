@@ -64,8 +64,8 @@ int vsf_linux_create_fhs(void)
     busybox_bind(VSF_LINUX_CFG_BIN_PATH "/git-remote-http", git_main);
 #endif
 #if APP_USE_WAMR_DEMO == ENABLED
-    extern int wamr_test_main(int argc, char *argv[]);
-    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/wamr_test", wamr_test_main);
+    extern int wamr_run_main(int argc, char *argv[]);
+    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/wamr_run", wamr_run_main);
 #endif
 
     return 0;

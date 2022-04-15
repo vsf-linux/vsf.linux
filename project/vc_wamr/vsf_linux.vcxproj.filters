@@ -2901,5 +2901,8 @@
     <CustomBuild Include="..\..\application\3rd-party\wamr\raw\core\iwasm\common\arch\invokeNative_em64.asm">
       <Filter>application\3rd-party\wamr\raw\core\iwasm\common\arch</Filter>
     </CustomBuild>
+    <CustomBuild Include="..\..\application\3rd-party\wamr\raw\core\iwasm\common\arch\invokeNative_ia32.asm">
+      <Filter>application\3rd-party\wamr\raw\core\iwasm\common\arch</Filter>
+    </CustomBuild>
   </ItemGroup>
 </Project>
