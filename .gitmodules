@@ -16,3 +16,6 @@
 [submodule "application/3rd-party/openssl/raw"]
 	path = application/3rd-party/openssl/raw
 	url = ../openssl
+[submodule "application/3rd-party/wamr/raw"]
+	path = application/3rd-party/wamr/raw
+	url = ../wasm-micro-runtime
