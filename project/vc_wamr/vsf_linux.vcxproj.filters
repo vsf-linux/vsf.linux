@@ -712,6 +712,18 @@
     <Filter Include="application\3rd-party\wamr\raw\core\iwasm\libraries\libc-builtin">
       <UniqueIdentifier>{00579bd6-73d8-43ea-a6f5-48042f03572a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="application\3rd-party\wamr\raw\core\iwasm\libraries\debug-engine">
+      <UniqueIdentifier>{061503c6-f13b-4942-a68c-0be075265242}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\wamr\raw\core\iwasm\libraries\thread-mgr">
+      <UniqueIdentifier>{8c2e4d25-f743-450a-93d5-fa4c0d1754df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\wamr\raw\core\iwasm\aot">
+      <UniqueIdentifier>{c6f0b3fe-f78f-4e69-ac28-48215c472f9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\wamr\raw\core\iwasm\aot\arch">
+      <UniqueIdentifier>{aec54473-6acd-41d5-97de-af0ccd8fc56a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vsf\source\vsf.h">
@@ -1890,6 +1902,33 @@
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\syscall.h">
       <Filter>vsf\shell\sys\linux\include\sys</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\wamr\raw\core\iwasm\libraries\debug-engine\debug_engine.h">
+      <Filter>application\3rd-party\wamr\raw\core\iwasm\libraries\debug-engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\wamr\raw\core\iwasm\libraries\debug-engine\gdbserver.h">
+      <Filter>application\3rd-party\wamr\raw\core\iwasm\libraries\debug-engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\wamr\raw\core\iwasm\libraries\debug-engine\handler.h">
+      <Filter>application\3rd-party\wamr\raw\core\iwasm\libraries\debug-engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\wamr\raw\core\iwasm\libraries\debug-engine\packets.h">
+      <Filter>application\3rd-party\wamr\raw\core\iwasm\libraries\debug-engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\wamr\raw\core\iwasm\libraries\debug-engine\utils.h">
+      <Filter>application\3rd-party\wamr\raw\core\iwasm\libraries\debug-engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\wamr\raw\core\iwasm\libraries\thread-mgr\thread_manager.h">
+      <Filter>application\3rd-party\wamr\raw\core\iwasm\libraries\thread-mgr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\wamr\raw\core\iwasm\aot\aot_intrinsic.h">
+      <Filter>application\3rd-party\wamr\raw\core\iwasm\aot</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\wamr\raw\core\iwasm\aot\aot_reloc.h">
+      <Filter>application\3rd-party\wamr\raw\core\iwasm\aot</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\wamr\raw\core\iwasm\aot\aot_runtime.h">
+      <Filter>application\3rd-party\wamr\raw\core\iwasm\aot</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\vsf\source\utilities\template\vsf_bitmap.c">
@@ -2863,6 +2902,39 @@
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\libraries\libc-builtin\libc_builtin_wrapper.c">
       <Filter>application\3rd-party\wamr\raw\core\iwasm\libraries\libc-builtin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\libraries\debug-engine\debug_engine.c">
+      <Filter>application\3rd-party\wamr\raw\core\iwasm\libraries\debug-engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\libraries\debug-engine\gdbserver.c">
+      <Filter>application\3rd-party\wamr\raw\core\iwasm\libraries\debug-engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\libraries\debug-engine\handler.c">
+      <Filter>application\3rd-party\wamr\raw\core\iwasm\libraries\debug-engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\libraries\debug-engine\packets.c">
+      <Filter>application\3rd-party\wamr\raw\core\iwasm\libraries\debug-engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\libraries\debug-engine\utils.c">
+      <Filter>application\3rd-party\wamr\raw\core\iwasm\libraries\debug-engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\libraries\thread-mgr\thread_manager.c">
+      <Filter>application\3rd-party\wamr\raw\core\iwasm\libraries\thread-mgr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\aot\aot_intrinsic.c">
+      <Filter>application\3rd-party\wamr\raw\core\iwasm\aot</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\aot\aot_loader.c">
+      <Filter>application\3rd-party\wamr\raw\core\iwasm\aot</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\aot\aot_runtime.c">
+      <Filter>application\3rd-party\wamr\raw\core\iwasm\aot</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\aot\arch\aot_reloc_x86_32.c">
+      <Filter>application\3rd-party\wamr\raw\core\iwasm\aot\arch</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\aot\arch\aot_reloc_x86_64.c">
+      <Filter>application\3rd-party\wamr\raw\core\iwasm\aot\arch</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -19,6 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\application\3rd-party\wamr\raw\core\iwasm\aot\aot_intrinsic.h" />
+    <ClInclude Include="..\..\application\3rd-party\wamr\raw\core\iwasm\aot\aot_reloc.h" />
+    <ClInclude Include="..\..\application\3rd-party\wamr\raw\core\iwasm\aot\aot_runtime.h" />
     <ClInclude Include="..\..\application\3rd-party\wamr\raw\core\iwasm\common\wasm_c_api_internal.h" />
     <ClInclude Include="..\..\application\3rd-party\wamr\raw\core\iwasm\common\wasm_exec_env.h" />
     <ClInclude Include="..\..\application\3rd-party\wamr\raw\core\iwasm\common\wasm_memory.h" />
@@ -30,6 +33,12 @@
     <ClInclude Include="..\..\application\3rd-party\wamr\raw\core\iwasm\interpreter\wasm_loader.h" />
     <ClInclude Include="..\..\application\3rd-party\wamr\raw\core\iwasm\interpreter\wasm_opcode.h" />
     <ClInclude Include="..\..\application\3rd-party\wamr\raw\core\iwasm\interpreter\wasm_runtime.h" />
+    <ClInclude Include="..\..\application\3rd-party\wamr\raw\core\iwasm\libraries\debug-engine\debug_engine.h" />
+    <ClInclude Include="..\..\application\3rd-party\wamr\raw\core\iwasm\libraries\debug-engine\gdbserver.h" />
+    <ClInclude Include="..\..\application\3rd-party\wamr\raw\core\iwasm\libraries\debug-engine\handler.h" />
+    <ClInclude Include="..\..\application\3rd-party\wamr\raw\core\iwasm\libraries\debug-engine\packets.h" />
+    <ClInclude Include="..\..\application\3rd-party\wamr\raw\core\iwasm\libraries\debug-engine\utils.h" />
+    <ClInclude Include="..\..\application\3rd-party\wamr\raw\core\iwasm\libraries\thread-mgr\thread_manager.h" />
     <ClInclude Include="..\..\application\3rd-party\wamr\raw\core\shared\mem-alloc\ems\ems_gc.h" />
     <ClInclude Include="..\..\application\3rd-party\wamr\raw\core\shared\mem-alloc\ems\ems_gc_internal.h" />
     <ClInclude Include="..\..\application\3rd-party\wamr\raw\core\shared\mem-alloc\mem_alloc.h" />
@@ -413,6 +422,15 @@
     <ClInclude Include="..\..\vsf\source\vsf_cfg.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\aot\aot_intrinsic.c" />
+    <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\aot\aot_loader.c" />
+    <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\aot\aot_runtime.c" />
+    <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\aot\arch\aot_reloc_x86_32.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\aot\arch\aot_reloc_x86_64.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\common\wasm_application.c" />
     <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\common\wasm_c_api.c" />
     <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\common\wasm_exec_env.c" />
@@ -420,18 +438,24 @@
     <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\common\wasm_native.c" />
     <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\common\wasm_runtime_common.c" />
     <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\common\wasm_shared_memory.c" />
-    <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\interpreter\wasm_interp_classic.c">
+    <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\interpreter\wasm_interp_classic.c" />
+    <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\interpreter\wasm_interp_fast.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\interpreter\wasm_interp_fast.c" />
     <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\interpreter\wasm_loader.c" />
     <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\interpreter\wasm_mini_loader.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\interpreter\wasm_runtime.c" />
+    <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\libraries\debug-engine\debug_engine.c" />
+    <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\libraries\debug-engine\gdbserver.c" />
+    <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\libraries\debug-engine\handler.c" />
+    <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\libraries\debug-engine\packets.c" />
+    <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\libraries\debug-engine\utils.c" />
     <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\libraries\libc-builtin\libc_builtin_wrapper.c" />
+    <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\libraries\thread-mgr\thread_manager.c" />
     <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\shared\mem-alloc\ems\ems_alloc.c" />
     <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\shared\mem-alloc\ems\ems_hmu.c" />
     <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\shared\mem-alloc\ems\ems_kfc.c" />
@@ -842,9 +866,9 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Full</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>__VSF__;__CPU_X86__;__WIN__;APP_USE_WAMR_DEMO=ENABLED;WASM_ENABLE_INTERP=1;WASM_ENABLE_FAST_INTERP=1;WASM_ENABLE_LABELS_AS_VALUES=1;WASM_ENABLE_LIBC_BUILTIN=1;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>__VSF__;__CPU_X86__;__WIN__;APP_USE_WAMR_DEMO=ENABLED;WASM_ENABLE_AOT=1;WASM_ENABLE_INTERP=1;WASM_ENABLE_DEBUG_INTERP=1;WASM_ENABLE_LABELS_AS_VALUES=1;WASM_ENABLE_LIBC_BUILTIN=1;WASM_ENABLE_THREAD_MGR=1;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\wamr\raw\core\iwasm\include;$(ProjectDir)..\..\application\3rd-party\wamr\raw\core\iwasm\aot;$(ProjectDir)..\..\application\3rd-party\wamr\raw\core\iwasm\interpreter;$(ProjectDir)..\..\application\3rd-party\wamr\raw\core\shared\utils;$(ProjectDir)..\..\application\3rd-party\wamr\raw\core\shared\mem-alloc;$(ProjectDir)..\..\application\3rd-party\wamr\raw\core\shared\platform\include;$(ProjectDir)..\..\application\3rd-party\wamr\raw\core\shared\platform\linux;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\wamr\raw\core\iwasm\include;$(ProjectDir)..\..\application\3rd-party\wamr\raw\core\iwasm\aot;$(ProjectDir)..\..\application\3rd-party\wamr\raw\core\iwasm\interpreter;$(ProjectDir)..\..\application\3rd-party\wamr\raw\core\iwasm\libraries\debug-engine;$(ProjectDir)..\..\application\3rd-party\wamr\raw\core\iwasm\libraries\thread-mgr;$(ProjectDir)..\..\application\3rd-party\wamr\raw\core\shared\utils;$(ProjectDir)..\..\application\3rd-party\wamr\raw\core\shared\mem-alloc;$(ProjectDir)..\..\application\3rd-party\wamr\raw\core\shared\platform\include;$(ProjectDir)..\..\application\3rd-party\wamr\raw\core\shared\platform\linux;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-fms-extensions %(AdditionalOptions)</AdditionalOptions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <ExceptionHandling>false</ExceptionHandling>
@@ -871,9 +895,9 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Full</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>__VSF__;__CPU_X64__;__WIN__;APP_USE_WAMR_DEMO=ENABLED;WASM_ENABLE_INTERP=1;WASM_ENABLE_FAST_INTERP=1;WASM_ENABLE_LABELS_AS_VALUES=1;WASM_ENABLE_LIBC_BUILTIN=1;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>__VSF__;__CPU_X64__;__WIN__;APP_USE_WAMR_DEMO=ENABLED;WASM_ENABLE_AOT=1;WASM_ENABLE_INTERP=1;WASM_ENABLE_DEBUG_INTERP=1;WASM_ENABLE_LABELS_AS_VALUES=1;WASM_ENABLE_LIBC_BUILTIN=1;WASM_ENABLE_THREAD_MGR=1;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\wamr\raw\core\iwasm\include;$(ProjectDir)..\..\application\3rd-party\wamr\raw\core\iwasm\aot;$(ProjectDir)..\..\application\3rd-party\wamr\raw\core\iwasm\interpreter;$(ProjectDir)..\..\application\3rd-party\wamr\raw\core\shared\utils;$(ProjectDir)..\..\application\3rd-party\wamr\raw\core\shared\mem-alloc;$(ProjectDir)..\..\application\3rd-party\wamr\raw\core\shared\platform\include;$(ProjectDir)..\..\application\3rd-party\wamr\raw\core\shared\platform\linux;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\wamr\raw\core\iwasm\include;$(ProjectDir)..\..\application\3rd-party\wamr\raw\core\iwasm\aot;$(ProjectDir)..\..\application\3rd-party\wamr\raw\core\iwasm\interpreter;$(ProjectDir)..\..\application\3rd-party\wamr\raw\core\iwasm\libraries\debug-engine;$(ProjectDir)..\..\application\3rd-party\wamr\raw\core\iwasm\libraries\thread-mgr;$(ProjectDir)..\..\application\3rd-party\wamr\raw\core\shared\utils;$(ProjectDir)..\..\application\3rd-party\wamr\raw\core\shared\mem-alloc;$(ProjectDir)..\..\application\3rd-party\wamr\raw\core\shared\platform\include;$(ProjectDir)..\..\application\3rd-party\wamr\raw\core\shared\platform\linux;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-fms-extensions %(AdditionalOptions)</AdditionalOptions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <ExceptionHandling>false</ExceptionHandling>
