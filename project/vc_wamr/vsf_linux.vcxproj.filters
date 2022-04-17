@@ -724,6 +724,9 @@
     <Filter Include="application\3rd-party\wamr\raw\core\iwasm\aot\arch">
       <UniqueIdentifier>{aec54473-6acd-41d5-97de-af0ccd8fc56a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="application\3rd-party\wamr\raw\core\iwasm\libraries\lib-pthread">
+      <UniqueIdentifier>{ca3d8817-b900-4ad5-9919-8cc160cf9b8b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vsf\source\vsf.h">
@@ -2935,6 +2938,9 @@
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\aot\arch\aot_reloc_x86_64.c">
       <Filter>application\3rd-party\wamr\raw\core\iwasm\aot\arch</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\libraries\lib-pthread\lib_pthread_wrapper.c">
+      <Filter>application\3rd-party\wamr\raw\core\iwasm\libraries\lib-pthread</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
