@@ -727,6 +727,30 @@
     <Filter Include="application\3rd-party\wamr\raw\core\iwasm\libraries\lib-pthread">
       <UniqueIdentifier>{ca3d8817-b900-4ad5-9919-8cc160cf9b8b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="application\3rd-party\wamr\raw\product-mini">
+      <UniqueIdentifier>{a979ca08-1939-414a-93e5-05b8acb9e870}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\wamr\raw\product-mini\paltforms">
+      <UniqueIdentifier>{77fb2656-b184-4d0f-b269-e5a05f12f3dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\wamr\raw\product-mini\paltforms\linux">
+      <UniqueIdentifier>{6e77af90-1ec8-439c-9fd7-ae3be6f81334}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\wamr\port">
+      <UniqueIdentifier>{ea8be546-0ee8-4f52-94c4-b1b8c11114f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\wamr\port\core">
+      <UniqueIdentifier>{c45902ad-4762-40a1-b924-724b7e083e0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\wamr\port\core\shared">
+      <UniqueIdentifier>{a2ec41a0-c595-43fd-94dc-65e70875076f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\wamr\port\core\shared\utils">
+      <UniqueIdentifier>{ce75b4bd-2821-478b-8d0a-b7bf895186a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\wamr\port\core\shared\utils\uncommon">
+      <UniqueIdentifier>{9fa8962f-4a00-4ec7-a9fe-002fdc896c1d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vsf\source\vsf.h">
@@ -1932,6 +1956,9 @@
     <ClInclude Include="..\..\application\3rd-party\wamr\raw\core\iwasm\aot\aot_runtime.h">
       <Filter>application\3rd-party\wamr\raw\core\iwasm\aot</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\wamr\port\core\shared\utils\uncommon\bh_read_file.h">
+      <Filter>application\3rd-party\wamr\port\core\shared\utils\uncommon</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\vsf\source\utilities\template\vsf_bitmap.c">
@@ -2810,9 +2837,6 @@
     <ClCompile Include="..\..\vsf\example\template\demo\scsi_demo\scsi_demo.c">
       <Filter>application\scsi_demo</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\wamr_demo.c">
-      <Filter>application</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\common\wasm_application.c">
       <Filter>application\3rd-party\wamr\raw\core\iwasm\common</Filter>
     </ClCompile>
@@ -2941,6 +2965,12 @@
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\libraries\lib-pthread\lib_pthread_wrapper.c">
       <Filter>application\3rd-party\wamr\raw\core\iwasm\libraries\lib-pthread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\wamr\raw\product-mini\platforms\linux\main.c">
+      <Filter>application\3rd-party\wamr\raw\product-mini\paltforms\linux</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\wamr\port\core\shared\utils\uncommon\bh_read_file.c">
+      <Filter>application\3rd-party\wamr\port\core\shared\utils\uncommon</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
