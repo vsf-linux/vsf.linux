@@ -71,13 +71,18 @@ int wamr_run_main(int argc, char *argv[])
         goto fail2;
     }
 
+    uint32_t start = vsf_systimer_get_ms();
+//    printf("start %d\n", start);
     {
         const char *exception;
 
-        wasm_application_execute_main(wasm_module_inst, argc - 2, argv + 2);
+        wasm_application_execute_main(wasm_module_inst, argc - 1, argv + 1);
         if ((exception = wasm_runtime_get_exception(wasm_module_inst)))
             printf("%s\n", exception);
     }
+    uint32_t stop = vsf_systimer_get_ms();
+//    printf("stop %d\n", stop);
+    printf("wasm takes %d ms\n", stop - start);
 
     /* destroy the module instance */
     wasm_runtime_deinstantiate(wasm_module_inst);

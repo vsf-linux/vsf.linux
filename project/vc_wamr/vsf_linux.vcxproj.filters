@@ -673,12 +673,6 @@
     <Filter Include="application\3rd-party\wamr\raw\core\iwasm">
       <UniqueIdentifier>{820a9887-e3d8-4540-ac9e-8dc48495caea}</UniqueIdentifier>
     </Filter>
-    <Filter Include="application\3rd-party\wamr\raw\core\iwasm\aot">
-      <UniqueIdentifier>{20ecac76-1607-4dbc-b2b7-8f6fb79fdda7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="application\3rd-party\wamr\raw\core\iwasm\aot\arch">
-      <UniqueIdentifier>{5a729246-394f-4ff8-a2b8-960a068de551}</UniqueIdentifier>
-    </Filter>
     <Filter Include="application\3rd-party\wamr\raw\core\iwasm\common">
       <UniqueIdentifier>{8afa2457-0e49-4952-9b7e-25267fe3b53d}</UniqueIdentifier>
     </Filter>
@@ -1818,15 +1812,6 @@
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\app\telnetd\vsf_linux_telnetd.h">
       <Filter>vsf\shell\sys\linux\app\telnetd</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\wamr\raw\core\iwasm\aot\aot_intrinsic.h">
-      <Filter>application\3rd-party\wamr\raw\core\iwasm\aot</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\wamr\raw\core\iwasm\aot\aot_reloc.h">
-      <Filter>application\3rd-party\wamr\raw\core\iwasm\aot</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\wamr\raw\core\iwasm\aot\aot_runtime.h">
-      <Filter>application\3rd-party\wamr\raw\core\iwasm\aot</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\application\3rd-party\wamr\raw\core\iwasm\common\wasm_c_api_internal.h">
       <Filter>application\3rd-party\wamr\raw\core\iwasm\common</Filter>
     </ClInclude>
@@ -1898,6 +1883,12 @@
     </ClInclude>
     <ClInclude Include="..\..\application\3rd-party\wamr\raw\core\shared\utils\runtime_timer.h">
       <Filter>application\3rd-party\wamr\raw\core\shared\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\random.h">
+      <Filter>vsf\shell\sys\linux\include\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\syscall.h">
+      <Filter>vsf\shell\sys\linux\include\sys</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -2779,18 +2770,6 @@
     </ClCompile>
     <ClCompile Include="..\..\application\wamr_demo.c">
       <Filter>application</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\aot\aot_intrinsic.c">
-      <Filter>application\3rd-party\wamr\raw\core\iwasm\aot</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\aot\aot_loader.c">
-      <Filter>application\3rd-party\wamr\raw\core\iwasm\aot</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\aot\aot_runtime.c">
-      <Filter>application\3rd-party\wamr\raw\core\iwasm\aot</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\aot\arch\aot_reloc_x86_64.c">
-      <Filter>application\3rd-party\wamr\raw\core\iwasm\aot\arch</Filter>
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\common\wasm_application.c">
       <Filter>application\3rd-party\wamr\raw\core\iwasm\common</Filter>
