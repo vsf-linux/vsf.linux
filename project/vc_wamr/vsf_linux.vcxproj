@@ -465,11 +465,15 @@
     <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\shared\mem-alloc\ems\ems_kfc.c" />
     <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\shared\mem-alloc\mem_alloc.c" />
     <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\shared\platform\common\posix\posix_malloc.c" />
-    <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\shared\platform\common\posix\posix_memmap.c" />
+    <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\shared\platform\common\posix\posix_memmap.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\shared\platform\common\posix\posix_socket.c" />
     <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\shared\platform\common\posix\posix_thread.c" />
     <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\shared\platform\common\posix\posix_time.c" />
     <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\shared\platform\linux\platform_init.c" />
+    <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\shared\platform\windows\win_memmap.c" />
     <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\shared\utils\bh_assert.c" />
     <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\shared\utils\bh_common.c" />
     <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\shared\utils\bh_hashmap.c" />

@@ -751,6 +751,9 @@
     <Filter Include="application\3rd-party\wamr\port\core\shared\utils\uncommon">
       <UniqueIdentifier>{9fa8962f-4a00-4ec7-a9fe-002fdc896c1d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="application\3rd-party\wamr\raw\core\shared\platform\windows">
+      <UniqueIdentifier>{78871e0c-98a8-4daf-9a46-717744724f9e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vsf\source\vsf.h">
@@ -2974,6 +2977,9 @@
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\wamr\port\wamr_port.c">
       <Filter>application\3rd-party\wamr\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\shared\platform\windows\win_memmap.c">
+      <Filter>application\3rd-party\wamr\raw\core\shared\platform\windows</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
