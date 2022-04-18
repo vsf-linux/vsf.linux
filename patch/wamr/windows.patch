@@ -1,0 +1,23 @@
+ core/iwasm/libraries/debug-engine/gdbserver.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/core/iwasm/libraries/debug-engine/gdbserver.c b/core/iwasm/libraries/debug-engine/gdbserver.c
+index d474491..c8927cc 100644
+--- a/core/iwasm/libraries/debug-engine/gdbserver.c
++++ b/core/iwasm/libraries/debug-engine/gdbserver.c
+@@ -267,11 +267,11 @@ wasm_gdbserver_handle_packet(WASMGDBServer *server)
+         return false;
+     }
+     else if (n < 0) {
+-#if defined(BH_PLATFORM_WINDOWS)
+-        if (WSAGetLastError() == WSAETIMEDOUT)
+-#else
++//#if defined(BH_PLATFORM_WINDOWS)
++//        if (WSAGetLastError() == WSAETIMEDOUT)
++//#else
+         if (errno == EAGAIN || errno == EWOULDBLOCK)
+-#endif
++//#endif
+         {
+             /* No bytes arrived */
+             return true;

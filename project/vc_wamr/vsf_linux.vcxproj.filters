@@ -2972,6 +2972,9 @@
     <ClCompile Include="..\..\application\3rd-party\wamr\port\core\shared\utils\uncommon\bh_read_file.c">
       <Filter>application\3rd-party\wamr\port\core\shared\utils\uncommon</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\wamr\port\wamr_port.c">
+      <Filter>application\3rd-party\wamr\port</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\vsf\source\hal\arch\common\arch_without_thread_suspend\vsf_arch_without_thread_suspend_template.inc">
