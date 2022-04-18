@@ -35,3 +35,9 @@ Porting linux applications to VSF
 2. curl
 ### patches
 1. /patch/vsf/webassembly.patch to /vsf
+
+## WAMR
+### submodules
+1. vsf
+   - PLOOC
+2. wamr
