@@ -1,4 +1,4 @@
-#ifdef BH_PLATFORM_WINDOWS
+#ifdef __WIN__
 #include <Windows.h>
 
 int os_thread_env_init()
