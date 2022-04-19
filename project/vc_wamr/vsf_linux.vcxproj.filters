@@ -754,6 +754,12 @@
     <Filter Include="application\3rd-party\wamr\raw\core\shared\platform\windows">
       <UniqueIdentifier>{78871e0c-98a8-4daf-9a46-717744724f9e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="application\3rd-party\wamr\port\core\shared\platform">
+      <UniqueIdentifier>{783eff0c-75e1-42ef-a288-00f539e032e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\wamr\port\core\shared\platform\vsf">
+      <UniqueIdentifier>{8f846c9b-36b2-4174-87f6-e30d3b6c00d6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vsf\source\vsf.h">
@@ -1961,6 +1967,9 @@
     </ClInclude>
     <ClInclude Include="..\..\application\3rd-party\wamr\port\core\shared\utils\uncommon\bh_read_file.h">
       <Filter>application\3rd-party\wamr\port\core\shared\utils\uncommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\wamr\port\core\shared\platform\vsf\platform_internal.h">
+      <Filter>application\3rd-party\wamr\port\core\shared\platform\vsf</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

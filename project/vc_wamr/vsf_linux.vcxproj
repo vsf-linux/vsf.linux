@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\application\3rd-party\wamr\port\core\shared\platform\vsf\platform_internal.h" />
     <ClInclude Include="..\..\application\3rd-party\wamr\port\core\shared\utils\uncommon\bh_read_file.h" />
     <ClInclude Include="..\..\application\3rd-party\wamr\raw\core\iwasm\aot\aot_intrinsic.h" />
     <ClInclude Include="..\..\application\3rd-party\wamr\raw\core\iwasm\aot\aot_reloc.h" />
