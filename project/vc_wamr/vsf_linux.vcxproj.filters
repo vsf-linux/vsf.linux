@@ -727,15 +727,6 @@
     <Filter Include="application\3rd-party\wamr\raw\core\iwasm\libraries\lib-pthread">
       <UniqueIdentifier>{ca3d8817-b900-4ad5-9919-8cc160cf9b8b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="application\3rd-party\wamr\raw\product-mini">
-      <UniqueIdentifier>{a979ca08-1939-414a-93e5-05b8acb9e870}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="application\3rd-party\wamr\raw\product-mini\paltforms">
-      <UniqueIdentifier>{77fb2656-b184-4d0f-b269-e5a05f12f3dd}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="application\3rd-party\wamr\raw\product-mini\paltforms\linux">
-      <UniqueIdentifier>{6e77af90-1ec8-439c-9fd7-ae3be6f81334}</UniqueIdentifier>
-    </Filter>
     <Filter Include="application\3rd-party\wamr\port">
       <UniqueIdentifier>{ea8be546-0ee8-4f52-94c4-b1b8c11114f6}</UniqueIdentifier>
     </Filter>
@@ -751,14 +742,38 @@
     <Filter Include="application\3rd-party\wamr\port\core\shared\utils\uncommon">
       <UniqueIdentifier>{9fa8962f-4a00-4ec7-a9fe-002fdc896c1d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="application\3rd-party\wamr\raw\core\shared\platform\windows">
-      <UniqueIdentifier>{78871e0c-98a8-4daf-9a46-717744724f9e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="application\3rd-party\wamr\port\core\shared\platform">
       <UniqueIdentifier>{783eff0c-75e1-42ef-a288-00f539e032e0}</UniqueIdentifier>
     </Filter>
     <Filter Include="application\3rd-party\wamr\port\core\shared\platform\vsf">
       <UniqueIdentifier>{8f846c9b-36b2-4174-87f6-e30d3b6c00d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\wamr\port\core\iwasm">
+      <UniqueIdentifier>{8b5cb53f-4a9b-47e7-af06-1fe6511e7e90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\wamr\port\core\iwasm\libraries">
+      <UniqueIdentifier>{9fd78a95-72ab-4586-a620-6aa1317fe690}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\wamr\port\core\iwasm\libraries\libc-vsfwasi">
+      <UniqueIdentifier>{9b5468bb-9d6d-4980-99e4-e6778008676f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\wamr\port\core\iwasm\libraries\libc-vsfwasi\ssp">
+      <UniqueIdentifier>{ac0a2bcb-3b6b-416b-b782-20353d5a6b53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\wamr\port\core\shared\platform\windows">
+      <UniqueIdentifier>{985303f2-bffb-4df2-a511-228b71193b58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\wamr\port\core\iwasm\libraries\debug-engine">
+      <UniqueIdentifier>{75120f79-3b10-4119-b87c-f021c732458e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\wamr\port\product-mini">
+      <UniqueIdentifier>{5b12bdda-2406-4c4d-bf98-512ec27411df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\wamr\port\product-mini\platforms">
+      <UniqueIdentifier>{373cec12-cc91-4a79-babb-c2f73dd6968e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\wamr\port\product-mini\platforms\posix">
+      <UniqueIdentifier>{fd516601-cbb8-431a-a7af-ce78cdb7d903}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -1971,6 +1986,9 @@
     <ClInclude Include="..\..\application\3rd-party\wamr\port\core\shared\platform\vsf\platform_internal.h">
       <Filter>application\3rd-party\wamr\port\core\shared\platform\vsf</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\wamr\port\core\iwasm\libraries\libc-vsfwasi\ssp\wasmtime_ssp.h">
+      <Filter>application\3rd-party\wamr\port\core\iwasm\libraries\libc-vsfwasi\ssp</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\vsf\source\utilities\template\vsf_bitmap.c">
@@ -2978,17 +2996,23 @@
     <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\libraries\lib-pthread\lib_pthread_wrapper.c">
       <Filter>application\3rd-party\wamr\raw\core\iwasm\libraries\lib-pthread</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\wamr\raw\product-mini\platforms\linux\main.c">
-      <Filter>application\3rd-party\wamr\raw\product-mini\paltforms\linux</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\wamr\port\core\shared\utils\uncommon\bh_read_file.c">
       <Filter>application\3rd-party\wamr\port\core\shared\utils\uncommon</Filter>
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\wamr\port\wamr_port.c">
       <Filter>application\3rd-party\wamr\port</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\shared\platform\windows\win_memmap.c">
-      <Filter>application\3rd-party\wamr\raw\core\shared\platform\windows</Filter>
+    <ClCompile Include="..\..\application\3rd-party\wamr\port\core\iwasm\libraries\libc-vsfwasi\libc_vsfwasi_wrapper.c">
+      <Filter>application\3rd-party\wamr\port\core\iwasm\libraries\libc-vsfwasi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\wamr\port\core\shared\platform\windows\win_memmap.c">
+      <Filter>application\3rd-party\wamr\port\core\shared\platform\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\wamr\port\core\iwasm\libraries\debug-engine\gdbserver.c">
+      <Filter>application\3rd-party\wamr\port\core\iwasm\libraries\debug-engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\wamr\port\product-mini\platforms\posix\main.c">
+      <Filter>application\3rd-party\wamr\port\product-mini\platforms\posix</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
