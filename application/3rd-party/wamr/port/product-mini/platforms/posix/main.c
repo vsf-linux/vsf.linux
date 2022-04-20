@@ -397,6 +397,11 @@ main(int argc, char *argv[])
         strcpy(init_args.ip_addr, ip_addr);
 #endif
 
+#if WASM_ENABLE_LIBC_VSFWASI != 0
+    init_args.native_module_name = "wasi_snapshot_preview1";
+    init_args.n_native_symbols = get_libc_wasi_export_apis(&init_args.native_symbols);
+#endif
+
     /* initialize runtime environment */
     if (!wasm_runtime_full_init(&init_args)) {
         printf("Init runtime environment failed.\n");
