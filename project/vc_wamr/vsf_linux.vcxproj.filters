@@ -757,9 +757,6 @@
     <Filter Include="application\3rd-party\wamr\port\core\iwasm\libraries\libc-vsfwasi">
       <UniqueIdentifier>{9b5468bb-9d6d-4980-99e4-e6778008676f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="application\3rd-party\wamr\port\core\iwasm\libraries\libc-vsfwasi\ssp">
-      <UniqueIdentifier>{ac0a2bcb-3b6b-416b-b782-20353d5a6b53}</UniqueIdentifier>
-    </Filter>
     <Filter Include="application\3rd-party\wamr\port\core\shared\platform\windows">
       <UniqueIdentifier>{985303f2-bffb-4df2-a511-228b71193b58}</UniqueIdentifier>
     </Filter>
@@ -1985,9 +1982,6 @@
     </ClInclude>
     <ClInclude Include="..\..\application\3rd-party\wamr\port\core\shared\platform\vsf\platform_internal.h">
       <Filter>application\3rd-party\wamr\port\core\shared\platform\vsf</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\wamr\port\core\iwasm\libraries\libc-vsfwasi\ssp\wasmtime_ssp.h">
-      <Filter>application\3rd-party\wamr\port\core\iwasm\libraries\libc-vsfwasi\ssp</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
