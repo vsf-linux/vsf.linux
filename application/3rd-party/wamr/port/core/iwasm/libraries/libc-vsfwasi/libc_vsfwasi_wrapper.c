@@ -258,16 +258,20 @@ wasi_fd_prestat_get(wasm_exec_env_t exec_env, wasi_fd_t fd,
     if (!validate_native_addr(prestat_app, sizeof(wasi_prestat_app_t)))
         return (wasi_errno_t)-1;
 
+    if (fd != 3)
+        return (wasi_errno_t)__WASI_EBADF;
+
     vk_file_t *file = __vsf_linux_get_fs_ex(NULL, fd);
     if (NULL == file)
-        return (wasi_errno_t)-1;
+        return (wasi_errno_t)__WASI_EBADF;
 
-    if (file->attr & VSF_FILE_ATTR_DIRECTORY) {
+    if (file->attr & VSF_FILE_ATTR_DIRECTORY)
         prestat_app->pr_type = __WASI_PREOPENTYPE_DIR;
-    } else {
-        return (wasi_errno_t)-1;
-    }
-    prestat_app->pr_name_len = (uint32)strlen(file->name) + 1;
+    else
+        return (wasi_errno_t)__WASI_EBADF;
+
+    // ".\0"
+    prestat_app->pr_name_len = 2;
     return 0;
 }
 
@@ -275,11 +279,14 @@ static wasi_errno_t
 wasi_fd_prestat_dir_name(wasm_exec_env_t exec_env, wasi_fd_t fd, char *path,
                          uint32 path_len)
 {
+    if (fd != 3)
+        return (wasi_errno_t)__WASI_EBADF;
+
     vk_file_t *file = __vsf_linux_get_fs_ex(NULL, fd);
     if (NULL == file)
-        return (wasi_errno_t)-1;
+        return (wasi_errno_t)__WASI_EBADF;
 
-    bh_memcpy_s(path, (uint32)path_len, file->name, (uint32)path_len);
+    bh_memcpy_s(path, (uint32)path_len, ".", (uint32)path_len);
     return 0;
 }
 
@@ -1111,5 +1118,9 @@ int wasm_runtime_set_vsfwasi_args(wasm_module_t module,
     wasm_ctx_t *wasm_ctx = pls->data;
     wasm_ctx->argc = argc;
     wasm_ctx->argv = argv;
+
+    // reopen current directory, MUST be fd 3
+    int fd = open(".", 0);
+    VSF_ASSERT(3 == fd);
     return 0;
 }
