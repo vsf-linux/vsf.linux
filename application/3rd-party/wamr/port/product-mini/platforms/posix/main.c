@@ -59,12 +59,233 @@ print_help()
 }
 /* clang-format on */
 
+// patch some wamr APIs to support WASM_ENABLE_LIBC_VSFWASI
+#if WASM_ENABLE_INTERP != 0
+#include "wasm_runtime.h"
+#endif
+#if WASM_ENABLE_AOT != 0
+#include "aot_runtime.h"
+#endif
+
+#if WASM_ENABLE_LIBC_WASI == 0
+WASMFunctionInstanceCommon *
+wasm_runtime_lookup_wasi_start_function(WASMModuleInstanceCommon *module_inst)
+{
+    uint32 i;
+
+#if WASM_ENABLE_INTERP != 0
+    if (module_inst->module_type == Wasm_Module_Bytecode) {
+        WASMModuleInstance *wasm_inst = (WASMModuleInstance *)module_inst;
+        WASMFunctionInstance *func;
+        for (i = 0; i < wasm_inst->export_func_count; i++) {
+            if (!strcmp(wasm_inst->export_functions[i].name, "_start")) {
+                func = wasm_inst->export_functions[i].function;
+                if (func->u.func->func_type->param_count != 0
+                    || func->u.func->func_type->result_count != 0) {
+                    LOG_ERROR("Lookup wasi _start function failed: "
+                              "invalid function type.\n");
+                    return NULL;
+                }
+                return (WASMFunctionInstanceCommon *)func;
+            }
+        }
+        return NULL;
+    }
+#endif
+
+#if WASM_ENABLE_AOT != 0
+    if (module_inst->module_type == Wasm_Module_AoT) {
+        AOTModuleInstance *aot_inst = (AOTModuleInstance *)module_inst;
+        AOTFunctionInstance *export_funcs =
+            (AOTFunctionInstance *)aot_inst->export_funcs.ptr;
+        for (i = 0; i < aot_inst->export_func_count; i++) {
+            if (!strcmp(export_funcs[i].func_name, "_start")) {
+                AOTFuncType *func_type = export_funcs[i].u.func.func_type;
+                if (func_type->param_count != 0
+                    || func_type->result_count != 0) {
+                    LOG_ERROR("Lookup wasi _start function failed: "
+                              "invalid function type.\n");
+                    return NULL;
+                }
+                return (WASMFunctionInstanceCommon *)&export_funcs[i];
+            }
+        }
+        return NULL;
+    }
+#endif /* end of WASM_ENABLE_AOT */
+
+    return NULL;
+}
+#endif
+
+/**
+ * Implementation of wasm_application_execute_main()
+ */
+static bool
+check_main_func_type(const WASMType *type)
+{
+    if (!(type->param_count == 0 || type->param_count == 2)
+        || type->result_count > 1) {
+        LOG_ERROR(
+            "WASM execute application failed: invalid main function type.\n");
+        return false;
+    }
+
+    if (type->param_count == 2
+        && !(type->types[0] == VALUE_TYPE_I32
+             && type->types[1] == VALUE_TYPE_I32)) {
+        LOG_ERROR(
+            "WASM execute application failed: invalid main function type.\n");
+        return false;
+    }
+
+    if (type->result_count
+        && type->types[type->param_count] != VALUE_TYPE_I32) {
+        LOG_ERROR(
+            "WASM execute application failed: invalid main function type.\n");
+        return false;
+    }
+
+    return true;
+}
+
+bool
+wasm_application_execute_main_app(WASMModuleInstanceCommon *module_inst, int32 argc,
+                              char *argv[])
+{
+    WASMFunctionInstanceCommon *func;
+    WASMType *func_type = NULL;
+    WASMExecEnv *exec_env = NULL;
+    uint32 argc1 = 0, argv1[2] = { 0 };
+    uint32 total_argv_size = 0;
+    uint64 total_size;
+    uint32 argv_buf_offset = 0;
+    int32 i;
+    char *argv_buf, *p, *p_end;
+    uint32 *argv_offsets, module_type;
+    bool ret, is_import_func = true;
+
+    exec_env = wasm_runtime_get_exec_env_singleton(module_inst);
+    if (!exec_env) {
+        wasm_runtime_set_exception(module_inst,
+                                   "create singleton exec_env failed");
+        return false;
+    }
+
+#if WASM_ENABLE_LIBC_WASI != 0 || WASM_ENABLE_LIBC_VSFWASI != 0
+    /* In wasi mode, we should call the function named "_start"
+       which initializes the wasi envrionment and then calls
+       the actual main function. Directly calling main function
+       may cause exception thrown. */
+    if ((func = wasm_runtime_lookup_wasi_start_function(module_inst))) {
+#if WASM_ENABLE_DEBUG_INTERP != 0
+        wasm_runtime_start_debug_instance(exec_env);
+#endif
+        return wasm_runtime_call_wasm(exec_env, func, 0, NULL);
+    }
+#endif /* end of WASM_ENABLE_LIBC_WASI */
+
+    if (!(func = wasm_runtime_lookup_function(module_inst, "main", NULL))
+        && !(func = wasm_runtime_lookup_function(module_inst,
+                                                 "__main_argc_argv", NULL))
+        && !(func = wasm_runtime_lookup_function(module_inst, "_main", NULL))) {
+#if WASM_ENABLE_LIBC_WASI != 0 || WASM_ENABLE_LIBC_VSFWASI != 0
+        wasm_runtime_set_exception(
+            module_inst, "lookup the entry point symbol (like _start, main, "
+                         "_main, __main_argc_argv) failed");
+#else
+        wasm_runtime_set_exception(module_inst,
+                                   "lookup the entry point symbol (like main, "
+                                   "_main, __main_argc_argv) failed");
+#endif
+        return false;
+    }
+
+#if WASM_ENABLE_INTERP != 0
+    if (module_inst->module_type == Wasm_Module_Bytecode) {
+        is_import_func = ((WASMFunctionInstance *)func)->is_import_func;
+    }
+#endif
+#if WASM_ENABLE_AOT != 0
+    if (module_inst->module_type == Wasm_Module_AoT) {
+        is_import_func = ((AOTFunctionInstance *)func)->is_import_func;
+    }
+#endif
+
+    if (is_import_func) {
+        wasm_runtime_set_exception(module_inst, "lookup main function failed");
+        return false;
+    }
+
+    module_type = module_inst->module_type;
+    func_type = wasm_runtime_get_function_type(func, module_type);
+
+    if (!func_type) {
+        LOG_ERROR("invalid module instance type");
+        return false;
+    }
+
+    if (!check_main_func_type(func_type)) {
+        wasm_runtime_set_exception(module_inst,
+                                   "invalid function type of main function");
+        return false;
+    }
+
+    if (func_type->param_count) {
+        for (i = 0; i < argc; i++)
+            total_argv_size += (uint32)(strlen(argv[i]) + 1);
+        total_argv_size = align_uint(total_argv_size, 4);
+
+        total_size = (uint64)total_argv_size + sizeof(int32) * (uint64)argc;
+
+        if (total_size >= UINT32_MAX
+            || !(argv_buf_offset = wasm_runtime_module_malloc(
+                     module_inst, (uint32)total_size, (void **)&argv_buf))) {
+            wasm_runtime_set_exception(module_inst, "allocate memory failed");
+            return false;
+        }
+
+        p = argv_buf;
+        argv_offsets = (uint32 *)(p + total_argv_size);
+        p_end = p + total_size;
+
+        for (i = 0; i < argc; i++) {
+            bh_memcpy_s(p, (uint32)(p_end - p), argv[i],
+                        (uint32)(strlen(argv[i]) + 1));
+            argv_offsets[i] = argv_buf_offset + (uint32)(p - argv_buf);
+            p += strlen(argv[i]) + 1;
+        }
+
+        argc1 = 2;
+        argv1[0] = (uint32)argc;
+        argv1[1] =
+            (uint32)wasm_runtime_addr_native_to_app(module_inst, argv_offsets);
+    }
+
+#if WASM_ENABLE_DEBUG_INTERP != 0
+    wasm_runtime_start_debug_instance(exec_env);
+#endif
+
+    ret = wasm_runtime_call_wasm(exec_env, func, argc1, argv1);
+    if (ret && func_type->result_count > 0 && argc > 0 && argv)
+        /* copy the return value */
+        *(int *)argv = (int)argv1[0];
+
+    if (argv_buf_offset)
+        wasm_runtime_module_free(module_inst, argv_buf_offset);
+    return ret;
+}
+
+// end of patch wamr APIs
+
+
+
 static void *
 app_instance_main(wasm_module_inst_t module_inst)
 {
     const char *exception;
 
-    wasm_application_execute_main(module_inst, app_argc, app_argv);
+    wasm_application_execute_main_app(module_inst, app_argc, app_argv);
     if ((exception = wasm_runtime_get_exception(module_inst)))
         printf("%s\n", exception);
     return NULL;
