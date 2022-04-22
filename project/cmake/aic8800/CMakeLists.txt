@@ -51,12 +51,12 @@ set(VSF_TARGET_DEFINITIONS
 # VSF_USE configurations
 set(VSF_USE_LINUX 1)
     set(VSF_LINUX_USE_SIMPLE_LIBC 1)
-set(VSF_USE_ZLIB 1)
 set(VSF_USE_LWIP 1)
     set(VSF_LWIP_VENDOR 1)
 set(VSF_USE_BTSTACK 1)
     set(VSF_BTSTACK_USE_LINKKEY_MEMORY 1)
 set(APP_USE_LINUX_CURL_DEMO 1)
+set(APP_USE_LINUX_WAMR_DEMO 1)
 
 # include vsf cmake script
 set(VSF_CONFIG_PATH ../../../config)
