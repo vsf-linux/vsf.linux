@@ -14,6 +14,7 @@
 #endif
 #include <poll.h>
 #include <sys/random.h>
+#include <time.h>
 
 #ifndef __cplusplus
 #   define _Static_assert(...)
@@ -167,7 +168,7 @@ wasi_clock_res_get(wasm_exec_env_t exec_env, wasi_clockid_t clock_id,
     if (!validate_native_addr(resolution, sizeof(wasi_timestamp_t)))
         return (wasi_errno_t)-1;
 
-    return clock_getres(clock_id, resolution);
+    return clock_getres(clock_id, NULL);
 }
 
 static wasi_errno_t

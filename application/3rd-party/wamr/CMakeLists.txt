@@ -46,14 +46,13 @@ target_include_directories(vmlib BEFORE PUBLIC
     port/core/shared/platform/vsf
 )
 if(VSF_LINUX_USE_SIMPLE_LIBC)
-    target_include_directories(${CMAKE_PROJECT_NAME} PUBLIC
+    target_include_directories(vmlib BEFORE PUBLIC
         $ENV{VSF_PATH}/source/shell/sys/linux/include/simple_libc
     )
 endif()
 target_compile_definitions(vmlib PRIVATE
     ${VSF_TARGET_DEFINITIONS}
     "main=iwasm_main"
-    __VSF__
     WASM_ENABLE_LIBC_VSFWASI=1
 )
 

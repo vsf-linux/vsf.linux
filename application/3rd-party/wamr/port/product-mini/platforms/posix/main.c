@@ -619,6 +619,7 @@ main(int argc, char *argv[])
 #endif
 
 #if WASM_ENABLE_LIBC_VSFWASI != 0
+    extern uint32 get_libc_wasi_export_apis(NativeSymbol **p_libc_wasi_apis);
     init_args.native_module_name = "wasi_snapshot_preview1";
     init_args.n_native_symbols = get_libc_wasi_export_apis(&init_args.native_symbols);
 #endif
