@@ -8,8 +8,8 @@ set(WAMR_ROOT_DIR ${CMAKE_CURRENT_LIST_DIR}/raw)
 set(WAMR_BUILD_TARGET THUMB)
 set(WAMR_BUILD_PLATFORM linux)
 set(WAMR_BUILD_INTERP 1)
-#set(WAMR_BUILD_FAST_INTERP 1)
-set(WAMR_BUILD_DEBUG_INTERP 1)
+set(WAMR_BUILD_FAST_INTERP 1)
+set(WAMR_BUILD_DEBUG_INTERP 0)
 set(WAMR_BUILD_AOT 1)
 set(WAMR_BUILD_JIT 0)
 set(WAMR_BUILD_LIBC_BUILTIN 1)
@@ -30,12 +30,14 @@ set(WAMR_BUILD_SKIP_FILE_LIST
 foreach(skip_file ${WAMR_BUILD_SKIP_FILE_LIST})
     list(FILTER WAMR_RUNTIME_LIB_SOURCE EXCLUDE REGEX "${skip_file}$")
 endforeach()
+if(WAMR_BUILD_DEBUG_INTERP)
+    list(APPEND port/core/iwasm/libraries/debug-engine/gdbserver.c)
+endif()
 
 add_library(vmlib
     ${WAMR_RUNTIME_LIB_SOURCE}
     port/wamr_port.c
     port/product-mini/platforms/posix/main.c
-    port/core/iwasm/libraries/debug-engine/gdbserver.c
     port/core/iwasm/libraries/libc-vsfwasi/libc_vsfwasi_wrapper.c
     port/core/shared/utils/uncommon/bh_read_file.c
 )
