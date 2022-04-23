@@ -56,4 +56,13 @@ target_compile_definitions(vmlib PRIVATE
     WASM_ENABLE_LIBC_VSFWASI=1
 )
 
+# for AIC8800, some os_xxx APIs conflicts with APIs in wamr
+if(${VSF_HAL_CHIP_SERIES} STREQUAL AIC8800)
+    target_compile_definitions(vmlib PRIVATE
+        "os_malloc=__wamr_os_malloc"
+        "os_realloc=__wamr_os_realloc"
+        "os_free=__wamr_os_free"
+    )
+endif()
+
 target_link_libraries(${CMAKE_PROJECT_NAME} PUBLIC vmlib)
