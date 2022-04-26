@@ -431,6 +431,8 @@
     <ClCompile Include="..\..\application\3rd-party\wamr\port\product-mini\platforms\posix\main.c">
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">main=iwasm_main;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">main=iwasm_main;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">main=iwasm_main;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">main=iwasm_main;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\wamr\port\wamr_port.c" />
     <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\aot\aot_intrinsic.c" />
@@ -438,9 +440,11 @@
     <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\aot\aot_runtime.c" />
     <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\aot\arch\aot_reloc_x86_32.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\aot\arch\aot_reloc_x86_64.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\common\wasm_application.c" />
     <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\common\wasm_c_api.c" />
@@ -453,17 +457,23 @@
     <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\interpreter\wasm_interp_fast.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\interpreter\wasm_loader.c" />
     <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\interpreter\wasm_mini_loader.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\interpreter\wasm_runtime.c" />
     <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\libraries\debug-engine\debug_engine.c" />
     <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\libraries\debug-engine\gdbserver.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\libraries\debug-engine\handler.c" />
     <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\iwasm\libraries\debug-engine\packets.c" />
@@ -479,6 +489,8 @@
     <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\shared\platform\common\posix\posix_memmap.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\shared\platform\common\posix\posix_socket.c" />
     <ClCompile Include="..\..\application\3rd-party\wamr\raw\core\shared\platform\common\posix\posix_thread.c" />
@@ -943,9 +955,9 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>__VSF__;__CPU_X86__;__WIN__;__OOC_RELEASE__;__OOC_CPP__;APP_USE_LINUX_LESS_DEMO=ENABLED;APP_USE_LINUX_CURL_DEMO=ENABLED;APP_USE_LINUX_GIT_DEMO=ENABLED;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>__VSF__;__CPU_X86__;__WIN__;APP_USE_WAMR_DEMO=ENABLED;WASM_ENABLE_AOT=1;WASM_ENABLE_INTERP=1;WASM_ENABLE_DEBUG_INTERP=1;WASM_ENABLE_LABELS_AS_VALUES=1;WASM_ENABLE_LIBC_BUILTIN=1;WASM_ENABLE_LIBC_VSFWASI=1;WASM_ENABLE_THREAD_MGR=1;WASM_ENABLE_LIB_PTHREAD=1;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\ncurses\port;$(ProjectDir)..\..\application\3rd-party\ncurses\awk;$(ProjectDir)..\..\application\3rd-party\ncurses\raw\include;$(ProjectDir)..\..\application\3rd-party\ncurses\raw\ncurses;$(ProjectDir)..\..\application\3rd-party\less\port;$(ProjectDir)..\..\application\3rd-party\less\autogen;$(ProjectDir)..\..\application\3rd-party\less\raw;$(ProjectDir)..\..\application\3rd-party\curl\port;$(ProjectDir)..\..\application\3rd-party\curl\raw\include;$(ProjectDir)..\..\application\3rd-party\curl\raw\lib;$(ProjectDir)..\..\application\3rd-party\git\port;$(ProjectDir)..\..\application\3rd-party\git\autogen;$(ProjectDir)..\..\application\3rd-party\git\raw;$(ProjectDir)..\..\application\3rd-party\git\raw\compat\regex;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\wamr\port\core\shared\utils\uncommon;$(ProjectDir)..\..\application\3rd-party\wamr\port\core\shared\platform\vsf;$(ProjectDir)..\..\application\3rd-party\wamr\raw\core\iwasm\include;$(ProjectDir)..\..\application\3rd-party\wamr\raw\core\iwasm\aot;$(ProjectDir)..\..\application\3rd-party\wamr\raw\core\iwasm\interpreter;$(ProjectDir)..\..\application\3rd-party\wamr\raw\core\iwasm\libraries\debug-engine;$(ProjectDir)..\..\application\3rd-party\wamr\raw\core\iwasm\libraries\thread-mgr;$(ProjectDir)..\..\application\3rd-party\wamr\raw\core\shared\utils;$(ProjectDir)..\..\application\3rd-party\wamr\raw\core\shared\mem-alloc;$(ProjectDir)..\..\application\3rd-party\wamr\raw\core\shared\platform\include;$(ProjectDir)..\..\application\3rd-party\wamr\raw\core\shared\platform\linux;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <AssemblerListingLocation>$(IntDir)/__sub0/__sub1/__sub2/__sub3/%(RelativeDir)</AssemblerListingLocation>
@@ -969,9 +981,9 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>__VSF__;__CPU_X64__;__WIN__;__OOC_RELEASE__;__OOC_CPP__;APP_USE_LINUX_LESS_DEMO=ENABLED;APP_USE_LINUX_CURL_DEMO=ENABLED;APP_USE_LINUX_GIT_DEMO=ENABLED;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>__VSF__;__CPU_X64__;__WIN__;APP_USE_WAMR_DEMO=ENABLED;WASM_ENABLE_AOT=1;WASM_ENABLE_INTERP=1;WASM_ENABLE_DEBUG_INTERP=1;WASM_ENABLE_LABELS_AS_VALUES=1;WASM_ENABLE_LIBC_BUILTIN=1;WASM_ENABLE_LIBC_VSFWASI=1;WASM_ENABLE_THREAD_MGR=1;WASM_ENABLE_LIB_PTHREAD=1;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\ncurses\port;$(ProjectDir)..\..\application\3rd-party\ncurses\awk;$(ProjectDir)..\..\application\3rd-party\ncurses\raw\include;$(ProjectDir)..\..\application\3rd-party\ncurses\raw\ncurses;$(ProjectDir)..\..\application\3rd-party\less\port;$(ProjectDir)..\..\application\3rd-party\less\autogen;$(ProjectDir)..\..\application\3rd-party\less\raw;$(ProjectDir)..\..\application\3rd-party\curl\port;$(ProjectDir)..\..\application\3rd-party\curl\raw\include;$(ProjectDir)..\..\application\3rd-party\curl\raw\lib;$(ProjectDir)..\..\application\3rd-party\git\port;$(ProjectDir)..\..\application\3rd-party\git\autogen;$(ProjectDir)..\..\application\3rd-party\git\raw;$(ProjectDir)..\..\application\3rd-party\git\raw\compat\regex;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\wamr\port\core\shared\utils\uncommon;$(ProjectDir)..\..\application\3rd-party\wamr\port\core\shared\platform\vsf;$(ProjectDir)..\..\application\3rd-party\wamr\raw\core\iwasm\include;$(ProjectDir)..\..\application\3rd-party\wamr\raw\core\iwasm\aot;$(ProjectDir)..\..\application\3rd-party\wamr\raw\core\iwasm\interpreter;$(ProjectDir)..\..\application\3rd-party\wamr\raw\core\iwasm\libraries\debug-engine;$(ProjectDir)..\..\application\3rd-party\wamr\raw\core\iwasm\libraries\thread-mgr;$(ProjectDir)..\..\application\3rd-party\wamr\raw\core\shared\utils;$(ProjectDir)..\..\application\3rd-party\wamr\raw\core\shared\mem-alloc;$(ProjectDir)..\..\application\3rd-party\wamr\raw\core\shared\platform\include;$(ProjectDir)..\..\application\3rd-party\wamr\raw\core\shared\platform\linux;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <AssemblerListingLocation>$(IntDir)/__sub0/__sub1/__sub2/__sub3/%(RelativeDir)</AssemblerListingLocation>

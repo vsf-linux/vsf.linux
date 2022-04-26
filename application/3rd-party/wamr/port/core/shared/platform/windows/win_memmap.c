@@ -11,6 +11,7 @@
 #   define _AMD64_
 #endif
 #include <windef.h>
+#include <memoryapi.h>
 
 #define TRACE_MEMMAP 0
 
