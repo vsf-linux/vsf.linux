@@ -19,6 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\application\3rd-party\lite\raw\src\api\api.h" />
+    <ClInclude Include="..\..\application\3rd-party\lite\raw\src\lib\stb\stb_truetype.h" />
+    <ClInclude Include="..\..\application\3rd-party\lite\raw\src\rencache.h" />
+    <ClInclude Include="..\..\application\3rd-party\lite\raw\src\renderer.h" />
     <ClInclude Include="..\..\config\3rd-party\lwip\lwipopts.h" />
     <ClInclude Include="..\..\config\3rd-party\mbedtls\config.h" />
     <ClInclude Include="..\..\config\target\vsf_usr_cfg_win.h" />
@@ -29,6 +33,99 @@
     <ClInclude Include="..\..\vsf\example\template\demo\common\usrapp_ui_common.h" />
     <ClInclude Include="..\..\vsf\example\template\demo\common\usrapp_usbd_common.h" />
     <ClInclude Include="..\..\vsf\example\template\demo\common\usrapp_usbh_common.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\port\ft2build.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\port\vsf_config\ftconfig.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\port\vsf_config\ftheader.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\port\vsf_config\ftmodule.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\port\vsf_config\ftoption.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\port\vsf_config\ftstdlib.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\freetype.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftadvanc.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftbbox.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftbdf.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftbitmap.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftbzip2.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftcache.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftchapters.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftcid.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftcolor.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftdriver.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\fterrdef.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\fterrors.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftfntfmt.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftgasp.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftglyph.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftgxval.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftgzip.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftimage.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftincrem.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftlcdfil.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftlist.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftlzw.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftmac.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftmm.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftmodapi.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftmoderr.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftotval.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftoutln.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftparams.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftpfr.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftrender.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftsizes.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftsnames.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftstroke.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftsynth.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftsystem.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\fttrigon.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\fttypes.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftwinfnt.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\autohint.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\cffotypes.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\cfftypes.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\ftcalc.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\ftdebug.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\ftdrv.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\ftgloadr.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\fthash.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\ftmemory.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\ftobjs.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\ftpsprop.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\ftrfork.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\ftserv.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\ftstream.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\fttrace.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\ftvalid.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\internal.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\psaux.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\pshints.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\services\svbdf.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\services\svcfftl.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\services\svcid.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\services\svfntfmt.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\services\svgldict.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\services\svgxval.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\services\svkern.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\services\svmetric.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\services\svmm.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\services\svotval.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\services\svpfr.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\services\svpostnm.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\services\svprop.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\services\svpscmap.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\services\svpsinfo.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\services\svsfnt.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\services\svttcmap.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\services\svtteng.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\services\svttglyf.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\services\svwinfnt.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\sfnt.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\t1types.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\tttypes.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\wofftypes.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\t1tables.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ttnameid.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\tttables.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\tttags.h" />
     <ClInclude Include="..\..\vsf\source\component\3rd-party\lua\raw\lapi.h" />
     <ClInclude Include="..\..\vsf\source\component\3rd-party\lua\raw\lauxlib.h" />
     <ClInclude Include="..\..\vsf\source\component\3rd-party\lua\raw\lcode.h" />
@@ -305,9 +402,11 @@
     <ClInclude Include="..\..\vsf\source\shell\media\sdl2\include\SDL2\SDL_keycode.h" />
     <ClInclude Include="..\..\vsf\source\shell\media\sdl2\include\SDL2\SDL_log.h" />
     <ClInclude Include="..\..\vsf\source\shell\media\sdl2\include\SDL2\SDL_mouse.h" />
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\include\SDL2\SDL_mutex.h" />
     <ClInclude Include="..\..\vsf\source\shell\media\sdl2\include\SDL2\SDL_rwops.h" />
     <ClInclude Include="..\..\vsf\source\shell\media\sdl2\include\SDL2\SDL_stdinc.h" />
     <ClInclude Include="..\..\vsf\source\shell\media\sdl2\include\SDL2\SDL_surface.h" />
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\include\SDL2\SDL_thread.h" />
     <ClInclude Include="..\..\vsf\source\shell\media\sdl2\include\SDL2\SDL_timer.h" />
     <ClInclude Include="..\..\vsf\source\shell\media\sdl2\include\SDL2\SDL_version.h" />
     <ClInclude Include="..\..\vsf\source\shell\media\sdl2\vsf_sdl2_cfg.h" />
@@ -372,18 +471,6 @@
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\port\busybox\config.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\vsf_linux.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\vsf_linux_cfg.h" />
-    <ClInclude Include="..\..\vsf\source\shell\sys\xboot\include\arch\atomic.h" />
-    <ClInclude Include="..\..\vsf\source\shell\sys\xboot\include\arch\barrier.h" />
-    <ClInclude Include="..\..\vsf\source\shell\sys\xboot\include\arch\endian.h" />
-    <ClInclude Include="..\..\vsf\source\shell\sys\xboot\include\arch\irqflags.h" />
-    <ClInclude Include="..\..\vsf\source\shell\sys\xboot\include\arch\spinlock.h" />
-    <ClInclude Include="..\..\vsf\source\shell\sys\xboot\include\io.h" />
-    <ClInclude Include="..\..\vsf\source\shell\sys\xboot\include\stddef.h" />
-    <ClInclude Include="..\..\vsf\source\shell\sys\xboot\include\types.h" />
-    <ClInclude Include="..\..\vsf\source\shell\sys\xboot\include\xboot.h" />
-    <ClInclude Include="..\..\vsf\source\shell\sys\xboot\include\xboot\window.h" />
-    <ClInclude Include="..\..\vsf\source\shell\sys\xboot\include\xfs\xfs.h" />
-    <ClInclude Include="..\..\vsf\source\shell\sys\xboot\vsf_xboot_cfg.h" />
     <ClInclude Include="..\..\vsf\source\shell\vsf_shell_wrapper.h" />
     <ClInclude Include="..\..\vsf\source\utilities\3rd-party\PLOOC\raw\plooc.h" />
     <ClInclude Include="..\..\vsf\source\utilities\3rd-party\PLOOC\raw\plooc_class.h" />
@@ -417,6 +504,14 @@
     <ClInclude Include="..\..\vsf\source\vsf_cfg.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\application\3rd-party\lite\raw\src\api\api.c" />
+    <ClCompile Include="..\..\application\3rd-party\lite\raw\src\api\renderer.c" />
+    <ClCompile Include="..\..\application\3rd-party\lite\raw\src\api\renderer_font.c" />
+    <ClCompile Include="..\..\application\3rd-party\lite\raw\src\api\system.c" />
+    <ClCompile Include="..\..\application\3rd-party\lite\raw\src\lib\stb\stb_truetype.c" />
+    <ClCompile Include="..\..\application\3rd-party\lite\raw\src\main.c" />
+    <ClCompile Include="..\..\application\3rd-party\lite\raw\src\rencache.c" />
+    <ClCompile Include="..\..\application\3rd-party\lite\raw\src\renderer.c" />
     <ClCompile Include="..\..\application\vsf_main.c" />
     <ClCompile Include="..\..\vsf\example\template\demo\common\usrapp_audio_common.c" />
     <ClCompile Include="..\..\vsf\example\template\demo\common\usrapp_common.c" />
@@ -430,6 +525,47 @@
     <ClCompile Include="..\..\vsf\example\template\demo\linux_demo\telnetd_demo.c" />
     <ClCompile Include="..\..\vsf\example\template\demo\lwip_demo\lwip_demo.c" />
     <ClCompile Include="..\..\vsf\example\template\demo\scsi_demo\scsi_demo.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\autofit\autofit.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\base\ftbase.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\base\ftbbox.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\base\ftbdf.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\base\ftbitmap.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\base\ftcid.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\base\ftdebug.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\base\ftfstype.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\base\ftgasp.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\base\ftglyph.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\base\ftgxval.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\base\ftinit.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\base\ftmm.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\base\ftotval.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\base\ftpfr.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\base\ftstroke.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\base\ftsynth.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\base\ftsystem.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\base\fttype1.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\base\ftwinfnt.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\bdf\bdf.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\bzip2\ftbzip2.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\cache\ftcache.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\cff\cff.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\cid\type1cid.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\gxvalid\gxvalid.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\gzip\ftgzip.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\lzw\ftlzw.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\otvalid\otvalid.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\pcf\pcf.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\pfr\pfr.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\psaux\psaux.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\pshinter\pshinter.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\psnames\psnames.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\raster\raster.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\sfnt\sfnt.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\smooth\smooth.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\truetype\truetype.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\type1\type1.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\type42\type42.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\winfonts\winfnt.c" />
     <ClCompile Include="..\..\vsf\source\component\3rd-party\lua\raw\lapi.c" />
     <ClCompile Include="..\..\vsf\source\component\3rd-party\lua\raw\lauxlib.c" />
     <ClCompile Include="..\..\vsf\source\component\3rd-party\lua\raw\lbaselib.c" />
@@ -709,6 +845,7 @@
     <ClCompile Include="..\..\vsf\source\shell\media\sdl2\vsf_sdl2.c" />
     <ClCompile Include="..\..\vsf\source\shell\media\sdl2\vsf_sdl2_event.c" />
     <ClCompile Include="..\..\vsf\source\shell\media\sdl2\vsf_sdl2_pixelformat.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\vsf_sdl2_thread.c" />
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\app\httpd\vsf_linux_httpd.c" />
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\app\ntp\vsf_linux_ntp.c" />
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\app\telnetd\vsf_linux_telnetd.c" />
@@ -733,7 +870,6 @@
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\port\busybox\busybox.c" />
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\port\busybox\shell\vsh.c" />
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\vsf_linux.c" />
-    <ClCompile Include="..\..\vsf\source\shell\sys\xboot\vsf_xboot.c" />
     <ClCompile Include="..\..\vsf\source\utilities\compiler\x86\x86_compiler.c" />
     <ClCompile Include="..\..\vsf\source\utilities\compiler\__common\__retarget_io.c" />
     <ClCompile Include="..\..\vsf\source\utilities\language_extension\code_region.c" />
@@ -830,9 +966,9 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Full</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>__VSF__;__CPU_X86__;__WIN__;APP_USE_LUA_DEMO=ENABLED;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>__VSF__;__CPU_X86__;__WIN__;APP_USE_LUA_DEMO=ENABLED;APP_USE_LUA_DEMO_LITE=ENABLED;VSF_USE_SDL2=ENABLED;FT2_BUILD_LIBRARY;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\lua\raw;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-fms-extensions %(AdditionalOptions)</AdditionalOptions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <ExceptionHandling>false</ExceptionHandling>
@@ -859,9 +995,9 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Full</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>__VSF__;__CPU_X64__;__WIN__;APP_USE_LUA_DEMO=ENABLED;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>__VSF__;__CPU_X64__;__WIN__;APP_USE_LUA_DEMO=ENABLED;APP_USE_LUA_DEMO_LITE=ENABLED;VSF_USE_SDL2=ENABLED;FT2_BUILD_LIBRARY;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\lite\raw\src;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\include;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\include\SDL2;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\lua\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\raw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-fms-extensions %(AdditionalOptions)</AdditionalOptions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <ExceptionHandling>false</ExceptionHandling>
@@ -890,7 +1026,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>__VSF__;__CPU_X86__;__WIN__;__OOC_RELEASE__;__OOC_CPP__;APP_USE_LUA_DEMO=ENABLED;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>__VSF__;__CPU_X86__;__WIN__;__OOC_RELEASE__;__OOC_CPP__;APP_USE_LUA_DEMO=ENABLED;APP_USE_LUA_DEMO_LITE=ENABLED;VSF_USE_SDL2=ENABLED;FT2_BUILD_LIBRARY;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
@@ -916,9 +1052,9 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>__VSF__;__CPU_X64__;__WIN__;__OOC_RELEASE__;__OOC_CPP__;APP_USE_LUA_DEMO=ENABLED;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>__VSF__;__CPU_X64__;__WIN__;__OOC_RELEASE__;__OOC_CPP__;APP_USE_LUA_DEMO=ENABLED;APP_USE_LUA_DEMO_LITE=ENABLED;VSF_USE_SDL2=ENABLED;FT2_BUILD_LIBRARY;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\lite\raw\src;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\include;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\lua\raw;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <AssemblerListingLocation>$(IntDir)/__sub0/__sub1/__sub2/__sub3/%(RelativeDir)</AssemblerListingLocation>

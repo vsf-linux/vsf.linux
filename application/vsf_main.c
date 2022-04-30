@@ -1,8 +1,16 @@
 #define __VSF_EDA_CLASS_INHERIT__
+#define __VSF_DISP_CLASS_INHERIT__
 #include <unistd.h>
 #include <libusb.h>
 
 #include "usrapp_common.h"
+
+#if APP_USE_LUA_DEMO == ENABLED && APP_USE_LUA_DEMO_LITE == ENABLED
+static void __disp_on_inited(vk_disp_t *disp)
+{
+    vsf_eda_post_evt((vsf_eda_t *)disp->ui_data, VSF_EVT_USER);
+}
+#endif
 
 int vsf_linux_create_fhs(void)
 {
@@ -70,6 +78,18 @@ int vsf_linux_create_fhs(void)
 #if APP_USE_LUA_DEMO == ENABLED
     extern int lua_main(int argc, char *argv[]);
     busybox_bind(VSF_LINUX_CFG_BIN_PATH "/lua", lua_main);
+
+#   if APP_USE_LUA_DEMO_LITE == ENABLED
+    *(vk_disp_color_type_t *)&usrapp_ui_common.disp->param.color = VSF_DISP_COLOR_ARGB8888;
+    usrapp_ui_common.disp->ui_data = vsf_eda_get_cur();
+    usrapp_ui_common.disp->ui_on_ready = __disp_on_inited;
+    vk_disp_init(usrapp_ui_common.disp);
+    vsf_thread_wfe(VSF_EVT_USER);
+    vsf_sdl2_init(usrapp_ui_common.disp);
+
+    extern int lite_main(int argc, char **argv);
+    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/lite", lite_main);
+#   endif
 #endif
 
     return 0;

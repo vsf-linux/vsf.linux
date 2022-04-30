@@ -19,3 +19,6 @@
 [submodule "application/3rd-party/wamr/raw"]
 	path = application/3rd-party/wamr/raw
 	url = ../wasm-micro-runtime
+[submodule "application/3rd-party/lite/raw"]
+	path = application/3rd-party/lite/raw
+	url = ../lite
