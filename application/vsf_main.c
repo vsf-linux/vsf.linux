@@ -75,23 +75,32 @@ int vsf_linux_create_fhs(void)
     extern int iwasm_main(int argc, char *argv[]);
     busybox_bind(VSF_LINUX_CFG_BIN_PATH "/iwasm", iwasm_main);
 #endif
+
+#if VSF_USE_SDL2 == ENABLED
+    *(vk_disp_color_type_t *)&usrapp_ui_common.disp->param.color = VSF_DISP_COLOR_ARGB8888;
+    vsf_sdl2_init(usrapp_ui_common.disp);
+
 #if APP_USE_LUA_DEMO == ENABLED
     extern int lua_main(int argc, char *argv[]);
     busybox_bind(VSF_LINUX_CFG_BIN_PATH "/lua", lua_main);
 
 #   if APP_USE_LUA_DEMO_LITE == ENABLED
-    *(vk_disp_color_type_t *)&usrapp_ui_common.disp->param.color = VSF_DISP_COLOR_ARGB8888;
     usrapp_ui_common.disp->ui_data = vsf_eda_get_cur();
     usrapp_ui_common.disp->ui_on_ready = __disp_on_inited;
     vk_disp_init(usrapp_ui_common.disp);
     vsf_thread_wfe(VSF_EVT_USER);
-    vsf_sdl2_init(usrapp_ui_common.disp);
 
     extern int lite_main(int argc, char **argv);
     busybox_bind(VSF_LINUX_CFG_BIN_PATH "/lite", lite_main);
 #   endif
 #endif
 
+#if APP_USE_8086TINY_DEMO == ENABLED
+    extern int _8086tiny_main(int argc, char **argv);
+    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/8086tiny", _8086tiny_main);
+#endif
+
+#endif      // VSF_USE_SDL2
     return 0;
 }
 

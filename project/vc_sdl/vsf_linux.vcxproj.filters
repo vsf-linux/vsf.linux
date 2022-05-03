@@ -712,6 +712,12 @@
     <Filter Include="vsf\component\3rd-party\zlib\raw">
       <UniqueIdentifier>{1da41a16-2644-498a-9a33-ac141f2a57f9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="vsf\shell\media\sdl2\3rd-party\SDL_ttf">
+      <UniqueIdentifier>{2c614315-8405-4bcd-970a-a3dff8ed917c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\sdl\8086tiny">
+      <UniqueIdentifier>{be32af79-1d6c-435c-9337-31a3a72b7812}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vsf\source\vsf.h">
@@ -2298,6 +2304,18 @@
     <ClInclude Include="..\..\vsf\source\component\3rd-party\zlib\raw\zutil.h">
       <Filter>vsf\component\3rd-party\zlib\raw</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_ttf\SDL_ttf.h">
+      <Filter>vsf\shell\media\sdl2\3rd-party\SDL_ttf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\include\SDL2\SDL_error.h">
+      <Filter>vsf\shell\media\sdl2\include\SDL2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\include\SDL2\SDL_config.h">
+      <Filter>vsf\shell\media\sdl2\include\SDL2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\include\SDL2\SDL_hints.h">
+      <Filter>vsf\shell\media\sdl2\include\SDL2</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\vsf\source\utilities\template\vsf_bitmap.c">
@@ -3736,6 +3754,12 @@
     </ClCompile>
     <ClCompile Include="..\..\vsf\source\component\3rd-party\zlib\raw\zutil.c">
       <Filter>vsf\component\3rd-party\zlib\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_ttf\SDL_ttf.c">
+      <Filter>vsf\shell\media\sdl2\3rd-party\SDL_ttf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\8086tiny\8086tiny.c">
+      <Filter>application\3rd-party\sdl\8086tiny</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

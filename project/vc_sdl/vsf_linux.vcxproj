@@ -434,15 +434,19 @@
     <ClInclude Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image\nanosvg.h" />
     <ClInclude Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image\nanosvgrast.h" />
     <ClInclude Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image\SDL_image.h" />
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_ttf\SDL_ttf.h" />
     <ClInclude Include="..\..\vsf\source\shell\media\sdl2\include\SDL2\begin_code.h" />
     <ClInclude Include="..\..\vsf\source\shell\media\sdl2\include\SDL2\close_code.h" />
     <ClInclude Include="..\..\vsf\source\shell\media\sdl2\include\SDL2\SDL.h" />
     <ClInclude Include="..\..\vsf\source\shell\media\sdl2\include\SDL2\SDL_audio.h" />
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\include\SDL2\SDL_config.h" />
     <ClInclude Include="..\..\vsf\source\shell\media\sdl2\include\SDL2\SDL_cpuinfo.h" />
     <ClInclude Include="..\..\vsf\source\shell\media\sdl2\include\SDL2\SDL_endian.h" />
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\include\SDL2\SDL_error.h" />
     <ClInclude Include="..\..\vsf\source\shell\media\sdl2\include\SDL2\SDL_events.h" />
     <ClInclude Include="..\..\vsf\source\shell\media\sdl2\include\SDL2\SDL_gamecontroller.h" />
     <ClInclude Include="..\..\vsf\source\shell\media\sdl2\include\SDL2\SDL_haptic.h" />
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\include\SDL2\SDL_hints.h" />
     <ClInclude Include="..\..\vsf\source\shell\media\sdl2\include\SDL2\SDL_keyboard.h" />
     <ClInclude Include="..\..\vsf\source\shell\media\sdl2\include\SDL2\SDL_keycode.h" />
     <ClInclude Include="..\..\vsf\source\shell\media\sdl2\include\SDL2\SDL_log.h" />
@@ -549,6 +553,9 @@
     <ClInclude Include="..\..\vsf\source\vsf_cfg.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\application\3rd-party\sdl\8086tiny\8086tiny.c">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">main=_8086tiny_main;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
     <ClCompile Include="..\..\application\vsf_main.c" />
     <ClCompile Include="..\..\vsf\example\template\demo\common\usrapp_audio_common.c" />
     <ClCompile Include="..\..\vsf\example\template\demo\common\usrapp_common.c" />
@@ -991,6 +998,7 @@
     <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image\IMG_xpm.c" />
     <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image\IMG_xv.c" />
     <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image\IMG_xxx.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_ttf\SDL_ttf.c" />
     <ClCompile Include="..\..\vsf\source\shell\media\sdl2\vsf_sdl2.c" />
     <ClCompile Include="..\..\vsf\source\shell\media\sdl2\vsf_sdl2_event.c" />
     <ClCompile Include="..\..\vsf\source\shell\media\sdl2\vsf_sdl2_pixelformat.c" />
@@ -1113,9 +1121,9 @@
       <PrecompiledHeader>
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <Optimization>Full</Optimization>
+      <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>__VSF__;__CPU_X86__;__WIN__;VSF_USE_SDL2=ENABLED;FT2_BUILD_LIBRARY;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>__VSF__;__CPU_X86__;__WIN__;APP_USE_8086TINY_DEMO=ENABLED;GRAPHICS_UPDATE_DELAY=25000;VSF_USE_SDL2=ENABLED;FT2_BUILD_LIBRARY;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\include;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\include\SDL2;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_ttf;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\lua\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\libjpeg-turbo\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\libjpeg-turbo\raw;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-fms-extensions %(AdditionalOptions)</AdditionalOptions>
@@ -1142,9 +1150,9 @@
       <PrecompiledHeader>
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <Optimization>Full</Optimization>
+      <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>__VSF__;__CPU_X64__;__WIN__;VSF_USE_SDL2=ENABLED;FT2_BUILD_LIBRARY;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>__VSF__;__CPU_X64__;__WIN__;APP_USE_8086TINY_DEMO=ENABLED;GRAPHICS_UPDATE_DELAY=25000;VSF_USE_SDL2=ENABLED;FT2_BUILD_LIBRARY;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\include;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\include\SDL2;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_ttf;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\lua\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\libjpeg-turbo\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\libjpeg-turbo\raw;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-fms-extensions %(AdditionalOptions)</AdditionalOptions>
@@ -1175,7 +1183,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>__VSF__;__CPU_X86__;__WIN__;__OOC_RELEASE__;VSF_USE_SDL2=ENABLED;FT2_BUILD_LIBRARY;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>__VSF__;__CPU_X86__;__WIN__;__OOC_RELEASE__;APP_USE_8086TINY_DEMO=ENABLED;GRAPHICS_UPDATE_DELAY=25000;VSF_USE_SDL2=ENABLED;FT2_BUILD_LIBRARY;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\include;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\include\SDL2;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_ttf;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\lua\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\libjpeg-turbo\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\libjpeg-turbo\raw;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
@@ -1201,7 +1209,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>__VSF__;__CPU_X64__;__WIN__;__OOC_RELEASE__;VSF_USE_SDL2=ENABLED;FT2_BUILD_LIBRARY;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>__VSF__;__CPU_X64__;__WIN__;__OOC_RELEASE__;APP_USE_8086TINY_DEMO=ENABLED;GRAPHICS_UPDATE_DELAY=25000;VSF_USE_SDL2=ENABLED;FT2_BUILD_LIBRARY;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\include;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\include\SDL2;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_ttf;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\lua\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\libjpeg-turbo\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\libjpeg-turbo\raw;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
