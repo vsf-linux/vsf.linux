@@ -77,7 +77,7 @@ int vsf_linux_create_fhs(void)
 #endif
 
 #if VSF_USE_SDL2 == ENABLED
-    *(vk_disp_color_type_t *)&usrapp_ui_common.disp->param.color = VSF_DISP_COLOR_ARGB8888;
+    *(vk_disp_color_type_t *)&usrapp_ui_common.disp->param.color = VSF_SDL2_CFG_COLOR;
     vsf_sdl2_init(usrapp_ui_common.disp);
 
 #if APP_USE_LUA_DEMO == ENABLED
