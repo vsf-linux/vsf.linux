@@ -718,6 +718,9 @@
     <Filter Include="application\3rd-party\sdl\8086tiny">
       <UniqueIdentifier>{be32af79-1d6c-435c-9337-31a3a72b7812}</UniqueIdentifier>
     </Filter>
+    <Filter Include="application\audio_demo">
+      <UniqueIdentifier>{3638d49c-4e60-43c1-8fc2-f0d540fae6f2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vsf\source\vsf.h">
@@ -3760,6 +3763,9 @@
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\sdl\8086tiny\8086tiny.c">
       <Filter>application\3rd-party\sdl\8086tiny</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\example\template\demo\audio_demo\audio_demo.c">
+      <Filter>application\audio_demo</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

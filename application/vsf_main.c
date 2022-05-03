@@ -101,6 +101,11 @@ int vsf_linux_create_fhs(void)
 #endif
 
 #endif      // VSF_USE_SDL2
+
+#if APP_USE_AUDIO_DEMO == ENABLED
+    extern int audio_play_main(int argc, char *argv[]);
+    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/play_audio", audio_play_main);
+#endif
     return 0;
 }
 
