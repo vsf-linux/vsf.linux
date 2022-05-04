@@ -5,6 +5,10 @@
 
 #include "usrapp_common.h"
 
+#if VSF_USE_SDL2 == ENABLED
+#   include <SDL2/SDL.h>
+#endif
+
 #if APP_USE_LUA_DEMO == ENABLED && APP_USE_LUA_DEMO_LITE == ENABLED
 static void __disp_on_inited(vk_disp_t *disp)
 {
@@ -78,7 +82,13 @@ int vsf_linux_create_fhs(void)
 
 #if VSF_USE_SDL2 == ENABLED
     *(vk_disp_color_type_t *)&usrapp_ui_common.disp->param.color = VSF_SDL2_CFG_COLOR;
-    vsf_sdl2_init(usrapp_ui_common.disp);
+    vsf_sdl2_cfg_t cfg = {
+        .disp_dev = usrapp_ui_common.disp,
+#if VSF_USE_AUDIO == ENABLED
+        .audio_dev = usrapp_audio_common.default_dev,
+#endif
+    };
+    vsf_sdl2_init(&cfg);
 
 #if APP_USE_LUA_DEMO == ENABLED
     extern int lua_main(int argc, char *argv[]);
