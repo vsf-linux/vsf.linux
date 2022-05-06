@@ -9,6 +9,10 @@
 #   include <SDL2/SDL.h>
 #endif
 
+#ifndef VSF_APP_ENTRY
+#   define VSF_APP_ENTRY        VSF_USER_ENTRY
+#endif
+
 #if APP_USE_LUA_DEMO == ENABLED && APP_USE_LUA_DEMO_LITE == ENABLED
 static void __disp_on_inited(vk_disp_t *disp)
 {
@@ -120,7 +124,7 @@ int vsf_linux_create_fhs(void)
 }
 
 // TODO: SDL require that main need argc and argv
-int VSF_USER_ENTRY(void)
+int VSF_APP_ENTRY(int argc, char *argv[])
 {
     VSF_STREAM_INIT(&VSF_DEBUG_STREAM_RX);
     VSF_STREAM_INIT(&VSF_DEBUG_STREAM_TX);
