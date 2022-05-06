@@ -110,8 +110,8 @@ int vsf_linux_create_fhs(void)
 #endif
 
 #if APP_USE_8086TINY_DEMO == ENABLED
-    extern int _8086tiny_main(int argc, char **argv);
-    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/8086tiny", _8086tiny_main);
+    extern int x8086tiny_main(int argc, char **argv);
+    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/8086tiny", x8086tiny_main);
 #endif
 
 #endif      // VSF_USE_SDL2

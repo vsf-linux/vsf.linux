@@ -3761,11 +3761,11 @@
     <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_ttf\SDL_ttf.c">
       <Filter>vsf\shell\media\sdl2\3rd-party\SDL_ttf</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\sdl\8086tiny\8086tiny.c">
-      <Filter>application\3rd-party\sdl\8086tiny</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\vsf\example\template\demo\audio_demo\audio_demo.c">
       <Filter>application\audio_demo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\x8086tiny\8086tiny.c">
+      <Filter>application\3rd-party\sdl\8086tiny</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

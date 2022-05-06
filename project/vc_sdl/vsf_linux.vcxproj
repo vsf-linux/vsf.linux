@@ -553,8 +553,11 @@
     <ClInclude Include="..\..\vsf\source\vsf_cfg.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\application\3rd-party\sdl\8086tiny\8086tiny.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">main=_8086tiny_main;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    <ClCompile Include="..\..\application\3rd-party\sdl\x8086tiny\8086tiny.c">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">main=x8086tiny_main;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">main=x8086tiny_main;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">main=x8086tiny_main;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">main=x8086tiny_main;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="..\..\application\vsf_main.c" />
     <ClCompile Include="..\..\vsf\example\template\demo\audio_demo\audio_demo.c" />
