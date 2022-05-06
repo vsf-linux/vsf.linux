@@ -23,7 +23,7 @@
     <ClInclude Include="..\..\application\3rd-party\lite\raw\src\lib\stb\stb_truetype.h" />
     <ClInclude Include="..\..\application\3rd-party\lite\raw\src\rencache.h" />
     <ClInclude Include="..\..\application\3rd-party\lite\raw\src\renderer.h" />
-    <ClInclude Include="..\..\application\3rd-party\sdl\port\sdl2_platform_vsf.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\port\SDL_config_vsf.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\audio\dummy\SDL_dummyaudio.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\audio\SDL_audiodev_c.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\audio\SDL_audio_c.h" />

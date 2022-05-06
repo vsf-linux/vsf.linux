@@ -207,6 +207,15 @@ VSF_WaitEventTimeout(_THIS, int timeout)
     return is_empty ? 0 : 1;
 }
 
+static void
+VSF_DestroyWindowFramebuffer(_THIS, SDL_Window * window)
+{
+    SDL_Surface *surface;
+
+    surface = (SDL_Surface *) SDL_SetWindowData(window, VSF_SURFACE, NULL);
+    SDL_FreeSurface(surface);
+}
+
 static int
 VSF_CreateWindowFramebuffer(_THIS, SDL_Window * window, Uint32 * format, void ** pixels, int *pitch)
 {
@@ -215,7 +224,7 @@ VSF_CreateWindowFramebuffer(_THIS, SDL_Window * window, Uint32 * format, void **
     int w, h;
 
     /* Free the old framebuffer surface */
-    SDL_DUMMY_DestroyWindowFramebuffer(_this, window);
+    VSF_DestroyWindowFramebuffer(_this, window);
 
     /* Create a new one */
     SDL_GetWindowSize(window, &w, &h);
@@ -248,15 +257,6 @@ VSF_UpdateWindowFramebuffer(_THIS, SDL_Window * window, const SDL_Rect * rects, 
     vk_disp_refresh(disp, NULL, surface->pixels);
     vsf_thread_wfe(VSF_EVT_RETURN);
     return 0;
-}
-
-static void
-VSF_DestroyWindowFramebuffer(_THIS, SDL_Window * window)
-{
-    SDL_Surface *surface;
-
-    surface = (SDL_Surface *) SDL_SetWindowData(window, VSF_SURFACE, NULL);
-    SDL_FreeSurface(surface);
 }
 
 static int
