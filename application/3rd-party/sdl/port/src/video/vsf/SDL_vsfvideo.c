@@ -251,10 +251,20 @@ VSF_UpdateWindowFramebuffer(_THIS, SDL_Window * window, const SDL_Rect * rects, 
     if (!surface) {
         return SDL_SetError("Couldn't find dummy surface for window");
     }
+    if ((surface->w > disp->param.width) || (surface->h > disp->param.height)) {
+        return SDL_SetError("Surface is too large to be fit in the screen");
+    }
 
     /* Send the data to the display */
     disp->ui_data = vsf_eda_get_cur();
-    vk_disp_refresh(disp, NULL, surface->pixels);
+
+    vk_disp_area_t area = {
+        .pos.x      = 0,
+        .pos.y      = 0,
+        .size.x     = surface->w,
+        .size.y     = surface->h,
+    };
+    vk_disp_refresh(disp, &area, surface->pixels);
     vsf_thread_wfe(VSF_EVT_RETURN);
     return 0;
 }
