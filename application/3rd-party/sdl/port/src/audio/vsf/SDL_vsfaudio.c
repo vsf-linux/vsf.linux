@@ -37,7 +37,7 @@ static void __sdl_audio_playback_evthandler(vsf_stream_t *stream, void *param, v
             vsf_eda_t *eda_pending = NULL;
             vsf_protect_t orig = vsf_protect_int();
                 if (    (ctx->eda_pending != NULL)
-                    &&  (vsf_stream_get_wbuf(stream, NULL) > ctx->size)) {
+                    &&  (vsf_stream_get_wbuf(stream, NULL) >= ctx->size)) {
                     eda_pending = ctx->eda_pending;
                     ctx->eda_pending = NULL;
                 }
@@ -61,7 +61,7 @@ static void __sdl_audio_capture_evthandler(vsf_stream_t *stream, void *param, vs
             vsf_eda_t *eda_pending = NULL;
             vsf_protect_t orig = vsf_protect_int();
                 if (    (ctx->eda_pending != NULL)
-                    &&  (vsf_stream_get_rbuf(stream, NULL) > ctx->size)) {
+                    &&  (vsf_stream_get_rbuf(stream, NULL) >= ctx->size)) {
                     eda_pending = ctx->eda_pending;
                     ctx->eda_pending = NULL;
                 }
@@ -136,12 +136,12 @@ VSFAUDIO_OpenDevice(_THIS, const char *devname)
     ctx->stream.op = &vsf_block_stream_op;
     VSF_STREAM_INIT(&ctx->stream);
     if (_this->iscapture) {
-        ctx->stream.tx.param = ctx;
-        ctx->stream.tx.evthandler = __sdl_audio_playback_evthandler;
-        VSF_STREAM_CONNECT_TX(&ctx->stream);
-    } else {
         ctx->stream.rx.param = ctx;
         ctx->stream.rx.evthandler = __sdl_audio_capture_evthandler;
+        VSF_STREAM_CONNECT_RX(&ctx->stream);
+    } else {
+        ctx->stream.tx.param = ctx;
+        ctx->stream.tx.evthandler = __sdl_audio_playback_evthandler;
         VSF_STREAM_CONNECT_TX(&ctx->stream);
     }
 
