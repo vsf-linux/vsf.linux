@@ -54,7 +54,7 @@
 #   pragma clang diagnostic ignored "-Wimplicit-function-declaration"
 #endif
 
-#   define VSF_LINUX_CFG_WRAPPER                        ENABLED
+#   define VSF_LINUX_CFG_WRAPPER                        DISABLED
 #   define VSF_LINUX_SOCKET_CFG_WRAPPER                 ENABLED
 #   define VSF_LINUX_USE_SIMPLE_LIBC                    ENABLED
 #   define VSF_KERNEL_CFG_THREAD_STACK_LARGE            ENABLED
@@ -68,7 +68,7 @@
 #if VSF_LINUX_USE_SIMPLE_LIBC == ENABLED
 #   define VSF_LINUX_LIBC_CFG_CPP                       ENABLED
 // VSF_LINUX_LIBC_CFG_WRAPPER is required on __WIN__ to avoid API confliction
-#   define VSF_LINUX_LIBC_CFG_WRAPPER                   ENABLED
+#   define VSF_LINUX_LIBC_CFG_WRAPPER                   DISABLED
 #   define VSF_USE_SIMPLE_SSCANF                        ENABLED
 #   define VSF_USE_SIMPLE_SPRINTF                       ENABLED
 #else

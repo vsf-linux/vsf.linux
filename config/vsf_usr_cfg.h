@@ -40,6 +40,9 @@
 #define VSF_USE_SIMPLE_STREAM                           ENABLED
 #define VSF_USE_STREAM                                  DISABLED
 
+#define VSF_USE_AUDIO                                   ENABLED
+#define VSF_AUDIO_USE_PLAYBACK                          ENABLED
+
 #define VSF_USE_MAL                                     ENABLED
 #   define VSF_MAL_USE_FILE_MAL                         ENABLED
 #   define VSF_MAL_USE_SCSI_MAL                         ENABLED

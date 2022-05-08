@@ -19,10 +19,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\application\3rd-party\lite\raw\src\api\api.h" />
-    <ClInclude Include="..\..\application\3rd-party\lite\raw\src\lib\stb\stb_truetype.h" />
-    <ClInclude Include="..\..\application\3rd-party\lite\raw\src\rencache.h" />
-    <ClInclude Include="..\..\application\3rd-party\lite\raw\src\renderer.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\port\SDL_config_vsf.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\audio\dummy\SDL_dummyaudio.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\audio\SDL_audiodev_c.h" />
@@ -90,6 +86,170 @@
     <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\video\yuv2rgb\yuv_rgb.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\video\yuv2rgb\yuv_rgb_sse_func.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\video\yuv2rgb\yuv_rgb_std_func.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\adplug\binfile.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\adplug\binio.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\adplug\convertopl.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\adplug\dosbox_opls.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\adplug\emuopls.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\adplug\fprovide.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\adplug\mame_opls.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\adplug\nuked_opl.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\adplug\opl.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\adplug\opltypes.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\adplug\player.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\adplug\rix.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\adplug\surroundopl.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\ascii.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\audio.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\aviplay.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\battle.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\codepage.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\common.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\defines.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\ending.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\fight.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\font.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\fontglyph.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\fontglyph_cn.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\fontglyph_jp.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\fontglyph_tw.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\game.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\global.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\glslp.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\input.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\itemmenu.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libmad\bit.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libmad\decoder.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libmad\fixed.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libmad\frame.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libmad\huffman.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libmad\layer12.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libmad\layer3.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libmad\libmad_config.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libmad\libmad_global.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libmad\mad.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libmad\music_mad.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libmad\stream.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libmad\synth.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libmad\timer.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\liboggvorbis\src\backends.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\liboggvorbis\src\bitrate.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\liboggvorbis\src\codebook.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\liboggvorbis\src\codec_internal.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\liboggvorbis\src\envelope.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\liboggvorbis\src\highlevel.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\liboggvorbis\src\lookup.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\liboggvorbis\src\lookup_data.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\liboggvorbis\src\lpc.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\liboggvorbis\src\lsp.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\liboggvorbis\src\masking.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\liboggvorbis\src\mdct.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\liboggvorbis\src\misc.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\liboggvorbis\src\os.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\liboggvorbis\src\psy.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\liboggvorbis\src\registry.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\liboggvorbis\src\scales.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\liboggvorbis\src\smallft.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\liboggvorbis\src\window.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\celt\arch.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\celt\bands.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\celt\celt.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\celt\celt_lpc.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\celt\cpu_support.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\celt\cwrs.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\celt\ecintrin.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\celt\entcode.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\celt\entdec.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\celt\entenc.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\celt\fixed_debug.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\celt\fixed_generic.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\celt\float_cast.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\celt\kiss_fft.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\celt\laplace.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\celt\mathops.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\celt\mfrngcod.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\celt\modes.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\celt\opus_mdct.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\celt\os_support.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\celt\pitch.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\celt\quant_bands.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\celt\rate.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\celt\stack_alloc.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\celt\static_modes_fixed.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\celt\static_modes_fixed_arm_ne10.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\celt\static_modes_float.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\celt\static_modes_float_arm_ne10.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\celt\vq.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\celt\_kiss_fft_guts.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\API.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\control.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\debug.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\define.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\errors.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\float\main_FLP.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\float\SigProc_FLP.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\float\structs_FLP.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\Inlines.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\MacroCount.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\MacroDebug.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\macros.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\NSQ.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\pitch_est_defines.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\PLC.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\resampler_private.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\resampler_rom.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\resampler_structs.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\SigProc_FIX.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\silk_main.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\structs.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\tables.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\tuning_parameters.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\typedef.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\src\analysis.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\src\config.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\src\internal.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\src\mapping_matrix.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\src\mlp.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\src\opus_private.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\src\tansig_table.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\src\winerrno.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\magicmenu.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\main.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\map.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\midi.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\mini_glloader.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\palcfg.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\palcommon.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\palette.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\play.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\players.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\res.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\resampler.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\riff.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\rngplay.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\scene.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\script.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\SDL_stbimage.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\stb_image.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\text.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\timidity\common.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\timidity\instrum.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\timidity\mix.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\timidity\options.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\timidity\output.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\timidity\playmidi.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\timidity\readmidi.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\timidity\resample.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\timidity\tables.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\timidity\timidity.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\tml.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\tsf.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\ui.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\uibattle.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\uigame.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\util.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\video.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\video_glsl.h" />
     <ClInclude Include="..\..\config\3rd-party\lwip\lwipopts.h" />
     <ClInclude Include="..\..\config\3rd-party\mbedtls\config.h" />
     <ClInclude Include="..\..\config\target\vsf_usr_cfg_win.h" />
@@ -553,14 +713,6 @@
     <ClInclude Include="..\..\vsf\source\vsf_cfg.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\application\3rd-party\lite\raw\src\api\api.c" />
-    <ClCompile Include="..\..\application\3rd-party\lite\raw\src\api\renderer.c" />
-    <ClCompile Include="..\..\application\3rd-party\lite\raw\src\api\renderer_font.c" />
-    <ClCompile Include="..\..\application\3rd-party\lite\raw\src\api\system.c" />
-    <ClCompile Include="..\..\application\3rd-party\lite\raw\src\lib\stb\stb_truetype.c" />
-    <ClCompile Include="..\..\application\3rd-party\lite\raw\src\main.c" />
-    <ClCompile Include="..\..\application\3rd-party\lite\raw\src\rencache.c" />
-    <ClCompile Include="..\..\application\3rd-party\lite\raw\src\renderer.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\port\sdl2_platform_vsf.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\port\src\audio\vsf\SDL_vsfaudio.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\port\src\main\vsf\SDL_vsf_main.c" />
@@ -647,6 +799,248 @@
     <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\video\SDL_vulkan_utils.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\video\SDL_yuv.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\video\yuv2rgb\yuv_rgb.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\adplug\binfile.cpp" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\adplug\binio.cpp" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\adplug\dosbox_opls.cpp" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\adplug\emuopls.cpp" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\adplug\fprovide.cpp" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\adplug\mame_opls.cpp" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\adplug\nuked_opl.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\adplug\player.cpp" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\adplug\rix.cpp" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\adplug\surroundopl.cpp" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\audio.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\aviplay.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\battle.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\ending.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\fight.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\font.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\game.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\global.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\glslp.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\input.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\itemmenu.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libmad\bit.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libmad\decoder.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libmad\fixed.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libmad\frame.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libmad\huffman.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libmad\layer12.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libmad\layer3.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libmad\music_mad.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libmad\stream.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libmad\synth.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libmad\timer.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\liboggvorbis\src\analysis.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\liboggvorbis\src\bitrate.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\liboggvorbis\src\bitwise.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\liboggvorbis\src\block.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\liboggvorbis\src\codebook.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\liboggvorbis\src\envelope.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\liboggvorbis\src\floor0.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\liboggvorbis\src\floor1.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\liboggvorbis\src\framing.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\liboggvorbis\src\info.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\liboggvorbis\src\lookup.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\liboggvorbis\src\lpc.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\liboggvorbis\src\lsp.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\liboggvorbis\src\mapping0.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\liboggvorbis\src\mdct.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\liboggvorbis\src\psy.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\liboggvorbis\src\registry.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\liboggvorbis\src\res0.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\liboggvorbis\src\sharedbook.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\liboggvorbis\src\smallft.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\liboggvorbis\src\synthesis.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\liboggvorbis\src\vorbisenc.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\liboggvorbis\src\vorbisfile.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\liboggvorbis\src\window.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\celt\bands.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\celt\celt.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\celt\celt_decoder.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\celt\celt_encoder.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\celt\celt_lpc.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\celt\cwrs.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\celt\entcode.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\celt\entdec.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\celt\entenc.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\celt\kiss_fft.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\celt\laplace.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\celt\mathops.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\celt\modes.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\celt\opus_mdct.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\celt\pitch.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\celt\quant_bands.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\celt\rate.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\celt\vq.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\A2NLSF.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\ana_filt_bank_1.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\biquad_alt.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\bwexpander.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\bwexpander_32.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\check_control_input.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\CNG.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\code_signs.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\control_audio_bandwidth.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\control_codec.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\control_SNR.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\debug.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\decoder_set_fs.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\decode_core.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\decode_frame.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\decode_indices.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\decode_parameters.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\decode_pitch.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\decode_pulses.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\dec_API.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\encode_indices.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\encode_pulses.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\enc_API.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\float\apply_sine_window_FLP.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\float\autocorrelation_FLP.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\float\burg_modified_FLP.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\float\bwexpander_FLP.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\float\corrMatrix_FLP.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\float\encode_frame_FLP.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\float\energy_FLP.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\float\find_LPC_FLP.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\float\find_LTP_FLP.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\float\find_pitch_lags_FLP.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\float\find_pred_coefs_FLP.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\float\inner_product_FLP.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\float\k2a_FLP.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\float\LPC_analysis_filter_FLP.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\float\LPC_inv_pred_gain_FLP.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\float\LTP_analysis_filter_FLP.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\float\LTP_scale_ctrl_FLP.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\float\noise_shape_analysis_FLP.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\float\pitch_analysis_core_FLP.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\float\process_gains_FLP.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\float\regularize_correlations_FLP.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\float\residual_energy_FLP.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\float\scale_copy_vector_FLP.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\float\scale_vector_FLP.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\float\schur_FLP.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\float\sort_FLP.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\float\warped_autocorrelation_FLP.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\float\wrappers_FLP.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\gain_quant.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\HP_variable_cutoff.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\init_decoder.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\init_encoder.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\inner_prod_aligned.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\interpolate.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\lin2log.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\log2lin.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\LPC_analysis_filter.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\LPC_fit.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\LPC_inv_pred_gain.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\LP_variable_cutoff.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\NLSF2A.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\NLSF_decode.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\NLSF_del_dec_quant.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\NLSF_encode.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\NLSF_stabilize.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\NLSF_unpack.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\NLSF_VQ.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\NLSF_VQ_weights_laroia.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\NSQ.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\NSQ_del_dec.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\opus_resampler.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\pitch_est_tables.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\PLC.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\process_NLSFs.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\quant_LTP_gains.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\resampler_down2.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\resampler_down2_3.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\resampler_private_AR2.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\resampler_private_down_FIR.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\resampler_private_IIR_FIR.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\resampler_private_up2_HQ.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\resampler_rom.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\shell_coder.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\sigm_Q15.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\sort.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\stereo_decode_pred.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\stereo_encode_pred.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\stereo_find_predictor.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\stereo_LR_to_MS.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\stereo_MS_to_LR.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\stereo_quant_pred.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\sum_sqr_shift.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\tables_gain.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\tables_LTP.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\tables_NLSF_CB_NB_MB.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\tables_NLSF_CB_WB.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\tables_other.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\tables_pitch_lag.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\tables_pulses_per_block.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\table_LSF_cos.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\VAD.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\VQ_WMat_EC.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\src\http.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\src\internal.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\src\mapping_matrix.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\src\mlp.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\src\mlp_data.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\src\opus.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\src\opusfile.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\src\opus_analysis.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\src\opus_decoder.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\src\opus_encoder.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\src\opus_info.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\src\opus_multistream.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\src\opus_multistream_decoder.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\src\opus_multistream_encoder.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\src\opus_projection_decoder.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\src\opus_projection_encoder.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\src\opus_stream.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\src\repacketizer.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\libopusfile\src\wincerts.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\magicmenu.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\main.c">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">main=sdlpal_main;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">main=sdlpal_main;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">main=sdlpal_main;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">main=sdlpal_main;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\map.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\midi.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\midi_timidity.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\midi_tsf.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\mini_glloader.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\mp3play.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\oggplay.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\opusplay.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\overlay.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\palcfg.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\palcommon.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\palette.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\play.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\res.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\resampler.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\rixplay.cpp" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\rngplay.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\scene.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\script.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\sound.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\text.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\timidity\common.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\timidity\instrum.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\timidity\mix.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\timidity\output.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\timidity\playmidi.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\timidity\readmidi.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\timidity\resample.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\timidity\tables.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\timidity\timidity.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\ui.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\uibattle.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\uigame.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\util.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\video.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\video_glsl.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdlpal\yj1.c" />
     <ClCompile Include="..\..\application\vsf_main.c" />
     <ClCompile Include="..\..\vsf\example\template\demo\common\usrapp_audio_common.c" />
     <ClCompile Include="..\..\vsf\example\template\demo\common\usrapp_common.c" />
@@ -1021,6 +1415,10 @@
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)%(Filename).obj</Outputs>
     </CustomBuild>
     <None Include="..\..\vsf\source\shell\sys\linux\app\httpd\urihandler\file\__vsf_linux_urihandler_file.inc" />
+    <None Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\cstdio" />
+    <None Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\cstdlib" />
+    <None Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\cstring" />
+    <None Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\string" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -1097,9 +1495,9 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Full</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>__VSF__;__CPU_X86__;__WIN__;SIGWINCH=28;VSF_APP_ENTRY=SDL_main;APP_USE_LUA_DEMO=ENABLED;APP_USE_LUA_DEMO_LITE=ENABLED;VSF_USE_SDL2=ENABLED;VSF_SDL2_CFG_COLOR=VSF_DISP_COLOR_ARGB8888;FT2_BUILD_LIBRARY;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>__VSF__;__CPU_X86__;__WIN__;__OOC_CPP__;OPUS_BUILD;VAR_ARRAYS;SIGWINCH=28;VSF_APP_ENTRY=SDL_main;VSF_USE_SDL2=ENABLED;VSF_SDL2_CFG_COLOR=VSF_DISP_COLOR_ARGB8888;FT2_BUILD_LIBRARY;APP_USE_SDLPAL_DEMO=ENABLED;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\lite\raw\src;$(ProjectDir)..\..\application\3rd-party\sdl\include;$(ProjectDir)..\..\application\3rd-party\sdl\include\SDL2;$(ProjectDir)..\..\application\3rd-party\sdl\port;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\lua\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\raw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal\timidity;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal\liboggvorbis\include;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal\libopusfile\include;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal\libopusfile\celt;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\float;$(ProjectDir)..\..\application\3rd-party\sdl\include;$(ProjectDir)..\..\application\3rd-party\sdl\include\SDL2;$(ProjectDir)..\..\application\3rd-party\sdl\port;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\lua\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\raw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-fms-extensions %(AdditionalOptions)</AdditionalOptions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <ExceptionHandling>false</ExceptionHandling>
@@ -1126,9 +1524,9 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>__VSF__;__CPU_X64__;__WIN__;SIGWINCH=28;VSF_APP_ENTRY=SDL_main;APP_USE_LUA_DEMO=ENABLED;APP_USE_LUA_DEMO_LITE=ENABLED;VSF_USE_SDL2=ENABLED;VSF_SDL2_CFG_COLOR=VSF_DISP_COLOR_ARGB8888;FT2_BUILD_LIBRARY;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>__VSF__;__CPU_X64__;__WIN__;__OOC_CPP__;OPUS_BUILD;VAR_ARRAYS;SIGWINCH=28;VSF_APP_ENTRY=SDL_main;VSF_USE_SDL2=ENABLED;VSF_SDL2_CFG_COLOR=VSF_DISP_COLOR_ARGB8888;FT2_BUILD_LIBRARY;APP_USE_SDLPAL_DEMO=ENABLED;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\lite\raw\src;$(ProjectDir)..\..\application\3rd-party\sdl\include;$(ProjectDir)..\..\application\3rd-party\sdl\include\SDL2;$(ProjectDir)..\..\application\3rd-party\sdl\port;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\lua\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\raw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal\timidity;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal\liboggvorbis\include;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal\libopusfile\include;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal\libopusfile\celt;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\float;$(ProjectDir)..\..\application\3rd-party\sdl\include;$(ProjectDir)..\..\application\3rd-party\sdl\include\SDL2;$(ProjectDir)..\..\application\3rd-party\sdl\port;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\lua\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\raw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-fms-extensions %(AdditionalOptions)</AdditionalOptions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <ExceptionHandling>false</ExceptionHandling>
@@ -1157,9 +1555,9 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>__VSF__;__CPU_X86__;__WIN__;__OOC_RELEASE__;__OOC_CPP__;SIGWINCH=28;VSF_APP_ENTRY=SDL_main;APP_USE_LUA_DEMO=ENABLED;APP_USE_LUA_DEMO_LITE=ENABLED;VSF_USE_SDL2=ENABLED;VSF_SDL2_CFG_COLOR=VSF_DISP_COLOR_ARGB8888;FT2_BUILD_LIBRARY;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>__VSF__;__CPU_X86__;__WIN__;__OOC_RELEASE__;__OOC_CPP__;OPUS_BUILD;VAR_ARRAYS;SIGWINCH=28;VSF_APP_ENTRY=SDL_main;VSF_USE_SDL2=ENABLED;VSF_SDL2_CFG_COLOR=VSF_DISP_COLOR_ARGB8888;FT2_BUILD_LIBRARY;APP_USE_SDLPAL_DEMO=ENABLED;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\lite\raw\src;$(ProjectDir)..\..\application\3rd-party\sdl\include;$(ProjectDir)..\..\application\3rd-party\sdl\include\SDL2;$(ProjectDir)..\..\application\3rd-party\sdl\port;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\lua\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\raw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal\timidity;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal\liboggvorbis\include;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal\libopusfile\include;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal\libopusfile\celt;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\float;$(ProjectDir)..\..\application\3rd-party\sdl\include;$(ProjectDir)..\..\application\3rd-party\sdl\include\SDL2;$(ProjectDir)..\..\application\3rd-party\sdl\port;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\lua\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\raw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <AssemblerListingLocation>$(IntDir)/__sub0/__sub1/__sub2/__sub3/%(RelativeDir)</AssemblerListingLocation>
@@ -1183,9 +1581,9 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>__VSF__;__CPU_X64__;__WIN__;__OOC_RELEASE__;__OOC_CPP__;SIGWINCH=28;VSF_APP_ENTRY=SDL_main;APP_USE_LUA_DEMO=ENABLED;APP_USE_LUA_DEMO_LITE=ENABLED;VSF_USE_SDL2=ENABLED;VSF_SDL2_CFG_COLOR=VSF_DISP_COLOR_ARGB8888;FT2_BUILD_LIBRARY;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>__VSF__;__CPU_X64__;__WIN__;__OOC_RELEASE__;__OOC_CPP__;OPUS_BUILD;VAR_ARRAYS;SIGWINCH=28;VSF_APP_ENTRY=SDL_main;VSF_USE_SDL2=ENABLED;VSF_SDL2_CFG_COLOR=VSF_DISP_COLOR_ARGB8888;FT2_BUILD_LIBRARY;APP_USE_SDLPAL_DEMO=ENABLED;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\lite\raw\src;$(ProjectDir)..\..\application\3rd-party\sdl\include;$(ProjectDir)..\..\application\3rd-party\sdl\include\SDL2;$(ProjectDir)..\..\application\3rd-party\sdl\port;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\lua\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\raw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal\timidity;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal\liboggvorbis\include;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal\libopusfile\include;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal\libopusfile\celt;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal\libopusfile\silk\float;$(ProjectDir)..\..\application\3rd-party\sdl\include;$(ProjectDir)..\..\application\3rd-party\sdl\include\SDL2;$(ProjectDir)..\..\application\3rd-party\sdl\port;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\lua\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\raw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <AssemblerListingLocation>$(IntDir)/__sub0/__sub1/__sub2/__sub3/%(RelativeDir)</AssemblerListingLocation>
