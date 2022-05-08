@@ -88,6 +88,7 @@ typedef struct vsf_sdl2_cfg_t {
     vk_audio_dev_t *audio_dev;
 #endif
 } vsf_sdl2_cfg_t;
+
 typedef struct SDL_VSF_platform {
     vsf_sdl2_cfg_t cfg;
 
@@ -97,11 +98,8 @@ typedef struct SDL_VSF_platform {
         vsf_slist_queue_t queue;
     } event;
 
-    struct {
-        char *text;
-    } clipboard;
-
     bool is_disp_inited;
+    bool is_audio_inited;
 } SDL_VSF_platform;
 extern SDL_VSF_platform SDL_platform;
 extern void vsf_sdl2_init(vsf_sdl2_cfg_t *cfg);

@@ -9,6 +9,7 @@
 #include "../../../../raw/src/events/SDL_keyboard_c.h"
 #include "../../../../raw/src/events/SDL_mouse_c.h"
 
+#define VSF_VIDEO_MOD   "VSF_VIDEO"
 #define VSF_SURFACE     "_SDL_VSFSurface"
 
 typedef struct SDL_EventNode {
@@ -249,10 +250,10 @@ VSF_UpdateWindowFramebuffer(_THIS, SDL_Window * window, const SDL_Rect * rects, 
 
     surface = (SDL_Surface *) SDL_GetWindowData(window, VSF_SURFACE);
     if (!surface) {
-        return SDL_SetError("Couldn't find dummy surface for window");
+        return SDL_SetError("%s: Couldn't find dummy surface for window", VSF_VIDEO_MOD);
     }
     if ((surface->w > disp->param.width) || (surface->h > disp->param.height)) {
-        return SDL_SetError("Surface is too large to be fit in the screen");
+        return SDL_SetError("%s: Surface is too large to be fit in the screen", VSF_VIDEO_MOD);
     }
 
     /* Send the data to the display */
