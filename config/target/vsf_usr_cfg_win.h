@@ -71,9 +71,11 @@
 #   define VSF_LINUX_LIBC_CFG_WRAPPER                   DISABLED
 #   define VSF_USE_SIMPLE_SSCANF                        ENABLED
 #   define VSF_USE_SIMPLE_SPRINTF                       ENABLED
+#   define VSF_USE_SIMPLE_SWPRINTF                      ENABLED
 #else
 #   define VSF_USE_SIMPLE_SSCANF                        DISABLED
 #   define VSF_USE_SIMPLE_SPRINTF                       DISABLED
+#   define VSF_USE_SIMPLE_SWPRINTF                      DISABLED
 #endif
 #   define VSH_CMD_SIZE                                 512
 
