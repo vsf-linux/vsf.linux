@@ -25,6 +25,9 @@
 #define HAVE_STRING_H 1
 #define HAVE_CTYPE_H 1
 #define HAVE_MATH_H 1
+#define HAVE_WCHAR_H 1
+#define HAVE_STDINT_H 1
+
 #define HAVE_MALLOC 1
 #define HAVE_GETENV 1
 #define HAVE_PUTENV 1
@@ -37,7 +40,9 @@
 #define HAVE_STRCHR 1
 #define HAVE_STRRCHR 1
 #define HAVE_STRSTR 1
-#define HAVE_ITOA 1
+#if !__IS_COMPILER_IAR__
+#   define HAVE_ITOA 1
+#endif
 #define HAVE_ATOI 1
 #define HAVE_STRTOL 1
 #define HAVE_STRTOUL 1

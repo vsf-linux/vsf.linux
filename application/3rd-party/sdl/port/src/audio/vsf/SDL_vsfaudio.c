@@ -7,6 +7,8 @@
 
 #include "vsf.h"
 
+#if VSF_USE_AUDIO == ENABLED
+
 #define VSF_AUDIO_MOD               "VSF_AUDIO"
 #define _THIS                       SDL_AudioDevice *_this
 
@@ -214,10 +216,12 @@ VSFAUDIO_DetectDevices(void)
 {
     SDL_AddAudioDevice(SDL_FALSE, "vsf_audio", NULL, SDL_platform.cfg.audio_dev);
 }
+#endif
 
 static SDL_bool
 VSFAudio_Init(SDL_AudioDriverImpl * impl)
 {
+#if VSF_USE_AUDIO == ENABLED
     vk_audio_dev_t *audio_dev = SDL_platform.cfg.audio_dev;
     SDL_bool has_in = SDL_FALSE;
 
@@ -239,6 +243,9 @@ VSFAudio_Init(SDL_AudioDriverImpl * impl)
     impl->CloseDevice = VSFAUDIO_CloseDevice;
     impl->HasCaptureSupport = has_in;
     return SDL_TRUE;
+#else
+    return SDL_FALSE;
+#endif
 }
 
 AudioBootStrap VSFAUDIO_bootstrap = {
