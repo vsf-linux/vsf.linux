@@ -20,6 +20,31 @@ static void __disp_on_inited(vk_disp_t *disp)
 }
 #endif
 
+#if APP_USE_SDLPAL_DEMO == ENABLED
+#   include "font.h"
+static int __sdlpal_main(int argc, char *argv[])
+{
+    // initialize font buffer first
+#   ifdef __WIN__
+    extern font_t *fontglyph_tw, __fontglyph_tw[];
+    extern font_t *fontglyph_jp, __fontglyph_jp[];
+    extern font_t *fontglyph_cn, __fontglyph_cn[];
+    fontglyph_tw = &__fontglyph_tw[0];
+    fontglyph_jp = &__fontglyph_jp[0];
+    fontglyph_cn = &__fontglyph_cn[0];
+
+    // unicode_font and font_width should be placed in ram with 65536 size
+    extern unsigned char (*unicode_font)[32], __unicode_font[][32];
+    extern unsigned char *font_width, __font_width[];
+    unicode_font = &__unicode_font[0];
+    font_width = &__font_width[0];
+#   endif
+
+    extern int sdlpal_main(int argc, char *argv[]);
+    return sdlpal_main(argc, argv);
+}
+#endif
+
 int vsf_linux_create_fhs(void)
 {
     // 0. devfs, busybox, etc
@@ -115,8 +140,7 @@ int vsf_linux_create_fhs(void)
 #endif
 
 #if APP_USE_SDLPAL_DEMO == ENABLED
-    extern int sdlpal_main(int argc, char *argv[]);
-    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/sdlpal", sdlpal_main);
+    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/sdlpal", __sdlpal_main);
 #endif
 
 #endif      // VSF_USE_SDL2

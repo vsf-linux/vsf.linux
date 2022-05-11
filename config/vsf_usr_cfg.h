@@ -30,6 +30,8 @@
 #   include "./target/vsf_usr_cfg_linux.h"
 #elif   defined(__AIC8800__)
 #   include "./target/vsf_usr_cfg_aic8800.h"
+#elif   defined(__STM32H743XI__)
+#   include "./target/vsf_usr_cfg_stm32h743xi.h"
 #endif
 
 // components
