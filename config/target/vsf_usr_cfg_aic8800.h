@@ -69,6 +69,7 @@
 
 #define APP_USE_LINUX_CURL_DEMO                         ENABLED
 #define APP_USE_WAMR_DEMO                               ENABLED
+#define APP_USE_SDLPAL_DEMO                             DISABLED
 
 // component configure
 #define VSF_USE_LWIP                                    ENABLED

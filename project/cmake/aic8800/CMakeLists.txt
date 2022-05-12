@@ -57,6 +57,8 @@ set(VSF_USE_BTSTACK 1)
     set(VSF_BTSTACK_USE_LINKKEY_MEMORY 1)
 set(APP_USE_LINUX_CURL_DEMO 1)
 set(APP_USE_LINUX_WAMR_DEMO 1)
+set(APP_USE_SDL_DEMO 0)
+    set(APP_USE_SDL_SDLPAL_DEMO 0)
 
 # include vsf cmake script
 set(VSF_CONFIG_PATH ../../../config)
@@ -64,6 +66,17 @@ get_filename_component(VSF_LVGL_CONFIG_PATH ${VSF_CONFIG_PATH}/3rd-party/lvgl AB
 get_filename_component(VSF_BTSTACK_CONFIG_PATH ${VSF_CONFIG_PATH}/3rd-party/btstack ABSOLUTE)
 get_filename_component(VSF_MBEDTLS_CONFIG_PATH ${VSF_CONFIG_PATH}/3rd-party ABSOLUTE)
 include($ENV{VSF_PATH}/script/cmake/vsf.cmake)
+
+# application configurations
+target_compile_definitions(${CMAKE_PROJECT_NAME} PUBLIC
+    __VSF__
+    __OOC_CPP__
+)
+if(APP_USE_SDL_DEMO)
+    target_compile_definitions(${CMAKE_PROJECT_NAME} PUBLIC
+        VSF_SDL2_CFG_COLOR=VSF_DISP_COLOR_RGB565
+    )
+endif()
 
 # linker script
 target_link_options(${CMAKE_PROJECT_NAME} PRIVATE

@@ -88,6 +88,11 @@
 #define HAVE_COPYSIGN 1
 #define HAVE_O_CLOEXEC 1
 
+#if __IS_COMPILER_GCC__ || __IS_COMPILER_LLVM__
+#   define HAVE_ALLOCA_H 1
+#   define HAVE_ALLOCA 1
+#endif
+
 typedef struct vsf_sdl2_cfg_t {
     vk_disp_t *disp_dev;
 #if VSF_USE_AUDIO == ENABLED

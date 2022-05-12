@@ -23,6 +23,7 @@ file(GLOB SDL_SOURCES
     raw/src/timer/unix/*.c
     raw/src/video/*.c
     raw/src/video/dummy/*.c
+    raw/src/video/yuv2rgb/*.c
 )
 target_sources(${CMAKE_PROJECT_NAME} PUBLIC
     ${SDL_SOURCES}
