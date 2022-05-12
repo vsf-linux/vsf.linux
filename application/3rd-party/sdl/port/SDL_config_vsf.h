@@ -86,6 +86,7 @@
 #define HAVE_SQRT 1
 #define HAVE_SQRTF 1
 #define HAVE_COPYSIGN 1
+#define HAVE_O_CLOEXEC 1
 
 typedef struct vsf_sdl2_cfg_t {
     vk_disp_t *disp_dev;
