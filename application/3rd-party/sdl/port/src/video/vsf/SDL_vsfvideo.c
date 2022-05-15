@@ -208,6 +208,16 @@ VSF_WaitEventTimeout(_THIS, int timeout)
     return is_empty ? 0 : 1;
 }
 
+static Uint32
+VSF_GetSDLColorFormat(vk_disp_color_type_t vsf_disp_color)
+{
+    switch (vsf_disp_color) {
+    case VSF_DISP_COLOR_ARGB8888:       return SDL_PIXELFORMAT_RGB888;
+    case VSF_DISP_COLOR_RGB565:         return SDL_PIXELFORMAT_RGB565;
+    default:    VSF_ASSERT(false);      return SDL_PIXELFORMAT_UNKNOWN;
+    }
+}
+
 static void
 VSF_DestroyWindowFramebuffer(_THIS, SDL_Window * window)
 {
@@ -220,8 +230,9 @@ VSF_DestroyWindowFramebuffer(_THIS, SDL_Window * window)
 static int
 VSF_CreateWindowFramebuffer(_THIS, SDL_Window * window, Uint32 * format, void ** pixels, int *pitch)
 {
+    vk_disp_t *disp = (vk_disp_t *) _this->driverdata;
     SDL_Surface *surface;
-    const Uint32 surface_format = SDL_PIXELFORMAT_RGB888;
+    const Uint32 surface_format = VSF_GetSDLColorFormat(disp->param.color);
     int w, h;
 
     /* Free the old framebuffer surface */
@@ -283,14 +294,7 @@ VSF_VideoInit(_THIS)
         vk_disp_init(disp);
         vsf_thread_wfe(VSF_EVT_RETURN);
 
-        switch (disp->param.color) {
-        case VSF_DISP_COLOR_ARGB8888:
-            mode.format = SDL_PIXELFORMAT_RGB888;
-            break;
-        default:
-            VSF_ASSERT(false);
-            break;
-        }
+        mode.format = VSF_GetSDLColorFormat(disp->param.color);
         mode.h = disp->param.height;
         mode.w = disp->param.width;
 
