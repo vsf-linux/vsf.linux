@@ -148,10 +148,13 @@ int vsf_linux_create_fhs(void)
 #if APP_USE_SDLPAL_DEMO == ENABLED
     busybox_bind(VSF_LINUX_CFG_BIN_PATH "/sdlpal", __sdlpal_main);
 #endif
-
 #if APP_USE_DUNGEONRUSH_DEMO == ENABLED
     extern int dung_main(int argc, char **argv);
     busybox_bind(VSF_LINUX_CFG_BIN_PATH "/dung", dung_main);
+#endif
+#if APP_USE_GNUBOY_DEMO == ENABLED
+    extern int gnuboy_main(int argc, char **argv);
+    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/gnuboy", gnuboy_main);
 #endif
 #endif      // VSF_USE_SDL2
 

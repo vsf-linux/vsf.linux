@@ -57,6 +57,44 @@
     <ClInclude Include="..\..\application\3rd-party\sdl\DungeonRush\src\types.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\DungeonRush\src\ui.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\DungeonRush\src\weapon.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\cpu.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\cpucore.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\cpuregs.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\debug.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\defs.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\emu.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\exports.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\ezmenu.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\fastmem.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\fb.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\font5x7.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\hw.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\inflate.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\input.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\lcd.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\lcdc.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\loader.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\mem.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\menu.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\miniz.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\noise.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\palette.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\path.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\pcm.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\rc.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\rckeys.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\refresh.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\regs.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\rtc.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\save.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\sound.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\split.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\sys.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\xz\xz.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\xz\xz_config.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\xz\xz_lzma2.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\xz\xz_private.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\xz\xz_stream.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\port\SDL_config_vsf.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\audio\dummy\SDL_dummyaudio.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\audio\SDL_audiodev_c.h" />
@@ -81,6 +119,11 @@
     <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\events\SDL_sysevents.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\events\SDL_touch_c.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\events\SDL_windowevents_c.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\joystick\controller_type.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\joystick\SDL_gamecontrollerdb.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\joystick\SDL_joystick_c.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\joystick\SDL_sysjoystick.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\joystick\usb_ids.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\render\SDL_d3dmath.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\render\SDL_sysrender.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\render\SDL_yuv_sw_c.h" />
@@ -747,6 +790,61 @@
     <ClCompile Include="..\..\application\3rd-party\sdl\DungeonRush\src\types.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\DungeonRush\src\ui.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\DungeonRush\src\weapon.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\cpu.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\debug.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\emu.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\events.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\exports.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\fastmem.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\hw.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\inflate.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\keytable.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\lcd.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\lcdc.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\loader.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\main.c">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">main=gnuboy_main;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">main=gnuboy_main;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">main=gnuboy_main;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">main=gnuboy_main;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\mem.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\menu.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\miniz_tinfl.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\newsound.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\palette.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\path.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\rccmds.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\rcfile.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\rckeys.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\rcvars.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\refresh.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\rtc.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\save.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\sound.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\split.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\sys\nix\map.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\sys\nix\nix.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\sys\sdl2\keymap.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\sys\sdl2\sdl-audio.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\sys\sdl2\sdl-joystick.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\sys\sdl2\sdl2.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\xz\xz_crc32.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\xz\xz_crc64.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\xz\xz_dec_bcj.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\xz\xz_dec_lzma2.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\xz\xz_dec_stream.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\port\sdl2_platform_vsf.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\port\src\audio\vsf\SDL_vsfaudio.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\port\src\main\vsf\SDL_vsf_main.c" />
@@ -774,6 +872,9 @@
     <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\events\SDL_windowevents.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\filesystem\unix\SDL_sysfilesystem.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\file\SDL_rwops.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\joystick\dummy\SDL_sysjoystick.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\joystick\SDL_gamecontroller.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\joystick\SDL_joystick.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\render\SDL_d3dmath.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\render\SDL_render.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\render\SDL_yuv_sw.c" />
@@ -1336,7 +1437,7 @@
       <Optimization>Full</Optimization>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>__VSF__;__CPU_X86__;__WIN__;__OOC_CPP__;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;VSF_USE_SDL2=ENABLED;SIGWINCH=28;VSF_APP_ENTRY=SDL_main;VSF_SDL2_CFG_COLOR=VSF_DISP_COLOR_RGB565;MUSIC_OGG=MUSIC_OGG
-;MUSIC_WAV=MUSIC_WAV;FT2_BUILD_LIBRARY;APP_USE_SDLPAL_DEMO=ENABLED;APP_USE_DUNGEONRUSH_DEMO=ENABLED;SOFTWARE_ACC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+;MUSIC_WAV=MUSIC_WAV;FT2_BUILD_LIBRARY;APP_USE_SDLPAL_DEMO=ENABLED;APP_USE_DUNGEONRUSH_DEMO=ENABLED;SOFTWARE_ACC;APP_USE_GNUBOY_DEMO=ENABLED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal\timidity;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal\vsf;$(ProjectDir)..\..\application\3rd-party\sdl\include;$(ProjectDir)..\..\application\3rd-party\sdl\include\SDL2;$(ProjectDir)..\..\application\3rd-party\sdl\port;$(ProjectDir)..\..\application\3rd-party\sdl\audio\ogg\include;$(ProjectDir)..\..\application\3rd-party\sdl\audio\vorbis\include;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\lua\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\raw;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_ttf;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_net;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-fms-extensions %(AdditionalOptions)</AdditionalOptions>
@@ -1366,7 +1467,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>__VSF__;__CPU_X64__;__WIN__;__OOC_CPP__;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;VSF_USE_SDL2=ENABLED;SIGWINCH=28;VSF_APP_ENTRY=SDL_main;VSF_SDL2_CFG_COLOR=VSF_DISP_COLOR_RGB565;MUSIC_OGG=MUSIC_OGG
-;MUSIC_WAV=MUSIC_WAV;FT2_BUILD_LIBRARY;APP_USE_SDLPAL_DEMO=ENABLED;APP_USE_DUNGEONRUSH_DEMO=ENABLED;SOFTWARE_ACC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+;MUSIC_WAV=MUSIC_WAV;FT2_BUILD_LIBRARY;APP_USE_SDLPAL_DEMO=ENABLED;APP_USE_DUNGEONRUSH_DEMO=ENABLED;SOFTWARE_ACC;APP_USE_GNUBOY_DEMO=ENABLED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal\timidity;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal\vsf;$(ProjectDir)..\..\application\3rd-party\sdl\include;$(ProjectDir)..\..\application\3rd-party\sdl\include\SDL2;$(ProjectDir)..\..\application\3rd-party\sdl\port;$(ProjectDir)..\..\application\3rd-party\sdl\audio\ogg\include;$(ProjectDir)..\..\application\3rd-party\sdl\audio\vorbis\include;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\lua\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\raw;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_ttf;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_net;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-fms-extensions %(AdditionalOptions)</AdditionalOptions>
@@ -1398,7 +1499,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>__VSF__;__CPU_X86__;__WIN__;__OOC_RELEASE__;__OOC_CPP__;NDEBUG;_CONSOLE;VSF_USE_SDL2=ENABLED;SIGWINCH=28;VSF_APP_ENTRY=SDL_main;VSF_SDL2_CFG_COLOR=VSF_DISP_COLOR_RGB565;MUSIC_OGG=MUSIC_OGG
-;MUSIC_WAV=MUSIC_WAV;FT2_BUILD_LIBRARY;APP_USE_SDLPAL_DEMO=ENABLED;APP_USE_DUNGEONRUSH_DEMO=ENABLED;SOFTWARE_ACC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+;MUSIC_WAV=MUSIC_WAV;FT2_BUILD_LIBRARY;APP_USE_SDLPAL_DEMO=ENABLED;APP_USE_DUNGEONRUSH_DEMO=ENABLED;SOFTWARE_ACC;APP_USE_GNUBOY_DEMO=ENABLED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal\timidity;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal\vsf;$(ProjectDir)..\..\application\3rd-party\sdl\include;$(ProjectDir)..\..\application\3rd-party\sdl\include\SDL2;$(ProjectDir)..\..\application\3rd-party\sdl\port;$(ProjectDir)..\..\application\3rd-party\sdl\audio\ogg\include;$(ProjectDir)..\..\application\3rd-party\sdl\audio\vorbis\include;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\lua\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\raw;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_ttf;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_net;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
@@ -1425,7 +1526,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>__VSF__;__CPU_X64__;__WIN__;__OOC_RELEASE__;__OOC_CPP__;NDEBUG;_CONSOLE;VSF_USE_SDL2=ENABLED;SIGWINCH=28;VSF_APP_ENTRY=SDL_main;VSF_SDL2_CFG_COLOR=VSF_DISP_COLOR_RGB565;MUSIC_OGG=MUSIC_OGG
-;MUSIC_WAV=MUSIC_WAV;FT2_BUILD_LIBRARY;APP_USE_SDLPAL_DEMO=ENABLED;APP_USE_DUNGEONRUSH_DEMO=ENABLED;SOFTWARE_ACC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+;MUSIC_WAV=MUSIC_WAV;FT2_BUILD_LIBRARY;APP_USE_SDLPAL_DEMO=ENABLED;APP_USE_DUNGEONRUSH_DEMO=ENABLED;SOFTWARE_ACC;APP_USE_GNUBOY_DEMO=ENABLED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal\timidity;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal\vsf;$(ProjectDir)..\..\application\3rd-party\sdl\include;$(ProjectDir)..\..\application\3rd-party\sdl\include\SDL2;$(ProjectDir)..\..\application\3rd-party\sdl\port;$(ProjectDir)..\..\application\3rd-party\sdl\audio\ogg\include;$(ProjectDir)..\..\application\3rd-party\sdl\audio\vorbis\include;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\lua\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\raw;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_ttf;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_net;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>

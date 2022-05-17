@@ -799,6 +799,27 @@
     <Filter Include="application\3rd-party\sdl\vorbis\lib">
       <UniqueIdentifier>{764e8dad-2d7e-4372-8c29-51eb0a988114}</UniqueIdentifier>
     </Filter>
+    <Filter Include="application\3rd-party\gnuboy">
+      <UniqueIdentifier>{b5022fb5-ef0c-4e24-8ba6-f993acf12c79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\gnuboy\sys">
+      <UniqueIdentifier>{32f5eed3-0555-4bf7-9ebf-958bcdc64b19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\gnuboy\sys\sdl2">
+      <UniqueIdentifier>{11aa37fa-dd7e-4634-9883-decd5852766f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\gnuboy\sys\nix">
+      <UniqueIdentifier>{611fc2cb-8282-47fd-bb13-0badc79c0461}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\gnuboy\xz">
+      <UniqueIdentifier>{4c6bd96a-d3da-4ac8-a876-c8aae0e21996}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\sdl\raw\src\joystick">
+      <UniqueIdentifier>{58378886-77ba-4abc-92cf-8fc483751c3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\sdl\raw\src\joystick\dummy">
+      <UniqueIdentifier>{4cfd75cf-a83b-4739-bb8c-f34fe382b497}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vsf\source\vsf.h">
@@ -2793,6 +2814,135 @@
     <ClInclude Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\window.h">
       <Filter>application\3rd-party\sdl\vorbis\lib</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\cpu.h">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\cpucore.h">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\cpuregs.h">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\debug.h">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\defs.h">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\emu.h">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\exports.h">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\ezmenu.h">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\fastmem.h">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\fb.h">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\font5x7.h">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\hw.h">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\inflate.h">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\input.h">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\lcd.h">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\lcdc.h">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\loader.h">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\mem.h">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\menu.h">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\miniz.h">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\noise.h">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\palette.h">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\path.h">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\pcm.h">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\rc.h">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\rckeys.h">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\refresh.h">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\regs.h">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\rtc.h">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\save.h">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\sound.h">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\split.h">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\sys.h">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\xz\xz.h">
+      <Filter>application\3rd-party\gnuboy\xz</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\xz\xz_config.h">
+      <Filter>application\3rd-party\gnuboy\xz</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\xz\xz_lzma2.h">
+      <Filter>application\3rd-party\gnuboy\xz</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\xz\xz_private.h">
+      <Filter>application\3rd-party\gnuboy\xz</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\xz\xz_stream.h">
+      <Filter>application\3rd-party\gnuboy\xz</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\joystick\controller_type.h">
+      <Filter>application\3rd-party\sdl\raw\src\joystick</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\joystick\SDL_gamecontrollerdb.h">
+      <Filter>application\3rd-party\sdl\raw\src\joystick</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\joystick\SDL_joystick_c.h">
+      <Filter>application\3rd-party\sdl\raw\src\joystick</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\joystick\SDL_sysjoystick.h">
+      <Filter>application\3rd-party\sdl\raw\src\joystick</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\joystick\usb_ids.h">
+      <Filter>application\3rd-party\sdl\raw\src\joystick</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\vsf\source\utilities\template\vsf_bitmap.c">
@@ -4405,6 +4555,132 @@
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\window.c">
       <Filter>application\3rd-party\sdl\vorbis\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\cpu.c">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\debug.c">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\emu.c">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\events.c">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\exports.c">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\fastmem.c">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\hw.c">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\inflate.c">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\keytable.c">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\lcd.c">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\lcdc.c">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\loader.c">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\main.c">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\mem.c">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\menu.c">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\miniz_tinfl.c">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\newsound.c">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\palette.c">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\path.c">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\rccmds.c">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\rcfile.c">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\rckeys.c">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\rcvars.c">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\refresh.c">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\rtc.c">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\save.c">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\sound.c">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\split.c">
+      <Filter>application\3rd-party\gnuboy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\sys\sdl2\keymap.c">
+      <Filter>application\3rd-party\gnuboy\sys\sdl2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\sys\sdl2\sdl2.c">
+      <Filter>application\3rd-party\gnuboy\sys\sdl2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\sys\sdl2\sdl-audio.c">
+      <Filter>application\3rd-party\gnuboy\sys\sdl2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\sys\sdl2\sdl-joystick.c">
+      <Filter>application\3rd-party\gnuboy\sys\sdl2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\sys\nix\map.c">
+      <Filter>application\3rd-party\gnuboy\sys\nix</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\sys\nix\nix.c">
+      <Filter>application\3rd-party\gnuboy\sys\nix</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\xz\xz_crc32.c">
+      <Filter>application\3rd-party\gnuboy\xz</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\xz\xz_crc64.c">
+      <Filter>application\3rd-party\gnuboy\xz</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\xz\xz_dec_bcj.c">
+      <Filter>application\3rd-party\gnuboy\xz</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\xz\xz_dec_lzma2.c">
+      <Filter>application\3rd-party\gnuboy\xz</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\xz\xz_dec_stream.c">
+      <Filter>application\3rd-party\gnuboy\xz</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\joystick\SDL_gamecontroller.c">
+      <Filter>application\3rd-party\sdl\raw\src\joystick</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\joystick\SDL_joystick.c">
+      <Filter>application\3rd-party\sdl\raw\src\joystick</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\joystick\dummy\SDL_sysjoystick.c">
+      <Filter>application\3rd-party\sdl\raw\src\joystick\dummy</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
