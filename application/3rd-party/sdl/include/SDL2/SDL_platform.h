@@ -28,6 +28,9 @@
 #ifndef SDL_platform_h_
 #define SDL_platform_h_
 
+#if defined(__VSF__)
+#undef _WIN32
+#endif
 #if defined(_AIX)
 #undef __AIX__
 #define __AIX__     1
