@@ -21,7 +21,7 @@ static void __disp_on_inited(vk_disp_t *disp)
 #endif
 
 #if APP_USE_SDLPAL_DEMO == ENABLED
-#   include "font.h"
+#   include "3rd-party/sdl/sdlpal/font.h"
 static int __sdlpal_main(int argc, char *argv[])
 {
     // initialize font buffer first
