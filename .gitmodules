@@ -43,3 +43,6 @@
 [submodule "application/3rd-party/sdl/gnuboy"]
 	path = application/3rd-party/sdl/gnuboy
 	url = ../gnuboy
+[submodule "application/3rd-party/sdl/nofrendo"]
+	path = application/3rd-party/sdl/nofrendo
+	url = ../nofrendo

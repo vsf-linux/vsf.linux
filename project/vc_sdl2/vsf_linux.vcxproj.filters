@@ -820,6 +820,33 @@
     <Filter Include="application\3rd-party\sdl\raw\src\joystick\dummy">
       <UniqueIdentifier>{4cfd75cf-a83b-4739-bb8c-f34fe382b497}</UniqueIdentifier>
     </Filter>
+    <Filter Include="application\3rd-party\nofrendo">
+      <UniqueIdentifier>{1d50df00-72ac-4a34-8fb6-f2fadecc94c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\nofrendo\src">
+      <UniqueIdentifier>{22e823fa-d876-46e4-a58d-63de95f458b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\nofrendo\src\nes">
+      <UniqueIdentifier>{f26d6280-92c1-4fba-b438-649ffe2d0ddd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\nofrendo\src\mappers">
+      <UniqueIdentifier>{3da4a624-f6f4-470c-a24e-df990af1e9d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\nofrendo\src\sndhrdw">
+      <UniqueIdentifier>{a71478f4-cbf6-477c-b52d-a2bd0dff31ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\nofrendo\src\libsnss">
+      <UniqueIdentifier>{0ebf26d6-68d9-4b31-9be2-a283d22e7dda}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\nofrendo\src\cpu">
+      <UniqueIdentifier>{8152dcf4-a25d-4c7f-ba78-e89f0af27072}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\nofrendo\src\sdl2">
+      <UniqueIdentifier>{035242a2-08b8-43cc-bbf5-53393e04f2c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\nofrendo\src\unix">
+      <UniqueIdentifier>{ad4bd88c-e64e-4d31-902a-d30dc62788af}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vsf\source\vsf.h">
@@ -2943,6 +2970,93 @@
     <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\joystick\usb_ids.h">
       <Filter>application\3rd-party\sdl\raw\src\joystick</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\bitmap.h">
+      <Filter>application\3rd-party\nofrendo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\event.h">
+      <Filter>application\3rd-party\nofrendo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\gui.h">
+      <Filter>application\3rd-party\nofrendo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\gui_elem.h">
+      <Filter>application\3rd-party\nofrendo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\intro.h">
+      <Filter>application\3rd-party\nofrendo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\log.h">
+      <Filter>application\3rd-party\nofrendo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\memguard.h">
+      <Filter>application\3rd-party\nofrendo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\nofconfig.h">
+      <Filter>application\3rd-party\nofrendo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\nofrendo.h">
+      <Filter>application\3rd-party\nofrendo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\noftypes.h">
+      <Filter>application\3rd-party\nofrendo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\osd.h">
+      <Filter>application\3rd-party\nofrendo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\pcx.h">
+      <Filter>application\3rd-party\nofrendo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\version.h">
+      <Filter>application\3rd-party\nofrendo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\vid_drv.h">
+      <Filter>application\3rd-party\nofrendo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\nes\mmclist.h">
+      <Filter>application\3rd-party\nofrendo\src\nes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\nes\nes.h">
+      <Filter>application\3rd-party\nofrendo\src\nes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\nes\nes_mmc.h">
+      <Filter>application\3rd-party\nofrendo\src\nes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\nes\nes_pal.h">
+      <Filter>application\3rd-party\nofrendo\src\nes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\nes\nes_ppu.h">
+      <Filter>application\3rd-party\nofrendo\src\nes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\nes\nes_rom.h">
+      <Filter>application\3rd-party\nofrendo\src\nes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\nes\nesinput.h">
+      <Filter>application\3rd-party\nofrendo\src\nes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\nes\nesstate.h">
+      <Filter>application\3rd-party\nofrendo\src\nes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\sndhrdw\fds_snd.h">
+      <Filter>application\3rd-party\nofrendo\src\sndhrdw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\sndhrdw\mmc5_snd.h">
+      <Filter>application\3rd-party\nofrendo\src\sndhrdw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\sndhrdw\nes_apu.h">
+      <Filter>application\3rd-party\nofrendo\src\sndhrdw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\sndhrdw\vrcvisnd.h">
+      <Filter>application\3rd-party\nofrendo\src\sndhrdw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\libsnss\libsnss.h">
+      <Filter>application\3rd-party\nofrendo\src\libsnss</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\cpu\dis6502.h">
+      <Filter>application\3rd-party\nofrendo\src\cpu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\cpu\nes6502.h">
+      <Filter>application\3rd-party\nofrendo\src\cpu</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\vsf\source\utilities\template\vsf_bitmap.c">
@@ -4681,6 +4795,210 @@
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\joystick\dummy\SDL_sysjoystick.c">
       <Filter>application\3rd-party\sdl\raw\src\joystick\dummy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\bitmap.c">
+      <Filter>application\3rd-party\nofrendo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\config.c">
+      <Filter>application\3rd-party\nofrendo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\event.c">
+      <Filter>application\3rd-party\nofrendo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\gui.c">
+      <Filter>application\3rd-party\nofrendo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\gui_elem.c">
+      <Filter>application\3rd-party\nofrendo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\intro.c">
+      <Filter>application\3rd-party\nofrendo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\log.c">
+      <Filter>application\3rd-party\nofrendo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\memguard.c">
+      <Filter>application\3rd-party\nofrendo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\nofrendo.c">
+      <Filter>application\3rd-party\nofrendo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\pcx.c">
+      <Filter>application\3rd-party\nofrendo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\vid_drv.c">
+      <Filter>application\3rd-party\nofrendo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\nes\mmclist.c">
+      <Filter>application\3rd-party\nofrendo\src\nes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\nes\nes.c">
+      <Filter>application\3rd-party\nofrendo\src\nes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\nes\nes_mmc.c">
+      <Filter>application\3rd-party\nofrendo\src\nes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\nes\nes_pal.c">
+      <Filter>application\3rd-party\nofrendo\src\nes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\nes\nes_ppu.c">
+      <Filter>application\3rd-party\nofrendo\src\nes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\nes\nes_rom.c">
+      <Filter>application\3rd-party\nofrendo\src\nes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\nes\nesinput.c">
+      <Filter>application\3rd-party\nofrendo\src\nes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\nes\nesstate.c">
+      <Filter>application\3rd-party\nofrendo\src\nes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map000.c">
+      <Filter>application\3rd-party\nofrendo\src\mappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map001.c">
+      <Filter>application\3rd-party\nofrendo\src\mappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map002.c">
+      <Filter>application\3rd-party\nofrendo\src\mappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map003.c">
+      <Filter>application\3rd-party\nofrendo\src\mappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map004.c">
+      <Filter>application\3rd-party\nofrendo\src\mappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map005.c">
+      <Filter>application\3rd-party\nofrendo\src\mappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map007.c">
+      <Filter>application\3rd-party\nofrendo\src\mappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map008.c">
+      <Filter>application\3rd-party\nofrendo\src\mappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map009.c">
+      <Filter>application\3rd-party\nofrendo\src\mappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map011.c">
+      <Filter>application\3rd-party\nofrendo\src\mappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map015.c">
+      <Filter>application\3rd-party\nofrendo\src\mappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map016.c">
+      <Filter>application\3rd-party\nofrendo\src\mappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map018.c">
+      <Filter>application\3rd-party\nofrendo\src\mappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map019.c">
+      <Filter>application\3rd-party\nofrendo\src\mappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map024.c">
+      <Filter>application\3rd-party\nofrendo\src\mappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map032.c">
+      <Filter>application\3rd-party\nofrendo\src\mappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map033.c">
+      <Filter>application\3rd-party\nofrendo\src\mappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map034.c">
+      <Filter>application\3rd-party\nofrendo\src\mappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map040.c">
+      <Filter>application\3rd-party\nofrendo\src\mappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map041.c">
+      <Filter>application\3rd-party\nofrendo\src\mappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map042.c">
+      <Filter>application\3rd-party\nofrendo\src\mappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map046.c">
+      <Filter>application\3rd-party\nofrendo\src\mappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map050.c">
+      <Filter>application\3rd-party\nofrendo\src\mappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map064.c">
+      <Filter>application\3rd-party\nofrendo\src\mappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map065.c">
+      <Filter>application\3rd-party\nofrendo\src\mappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map066.c">
+      <Filter>application\3rd-party\nofrendo\src\mappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map070.c">
+      <Filter>application\3rd-party\nofrendo\src\mappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map073.c">
+      <Filter>application\3rd-party\nofrendo\src\mappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map075.c">
+      <Filter>application\3rd-party\nofrendo\src\mappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map078.c">
+      <Filter>application\3rd-party\nofrendo\src\mappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map079.c">
+      <Filter>application\3rd-party\nofrendo\src\mappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map085.c">
+      <Filter>application\3rd-party\nofrendo\src\mappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map087.c">
+      <Filter>application\3rd-party\nofrendo\src\mappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map093.c">
+      <Filter>application\3rd-party\nofrendo\src\mappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map094.c">
+      <Filter>application\3rd-party\nofrendo\src\mappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map099.c">
+      <Filter>application\3rd-party\nofrendo\src\mappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map160.c">
+      <Filter>application\3rd-party\nofrendo\src\mappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map229.c">
+      <Filter>application\3rd-party\nofrendo\src\mappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map231.c">
+      <Filter>application\3rd-party\nofrendo\src\mappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\mapvrc.c">
+      <Filter>application\3rd-party\nofrendo\src\mappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\sndhrdw\fds_snd.c">
+      <Filter>application\3rd-party\nofrendo\src\sndhrdw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\sndhrdw\mmc5_snd.c">
+      <Filter>application\3rd-party\nofrendo\src\sndhrdw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\sndhrdw\nes_apu.c">
+      <Filter>application\3rd-party\nofrendo\src\sndhrdw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\sndhrdw\vrcvisnd.c">
+      <Filter>application\3rd-party\nofrendo\src\sndhrdw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\libsnss\libsnss.c">
+      <Filter>application\3rd-party\nofrendo\src\libsnss</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\cpu\dis6502.c">
+      <Filter>application\3rd-party\nofrendo\src\cpu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\cpu\nes6502.c">
+      <Filter>application\3rd-party\nofrendo\src\cpu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\sdl2\sdl2.c">
+      <Filter>application\3rd-party\nofrendo\src\sdl2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\unix\osd.c">
+      <Filter>application\3rd-party\nofrendo\src\unix</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

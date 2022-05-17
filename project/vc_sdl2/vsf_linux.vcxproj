@@ -95,6 +95,35 @@
     <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\xz\xz_lzma2.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\xz\xz_private.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\gnuboy\xz\xz_stream.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\bitmap.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\cpu\dis6502.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\cpu\nes6502.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\event.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\gui.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\gui_elem.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\intro.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\libsnss\libsnss.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\log.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\memguard.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\nes\mmclist.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\nes\nes.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\nes\nesinput.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\nes\nesstate.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\nes\nes_mmc.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\nes\nes_pal.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\nes\nes_ppu.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\nes\nes_rom.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\nofconfig.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\nofrendo.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\noftypes.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\osd.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\pcx.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\sndhrdw\fds_snd.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\sndhrdw\mmc5_snd.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\sndhrdw\nes_apu.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\sndhrdw\vrcvisnd.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\version.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\vid_drv.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\port\SDL_config_vsf.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\audio\dummy\SDL_dummyaudio.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\audio\SDL_audiodev_c.h" />
@@ -845,6 +874,79 @@
     <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\xz\xz_dec_bcj.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\xz\xz_dec_lzma2.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\xz\xz_dec_stream.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\bitmap.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\config.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\cpu\dis6502.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\cpu\nes6502.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\event.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\gui.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\gui_elem.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\intro.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\libsnss\libsnss.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\log.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map000.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map001.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map002.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map003.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map004.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map005.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map007.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map008.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map009.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map011.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map015.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map016.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map018.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map019.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map024.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map032.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map033.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map034.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map040.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map041.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map042.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map046.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map050.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map064.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map065.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map066.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map070.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map073.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map075.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map078.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map079.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map085.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map087.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map093.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map094.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map099.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map160.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map229.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\map231.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\mappers\mapvrc.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\memguard.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\nes\mmclist.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\nes\nes.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\nes\nesinput.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\nes\nesstate.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\nes\nes_mmc.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\nes\nes_pal.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\nes\nes_ppu.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\nes\nes_rom.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\nofrendo.c">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">main=nofrendo_main;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">main=nofrendo_main;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">main=nofrendo_main;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">main=nofrendo_main;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\pcx.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\sdl2\sdl2.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\sndhrdw\fds_snd.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\sndhrdw\mmc5_snd.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\sndhrdw\nes_apu.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\sndhrdw\vrcvisnd.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\unix\osd.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\vid_drv.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\port\sdl2_platform_vsf.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\port\src\audio\vsf\SDL_vsfaudio.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\port\src\main\vsf\SDL_vsf_main.c" />
@@ -1437,9 +1539,9 @@
       <Optimization>Full</Optimization>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>__VSF__;__CPU_X86__;__WIN__;__OOC_CPP__;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;VSF_USE_SDL2=ENABLED;SIGWINCH=28;VSF_APP_ENTRY=SDL_main;VSF_SDL2_CFG_COLOR=VSF_DISP_COLOR_RGB565;MUSIC_OGG=MUSIC_OGG
-;MUSIC_WAV=MUSIC_WAV;FT2_BUILD_LIBRARY;APP_USE_SDLPAL_DEMO=ENABLED;APP_USE_DUNGEONRUSH_DEMO=ENABLED;SOFTWARE_ACC;APP_USE_GNUBOY_DEMO=ENABLED;IS_LITTLE_ENDIAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+;MUSIC_WAV=MUSIC_WAV;FT2_BUILD_LIBRARY;APP_USE_SDLPAL_DEMO=ENABLED;APP_USE_DUNGEONRUSH_DEMO=ENABLED;SOFTWARE_ACC;APP_USE_GNUBOY_DEMO=ENABLED;IS_LITTLE_ENDIAN;APP_USE_NOFRENDO_DEMO=ENABLED;NOFRENDO_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal\vsf;$(ProjectDir)..\..\application\3rd-party\sdl\include;$(ProjectDir)..\..\application\3rd-party\sdl\include\SDL2;$(ProjectDir)..\..\application\3rd-party\sdl\port;$(ProjectDir)..\..\application\3rd-party\sdl\audio\ogg\include;$(ProjectDir)..\..\application\3rd-party\sdl\audio\vorbis\include;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\lua\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\raw;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_ttf;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_net;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal\vsf;$(ProjectDir)..\..\application\3rd-party\sdl\include;$(ProjectDir)..\..\application\3rd-party\sdl\include\SDL2;$(ProjectDir)..\..\application\3rd-party\sdl\audio\ogg\include;$(ProjectDir)..\..\application\3rd-party\sdl\audio\vorbis\include;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\lua\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\raw;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_ttf;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_net;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-fms-extensions %(AdditionalOptions)</AdditionalOptions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <ExceptionHandling>false</ExceptionHandling>
@@ -1467,9 +1569,9 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>__VSF__;__CPU_X64__;__WIN__;__OOC_CPP__;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;VSF_USE_SDL2=ENABLED;SIGWINCH=28;VSF_APP_ENTRY=SDL_main;VSF_SDL2_CFG_COLOR=VSF_DISP_COLOR_RGB565;MUSIC_OGG=MUSIC_OGG
-;MUSIC_WAV=MUSIC_WAV;FT2_BUILD_LIBRARY;APP_USE_SDLPAL_DEMO=ENABLED;APP_USE_DUNGEONRUSH_DEMO=ENABLED;SOFTWARE_ACC;APP_USE_GNUBOY_DEMO=ENABLED;IS_LITTLE_ENDIAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+;MUSIC_WAV=MUSIC_WAV;FT2_BUILD_LIBRARY;APP_USE_SDLPAL_DEMO=ENABLED;APP_USE_DUNGEONRUSH_DEMO=ENABLED;SOFTWARE_ACC;APP_USE_GNUBOY_DEMO=ENABLED;IS_LITTLE_ENDIAN;APP_USE_NOFRENDO_DEMO=ENABLED;NOFRENDO_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal\vsf;$(ProjectDir)..\..\application\3rd-party\sdl\include;$(ProjectDir)..\..\application\3rd-party\sdl\include\SDL2;$(ProjectDir)..\..\application\3rd-party\sdl\port;$(ProjectDir)..\..\application\3rd-party\sdl\audio\ogg\include;$(ProjectDir)..\..\application\3rd-party\sdl\audio\vorbis\include;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\lua\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\raw;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_ttf;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_net;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal\vsf;$(ProjectDir)..\..\application\3rd-party\sdl\include;$(ProjectDir)..\..\application\3rd-party\sdl\include\SDL2;$(ProjectDir)..\..\application\3rd-party\sdl\audio\ogg\include;$(ProjectDir)..\..\application\3rd-party\sdl\audio\vorbis\include;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\lua\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\raw;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_ttf;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_net;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-fms-extensions %(AdditionalOptions)</AdditionalOptions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <ExceptionHandling>false</ExceptionHandling>
@@ -1499,9 +1601,9 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>__VSF__;__CPU_X86__;__WIN__;__OOC_RELEASE__;__OOC_CPP__;NDEBUG;_CONSOLE;VSF_USE_SDL2=ENABLED;SIGWINCH=28;VSF_APP_ENTRY=SDL_main;VSF_SDL2_CFG_COLOR=VSF_DISP_COLOR_RGB565;MUSIC_OGG=MUSIC_OGG
-;MUSIC_WAV=MUSIC_WAV;FT2_BUILD_LIBRARY;APP_USE_SDLPAL_DEMO=ENABLED;APP_USE_DUNGEONRUSH_DEMO=ENABLED;SOFTWARE_ACC;APP_USE_GNUBOY_DEMO=ENABLED;IS_LITTLE_ENDIAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+;MUSIC_WAV=MUSIC_WAV;FT2_BUILD_LIBRARY;APP_USE_SDLPAL_DEMO=ENABLED;APP_USE_DUNGEONRUSH_DEMO=ENABLED;SOFTWARE_ACC;APP_USE_GNUBOY_DEMO=ENABLED;IS_LITTLE_ENDIAN;APP_USE_NOFRENDO_DEMO=ENABLED;NOFRENDO_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal\vsf;$(ProjectDir)..\..\application\3rd-party\sdl\include;$(ProjectDir)..\..\application\3rd-party\sdl\include\SDL2;$(ProjectDir)..\..\application\3rd-party\sdl\port;$(ProjectDir)..\..\application\3rd-party\sdl\audio\ogg\include;$(ProjectDir)..\..\application\3rd-party\sdl\audio\vorbis\include;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\lua\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\raw;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_ttf;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_net;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal\vsf;$(ProjectDir)..\..\application\3rd-party\sdl\include;$(ProjectDir)..\..\application\3rd-party\sdl\include\SDL2;$(ProjectDir)..\..\application\3rd-party\sdl\audio\ogg\include;$(ProjectDir)..\..\application\3rd-party\sdl\audio\vorbis\include;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\lua\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\raw;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_ttf;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_net;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <AssemblerListingLocation>$(IntDir)/__sub0/__sub1/__sub2/__sub3/%(RelativeDir)</AssemblerListingLocation>
@@ -1526,9 +1628,9 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>__VSF__;__CPU_X64__;__WIN__;__OOC_RELEASE__;__OOC_CPP__;NDEBUG;_CONSOLE;VSF_USE_SDL2=ENABLED;SIGWINCH=28;VSF_APP_ENTRY=SDL_main;VSF_SDL2_CFG_COLOR=VSF_DISP_COLOR_RGB565;MUSIC_OGG=MUSIC_OGG
-;MUSIC_WAV=MUSIC_WAV;FT2_BUILD_LIBRARY;APP_USE_SDLPAL_DEMO=ENABLED;APP_USE_DUNGEONRUSH_DEMO=ENABLED;SOFTWARE_ACC;APP_USE_GNUBOY_DEMO=ENABLED;IS_LITTLE_ENDIAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+;MUSIC_WAV=MUSIC_WAV;FT2_BUILD_LIBRARY;APP_USE_SDLPAL_DEMO=ENABLED;APP_USE_DUNGEONRUSH_DEMO=ENABLED;SOFTWARE_ACC;APP_USE_GNUBOY_DEMO=ENABLED;IS_LITTLE_ENDIAN;APP_USE_NOFRENDO_DEMO=ENABLED;NOFRENDO_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal\vsf;$(ProjectDir)..\..\application\3rd-party\sdl\include;$(ProjectDir)..\..\application\3rd-party\sdl\include\SDL2;$(ProjectDir)..\..\application\3rd-party\sdl\port;$(ProjectDir)..\..\application\3rd-party\sdl\audio\ogg\include;$(ProjectDir)..\..\application\3rd-party\sdl\audio\vorbis\include;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\lua\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\raw;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_ttf;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_net;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal\vsf;$(ProjectDir)..\..\application\3rd-party\sdl\include;$(ProjectDir)..\..\application\3rd-party\sdl\include\SDL2;$(ProjectDir)..\..\application\3rd-party\sdl\audio\ogg\include;$(ProjectDir)..\..\application\3rd-party\sdl\audio\vorbis\include;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\lua\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\raw;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_ttf;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_net;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <AssemblerListingLocation>$(IntDir)/__sub0/__sub1/__sub2/__sub3/%(RelativeDir)</AssemblerListingLocation>

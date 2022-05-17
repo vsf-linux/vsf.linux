@@ -156,6 +156,10 @@ int vsf_linux_create_fhs(void)
     extern int gnuboy_main(int argc, char **argv);
     busybox_bind(VSF_LINUX_CFG_BIN_PATH "/gnuboy", gnuboy_main);
 #endif
+#if APP_USE_NOFRENDO_DEMO == ENABLED
+    extern int nofrendo_main(int argc, char **argv);
+    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/nofrendo", nofrendo_main);
+#endif
 #endif      // VSF_USE_SDL2
 
 #if APP_USE_AUDIO_DEMO == ENABLED
