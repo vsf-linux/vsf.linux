@@ -19,6 +19,44 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\application\3rd-party\sdl\audio\ogg\src\crctable.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\backends.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\bitrate.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\codebook.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\codec_internal.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\envelope.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\highlevel.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\lookup.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\lookup_data.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\lpc.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\lsp.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\masking.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\mdct.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\misc.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\os.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\psy.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\registry.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\scales.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\smallft.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\window.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\DungeonRush\src\adt.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\DungeonRush\src\ai.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\DungeonRush\src\audio.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\DungeonRush\src\bullet.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\DungeonRush\src\game.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\DungeonRush\src\helper.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\DungeonRush\src\map.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\DungeonRush\src\net.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\DungeonRush\src\player.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\DungeonRush\src\prng.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\DungeonRush\src\render.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\DungeonRush\src\res.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\DungeonRush\src\sprite.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\DungeonRush\src\storage.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\DungeonRush\src\text.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\DungeonRush\src\types.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\DungeonRush\src\ui.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\DungeonRush\src\weapon.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\port\SDL_config_vsf.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\audio\dummy\SDL_dummyaudio.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\audio\SDL_audiodev_c.h" />
@@ -259,6 +297,13 @@
     <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ttnameid.h" />
     <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\tttables.h" />
     <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\tttags.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\libpng\port\pnglibconf.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\libpng\raw\png.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\libpng\raw\pngconf.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\libpng\raw\pngdebug.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\libpng\raw\pnginfo.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\libpng\raw\pngpriv.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\libpng\raw\pngstruct.h" />
     <ClInclude Include="..\..\vsf\source\component\3rd-party\lua\raw\lapi.h" />
     <ClInclude Include="..\..\vsf\source\component\3rd-party\lua\raw\lauxlib.h" />
     <ClInclude Include="..\..\vsf\source\component\3rd-party\lua\raw\lcode.h" />
@@ -287,21 +332,17 @@
     <ClInclude Include="..\..\vsf\source\component\3rd-party\lua\raw\lundump.h" />
     <ClInclude Include="..\..\vsf\source\component\3rd-party\lua\raw\lvm.h" />
     <ClInclude Include="..\..\vsf\source\component\3rd-party\lua\raw\lzio.h" />
-    <ClInclude Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\check_crypto_config.h" />
-    <ClInclude Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\common.h" />
-    <ClInclude Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_core.h" />
-    <ClInclude Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_driver_wrappers.h" />
-    <ClInclude Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_ecp.h" />
-    <ClInclude Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_invasive.h" />
-    <ClInclude Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_its.h" />
-    <ClInclude Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_random_impl.h" />
-    <ClInclude Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_rsa.h" />
-    <ClInclude Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_se.h" />
-    <ClInclude Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_service_integration.h" />
-    <ClInclude Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_slot_management.h" />
-    <ClInclude Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_storage.h" />
-    <ClInclude Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\ssl_invasive.h" />
-    <ClInclude Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\ssl_tls13_keys.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\zlib\raw\crc32.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\zlib\raw\deflate.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\zlib\raw\gzguts.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\zlib\raw\inffast.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\zlib\raw\inffixed.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\zlib\raw\inflate.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\zlib\raw\inftrees.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\zlib\raw\trees.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\zlib\raw\zconf.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\zlib\raw\zlib.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\zlib\raw\zutil.h" />
     <ClInclude Include="..\..\vsf\source\component\av\audio\decoder\wav\vsf_wav.h" />
     <ClInclude Include="..\..\vsf\source\component\av\audio\driver\winsound\vsf_winsound.h" />
     <ClInclude Include="..\..\vsf\source\component\av\audio\vsf_audio.h" />
@@ -525,6 +566,31 @@
     <ClInclude Include="..\..\vsf\source\service\trace\vsf_trace.h" />
     <ClInclude Include="..\..\vsf\source\service\vsf_service.h" />
     <ClInclude Include="..\..\vsf\source\service\vsf_service_cfg.h" />
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image\miniz.h" />
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image\nanosvg.h" />
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image\nanosvgrast.h" />
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image\SDL_image.h" />
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\effects_internal.h" />
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\load_aiff.h" />
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\load_voc.h" />
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\mixer.h" />
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\music.h" />
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\music_cmd.h" />
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\music_flac.h" />
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\music_fluidsynth.h" />
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\music_mad.h" />
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\music_mikmod.h" />
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\music_modplug.h" />
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\music_mpg123.h" />
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\music_nativemidi.h" />
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\music_ogg.h" />
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\music_opus.h" />
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\music_timidity.h" />
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\music_wav.h" />
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\SDL_mixer.h" />
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_net\SDLnetsys.h" />
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_net\SDL_net.h" />
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_ttf\SDL_ttf.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\app\httpd\urihandler\file\__vsf_linux_urihandler_file.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\app\httpd\vsf_linux_httpd.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\app\ntp\vsf_linux_ntp.h" />
@@ -619,6 +685,68 @@
     <ClInclude Include="..\..\vsf\source\vsf_cfg.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\application\3rd-party\sdl\audio\ogg\src\bitwise.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\audio\ogg\src\framing.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\analysis.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\barkmel.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\bitrate.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\block.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\codebook.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\envelope.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\floor0.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\floor1.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\info.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\lookup.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\lpc.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\lsp.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\mapping0.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\mdct.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\misc.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\psy.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\psytune.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\registry.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\res0.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\sharedbook.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\smallft.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\synthesis.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\tone.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\vorbisenc.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\vorbisfile.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\window.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\DungeonRush\src\ai.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\DungeonRush\src\audio.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\DungeonRush\src\bullet.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\DungeonRush\src\game.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\DungeonRush\src\helper.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\DungeonRush\src\main.c">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">main=dung_main;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\DungeonRush\src\map.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\DungeonRush\src\net.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\DungeonRush\src\player.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\DungeonRush\src\prng.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\DungeonRush\src\render.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\DungeonRush\src\res.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\DungeonRush\src\sprite.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\DungeonRush\src\storage.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\DungeonRush\src\types.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\DungeonRush\src\ui.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\DungeonRush\src\weapon.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\port\sdl2_platform_vsf.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\port\src\audio\vsf\SDL_vsfaudio.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\port\src\main\vsf\SDL_vsf_main.c" />
@@ -824,6 +952,21 @@
     <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\type1\type1.c" />
     <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\type42\type42.c" />
     <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\winfonts\winfnt.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\libpng\raw\png.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\libpng\raw\pngerror.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\libpng\raw\pngget.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\libpng\raw\pngmem.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\libpng\raw\pngpread.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\libpng\raw\pngread.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\libpng\raw\pngrio.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\libpng\raw\pngrtran.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\libpng\raw\pngrutil.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\libpng\raw\pngset.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\libpng\raw\pngtrans.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\libpng\raw\pngwio.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\libpng\raw\pngwrite.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\libpng\raw\pngwtran.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\libpng\raw\pngwutil.c" />
     <ClCompile Include="..\..\vsf\source\component\3rd-party\lua\raw\lapi.c" />
     <ClCompile Include="..\..\vsf\source\component\3rd-party\lua\raw\lauxlib.c" />
     <ClCompile Include="..\..\vsf\source\component\3rd-party\lua\raw\lbaselib.c" />
@@ -858,95 +1001,21 @@
     <ClCompile Include="..\..\vsf\source\component\3rd-party\lua\raw\lutf8lib.c" />
     <ClCompile Include="..\..\vsf\source\component\3rd-party\lua\raw\lvm.c" />
     <ClCompile Include="..\..\vsf\source\component\3rd-party\lua\raw\lzio.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\aes.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\aesni.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\arc4.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\aria.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\asn1parse.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\asn1write.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\base64.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\bignum.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\blowfish.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\camellia.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\ccm.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\certs.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\chacha20.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\chachapoly.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\cipher.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\cipher_wrap.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\cmac.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\ctr_drbg.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\debug.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\des.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\dhm.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\ecdh.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\ecdsa.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\ecjpake.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\ecp.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\ecp_curves.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\entropy.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\entropy_poll.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\error.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\gcm.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\havege.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\hkdf.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\hmac_drbg.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\md.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\md2.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\md4.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\md5.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\memory_buffer_alloc.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\net_sockets.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\nist_kw.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\oid.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\padlock.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\pem.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\pk.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\pkcs11.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\pkcs12.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\pkcs5.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\pkparse.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\pkwrite.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\pk_wrap.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\platform.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\platform_util.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\poly1305.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_client.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_driver_wrappers.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_ecp.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_rsa.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_se.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_slot_management.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_storage.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_its_file.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\ripemd160.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\rsa.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\rsa_internal.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\sha1.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\sha256.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\sha512.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\ssl_cache.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\ssl_ciphersuites.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\ssl_cli.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\ssl_cookie.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\ssl_msg.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\ssl_srv.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\ssl_ticket.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\ssl_tls.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\ssl_tls13_keys.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\threading.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\timing.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\version.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\version_features.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\x509.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\x509write_crt.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\x509write_csr.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\x509_create.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\x509_crl.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\x509_crt.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\x509_csr.c" />
-    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\xtea.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\zlib\raw\adler32.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\zlib\raw\compress.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\zlib\raw\crc32.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\zlib\raw\deflate.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\zlib\raw\gzclose.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\zlib\raw\gzlib.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\zlib\raw\gzread.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\zlib\raw\gzwrite.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\zlib\raw\infback.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\zlib\raw\inffast.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\zlib\raw\inflate.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\zlib\raw\inftrees.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\zlib\raw\trees.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\zlib\raw\uncompr.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\zlib\raw\zutil.c" />
     <ClCompile Include="..\..\vsf\source\component\av\audio\decoder\wav\vsf_wav.c" />
     <ClCompile Include="..\..\vsf\source\component\av\audio\driver\winsound\vsf_winsound.c" />
     <ClCompile Include="..\..\vsf\source\component\av\audio\vsf_audio.c" />
@@ -1100,6 +1169,47 @@
     <ClCompile Include="..\..\vsf\source\service\stream\vsf_stream_writer.c" />
     <ClCompile Include="..\..\vsf\source\service\trace\vsf_trace.c" />
     <ClCompile Include="..\..\vsf\source\service\vsf_service.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image\IMG.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image\IMG_bmp.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image\IMG_gif.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image\IMG_jpg.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image\IMG_lbm.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image\IMG_pcx.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image\IMG_png.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image\IMG_pnm.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image\IMG_svg.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image\IMG_tga.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image\IMG_tif.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image\IMG_webp.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image\IMG_WIC.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image\IMG_xcf.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image\IMG_xpm.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image\IMG_xv.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image\IMG_xxx.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\effects_internal.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\effect_position.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\effect_stereoreverse.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\load_aiff.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\load_voc.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\mixer.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\music.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\music_cmd.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\music_flac.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\music_fluidsynth.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\music_mad.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\music_mikmod.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\music_modplug.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\music_mpg123.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\music_nativemidi.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\music_ogg.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\music_opus.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\music_timidity.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\music_wav.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_net\SDLnet.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_net\SDLnetselect.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_net\SDLnetTCP.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_net\SDLnetUDP.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_ttf\SDL_ttf.c" />
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\app\httpd\vsf_linux_httpd.c" />
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\app\ntp\vsf_linux_ntp.c" />
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\app\telnetd\vsf_linux_telnetd.c" />
@@ -1225,9 +1335,10 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Full</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>__VSF__;__CPU_X86__;__WIN__;__OOC_CPP__;SIGWINCH=28;VSF_APP_ENTRY=SDL_main;VSF_USE_SDL2=ENABLED;VSF_SDL2_CFG_COLOR=VSF_DISP_COLOR_ARGB8888;FT2_BUILD_LIBRARY;APP_USE_SDLPAL_DEMO=ENABLED;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>__VSF__;__CPU_X86__;__WIN__;__OOC_CPP__;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;VSF_USE_SDL2=ENABLED;SIGWINCH=28;VSF_APP_ENTRY=SDL_main;VSF_SDL2_CFG_COLOR=VSF_DISP_COLOR_RGB565;MUSIC_OGG=MUSIC_OGG
+;MUSIC_WAV=MUSIC_WAV;FT2_BUILD_LIBRARY;APP_USE_SDLPAL_DEMO=ENABLED;APP_USE_DUNGEONRUSH_DEMO=ENABLED;SOFTWARE_ACC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal\timidity;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal\vsf;$(ProjectDir)..\..\application\3rd-party\sdl\include;$(ProjectDir)..\..\application\3rd-party\sdl\include\SDL2;$(ProjectDir)..\..\application\3rd-party\sdl\port;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\lua\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\raw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal\timidity;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal\vsf;$(ProjectDir)..\..\application\3rd-party\sdl\include;$(ProjectDir)..\..\application\3rd-party\sdl\include\SDL2;$(ProjectDir)..\..\application\3rd-party\sdl\port;$(ProjectDir)..\..\application\3rd-party\sdl\audio\ogg\include;$(ProjectDir)..\..\application\3rd-party\sdl\audio\vorbis\include;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\lua\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\raw;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_ttf;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_net;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-fms-extensions %(AdditionalOptions)</AdditionalOptions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <ExceptionHandling>false</ExceptionHandling>
@@ -1254,9 +1365,10 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>__VSF__;__CPU_X64__;__WIN__;__OOC_CPP__;SIGWINCH=28;VSF_APP_ENTRY=SDL_main;VSF_USE_SDL2=ENABLED;VSF_SDL2_CFG_COLOR=VSF_DISP_COLOR_ARGB8888;FT2_BUILD_LIBRARY;APP_USE_SDLPAL_DEMO=ENABLED;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>__VSF__;__CPU_X64__;__WIN__;__OOC_CPP__;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;VSF_USE_SDL2=ENABLED;SIGWINCH=28;VSF_APP_ENTRY=SDL_main;VSF_SDL2_CFG_COLOR=VSF_DISP_COLOR_RGB565;MUSIC_OGG=MUSIC_OGG
+;MUSIC_WAV=MUSIC_WAV;FT2_BUILD_LIBRARY;APP_USE_SDLPAL_DEMO=ENABLED;APP_USE_DUNGEONRUSH_DEMO=ENABLED;SOFTWARE_ACC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal\timidity;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal\vsf;$(ProjectDir)..\..\application\3rd-party\sdl\include;$(ProjectDir)..\..\application\3rd-party\sdl\include\SDL2;$(ProjectDir)..\..\application\3rd-party\sdl\port;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\lua\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\raw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal\timidity;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal\vsf;$(ProjectDir)..\..\application\3rd-party\sdl\include;$(ProjectDir)..\..\application\3rd-party\sdl\include\SDL2;$(ProjectDir)..\..\application\3rd-party\sdl\port;$(ProjectDir)..\..\application\3rd-party\sdl\audio\ogg\include;$(ProjectDir)..\..\application\3rd-party\sdl\audio\vorbis\include;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\lua\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\raw;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_ttf;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_net;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-fms-extensions %(AdditionalOptions)</AdditionalOptions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <ExceptionHandling>false</ExceptionHandling>
@@ -1285,9 +1397,10 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>__VSF__;__CPU_X86__;__WIN__;__OOC_RELEASE__;__OOC_CPP__;SIGWINCH=28;VSF_APP_ENTRY=SDL_main;VSF_USE_SDL2=ENABLED;VSF_SDL2_CFG_COLOR=VSF_DISP_COLOR_ARGB8888;FT2_BUILD_LIBRARY;APP_USE_SDLPAL_DEMO=ENABLED;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>__VSF__;__CPU_X86__;__WIN__;__OOC_RELEASE__;__OOC_CPP__;NDEBUG;_CONSOLE;VSF_USE_SDL2=ENABLED;SIGWINCH=28;VSF_APP_ENTRY=SDL_main;VSF_SDL2_CFG_COLOR=VSF_DISP_COLOR_RGB565;MUSIC_OGG=MUSIC_OGG
+;MUSIC_WAV=MUSIC_WAV;FT2_BUILD_LIBRARY;APP_USE_SDLPAL_DEMO=ENABLED;APP_USE_DUNGEONRUSH_DEMO=ENABLED;SOFTWARE_ACC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal\timidity;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal\vsf;$(ProjectDir)..\..\application\3rd-party\sdl\include;$(ProjectDir)..\..\application\3rd-party\sdl\include\SDL2;$(ProjectDir)..\..\application\3rd-party\sdl\port;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\lua\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\raw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal\timidity;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal\vsf;$(ProjectDir)..\..\application\3rd-party\sdl\include;$(ProjectDir)..\..\application\3rd-party\sdl\include\SDL2;$(ProjectDir)..\..\application\3rd-party\sdl\port;$(ProjectDir)..\..\application\3rd-party\sdl\audio\ogg\include;$(ProjectDir)..\..\application\3rd-party\sdl\audio\vorbis\include;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\lua\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\raw;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_ttf;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_net;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <AssemblerListingLocation>$(IntDir)/__sub0/__sub1/__sub2/__sub3/%(RelativeDir)</AssemblerListingLocation>
@@ -1311,9 +1424,10 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>__VSF__;__CPU_X64__;__WIN__;__OOC_RELEASE__;__OOC_CPP__;SIGWINCH=28;VSF_APP_ENTRY=SDL_main;VSF_USE_SDL2=ENABLED;VSF_SDL2_CFG_COLOR=VSF_DISP_COLOR_ARGB8888;FT2_BUILD_LIBRARY;APP_USE_SDLPAL_DEMO=ENABLED;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>__VSF__;__CPU_X64__;__WIN__;__OOC_RELEASE__;__OOC_CPP__;NDEBUG;_CONSOLE;VSF_USE_SDL2=ENABLED;SIGWINCH=28;VSF_APP_ENTRY=SDL_main;VSF_SDL2_CFG_COLOR=VSF_DISP_COLOR_RGB565;MUSIC_OGG=MUSIC_OGG
+;MUSIC_WAV=MUSIC_WAV;FT2_BUILD_LIBRARY;APP_USE_SDLPAL_DEMO=ENABLED;APP_USE_DUNGEONRUSH_DEMO=ENABLED;SOFTWARE_ACC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal\timidity;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal\vsf;$(ProjectDir)..\..\application\3rd-party\sdl\include;$(ProjectDir)..\..\application\3rd-party\sdl\include\SDL2;$(ProjectDir)..\..\application\3rd-party\sdl\port;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\lua\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\raw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal\timidity;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal\vsf;$(ProjectDir)..\..\application\3rd-party\sdl\include;$(ProjectDir)..\..\application\3rd-party\sdl\include\SDL2;$(ProjectDir)..\..\application\3rd-party\sdl\port;$(ProjectDir)..\..\application\3rd-party\sdl\audio\ogg\include;$(ProjectDir)..\..\application\3rd-party\sdl\audio\vorbis\include;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\lua\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\raw;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_ttf;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_net;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <AssemblerListingLocation>$(IntDir)/__sub0/__sub1/__sub2/__sub3/%(RelativeDir)</AssemblerListingLocation>

@@ -149,6 +149,10 @@ int vsf_linux_create_fhs(void)
     busybox_bind(VSF_LINUX_CFG_BIN_PATH "/sdlpal", __sdlpal_main);
 #endif
 
+#if APP_USE_DUNGEONRUSH_DEMO == ENABLED
+    extern int dung_main(int argc, char **argv);
+    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/dung", dung_main);
+#endif
 #endif      // VSF_USE_SDL2
 
 #if APP_USE_AUDIO_DEMO == ENABLED

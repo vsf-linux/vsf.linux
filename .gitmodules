@@ -31,3 +31,12 @@
 [submodule "application/3rd-party/sdl/sdlpal"]
 	path = application/3rd-party/sdl/sdlpal
 	url = ../sdlpal
+[submodule "application/3rd-party/sdl/audio/ogg"]
+	path = application/3rd-party/sdl/audio/ogg
+	url = ../ogg
+[submodule "application/3rd-party/sdl/audio/vorbis"]
+	path = application/3rd-party/sdl/audio/vorbis
+	url = ../vorbis
+[submodule "application/3rd-party/sdl/DungeonRush"]
+	path = application/3rd-party/sdl/DungeonRush
+	url = ../DungeonRush

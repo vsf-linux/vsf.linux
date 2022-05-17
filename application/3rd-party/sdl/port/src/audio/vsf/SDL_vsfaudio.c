@@ -82,7 +82,7 @@ VSFAUDIO_OpenDevice(_THIS, const char *devname)
 {
     vk_audio_dev_t *audio_dev = NULL == _this->handle ?
                 SDL_platform.cfg.audio_dev : _this->handle;
-    vk_audio_stream_t *audio_stream;
+    vk_audio_stream_t *audio_stream = NULL;
     vk_audio_format_t vsf_audio_format_desired = {
         .channel_num        = _this->spec.channels,
         .sample_bit_width   = SDL_AUDIO_BITSIZE(_this->spec.format),

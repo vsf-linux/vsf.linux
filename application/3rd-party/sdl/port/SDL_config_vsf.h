@@ -1,9 +1,11 @@
 #include "vsf.h"
 
+// for arch
 #undef _WIN32
 #undef _MSC_VER
 #undef __SSE2__
 
+// for sdl2
 #define SDL_TIMER_UNIX
 #define SDL_FILESYSTEM_UNIX
 #define SDL_AUDIO_DRIVER_VSF 1
@@ -92,6 +94,9 @@
 #   define HAVE_ALLOCA_H 1
 #   define HAVE_ALLOCA 1
 #endif
+
+// for sdl_image
+#define LOAD_PNG
 
 typedef struct vsf_sdl2_cfg_t {
     vk_disp_t *disp_dev;
