@@ -1,11 +1,10 @@
+#define __VSF_SIMPLE_STREAM_CLASS_INHERIT__
 #include "../../../../raw/src/SDL_internal.h"
 
 #if SDL_AUDIO_DRIVER_VSF
 
 #include "SDL_audio.h"
 #include "../../../../raw/src/audio/SDL_sysaudio.h"
-
-#include "vsf.h"
 
 #if VSF_USE_AUDIO == ENABLED
 
