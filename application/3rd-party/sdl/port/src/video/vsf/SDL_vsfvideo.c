@@ -34,7 +34,7 @@ WIN_VideoInitReady(vk_disp_t *disp)
 }
 
 static void
-VSF_OnEvent(vk_input_type_t type, vk_input_evt_t *evt)
+VSF_OnEvent(vk_input_notifier_t *notifier, vk_input_type_t type, vk_input_evt_t *evt)
 {
     SDL_EventNode *node = vsf_heap_malloc(sizeof(SDL_EventNode));
     if (NULL == node) {
