@@ -622,74 +622,68 @@
     <Filter Include="application\scsi_demo">
       <UniqueIdentifier>{16647ed1-5e38-4b7c-b4fd-2bbc700b2ff7}</UniqueIdentifier>
     </Filter>
-    <Filter Include="application\3rd-party\MEUI">
-      <UniqueIdentifier>{e7a9e204-b18f-477b-babe-2cbe13324b79}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="application\3rd-party\MEUI\src">
-      <UniqueIdentifier>{1d69be7e-0426-46ca-b5a5-60ba7917c9ae}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="application\3rd-party\MEUI\src\bind">
-      <UniqueIdentifier>{35266de2-3e17-489c-a59e-23dda68a8759}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="application\3rd-party\MEUI\src\bind\element">
-      <UniqueIdentifier>{311f833b-ee77-43d2-917c-5bca5b61bc6f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="application\3rd-party\MEUI\src\element">
-      <UniqueIdentifier>{5e1fe286-c169-49c9-858e-9ffb2f517fe4}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="application\3rd-party\MEUI\src\platform">
-      <UniqueIdentifier>{6da12e10-1a8d-4fbc-b4a1-cd0a0a5142bd}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="application\3rd-party\MEUI\lib">
-      <UniqueIdentifier>{55f24a0f-f341-4f22-a07f-c981af2ab26d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="application\3rd-party\MEUI\lib\flex">
-      <UniqueIdentifier>{b4a97754-7740-4e65-abe8-d37883feb84f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="application\3rd-party\MEUI\lib\hashmap">
-      <UniqueIdentifier>{270ca0f8-53da-401f-a591-2a6d8c067842}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="application\3rd-party\MEUI\lib\hashmap\src">
-      <UniqueIdentifier>{e3ca5d66-52da-4f1b-9d17-824339866095}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="application\3rd-party\MEUI\lib\plutosvg">
-      <UniqueIdentifier>{cbee52e1-e197-455b-b895-f0de793c658e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="application\3rd-party\MEUI\lib\plutosvg\source">
-      <UniqueIdentifier>{665d16ac-2294-460b-b241-a67362616f74}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="application\3rd-party\MEUI\lib\plutovg">
-      <UniqueIdentifier>{7de9bcd2-acd8-4a46-b8de-7ef3f9a2d7c5}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="application\3rd-party\MEUI\lib\plutovg\source">
-      <UniqueIdentifier>{ffb0b7a8-cce0-4dc0-a99d-cb9669917bef}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="application\3rd-party\MEUI\lib\pqueue">
-      <UniqueIdentifier>{3bc8d180-e030-4450-b48e-10b1ba3d346d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="application\3rd-party\MEUI\lib\stb">
-      <UniqueIdentifier>{9e9e187f-1526-4229-b04b-bfa3af171f7d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="application\3rd-party\MEUI\lib\stb\include">
-      <UniqueIdentifier>{d69a7a12-5052-4ac3-9839-d13985dc3fd1}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="application\3rd-party\MEUI\lib\plutovg\3rdparty">
-      <UniqueIdentifier>{e38d73f0-cbfc-4844-98d7-994f3b3937dd}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="application\3rd-party\MEUI\lib\plutovg\3rdparty\software">
-      <UniqueIdentifier>{7f6c244a-a8ee-4002-9540-bd86d8bed9aa}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="application\3rd-party\MEUI\src\platform\sdl2">
-      <UniqueIdentifier>{16013184-2b72-4b80-8c24-614d481b5a21}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="application\3rd-party\MEUI\src\platform\vsf">
-      <UniqueIdentifier>{994ee6d9-bbd6-45d7-934c-25b356104c34}</UniqueIdentifier>
-    </Filter>
     <Filter Include="application\3rd-party\quickjs">
       <UniqueIdentifier>{0b337a73-d23e-4f07-9935-edd06a7ad158}</UniqueIdentifier>
     </Filter>
     <Filter Include="application\3rd-party\quickjs\raw">
       <UniqueIdentifier>{89959b20-3bd7-470a-bcf4-b4b9a0bb057c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\MEUI">
+      <UniqueIdentifier>{eba20ecb-1880-4e96-8d1a-2fb039d4c5a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\MEUI\lib">
+      <UniqueIdentifier>{f0c23ffa-d1bd-4865-9ed9-953665460288}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\MEUI\lib\flex">
+      <UniqueIdentifier>{62c5c282-5588-4e56-9f48-3a7850a72596}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\MEUI\lib\hashmap">
+      <UniqueIdentifier>{225234ee-f94b-4fec-bfdb-e3c14f5b069d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\MEUI\lib\hashmap\src">
+      <UniqueIdentifier>{2bbd3b3c-44a4-46d8-afe0-a9829b341aa5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\MEUI\lib\plutovg">
+      <UniqueIdentifier>{1de84b8e-0c57-4085-b61c-369d9da69703}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\MEUI\lib\plutovg\3rdparty">
+      <UniqueIdentifier>{129a5ca9-9d90-4c07-8537-ab266f06e180}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\MEUI\lib\plutovg\3rdparty\software">
+      <UniqueIdentifier>{876fe2cb-54ce-48cd-adc0-efe00e15a64c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\MEUI\lib\plutovg\source">
+      <UniqueIdentifier>{4abb4960-0be1-472f-8b4b-42100819affa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\MEUI\lib\pqueue">
+      <UniqueIdentifier>{3ab23023-d4f8-48ee-ac3d-7ef21a5af834}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\MEUI\lib\stb">
+      <UniqueIdentifier>{6e0e6136-2863-4e33-baa3-c196b4f8b6a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\MEUI\src">
+      <UniqueIdentifier>{e841a2c4-558f-428f-bd88-af7c92a4deb7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\MEUI\src\bind">
+      <UniqueIdentifier>{b29b27d1-6aab-4b05-bf0c-c2f587044742}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\MEUI\src\bind\element">
+      <UniqueIdentifier>{276bd8d4-7adb-4aa5-b218-bc1ac36f5369}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\MEUI\src\element">
+      <UniqueIdentifier>{acef86d4-dfd2-4ace-be01-437a9447f6ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\MEUI\src\platform">
+      <UniqueIdentifier>{4b9d686f-2b1a-4b3d-875b-251499faed44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\MEUI\src\platform\vsf">
+      <UniqueIdentifier>{63eb13f1-f638-4f12-a630-f767e15f0fa3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\MEUI\lib\plutosvg">
+      <UniqueIdentifier>{d7da74a9-1d55-4211-b270-994b6e805617}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\MEUI\lib\plutosvg\source">
+      <UniqueIdentifier>{dccf486d-253d-4325-90d7-3cb17aca7d63}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -1662,36 +1656,6 @@
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\app\telnetd\vsf_linux_telnetd.h">
       <Filter>vsf\shell\sys\linux\app\telnetd</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\MEUI\lib\plutovg\source\plutovg-private.h">
-      <Filter>application\3rd-party\MEUI\lib\plutovg\source</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\MEUI\lib\pqueue\pqueue.h">
-      <Filter>application\3rd-party\MEUI\lib\pqueue</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\MEUI\lib\stb\include\stb_image.h">
-      <Filter>application\3rd-party\MEUI\lib\stb\include</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\MEUI\lib\stb\include\stb_image_resize.h">
-      <Filter>application\3rd-party\MEUI\lib\stb\include</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\MEUI\lib\stb\include\stb_image_write.h">
-      <Filter>application\3rd-party\MEUI\lib\stb\include</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\MEUI\lib\stb\include\stb_truetype.h">
-      <Filter>application\3rd-party\MEUI\lib\stb\include</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\MEUI\lib\plutovg\3rdparty\software\sw_ft_math.h">
-      <Filter>application\3rd-party\MEUI\lib\plutovg\3rdparty\software</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\MEUI\lib\plutovg\3rdparty\software\sw_ft_raster.h">
-      <Filter>application\3rd-party\MEUI\lib\plutovg\3rdparty\software</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\MEUI\lib\plutovg\3rdparty\software\sw_ft_stroker.h">
-      <Filter>application\3rd-party\MEUI\lib\plutovg\3rdparty\software</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\MEUI\lib\plutovg\3rdparty\software\sw_ft_types.h">
-      <Filter>application\3rd-party\MEUI\lib\plutovg\3rdparty\software</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\memory.h">
       <Filter>vsf\shell\sys\linux\include\simple_libc</Filter>
     </ClInclude>
@@ -1739,6 +1703,24 @@
     </ClInclude>
     <ClInclude Include="..\..\application\3rd-party\quickjs\raw\quickjs-opcode.h">
       <Filter>application\3rd-party\quickjs\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\quickjs\MEUI\lib\plutovg\3rdparty\software\sw_ft_math.h">
+      <Filter>application\3rd-party\MEUI\lib\plutovg\3rdparty\software</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\quickjs\MEUI\lib\plutovg\3rdparty\software\sw_ft_raster.h">
+      <Filter>application\3rd-party\MEUI\lib\plutovg\3rdparty\software</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\quickjs\MEUI\lib\plutovg\3rdparty\software\sw_ft_stroker.h">
+      <Filter>application\3rd-party\MEUI\lib\plutovg\3rdparty\software</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\quickjs\MEUI\lib\plutovg\3rdparty\software\sw_ft_types.h">
+      <Filter>application\3rd-party\MEUI\lib\plutovg\3rdparty\software</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\quickjs\MEUI\lib\plutovg\source\plutovg-private.h">
+      <Filter>application\3rd-party\MEUI\lib\plutovg\source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\quickjs\MEUI\lib\pqueue\pqueue.h">
+      <Filter>application\3rd-party\MEUI\lib\pqueue</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -2339,108 +2321,6 @@
     <ClCompile Include="..\..\vsf\example\template\demo\scsi_demo\scsi_demo.c">
       <Filter>application\scsi_demo</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\MEUI\src\box.c">
-      <Filter>application\3rd-party\MEUI\src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\MEUI\src\class.c">
-      <Filter>application\3rd-party\MEUI\src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\MEUI\src\image.c">
-      <Filter>application\3rd-party\MEUI\src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\MEUI\src\main.c">
-      <Filter>application\3rd-party\MEUI\src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\MEUI\src\meui.c">
-      <Filter>application\3rd-party\MEUI\src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\MEUI\src\style.c">
-      <Filter>application\3rd-party\MEUI\src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\MEUI\src\text.c">
-      <Filter>application\3rd-party\MEUI\src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\MEUI\src\util.c">
-      <Filter>application\3rd-party\MEUI\src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\MEUI\src\bind\box.c">
-      <Filter>application\3rd-party\MEUI\src\bind</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\MEUI\src\bind\meui.c">
-      <Filter>application\3rd-party\MEUI\src\bind</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\MEUI\src\bind\style.c">
-      <Filter>application\3rd-party\MEUI\src\bind</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\MEUI\src\bind\element\canvas.c">
-      <Filter>application\3rd-party\MEUI\src\bind\element</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\MEUI\src\bind\element\gradient.c">
-      <Filter>application\3rd-party\MEUI\src\bind\element</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\MEUI\src\bind\element\path2d.c">
-      <Filter>application\3rd-party\MEUI\src\bind\element</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\MEUI\src\element\canvas.c">
-      <Filter>application\3rd-party\MEUI\src\element</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\MEUI\src\element\div.c">
-      <Filter>application\3rd-party\MEUI\src\element</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\MEUI\src\element\stack.c">
-      <Filter>application\3rd-party\MEUI\src\element</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\MEUI\lib\flex\FlexLayout.c">
-      <Filter>application\3rd-party\MEUI\lib\flex</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\MEUI\lib\hashmap\src\hashmap.c">
-      <Filter>application\3rd-party\MEUI\lib\hashmap\src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\MEUI\lib\plutosvg\source\plutosvg.c">
-      <Filter>application\3rd-party\MEUI\lib\plutosvg\source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\MEUI\lib\plutovg\source\plutovg.c">
-      <Filter>application\3rd-party\MEUI\lib\plutovg\source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\MEUI\lib\plutovg\source\plutovg-blend.c">
-      <Filter>application\3rd-party\MEUI\lib\plutovg\source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\MEUI\lib\plutovg\source\plutovg-dash.c">
-      <Filter>application\3rd-party\MEUI\lib\plutovg\source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\MEUI\lib\plutovg\source\plutovg-font.c">
-      <Filter>application\3rd-party\MEUI\lib\plutovg\source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\MEUI\lib\plutovg\source\plutovg-geometry.c">
-      <Filter>application\3rd-party\MEUI\lib\plutovg\source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\MEUI\lib\plutovg\source\plutovg-paint.c">
-      <Filter>application\3rd-party\MEUI\lib\plutovg\source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\MEUI\lib\plutovg\source\plutovg-rle.c">
-      <Filter>application\3rd-party\MEUI\lib\plutovg\source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\MEUI\lib\pqueue\pqueue.c">
-      <Filter>application\3rd-party\MEUI\lib\pqueue</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\MEUI\lib\stb\impl.c">
-      <Filter>application\3rd-party\MEUI\lib\stb</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\MEUI\lib\plutovg\3rdparty\software\sw_ft_math.c">
-      <Filter>application\3rd-party\MEUI\lib\plutovg\3rdparty\software</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\MEUI\lib\plutovg\3rdparty\software\sw_ft_raster.c">
-      <Filter>application\3rd-party\MEUI\lib\plutovg\3rdparty\software</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\MEUI\lib\plutovg\3rdparty\software\sw_ft_stroker.c">
-      <Filter>application\3rd-party\MEUI\lib\plutovg\3rdparty\software</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\MEUI\src\platform\sdl2\window.c">
-      <Filter>application\3rd-party\MEUI\src\platform\sdl2</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\MEUI\src\platform\vsf\window.c">
-      <Filter>application\3rd-party\MEUI\src\platform\vsf</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\quickjs\raw\cutils.c">
       <Filter>application\3rd-party\quickjs\raw</Filter>
     </ClCompile>
@@ -2464,6 +2344,105 @@
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\quickjs\raw\quickjs-libc.c">
       <Filter>application\3rd-party\quickjs\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\lib\flex\FlexLayout.c">
+      <Filter>application\3rd-party\MEUI\lib\flex</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\lib\hashmap\src\hashmap.c">
+      <Filter>application\3rd-party\MEUI\lib\hashmap\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\lib\plutovg\3rdparty\software\sw_ft_math.c">
+      <Filter>application\3rd-party\MEUI\lib\plutovg\3rdparty\software</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\lib\plutovg\3rdparty\software\sw_ft_raster.c">
+      <Filter>application\3rd-party\MEUI\lib\plutovg\3rdparty\software</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\lib\plutovg\3rdparty\software\sw_ft_stroker.c">
+      <Filter>application\3rd-party\MEUI\lib\plutovg\3rdparty\software</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\lib\plutovg\source\plutovg.c">
+      <Filter>application\3rd-party\MEUI\lib\plutovg\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\lib\plutovg\source\plutovg-blend.c">
+      <Filter>application\3rd-party\MEUI\lib\plutovg\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\lib\plutovg\source\plutovg-dash.c">
+      <Filter>application\3rd-party\MEUI\lib\plutovg\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\lib\plutovg\source\plutovg-font.c">
+      <Filter>application\3rd-party\MEUI\lib\plutovg\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\lib\plutovg\source\plutovg-geometry.c">
+      <Filter>application\3rd-party\MEUI\lib\plutovg\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\lib\plutovg\source\plutovg-paint.c">
+      <Filter>application\3rd-party\MEUI\lib\plutovg\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\lib\plutovg\source\plutovg-rle.c">
+      <Filter>application\3rd-party\MEUI\lib\plutovg\source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\lib\pqueue\pqueue.c">
+      <Filter>application\3rd-party\MEUI\lib\pqueue</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\lib\stb\impl.c">
+      <Filter>application\3rd-party\MEUI\lib\stb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\src\bind\element\canvas.c">
+      <Filter>application\3rd-party\MEUI\src\bind\element</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\src\bind\element\gradient.c">
+      <Filter>application\3rd-party\MEUI\src\bind\element</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\src\bind\element\path2d.c">
+      <Filter>application\3rd-party\MEUI\src\bind\element</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\src\bind\box.c">
+      <Filter>application\3rd-party\MEUI\src\bind</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\src\bind\meui.c">
+      <Filter>application\3rd-party\MEUI\src\bind</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\src\bind\style.c">
+      <Filter>application\3rd-party\MEUI\src\bind</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\src\element\canvas.c">
+      <Filter>application\3rd-party\MEUI\src\element</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\src\element\div.c">
+      <Filter>application\3rd-party\MEUI\src\element</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\src\element\stack.c">
+      <Filter>application\3rd-party\MEUI\src\element</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\src\platform\vsf\window.c">
+      <Filter>application\3rd-party\MEUI\src\platform\vsf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\src\box.c">
+      <Filter>application\3rd-party\MEUI\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\src\class.c">
+      <Filter>application\3rd-party\MEUI\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\src\image.c">
+      <Filter>application\3rd-party\MEUI\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\src\main.c">
+      <Filter>application\3rd-party\MEUI\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\src\meui.c">
+      <Filter>application\3rd-party\MEUI\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\src\style.c">
+      <Filter>application\3rd-party\MEUI\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\src\text.c">
+      <Filter>application\3rd-party\MEUI\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\src\util.c">
+      <Filter>application\3rd-party\MEUI\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\lib\plutosvg\source\plutosvg.c">
+      <Filter>application\3rd-party\MEUI\lib\plutosvg\source</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

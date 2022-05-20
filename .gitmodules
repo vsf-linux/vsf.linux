@@ -49,3 +49,6 @@
 [submodule "application/3rd-party/quickjs/raw"]
 	path = application/3rd-party/quickjs/raw
 	url = ../quickjs
+[submodule "application/3rd-party/quickjs/MEUI"]
+	path = application/3rd-party/quickjs/MEUI
+	url = https://github.com/ZhUyU1997/MEUI
