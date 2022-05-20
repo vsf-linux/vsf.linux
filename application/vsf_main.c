@@ -45,6 +45,30 @@ static int __sdlpal_main(int argc, char *argv[])
 }
 #endif
 
+#if VSF_USE_QUICKJS == ENABLED
+#if APP_USE_MEUI_DEMO == ENABLED
+#include <class.h>
+struct class_table_info __class_table_start[5];
+struct class_table_info __class_table_end[1];
+static int __meui_main(int argc, char **argv)
+{
+    extern struct class_table_info object_tclass_table_info;
+    extern struct class_table_info Boxclass_table_info;
+    extern struct class_table_info CanvasEleclass_table_info;
+    extern struct class_table_info DivEleclass_table_info;
+    extern struct class_table_info StackEleclass_table_info;
+    __class_table_start[0] = object_tclass_table_info;
+    __class_table_start[1] = Boxclass_table_info;
+    __class_table_start[2] = CanvasEleclass_table_info;
+    __class_table_start[3] = DivEleclass_table_info;
+    __class_table_start[4] = StackEleclass_table_info;
+
+    extern int meui_main(int argc, char **argv);
+    return meui_main(argc, argv);
+}
+#endif
+#endif
+
 int vsf_linux_create_fhs(void)
 {
     // 0. devfs, busybox, etc
@@ -161,6 +185,12 @@ int vsf_linux_create_fhs(void)
     busybox_bind(VSF_LINUX_CFG_BIN_PATH "/nofrendo", nofrendo_main);
 #endif
 #endif      // VSF_USE_SDL2
+
+#if VSF_USE_QUICKJS == ENABLED
+#if APP_USE_MEUI_DEMO == ENABLED
+    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/meui", __meui_main);
+#endif
+#endif
 
 #if APP_USE_AUDIO_DEMO == ENABLED
     extern int audio_play_main(int argc, char *argv[]);

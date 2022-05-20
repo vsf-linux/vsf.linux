@@ -124,7 +124,6 @@
     <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\sndhrdw\vrcvisnd.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\version.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\vid_drv.h" />
-    <ClInclude Include="..\..\application\3rd-party\sdl\port\SDL_config_vsf.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\audio\dummy\SDL_dummyaudio.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\audio\SDL_audiodev_c.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\audio\SDL_audio_c.h" />

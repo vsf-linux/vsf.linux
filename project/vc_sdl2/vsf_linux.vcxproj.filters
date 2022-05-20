@@ -2385,9 +2385,6 @@
     <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\SDL_log_c.h">
       <Filter>application\3rd-party\sdl\raw\src</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\sdl\port\SDL_config_vsf.h">
-      <Filter>application\3rd-party\sdl\port</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\application\3rd-party\sdl\sdlpal\ascii.h">
       <Filter>application\3rd-party\sdlpal</Filter>
     </ClInclude>
