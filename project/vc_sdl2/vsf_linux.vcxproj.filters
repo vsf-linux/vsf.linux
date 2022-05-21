@@ -847,6 +847,81 @@
     <Filter Include="application\3rd-party\nofrendo\src\unix">
       <UniqueIdentifier>{ad4bd88c-e64e-4d31-902a-d30dc62788af}</UniqueIdentifier>
     </Filter>
+    <Filter Include="application\3rd-party\mgba">
+      <UniqueIdentifier>{628de92d-e731-4f32-a714-e3103a687a11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\mgba\src">
+      <UniqueIdentifier>{caa205e4-ae79-432c-ba97-5fe3b1c589ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\mgba\src\core">
+      <UniqueIdentifier>{c462bec6-5b19-4195-805c-27a925c7d573}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\mgba\src\gb">
+      <UniqueIdentifier>{7bc1820c-a340-4919-a685-0cf107e5dbfb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\mgba\src\gb\extra">
+      <UniqueIdentifier>{81803fd3-bd14-4cb9-bf22-da58060cfb87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\mgba\src\gb\renderers">
+      <UniqueIdentifier>{111fcbdf-57d9-4567-8705-08a234026531}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\mgba\src\gb\sio">
+      <UniqueIdentifier>{c43d3206-3834-48ed-883b-2e54aee57af0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\mgba\src\gba">
+      <UniqueIdentifier>{8d381447-6fe6-4b1f-9f66-6d8350125e24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\mgba\src\gba\cart">
+      <UniqueIdentifier>{c5182de7-590d-4be3-97cf-186b1750d47d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\mgba\src\gba\cheats">
+      <UniqueIdentifier>{56c44097-7dcb-43a7-b5cd-26be31973b60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\mgba\src\gba\extra">
+      <UniqueIdentifier>{955fafad-a08f-42b4-bea9-856d44290c2b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\mgba\src\gba\renderers">
+      <UniqueIdentifier>{3f9cc0ef-bca3-490c-ae73-3f40729778fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\mgba\src\gba\sio">
+      <UniqueIdentifier>{7a0d16aa-4396-43b8-b888-bcc57a454938}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\mgba\src\platform">
+      <UniqueIdentifier>{36f07d91-15e8-429c-83c2-db82ca01ce81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\mgba\src\platform\sdl">
+      <UniqueIdentifier>{3bd43026-a26f-4ac9-a147-1f10e27d43f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\mgba\src\util">
+      <UniqueIdentifier>{9e5492a3-fb45-48a4-b442-030b10463827}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\mgba\src\third-party">
+      <UniqueIdentifier>{a5c1f587-343a-42c8-9a8e-c6531de3d52a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\mgba\src\third-party\inih">
+      <UniqueIdentifier>{05f4067a-5c49-412c-8960-2530a6b1ea61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\mgba\port">
+      <UniqueIdentifier>{9ab1d310-c02d-416d-b2a2-f7f0975a4307}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\mgba\src\util\vfs">
+      <UniqueIdentifier>{e84a853f-1284-4230-887c-b9f9b540dd1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\mgba\src\third-party\blip_buf">
+      <UniqueIdentifier>{e7dafc23-8016-4dad-844e-2a809da95c67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\mgba\src\arm">
+      <UniqueIdentifier>{1014f555-673a-4222-beeb-c19499932c68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\mgba\src\feature">
+      <UniqueIdentifier>{2028d104-be91-4f9e-a0b4-f38044a2ed54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\mgba\src\sm83">
+      <UniqueIdentifier>{ea63b5b7-c824-4609-896d-a7aa695936ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\mgba\src\third-party\lzma">
+      <UniqueIdentifier>{f3826819-f0f8-406f-a5df-c9871ca98451}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vsf\source\vsf.h">
@@ -3054,6 +3129,153 @@
     <ClInclude Include="..\..\application\3rd-party\sdl\nofrendo\src\cpu\nes6502.h">
       <Filter>application\3rd-party\nofrendo\src\cpu</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\gba\hle-bios.h">
+      <Filter>application\3rd-party\mgba\src\gba</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\gba\cheats\gameshark.h">
+      <Filter>application\3rd-party\mgba\src\gba\cheats</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\gba\cheats\parv3.h">
+      <Filter>application\3rd-party\mgba\src\gba\cheats</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\gba\renderers\software-private.h">
+      <Filter>application\3rd-party\mgba\src\gba\renderers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\platform\sdl\main.h">
+      <Filter>application\3rd-party\mgba\src\platform\sdl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\platform\sdl\sdl-audio.h">
+      <Filter>application\3rd-party\mgba\src\platform\sdl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\platform\sdl\sdl-events.h">
+      <Filter>application\3rd-party\mgba\src\platform\sdl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\inih\ini.h">
+      <Filter>application\3rd-party\mgba\src\third-party\inih</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\7z.h">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\7zAlloc.h">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\7zBuf.h">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\7zCrc.h">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\7zFile.h">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\7zTypes.h">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\7zVersion.h">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Aes.h">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Alloc.h">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Bcj2.h">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Bra.h">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Compiler.h">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\CpuArch.h">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Delta.h">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\DllSecur.h">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\LzFind.h">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\LzFindMt.h">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\LzHash.h">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Lzma2Dec.h">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Lzma2DecMt.h">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Lzma2Enc.h">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Lzma86.h">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\LzmaDec.h">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\LzmaEnc.h">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\LzmaLib.h">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\MtCoder.h">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\MtDec.h">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Ppmd.h">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Ppmd7.h">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Precomp.h">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\RotateDefs.h">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Sha256.h">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Sort.h">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Threads.h">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Xz.h">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\XzCrc64.h">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\XzEnc.h">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\memory.h">
+      <Filter>vsf\shell\sys\linux\include\simple_libc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\stdatomic.h">
+      <Filter>vsf\shell\sys\linux\include\simple_libc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\strings.h">
+      <Filter>vsf\shell\sys\linux\include\simple_libc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\utime.h">
+      <Filter>vsf\shell\sys\linux\include\simple_libc</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\vsf\source\utilities\template\vsf_bitmap.c">
@@ -4997,6 +5219,507 @@
     <ClCompile Include="..\..\application\3rd-party\sdl\nofrendo\src\unix\osd.c">
       <Filter>application\3rd-party\nofrendo\src\unix</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\core\bitmap-cache.c">
+      <Filter>application\3rd-party\mgba\src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\core\cache-set.c">
+      <Filter>application\3rd-party\mgba\src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\core\cheats.c">
+      <Filter>application\3rd-party\mgba\src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\core\config.c">
+      <Filter>application\3rd-party\mgba\src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\core\core.c">
+      <Filter>application\3rd-party\mgba\src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\core\directories.c">
+      <Filter>application\3rd-party\mgba\src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\core\input.c">
+      <Filter>application\3rd-party\mgba\src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\core\interface.c">
+      <Filter>application\3rd-party\mgba\src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\core\library.c">
+      <Filter>application\3rd-party\mgba\src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\core\lockstep.c">
+      <Filter>application\3rd-party\mgba\src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\core\log.c">
+      <Filter>application\3rd-party\mgba\src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\core\map-cache.c">
+      <Filter>application\3rd-party\mgba\src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\core\mem-search.c">
+      <Filter>application\3rd-party\mgba\src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\core\rewind.c">
+      <Filter>application\3rd-party\mgba\src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\core\scripting.c">
+      <Filter>application\3rd-party\mgba\src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\core\serialize.c">
+      <Filter>application\3rd-party\mgba\src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\core\sync.c">
+      <Filter>application\3rd-party\mgba\src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\core\thread.c">
+      <Filter>application\3rd-party\mgba\src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\core\tile-cache.c">
+      <Filter>application\3rd-party\mgba\src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\core\timing.c">
+      <Filter>application\3rd-party\mgba\src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\gb\audio.c">
+      <Filter>application\3rd-party\mgba\src\gb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\gb\cheats.c">
+      <Filter>application\3rd-party\mgba\src\gb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\gb\core.c">
+      <Filter>application\3rd-party\mgba\src\gb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\gb\gb.c">
+      <Filter>application\3rd-party\mgba\src\gb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\gb\input.c">
+      <Filter>application\3rd-party\mgba\src\gb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\gb\io.c">
+      <Filter>application\3rd-party\mgba\src\gb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\gb\mbc.c">
+      <Filter>application\3rd-party\mgba\src\gb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\gb\memory.c">
+      <Filter>application\3rd-party\mgba\src\gb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\gb\overrides.c">
+      <Filter>application\3rd-party\mgba\src\gb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\gb\serialize.c">
+      <Filter>application\3rd-party\mgba\src\gb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\gb\sio.c">
+      <Filter>application\3rd-party\mgba\src\gb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\gb\timer.c">
+      <Filter>application\3rd-party\mgba\src\gb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\gb\video.c">
+      <Filter>application\3rd-party\mgba\src\gb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\gb\extra\proxy.c">
+      <Filter>application\3rd-party\mgba\src\gb\extra</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\gb\renderers\cache-set.c">
+      <Filter>application\3rd-party\mgba\src\gb\renderers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\gb\renderers\software.c">
+      <Filter>application\3rd-party\mgba\src\gb\renderers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\gb\sio\lockstep.c">
+      <Filter>application\3rd-party\mgba\src\gb\sio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\gb\sio\printer.c">
+      <Filter>application\3rd-party\mgba\src\gb\sio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\gba\audio.c">
+      <Filter>application\3rd-party\mgba\src\gba</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\gba\bios.c">
+      <Filter>application\3rd-party\mgba\src\gba</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\gba\cheats.c">
+      <Filter>application\3rd-party\mgba\src\gba</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\gba\core.c">
+      <Filter>application\3rd-party\mgba\src\gba</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\gba\dma.c">
+      <Filter>application\3rd-party\mgba\src\gba</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\gba\gba.c">
+      <Filter>application\3rd-party\mgba\src\gba</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\gba\hle-bios.c">
+      <Filter>application\3rd-party\mgba\src\gba</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\gba\input.c">
+      <Filter>application\3rd-party\mgba\src\gba</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\gba\io.c">
+      <Filter>application\3rd-party\mgba\src\gba</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\gba\memory.c">
+      <Filter>application\3rd-party\mgba\src\gba</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\gba\overrides.c">
+      <Filter>application\3rd-party\mgba\src\gba</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\gba\savedata.c">
+      <Filter>application\3rd-party\mgba\src\gba</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\gba\serialize.c">
+      <Filter>application\3rd-party\mgba\src\gba</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\gba\sharkport.c">
+      <Filter>application\3rd-party\mgba\src\gba</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\gba\sio.c">
+      <Filter>application\3rd-party\mgba\src\gba</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\gba\timer.c">
+      <Filter>application\3rd-party\mgba\src\gba</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\gba\video.c">
+      <Filter>application\3rd-party\mgba\src\gba</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\gba\cart\ereader.c">
+      <Filter>application\3rd-party\mgba\src\gba\cart</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\gba\cart\gpio.c">
+      <Filter>application\3rd-party\mgba\src\gba\cart</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\gba\cart\matrix.c">
+      <Filter>application\3rd-party\mgba\src\gba\cart</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\gba\cart\vfame.c">
+      <Filter>application\3rd-party\mgba\src\gba\cart</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\gba\cheats\codebreaker.c">
+      <Filter>application\3rd-party\mgba\src\gba\cheats</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\gba\cheats\gameshark.c">
+      <Filter>application\3rd-party\mgba\src\gba\cheats</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\gba\cheats\parv3.c">
+      <Filter>application\3rd-party\mgba\src\gba\cheats</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\gba\extra\audio-mixer.c">
+      <Filter>application\3rd-party\mgba\src\gba\extra</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\gba\extra\battlechip.c">
+      <Filter>application\3rd-party\mgba\src\gba\extra</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\gba\extra\proxy.c">
+      <Filter>application\3rd-party\mgba\src\gba\extra</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\gba\renderers\cache-set.c">
+      <Filter>application\3rd-party\mgba\src\gba\renderers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\gba\renderers\common.c">
+      <Filter>application\3rd-party\mgba\src\gba\renderers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\gba\renderers\software-bg.c">
+      <Filter>application\3rd-party\mgba\src\gba\renderers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\gba\renderers\software-mode0.c">
+      <Filter>application\3rd-party\mgba\src\gba\renderers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\gba\renderers\software-obj.c">
+      <Filter>application\3rd-party\mgba\src\gba\renderers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\gba\renderers\video-software.c">
+      <Filter>application\3rd-party\mgba\src\gba\renderers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\gba\sio\dolphin.c">
+      <Filter>application\3rd-party\mgba\src\gba\sio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\gba\sio\gbp.c">
+      <Filter>application\3rd-party\mgba\src\gba\sio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\gba\sio\joybus.c">
+      <Filter>application\3rd-party\mgba\src\gba\sio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\gba\sio\lockstep.c">
+      <Filter>application\3rd-party\mgba\src\gba\sio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\platform\sdl\main.c">
+      <Filter>application\3rd-party\mgba\src\platform\sdl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\platform\sdl\sdl-audio.c">
+      <Filter>application\3rd-party\mgba\src\platform\sdl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\platform\sdl\sdl-events.c">
+      <Filter>application\3rd-party\mgba\src\platform\sdl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\platform\sdl\sw-sdl2.c">
+      <Filter>application\3rd-party\mgba\src\platform\sdl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\util\circle-buffer.c">
+      <Filter>application\3rd-party\mgba\src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\util\configuration.c">
+      <Filter>application\3rd-party\mgba\src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\util\convolve.c">
+      <Filter>application\3rd-party\mgba\src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\util\crc32.c">
+      <Filter>application\3rd-party\mgba\src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\util\elf-read.c">
+      <Filter>application\3rd-party\mgba\src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\util\export.c">
+      <Filter>application\3rd-party\mgba\src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\util\formatting.c">
+      <Filter>application\3rd-party\mgba\src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\util\gbk-table.c">
+      <Filter>application\3rd-party\mgba\src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\util\gui.c">
+      <Filter>application\3rd-party\mgba\src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\util\hash.c">
+      <Filter>application\3rd-party\mgba\src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\util\memory.c">
+      <Filter>application\3rd-party\mgba\src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\util\patch.c">
+      <Filter>application\3rd-party\mgba\src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\util\patch-fast.c">
+      <Filter>application\3rd-party\mgba\src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\util\patch-ips.c">
+      <Filter>application\3rd-party\mgba\src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\util\patch-ups.c">
+      <Filter>application\3rd-party\mgba\src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\util\png-io.c">
+      <Filter>application\3rd-party\mgba\src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\util\ring-fifo.c">
+      <Filter>application\3rd-party\mgba\src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\util\string.c">
+      <Filter>application\3rd-party\mgba\src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\util\table.c">
+      <Filter>application\3rd-party\mgba\src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\util\text-codec.c">
+      <Filter>application\3rd-party\mgba\src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\util\vfs.c">
+      <Filter>application\3rd-party\mgba\src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\inih\ini.c">
+      <Filter>application\3rd-party\mgba\src\third-party\inih</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\port\mgba\version.c">
+      <Filter>application\3rd-party\mgba\port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\util\vfs\vfs-devlist.c">
+      <Filter>application\3rd-party\mgba\src\util\vfs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\util\vfs\vfs-dirent.c">
+      <Filter>application\3rd-party\mgba\src\util\vfs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\util\vfs\vfs-fd.c">
+      <Filter>application\3rd-party\mgba\src\util\vfs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\util\vfs\vfs-fifo.c">
+      <Filter>application\3rd-party\mgba\src\util\vfs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\util\vfs\vfs-file.c">
+      <Filter>application\3rd-party\mgba\src\util\vfs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\util\vfs\vfs-lzma.c">
+      <Filter>application\3rd-party\mgba\src\util\vfs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\util\vfs\vfs-mem.c">
+      <Filter>application\3rd-party\mgba\src\util\vfs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\util\vfs\vfs-zip.c">
+      <Filter>application\3rd-party\mgba\src\util\vfs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\blip_buf\blip_buf.c">
+      <Filter>application\3rd-party\mgba\src\third-party\blip_buf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\arm\arm.c">
+      <Filter>application\3rd-party\mgba\src\arm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\arm\decoder.c">
+      <Filter>application\3rd-party\mgba\src\arm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\arm\decoder-arm.c">
+      <Filter>application\3rd-party\mgba\src\arm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\arm\decoder-thumb.c">
+      <Filter>application\3rd-party\mgba\src\arm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\arm\isa-arm.c">
+      <Filter>application\3rd-party\mgba\src\arm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\arm\isa-thumb.c">
+      <Filter>application\3rd-party\mgba\src\arm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\feature\thread-proxy.c">
+      <Filter>application\3rd-party\mgba\src\feature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\feature\video-logger.c">
+      <Filter>application\3rd-party\mgba\src\feature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\sm83\decoder.c">
+      <Filter>application\3rd-party\mgba\src\sm83</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\sm83\isa-sm83.c">
+      <Filter>application\3rd-party\mgba\src\sm83</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\sm83\sm83.c">
+      <Filter>application\3rd-party\mgba\src\sm83</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\feature\commandline.c">
+      <Filter>application\3rd-party\mgba\src\feature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\7zAlloc.c">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\7zArcIn.c">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\7zBuf.c">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\7zBuf2.c">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\7zCrc.c">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\7zCrcOpt.c">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\7zDec.c">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\7zFile.c">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\7zStream.c">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Aes.c">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\AesOpt.c">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Alloc.c">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Bcj2.c">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Bcj2Enc.c">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Bra.c">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Bra86.c">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\BraIA64.c">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\CpuArch.c">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Delta.c">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\DllSecur.c">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\LzFind.c">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\LzFindMt.c">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Lzma2Dec.c">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Lzma2DecMt.c">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Lzma2Enc.c">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Lzma86Dec.c">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Lzma86Enc.c">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\LzmaDec.c">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\LzmaEnc.c">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\LzmaLib.c">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\MtCoder.c">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\MtDec.c">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Ppmd7.c">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Ppmd7Dec.c">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Ppmd7Enc.c">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Sha256.c">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Sort.c">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Threads.c">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Xz.c">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\XzCrc64.c">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\XzCrc64Opt.c">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\XzDec.c">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\XzEnc.c">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\XzIn.c">
+      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\vsf\source\hal\arch\common\arch_without_thread_suspend\vsf_arch_without_thread_suspend_template.inc">
@@ -5015,6 +5738,9 @@
       <Filter>vsf\shell\sys\linux\include\simple_libc</Filter>
     </None>
     <None Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\string">
+      <Filter>vsf\shell\sys\linux\include\simple_libc</Filter>
+    </None>
+    <None Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\cmath">
       <Filter>vsf\shell\sys\linux\include\simple_libc</Filter>
     </None>
   </ItemGroup>

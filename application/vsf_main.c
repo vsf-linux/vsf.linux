@@ -184,6 +184,10 @@ int vsf_linux_create_fhs(void)
     extern int nofrendo_main(int argc, char **argv);
     busybox_bind(VSF_LINUX_CFG_BIN_PATH "/nofrendo", nofrendo_main);
 #endif
+#if APP_USE_MGBA_DEMO == ENABLED
+    extern int mgba_main(int argc, char **argv);
+    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/mgba", mgba_main);
+#endif
 #endif      // VSF_USE_SDL2
 
 #if VSF_USE_QUICKJS == ENABLED
