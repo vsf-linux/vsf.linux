@@ -623,6 +623,9 @@
     <ClCompile Include="..\..\application\3rd-party\lws\raw\lib\tls\tls-server.c" />
     <ClCompile Include="..\..\application\3rd-party\lws\raw\lib\tls\tls-sessions.c" />
     <ClCompile Include="..\..\application\3rd-party\lws\raw\lib\tls\tls.c" />
+    <ClCompile Include="..\..\application\3rd-party\lws\raw\minimal-examples-lowlevel\http-client\minimal-http-client\minimal-http-client.c">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">main=lws_minimal_http_client_main;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
     <ClCompile Include="..\..\application\vsf_main.c" />
     <ClCompile Include="..\..\vsf\example\template\demo\common\usrapp_audio_common.c" />
     <ClCompile Include="..\..\vsf\example\template\demo\common\usrapp_common.c" />
@@ -1017,7 +1020,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>__VSF__;__CPU_X86__;__WIN__;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;APP_USE_LIBWEBSOCKETS_DEMO=ENABLED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>__VSF__;__CPU_X86__;__WIN__;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;APP_USE_LWS_DEMO=ENABLED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-fms-extensions %(AdditionalOptions)</AdditionalOptions>
@@ -1045,7 +1048,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>MaxSpeed</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>__VSF__;__CPU_X64__;__WIN__;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;APP_USE_LIBWEBSOCKETS_DEMO=ENABLED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>__VSF__;__CPU_X64__;__WIN__;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;APP_USE_LWS_DEMO=ENABLED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\lws\port;$(ProjectDir)..\..\application\3rd-party\lws\raw\include;$(ProjectDir)..\..\application\3rd-party\lws\raw\lib;$(ProjectDir)..\..\application\3rd-party\lws\raw\lib\core;$(ProjectDir)..\..\application\3rd-party\lws\raw\lib\core-net;$(ProjectDir)..\..\application\3rd-party\lws\raw\lib\plat\unix;$(ProjectDir)..\..\application\3rd-party\lws\raw\lib\tls;$(ProjectDir)..\..\application\3rd-party\lws\raw\lib\tls\mbedtls\wrapper\include;$(ProjectDir)..\..\application\3rd-party\lws\raw\lib\tls\mbedtls\wrapper\include\internal;$(ProjectDir)..\..\application\3rd-party\lws\raw\lib\tls\mbedtls\wrapper\include\platform;$(ProjectDir)..\..\application\3rd-party\lws\raw\lib\jose;$(ProjectDir)..\..\application\3rd-party\lws\raw\lib\jose\jwe;$(ProjectDir)..\..\application\3rd-party\lws\raw\lib\jose\jwk;$(ProjectDir)..\..\application\3rd-party\lws\raw\lib\jose\jws;$(ProjectDir)..\..\application\3rd-party\lws\raw\lib\secure-streams;$(ProjectDir)..\..\application\3rd-party\lws\raw\lib\event-libs;$(ProjectDir)..\..\application\3rd-party\lws\raw\lib\system\smd;$(ProjectDir)..\..\application\3rd-party\lws\raw\lib\system\metrics;$(ProjectDir)..\..\application\3rd-party\lws\raw\lib\system\async-dns;$(ProjectDir)..\..\application\3rd-party\lws\raw\lib\roles;$(ProjectDir)..\..\application\3rd-party\lws\raw\lib\roles\http;$(ProjectDir)..\..\application\3rd-party\lws\raw\lib\roles\http\compression;$(ProjectDir)..\..\application\3rd-party\lws\raw\lib\roles\h1;$(ProjectDir)..\..\application\3rd-party\lws\raw\lib\roles\h2;$(ProjectDir)..\..\application\3rd-party\lws\raw\lib\roles\ws;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-fms-extensions %(AdditionalOptions)</AdditionalOptions>
@@ -1076,7 +1079,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>__VSF__;__CPU_X86__;__WIN__;__OOC_RELEASE__;NDEBUG;_CONSOLE;APP_USE_LIBWEBSOCKETS_DEMO=ENABLED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>__VSF__;__CPU_X86__;__WIN__;__OOC_RELEASE__;NDEBUG;_CONSOLE;APP_USE_LWS_DEMO=ENABLED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
@@ -1102,7 +1105,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>__VSF__;__CPU_X64__;__WIN__;__OOC_RELEASE__;NDEBUG;_CONSOLE;APP_USE_LIBWEBSOCKETS_DEMO=ENABLED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>__VSF__;__CPU_X64__;__WIN__;__OOC_RELEASE__;NDEBUG;_CONSOLE;APP_USE_LWS_DEMO=ENABLED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>

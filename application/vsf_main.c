@@ -201,6 +201,16 @@ int vsf_linux_create_fhs(void)
     busybox_bind(VSF_LINUX_CFG_BIN_PATH "/play_audio", audio_play_main);
 #endif
 
+#if APP_USE_LWS_DEMO == ENABLED
+    mkdir("/etc", 0);
+    FILE *f = fopen("/etc/resolv.conf", "w+");
+    if (f != NULL) {
+        char *dns_cfg = "nameserver 192.168.1.1";
+        fwrite(dns_cfg, strlen(dns_cfg), 1, f);
+    }
+    extern int lws_minimal_http_client_main(int argc, char *argv[]);
+    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/lws-minimal-http-client", lws_minimal_http_client_main);
+#endif
     return 0;
 }
 

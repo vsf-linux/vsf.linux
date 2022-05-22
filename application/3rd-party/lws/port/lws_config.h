@@ -71,20 +71,20 @@
 #define LWS_HAVE_MALLOC_H
 #define LWS_HAVE_MALLOC_TRIM
 #define LWS_HAVE_MALLOC_USABLE_SIZE
-#undef LWS_HAVE_mbedtls_md_setup
-#undef LWS_HAVE_mbedtls_net_init
-#undef LWS_HAVE_mbedtls_rsa_complete
-#undef LWS_HAVE_mbedtls_internal_aes_encrypt
-#undef LWS_HAVE_mbedtls_ssl_conf_alpn_protocols
-#undef LWS_HAVE_mbedtls_ssl_get_alpn_protocol
-#undef LWS_HAVE_mbedtls_ssl_conf_sni
-#undef LWS_HAVE_mbedtls_ssl_set_hs_ca_chain
-#undef LWS_HAVE_mbedtls_ssl_set_hs_own_cert
-#undef LWS_HAVE_mbedtls_ssl_set_hs_authmode
-#undef LWS_HAVE_mbedtls_ssl_set_verify
-#undef LWS_HAVE_mbedtls_x509_crt_parse_file
-#undef LWS_HAVE_MBEDTLS_NET_SOCKETS
-#undef LWS_HAVE_MBEDTLS_AUTH_KEY_ID
+#define LWS_HAVE_mbedtls_md_setup
+#define LWS_HAVE_mbedtls_net_init
+#define LWS_HAVE_mbedtls_rsa_complete
+#define LWS_HAVE_mbedtls_internal_aes_encrypt
+#define LWS_HAVE_mbedtls_ssl_conf_alpn_protocols
+#define LWS_HAVE_mbedtls_ssl_get_alpn_protocol
+#define LWS_HAVE_mbedtls_ssl_conf_sni
+#define LWS_HAVE_mbedtls_ssl_set_hs_ca_chain
+#define LWS_HAVE_mbedtls_ssl_set_hs_own_cert
+#define LWS_HAVE_mbedtls_ssl_set_hs_authmode
+#define LWS_HAVE_mbedtls_ssl_set_verify
+#define LWS_HAVE_mbedtls_x509_crt_parse_file
+#define LWS_HAVE_MBEDTLS_NET_SOCKETS
+#define LWS_HAVE_MBEDTLS_AUTH_KEY_ID
 /* #undef LWS_HAVE_NEW_UV_VERSION_H */
 /* #undef LWS_HAVE_OPENSSL_ECDH_H */
 /* #undef LWS_HAVE_OPENSSL_STACK */

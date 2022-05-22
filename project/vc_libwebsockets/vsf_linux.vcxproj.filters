@@ -3377,6 +3377,9 @@
     <ClCompile Include="..\..\application\3rd-party\lws\raw\lib\secure-streams\system\auth-api.amazon.com\auth.c">
       <Filter>application\3rd-party\lws\raw\lib\secure-streams\system\auth-api.amazon.com</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\lws\raw\minimal-examples-lowlevel\http-client\minimal-http-client\minimal-http-client.c">
+      <Filter>application\3rd-party\lws\raw</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\vsf\source\hal\arch\common\arch_without_thread_suspend\vsf_arch_without_thread_suspend_template.inc">
