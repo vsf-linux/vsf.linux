@@ -855,6 +855,9 @@
     <ClCompile Include="..\..\application\3rd-party\sdl\DungeonRush\src\helper.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\DungeonRush\src\main.c">
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">main=dung_main;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">main=dung_main;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">main=dung_main;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">main=dung_main;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\sdl\DungeonRush\src\map.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\DungeonRush\src\net.c" />
@@ -874,13 +877,7 @@
     <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\exports.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\fastmem.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\hw.c" />
-    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\inflate.c">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-      </ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\inflate.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\keytable.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\lcd.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\lcdc.c" />
@@ -897,6 +894,8 @@
     <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\newsound.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\palette.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\path.c" />
@@ -911,6 +910,9 @@
     <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\split.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\sys\nix\map.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\sys\nix\nix.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\gnuboy\sys\sdl2\keymap.c" />
@@ -1008,6 +1010,9 @@
     <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\gb\video.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\platform\sdl\main.c">
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">main=mgba_main;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">main=mgba_main;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">main=mgba_main;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">main=mgba_main;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\platform\sdl\sdl-audio.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\platform\sdl\sdl-events.c" />

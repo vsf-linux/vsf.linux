@@ -59,7 +59,7 @@
 #   define VSF_LINUX_USE_SIMPLE_LIBC                    ENABLED
 #   define VSF_KERNEL_CFG_THREAD_STACK_LARGE            ENABLED
 #   define VSF_LINUX_CFG_STACKSIZE                      (128 * 1024)
-#   define VSF_LINUX_CFG_PRINT_BUFF_SIZE                4096
+#   define VSF_LINUX_CFG_PRINT_BUFF_SIZE                1024
 //#   define VSF_LINUX_CFG_RTC                            vsf_hw_rtc0
 //#   define VSF_LINUX_SIMPLE_STDLIB_CFG_HEAP_MONITOR     ENABLED
 //#       define VSF_LINUX_SIMPLE_STDLIB_HEAP_MONITOR_TRACE_DEPTH (32 * 1024)

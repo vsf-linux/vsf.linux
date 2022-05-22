@@ -52,3 +52,6 @@
 [submodule "application/3rd-party/quickjs/MEUI"]
 	path = application/3rd-party/quickjs/MEUI
 	url = https://github.com/ZhUyU1997/MEUI
+[submodule "application/3rd-party/sdl/mgba"]
+	path = application/3rd-party/sdl/mgba
+	url = ../mgba

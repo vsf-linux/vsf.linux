@@ -3,6 +3,8 @@
  * This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+#define BUILD_STATIC
 #include <mgba/core/version.h>
 
 MGBA_EXPORT const char* const gitCommit = "87738ba8f383e8d79f4f4b245ce4cee38cb8472d";
