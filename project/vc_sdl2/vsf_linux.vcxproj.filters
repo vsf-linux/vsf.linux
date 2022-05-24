@@ -5720,6 +5720,9 @@
     <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\XzIn.c">
       <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\glibc\vsf_linux_glibcpp_string.cpp">
+      <Filter>vsf\shell\sys\linux\lib\glibc</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\vsf\source\hal\arch\common\arch_without_thread_suspend\vsf_arch_without_thread_suspend_template.inc">
