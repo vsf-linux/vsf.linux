@@ -60,3 +60,6 @@ link_directories(${CMAKE_CURRENT_BINARY_DIR}/libcurl_bin)
 target_link_libraries(${VSF_LIB_NAME} INTERFACE
     libcurl
 )
+target_compile_definitions(${VSF_LIB_NAME} INTERFACE
+    APP_USE_LINUX_CURL_DEMO=ENABLED
+)

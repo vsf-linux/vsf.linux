@@ -68,3 +68,6 @@ if(${VSF_HAL_CHIP_SERIES} STREQUAL AIC8800)
 endif()
 
 target_link_libraries(${CMAKE_PROJECT_NAME} PUBLIC vmlib)
+target_compile_definitions(${CMAKE_PROJECT_NAME} PUBLIC
+    APP_USE_WAMR_DEMO=ENABLED
+)

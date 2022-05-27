@@ -34,9 +34,8 @@ Porting linux applications to VSF
     - AIC8800M/vendor
     - mbedtls
     - btstack
-2. curl
-3. quickjs
-4. quickjs/MEUI
+2. quickjs
+3. quickjs/MEUI
 
 ## WebAssembly
 ### submodules

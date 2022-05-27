@@ -224,9 +224,6 @@
                     <state>__AIC__</state>
                     <state>__AIC8800__</state>
                     <state>__OOC_CPP__</state>
-                    <state>MBEDTLS_USER_CONFIG_FILE="component/3rd-party/mbedtls/port/platform_vsf.h"</state>
-                    <state>LV_CONF_INCLUDE_SIMPLE</state>
-                    <state>FT2_BUILD_LIBRARY</state>
                     <state>CFG_HW_PLATFORM=2</state>
                     <state>CFG_RF_MODE=3</state>
                     <state>CFG_PMIC</state>
@@ -244,6 +241,10 @@
                     <state>CONFIG_RWNX_LWIP</state>
                     <state>LWIP_NO_STDINT_H=1</state>
                     <state>LWIP_SO_RCVBUF=1</state>
+                    <state>APP_USE_LINUX_CURL_DEMO=ENABLED</state>
+                    <state>MBEDTLS_USER_CONFIG_FILE="component/3rd-party/mbedtls/port/platform_vsf.h"</state>
+                    <state>LV_CONF_INCLUDE_SIMPLE</state>
+                    <state>FT2_BUILD_LIBRARY</state>
                 </option>
                 <option>
                     <name>CCPreprocFile</name>
@@ -7787,15 +7788,6 @@
                 </group>
                 <group>
                     <name>common</name>
-                    <group>
-                        <name>gpio</name>
-                        <file>
-                            <name>$PROJ_DIR$\..\..\vsf\source\hal\driver\common\gpio\gpio_common.c</name>
-                        </file>
-                        <file>
-                            <name>$PROJ_DIR$\..\..\vsf\source\hal\driver\common\gpio\gpio_template.inc</name>
-                        </file>
-                    </group>
                     <group>
                         <name>i2c</name>
                         <file>
