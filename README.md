@@ -17,7 +17,7 @@ Porting linux applications to VSF
 3. less
 4. curl
 
-## aic8800m
+## aic8800m @ project/cmake/aic8800
 ### submodules
 1. vsf
     - PLOOC
@@ -26,6 +26,18 @@ Porting linux applications to VSF
     - mbedtls
     - btstack
 2. curl
+
+## aic8800m.meui @ project/cmake/aic8800.meui
+1. vsf
+    - PLOOC
+    - CMSIS
+    - AIC8800M/vendor
+    - mbedtls
+    - btstack
+2. curl
+3. quickjs
+4. sdl
+5. quickjs/MEUI
 
 ## WebAssembly
 ### submodules
