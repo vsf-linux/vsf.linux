@@ -36,8 +36,7 @@ Porting linux applications to VSF
     - btstack
 2. curl
 3. quickjs
-4. sdl
-5. quickjs/MEUI
+4. quickjs/MEUI
 
 ## WebAssembly
 ### submodules
