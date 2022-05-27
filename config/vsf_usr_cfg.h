@@ -62,16 +62,19 @@
 #   define VSF_USBH_USE_DS4                             ENABLED
 #   define VSF_USBH_USE_NSPRO                           ENABLED
 #   define VSF_USBH_USE_XB360                           ENABLED
+#   define VSF_USBH_USE_DL1X5                           ENABLED
+#   define VSF_USBH_USE_UAC                             ENABLED
 
 #define VSF_USE_TCPIP                                   ENABLED
 #define VSF_USE_UI                                      ENABLED
+#   define VSF_DISP_USE_DL1X5                           ENABLED
 
 #define VSF_USE_LINUX                                   ENABLED
 #   define VSF_USE_POSIX                                ENABLED
 #   define VSF_LINUX_USE_BUSYBOX                        ENABLED
 #   define VSF_LINUX_USE_SOCKET                         ENABLED
 #       define VSF_LINUX_SOCKET_USE_UNIX                ENABLED
-#       define VSF_LINUX_SOCKET_USE_INET                ENABLED
+#       define VSF_LINUX_SOCKET_USE_INET                VSF_USE_TCPIP
 #   define VSF_LINUX_USE_DEVFS                          ENABLED
 #       define VSF_LINUX_DEVFS_USE_RAND                 ENABLED
 #   define VSF_LINUX_CFG_FD_BITMAP_SIZE                 256
@@ -85,8 +88,10 @@
 #if VSF_USE_USB_HOST == ENABLED && VSF_LINUX_USE_LIBUSB == ENABLED
 #   define APP_USE_LINUX_LIBUSB_DEMO                    ENABLED
 #endif
-#define APP_USE_LINUX_NTPDATE_DEMO                      ENABLED
-#define APP_USE_LINUX_TELNETD_DEMO                      ENABLED
+#if VSF_LINUX_USE_SOCKET == ENABLED && VSF_LINUX_SOCKET_USE_INET == ENABLED
+#   define APP_USE_LINUX_NTPDATE_DEMO                   ENABLED
+#   define APP_USE_LINUX_TELNETD_DEMO                   ENABLED
+#endif
 #define APP_USE_SCSI_DEMO                               ENABLED
 
 // for debug and test only
