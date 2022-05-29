@@ -3264,9 +3264,6 @@
     <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\XzEnc.h">
       <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\memory.h">
-      <Filter>vsf\shell\sys\linux\include\simple_libc</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\stdatomic.h">
       <Filter>vsf\shell\sys\linux\include\simple_libc</Filter>
     </ClInclude>

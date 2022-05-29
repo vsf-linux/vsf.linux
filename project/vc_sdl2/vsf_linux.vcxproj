@@ -735,7 +735,6 @@
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\semaphore.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\signal.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\ctype.h" />
-    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\memory.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\stdatomic.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\stddef.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\stdio.h" />
