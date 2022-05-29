@@ -1,6 +1,6 @@
 [submodule "vsf"]
 	path = vsf
-	url = https://github.com/vsfteam/vsf
+	url = ../../vsfteam/vsf
 [submodule "application/3rd-party/ncurses/raw"]
 	path = application/3rd-party/ncurses/raw
 	url = ../ncurses
