@@ -64,6 +64,11 @@ if(APP_USE_MEUI_DEMO)
         MEUI/lib/pqueue
         MEUI/lib/stb/include
     )
+    if(VSF_LINUX_USE_SIMPLE_LIBC)
+    target_include_directories(meui PRIVATE
+        $ENV{VSF_PATH}/source/shell/sys/linux/include/simple_libc
+    )
+    endif()
     target_link_libraries(meui PRIVATE
         m   # -lm
     )
