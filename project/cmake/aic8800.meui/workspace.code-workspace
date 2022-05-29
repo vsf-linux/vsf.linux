@@ -58,8 +58,6 @@
 
 			"../../../application",
 		],
-		"files.associations": {
-			"sdl_internal.h": "c"
-		},
+		"files.associations": {},
 	}
 }
