@@ -42,8 +42,10 @@
 #define VSF_USE_SIMPLE_STREAM                           ENABLED
 #define VSF_USE_STREAM                                  DISABLED
 
-#define VSF_USE_AUDIO                                   ENABLED
-#define VSF_AUDIO_USE_PLAYBACK                          ENABLED
+#if VSF_USE_WINSOUND == ENABLED
+#   define VSF_USE_AUDIO                                ENABLED
+#   define VSF_AUDIO_USE_PLAYBACK                       ENABLED
+#endif
 
 #define VSF_USE_MAL                                     ENABLED
 #   define VSF_MAL_USE_FILE_MAL                         ENABLED

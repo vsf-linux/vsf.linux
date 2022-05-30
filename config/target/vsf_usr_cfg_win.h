@@ -135,12 +135,18 @@
 #   define APP_DISP_WINGDI_COLOR                        VSF_DISP_COLOR_RGB565
 //#define VSF_DISP_USE_SDL2                               ENABLED
 //#   define VSF_DISP_SDL2_CFG_INCLUDE                    "lib\SDL2\include\SDL.h"
-//#   define VSF_DISP_SDL2_CFG_MOUSE_AS_TOUCHSCREEN       ENABLED
+// use mouse for meui
+//#   define VSF_DISP_SDL2_CFG_MOUSE_AS_TOUCHSCREEN       DISABLED
 //#   ifdef __VSF_X86_WIN_SINGLE_PRIORITY
 //#       define VSF_DISP_SDL2_CFG_HW_PRIORITY            vsf_arch_prio_0
 //#   else
 //#       define VSF_DISP_SDL2_CFG_HW_PRIORITY            vsf_arch_prio_1
 //#   endif
+//#   define APP_DISP_SDL2_HEIGHT                         768
+//#   define APP_DISP_SDL2_WIDTH                          1024
+//#   define APP_DISP_SDL2_TITLE                          "vsf_screen"
+//#   define APP_DISP_SDL2_COLOR                          VSF_DISP_COLOR_RGB565
+//#   define APP_DISP_SDL2_AMPLIFIER                      1
 
 #define VSF_USE_WINSOUND                                ENABLED
 #   define VSF_WINSOUND_CFG_TRACE                       DISABLED

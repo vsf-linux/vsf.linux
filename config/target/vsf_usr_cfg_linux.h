@@ -68,7 +68,8 @@
 
 #define VSF_DISP_USE_SDL2                               ENABLED
 #   define VSF_DISP_SDL2_CFG_INCLUDE                    <SDL2/SDL.h>
-#   define VSF_DISP_SDL2_CFG_MOUSE_AS_TOUCHSCREEN       ENABLED
+// use mouse for meui
+#   define VSF_DISP_SDL2_CFG_MOUSE_AS_TOUCHSCREEN       DISABLED
 #       define VSF_DISP_SDL2_CFG_HW_PRIORITY            vsf_arch_prio_0
 #   define APP_DISP_SDL2_HEIGHT                         768
 #   define APP_DISP_SDL2_WIDTH                          1024
