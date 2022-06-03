@@ -1,0 +1,48 @@
+ jim-win32compat.h | 5 +++++
+ jim.c             | 1 +
+ linenoise.c       | 4 ++++
+ 3 files changed, 10 insertions(+)
+
+diff --git a/jim-win32compat.h b/jim-win32compat.h
+index 16133b5..0990e05 100644
+--- a/jim-win32compat.h
++++ b/jim-win32compat.h
+@@ -1,6 +1,11 @@
+ #ifndef JIM_WIN32COMPAT_H
+ #define JIM_WIN32COMPAT_H
+ 
++#ifdef __VSF__
++#undef _WIN32
++#undef _MSC_VER
++#endif
++
+ /* Compatibility for Windows (mingw and msvc, not cygwin */
+ 
+ #ifdef __cplusplus
+diff --git a/jim.c b/jim.c
+index adcb9da..f809f5e 100644
+--- a/jim.c
++++ b/jim.c
+@@ -56,6 +56,7 @@
+ #include <errno.h>
+ #include <time.h>
+ #include <setjmp.h>
++#include <unistd.h>
+ 
+ #include "jim.h"
+ #include "jimautoconf.h"
+diff --git a/linenoise.c b/linenoise.c
+index 1c01853..b0af7a9 100644
+--- a/linenoise.c
++++ b/linenoise.c
+@@ -406,6 +406,10 @@ void sb_clear(stringbuf *sb)
+  * This support based in part on work by Jon Griffiths.
+  */
+ 
++#ifdef __VSF__
++#undef _WIN32
++#endif
++
+ #ifdef _WIN32 /* Windows platform, either MinGW or Visual Studio (MSVC) */
+ #include <windows.h>
+ #include <fcntl.h>
