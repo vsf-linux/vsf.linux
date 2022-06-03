@@ -20,6 +20,7 @@ target_include_directories(${CMAKE_PROJECT_NAME} PUBLIC
 target_compile_definitions(${CMAKE_PROJECT_NAME} PUBLIC
     VSF_USE_QUICKJS=ENABLED
     CONFIG_VERSION="unknown"
+    CONFIG_NO_EVAL
 )
 
 if(APP_USE_MEUI_DEMO)

@@ -132,6 +132,10 @@ int vsf_linux_create_fhs(void)
     extern int iwasm_main(int argc, char *argv[]);
     busybox_bind(VSF_LINUX_CFG_BIN_PATH "/iwasm", iwasm_main);
 #endif
+#if APP_USE_OPENOCD_DEMO == ENABLED
+    extern int openocd_main(int argc, char *argv[]);
+    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/openocd", openocd_main);
+#endif
 
 #if VSF_USE_SDL2 == ENABLED
     if (NULL == usrapp_ui_common.disp) {

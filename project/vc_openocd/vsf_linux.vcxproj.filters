@@ -619,68 +619,74 @@
     <Filter Include="application\scsi_demo">
       <UniqueIdentifier>{16647ed1-5e38-4b7c-b4fd-2bbc700b2ff7}</UniqueIdentifier>
     </Filter>
-    <Filter Include="application\3rd-party\quickjs">
-      <UniqueIdentifier>{0b337a73-d23e-4f07-9935-edd06a7ad158}</UniqueIdentifier>
+    <Filter Include="application\3rd-party\openocd">
+      <UniqueIdentifier>{b32e21a6-2dd9-4aef-9fbb-a23d9933a10d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="application\3rd-party\quickjs\raw">
-      <UniqueIdentifier>{89959b20-3bd7-470a-bcf4-b4b9a0bb057c}</UniqueIdentifier>
+    <Filter Include="application\3rd-party\openocd\raw">
+      <UniqueIdentifier>{5b9ad7e5-6919-497f-8976-53f5b0a15afa}</UniqueIdentifier>
     </Filter>
-    <Filter Include="application\3rd-party\MEUI">
-      <UniqueIdentifier>{eba20ecb-1880-4e96-8d1a-2fb039d4c5a4}</UniqueIdentifier>
+    <Filter Include="application\3rd-party\openocd\raw\src">
+      <UniqueIdentifier>{bc57b826-b53c-467f-a99d-b253f8465740}</UniqueIdentifier>
     </Filter>
-    <Filter Include="application\3rd-party\MEUI\lib">
-      <UniqueIdentifier>{f0c23ffa-d1bd-4865-9ed9-953665460288}</UniqueIdentifier>
+    <Filter Include="application\3rd-party\openocd\port">
+      <UniqueIdentifier>{0c3968c2-a756-4cf1-9e0d-b249bf512d9e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="application\3rd-party\MEUI\lib\flex">
-      <UniqueIdentifier>{62c5c282-5588-4e56-9f48-3a7850a72596}</UniqueIdentifier>
+    <Filter Include="application\3rd-party\openocd\raw\jimtcl">
+      <UniqueIdentifier>{5f9a0de2-c7a9-4876-95e6-a49271179d34}</UniqueIdentifier>
     </Filter>
-    <Filter Include="application\3rd-party\MEUI\lib\hashmap">
-      <UniqueIdentifier>{225234ee-f94b-4fec-bfdb-e3c14f5b069d}</UniqueIdentifier>
+    <Filter Include="application\3rd-party\openocd\raw\src\helper">
+      <UniqueIdentifier>{634422c0-4379-4c0e-b314-1dc685d69abd}</UniqueIdentifier>
     </Filter>
-    <Filter Include="application\3rd-party\MEUI\lib\hashmap\src">
-      <UniqueIdentifier>{2bbd3b3c-44a4-46d8-afe0-a9829b341aa5}</UniqueIdentifier>
+    <Filter Include="application\3rd-party\openocd\raw\jimtcl\jsmn">
+      <UniqueIdentifier>{187b80da-108b-4756-8037-e81b09f9cfcc}</UniqueIdentifier>
     </Filter>
-    <Filter Include="application\3rd-party\MEUI\lib\plutovg">
-      <UniqueIdentifier>{1de84b8e-0c57-4085-b61c-369d9da69703}</UniqueIdentifier>
+    <Filter Include="application\3rd-party\openocd\raw\src\rtt">
+      <UniqueIdentifier>{0e533bca-1eed-4bf2-9d4f-62e9b33735ec}</UniqueIdentifier>
     </Filter>
-    <Filter Include="application\3rd-party\MEUI\lib\plutovg\3rdparty">
-      <UniqueIdentifier>{129a5ca9-9d90-4c07-8537-ab266f06e180}</UniqueIdentifier>
+    <Filter Include="application\3rd-party\openocd\raw\src\target">
+      <UniqueIdentifier>{16ace233-9aa0-4bdf-98dd-a1b8a83e48c8}</UniqueIdentifier>
     </Filter>
-    <Filter Include="application\3rd-party\MEUI\lib\plutovg\3rdparty\software">
-      <UniqueIdentifier>{876fe2cb-54ce-48cd-adc0-efe00e15a64c}</UniqueIdentifier>
+    <Filter Include="application\3rd-party\openocd\raw\src\flash">
+      <UniqueIdentifier>{6fe2576c-a151-4206-b3e8-54100b6ba85e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="application\3rd-party\MEUI\lib\plutovg\source">
-      <UniqueIdentifier>{4abb4960-0be1-472f-8b4b-42100819affa}</UniqueIdentifier>
+    <Filter Include="application\3rd-party\openocd\raw\src\flash\nand">
+      <UniqueIdentifier>{0dda4f0d-5815-42a4-a8b9-f6878d4a01cc}</UniqueIdentifier>
     </Filter>
-    <Filter Include="application\3rd-party\MEUI\lib\pqueue">
-      <UniqueIdentifier>{3ab23023-d4f8-48ee-ac3d-7ef21a5af834}</UniqueIdentifier>
+    <Filter Include="application\3rd-party\openocd\raw\src\flash\nor">
+      <UniqueIdentifier>{6e029f89-0185-4930-955f-05e82c102dcf}</UniqueIdentifier>
     </Filter>
-    <Filter Include="application\3rd-party\MEUI\lib\stb">
-      <UniqueIdentifier>{6e0e6136-2863-4e33-baa3-c196b4f8b6a0}</UniqueIdentifier>
+    <Filter Include="application\3rd-party\openocd\raw\src\jtag">
+      <UniqueIdentifier>{535da43e-6d2d-41b3-995b-ae381ceea13d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="application\3rd-party\MEUI\src">
-      <UniqueIdentifier>{e841a2c4-558f-428f-bd88-af7c92a4deb7}</UniqueIdentifier>
+    <Filter Include="application\3rd-party\openocd\raw\src\jtag\drivers">
+      <UniqueIdentifier>{83d32c77-5d3a-4197-ab9d-f88a360aacab}</UniqueIdentifier>
     </Filter>
-    <Filter Include="application\3rd-party\MEUI\src\bind">
-      <UniqueIdentifier>{b29b27d1-6aab-4b05-bf0c-c2f587044742}</UniqueIdentifier>
+    <Filter Include="application\3rd-party\openocd\raw\src\target\riscv">
+      <UniqueIdentifier>{d57fe75d-1523-4fa0-a62c-73018382ce9c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="application\3rd-party\MEUI\src\bind\element">
-      <UniqueIdentifier>{276bd8d4-7adb-4aa5-b218-bc1ac36f5369}</UniqueIdentifier>
+    <Filter Include="application\3rd-party\openocd\raw\src\server">
+      <UniqueIdentifier>{984d2bfe-936f-4347-9d78-6708e96d14a4}</UniqueIdentifier>
     </Filter>
-    <Filter Include="application\3rd-party\MEUI\src\element">
-      <UniqueIdentifier>{acef86d4-dfd2-4ace-be01-437a9447f6ff}</UniqueIdentifier>
+    <Filter Include="application\3rd-party\openocd\raw\src\pld">
+      <UniqueIdentifier>{0f88f546-fa25-49f2-ba88-b4ca8fa01b50}</UniqueIdentifier>
     </Filter>
-    <Filter Include="application\3rd-party\MEUI\src\platform">
-      <UniqueIdentifier>{4b9d686f-2b1a-4b3d-875b-251499faed44}</UniqueIdentifier>
+    <Filter Include="application\3rd-party\openocd\raw\src\svf">
+      <UniqueIdentifier>{f8983592-aa62-4564-990b-ccda591520c9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="application\3rd-party\MEUI\src\platform\vsf">
-      <UniqueIdentifier>{63eb13f1-f638-4f12-a630-f767e15f0fa3}</UniqueIdentifier>
+    <Filter Include="application\3rd-party\openocd\raw\src\xsvf">
+      <UniqueIdentifier>{19a6f6a5-2f1e-4964-b303-82d0a0ce1bb7}</UniqueIdentifier>
     </Filter>
-    <Filter Include="application\3rd-party\MEUI\lib\plutosvg">
-      <UniqueIdentifier>{d7da74a9-1d55-4211-b270-994b6e805617}</UniqueIdentifier>
+    <Filter Include="application\3rd-party\openocd\raw\src\rtos">
+      <UniqueIdentifier>{ce0988b4-37df-40bf-9a03-f46de24de8c0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="application\3rd-party\MEUI\lib\plutosvg\source">
-      <UniqueIdentifier>{dccf486d-253d-4325-90d7-3cb17aca7d63}</UniqueIdentifier>
+    <Filter Include="application\3rd-party\openocd\raw\src\transport">
+      <UniqueIdentifier>{c4045f96-b9d4-4d5e-8c0a-767bae937e0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\openocd\raw\src\target\openrisc">
+      <UniqueIdentifier>{5f8cbefe-9a67-4df8-9ff9-0d5a0b1c61cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\openocd\port\jimtcl">
+      <UniqueIdentifier>{ad397d22-1017-4769-9b4c-2fc45a668835}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -1668,56 +1674,584 @@
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\eventfd.h">
       <Filter>vsf\shell\sys\linux\include\sys</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\quickjs\raw\cutils.h">
-      <Filter>application\3rd-party\quickjs\raw</Filter>
+    <ClInclude Include="..\..\application\3rd-party\openocd\port\config.h">
+      <Filter>application\3rd-party\openocd\port</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\quickjs\raw\libbf.h">
-      <Filter>application\3rd-party\quickjs\raw</Filter>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\hello.h">
+      <Filter>application\3rd-party\openocd\raw\src</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\quickjs\raw\libregexp.h">
-      <Filter>application\3rd-party\quickjs\raw</Filter>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\openocd.h">
+      <Filter>application\3rd-party\openocd\raw\src</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\quickjs\raw\libregexp-opcode.h">
-      <Filter>application\3rd-party\quickjs\raw</Filter>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\jimtcl\jim.h">
+      <Filter>application\3rd-party\openocd\raw\jimtcl</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\quickjs\raw\libunicode.h">
-      <Filter>application\3rd-party\quickjs\raw</Filter>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\jimtcl\jim-eventloop.h">
+      <Filter>application\3rd-party\openocd\raw\jimtcl</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\quickjs\raw\libunicode-table.h">
-      <Filter>application\3rd-party\quickjs\raw</Filter>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\jimtcl\jimiocompat.h">
+      <Filter>application\3rd-party\openocd\raw\jimtcl</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\quickjs\raw\list.h">
-      <Filter>application\3rd-party\quickjs\raw</Filter>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\jimtcl\jim-subcmd.h">
+      <Filter>application\3rd-party\openocd\raw\jimtcl</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\quickjs\raw\quickjs.h">
-      <Filter>application\3rd-party\quickjs\raw</Filter>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\jimtcl\jim-tty.h">
+      <Filter>application\3rd-party\openocd\raw\jimtcl</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\quickjs\raw\quickjs-atom.h">
-      <Filter>application\3rd-party\quickjs\raw</Filter>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\jimtcl\linenoise.h">
+      <Filter>application\3rd-party\openocd\raw\jimtcl</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\quickjs\raw\quickjs-libc.h">
-      <Filter>application\3rd-party\quickjs\raw</Filter>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\jimtcl\utf8.h">
+      <Filter>application\3rd-party\openocd\raw\jimtcl</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\quickjs\raw\quickjs-opcode.h">
-      <Filter>application\3rd-party\quickjs\raw</Filter>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\jimtcl\jsmn\jsmn.h">
+      <Filter>application\3rd-party\openocd\raw\jimtcl\jsmn</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\quickjs\MEUI\lib\plutovg\3rdparty\software\sw_ft_math.h">
-      <Filter>application\3rd-party\MEUI\lib\plutovg\3rdparty\software</Filter>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\helper\align.h">
+      <Filter>application\3rd-party\openocd\raw\src\helper</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\quickjs\MEUI\lib\plutovg\3rdparty\software\sw_ft_raster.h">
-      <Filter>application\3rd-party\MEUI\lib\plutovg\3rdparty\software</Filter>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\helper\binarybuffer.h">
+      <Filter>application\3rd-party\openocd\raw\src\helper</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\quickjs\MEUI\lib\plutovg\3rdparty\software\sw_ft_stroker.h">
-      <Filter>application\3rd-party\MEUI\lib\plutovg\3rdparty\software</Filter>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\helper\bits.h">
+      <Filter>application\3rd-party\openocd\raw\src\helper</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\quickjs\MEUI\lib\plutovg\3rdparty\software\sw_ft_types.h">
-      <Filter>application\3rd-party\MEUI\lib\plutovg\3rdparty\software</Filter>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\helper\command.h">
+      <Filter>application\3rd-party\openocd\raw\src\helper</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\quickjs\MEUI\lib\plutovg\source\plutovg-private.h">
-      <Filter>application\3rd-party\MEUI\lib\plutovg\source</Filter>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\helper\configuration.h">
+      <Filter>application\3rd-party\openocd\raw\src\helper</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\quickjs\MEUI\lib\pqueue\pqueue.h">
-      <Filter>application\3rd-party\MEUI\lib\pqueue</Filter>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\helper\fileio.h">
+      <Filter>application\3rd-party\openocd\raw\src\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\helper\jep106.h">
+      <Filter>application\3rd-party\openocd\raw\src\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\helper\jim-nvp.h">
+      <Filter>application\3rd-party\openocd\raw\src\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\helper\list.h">
+      <Filter>application\3rd-party\openocd\raw\src\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\helper\log.h">
+      <Filter>application\3rd-party\openocd\raw\src\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\helper\replacements.h">
+      <Filter>application\3rd-party\openocd\raw\src\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\helper\system.h">
+      <Filter>application\3rd-party\openocd\raw\src\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\helper\time_support.h">
+      <Filter>application\3rd-party\openocd\raw\src\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\helper\types.h">
+      <Filter>application\3rd-party\openocd\raw\src\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\helper\util.h">
+      <Filter>application\3rd-party\openocd\raw\src\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\rtt\rtt.h">
+      <Filter>application\3rd-party\openocd\raw\src\rtt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\a64_disassembler.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\aarch64.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\algorithm.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\arc.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\arc_cmd.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\arc_jtag.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\arc_mem.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\arm.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\arm_adi_v5.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\arm_coresight.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\arm_cti.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\arm_disassembler.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\arm_dpm.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\arm_jtag.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\arm_opcodes.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\arm_semihosting.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\arm_simulator.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\arm_tpiu_swo.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\arm7_9_common.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\arm7tdmi.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\arm9tdmi.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\arm11.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\arm11_dbgtap.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\arm720t.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\arm920t.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\arm926ejs.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\arm946e.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\arm966e.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\armv4_5.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\armv4_5_cache.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\armv4_5_mmu.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\armv7a.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\armv7a_cache.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\armv7a_cache_l2x.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\armv7a_mmu.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\armv7m.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\armv7m_trace.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\armv8.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\armv8_cache.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\armv8_dpm.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\armv8_opcodes.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\avr32_ap7k.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\avr32_jtag.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\avr32_mem.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\avr32_regs.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\avrt.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\breakpoints.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\cortex_a.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\cortex_m.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\dsp563xx.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\dsp563xx_once.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\dsp5680xx.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\embeddedice.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\esirisc.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\esirisc_jtag.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\esirisc_regs.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\esirisc_trace.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\etb.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\etm.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\etm_dummy.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\image.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\lakemont.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\mips_ejtag.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\mips_m4k.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\mips_mips64.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\mips32.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\mips32_dmaacc.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\mips32_pracc.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\mips64.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\mips64_pracc.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\nds32.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\nds32_aice.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\nds32_cmd.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\nds32_disassembler.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\nds32_edm.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\nds32_insn.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\nds32_reg.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\nds32_tlb.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\nds32_v2.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\nds32_v3.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\nds32_v3_common.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\nds32_v3m.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\register.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\rtt.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\semihosting_common.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\smp.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\stm8.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\target.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\target_request.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\target_type.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\trace.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\x86_32_common.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\xscale.h">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\flash\common.h">
+      <Filter>application\3rd-party\openocd\raw\src\flash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\flash\nand\arm_io.h">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nand</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\flash\nand\core.h">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nand</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\flash\nand\driver.h">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nand</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\flash\nand\fileio.h">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nand</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\flash\nand\imp.h">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nand</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\flash\nand\lpc32xx.h">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nand</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\flash\nand\lpc3180.h">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nand</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\flash\nand\mx3.h">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nand</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\flash\nand\mxc.h">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nand</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\flash\nand\nuc910.h">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nand</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\flash\nand\s3c24xx.h">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nand</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\flash\nand\s3c24xx_regs.h">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nand</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\bluenrg-x.h">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\cc26xx.h">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\cc3220sf.h">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\cfi.h">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\core.h">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\driver.h">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\imp.h">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\msp432.h">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\non_cfi.h">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\ocl.h">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\sfdp.h">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\spi.h">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\stm32l4x.h">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\stmqspi.h">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\jtag\adapter.h">
+      <Filter>application\3rd-party\openocd\raw\src\jtag</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\jtag\commands.h">
+      <Filter>application\3rd-party\openocd\raw\src\jtag</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\jtag\interface.h">
+      <Filter>application\3rd-party\openocd\raw\src\jtag</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\jtag\interfaces.h">
+      <Filter>application\3rd-party\openocd\raw\src\jtag</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\jtag\jtag.h">
+      <Filter>application\3rd-party\openocd\raw\src\jtag</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\jtag\minidriver.h">
+      <Filter>application\3rd-party\openocd\raw\src\jtag</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\jtag\swd.h">
+      <Filter>application\3rd-party\openocd\raw\src\jtag</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\jtag\swim.h">
+      <Filter>application\3rd-party\openocd\raw\src\jtag</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\jtag\tcl.h">
+      <Filter>application\3rd-party\openocd\raw\src\jtag</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\riscv\asm.h">
+      <Filter>application\3rd-party\openocd\raw\src\target\riscv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\riscv\batch.h">
+      <Filter>application\3rd-party\openocd\raw\src\target\riscv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\riscv\debug_defines.h">
+      <Filter>application\3rd-party\openocd\raw\src\target\riscv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\riscv\encoding.h">
+      <Filter>application\3rd-party\openocd\raw\src\target\riscv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\riscv\gdb_regs.h">
+      <Filter>application\3rd-party\openocd\raw\src\target\riscv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\riscv\opcodes.h">
+      <Filter>application\3rd-party\openocd\raw\src\target\riscv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\riscv\program.h">
+      <Filter>application\3rd-party\openocd\raw\src\target\riscv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\riscv\riscv.h">
+      <Filter>application\3rd-party\openocd\raw\src\target\riscv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\server\gdb_server.h">
+      <Filter>application\3rd-party\openocd\raw\src\server</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\server\ipdbg.h">
+      <Filter>application\3rd-party\openocd\raw\src\server</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\server\rtt_server.h">
+      <Filter>application\3rd-party\openocd\raw\src\server</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\server\server.h">
+      <Filter>application\3rd-party\openocd\raw\src\server</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\server\tcl_server.h">
+      <Filter>application\3rd-party\openocd\raw\src\server</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\server\telnet_server.h">
+      <Filter>application\3rd-party\openocd\raw\src\server</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\pld\pld.h">
+      <Filter>application\3rd-party\openocd\raw\src\pld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\pld\virtex2.h">
+      <Filter>application\3rd-party\openocd\raw\src\pld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\pld\xilinx_bit.h">
+      <Filter>application\3rd-party\openocd\raw\src\pld</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\svf\svf.h">
+      <Filter>application\3rd-party\openocd\raw\src\svf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\xsvf\xsvf.h">
+      <Filter>application\3rd-party\openocd\raw\src\xsvf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\rtos\linux_header.h">
+      <Filter>application\3rd-party\openocd\raw\src\rtos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\rtos\nuttx_header.h">
+      <Filter>application\3rd-party\openocd\raw\src\rtos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\rtos\rtos.h">
+      <Filter>application\3rd-party\openocd\raw\src\rtos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\rtos\rtos_chibios_stackings.h">
+      <Filter>application\3rd-party\openocd\raw\src\rtos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\rtos\rtos_ecos_stackings.h">
+      <Filter>application\3rd-party\openocd\raw\src\rtos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\rtos\rtos_embkernel_stackings.h">
+      <Filter>application\3rd-party\openocd\raw\src\rtos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\rtos\rtos_mqx_stackings.h">
+      <Filter>application\3rd-party\openocd\raw\src\rtos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\rtos\rtos_riot_stackings.h">
+      <Filter>application\3rd-party\openocd\raw\src\rtos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\rtos\rtos_standard_stackings.h">
+      <Filter>application\3rd-party\openocd\raw\src\rtos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\rtos\rtos_ucos_iii_stackings.h">
+      <Filter>application\3rd-party\openocd\raw\src\rtos</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\transport\transport.h">
+      <Filter>application\3rd-party\openocd\raw\src\transport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\jtag\drivers\cmsis_dap.h">
+      <Filter>application\3rd-party\openocd\raw\src\jtag\drivers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\openrisc\jsp_server.h">
+      <Filter>application\3rd-party\openocd\raw\src\target\openrisc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\openrisc\or1k.h">
+      <Filter>application\3rd-party\openocd\raw\src\target\openrisc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\openrisc\or1k_du.h">
+      <Filter>application\3rd-party\openocd\raw\src\target\openrisc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\openrisc\or1k_tap.h">
+      <Filter>application\3rd-party\openocd\raw\src\target\openrisc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\port\jimtcl\jimautoconf.h">
+      <Filter>application\3rd-party\openocd\port\jimtcl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\openocd\port\jimtcl\jim-config.h">
+      <Filter>application\3rd-party\openocd\port\jimtcl</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -2315,128 +2849,911 @@
     <ClCompile Include="..\..\vsf\example\template\demo\scsi_demo\scsi_demo.c">
       <Filter>application\scsi_demo</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\quickjs\raw\cutils.c">
-      <Filter>application\3rd-party\quickjs\raw</Filter>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\hello.c">
+      <Filter>application\3rd-party\openocd\raw\src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\quickjs\raw\libbf.c">
-      <Filter>application\3rd-party\quickjs\raw</Filter>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\main.c">
+      <Filter>application\3rd-party\openocd\raw\src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\quickjs\raw\libregexp.c">
-      <Filter>application\3rd-party\quickjs\raw</Filter>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\openocd.c">
+      <Filter>application\3rd-party\openocd\raw\src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\quickjs\raw\libunicode.c">
-      <Filter>application\3rd-party\quickjs\raw</Filter>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\jimtcl\jim.c">
+      <Filter>application\3rd-party\openocd\raw\jimtcl</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\quickjs\raw\qjs.c">
-      <Filter>application\3rd-party\quickjs\raw</Filter>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\jimtcl\jim-aio.c">
+      <Filter>application\3rd-party\openocd\raw\jimtcl</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\quickjs\raw\qjsc.c">
-      <Filter>application\3rd-party\quickjs\raw</Filter>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\jimtcl\jim-array.c">
+      <Filter>application\3rd-party\openocd\raw\jimtcl</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\quickjs\raw\quickjs.c">
-      <Filter>application\3rd-party\quickjs\raw</Filter>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\jimtcl\jim-clock.c">
+      <Filter>application\3rd-party\openocd\raw\jimtcl</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\quickjs\raw\quickjs-libc.c">
-      <Filter>application\3rd-party\quickjs\raw</Filter>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\jimtcl\jim-eventloop.c">
+      <Filter>application\3rd-party\openocd\raw\jimtcl</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\lib\flex\FlexLayout.c">
-      <Filter>application\3rd-party\MEUI\lib\flex</Filter>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\jimtcl\jim-exec.c">
+      <Filter>application\3rd-party\openocd\raw\jimtcl</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\lib\hashmap\src\hashmap.c">
-      <Filter>application\3rd-party\MEUI\lib\hashmap\src</Filter>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\jimtcl\jim-file.c">
+      <Filter>application\3rd-party\openocd\raw\jimtcl</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\lib\plutovg\3rdparty\software\sw_ft_math.c">
-      <Filter>application\3rd-party\MEUI\lib\plutovg\3rdparty\software</Filter>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\jimtcl\jim-format.c">
+      <Filter>application\3rd-party\openocd\raw\jimtcl</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\lib\plutovg\3rdparty\software\sw_ft_raster.c">
-      <Filter>application\3rd-party\MEUI\lib\plutovg\3rdparty\software</Filter>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\jimtcl\jim-history.c">
+      <Filter>application\3rd-party\openocd\raw\jimtcl</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\lib\plutovg\3rdparty\software\sw_ft_stroker.c">
-      <Filter>application\3rd-party\MEUI\lib\plutovg\3rdparty\software</Filter>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\jimtcl\jim-interactive.c">
+      <Filter>application\3rd-party\openocd\raw\jimtcl</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\lib\plutovg\source\plutovg.c">
-      <Filter>application\3rd-party\MEUI\lib\plutovg\source</Filter>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\jimtcl\jim-interp.c">
+      <Filter>application\3rd-party\openocd\raw\jimtcl</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\lib\plutovg\source\plutovg-blend.c">
-      <Filter>application\3rd-party\MEUI\lib\plutovg\source</Filter>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\jimtcl\jimiocompat.c">
+      <Filter>application\3rd-party\openocd\raw\jimtcl</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\lib\plutovg\source\plutovg-dash.c">
-      <Filter>application\3rd-party\MEUI\lib\plutovg\source</Filter>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\jimtcl\jim-json.c">
+      <Filter>application\3rd-party\openocd\raw\jimtcl</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\lib\plutovg\source\plutovg-font.c">
-      <Filter>application\3rd-party\MEUI\lib\plutovg\source</Filter>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\jimtcl\jim-load.c">
+      <Filter>application\3rd-party\openocd\raw\jimtcl</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\lib\plutovg\source\plutovg-geometry.c">
-      <Filter>application\3rd-party\MEUI\lib\plutovg\source</Filter>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\jimtcl\jim-namespace.c">
+      <Filter>application\3rd-party\openocd\raw\jimtcl</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\lib\plutovg\source\plutovg-paint.c">
-      <Filter>application\3rd-party\MEUI\lib\plutovg\source</Filter>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\jimtcl\jim-pack.c">
+      <Filter>application\3rd-party\openocd\raw\jimtcl</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\lib\plutovg\source\plutovg-rle.c">
-      <Filter>application\3rd-party\MEUI\lib\plutovg\source</Filter>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\jimtcl\jim-package.c">
+      <Filter>application\3rd-party\openocd\raw\jimtcl</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\lib\pqueue\pqueue.c">
-      <Filter>application\3rd-party\MEUI\lib\pqueue</Filter>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\jimtcl\jim-posix.c">
+      <Filter>application\3rd-party\openocd\raw\jimtcl</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\lib\stb\impl.c">
-      <Filter>application\3rd-party\MEUI\lib\stb</Filter>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\jimtcl\jim-readdir.c">
+      <Filter>application\3rd-party\openocd\raw\jimtcl</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\src\bind\element\canvas.c">
-      <Filter>application\3rd-party\MEUI\src\bind\element</Filter>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\jimtcl\jimregexp.c">
+      <Filter>application\3rd-party\openocd\raw\jimtcl</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\src\bind\element\gradient.c">
-      <Filter>application\3rd-party\MEUI\src\bind\element</Filter>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\jimtcl\jim-regexp.c">
+      <Filter>application\3rd-party\openocd\raw\jimtcl</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\src\bind\element\path2d.c">
-      <Filter>application\3rd-party\MEUI\src\bind\element</Filter>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\jimtcl\jim-subcmd.c">
+      <Filter>application\3rd-party\openocd\raw\jimtcl</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\src\bind\box.c">
-      <Filter>application\3rd-party\MEUI\src\bind</Filter>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\jimtcl\jim-syslog.c">
+      <Filter>application\3rd-party\openocd\raw\jimtcl</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\src\bind\meui.c">
-      <Filter>application\3rd-party\MEUI\src\bind</Filter>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\jimtcl\jim-tty.c">
+      <Filter>application\3rd-party\openocd\raw\jimtcl</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\src\bind\style.c">
-      <Filter>application\3rd-party\MEUI\src\bind</Filter>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\jimtcl\linenoise.c">
+      <Filter>application\3rd-party\openocd\raw\jimtcl</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\src\element\canvas.c">
-      <Filter>application\3rd-party\MEUI\src\element</Filter>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\jimtcl\utf8.c">
+      <Filter>application\3rd-party\openocd\raw\jimtcl</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\src\element\div.c">
-      <Filter>application\3rd-party\MEUI\src\element</Filter>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\jimtcl\jsmn\jsmn.c">
+      <Filter>application\3rd-party\openocd\raw\jimtcl\jsmn</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\src\element\stack.c">
-      <Filter>application\3rd-party\MEUI\src\element</Filter>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\helper\binarybuffer.c">
+      <Filter>application\3rd-party\openocd\raw\src\helper</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\src\platform\vsf\window.c">
-      <Filter>application\3rd-party\MEUI\src\platform\vsf</Filter>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\helper\command.c">
+      <Filter>application\3rd-party\openocd\raw\src\helper</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\src\box.c">
-      <Filter>application\3rd-party\MEUI\src</Filter>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\helper\configuration.c">
+      <Filter>application\3rd-party\openocd\raw\src\helper</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\src\class.c">
-      <Filter>application\3rd-party\MEUI\src</Filter>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\helper\fileio.c">
+      <Filter>application\3rd-party\openocd\raw\src\helper</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\src\image.c">
-      <Filter>application\3rd-party\MEUI\src</Filter>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\helper\jep106.c">
+      <Filter>application\3rd-party\openocd\raw\src\helper</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\src\main.c">
-      <Filter>application\3rd-party\MEUI\src</Filter>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\helper\jim-nvp.c">
+      <Filter>application\3rd-party\openocd\raw\src\helper</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\src\meui.c">
-      <Filter>application\3rd-party\MEUI\src</Filter>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\helper\log.c">
+      <Filter>application\3rd-party\openocd\raw\src\helper</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\src\style.c">
-      <Filter>application\3rd-party\MEUI\src</Filter>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\helper\options.c">
+      <Filter>application\3rd-party\openocd\raw\src\helper</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\src\text.c">
-      <Filter>application\3rd-party\MEUI\src</Filter>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\helper\replacements.c">
+      <Filter>application\3rd-party\openocd\raw\src\helper</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\src\util.c">
-      <Filter>application\3rd-party\MEUI\src</Filter>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\helper\time_support.c">
+      <Filter>application\3rd-party\openocd\raw\src\helper</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\lib\plutosvg\source\plutosvg.c">
-      <Filter>application\3rd-party\MEUI\lib\plutosvg\source</Filter>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\helper\time_support_common.c">
+      <Filter>application\3rd-party\openocd\raw\src\helper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\helper\util.c">
+      <Filter>application\3rd-party\openocd\raw\src\helper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\rtt\rtt.c">
+      <Filter>application\3rd-party\openocd\raw\src\rtt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\rtt\tcl.c">
+      <Filter>application\3rd-party\openocd\raw\src\rtt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\a64_disassembler.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\aarch64.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\adi_v5_dapdirect.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\adi_v5_jtag.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\adi_v5_swd.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\algorithm.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\arc.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\arc_cmd.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\arc_jtag.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\arc_mem.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\arm_adi_v5.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\arm_cti.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\arm_dap.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\arm_disassembler.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\arm_dpm.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\arm_jtag.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\arm_semihosting.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\arm_simulator.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\arm_tpiu_swo.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\arm7_9_common.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\arm7tdmi.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\arm9tdmi.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\arm11.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\arm11_dbgtap.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\arm720t.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\arm920t.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\arm926ejs.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\arm946e.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\arm966e.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\armv4_5.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\armv4_5_cache.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\armv4_5_mmu.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\armv7a.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\armv7a_cache.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\armv7a_cache_l2x.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\armv7a_mmu.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\armv7m.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\armv7m_trace.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\armv8.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\armv8_cache.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\armv8_dpm.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\armv8_opcodes.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\avr32_ap7k.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\avr32_jtag.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\avr32_mem.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\avr32_regs.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\avrt.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\breakpoints.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\cortex_a.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\cortex_m.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\dsp563xx.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\dsp563xx_once.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\dsp5680xx.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\embeddedice.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\esirisc.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\esirisc_jtag.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\esirisc_trace.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\etb.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\etm.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\etm_dummy.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\fa526.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\feroceon.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\hla_target.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\image.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\lakemont.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\ls1_sap.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\mem_ap.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\mips_ejtag.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\mips_m4k.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\mips_mips64.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\mips32.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\mips32_dmaacc.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\mips32_pracc.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\mips64.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\mips64_pracc.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\nds32.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\nds32_aice.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\nds32_cmd.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\nds32_disassembler.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\nds32_reg.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\nds32_tlb.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\nds32_v2.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\nds32_v3.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\nds32_v3_common.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\nds32_v3m.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\quark_d20xx.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\quark_x10xx.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\register.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\rtt.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\semihosting_common.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\smp.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\stm8.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\target.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\target_request.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\testee.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\trace.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\x86_32_common.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\xscale.c">
+      <Filter>application\3rd-party\openocd\raw\src\target</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\common.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nand\arm_io.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nand</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nand\at91sam9.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nand</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nand\core.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nand</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nand\davinci.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nand</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nand\driver.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nand</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nand\ecc.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nand</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nand\ecc_kw.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nand</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nand\fileio.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nand</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nand\lpc32xx.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nand</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nand\lpc3180.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nand</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nand\mx3.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nand</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nand\mxc.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nand</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nand\nonce.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nand</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nand\nuc910.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nand</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nand\orion.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nand</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nand\s3c24xx.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nand</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nand\s3c2410.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nand</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nand\s3c2412.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nand</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nand\s3c2440.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nand</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nand\s3c2443.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nand</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nand\s3c6400.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nand</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nand\tcl.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nand</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\aduc702x.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\aducm360.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\ambiqmicro.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\at91sam3.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\at91sam4.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\at91sam4l.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\at91sam7.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\at91samd.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\ath79.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\atsame5.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\atsamv.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\avrf.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\bluenrg-x.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\cc26xx.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\cc3220sf.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\cfi.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\core.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\drivers.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\dsp5680xx_flash.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\efm32.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\em357.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\esirisc_flash.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\faux.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\fespi.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\fm3.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\fm4.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\jtagspi.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\kinetis.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\kinetis_ke.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\lpc288x.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\lpc2000.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\lpc2900.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\lpcspifi.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\max32xxx.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\mdr.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\mrvlqspi.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\msp432.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\niietcm4.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\non_cfi.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\npcx.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\nrf5.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\numicro.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\ocl.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\pic32mx.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\psoc4.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\psoc5lp.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\psoc6.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\renesas_rpchf.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\rp2040.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\sfdp.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\sh_qspi.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\sim3x.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\spi.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\stellaris.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\stm32f1x.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\stm32f2x.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\stm32h7x.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\stm32l4x.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\stm32lx.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\stmqspi.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\stmsmi.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\str7x.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\str9x.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\str9xpec.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\swm050.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\tcl.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\tms470.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\virtual.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\w600.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\xcf.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\xmc1xxx.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\flash\nor\xmc4xxx.c">
+      <Filter>application\3rd-party\openocd\raw\src\flash\nor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\jtag\adapter.c">
+      <Filter>application\3rd-party\openocd\raw\src\jtag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\jtag\commands.c">
+      <Filter>application\3rd-party\openocd\raw\src\jtag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\jtag\core.c">
+      <Filter>application\3rd-party\openocd\raw\src\jtag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\jtag\interface.c">
+      <Filter>application\3rd-party\openocd\raw\src\jtag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\jtag\interfaces.c">
+      <Filter>application\3rd-party\openocd\raw\src\jtag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\jtag\swim.c">
+      <Filter>application\3rd-party\openocd\raw\src\jtag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\jtag\tcl.c">
+      <Filter>application\3rd-party\openocd\raw\src\jtag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\jtag\drivers\cmsis_dap_usb_bulk.c">
+      <Filter>application\3rd-party\openocd\raw\src\jtag\drivers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\riscv\batch.c">
+      <Filter>application\3rd-party\openocd\raw\src\target\riscv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\riscv\program.c">
+      <Filter>application\3rd-party\openocd\raw\src\target\riscv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\riscv\riscv.c">
+      <Filter>application\3rd-party\openocd\raw\src\target\riscv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\riscv\riscv_semihosting.c">
+      <Filter>application\3rd-party\openocd\raw\src\target\riscv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\riscv\riscv-011.c">
+      <Filter>application\3rd-party\openocd\raw\src\target\riscv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\riscv\riscv-013.c">
+      <Filter>application\3rd-party\openocd\raw\src\target\riscv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\server\gdb_server.c">
+      <Filter>application\3rd-party\openocd\raw\src\server</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\server\ipdbg.c">
+      <Filter>application\3rd-party\openocd\raw\src\server</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\server\rtt_server.c">
+      <Filter>application\3rd-party\openocd\raw\src\server</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\server\server.c">
+      <Filter>application\3rd-party\openocd\raw\src\server</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\server\tcl_server.c">
+      <Filter>application\3rd-party\openocd\raw\src\server</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\server\telnet_server.c">
+      <Filter>application\3rd-party\openocd\raw\src\server</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\jtag\drivers\driver.c">
+      <Filter>application\3rd-party\openocd\raw\src\jtag\drivers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\pld\pld.c">
+      <Filter>application\3rd-party\openocd\raw\src\pld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\pld\virtex2.c">
+      <Filter>application\3rd-party\openocd\raw\src\pld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\pld\xilinx_bit.c">
+      <Filter>application\3rd-party\openocd\raw\src\pld</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\svf\svf.c">
+      <Filter>application\3rd-party\openocd\raw\src\svf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\xsvf\xsvf.c">
+      <Filter>application\3rd-party\openocd\raw\src\xsvf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\rtos\chibios.c">
+      <Filter>application\3rd-party\openocd\raw\src\rtos</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\rtos\chromium-ec.c">
+      <Filter>application\3rd-party\openocd\raw\src\rtos</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\rtos\eCos.c">
+      <Filter>application\3rd-party\openocd\raw\src\rtos</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\rtos\embKernel.c">
+      <Filter>application\3rd-party\openocd\raw\src\rtos</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\rtos\FreeRTOS.c">
+      <Filter>application\3rd-party\openocd\raw\src\rtos</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\rtos\hwthread.c">
+      <Filter>application\3rd-party\openocd\raw\src\rtos</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\rtos\linux.c">
+      <Filter>application\3rd-party\openocd\raw\src\rtos</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\rtos\mqx.c">
+      <Filter>application\3rd-party\openocd\raw\src\rtos</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\rtos\nuttx.c">
+      <Filter>application\3rd-party\openocd\raw\src\rtos</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\rtos\riot.c">
+      <Filter>application\3rd-party\openocd\raw\src\rtos</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\rtos\rtos.c">
+      <Filter>application\3rd-party\openocd\raw\src\rtos</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\rtos\rtos_chibios_stackings.c">
+      <Filter>application\3rd-party\openocd\raw\src\rtos</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\rtos\rtos_ecos_stackings.c">
+      <Filter>application\3rd-party\openocd\raw\src\rtos</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\rtos\rtos_embkernel_stackings.c">
+      <Filter>application\3rd-party\openocd\raw\src\rtos</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\rtos\rtos_mqx_stackings.c">
+      <Filter>application\3rd-party\openocd\raw\src\rtos</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\rtos\rtos_riot_stackings.c">
+      <Filter>application\3rd-party\openocd\raw\src\rtos</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\rtos\rtos_standard_stackings.c">
+      <Filter>application\3rd-party\openocd\raw\src\rtos</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\rtos\rtos_ucos_iii_stackings.c">
+      <Filter>application\3rd-party\openocd\raw\src\rtos</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\rtos\ThreadX.c">
+      <Filter>application\3rd-party\openocd\raw\src\rtos</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\rtos\uCOS-III.c">
+      <Filter>application\3rd-party\openocd\raw\src\rtos</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\rtos\zephyr.c">
+      <Filter>application\3rd-party\openocd\raw\src\rtos</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\transport\transport.c">
+      <Filter>application\3rd-party\openocd\raw\src\transport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\jtag\drivers\cmsis_dap.c">
+      <Filter>application\3rd-party\openocd\raw\src\jtag\drivers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\openrisc\jsp_server.c">
+      <Filter>application\3rd-party\openocd\raw\src\target\openrisc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\openrisc\or1k.c">
+      <Filter>application\3rd-party\openocd\raw\src\target\openrisc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\openrisc\or1k_du_adv.c">
+      <Filter>application\3rd-party\openocd\raw\src\target\openrisc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\openrisc\or1k_tap_mohor.c">
+      <Filter>application\3rd-party\openocd\raw\src\target\openrisc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\openrisc\or1k_tap_vjtag.c">
+      <Filter>application\3rd-party\openocd\raw\src\target\openrisc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\openrisc\or1k_tap_xilinx_bscan.c">
+      <Filter>application\3rd-party\openocd\raw\src\target\openrisc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\port\jimtcl\_glob.c">
+      <Filter>application\3rd-party\openocd\port\jimtcl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\port\jimtcl\_initjimsh.c">
+      <Filter>application\3rd-party\openocd\port\jimtcl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\port\jimtcl\_jsonencode.c">
+      <Filter>application\3rd-party\openocd\port\jimtcl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\port\jimtcl\_load-static-exts.c">
+      <Filter>application\3rd-party\openocd\port\jimtcl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\port\jimtcl\_nshelper.c">
+      <Filter>application\3rd-party\openocd\port\jimtcl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\port\jimtcl\_oo.c">
+      <Filter>application\3rd-party\openocd\port\jimtcl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\port\jimtcl\_stdlib.c">
+      <Filter>application\3rd-party\openocd\port\jimtcl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\port\jimtcl\_tree.c">
+      <Filter>application\3rd-party\openocd\port\jimtcl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\raw\jimtcl\jim-signal.c">
+      <Filter>application\3rd-party\openocd\raw\jimtcl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\openocd\port\jimtcl\_tclcompat.c">
+      <Filter>application\3rd-party\openocd\port\jimtcl</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
