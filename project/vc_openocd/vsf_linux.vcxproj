@@ -212,6 +212,13 @@
     <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\target\xscale.h" />
     <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\transport\transport.h" />
     <ClInclude Include="..\..\application\3rd-party\openocd\raw\src\xsvf\xsvf.h" />
+    <ClInclude Include="..\..\application\3rd-party\xfel\ecdsa256.h" />
+    <ClInclude Include="..\..\application\3rd-party\xfel\fel.h" />
+    <ClInclude Include="..\..\application\3rd-party\xfel\progress.h" />
+    <ClInclude Include="..\..\application\3rd-party\xfel\sha256.h" />
+    <ClInclude Include="..\..\application\3rd-party\xfel\spinand.h" />
+    <ClInclude Include="..\..\application\3rd-party\xfel\spinor.h" />
+    <ClInclude Include="..\..\application\3rd-party\xfel\x.h" />
     <ClInclude Include="..\..\config\3rd-party\lwip\lwipopts.h" />
     <ClInclude Include="..\..\config\3rd-party\mbedtls\config.h" />
     <ClInclude Include="..\..\config\target\vsf_usr_cfg_win.h" />
@@ -854,6 +861,41 @@
     <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\target\xscale.c" />
     <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\transport\transport.c" />
     <ClCompile Include="..\..\application\3rd-party\openocd\raw\src\xsvf\xsvf.c" />
+    <ClCompile Include="..\..\application\3rd-party\xfel\chips\a10.c" />
+    <ClCompile Include="..\..\application\3rd-party\xfel\chips\a13_a10s_r8.c" />
+    <ClCompile Include="..\..\application\3rd-party\xfel\chips\a20.c" />
+    <ClCompile Include="..\..\application\3rd-party\xfel\chips\a23.c" />
+    <ClCompile Include="..\..\application\3rd-party\xfel\chips\a31.c" />
+    <ClCompile Include="..\..\application\3rd-party\xfel\chips\a33_r16.c" />
+    <ClCompile Include="..\..\application\3rd-party\xfel\chips\a40i_r40.c" />
+    <ClCompile Include="..\..\application\3rd-party\xfel\chips\a64.c" />
+    <ClCompile Include="..\..\application\3rd-party\xfel\chips\a80.c" />
+    <ClCompile Include="..\..\application\3rd-party\xfel\chips\a83t.c" />
+    <ClCompile Include="..\..\application\3rd-party\xfel\chips\d1_f133.c" />
+    <ClCompile Include="..\..\application\3rd-party\xfel\chips\f1c100s_f1c200s_f1c500s.c" />
+    <ClCompile Include="..\..\application\3rd-party\xfel\chips\h2_h3.c" />
+    <ClCompile Include="..\..\application\3rd-party\xfel\chips\h5.c" />
+    <ClCompile Include="..\..\application\3rd-party\xfel\chips\h6.c" />
+    <ClCompile Include="..\..\application\3rd-party\xfel\chips\h616.c" />
+    <ClCompile Include="..\..\application\3rd-party\xfel\chips\r328.c" />
+    <ClCompile Include="..\..\application\3rd-party\xfel\chips\r329.c" />
+    <ClCompile Include="..\..\application\3rd-party\xfel\chips\r528_t113.c" />
+    <ClCompile Include="..\..\application\3rd-party\xfel\chips\t507.c" />
+    <ClCompile Include="..\..\application\3rd-party\xfel\chips\v3s_s3.c" />
+    <ClCompile Include="..\..\application\3rd-party\xfel\chips\v536.c" />
+    <ClCompile Include="..\..\application\3rd-party\xfel\chips\v831.c" />
+    <ClCompile Include="..\..\application\3rd-party\xfel\ecdsa256.c" />
+    <ClCompile Include="..\..\application\3rd-party\xfel\fel.c" />
+    <ClCompile Include="..\..\application\3rd-party\xfel\main.c">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">main=xfel_main;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">main=xfel_main;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">main=xfel_main;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">main=xfel_main;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\xfel\progress.c" />
+    <ClCompile Include="..\..\application\3rd-party\xfel\sha256.c" />
+    <ClCompile Include="..\..\application\3rd-party\xfel\spinand.c" />
+    <ClCompile Include="..\..\application\3rd-party\xfel\spinor.c" />
     <ClCompile Include="..\..\application\vsf_main.c" />
     <ClCompile Include="..\..\vsf\example\template\demo\common\usrapp_audio_common.c" />
     <ClCompile Include="..\..\vsf\example\template\demo\common\usrapp_common.c" />
@@ -1143,9 +1185,9 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>__VSF__;__CPU_X86__;__WIN__;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;APP_USE_OPENOCD_DEMO=ENABLED;HAVE_CONFIG_H;SIGWINCH=28;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>__VSF__;__CPU_X86__;__WIN__;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;APP_USE_OPENOCD_DEMO=ENABLED;HAVE_CONFIG_H;SIGWINCH=28;APP_USE_XFEL_DEMO=ENABLED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\openocd\port;$(ProjectDir)..\..\application\3rd-party\openocd\port\jimtcl;$(ProjectDir)..\..\application\3rd-party\openocd\raw\jimtcl;$(ProjectDir)..\..\application\3rd-party\openocd\raw\src;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\openocd\port;$(ProjectDir)..\..\application\3rd-party\openocd\port\jimtcl;$(ProjectDir)..\..\application\3rd-party\openocd\raw\jimtcl;$(ProjectDir)..\..\application\3rd-party\openocd\raw\src;$(ProjectDir)..\..\application\3rd-party\xfel;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-fms-extensions %(AdditionalOptions)</AdditionalOptions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <ExceptionHandling>false</ExceptionHandling>
@@ -1171,9 +1213,9 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>MaxSpeed</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>__VSF__;__CPU_X64__;__WIN__;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;APP_USE_OPENOCD_DEMO=ENABLED;HAVE_CONFIG_H;SIGWINCH=28;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>__VSF__;__CPU_X64__;__WIN__;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;APP_USE_OPENOCD_DEMO=ENABLED;HAVE_CONFIG_H;SIGWINCH=28;APP_USE_XFEL_DEMO=ENABLED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\openocd\port;$(ProjectDir)..\..\application\3rd-party\openocd\port\jimtcl;$(ProjectDir)..\..\application\3rd-party\openocd\raw\jimtcl;$(ProjectDir)..\..\application\3rd-party\openocd\raw\src;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\openocd\port;$(ProjectDir)..\..\application\3rd-party\openocd\port\jimtcl;$(ProjectDir)..\..\application\3rd-party\openocd\raw\jimtcl;$(ProjectDir)..\..\application\3rd-party\openocd\raw\src;$(ProjectDir)..\..\application\3rd-party\xfel;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-fms-extensions %(AdditionalOptions)</AdditionalOptions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <ExceptionHandling>false</ExceptionHandling>
@@ -1202,9 +1244,9 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>__VSF__;__CPU_X86__;__WIN__;__OOC_RELEASE__;NDEBUG;_CONSOLE;APP_USE_OPENOCD_DEMO=ENABLED;HAVE_CONFIG_H;SIGWINCH=28;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>__VSF__;__CPU_X86__;__WIN__;__OOC_RELEASE__;NDEBUG;_CONSOLE;APP_USE_OPENOCD_DEMO=ENABLED;HAVE_CONFIG_H;SIGWINCH=28;APP_USE_XFEL_DEMO=ENABLED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\openocd\port;$(ProjectDir)..\..\application\3rd-party\openocd\port\jimtcl;$(ProjectDir)..\..\application\3rd-party\openocd\raw\jimtcl;$(ProjectDir)..\..\application\3rd-party\openocd\raw\src;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\openocd\port;$(ProjectDir)..\..\application\3rd-party\openocd\port\jimtcl;$(ProjectDir)..\..\application\3rd-party\openocd\raw\jimtcl;$(ProjectDir)..\..\application\3rd-party\openocd\raw\src;$(ProjectDir)..\..\application\3rd-party\xfel;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <AssemblerListingLocation>$(IntDir)/__sub0/__sub1/__sub2/__sub3/%(RelativeDir)</AssemblerListingLocation>
@@ -1228,9 +1270,9 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>__VSF__;__CPU_X64__;__WIN__;__OOC_RELEASE__;NDEBUG;_CONSOLE;APP_USE_OPENOCD_DEMO=ENABLED;HAVE_CONFIG_H;SIGWINCH=28;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>__VSF__;__CPU_X64__;__WIN__;__OOC_RELEASE__;NDEBUG;_CONSOLE;APP_USE_OPENOCD_DEMO=ENABLED;HAVE_CONFIG_H;SIGWINCH=28;APP_USE_XFEL_DEMO=ENABLED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\openocd\port;$(ProjectDir)..\..\application\3rd-party\openocd\port\jimtcl;$(ProjectDir)..\..\application\3rd-party\openocd\raw\jimtcl;$(ProjectDir)..\..\application\3rd-party\openocd\raw\src;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\openocd\port;$(ProjectDir)..\..\application\3rd-party\openocd\port\jimtcl;$(ProjectDir)..\..\application\3rd-party\openocd\raw\jimtcl;$(ProjectDir)..\..\application\3rd-party\openocd\raw\src;$(ProjectDir)..\..\application\3rd-party\xfel;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <AssemblerListingLocation>$(IntDir)/__sub0/__sub1/__sub2/__sub3/%(RelativeDir)</AssemblerListingLocation>

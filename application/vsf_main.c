@@ -136,6 +136,10 @@ int vsf_linux_create_fhs(void)
     extern int openocd_main(int argc, char *argv[]);
     busybox_bind(VSF_LINUX_CFG_BIN_PATH "/openocd", openocd_main);
 #endif
+#if APP_USE_XFEL_DEMO == ENABLED
+    extern int xfel_main(int argc, char *argv[]);
+    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/xfel", xfel_main);
+#endif
 
 #if VSF_USE_SDL2 == ENABLED
     if (NULL == usrapp_ui_common.disp) {

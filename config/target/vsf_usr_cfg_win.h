@@ -114,8 +114,8 @@
 
 #if VSF_USBH_USE_HCD_WINUSB == ENABLED
 #   define VSF_WINUSB_HCD_CFG_DEV_NUM                   1
-#   define VSF_WINUSB_HCD_DEV0_VID                      0x0A12      // CSR8510 bthci
-#   define VSF_WINUSB_HCD_DEV0_PID                      0x0001
+#   define VSF_WINUSB_HCD_DEV0_VID                      0x1F3A          // Allwinner boot
+#   define VSF_WINUSB_HCD_DEV0_PID                      0xEFE8
 #endif
 #if VSF_USBH_USE_HCD_LIBUSB == ENABLED
 // for libusb

@@ -688,6 +688,12 @@
     <Filter Include="application\3rd-party\openocd\port\jimtcl">
       <UniqueIdentifier>{ad397d22-1017-4769-9b4c-2fc45a668835}</UniqueIdentifier>
     </Filter>
+    <Filter Include="application\3rd-party\xfel">
+      <UniqueIdentifier>{4c7c2d70-5c78-4f02-9c46-047dc5afc784}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\xfel\chips">
+      <UniqueIdentifier>{ccb0ccef-5ccd-482f-8f5d-210eef19fe51}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vsf\source\vsf.h">
@@ -2253,6 +2259,27 @@
     <ClInclude Include="..\..\application\3rd-party\openocd\port\jimtcl\jim-config.h">
       <Filter>application\3rd-party\openocd\port\jimtcl</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\xfel\ecdsa256.h">
+      <Filter>application\3rd-party\xfel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\xfel\fel.h">
+      <Filter>application\3rd-party\xfel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\xfel\progress.h">
+      <Filter>application\3rd-party\xfel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\xfel\sha256.h">
+      <Filter>application\3rd-party\xfel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\xfel\spinand.h">
+      <Filter>application\3rd-party\xfel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\xfel\spinor.h">
+      <Filter>application\3rd-party\xfel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\xfel\x.h">
+      <Filter>application\3rd-party\xfel</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\vsf\source\utilities\template\vsf_bitmap.c">
@@ -3754,6 +3781,96 @@
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\openocd\port\jimtcl\_tclcompat.c">
       <Filter>application\3rd-party\openocd\port\jimtcl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\xfel\ecdsa256.c">
+      <Filter>application\3rd-party\xfel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\xfel\fel.c">
+      <Filter>application\3rd-party\xfel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\xfel\main.c">
+      <Filter>application\3rd-party\xfel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\xfel\progress.c">
+      <Filter>application\3rd-party\xfel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\xfel\sha256.c">
+      <Filter>application\3rd-party\xfel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\xfel\spinand.c">
+      <Filter>application\3rd-party\xfel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\xfel\spinor.c">
+      <Filter>application\3rd-party\xfel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\xfel\chips\a10.c">
+      <Filter>application\3rd-party\xfel\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\xfel\chips\a13_a10s_r8.c">
+      <Filter>application\3rd-party\xfel\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\xfel\chips\a20.c">
+      <Filter>application\3rd-party\xfel\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\xfel\chips\a23.c">
+      <Filter>application\3rd-party\xfel\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\xfel\chips\a31.c">
+      <Filter>application\3rd-party\xfel\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\xfel\chips\a33_r16.c">
+      <Filter>application\3rd-party\xfel\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\xfel\chips\a40i_r40.c">
+      <Filter>application\3rd-party\xfel\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\xfel\chips\a64.c">
+      <Filter>application\3rd-party\xfel\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\xfel\chips\a80.c">
+      <Filter>application\3rd-party\xfel\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\xfel\chips\a83t.c">
+      <Filter>application\3rd-party\xfel\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\xfel\chips\d1_f133.c">
+      <Filter>application\3rd-party\xfel\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\xfel\chips\f1c100s_f1c200s_f1c500s.c">
+      <Filter>application\3rd-party\xfel\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\xfel\chips\h2_h3.c">
+      <Filter>application\3rd-party\xfel\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\xfel\chips\h5.c">
+      <Filter>application\3rd-party\xfel\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\xfel\chips\h6.c">
+      <Filter>application\3rd-party\xfel\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\xfel\chips\h616.c">
+      <Filter>application\3rd-party\xfel\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\xfel\chips\r328.c">
+      <Filter>application\3rd-party\xfel\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\xfel\chips\r329.c">
+      <Filter>application\3rd-party\xfel\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\xfel\chips\r528_t113.c">
+      <Filter>application\3rd-party\xfel\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\xfel\chips\t507.c">
+      <Filter>application\3rd-party\xfel\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\xfel\chips\v3s_s3.c">
+      <Filter>application\3rd-party\xfel\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\xfel\chips\v536.c">
+      <Filter>application\3rd-party\xfel\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\xfel\chips\v831.c">
+      <Filter>application\3rd-party\xfel\chips</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
