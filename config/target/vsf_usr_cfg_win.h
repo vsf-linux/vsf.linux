@@ -33,8 +33,7 @@
 //  **** but preempt is not supported ****
 //  priority configurations are dependent on MACROs below, so put them here(at top)
 //  IMPORTANT: vsf_arch_sleep MUST be called in vsf_plug_in_on_kernel_idle
-#define VSF_ARCH_PRI_NUM                                1
-#define VSF_ARCH_SWI_NUM                                0
+#define VSF_ARCH_LIMIT_NO_SET_STACK
 #define VSF_OS_CFG_ADD_EVTQ_TO_IDLE                     ENABLED
 #define __VSF_X86_WIN_SINGLE_PRIORITY
 
