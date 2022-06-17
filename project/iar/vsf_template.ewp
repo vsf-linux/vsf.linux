@@ -242,6 +242,7 @@
                     <state>LWIP_NO_STDINT_H=1</state>
                     <state>LWIP_SO_RCVBUF=1</state>
                     <state>APP_USE_LINUX_CURL_DEMO=ENABLED</state>
+                    <state>fileno=fileno</state>
                     <state>MBEDTLS_USER_CONFIG_FILE="component/3rd-party/mbedtls/port/platform_vsf.h"</state>
                     <state>LV_CONF_INCLUDE_SIMPLE</state>
                     <state>FT2_BUILD_LIBRARY</state>
@@ -400,6 +401,7 @@
                     <state>$PROJ_DIR$\..\..\vsf\source\hal\driver\AIC\AIC8800\vendor\plf\aic8800\src\driver\dma</state>
                     <state>$PROJ_DIR$\..\..\vsf\source\hal\driver\AIC\AIC8800\vendor\plf\aic8800\src\driver\ticker</state>
                     <state>$PROJ_DIR$\..\..\vsf\source\hal\driver\AIC\AIC8800\vendor\plf\aic8800\src\driver\flash</state>
+                    <state>$PROJ_DIR$\..\..\vsf\source\hal\driver\AIC\AIC8800\vendor\plf\aic8800\src\driver\psram</state>
                     <state>$PROJ_DIR$\..\..\vsf\source\hal\driver\AIC\AIC8800\vendor\plf\aic8800\src\driver\pmic</state>
                     <state>$PROJ_DIR$\..\..\vsf\source\hal\driver\AIC\AIC8800\vendor\plf\aic8800\src\driver\sleep</state>
                     <state>$PROJ_DIR$\..\..\vsf\source\hal\driver\AIC\AIC8800\vendor\plf\aic8800\src\driver\aic1000lite_regs</state>
