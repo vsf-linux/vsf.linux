@@ -8,16 +8,6 @@
 #include <fcntl.h>
 #include <spawn.h>
 
-pid_t tcgetpgrp(int fd)
-{
-    return -1;
-}
-
-int tcsetpgrp(int fd, pid_t pgrp)
-{
-    return -1;
-}
-
 pid_t mingw_spawnvpe(const char *cmd, const char **argv, char **deltaenv,
             const char *dir, int fhin, int fhout, int fherr)
 {
