@@ -11,12 +11,13 @@ endif()
 
 # compiler configurations
 # arm-none-eabi-gcc will not pass compiler checker of cmake, so include before project
+# SDL need -fno-short-enums, or static assert failure in c++
 set(CMAKE_C_FLAGS 
-    "-Ofast"
+    "-Ofast -fno-short-enums"
     CACHE INTERNAL "C compiler common flags"
 )
 set(CMAKE_CXX_FLAGS 
-    "-Ofast"
+    "-Ofast -fno-short-enums"
     CACHE INTERNAL "C++ compiler common flags"
 )
 include($ENV{VSF_PATH}/script/cmake/compilers/gnuarmemb.cmake)
