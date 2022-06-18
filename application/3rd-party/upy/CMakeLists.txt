@@ -25,6 +25,9 @@ target_include_directories(upy PRIVATE
     $ENV{VSF_PATH}/source/shell/sys/linux/include/simple_libc
 )
 endif()
+target_compile_definitions(upy PRIVATE
+    "-lm"
+)
 
 link_directories(${CMAKE_CURRENT_BINARY_DIR}/upy_bin)
 target_link_libraries(${VSF_LIB_NAME} INTERFACE
