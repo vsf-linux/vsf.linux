@@ -352,6 +352,12 @@
   <ItemGroup>
     <ClCompile Include="..\..\application\3rd-party\upy\raw\core\evm.c" />
     <ClCompile Include="..\..\application\3rd-party\upy\raw\core\upy.c" />
+    <ClCompile Include="..\..\application\3rd-party\upy\raw\main.c">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">main=upy_main;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">main=upy_main;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">main=upy_main;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">main=upy_main;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
     <ClCompile Include="..\..\application\vsf_main.c" />
     <ClCompile Include="..\..\vsf\example\template\demo\common\usrapp_audio_common.c" />
     <ClCompile Include="..\..\vsf\example\template\demo\common\usrapp_common.c" />

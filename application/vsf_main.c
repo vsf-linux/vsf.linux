@@ -219,6 +219,11 @@ int vsf_linux_create_fhs(void)
     extern int lws_minimal_http_client_main(int argc, char *argv[]);
     busybox_bind(VSF_LINUX_CFG_BIN_PATH "/lws-minimal-http-client", lws_minimal_http_client_main);
 #endif
+
+#if APP_USE_UPY_DEMO == ENABLED
+    extern int upy_main(int argc, char *argv[]);
+    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/upy", upy_main);
+#endif
     return 0;
 }
 

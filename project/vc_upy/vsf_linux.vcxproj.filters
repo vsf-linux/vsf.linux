@@ -2219,6 +2219,9 @@
     <ClCompile Include="..\..\application\3rd-party\upy\raw\core\upy.c">
       <Filter>application\3rd-party\upy\raw\core</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\upy\raw\main.c">
+      <Filter>application\3rd-party\upy\raw</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\vsf\source\hal\arch\common\arch_without_thread_suspend\vsf_arch_without_thread_suspend_template.inc">
