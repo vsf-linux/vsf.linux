@@ -55,3 +55,6 @@
 [submodule "application/3rd-party/sdl/mgba"]
 	path = application/3rd-party/sdl/mgba
 	url = ../mgba
+[submodule "application/3rd-party/upy/raw"]
+	path = application/3rd-party/upy/raw
+	url = https://gitee.com/scriptiot/evm.git
