@@ -18,6 +18,7 @@ Porting linux applications to VSF
 4. curl
 
 ## upy @ project/vc_upy
+### submodules
 1. vsf
     - PLOOC
 1. upy
