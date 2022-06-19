@@ -17,6 +17,11 @@ Porting linux applications to VSF
 3. less
 4. curl
 
+## upy @ project/vc_upy
+1. vsf
+    - PLOOC
+1. upy
+
 ## aic8800m @ project/cmake/aic8800
 ### submodules
 1. vsf
