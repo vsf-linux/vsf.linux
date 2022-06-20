@@ -1,7 +1,10 @@
 #define __VSF_EDA_CLASS_INHERIT__
 #define __VSF_DISP_CLASS_INHERIT__
 #include <unistd.h>
-#include <libusb.h>
+
+#if VSF_USE_USB_HOST == ENABLED && VSF_LINUX_USE_LIBUSB == ENABLED
+#   include <libusb.h>
+#endif
 
 #include "usrapp_common.h"
 
@@ -97,9 +100,13 @@ int vsf_linux_create_fhs(void)
     extern int lwip_main(int argc, char *argv[]);
     busybox_bind(VSF_LINUX_CFG_BIN_PATH "/lwip", lwip_main);
 #endif
-#if APP_USE_LINUX_LIBUSB_DEMO == ENABLED
+#if VSF_USE_USB_HOST == ENABLED && VSF_LINUX_USE_LIBUSB == ENABLED && APP_USE_LINUX_LIBUSB_DEMO == ENABLED
     extern int lsusb_main(int argc, char *argv[]);
     busybox_bind(VSF_LINUX_CFG_BIN_PATH "/lsusb", lsusb_main);
+#   if APP_USE_LIBUVC_DEMO == ENABLED
+    extern int uvc_main(int argc, char *argv[]);
+    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/uvc", uvc_main);
+#   endif
 #endif
 #if APP_USE_LINUX_MOUNT_DEMO == ENABLED
     extern int mount_main(int argc, char *argv[]);
