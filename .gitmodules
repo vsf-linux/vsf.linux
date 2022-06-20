@@ -24,7 +24,7 @@
 	url = ../lite
 [submodule "application/3rd-party/sdl/8086tiny"]
 	path = application/3rd-party/sdl/x8086tiny
-	url = ../8086tiny
+	url = ../x8086tiny
 [submodule "application/3rd-party/sdl/raw"]
 	path = application/3rd-party/sdl/raw
 	url = ../SDL
