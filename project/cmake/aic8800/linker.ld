@@ -5,7 +5,7 @@ MEMORY
 {
     FLASH (rwx)     : ORIGIN = 0x08000000, LENGTH = (2048K - 16K)
     EXRAM (rwx)     : ORIGIN = 0x00150000, LENGTH = 64K
-    DRAM (rwx)      : ORIGIN = 0x001A0000, LENGTH = (160K - 0x100)
+    DRAM (rwx)      : ORIGIN = 0x001A0000, LENGTH = (160K - 8K)
     LPIRAM (rwx)    : ORIGIN = 0x001C7F00, LENGTH = 0x100
     ipc_shared_memory (!rx) : ORIGIN = 0x00190000, len = 2K
     host_rxbuf_memory (!rx) : ORIGIN = 0x00198000, len = 32K
