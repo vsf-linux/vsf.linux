@@ -1,6 +1,6 @@
 # please remove vsf/source/shell/sys/linux/include/simple_libc/cmath
 
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.13)
 cmake_policy(SET CMP0076 NEW)
 
 if(NOT DEFINED ENV{VSF_PATH})
