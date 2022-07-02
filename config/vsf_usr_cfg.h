@@ -96,24 +96,38 @@
 #endif
 #define APP_USE_SCSI_DEMO                               ENABLED
 
-// for debug and test only
+// linux init scripts
 #if     defined(__WIN__)
-#   define VSF_LINUX_CFG_INIT_SCRIPTS                                           \
-            "echo \"vsf build on " __DATE__ "\"",                               \
+#   define VSF_LINUX_HOSTFS_INIT_SCRIPTS                                        \
             "mkdir -p /mnt/hostfs",                                             \
             "mount -t winfs . /mnt/hostfs",                                     \
-            "cd /mnt/hostfs",                                                   \
-            "export GIT_SSL_NO_VERIFY=",
+            "cd /mnt/hostfs",
 #elif   defined(__LINUX__)
-#   define VSF_LINUX_CFG_INIT_SCRIPTS                                           \
-            "echo \"vsf build on " __DATE__ "\"",                               \
+#   define VSF_LINUX_HOSTFS_INIT_SCRIPTS                                        \
             "mkdir -p /mnt/hostfs",                                             \
             "mount -t linfs . /mnt/hostfs",                                     \
             "cd /mnt/hostfs",
 #else
-#   define VSF_LINUX_CFG_INIT_SCRIPTS                                           \
-            "echo \"vsf build on " __DATE__ "\"",
+#   define VSF_LINUX_HOSTFS_INIT_SCRIPTS
 #endif
+#if APP_USE_LINUX_GIT_DEMO == ENABLED
+#   define VSF_LINUX_GIT_INIT_SCRIPTS                                           \
+            "export GIT_SSL_NO_VERIFY=",
+#else
+#   define VSF_LINUX_GIT_INIT_SCRIPTS
+#endif
+#if APP_USE_USRAPP == ENABLED
+#   define VSF_LINUX_USRAPP_INIT_SCRIPTS                                        \
+            "app",
+#else
+#   define VSF_LINUX_USRAPP_INIT_SCRIPTS
+#endif
+
+#define VSF_LINUX_CFG_INIT_SCRIPTS                                              \
+            "echo \"vsf build on " __DATE__ "\"",                               \
+            VSF_LINUX_HOSTFS_INIT_SCRIPTS                                       \
+            VSF_LINUX_GIT_INIT_SCRIPTS                                          \
+            VSF_LINUX_USRAPP_INIT_SCRIPTS
 
 /*============================ TYPES =========================================*/
 /*============================ GLOBAL VARIABLES ==============================*/

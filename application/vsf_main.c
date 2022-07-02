@@ -231,6 +231,11 @@ int vsf_linux_create_fhs(void)
     extern int upy_main(int argc, char *argv[]);
     busybox_bind(VSF_LINUX_CFG_BIN_PATH "/upy", upy_main);
 #endif
+
+#if APP_USE_USRAPP == ENABLED
+    extern int usr_main(int argc, char *argv[]);
+    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/app", usr_main);
+#endif
     return 0;
 }
 
