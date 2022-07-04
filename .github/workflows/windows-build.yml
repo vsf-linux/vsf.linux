@@ -1,0 +1,62 @@
+name: windows-build
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  windows-build:
+    runs-on: windows-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        project_name: [vc, vc_git_hostsock]
+        build_config: [Debug] #[Debug, Release]
+        platform: [x86, x64]
+        # https://docs.microsoft.com/en-us/visualstudio/install/visual-studio-build-numbers-and-release-dates?view=vs-2019
+        # https://docs.microsoft.com/en-us/visualstudio/install/visual-studio-build-numbers-and-release-dates?view=vs-2022
+        os: [windows-2019, windows-2022]
+        include:
+            - os: windows-2019
+              vs-version: '[17.0, 18)'
+            - os: windows-2022
+              vs-version: '[16.0, 17)'
+
+    steps:
+    - name: Add MSBuild to PATH
+      uses: microsoft/setup-msbuild@v1.0.2
+
+    - name: Checkout With Submodule
+      uses: actions/checkout@v2
+      with:
+        submodules: true # without recursive
+
+    - name: Checkout VSF Submodule
+      run: git -C vsf submodule update --init
+
+    - name: Restore NuGet packages
+      working-directory: ${{env.GITHUB_WORKSPACE}}
+      run: nuget restore project/${{matrix.project_name}}/vsf_linux.sln
+
+    - name: Build
+      working-directory: ${{env.GITHUB_WORKSPACE}}
+      # Add additional options to the MSBuild command line here (like platform or verbosity level).
+      # See https://docs.microsoft.com/visualstudio/msbuild/msbuild-command-line-reference
+      run: msbuild /m /p:Configuration=${{matrix.build_config}} project/${{matrix.project_name}}/vsf_linux.sln /property:Configuration=${{matrix.build_config}} /property:Platform=${{matrix.platform}}
+
+    - name: Test
+      run: |
+        pip install pytest pytest-bdd wexpect simple-hexdump
+        if [ ${{matrix.platform}} = x64 ]; then
+          template_file="${{github.workspace}}/project/${{matrix.project_name}}/x64/${{matrix.build_config}}/vsf_linux.exe"
+        else
+          template_file="${{github.workspace}}/project/${{matrix.project_name}}/vsf_linux/${{matrix.build_config}}/vsf_linux.exe"
+        fi
+        echo "$template_file"
+        pytest --verbose -o log_cli=true --log-cli-level="DEBUG" --vsf_template="$template_file"
+      shell: bash
+      working-directory: ${{github.workspace}}/vsf/test/pytest
+      env:
+        VSF_PATH: ${{github.workspace}}/vsf
