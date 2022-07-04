@@ -204,7 +204,22 @@
     <ClInclude Include="..\..\vsf\source\hal\arch\vsf_arch_abstraction.h" />
     <ClInclude Include="..\..\vsf\source\hal\arch\x86\win\win_generic.h" />
     <ClInclude Include="..\..\vsf\source\hal\arch\__vsf_arch_interface.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\adc\adc_template.h" />
     <ClInclude Include="..\..\vsf\source\hal\driver\common\common.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\flash\flash_template.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\i2c\i2c_request.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\i2c\i2c_template.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\i2c\multiplex_i2c.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\io\io_template.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\pwm\pwm_template.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\rng\rng_template.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\rtc\rtc_common.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\rtc\rtc_template.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\spi\multiplex_spi.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\spi\spi_template.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\timer\timer_template.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\usart\fifo2req_usart.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\usart\usart_template.h" />
     <ClInclude Include="..\..\vsf\source\hal\driver\driver.h" />
     <ClInclude Include="..\..\vsf\source\hal\driver\vsf\distbus\driver.h" />
     <ClInclude Include="..\..\vsf\source\hal\driver\vsf\distbus\usbd\vsf_hal_distbus_usbd.h" />
@@ -622,6 +637,20 @@
     <ClCompile Include="..\..\vsf\source\hal\arch\vsf_arch_abstraction.c" />
     <ClCompile Include="..\..\vsf\source\hal\arch\x86\win\win_generic.c" />
     <ClCompile Include="..\..\vsf\source\hal\arch\x86\win\win_generic_simple.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\adc\adc_common.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\flash\flash_common.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\i2c\i2c_common.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\i2c\i2c_request.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\i2c\multiplex_i2c.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\io\io_common.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\pwm\pwm_common.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\rng\rng_common.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\rtc\rtc_common.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\spi\multiplex_spi.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\spi\spi_common.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\timer\timer_common.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\usart\fifo2req_usart.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\usart\usart_common.c" />
     <ClCompile Include="..\..\vsf\source\hal\driver\vsf\distbus\usbd\vsf_hal_distbus_usbd.c" />
     <ClCompile Include="..\..\vsf\source\hal\driver\vsf\distbus\vsf_hal_distbus.c" />
     <ClCompile Include="..\..\vsf\source\hal\driver\x86\win\driver.c" />
@@ -712,6 +741,17 @@
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ml64 /Fo $(IntDir)%(fileName).obj /c %(FullPath)</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)%(Filename).obj</Outputs>
     </CustomBuild>
+    <None Include="..\..\vsf\source\hal\driver\common\adc\adc_template.inc" />
+    <None Include="..\..\vsf\source\hal\driver\common\flash\flash_template.inc" />
+    <None Include="..\..\vsf\source\hal\driver\common\i2c\i2c_template.inc" />
+    <None Include="..\..\vsf\source\hal\driver\common\io\io_template.inc" />
+    <None Include="..\..\vsf\source\hal\driver\common\pwm\pwm_template.inc" />
+    <None Include="..\..\vsf\source\hal\driver\common\pwm\timer_to_pwm.inc" />
+    <None Include="..\..\vsf\source\hal\driver\common\rng\rng_template.inc" />
+    <None Include="..\..\vsf\source\hal\driver\common\rtc\rtc_template.inc" />
+    <None Include="..\..\vsf\source\hal\driver\common\spi\spi_template.inc" />
+    <None Include="..\..\vsf\source\hal\driver\common\timer\timer_template.inc" />
+    <None Include="..\..\vsf\source\hal\driver\common\usart\usart_template.inc" />
     <None Include="..\..\vsf\source\shell\sys\linux\app\httpd\urihandler\file\__vsf_linux_urihandler_file.inc" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
