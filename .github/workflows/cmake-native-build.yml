@@ -1,0 +1,49 @@
+name: cmake-native-build
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  cmake-native-build:
+    strategy:
+      fail-fast: false
+      matrix:
+        cc: [gcc, clang]
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        submodules: true # without recursive
+
+    - name: Checkout VSF Submodule
+      run: git -C vsf submodule update --init
+
+    - name: install depends
+      run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential clang ninja-build libsdl2-dev libusb-dev libusb-1.0 python3 python3-pip
+          pip3 install pytest pytest-bdd pexpect simple-hexdump
+      shell: bash
+
+    - name: configure cmake
+      run: cmake -GNinja -S ${SOURCE_PATH} -B ${SOURCE_PATH}/build
+      env:
+        CC: ${{matrix.cc}}
+        VSF_PATH: ${{github.workspace}}/vsf
+        SOURCE_PATH: ${{github.workspace}}/project/cmake/linux
+
+    - name: build
+      # Build your program with the given configuration
+      run: cmake --build ${SOURCE_PATH}/build -v
+      env:
+        SOURCE_PATH: ${{github.workspace}}/project/cmake/linux
+
+    - name: test
+      run: pytest --verbose -o log_cli=true --log-cli-level="DEBUG" --vsf_template=${{github.workspace}}/project/cmake/linux/build/vsf_template
+      working-directory: ${{github.workspace}}/test/pytest
+      env:
+        VSF_PATH: ${{github.workspace}}/vsf
