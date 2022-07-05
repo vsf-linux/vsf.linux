@@ -43,7 +43,5 @@ jobs:
         SOURCE_PATH: ${{github.workspace}}/project/cmake/linux
 
     - name: test
-      run: pytest --verbose -o log_cli=true --log-cli-level="DEBUG" --vsf_template=${{github.workspace}}/project/cmake/linux/build/vsf_template
-      working-directory: ${{github.workspace}}/test/pytest
-      env:
-        VSF_PATH: ${{github.workspace}}/vsf
+      run: pytest -m "base or memory" --verbose -o log_cli=true --log-cli-level="DEBUG" --vsf_template=${{github.workspace}}/project/cmake/linux/build/vsf_template
+      working-directory: ${{github.workspace}}/vsf/test/pytest
