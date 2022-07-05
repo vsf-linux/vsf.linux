@@ -55,7 +55,7 @@ jobs:
           template_file="${{github.workspace}}/project/${{matrix.project_name}}/vsf_linux/${{matrix.build_config}}/vsf_linux.exe"
         fi
         echo "$template_file"
-        pytest --verbose -o log_cli=true --log-cli-level="DEBUG" --vsf_template="$template_file"
+        pytest -m "base" --verbose -o log_cli=true --log-cli-level="DEBUG" --vsf_template="$template_file"
       shell: bash
       working-directory: ${{github.workspace}}/vsf/test/pytest
       env:
