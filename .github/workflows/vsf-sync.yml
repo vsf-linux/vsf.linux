@@ -1,0 +1,28 @@
+name: vsf sync
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout with submodule
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Sync VSF
+        run: |
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          git checkout -b vsf-sync
+          git submodule update --init --remote vsf
+          if git status vsf | grep 'modified:   vsf'; then
+            git add vsf
+            git commit -m "[vsf] sync"
+            git push --set-upstream origin --force vsf-sync
+          fi
