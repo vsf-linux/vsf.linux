@@ -1,4 +1,4 @@
-name: repository dispath
+name: vsf.linux repository dispath
 
 on:
   push:
