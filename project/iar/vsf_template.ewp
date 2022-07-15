@@ -8620,10 +8620,10 @@
                         <group>
                             <name>gpio_i2c</name>
                             <file>
-                                <name>$PROJ_DIR$\..\..\vsf\source\hal\driver\vsf\i2c\gpio_i2c\gpio_i2c.c</name>
+                                <name>$PROJ_DIR$\..\..\vsf\source\hal\driver\vsf\i2c\gpio_i2c\vsf_gpio_i2c.c</name>
                             </file>
                             <file>
-                                <name>$PROJ_DIR$\..\..\vsf\source\hal\driver\vsf\i2c\gpio_i2c\gpio_i2c.h</name>
+                                <name>$PROJ_DIR$\..\..\vsf\source\hal\driver\vsf\i2c\gpio_i2c\vsf_gpio_i2c.h</name>
                             </file>
                         </group>
                     </group>
