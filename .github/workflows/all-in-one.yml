@@ -1,4 +1,4 @@
-name: all_in_one
+name: vsf.linux all in one
 
 on:
   push:
