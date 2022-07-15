@@ -1,0 +1,22 @@
+name: repository dispath
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.VSF_AIO }}
+          script: |
+            await github.rest.actions.createWorkflowDispatch({
+              owner: 'vsf-linux',
+              repo: 'vsf-linux-hub-mirror',
+              workflow_id: 'gitee-sync.yml',
+              ref: 'master'
+            })
