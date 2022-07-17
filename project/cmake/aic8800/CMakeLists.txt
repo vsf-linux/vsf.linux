@@ -94,6 +94,7 @@ target_include_directories(${CMAKE_PROJECT_NAME} PUBLIC
     $ENV{VSF_PATH}/example/template/demo/common
 )
 target_sources(${CMAKE_PROJECT_NAME} PUBLIC
+    $ENV{VSF_PATH}/example/template/demo/linux_demo/tty_demo.c
     $ENV{VSF_PATH}/example/template/demo/linux_demo/libusb_demo.c
     $ENV{VSF_PATH}/example/template/demo/linux_demo/mount_demo.c
     $ENV{VSF_PATH}/example/template/demo/linux_demo/ntpdate_demo.c

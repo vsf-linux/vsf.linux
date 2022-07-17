@@ -2464,6 +2464,9 @@
             <file>
                 <name>$PROJ_DIR$\..\..\vsf\example\template\demo\linux_demo\telnetd_demo.c</name>
             </file>
+            <file>
+                <name>$PROJ_DIR$\..\..\vsf\example\template\demo\linux_demo\tty_demo.c</name>
+            </file>
         </group>
         <file>
             <name>$PROJ_DIR$\..\..\application\vsf_main.c</name>

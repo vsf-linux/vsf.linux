@@ -77,6 +77,7 @@
 #   define VSF_HEAP_ADDR                                0x00100000
 #   define VSF_HEAP_SIZE                                0x50000
 
+#define APP_USE_LINUX_TTY_DEMO                          ENABLED
 #define VSF_LINUX_USE_SIMPLE_LIBC                       ENABLED
 #   if __IS_COMPILER_IAR__
 // IAR: to support CPP in linux-subsystem, define MACFOs below, and don't include the simple_libc path
