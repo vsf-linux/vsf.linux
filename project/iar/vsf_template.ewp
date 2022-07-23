@@ -9306,6 +9306,9 @@
                             <file>
                                 <name>$PROJ_DIR$\..\..\vsf\source\shell\sys\linux\include\linux\limits.h</name>
                             </file>
+                            <file>
+                                <name>$PROJ_DIR$\..\..\vsf\source\shell\sys\linux\include\linux\serial.h</name>
+                            </file>
                         </group>
                         <group>
                             <name>net</name>
@@ -9358,10 +9361,25 @@
                         <group>
                             <name>sys</name>
                             <file>
+                                <name>$PROJ_DIR$\..\..\vsf\source\shell\sys\linux\include\sys\epoll.h</name>
+                            </file>
+                            <file>
+                                <name>$PROJ_DIR$\..\..\vsf\source\shell\sys\linux\include\sys\eventfd.h</name>
+                            </file>
+                            <file>
+                                <name>$PROJ_DIR$\..\..\vsf\source\shell\sys\linux\include\sys\ioctl.h</name>
+                            </file>
+                            <file>
                                 <name>$PROJ_DIR$\..\..\vsf\source\shell\sys\linux\include\sys\ipc.h</name>
                             </file>
                             <file>
+                                <name>$PROJ_DIR$\..\..\vsf\source\shell\sys\linux\include\sys\mman.h</name>
+                            </file>
+                            <file>
                                 <name>$PROJ_DIR$\..\..\vsf\source\shell\sys\linux\include\sys\mount.h</name>
+                            </file>
+                            <file>
+                                <name>$PROJ_DIR$\..\..\vsf\source\shell\sys\linux\include\sys\random.h</name>
                             </file>
                             <file>
                                 <name>$PROJ_DIR$\..\..\vsf\source\shell\sys\linux\include\sys\resource.h</name>
@@ -9379,7 +9397,16 @@
                                 <name>$PROJ_DIR$\..\..\vsf\source\shell\sys\linux\include\sys\stat.h</name>
                             </file>
                             <file>
+                                <name>$PROJ_DIR$\..\..\vsf\source\shell\sys\linux\include\sys\syscall.h</name>
+                            </file>
+                            <file>
+                                <name>$PROJ_DIR$\..\..\vsf\source\shell\sys\linux\include\sys\syslog.h</name>
+                            </file>
+                            <file>
                                 <name>$PROJ_DIR$\..\..\vsf\source\shell\sys\linux\include\sys\time.h</name>
+                            </file>
+                            <file>
+                                <name>$PROJ_DIR$\..\..\vsf\source\shell\sys\linux\include\sys\times.h</name>
                             </file>
                             <file>
                                 <name>$PROJ_DIR$\..\..\vsf\source\shell\sys\linux\include\sys\types.h</name>
@@ -9389,6 +9416,9 @@
                             </file>
                             <file>
                                 <name>$PROJ_DIR$\..\..\vsf\source\shell\sys\linux\include\sys\un.h</name>
+                            </file>
+                            <file>
+                                <name>$PROJ_DIR$\..\..\vsf\source\shell\sys\linux\include\sys\utsname.h</name>
                             </file>
                             <file>
                                 <name>$PROJ_DIR$\..\..\vsf\source\shell\sys\linux\include\sys\wait.h</name>

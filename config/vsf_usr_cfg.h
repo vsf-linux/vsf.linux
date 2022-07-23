@@ -35,6 +35,8 @@
 #endif
 
 // components
+#define VSF_USE_HASH                                    ENABLED
+#   define VSF_HASH_USE_CRC                             ENABLED
 #define VSF_USE_TRACE                                   ENABLED
 #define VSF_USE_FIFO                                    ENABLED
 #define VSF_USE_JSON                                    ENABLED
