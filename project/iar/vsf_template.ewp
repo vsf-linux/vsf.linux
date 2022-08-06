@@ -241,6 +241,7 @@
                     <state>CONFIG_RWNX_LWIP</state>
                     <state>LWIP_NO_STDINT_H=1</state>
                     <state>LWIP_SO_RCVBUF=1</state>
+                    <state>APP_USE_LINUX_ELFLOADER_DEMO=ENABLED</state>
                     <state>APP_USE_LINUX_CURL_DEMO=ENABLED</state>
                     <state>fileno=fileno</state>
                     <state>MBEDTLS_USER_CONFIG_FILE="component/3rd-party/mbedtls/port/platform_vsf.h"</state>
@@ -326,7 +327,7 @@
                 </option>
                 <option>
                     <name>IExtraOptions</name>
-                    <state>--no_unaligned_access</state>
+                    <state>--no_unaligned_access --lock_regs=r9</state>
                 </option>
                 <option>
                     <name>CCLangConformance</name>
@@ -334,7 +335,7 @@
                 </option>
                 <option>
                     <name>CCSignedPlainChar</name>
-                    <state>1</state>
+                    <state>0</state>
                 </option>
                 <option>
                     <name>CCRequirePrototypes</name>
@@ -379,7 +380,7 @@
                     <state>$PROJ_DIR$\..\..\vsf\example/template/demo/common</state>
                     <state>$PROJ_DIR$\..\..\vsf\source</state>
                     <state>$PROJ_DIR$\..\..\vsf\source\shell\sys\linux\include</state>
-                    <state>//$PROJ_DIR$\..\..\vsf\source\shell\sys\linux\include\simple_libc</state>
+                    <state>$PROJ_DIR$\..\..\vsf\source\shell\sys\linux\include\simple_libc</state>
                     <state>$PROJ_DIR$\..\..\vsf\source\shell\sys\linux\include\libusb</state>
                     <state>$PROJ_DIR$\..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo</state>
                     <state>$PROJ_DIR$\..\..\vsf\source\hal\driver\AIC\AIC8800\port</state>
@@ -2452,6 +2453,9 @@
         </group>
         <group>
             <name>linux_demo</name>
+            <file>
+                <name>$PROJ_DIR$\..\..\vsf\example\template\demo\linux_demo\elfloader_demo.c</name>
+            </file>
             <file>
                 <name>$PROJ_DIR$\..\..\vsf\example\template\demo\linux_demo\libusb_demo.c</name>
             </file>
@@ -9011,6 +9015,27 @@
                 </file>
             </group>
             <group>
+                <name>loader</name>
+                <group>
+                    <name>elf</name>
+                    <file>
+                        <name>$PROJ_DIR$\..\..\vsf\source\service\loader\elf\elf.h</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\..\vsf\source\service\loader\elf\vsf_elfloader.c</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\..\vsf\source\service\loader\elf\vsf_elfloader.h</name>
+                    </file>
+                </group>
+                <file>
+                    <name>$PROJ_DIR$\..\..\vsf\source\service\loader\vsf_loader.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\..\vsf\source\service\loader\vsf_loader.h</name>
+                </file>
+            </group>
+            <group>
                 <name>pbuf</name>
                 <file>
                     <name>$PROJ_DIR$\..\..\vsf\source\service\pbuf\vsf_pbuf.c</name>
@@ -9698,6 +9723,9 @@
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\..\vsf\source\utilities\language_extension\simple_sprintf.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\..\vsf\source\utilities\language_extension\simple_sscanf.c</name>
                 </file>
             </group>
             <group>

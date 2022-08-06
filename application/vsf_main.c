@@ -242,6 +242,11 @@ int vsf_linux_create_fhs(void)
     busybox_bind(VSF_LINUX_CFG_BIN_PATH "/upy", upy_main);
 #endif
 
+#if VSF_USE_LOADER == ENABLED && VSF_LOADER_USE_ELF == ENABLED && APP_USE_LINUX_ELFLOADER_DEMO == ENABLED
+    extern int elfloader_main(int argc, char *argv[]);
+    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/loadelf", elfloader_main);
+#endif
+
 #if APP_USE_USRAPP == ENABLED
     extern int usr_main(int argc, char *argv[]);
     busybox_bind(VSF_LINUX_CFG_BIN_PATH "/app", usr_main);

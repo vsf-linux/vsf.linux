@@ -43,6 +43,10 @@
 #define VSF_USE_DISTBUS                                 ENABLED
 #define VSF_USE_SIMPLE_STREAM                           ENABLED
 #define VSF_USE_STREAM                                  DISABLED
+#define VSF_USE_LOADER                                  ENABLED
+#   define VSF_LOADER_USE_ELF                           ENABLED
+//#   define VSF_ELFLOADER_CFG_DEBUG                      ENABLED
+#define APP_USE_LINUX_ELFLOADER_DEMO                    ENABLED
 
 #if VSF_USE_WINSOUND == ENABLED
 #   define VSF_USE_AUDIO                                ENABLED
@@ -85,6 +89,29 @@
 #   define VSF_LINUX_USE_LIBUSB                         VSF_USE_USB_HOST
 #   define VSF_LINUX_CFG_PLS_NUM                        16
 #   define VSF_LINUX_CFG_TLS_NUM                        64
+#   define VSF_LINUX_USE_APPLET                         ENABLED
+#       define VSF_LINUX_APPLET_USE_LIBC                ENABLED
+#       define VSF_LINUX_APPLET_USE_UNISTD              ENABLED
+#       define VSF_LINUX_APPLET_USE_PTHREAD             ENABLED
+#       define VSF_LINUX_APPLET_USE_LIBUSB              ENABLED
+#       define VSF_LINUX_APPLET_USE_SEMAPHORE           ENABLED
+#       define VSF_LINUX_APPLET_USE_POLL                ENABLED
+#       define VSF_LINUX_APPLET_USE_NETDB               ENABLED
+#       define VSF_LINUX_APPLET_USE_LIBGEN              ENABLED
+#       define VSF_LINUX_APPLET_USE_IFADDRS             ENABLED
+#       define VSF_LINUX_APPLET_USE_LIBGETOPT           ENABLED
+#       define VSF_LINUX_APPLET_USE_FCNTL               ENABLED
+#       define VSF_LINUX_APPLET_USE_DIRENT              ENABLED
+#       define VSF_LINUX_APPLET_USE_SYS_EPOLL           ENABLED
+#       define VSF_LINUX_APPLET_USE_SYS_EVENTFD         ENABLED
+#       define VSF_LINUX_APPLET_USE_SYS_RANDOM          ENABLED
+#       define VSF_LINUX_APPLET_USE_SYS_SELECT          ENABLED
+#       define VSF_LINUX_APPLET_USE_SYS_SHM             ENABLED
+#       define VSF_LINUX_APPLET_USE_SYS_STAT            ENABLED
+#       define VSF_LINUX_APPLET_USE_SYS_TIME            ENABLED
+#       define VSF_LINUX_APPLET_USE_SYS_UTSNAME         ENABLED
+#       define VSF_LINUX_APPLET_USE_SYS_WAIT            ENABLED
+#       define VSF_LINUX_APPLET_USE_SYS_SOCKET          ENABLED
 
 // APP configuration
 #define APP_USE_LINUX_DEMO                              ENABLED

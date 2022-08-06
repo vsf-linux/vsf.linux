@@ -35,6 +35,7 @@
 // strtoxxx in newlib has dependency issues, implement in simple_stdlib
 #   define VSF_LINUX_SIMPLE_STDLIB_USE_STRTOXX          ENABLED
 #endif
+#define VSF_ARCH_USE_THREAD_REG                         ENABLED
 
 #define VSF_SYSTIMER_FREQ                               (240UL * 1000 * 1000)
 // configure pool and heap to avoid heap allocating in interrupt
@@ -83,11 +84,11 @@
 // IAR: to support CPP in linux-subsystem, define MACFOs below, and don't include the simple_libc path
 //  Note that __VSF_WORKAROUND_IAR_CPP__ MUST also be defined to support CPP
 #       define VSF_LINUX_LIBC_CFG_CPP                   ENABLED
-#       define VSF_LINUX_USE_SIMPLE_STDIO               DISABLED
-#       define VSF_LINUX_USE_SIMPLE_STRING              DISABLED
-#       define VSF_LINUX_USE_SIMPLE_TIME                DISABLED
+#       define VSF_LINUX_USE_SIMPLE_STDIO               ENABLED
+#       define VSF_LINUX_USE_SIMPLE_STRING              ENABLED
+#       define VSF_LINUX_USE_SIMPLE_TIME                ENABLED
 #       define VSF_LINUX_USE_SIMPLE_STDLIB              ENABLED
-#       define VSF_LINUX_USE_SIMPLE_CTYPE               DISABLED
+#       define VSF_LINUX_USE_SIMPLE_CTYPE               ENABLED
 #   else
 #       define VSF_LINUX_LIBC_CFG_CPP                   ENABLED
 #       define VSF_LINUX_USE_SIMPLE_STDIO               ENABLED
