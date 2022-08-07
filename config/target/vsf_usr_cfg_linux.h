@@ -93,9 +93,6 @@
 #   define VSH_HAS_COLOR                                0
 #endif
 
-// application configuration
-#define APP_USE_LINUX_CURL_DEMO                      ENABLED
-
 /*============================ TYPES =========================================*/
 /*============================ GLOBAL VARIABLES ==============================*/
 /*============================ LOCAL VARIABLES ===============================*/
