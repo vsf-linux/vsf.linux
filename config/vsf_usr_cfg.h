@@ -26,7 +26,7 @@
 
 #if     defined(__WIN__)
 #   include "./target/vsf_usr_cfg_win.h"
-#elif   defined(__LINUX__)
+#elif   defined(__LINUX__) || defined(__MACOS__)
 #   include "./target/vsf_usr_cfg_linux.h"
 #elif   defined(__AIC8800__)
 #   include "./target/vsf_usr_cfg_aic8800.h"
