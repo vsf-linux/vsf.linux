@@ -11,7 +11,8 @@ jobs:
       fail-fast: false
       matrix:
         target: [ aic8800 ] #[ aic8800, aic8800.meui, stm32h743.sdlpal ]
-        cc: ['10-2021.10', '9-2019-q4', '8-2019-q3']
+        cc: ['11.3.Rel1', '10.3-2021.10', '9-2019-q4', '8-2019-q3']
+        os: [ubuntu-latest]
 
     runs-on: ubuntu-latest
 
@@ -23,16 +24,15 @@ jobs:
     - name: Checkout VSF Submodule
       run: git -C vsf submodule update --init
 
+    - name: arm-none-eabi-gcc
+      uses: carlosperate/arm-none-eabi-gcc-action@v1
+      with:
+        release: ${{matrix.cc}}
     - name: install depends
       run: |
           sudo apt-get update
           sudo apt-get install -y libsdl2-dev ninja-build
       shell: bash
-
-    - name: arm-none-eabi-gcc
-      uses: ryanwinter/arm-none-eabi-gcc@master
-      with:
-        release: ${{matrix.cc}}
 
     - name: configure cmake
       working-directory: ${{github.workspace}}/project/cmake/${{matrix.target}}
