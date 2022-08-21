@@ -3111,16 +3111,10 @@
     <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\LzFind.h">
       <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\LzFindMt.h">
-      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\LzHash.h">
       <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
     </ClInclude>
     <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Lzma2Dec.h">
-      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Lzma2DecMt.h">
       <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
     </ClInclude>
     <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Lzma2Enc.h">
@@ -3160,9 +3154,6 @@
       <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
     </ClInclude>
     <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Sort.h">
-      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Threads.h">
       <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
     </ClInclude>
     <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Xz.h">
@@ -5456,13 +5447,7 @@
     <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\LzFind.c">
       <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\LzFindMt.c">
-      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Lzma2Dec.c">
-      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Lzma2DecMt.c">
       <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Lzma2Enc.c">
@@ -5502,9 +5487,6 @@
       <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Sort.c">
-      <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Threads.c">
       <Filter>application\3rd-party\mgba\src\third-party\lzma</Filter>
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Xz.c">

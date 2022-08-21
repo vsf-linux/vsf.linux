@@ -119,10 +119,8 @@
     <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Delta.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\DllSecur.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\LzFind.h" />
-    <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\LzFindMt.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\LzHash.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Lzma2Dec.h" />
-    <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Lzma2DecMt.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Lzma2Enc.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Lzma86.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\LzmaDec.h" />
@@ -136,7 +134,6 @@
     <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\RotateDefs.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Sha256.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Sort.h" />
-    <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Threads.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Xz.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\XzCrc64.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\XzEnc.h" />
@@ -1014,9 +1011,7 @@
     <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Delta.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\DllSecur.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\LzFind.c" />
-    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\LzFindMt.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Lzma2Dec.c" />
-    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Lzma2DecMt.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Lzma2Enc.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Lzma86Dec.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Lzma86Enc.c" />
@@ -1030,7 +1025,6 @@
     <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Ppmd7Enc.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Sha256.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Sort.c" />
-    <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Threads.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\Xz.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\XzCrc64.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\mgba\src\third-party\lzma\XzCrc64Opt.c" />
@@ -1710,7 +1704,7 @@
       <Optimization>Full</Optimization>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>__VSF__;__CPU_X86__;__WIN__;__OOC_CPP__;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;VSF_USE_SDL2=ENABLED;SIGWINCH=28;VSF_APP_ENTRY=SDL_main;VSF_SDL2_CFG_COLOR=VSF_DISP_COLOR_RGB565;MUSIC_OGG=MUSIC_OGG
-;MUSIC_WAV=MUSIC_WAV;FT2_BUILD_LIBRARY;APP_USE_SDLPAL_DEMO=ENABLED;APP_USE_DUNGEONRUSH_DEMO=ENABLED;SOFTWARE_ACC;APP_USE_GNUBOY_DEMO=ENABLED;IS_LITTLE_ENDIAN;APP_USE_NOFRENDO_DEMO=ENABLED;NOFRENDO_DEBUG;APP_USE_MGBA_DEMO=ENABLED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+;MUSIC_WAV=MUSIC_WAV;FT2_BUILD_LIBRARY;APP_USE_SDLPAL_DEMO=ENABLED;APP_USE_DUNGEONRUSH_DEMO=ENABLED;SOFTWARE_ACC;APP_USE_GNUBOY_DEMO=ENABLED;IS_LITTLE_ENDIAN;APP_USE_NOFRENDO_DEMO=ENABLED;NOFRENDO_DEBUG;APP_USE_MGBA_DEMO=ENABLED;_7ZIP_ST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal\vsf;$(ProjectDir)..\..\application\3rd-party\sdl\include;$(ProjectDir)..\..\application\3rd-party\sdl\include\SDL2;$(ProjectDir)..\..\application\3rd-party\sdl\audio\ogg\include;$(ProjectDir)..\..\application\3rd-party\sdl\audio\vorbis\include;$(ProjectDir)..\..\application\3rd-party\sdl\mgba\include;$(ProjectDir)..\..\application\3rd-party\sdl\port\mgba;$(ProjectDir)..\..\application\3rd-party\sdl\mgba\src;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\lua\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\raw;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_ttf;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_net;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-fms-extensions %(AdditionalOptions)</AdditionalOptions>
@@ -1740,7 +1734,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>__VSF__;__CPU_X64__;__WIN__;__OOC_CPP__;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;VSF_USE_SDL2=ENABLED;SIGWINCH=28;VSF_APP_ENTRY=SDL_main;VSF_SDL2_CFG_COLOR=VSF_DISP_COLOR_RGB565;MUSIC_OGG=MUSIC_OGG
-;MUSIC_WAV=MUSIC_WAV;FT2_BUILD_LIBRARY;APP_USE_SDLPAL_DEMO=ENABLED;APP_USE_DUNGEONRUSH_DEMO=ENABLED;SOFTWARE_ACC;APP_USE_GNUBOY_DEMO=ENABLED;IS_LITTLE_ENDIAN;APP_USE_NOFRENDO_DEMO=ENABLED;NOFRENDO_DEBUG;APP_USE_MGBA_DEMO=ENABLED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+;MUSIC_WAV=MUSIC_WAV;FT2_BUILD_LIBRARY;APP_USE_SDLPAL_DEMO=ENABLED;APP_USE_DUNGEONRUSH_DEMO=ENABLED;SOFTWARE_ACC;APP_USE_GNUBOY_DEMO=ENABLED;IS_LITTLE_ENDIAN;APP_USE_NOFRENDO_DEMO=ENABLED;NOFRENDO_DEBUG;APP_USE_MGBA_DEMO=ENABLED;_7ZIP_ST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\sdl\sdlpal\vsf;$(ProjectDir)..\..\application\3rd-party\sdl\include;$(ProjectDir)..\..\application\3rd-party\sdl\include\SDL2;$(ProjectDir)..\..\application\3rd-party\sdl\audio\ogg\include;$(ProjectDir)..\..\application\3rd-party\sdl\audio\vorbis\include;$(ProjectDir)..\..\application\3rd-party\sdl\mgba\include;$(ProjectDir)..\..\application\3rd-party\sdl\port\mgba;$(ProjectDir)..\..\application\3rd-party\sdl\mgba\src;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\lua\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\raw;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_ttf;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_net;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-fms-extensions %(AdditionalOptions)</AdditionalOptions>
