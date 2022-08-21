@@ -50,21 +50,18 @@ static int __sdlpal_main(int argc, char *argv[])
 
 #if VSF_USE_QUICKJS == ENABLED
 #if APP_USE_MEUI_DEMO == ENABLED
-#include <class.h>
-struct class_table_info __class_table_start[5];
-struct class_table_info __class_table_end[1];
 static int __meui_main(int argc, char **argv)
 {
-    extern struct class_table_info object_tclass_table_info;
-    extern struct class_table_info Boxclass_table_info;
-    extern struct class_table_info CanvasEleclass_table_info;
-    extern struct class_table_info DivEleclass_table_info;
-    extern struct class_table_info StackEleclass_table_info;
-    __class_table_start[0] = object_tclass_table_info;
-    __class_table_start[1] = Boxclass_table_info;
-    __class_table_start[2] = CanvasEleclass_table_info;
-    __class_table_start[3] = DivEleclass_table_info;
-    __class_table_start[4] = StackEleclass_table_info;
+    extern void object_tinfo_init(void);
+    extern void Boxinfo_init(void);
+    extern void CanvasEleinfo_init(void);
+    extern void DivEleinfo_init(void);
+    extern void StackEleinfo_init(void);
+    object_tinfo_init();
+    Boxinfo_init();
+    CanvasEleinfo_init();
+    DivEleinfo_init();
+    StackEleinfo_init();
 
     extern int meui_main(int argc, char **argv);
     return meui_main(argc, argv);

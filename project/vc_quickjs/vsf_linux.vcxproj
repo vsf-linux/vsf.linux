@@ -388,6 +388,8 @@
     <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\src\bind\meui.c" />
     <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\src\bind\style.c" />
     <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\src\box.c" />
+    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\src\cache\image.c" />
+    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\src\cache\lru.c" />
     <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\src\class.c" />
     <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\src\element\canvas.c" />
     <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\src\element\div.c" />
