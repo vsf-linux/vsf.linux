@@ -47,7 +47,7 @@
 #   define VSF_LOADER_USE_ELF                           ENABLED
 //#   define VSF_ELFLOADER_CFG_DEBUG                      ENABLED
 
-#if VSF_USE_WINSOUND == ENABLED
+#if VSF_AUDIO_USE_WINSOUND == ENABLED || VSF_AUDIO_USE_DUMMY == ENABLED
 #   define VSF_USE_AUDIO                                ENABLED
 #   define VSF_AUDIO_USE_PLAYBACK                       ENABLED
 #endif
