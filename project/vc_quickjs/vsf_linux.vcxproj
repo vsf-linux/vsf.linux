@@ -389,6 +389,7 @@
     <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\src\box.c" />
     <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\src\cache\image.c" />
     <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\src\cache\lru.c" />
+    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\src\cache\text.c" />
     <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\src\class.c" />
     <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\src\element\canvas.c" />
     <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\src\element\div.c" />
@@ -405,6 +406,7 @@
     <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\src\style.c" />
     <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\src\text.c" />
     <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\src\util.c" />
+    <ClCompile Include="..\..\application\3rd-party\quickjs\MEUI\src\utils\file.c" />
     <ClCompile Include="..\..\application\3rd-party\quickjs\raw\cutils.c" />
     <ClCompile Include="..\..\application\3rd-party\quickjs\raw\libbf.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>

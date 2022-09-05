@@ -52,16 +52,19 @@ static int __sdlpal_main(int argc, char *argv[])
 #if APP_USE_MEUI_DEMO == ENABLED
 static int __meui_main(int argc, char **argv)
 {
-    extern void object_tinfo_init(void);
-    extern void Boxinfo_init(void);
-    extern void CanvasEleinfo_init(void);
-    extern void DivEleinfo_init(void);
-    extern void StackEleinfo_init(void);
-    object_tinfo_init();
-    Boxinfo_init();
-    CanvasEleinfo_init();
-    DivEleinfo_init();
-    StackEleinfo_init();
+#define meui_init_class(__type_name)                                            \
+    extern void __type_name##_info_init(void);                                  \
+    __type_name##_info_init();
+#define meui_init_class_conde(__type_name)                                      \
+    extern void __type_name##_info_init(void);                                  \
+    extern void __type_name##_constructor_init();                               \
+    extern void __type_name##_destructor_init();                                \
+    __type_name##_info_init();                                                  \
+    __type_name##_constructor_init();                                           \
+    __type_name##_destructor_init();
+
+    VSF_MFOREACH(meui_init_class, object_t)
+    VSF_MFOREACH(meui_init_class_conde, Box, CanvasEle, DivEle, StackEle)
 
     extern int meui_main(int argc, char **argv);
     return meui_main(argc, argv);
