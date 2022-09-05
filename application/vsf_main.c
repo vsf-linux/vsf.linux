@@ -48,30 +48,6 @@ static int __sdlpal_main(int argc, char *argv[])
 }
 #endif
 
-#if VSF_USE_QUICKJS == ENABLED
-#if APP_USE_MEUI_DEMO == ENABLED
-static int __meui_main(int argc, char **argv)
-{
-#define meui_init_class(__type_name)                                            \
-    extern void __type_name##_info_init(void);                                  \
-    __type_name##_info_init();
-#define meui_init_class_conde(__type_name)                                      \
-    extern void __type_name##_info_init(void);                                  \
-    extern void __type_name##_constructor_init();                               \
-    extern void __type_name##_destructor_init();                                \
-    __type_name##_info_init();                                                  \
-    __type_name##_constructor_init();                                           \
-    __type_name##_destructor_init();
-
-    VSF_MFOREACH(meui_init_class, object_t)
-    VSF_MFOREACH(meui_init_class_conde, Box, CanvasEle, DivEle, StackEle)
-
-    extern int meui_main(int argc, char **argv);
-    return meui_main(argc, argv);
-}
-#endif
-#endif
-
 int vsf_linux_create_fhs(void)
 {
     // 0. devfs, busybox, etc
@@ -217,7 +193,8 @@ int vsf_linux_create_fhs(void)
 
 #if VSF_USE_QUICKJS == ENABLED
 #if APP_USE_MEUI_DEMO == ENABLED
-    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/meui", __meui_main);
+    extern int meui_main(int argc, char **argv);
+    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/meui", meui_main);
 #endif
 #endif
 
