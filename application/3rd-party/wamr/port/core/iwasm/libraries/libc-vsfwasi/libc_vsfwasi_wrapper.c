@@ -686,12 +686,12 @@ wasi_fd_readdir(wasm_exec_env_t exec_env, wasi_fd_t fd, void *buf,
         default:        cde.d_type = __WASI_FILETYPE_UNKNOWN;           break;
         }
 
-        curlen = min(bufremain, sizeof(cde));
+        curlen = vsf_min(bufremain, sizeof(cde));
         if (curlen > 0) {
             memcpy(buf, &cde, curlen);
             bufremain -= curlen;
 
-            curlen = min(bufremain, namelen);
+            curlen = vsf_min(bufremain, namelen);
             if (curlen > 0) 
                 memcpy(buf, de->d_name, curlen);
             bufremain -= curlen;
