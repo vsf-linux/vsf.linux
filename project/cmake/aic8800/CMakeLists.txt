@@ -41,6 +41,8 @@ set(VSF_TARGET_DEFINITIONS
     "CFG_RSSI_DATAPKT"
     "CONFIG_RWNX"
     "CONFIG_RWNX_LWIP"
+#   wifi 5G
+#    "CFG_BAND5G"
 #   misc
     "CFG_DBG"
     "CFG_IPERF"
