@@ -99,6 +99,8 @@
 #define VSF_HAL_USE_DEBUG_STREAM                        ENABLED
 #define VSF_SYSTIMER_FREQ                               (0ul)
 
+#define VSF_AUDIO_USE_WINSOUND                          ENABLED
+
 // winusb does not support hub
 #define VSF_USBH_CFG_ENABLE_ROOT_HUB                    DISABLED
 #define VSF_USBH_USE_HUB                                DISABLED
