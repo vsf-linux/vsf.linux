@@ -218,6 +218,14 @@ VSF_GetSDLColorFormat(vk_disp_color_type_t vsf_disp_color)
     }
 }
 
+#if VSF_DISP_USE_FB == ENABLED
+static SDL_bool
+VSF_IsDisplayFB(vk_disp_t *disp)
+{
+    return disp->param.drv->fb.set_front_buffer != NULL;
+}
+#endif
+
 static void
 VSF_DestroyWindowFramebuffer(_THIS, SDL_Window * window)
 {
@@ -240,7 +248,16 @@ VSF_CreateWindowFramebuffer(_THIS, SDL_Window * window, Uint32 * format, void **
 
     /* Create a new one */
     SDL_GetWindowSize(window, &w, &h);
-    surface = SDL_CreateRGBSurfaceWithFormat(0, w, h, 0, surface_format);
+
+#if VSF_DISP_USE_FB == ENABLED
+    if (VSF_IsDisplayFB(disp)) {
+        surface = SDL_CreateRGBSurfaceWithFormatFrom(vk_disp_fb_get_back_buffer(disp), w, h, 0,
+                            vsf_disp_get_pitch(disp), surface_format);
+    } else
+#endif
+    {
+        surface = SDL_CreateRGBSurfaceWithFormat(0, w, h, 0, surface_format);
+    }
     if (!surface) {
         return -1;
     }
@@ -266,6 +283,16 @@ VSF_UpdateWindowFramebuffer(_THIS, SDL_Window * window, const SDL_Rect * rects, 
     if ((surface->w > disp->param.width) || (surface->h > disp->param.height)) {
         return SDL_SetError("%s: Surface is too large to be fit in the screen", VSF_VIDEO_MOD);
     }
+
+#if VSF_DISP_USE_FB == ENABLED
+    if (VSF_IsDisplayFB(disp)) {
+        void *orig_buffer = vk_disp_fb_get_back_buffer(disp);
+        vk_disp_fb_switch_buffer(disp);
+        surface->pixels = vk_disp_fb_get_back_buffer(disp);
+        memcpy(surface->pixels, orig_buffer, vsf_disp_get_frame_size(disp));
+        return 0;
+    }
+#endif
 
     /* Send the data to the display */
     disp->ui_data = vsf_eda_get_cur();
