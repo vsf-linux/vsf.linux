@@ -222,7 +222,8 @@ VSF_GetSDLColorFormat(vk_disp_color_type_t vsf_disp_color)
 static SDL_bool
 VSF_IsDisplayFB(vk_disp_t *disp)
 {
-    return disp->param.drv->fb.set_front_buffer != NULL;
+    return SDL_FALSE;
+//    return disp->param.drv == &vk_disp_drv_fb;
 }
 #endif
 
@@ -284,26 +285,22 @@ VSF_UpdateWindowFramebuffer(_THIS, SDL_Window * window, const SDL_Rect * rects, 
         return SDL_SetError("%s: Surface is too large to be fit in the screen", VSF_VIDEO_MOD);
     }
 
+    disp->ui_data = vsf_eda_get_cur();
 #if VSF_DISP_USE_FB == ENABLED
     if (VSF_IsDisplayFB(disp)) {
-        void *orig_buffer = vk_disp_fb_get_back_buffer(disp);
-        vk_disp_fb_switch_buffer(disp);
+        vk_disp_fb_set_front_buffer(disp, -1);
         surface->pixels = vk_disp_fb_get_back_buffer(disp);
-        memcpy(surface->pixels, orig_buffer, vsf_disp_get_frame_size(disp));
-        return 0;
-    }
+    } else
 #endif
-
-    /* Send the data to the display */
-    disp->ui_data = vsf_eda_get_cur();
-
-    vk_disp_area_t area = {
-        .pos.x      = 0,
-        .pos.y      = 0,
-        .size.x     = surface->w,
-        .size.y     = surface->h,
-    };
-    vk_disp_refresh(disp, &area, surface->pixels);
+    {
+        vk_disp_area_t area = {
+            .pos.x      = 0,
+            .pos.y      = 0,
+            .size.x     = surface->w,
+            .size.y     = surface->h,
+        };
+        vk_disp_refresh(disp, &area, surface->pixels);
+    }
     vsf_thread_wfe(VSF_EVT_RETURN);
     return 0;
 }
