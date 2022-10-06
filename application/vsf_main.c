@@ -204,11 +204,6 @@ int vsf_linux_create_fhs(void)
     busybox_bind(VSF_LINUX_CFG_BIN_PATH "/lws-minimal-http-client", lws_minimal_http_client_main);
 #endif
 
-#if APP_USE_UPY_DEMO == ENABLED
-    extern int upy_main(int argc, char *argv[]);
-    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/upy", upy_main);
-#endif
-
 #if VSF_USE_LOADER == ENABLED && VSF_LOADER_USE_ELF == ENABLED && APP_USE_LINUX_ELFLOADER_DEMO == ENABLED
     extern int elfloader_main(int argc, char *argv[]);
     busybox_bind(VSF_LINUX_CFG_BIN_PATH "/loadelf", elfloader_main);

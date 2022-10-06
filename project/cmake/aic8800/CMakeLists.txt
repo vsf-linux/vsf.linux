@@ -61,7 +61,6 @@ set(APP_USE_LINUX_CURL_DEMO 1)
 set(APP_USE_LINUX_WAMR_DEMO 0)
 set(APP_USE_SDL_DEMO 0)
     set(APP_USE_SDL_SDLPAL_DEMO 0)
-set(APP_USE_UPY_DEMO 0)
 
 # include vsf cmake script
 set(VSF_CONFIG_PATH ../../../config)
