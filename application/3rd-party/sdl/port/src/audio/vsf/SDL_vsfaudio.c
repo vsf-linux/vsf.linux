@@ -83,8 +83,8 @@ VSFAUDIO_OpenDevice(_THIS, const char *devname)
                 SDL_platform.cfg.audio_dev : _this->handle;
     vk_audio_stream_t *audio_stream = NULL;
     vk_audio_format_t vsf_audio_format_desired = {
+        .datatype.value     = VSF_AUDIO_DATA_TYPE_LEU16,
         .channel_num        = _this->spec.channels,
-        .sample_bit_width   = SDL_AUDIO_BITSIZE(_this->spec.format),
         .sample_rate        = _this->spec.freq,
     };
     vk_audio_format_t vsf_audio_format;
@@ -117,7 +117,10 @@ VSFAUDIO_OpenDevice(_THIS, const char *devname)
         vsf_audio_format = audio_dev->stream[first_stream_idx].format;
 
         _this->spec.channels = vsf_audio_format.channel_num;
-        _this->spec.format = vsf_audio_format.sample_bit_width;
+        _this->spec.format =    (VSF_AUDIO_DATA_TYPE_BITLEN(vsf_audio_format.datatype.value) << 0)
+                            |   (VSF_AUDIO_DATA_TYPE_IS_FLOAT(vsf_audio_format.datatype.value) ? SDL_AUDIO_MASK_DATATYPE : 0)
+                            |   (VSF_AUDIO_DATA_TYPE_IS_BE(vsf_audio_format.datatype.value) ? SDL_AUDIO_MASK_ENDIAN : 0)
+                            |   (VSF_AUDIO_DATA_TYPE_IS_SIGNED(vsf_audio_format.datatype.value) ? SDL_AUDIO_MASK_SIGNED : 0);
         _this->spec.freq = vsf_audio_format.sample_rate;
         SDL_CalculateAudioSpec(&_this->spec);
     } else if (0 == vsf_audio_format.value) {
