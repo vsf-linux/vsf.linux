@@ -579,6 +579,30 @@
     <ClInclude Include="..\..\vsf\source\hal\arch\x86\win\win_generic.h" />
     <ClInclude Include="..\..\vsf\source\hal\arch\__vsf_arch_interface.h" />
     <ClInclude Include="..\..\vsf\source\hal\driver\common\common.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\rtc\rtc_common.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\rtc\rtc_template.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template_adc.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template_declaration.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template_flash.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template_gpio.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template_hal_driver.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template_i2c.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template_i2s.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template_implementation.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template_io.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template_mmc.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template_pm.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template_pwm.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template_rng.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template_rtc.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template_spi.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template_timer.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template_usart.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template_usb.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\usart\fifo2req_usart.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\usart\usart_template.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\usart\vsf_drv_usart_poll_util.h" />
     <ClInclude Include="..\..\vsf\source\hal\driver\driver.h" />
     <ClInclude Include="..\..\vsf\source\hal\driver\vsf\distbus\driver.h" />
     <ClInclude Include="..\..\vsf\source\hal\driver\vsf\distbus\usbd\vsf_hal_distbus_usbd.h" />
@@ -1490,6 +1514,9 @@
     <ClCompile Include="..\..\vsf\source\hal\arch\vsf_arch_abstraction.c" />
     <ClCompile Include="..\..\vsf\source\hal\arch\x86\win\win_generic.c" />
     <ClCompile Include="..\..\vsf\source\hal\arch\x86\win\win_generic_simple.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\rtc\rtc_common.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\usart\fifo2req_usart.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\usart\usart_common.c" />
     <ClCompile Include="..\..\vsf\source\hal\driver\vsf\distbus\usbd\vsf_hal_distbus_usbd.c" />
     <ClCompile Include="..\..\vsf\source\hal\driver\vsf\distbus\vsf_hal_distbus.c" />
     <ClCompile Include="..\..\vsf\source\hal\driver\x86\win\driver.c" />
@@ -1620,6 +1647,8 @@
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ml64 /Fo $(IntDir)%(fileName).obj /c %(FullPath)</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)%(Filename).obj</Outputs>
     </CustomBuild>
+    <None Include="..\..\vsf\source\hal\driver\common\rtc\rtc_template.inc" />
+    <None Include="..\..\vsf\source\hal\driver\common\usart\usart_template.inc" />
     <None Include="..\..\vsf\source\shell\sys\linux\app\httpd\urihandler\file\__vsf_linux_urihandler_file.inc" />
     <None Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\cmath" />
     <None Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\cstdio" />

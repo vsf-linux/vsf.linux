@@ -916,6 +916,15 @@
     <Filter Include="application\3rd-party\mgba\src\third-party\lzma">
       <UniqueIdentifier>{f3826819-f0f8-406f-a5df-c9871ca98451}</UniqueIdentifier>
     </Filter>
+    <Filter Include="vsf\hal\driver\common\rtc">
+      <UniqueIdentifier>{cbb52f43-fb9b-4573-8181-1dc24b78d38f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\hal\driver\common\usart">
+      <UniqueIdentifier>{d8ec0686-64aa-46dc-9a86-1c7339863b63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\hal\driver\common\template">
+      <UniqueIdentifier>{ebc9dafd-056d-43fb-85a3-cfc4891c1497}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vsf\source\vsf.h">
@@ -3170,6 +3179,78 @@
     </ClInclude>
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\utime.h">
       <Filter>vsf\shell\sys\linux\include\simple_libc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\rtc\rtc_common.h">
+      <Filter>vsf\hal\driver\common\rtc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\rtc\rtc_template.h">
+      <Filter>vsf\hal\driver\common\rtc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\usart\fifo2req_usart.h">
+      <Filter>vsf\hal\driver\common\usart</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\usart\usart_template.h">
+      <Filter>vsf\hal\driver\common\usart</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\usart\vsf_drv_usart_poll_util.h">
+      <Filter>vsf\hal\driver\common\usart</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template.h">
+      <Filter>vsf\hal\driver\common\template</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template_adc.h">
+      <Filter>vsf\hal\driver\common\template</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template_declaration.h">
+      <Filter>vsf\hal\driver\common\template</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template_flash.h">
+      <Filter>vsf\hal\driver\common\template</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template_gpio.h">
+      <Filter>vsf\hal\driver\common\template</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template_hal_driver.h">
+      <Filter>vsf\hal\driver\common\template</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template_i2c.h">
+      <Filter>vsf\hal\driver\common\template</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template_i2s.h">
+      <Filter>vsf\hal\driver\common\template</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template_implementation.h">
+      <Filter>vsf\hal\driver\common\template</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template_io.h">
+      <Filter>vsf\hal\driver\common\template</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template_mmc.h">
+      <Filter>vsf\hal\driver\common\template</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template_pm.h">
+      <Filter>vsf\hal\driver\common\template</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template_pwm.h">
+      <Filter>vsf\hal\driver\common\template</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template_rng.h">
+      <Filter>vsf\hal\driver\common\template</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template_rtc.h">
+      <Filter>vsf\hal\driver\common\template</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template_spi.h">
+      <Filter>vsf\hal\driver\common\template</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template_timer.h">
+      <Filter>vsf\hal\driver\common\template</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template_usart.h">
+      <Filter>vsf\hal\driver\common\template</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template_usb.h">
+      <Filter>vsf\hal\driver\common\template</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -5507,6 +5588,15 @@
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\glibc\vsf_linux_glibcpp_string.cpp">
       <Filter>vsf\shell\sys\linux\lib\glibc</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\rtc\rtc_common.c">
+      <Filter>vsf\hal\driver\common\rtc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\usart\fifo2req_usart.c">
+      <Filter>vsf\hal\driver\common\usart</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\usart\usart_common.c">
+      <Filter>vsf\hal\driver\common\usart</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\vsf\source\hal\arch\common\arch_without_thread_suspend\vsf_arch_without_thread_suspend_template.inc">
@@ -5529,6 +5619,12 @@
     </None>
     <None Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\cmath">
       <Filter>vsf\shell\sys\linux\include\simple_libc</Filter>
+    </None>
+    <None Include="..\..\vsf\source\hal\driver\common\rtc\rtc_template.inc">
+      <Filter>vsf\hal\driver\common\rtc</Filter>
+    </None>
+    <None Include="..\..\vsf\source\hal\driver\common\usart\usart_template.inc">
+      <Filter>vsf\hal\driver\common\usart</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
