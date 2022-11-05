@@ -341,6 +341,7 @@
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\sysfs.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\timer.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\types.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\uinput.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\usb.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\usb\ch9.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\uuid.h" />
@@ -360,11 +361,14 @@
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\semaphore.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\signal.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\ctype.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\stdatomic.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\stddef.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\stdio.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\stdlib.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\string.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\strings.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\time.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\utime.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\wchar.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\syslog.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\epoll.h" />
@@ -378,6 +382,7 @@
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\select.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\sem.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\shm.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\signalfd.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\socket.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\stat.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\syscall.h" />
@@ -639,6 +644,7 @@
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\kernel\socket\vsf_linux_socket.c" />
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\glibc\3rd-party\getopt_long.c" />
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\glibc\vsf_linux_glibc.c" />
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\glibc\vsf_linux_glibcpp.cc" />
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\glibc\vsf_linux_glibc_ctype.c" />
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\glibc\vsf_linux_glibc_pthread.c" />
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\glibc\vsf_linux_glibc_sem.c" />
@@ -682,6 +688,18 @@
     <None Include="..\..\vsf\source\hal\driver\common\timer\timer_template.inc" />
     <None Include="..\..\vsf\source\hal\driver\common\usart\usart_template.inc" />
     <None Include="..\..\vsf\source\shell\sys\linux\app\httpd\urihandler\file\__vsf_linux_urihandler_file.inc" />
+    <None Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\atomic" />
+    <None Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\cmath" />
+    <None Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\condition_variable" />
+    <None Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\cstdint" />
+    <None Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\cstdio" />
+    <None Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\cstdlib" />
+    <None Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\cstring" />
+    <None Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\cwchar" />
+    <None Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\mutex" />
+    <None Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\string" />
+    <None Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\thread" />
+    <None Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\xstring" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -763,7 +781,7 @@
       <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-fms-extensions %(AdditionalOptions)</AdditionalOptions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <ExceptionHandling>false</ExceptionHandling>
+      <ExceptionHandling>Sync</ExceptionHandling>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <OmitFramePointers>false</OmitFramePointers>
       <AssemblerListingLocation>$(IntDir)/__sub0/__sub1/__sub2/__sub3/%(RelativeDir)</AssemblerListingLocation>
@@ -791,7 +809,7 @@
       <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-fms-extensions %(AdditionalOptions)</AdditionalOptions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <ExceptionHandling>false</ExceptionHandling>
+      <ExceptionHandling>Sync</ExceptionHandling>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <OmitFramePointers>false</OmitFramePointers>
       <AssemblerListingLocation>$(IntDir)/__sub0/__sub1/__sub2/__sub3/%(RelativeDir)</AssemblerListingLocation>
@@ -858,7 +876,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
-      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
