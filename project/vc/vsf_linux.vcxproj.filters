@@ -691,6 +691,18 @@
     <Filter Include="vsf\shell\sys\linux\kernel\core\usb">
       <UniqueIdentifier>{365efd47-19f4-4300-8702-6fc6bf6182ff}</UniqueIdentifier>
     </Filter>
+    <Filter Include="vsf\shell\sys\linux\kernel\core\hid">
+      <UniqueIdentifier>{7ad34c4a-2aa7-4be2-be09-4fb311adab4e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\shell\sys\linux\kernel\core\80211">
+      <UniqueIdentifier>{6925ff02-d8a8-4f2e-96b0-14f0fba4a8e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\shell\sys\linux\kernel\core\input">
+      <UniqueIdentifier>{d698943c-3af3-4638-b526-69c937235034}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\shell\sys\linux\kernel\core\led">
+      <UniqueIdentifier>{ce56161c-96b8-4ff5-8ef1-2e37aff282b8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vsf\source\vsf.h">
@@ -2632,6 +2644,18 @@
     </ClCompile>
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\glibc\vsf_linux_glibcpp.cc">
       <Filter>vsf\shell\sys\linux\lib\glibc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\kernel\core\hid\vsf_linux_core_hid.c">
+      <Filter>vsf\shell\sys\linux\kernel\core\hid</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\kernel\core\80211\vsf_linux_core_80211.c">
+      <Filter>vsf\shell\sys\linux\kernel\core\80211</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\kernel\core\input\vsf_linux_core_input.c">
+      <Filter>vsf\shell\sys\linux\kernel\core\input</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\kernel\core\led\vsf_linux_core_led.c">
+      <Filter>vsf\shell\sys\linux\kernel\core\led</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
