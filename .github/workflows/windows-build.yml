@@ -12,7 +12,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        project_name: [vc, vc_git_hostsock]
+        # disable vc_git_hostsock: https://github.com/vsf-linux/vsf.linux/issues/11
+        project_name: [vc]
         build_config: [Debug] #[Debug, Release]
         platform: [x86, x64]
         # https://docs.microsoft.com/en-us/visualstudio/install/visual-studio-build-numbers-and-release-dates?view=vs-2019
