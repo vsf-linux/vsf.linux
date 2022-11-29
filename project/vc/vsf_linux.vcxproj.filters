@@ -703,6 +703,9 @@
     <Filter Include="vsf\shell\sys\linux\kernel\core\led">
       <UniqueIdentifier>{ce56161c-96b8-4ff5-8ef1-2e37aff282b8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="vsf\hal\driver\common\gpio">
+      <UniqueIdentifier>{ddd7bae4-6ae2-49bb-b9a8-d42230f4c2a4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vsf\source\vsf.h">
@@ -2656,6 +2659,9 @@
     </ClCompile>
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\kernel\core\led\vsf_linux_core_led.c">
       <Filter>vsf\shell\sys\linux\kernel\core\led</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\gpio\gpio_common.c">
+      <Filter>vsf\hal\driver\common\gpio</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
