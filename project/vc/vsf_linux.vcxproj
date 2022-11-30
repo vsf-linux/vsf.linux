@@ -575,7 +575,9 @@
     <ClCompile Include="..\..\vsf\source\hal\driver\common\i2c\i2c_common.c" />
     <ClCompile Include="..\..\vsf\source\hal\driver\common\i2c\i2c_request.c" />
     <ClCompile Include="..\..\vsf\source\hal\driver\common\i2c\multiplex_i2c.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\i2s\i2s_common.c" />
     <ClCompile Include="..\..\vsf\source\hal\driver\common\io\io_common.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\mmc\mmc_common.c" />
     <ClCompile Include="..\..\vsf\source\hal\driver\common\pwm\pwm_common.c" />
     <ClCompile Include="..\..\vsf\source\hal\driver\common\rng\rng_common.c" />
     <ClCompile Include="..\..\vsf\source\hal\driver\common\rtc\rtc_common.c" />

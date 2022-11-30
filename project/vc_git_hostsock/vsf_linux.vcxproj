@@ -1959,6 +1959,7 @@
     <ClCompile Include="..\..\vsf\source\hal\arch\x86\win\win_generic_simple.c" />
     <ClCompile Include="..\..\vsf\source\hal\driver\common\adc\adc_common.c" />
     <ClCompile Include="..\..\vsf\source\hal\driver\common\flash\flash_common.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\gpio\gpio_common.c" />
     <ClCompile Include="..\..\vsf\source\hal\driver\common\i2c\i2c_common.c" />
     <ClCompile Include="..\..\vsf\source\hal\driver\common\i2c\i2c_request.c" />
     <ClCompile Include="..\..\vsf\source\hal\driver\common\i2c\multiplex_i2c.c" />

@@ -706,6 +706,12 @@
     <Filter Include="vsf\hal\driver\common\gpio">
       <UniqueIdentifier>{ddd7bae4-6ae2-49bb-b9a8-d42230f4c2a4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="vsf\hal\driver\common\i2s">
+      <UniqueIdentifier>{3a094a87-eb4a-4b5c-8d0c-f8c674cec371}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\hal\driver\common\mmc">
+      <UniqueIdentifier>{549ded45-b53a-4c40-b356-7e83c95aee15}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vsf\source\vsf.h">
@@ -2662,6 +2668,12 @@
     </ClCompile>
     <ClCompile Include="..\..\vsf\source\hal\driver\common\gpio\gpio_common.c">
       <Filter>vsf\hal\driver\common\gpio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\i2s\i2s_common.c">
+      <Filter>vsf\hal\driver\common\i2s</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\mmc\mmc_common.c">
+      <Filter>vsf\hal\driver\common\mmc</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

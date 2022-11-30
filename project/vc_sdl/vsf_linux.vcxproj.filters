@@ -721,6 +721,45 @@
     <Filter Include="application\audio_demo">
       <UniqueIdentifier>{3638d49c-4e60-43c1-8fc2-f0d540fae6f2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="vsf\hal\driver\common\adc">
+      <UniqueIdentifier>{d27d99d9-5eb9-4a8b-a5de-049b1e37dfbe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\hal\driver\common\flash">
+      <UniqueIdentifier>{e5304a2f-ca89-4856-b0d5-dd77bb20a9e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\hal\driver\common\gpio">
+      <UniqueIdentifier>{556b23c6-bbe3-4b47-aacc-c87fef0cec6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\hal\driver\common\i2c">
+      <UniqueIdentifier>{ae756340-61ce-4e0b-a0cb-5be7c4939d90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\hal\driver\common\i2s">
+      <UniqueIdentifier>{00db6379-ac0e-4bad-9d53-6ed9e4232024}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\hal\driver\common\io">
+      <UniqueIdentifier>{ab2ee3ae-829e-4bfe-9722-3213aa2ce547}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\hal\driver\common\mmc">
+      <UniqueIdentifier>{fa21e6b7-f3dd-446e-9c29-85be4b14495e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\hal\driver\common\pwm">
+      <UniqueIdentifier>{fbdd9d1b-c57f-4d68-b7f7-983f9c73e419}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\hal\driver\common\rng">
+      <UniqueIdentifier>{54cebe15-d790-446b-a121-027eda470bd1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\hal\driver\common\rtc">
+      <UniqueIdentifier>{1bb064ec-eec3-4d79-9bdc-896c73a6f128}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\hal\driver\common\spi">
+      <UniqueIdentifier>{1b852a5e-c462-41ee-bce6-a9d5d389c005}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\hal\driver\common\timer">
+      <UniqueIdentifier>{b8e6c697-2672-47b9-a489-51f516cd37eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\hal\driver\common\usart">
+      <UniqueIdentifier>{2413a6df-7d67-46c0-a3f3-4d91549e64c8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vsf\source\vsf.h">
@@ -3763,6 +3802,45 @@
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\sdl\x8086tiny\8086tiny.c">
       <Filter>application\3rd-party\sdl\8086tiny</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\adc\adc_common.c">
+      <Filter>vsf\hal\driver\common\adc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\flash\flash_common.c">
+      <Filter>vsf\hal\driver\common\flash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\gpio\gpio_common.c">
+      <Filter>vsf\hal\driver\common\gpio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\i2c\i2c_common.c">
+      <Filter>vsf\hal\driver\common\i2c</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\i2s\i2s_common.c">
+      <Filter>vsf\hal\driver\common\i2s</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\io\io_common.c">
+      <Filter>vsf\hal\driver\common\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\mmc\mmc_common.c">
+      <Filter>vsf\hal\driver\common\mmc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\pwm\pwm_common.c">
+      <Filter>vsf\hal\driver\common\pwm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\rng\rng_common.c">
+      <Filter>vsf\hal\driver\common\rng</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\rtc\rtc_common.c">
+      <Filter>vsf\hal\driver\common\rtc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\spi\spi_common.c">
+      <Filter>vsf\hal\driver\common\spi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\timer\timer_common.c">
+      <Filter>vsf\hal\driver\common\timer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\usart\usart_common.c">
+      <Filter>vsf\hal\driver\common\usart</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

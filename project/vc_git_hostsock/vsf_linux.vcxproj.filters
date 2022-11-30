@@ -808,6 +808,9 @@
     <Filter Include="vsf\hal\driver\common\usart">
       <UniqueIdentifier>{25640bca-8b53-4b52-804b-6e4d292cc02a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="vsf\hal\driver\common\gpio">
+      <UniqueIdentifier>{22460813-35b5-4cbb-84cf-6c6b6dbe67da}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vsf\source\vsf.h">
@@ -6577,6 +6580,9 @@
     </ClCompile>
     <ClCompile Include="..\..\vsf\source\hal\driver\common\usart\usart_common.c">
       <Filter>vsf\hal\driver\common\usart</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\gpio\gpio_common.c">
+      <Filter>vsf\hal\driver\common\gpio</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
