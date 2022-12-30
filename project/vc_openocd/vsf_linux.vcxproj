@@ -555,6 +555,7 @@
     <ClInclude Include="..\..\vsf\source\vsf_cfg.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\application\3rd-party\xfel\chips\v853.c" />
     <ClCompile Include="..\..\vsf\source\hal\driver\common\adc\adc_common.c" />
     <ClCompile Include="..\..\vsf\source\hal\driver\common\flash\flash_common.c" />
     <ClCompile Include="..\..\vsf\source\hal\driver\common\gpio\gpio_common.c" />

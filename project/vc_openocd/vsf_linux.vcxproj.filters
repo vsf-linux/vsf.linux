@@ -3989,6 +3989,9 @@
     <ClCompile Include="..\..\vsf\source\hal\driver\common\usart\usart_common.c">
       <Filter>vsf\hal\driver\common\usart</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\xfel\chips\v853.c">
+      <Filter>application\3rd-party\xfel\chips</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\vsf\source\hal\arch\common\arch_without_thread_suspend\vsf_arch_without_thread_suspend_template.inc">
