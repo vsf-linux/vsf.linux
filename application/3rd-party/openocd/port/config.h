@@ -53,4 +53,4 @@
 #define HAVE_USLEEP 1
 #define HAVE_VASPRINTF 1
 #define HAVE_STRNLEN 1
-#undef HAVE_STRNDUP
+#define HAVE_STRNDUP 1

@@ -19,6 +19,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\i2c\i2c_request.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\i2c\mrequest_i2c.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\i2c\multiplex_i2c.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\mmc\mmc_probe.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\spi\fifo2req_spi.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\spi\multiplex_spi.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\usart\fifo2req_usart.h" />
     <ClInclude Include="..\..\application\3rd-party\openocd\port\config.h" />
     <ClInclude Include="..\..\application\3rd-party\openocd\port\jimtcl\jim-config.h" />
     <ClInclude Include="..\..\application\3rd-party\openocd\port\jimtcl\jimautoconf.h" />
@@ -548,6 +555,26 @@
     <ClInclude Include="..\..\vsf\source\vsf_cfg.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\adc\adc_common.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\flash\flash_common.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\gpio\gpio_common.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\i2c\i2c_common.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\i2c\i2c_request.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\i2c\mrequest_i2c.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\i2c\multiplex_i2c.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\i2s\i2s_common.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\io\io_common.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\mmc\mmc_common.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\mmc\mmc_probe.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\pwm\pwm_common.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\rng\rng_common.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\rtc\rtc_common.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\spi\fifo2req_spi.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\spi\multiplex_spi.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\spi\spi_common.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\timer\timer_common.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\usart\fifo2req_usart.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\usart\usart_common.c" />
     <ClCompile Include="..\..\application\3rd-party\openocd\port\jimtcl\_glob.c" />
     <ClCompile Include="..\..\application\3rd-party\openocd\port\jimtcl\_initjimsh.c" />
     <ClCompile Include="..\..\application\3rd-party\openocd\port\jimtcl\_jsonencode.c" />
