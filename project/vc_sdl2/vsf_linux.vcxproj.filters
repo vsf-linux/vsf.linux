@@ -928,6 +928,9 @@
     <Filter Include="vsf\hal\driver\common\mmc">
       <UniqueIdentifier>{b13f2d79-cb31-45a5-8bd0-8cbc7d9ee3dc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="vsf\hal\driver\common\spi">
+      <UniqueIdentifier>{ba0f6208-c784-4396-92e1-dc4182d3af2e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vsf\source\vsf.h">
@@ -3203,6 +3206,9 @@
     </ClInclude>
     <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template_usb.h">
       <Filter>vsf\hal\driver\common\template</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\spi\fifo2req_spi.h">
+      <Filter>vsf\hal\driver\common\spi</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -5569,6 +5575,12 @@
     </ClCompile>
     <ClCompile Include="..\..\vsf\source\hal\driver\common\mmc\mmc_common.c">
       <Filter>vsf\hal\driver\common\mmc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\spi\fifo2req_spi.c">
+      <Filter>vsf\hal\driver\common\spi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\spi\spi_common.c">
+      <Filter>vsf\hal\driver\common\spi</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

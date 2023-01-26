@@ -685,6 +685,48 @@
     <Filter Include="vsf\hal\driver\common\mmc">
       <UniqueIdentifier>{549ded45-b53a-4c40-b356-7e83c95aee15}</UniqueIdentifier>
     </Filter>
+    <Filter Include="vsf\hal\utilities">
+      <UniqueIdentifier>{940e5cb9-97d2-4675-8481-009205ae4999}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\hal\utilities\stream">
+      <UniqueIdentifier>{10373a71-824d-427b-ae06-7cfa2199f766}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\hal\utilities\stream\usart">
+      <UniqueIdentifier>{263bc5a8-8d07-40e0-b847-48a06da62231}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\hal\utilities\remap">
+      <UniqueIdentifier>{a557d2b6-461d-4240-8ea2-142b8fcbc744}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\hal\utilities\remap\adc">
+      <UniqueIdentifier>{34bf73ef-af9a-4a3a-ab0f-5f8d700eb44e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\hal\utilities\remap\dac">
+      <UniqueIdentifier>{31438039-7755-481a-a66f-73049662d0bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\hal\utilities\remap\gpio">
+      <UniqueIdentifier>{c30e2572-fa90-4658-a980-41d495c94182}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\hal\utilities\remap\i2c">
+      <UniqueIdentifier>{d225cde0-325c-4990-9179-db51d00db6a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\hal\utilities\remap\i2s">
+      <UniqueIdentifier>{6dd5c98e-2679-49a3-973a-6456c4d99b0e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\hal\utilities\remap\spi">
+      <UniqueIdentifier>{21b1bf2d-1d57-414c-83c8-ee185baf37f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\hal\utilities\remap\io">
+      <UniqueIdentifier>{9f53e8b0-9a23-40c4-aa0a-4c743150c054}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\hal\utilities\remap\mmc">
+      <UniqueIdentifier>{ec94c567-62e1-404a-9d30-ea4da38b1640}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\hal\utilities\remap\pwm">
+      <UniqueIdentifier>{fca5b33a-5a00-44f7-bc73-8564efad052b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\hal\utilities\remap\usart">
+      <UniqueIdentifier>{7d677f4b-a4c6-40d1-94d0-487bce494c06}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vsf\source\vsf.h">
@@ -1917,6 +1959,45 @@
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\signalfd.h">
       <Filter>vsf\shell\sys\linux\include\sys</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\utilities\stream\vsf_hal_stream.h">
+      <Filter>vsf\hal\utilities\stream</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\utilities\stream\usart\vsf_usart_stream.h">
+      <Filter>vsf\hal\utilities\stream\usart</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\utilities\remap\vsf_hal_remap.h">
+      <Filter>vsf\hal\utilities\remap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\utilities\remap\adc\vsf_remapped_adc.h">
+      <Filter>vsf\hal\utilities\remap\adc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\utilities\remap\dac\vsf_remapped_dac.h">
+      <Filter>vsf\hal\utilities\remap\dac</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\utilities\remap\gpio\vsf_remapped_gpio.h">
+      <Filter>vsf\hal\utilities\remap\gpio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\utilities\remap\i2c\vsf_remapped_i2c.h">
+      <Filter>vsf\hal\utilities\remap\i2c</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\utilities\remap\i2s\vsf_remapped_i2s.h">
+      <Filter>vsf\hal\utilities\remap\i2s</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\utilities\remap\spi\vsf_remapped_spi.h">
+      <Filter>vsf\hal\utilities\remap\spi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\utilities\remap\io\vsf_remapped_io.h">
+      <Filter>vsf\hal\utilities\remap\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\utilities\remap\mmc\vsf_remapped_mmc.h">
+      <Filter>vsf\hal\utilities\remap\mmc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\utilities\remap\pwm\vsf_remapped_pwm.h">
+      <Filter>vsf\hal\utilities\remap\pwm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\utilities\remap\usart\vsf_remapped_usart.h">
+      <Filter>vsf\hal\utilities\remap\usart</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\vsf\source\utilities\template\vsf_bitmap.c">
@@ -2587,6 +2668,39 @@
     </ClCompile>
     <ClCompile Include="..\..\vsf\source\hal\driver\common\mmc\mmc_common.c">
       <Filter>vsf\hal\driver\common\mmc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\hal\utilities\stream\usart\vsf_usart_stream.c">
+      <Filter>vsf\hal\utilities\stream\usart</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\hal\utilities\remap\adc\vsf_remapped_adc.c">
+      <Filter>vsf\hal\utilities\remap\adc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\hal\utilities\remap\dac\vsf_remapped_dac.c">
+      <Filter>vsf\hal\utilities\remap\dac</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\hal\utilities\remap\gpio\vsf_remapped_gpio.c">
+      <Filter>vsf\hal\utilities\remap\gpio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\hal\utilities\remap\i2c\vsf_remapped_i2c.c">
+      <Filter>vsf\hal\utilities\remap\i2c</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\hal\utilities\remap\i2s\vsf_remapped_i2s.c">
+      <Filter>vsf\hal\utilities\remap\i2s</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\hal\utilities\remap\spi\vsf_remapped_spi.c">
+      <Filter>vsf\hal\utilities\remap\spi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\hal\utilities\remap\io\vsf_remapped_io.c">
+      <Filter>vsf\hal\utilities\remap\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\hal\utilities\remap\mmc\vsf_remapped_mmc.c">
+      <Filter>vsf\hal\utilities\remap\mmc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\hal\utilities\remap\pwm\vsf_remapped_pwm.c">
+      <Filter>vsf\hal\utilities\remap\pwm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\hal\utilities\remap\usart\vsf_remapped_usart.c">
+      <Filter>vsf\hal\utilities\remap\usart</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

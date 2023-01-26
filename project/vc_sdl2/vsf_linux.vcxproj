@@ -581,6 +581,7 @@
     <ClInclude Include="..\..\vsf\source\hal\driver\common\common.h" />
     <ClInclude Include="..\..\vsf\source\hal\driver\common\rtc\rtc_common.h" />
     <ClInclude Include="..\..\vsf\source\hal\driver\common\rtc\rtc_template.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\spi\fifo2req_spi.h" />
     <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template.h" />
     <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template_adc.h" />
     <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template_declaration.h" />
@@ -1507,6 +1508,8 @@
     <ClCompile Include="..\..\vsf\source\hal\driver\common\pwm\pwm_common.c" />
     <ClCompile Include="..\..\vsf\source\hal\driver\common\rng\rng_common.c" />
     <ClCompile Include="..\..\vsf\source\hal\driver\common\rtc\rtc_common.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\spi\fifo2req_spi.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\spi\spi_common.c" />
     <ClCompile Include="..\..\vsf\source\hal\driver\common\timer\timer_common.c" />
     <ClCompile Include="..\..\vsf\source\hal\driver\common\usart\fifo2req_usart.c" />
     <ClCompile Include="..\..\vsf\source\hal\driver\common\usart\usart_common.c" />
