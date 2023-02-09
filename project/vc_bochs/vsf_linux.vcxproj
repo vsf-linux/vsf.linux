@@ -1,0 +1,1721 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\application\3rd-party\sdl\audio\ogg\src\crctable.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\backends.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\bitrate.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\codebook.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\codec_internal.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\envelope.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\highlevel.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\lookup.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\lookup_data.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\lpc.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\lsp.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\masking.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\mdct.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\misc.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\os.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\psy.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\registry.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\scales.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\smallft.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\window.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\bochs.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\bxthread.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\access.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\apic.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpu.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpudb\amd\amd_k6_2_chomper.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpudb\amd\athlon64_clawhammer.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpudb\amd\athlon64_venice.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpudb\amd\phenomx3_8650_toliman.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpudb\amd\ryzen.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpudb\amd\trinity_apu.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpudb\amd\turion64_tyler.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpudb\amd\zambezi.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpudb\intel\atom_n270.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpudb\intel\broadwell_ult.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpudb\intel\core2_penryn_t9600.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpudb\intel\corei3_cnl.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpudb\intel\corei5_arrandale_m520.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpudb\intel\corei5_lynnfield_750.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpudb\intel\corei7_haswell_4770.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpudb\intel\corei7_icelake-u.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpudb\intel\corei7_ivy_bridge_3770K.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpudb\intel\corei7_sandy_bridge_2600K.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpudb\intel\corei7_skylake-x.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpudb\intel\core_duo_t2400_yonah.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpudb\intel\p2_klamath.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpudb\intel\p3_katmai.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpudb\intel\p4_prescott_celeron_336.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpudb\intel\p4_willamette.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpudb\intel\pentium.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpudb\intel\pentium_mmx.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpudb\intel\tigerlake.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpuid.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpustats.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\crregs.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\decoder\decoder.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\decoder\fetchdecode.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\decoder\fetchdecode_avx.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\decoder\fetchdecode_evex.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\decoder\fetchdecode_opmap.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\decoder\fetchdecode_opmap_0f38.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\decoder\fetchdecode_opmap_0f3a.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\decoder\fetchdecode_x87.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\decoder\fetchdecode_xop.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\decoder\ia_opcodes.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\decoder\instr.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\descriptor.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\fpu\control_w.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\fpu\fpu_constant.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\fpu\softfloat-compare.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\fpu\softfloat-macros.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\fpu\softfloat-round-pack.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\fpu\softfloat-specialize.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\fpu\softfloat.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\fpu\softfloatx80.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\fpu\status_w.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\fpu\tag_w.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\generic_cpuid.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\i387.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\icache.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\lazy_flags.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\msr.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\scalar_arith.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\simd_compare.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\simd_int.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\simd_pfp.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\smm.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\stack.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\svm.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\tlb.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\vmx.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\wide_int.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\xmm.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\gui\gui.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\gui\keymap.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\gui\paramtree.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\gui\siminterface.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\instrument\stubs\instrument.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\acpi.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\biosdev.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\busmouse.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\cmos.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\display\ddc.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\display\svga_cirrus.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\display\vga.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\display\vgacore.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\display\voodoo.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\display\voodoo_data.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\display\voodoo_func.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\display\voodoo_main.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\display\voodoo_types.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\dma.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\extfpuirq.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\floppy.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\gameport.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\harddrv.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\hdimage\cdrom.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\hdimage\hdimage.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\hdimage\vbox.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\hdimage\vmware3.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\hdimage\vmware4.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\hdimage\vpc.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\hdimage\vvfat.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\hpet.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\ioapic.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\keyboard.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\network\e1000.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\network\ne2k.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\network\netmod.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\network\netutil.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\parallel.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\pci.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\pci2isa.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\pci_ide.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\pic.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\pit.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\pit82c54.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\scancodes.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\serial.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\slowdown_timer.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\sound\es1370.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\sound\opl.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\sound\sb16.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\sound\soundfile.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\sound\soundlow.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\sound\soundmod.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\sound\soundsdl.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\speaker.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\unmapped.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\usb\scsi_device.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\usb\uhci_core.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\usb\usb_common.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\usb\usb_ehci.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\usb\usb_floppy.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\usb\usb_hid.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\usb\usb_hub.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\usb\usb_msd.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\usb\usb_ohci.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\usb\usb_pcap.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\usb\usb_printer.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\usb\usb_uhci.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\usb\usb_xhci.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\virt_timer.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\logio.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\memory\memory-bochs.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\osdep.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\pc_system.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\plugin.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\port\bochs\bxversion.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\port\bochs\config.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\audio\dummy\SDL_dummyaudio.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\audio\SDL_audiodev_c.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\audio\SDL_audio_c.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\audio\SDL_audio_resampler_filter.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\audio\SDL_sysaudio.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\audio\SDL_wave.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\events\blank_cursor.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\events\default_cursor.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\events\imKStoUCS.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\events\scancodes_darwin.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\events\scancodes_linux.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\events\scancodes_windows.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\events\scancodes_xfree86.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\events\SDL_clipboardevents_c.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\events\SDL_displayevents_c.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\events\SDL_dropevents_c.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\events\SDL_events_c.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\events\SDL_gesture_c.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\events\SDL_keyboard_c.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\events\SDL_mouse_c.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\events\SDL_sysevents.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\events\SDL_touch_c.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\events\SDL_windowevents_c.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\joystick\controller_type.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\joystick\SDL_gamecontrollerdb.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\joystick\SDL_joystick_c.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\joystick\SDL_sysjoystick.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\joystick\usb_ids.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\render\SDL_d3dmath.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\render\SDL_sysrender.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\render\SDL_yuv_sw_c.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\render\software\SDL_blendfillrect.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\render\software\SDL_blendline.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\render\software\SDL_blendpoint.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\render\software\SDL_draw.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\render\software\SDL_drawline.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\render\software\SDL_drawpoint.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\render\software\SDL_render_sw_c.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\render\software\SDL_rotate.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\render\software\SDL_triangle.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\SDL_assert_c.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\SDL_dataqueue.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\SDL_error_c.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\SDL_hints_c.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\SDL_internal.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\SDL_list.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\SDL_log_c.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\thread\pthread\SDL_sysmutex_c.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\thread\pthread\SDL_systhread_c.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\thread\SDL_systhread.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\thread\SDL_thread_c.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\timer\SDL_timer_c.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\video\dummy\SDL_nullevents_c.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\video\dummy\SDL_nullframebuffer_c.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\video\dummy\SDL_nullvideo.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\video\SDL_blit.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\video\SDL_blit_auto.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\video\SDL_blit_copy.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\video\SDL_blit_slow.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\video\SDL_egl_c.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\video\SDL_pixels_c.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\video\SDL_rect_c.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\video\SDL_rect_impl.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\video\SDL_RLEaccel_c.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\video\SDL_shape_internals.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\video\SDL_sysvideo.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\video\SDL_vulkan_internal.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\video\SDL_yuv_c.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\video\yuv2rgb\yuv_rgb.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\video\yuv2rgb\yuv_rgb_sse_func.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\video\yuv2rgb\yuv_rgb_std_func.h" />
+    <ClInclude Include="..\..\config\3rd-party\lwip\lwipopts.h" />
+    <ClInclude Include="..\..\config\3rd-party\mbedtls\config.h" />
+    <ClInclude Include="..\..\config\target\vsf_usr_cfg_win.h" />
+    <ClInclude Include="..\..\config\vsf_usr_cfg.h" />
+    <ClInclude Include="..\..\vsf\example\template\demo\common\usrapp_audio_common.h" />
+    <ClInclude Include="..\..\vsf\example\template\demo\common\usrapp_common.h" />
+    <ClInclude Include="..\..\vsf\example\template\demo\common\usrapp_net_common.h" />
+    <ClInclude Include="..\..\vsf\example\template\demo\common\usrapp_ui_common.h" />
+    <ClInclude Include="..\..\vsf\example\template\demo\common\usrapp_usbd_common.h" />
+    <ClInclude Include="..\..\vsf\example\template\demo\common\usrapp_usbh_common.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\port\ft2build.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\port\vsf_config\ftconfig.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\port\vsf_config\ftheader.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\port\vsf_config\ftmodule.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\port\vsf_config\ftoption.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\port\vsf_config\ftstdlib.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\freetype.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftadvanc.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftbbox.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftbdf.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftbitmap.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftbzip2.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftcache.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftchapters.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftcid.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftcolor.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftdriver.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\fterrdef.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\fterrors.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftfntfmt.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftgasp.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftglyph.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftgxval.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftgzip.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftimage.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftincrem.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftlcdfil.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftlist.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftlzw.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftmac.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftmm.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftmodapi.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftmoderr.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftotval.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftoutln.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftparams.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftpfr.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftrender.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftsizes.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftsnames.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftstroke.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftsynth.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftsystem.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\fttrigon.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\fttypes.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ftwinfnt.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\autohint.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\cffotypes.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\cfftypes.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\ftcalc.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\ftdebug.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\ftdrv.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\ftgloadr.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\fthash.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\ftmemory.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\ftobjs.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\ftpsprop.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\ftrfork.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\ftserv.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\ftstream.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\fttrace.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\ftvalid.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\internal.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\psaux.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\pshints.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\services\svbdf.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\services\svcfftl.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\services\svcid.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\services\svfntfmt.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\services\svgldict.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\services\svgxval.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\services\svkern.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\services\svmetric.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\services\svmm.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\services\svotval.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\services\svpfr.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\services\svpostnm.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\services\svprop.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\services\svpscmap.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\services\svpsinfo.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\services\svsfnt.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\services\svttcmap.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\services\svtteng.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\services\svttglyf.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\services\svwinfnt.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\sfnt.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\t1types.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\tttypes.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\internal\wofftypes.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\t1tables.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\ttnameid.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\tttables.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\freetype\raw\include\freetype\tttags.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\libpng\port\pnglibconf.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\libpng\raw\png.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\libpng\raw\pngconf.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\libpng\raw\pngdebug.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\libpng\raw\pnginfo.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\libpng\raw\pngpriv.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\libpng\raw\pngstruct.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\zlib\raw\crc32.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\zlib\raw\deflate.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\zlib\raw\gzguts.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\zlib\raw\inffast.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\zlib\raw\inffixed.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\zlib\raw\inflate.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\zlib\raw\inftrees.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\zlib\raw\trees.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\zlib\raw\zconf.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\zlib\raw\zlib.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\zlib\raw\zutil.h" />
+    <ClInclude Include="..\..\vsf\source\component\av\audio\decoder\wav\vsf_wav.h" />
+    <ClInclude Include="..\..\vsf\source\component\av\audio\driver\winsound\vsf_winsound.h" />
+    <ClInclude Include="..\..\vsf\source\component\av\audio\vsf_audio.h" />
+    <ClInclude Include="..\..\vsf\source\component\av\vsf_av.h" />
+    <ClInclude Include="..\..\vsf\source\component\av\vsf_av_cfg.h" />
+    <ClInclude Include="..\..\vsf\source\component\crypto\hash\crc\vsf_crc.h" />
+    <ClInclude Include="..\..\vsf\source\component\crypto\hash\vsf_hash.h" />
+    <ClInclude Include="..\..\vsf\source\component\crypto\vsf_crypto.h" />
+    <ClInclude Include="..\..\vsf\source\component\crypto\vsf_crypto_cfg.h" />
+    <ClInclude Include="..\..\vsf\source\component\debugger\nulink\NuConsole_stream.h" />
+    <ClInclude Include="..\..\vsf\source\component\debugger\segger\segger_rtt_stream.h" />
+    <ClInclude Include="..\..\vsf\source\component\debugger\vsf_debugger.h" />
+    <ClInclude Include="..\..\vsf\source\component\debugger\vsf_debugger_cfg.h" />
+    <ClInclude Include="..\..\vsf\source\component\fs\driver\fatfs\vsf_fatfs.h" />
+    <ClInclude Include="..\..\vsf\source\component\fs\driver\malfs\vsf_malfs.h" />
+    <ClInclude Include="..\..\vsf\source\component\fs\driver\memfs\vsf_memfs.h" />
+    <ClInclude Include="..\..\vsf\source\component\fs\driver\winfs\vsf_winfs.h" />
+    <ClInclude Include="..\..\vsf\source\component\fs\vsf_fs.h" />
+    <ClInclude Include="..\..\vsf\source\component\fs\vsf_fs_cfg.h" />
+    <ClInclude Include="..\..\vsf\source\component\input\driver\hid\vsf_input_hid.h" />
+    <ClInclude Include="..\..\vsf\source\component\input\driver\nspro\vsf_input_nspro.h" />
+    <ClInclude Include="..\..\vsf\source\component\input\protocol\vsf_input_gamepad.h" />
+    <ClInclude Include="..\..\vsf\source\component\input\protocol\vsf_input_keyboard.h" />
+    <ClInclude Include="..\..\vsf\source\component\input\protocol\vsf_input_mouse.h" />
+    <ClInclude Include="..\..\vsf\source\component\input\protocol\vsf_input_sensor.h" />
+    <ClInclude Include="..\..\vsf\source\component\input\protocol\vsf_input_touchscreen.h" />
+    <ClInclude Include="..\..\vsf\source\component\input\vsf_input.h" />
+    <ClInclude Include="..\..\vsf\source\component\input\vsf_input_cfg.h" />
+    <ClInclude Include="..\..\vsf\source\component\mal\driver\fakefat32_mal\vsf_fakefat32_mal.h" />
+    <ClInclude Include="..\..\vsf\source\component\mal\driver\file_mal\vsf_file_mal.h" />
+    <ClInclude Include="..\..\vsf\source\component\mal\driver\mem_mal\vsf_mem_mal.h" />
+    <ClInclude Include="..\..\vsf\source\component\mal\driver\mim_mal\vsf_mim_mal.h" />
+    <ClInclude Include="..\..\vsf\source\component\mal\driver\scsi_mal\vsf_scsi_mal.h" />
+    <ClInclude Include="..\..\vsf\source\component\mal\vsf_mal.h" />
+    <ClInclude Include="..\..\vsf\source\component\mal\vsf_mal_cfg.h" />
+    <ClInclude Include="..\..\vsf\source\component\scsi\driver\mal_scsi\vsf_mal_scsi.h" />
+    <ClInclude Include="..\..\vsf\source\component\scsi\driver\virtual_scsi\vsf_virtual_scsi.h" />
+    <ClInclude Include="..\..\vsf\source\component\scsi\vsf_scsi.h" />
+    <ClInclude Include="..\..\vsf\source\component\scsi\vsf_scsi_cfg.h" />
+    <ClInclude Include="..\..\vsf\source\component\tcpip\netdrv\driver\wpcap\vsf_netdrv_wpcap.h" />
+    <ClInclude Include="..\..\vsf\source\component\tcpip\netdrv\vsf_netdrv.h" />
+    <ClInclude Include="..\..\vsf\source\component\tcpip\socket\driver\lwip\vsf_socket_lwip.h" />
+    <ClInclude Include="..\..\vsf\source\component\tcpip\socket\driver\win\vsf_socket_win.h" />
+    <ClInclude Include="..\..\vsf\source\component\tcpip\socket\vsf_socket.h" />
+    <ClInclude Include="..\..\vsf\source\component\tcpip\vsf_tcpip.h" />
+    <ClInclude Include="..\..\vsf\source\component\tcpip\vsf_tcpip_cfg.h" />
+    <ClInclude Include="..\..\vsf\source\component\ui\disp\driver\fb\vsf_disp_fb.h" />
+    <ClInclude Include="..\..\vsf\source\component\ui\disp\driver\sdl2\vsf_disp_sdl2.h" />
+    <ClInclude Include="..\..\vsf\source\component\ui\disp\driver\sitronix\common\vsf_disp_sitronix_common.h" />
+    <ClInclude Include="..\..\vsf\source\component\ui\disp\driver\sitronix\st7735\vsf_disp_st7735.h" />
+    <ClInclude Include="..\..\vsf\source\component\ui\disp\driver\sitronix\st7789\vsf_disp_st7789.h" />
+    <ClInclude Include="..\..\vsf\source\component\ui\disp\driver\solomon-systech\common\vsf_disp_solomon_systech_common.h" />
+    <ClInclude Include="..\..\vsf\source\component\ui\disp\driver\solomon-systech\ssd1306\vsf_disp_ssd1306.h" />
+    <ClInclude Include="..\..\vsf\source\component\ui\disp\driver\usbd_uvc\vsf_disp_usbd_uvc.h" />
+    <ClInclude Include="..\..\vsf\source\component\ui\disp\driver\vga\m480\vsf_disp_vga_m480.h" />
+    <ClInclude Include="..\..\vsf\source\component\ui\disp\driver\wingdi\vsf_disp_wingdi.h" />
+    <ClInclude Include="..\..\vsf\source\component\ui\disp\vsf_disp.h" />
+    <ClInclude Include="..\..\vsf\source\component\ui\tgui\controls\vsf_msg_tree_cfg.h" />
+    <ClInclude Include="..\..\vsf\source\component\ui\tgui\controls\vsf_tgui_button.h" />
+    <ClInclude Include="..\..\vsf\source\component\ui\tgui\controls\vsf_tgui_control.h" />
+    <ClInclude Include="..\..\vsf\source\component\ui\tgui\controls\vsf_tgui_controls.h" />
+    <ClInclude Include="..\..\vsf\source\component\ui\tgui\controls\vsf_tgui_label.h" />
+    <ClInclude Include="..\..\vsf\source\component\ui\tgui\controls\vsf_tgui_list.h" />
+    <ClInclude Include="..\..\vsf\source\component\ui\tgui\controls\vsf_tgui_panel.h" />
+    <ClInclude Include="..\..\vsf\source\component\ui\tgui\controls\vsf_tgui_text_list.h" />
+    <ClInclude Include="..\..\vsf\source\component\ui\tgui\controls\__vk_tgui_slider.h" />
+    <ClInclude Include="..\..\vsf\source\component\ui\tgui\controls\__vsf_tgui_controls_common.h" />
+    <ClInclude Include="..\..\vsf\source\component\ui\tgui\utilities\vsf_tgui_text.h" />
+    <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_button.h" />
+    <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_color.h" />
+    <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_container.h" />
+    <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_control.h" />
+    <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_draw.h" />
+    <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_font.h" />
+    <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_label.h" />
+    <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_list.h" />
+    <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_panel.h" />
+    <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_port.h" />
+    <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_style.h" />
+    <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_text_list.h" />
+    <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_v_template.h" />
+    <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_v_type.h" />
+    <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\template\vsf_tgui_v_button.h" />
+    <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\template\vsf_tgui_v_container.h" />
+    <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\template\vsf_tgui_v_control.h" />
+    <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\template\vsf_tgui_v_label.h" />
+    <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\template\vsf_tgui_v_panel.h" />
+    <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\template\vsf_tgui_v_template.h" />
+    <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\template\vsf_tgui_v_type.h" />
+    <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\vsf_tgui_v.h" />
+    <ClInclude Include="..\..\vsf\source\component\ui\tgui\vsf_tgui.h" />
+    <ClInclude Include="..\..\vsf\source\component\ui\tgui\vsf_tgui_cfg.h" />
+    <ClInclude Include="..\..\vsf\source\component\ui\tgui\vsf_tgui_common.h" />
+    <ClInclude Include="..\..\vsf\source\component\ui\vsf_ui.h" />
+    <ClInclude Include="..\..\vsf\source\component\ui\vsf_ui_cfg.h" />
+    <ClInclude Include="..\..\vsf\source\component\usb\common\class\CDC\vsf_usb_CDC.h" />
+    <ClInclude Include="..\..\vsf\source\component\usb\common\class\CDC\vsf_usb_CDCACM.h" />
+    <ClInclude Include="..\..\vsf\source\component\usb\common\class\DFU\vsf_usb_dfu.h" />
+    <ClInclude Include="..\..\vsf\source\component\usb\common\class\HID\vsf_usb_ds4.h" />
+    <ClInclude Include="..\..\vsf\source\component\usb\common\class\HID\vsf_usb_HID.h" />
+    <ClInclude Include="..\..\vsf\source\component\usb\common\class\HID\vsf_usb_nspro.h" />
+    <ClInclude Include="..\..\vsf\source\component\usb\common\class\HID\vsf_usb_xb360.h" />
+    <ClInclude Include="..\..\vsf\source\component\usb\common\class\MSC\vsf_usb_MSC.h" />
+    <ClInclude Include="..\..\vsf\source\component\usb\common\class\UVC\vsf_usb_UVC.h" />
+    <ClInclude Include="..\..\vsf\source\component\usb\common\class\XB1\vsf_usb_xb1.h" />
+    <ClInclude Include="..\..\vsf\source\component\usb\common\usb_common.h" />
+    <ClInclude Include="..\..\vsf\source\component\usb\device\class\CDC\vsf_usbd_CDC.h" />
+    <ClInclude Include="..\..\vsf\source\component\usb\device\class\CDC\vsf_usbd_CDCACM.h" />
+    <ClInclude Include="..\..\vsf\source\component\usb\device\class\CDC\vsf_usbd_CDCACM_desc.h" />
+    <ClInclude Include="..\..\vsf\source\component\usb\device\class\HID\vsf_usbd_HID.h" />
+    <ClInclude Include="..\..\vsf\source\component\usb\device\class\HID\vsf_usbd_HID_desc.h" />
+    <ClInclude Include="..\..\vsf\source\component\usb\device\class\MSC\vsf_usbd_MSC.h" />
+    <ClInclude Include="..\..\vsf\source\component\usb\device\class\MSC\vsf_usbd_MSC_desc.h" />
+    <ClInclude Include="..\..\vsf\source\component\usb\device\class\UVC\vsf_usbd_UVC.h" />
+    <ClInclude Include="..\..\vsf\source\component\usb\device\vsf_usbd.h" />
+    <ClInclude Include="..\..\vsf\source\component\usb\driver\dcd\usbip_dcd\vsf_usbip_dcd.h" />
+    <ClInclude Include="..\..\vsf\source\component\usb\driver\hcd\libusb_hcd\vsf_libusb_hcd.h" />
+    <ClInclude Include="..\..\vsf\source\component\usb\driver\hcd\ohci\vsf_ohci.h" />
+    <ClInclude Include="..\..\vsf\source\component\usb\driver\hcd\winusb_hcd\vsf_winusb_hcd.h" />
+    <ClInclude Include="..\..\vsf\source\component\usb\driver\otg\dwcotg\dwcotg_regs.h" />
+    <ClInclude Include="..\..\vsf\source\component\usb\driver\otg\dwcotg\vsf_dwcotg_common.h" />
+    <ClInclude Include="..\..\vsf\source\component\usb\driver\otg\dwcotg\vsf_dwcotg_dcd.h" />
+    <ClInclude Include="..\..\vsf\source\component\usb\driver\otg\dwcotg\vsf_dwcotg_hcd.h" />
+    <ClInclude Include="..\..\vsf\source\component\usb\driver\otg\dwcotg\vsf_dwcotg_hw.h" />
+    <ClInclude Include="..\..\vsf\source\component\usb\driver\otg\musb\fdrc\vsf_musb_fdrc_dcd.h" />
+    <ClInclude Include="..\..\vsf\source\component\usb\driver\otg\musb\fdrc\__vsf_musb_fdrc_common.h" />
+    <ClInclude Include="..\..\vsf\source\component\usb\host\class\BTHCI\vsf_usbh_BTHCI.h" />
+    <ClInclude Include="..\..\vsf\source\component\usb\host\class\CDC\vsf_usbh_CDC.h" />
+    <ClInclude Include="..\..\vsf\source\component\usb\host\class\CDC\vsf_usbh_CDCECM.h" />
+    <ClInclude Include="..\..\vsf\source\component\usb\host\class\DFU\vsf_usbh_dfu.h" />
+    <ClInclude Include="..\..\vsf\source\component\usb\host\class\DL1x5\vsf_usbh_dl1x5.h" />
+    <ClInclude Include="..\..\vsf\source\component\usb\host\class\HID\vsf_usbh_ds4.h" />
+    <ClInclude Include="..\..\vsf\source\component\usb\host\class\HID\vsf_usbh_HID.h" />
+    <ClInclude Include="..\..\vsf\source\component\usb\host\class\HID\vsf_usbh_nspro.h" />
+    <ClInclude Include="..\..\vsf\source\component\usb\host\class\HID\vsf_usbh_xb360.h" />
+    <ClInclude Include="..\..\vsf\source\component\usb\host\class\HUB\vsf_usbh_HUB.h" />
+    <ClInclude Include="..\..\vsf\source\component\usb\host\class\libusb\vsf_usbh_libusb.h" />
+    <ClInclude Include="..\..\vsf\source\component\usb\host\class\MSC\vsf_usbh_msc.h" />
+    <ClInclude Include="..\..\vsf\source\component\usb\host\class\UAC\vsf_usbh_uac.h" />
+    <ClInclude Include="..\..\vsf\source\component\usb\host\class\XB1\vsf_usbh_xb1.h" />
+    <ClInclude Include="..\..\vsf\source\component\usb\host\vsf_usbh.h" />
+    <ClInclude Include="..\..\vsf\source\component\usb\vsf_usb.h" />
+    <ClInclude Include="..\..\vsf\source\component\usb\vsf_usb_cfg.h" />
+    <ClInclude Include="..\..\vsf\source\component\vsf_component.h" />
+    <ClInclude Include="..\..\vsf\source\component\vsf_component_cfg.h" />
+    <ClInclude Include="..\..\vsf\source\hal\arch\common\arch_without_thread_suspend\vsf_arch_without_thread_suspend_template.h" />
+    <ClInclude Include="..\..\vsf\source\hal\arch\vsf_arch.h" />
+    <ClInclude Include="..\..\vsf\source\hal\arch\vsf_arch_abstraction.h" />
+    <ClInclude Include="..\..\vsf\source\hal\arch\x86\win\win_generic.h" />
+    <ClInclude Include="..\..\vsf\source\hal\arch\__vsf_arch_interface.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\common.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\rtc\rtc_common.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\rtc\rtc_template.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\spi\fifo2req_spi.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template_adc.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template_declaration.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template_flash.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template_gpio.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template_hal_driver.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template_i2c.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template_i2s.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template_implementation.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template_io.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template_mmc.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template_pm.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template_pwm.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template_rng.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template_rtc.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template_spi.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template_timer.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template_usart.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\template\vsf_template_usb.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\usart\fifo2req_usart.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\usart\usart_template.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\usart\vsf_drv_usart_poll_util.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\driver.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\vsf\distbus\driver.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\vsf\distbus\usbd\vsf_hal_distbus_usbd.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\vsf\driver.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\x86\driver.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\x86\win\device.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\x86\win\driver.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\x86\win\rtc\rtc.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\x86\win\uart\uart.h" />
+    <ClInclude Include="..\..\vsf\source\hal\utilities\remap\adc\vsf_remapped_adc.h" />
+    <ClInclude Include="..\..\vsf\source\hal\utilities\remap\dac\vsf_remapped_dac.h" />
+    <ClInclude Include="..\..\vsf\source\hal\utilities\remap\gpio\vsf_remapped_gpio.h" />
+    <ClInclude Include="..\..\vsf\source\hal\utilities\remap\i2c\vsf_remapped_i2c.h" />
+    <ClInclude Include="..\..\vsf\source\hal\utilities\remap\i2s\vsf_remapped_i2s.h" />
+    <ClInclude Include="..\..\vsf\source\hal\utilities\remap\io\vsf_remapped_io.h" />
+    <ClInclude Include="..\..\vsf\source\hal\utilities\remap\mmc\vsf_remapped_mmc.h" />
+    <ClInclude Include="..\..\vsf\source\hal\utilities\remap\pwm\vsf_remapped_pwm.h" />
+    <ClInclude Include="..\..\vsf\source\hal\utilities\remap\spi\vsf_remapped_spi.h" />
+    <ClInclude Include="..\..\vsf\source\hal\utilities\remap\usart\vsf_remapped_usart.h" />
+    <ClInclude Include="..\..\vsf\source\hal\utilities\remap\vsf_hal_remap.h" />
+    <ClInclude Include="..\..\vsf\source\hal\vsf_hal.h" />
+    <ClInclude Include="..\..\vsf\source\hal\vsf_hal_cfg.h" />
+    <ClInclude Include="..\..\vsf\source\kernel\shell\simple\vsf_simple.h" />
+    <ClInclude Include="..\..\vsf\source\kernel\shell\simple\vsf_simple_bmpevt.h" />
+    <ClInclude Include="..\..\vsf\source\kernel\shell\vsf_shell.h" />
+    <ClInclude Include="..\..\vsf\source\kernel\task\vsf_fsm.h" />
+    <ClInclude Include="..\..\vsf\source\kernel\task\vsf_pt.h" />
+    <ClInclude Include="..\..\vsf\source\kernel\task\vsf_task.h" />
+    <ClInclude Include="..\..\vsf\source\kernel\task\vsf_thread.h" />
+    <ClInclude Include="..\..\vsf\source\kernel\task\__vsf_task_common.h" />
+    <ClInclude Include="..\..\vsf\source\kernel\vsf_eda.h" />
+    <ClInclude Include="..\..\vsf\source\kernel\vsf_eda_slist_queue.h" />
+    <ClInclude Include="..\..\vsf\source\kernel\vsf_evtq.h" />
+    <ClInclude Include="..\..\vsf\source\kernel\vsf_kernel.h" />
+    <ClInclude Include="..\..\vsf\source\kernel\vsf_kernel_cfg.h" />
+    <ClInclude Include="..\..\vsf\source\kernel\vsf_kernel_common.h" />
+    <ClInclude Include="..\..\vsf\source\kernel\vsf_os.h" />
+    <ClInclude Include="..\..\vsf\source\kernel\vsf_timq.h" />
+    <ClInclude Include="..\..\vsf\source\kernel\vsf_timq_dlist.h" />
+    <ClInclude Include="..\..\vsf\source\osa_service\msg_tree\vsf_msg_tree.h" />
+    <ClInclude Include="..\..\vsf\source\osa_service\vsf_osa_service.h" />
+    <ClInclude Include="..\..\vsf\source\osa_service\vsf_osa_service_cfg.h" />
+    <ClInclude Include="..\..\vsf\source\service\distbus\vsf_distbus.h" />
+    <ClInclude Include="..\..\vsf\source\service\dynarr\vsf_dynarr.h" />
+    <ClInclude Include="..\..\vsf\source\service\dynstack\vsf_dynstack.h" />
+    <ClInclude Include="..\..\vsf\source\service\fifo\vsf_fifo.h" />
+    <ClInclude Include="..\..\vsf\source\service\heap\vsf_heap.h" />
+    <ClInclude Include="..\..\vsf\source\service\json\vsf_json.h" />
+    <ClInclude Include="..\..\vsf\source\service\pbuf\vsf_pbuf.h" />
+    <ClInclude Include="..\..\vsf\source\service\pbuf\vsf_pbuf_pool.h" />
+    <ClInclude Include="..\..\vsf\source\service\pool\vsf_pool.h" />
+    <ClInclude Include="..\..\vsf\source\service\simple_stream\block_stream\vsf_block_stream.h" />
+    <ClInclude Include="..\..\vsf\source\service\simple_stream\distbus_stream\vsf_distbus_stream.h" />
+    <ClInclude Include="..\..\vsf\source\service\simple_stream\fifo_stream\vsf_fifo_stream.h" />
+    <ClInclude Include="..\..\vsf\source\service\simple_stream\mem_stream\vsf_mem_stream.h" />
+    <ClInclude Include="..\..\vsf\source\service\simple_stream\queue_stream\vsf_queue_stream.h" />
+    <ClInclude Include="..\..\vsf\source\service\simple_stream\vsf_simple_stream.h" />
+    <ClInclude Include="..\..\vsf\source\service\stream\interface.h" />
+    <ClInclude Include="..\..\vsf\source\service\stream\pbuf_queue\vsf_pbuf_queue.h" />
+    <ClInclude Include="..\..\vsf\source\service\stream\vsf_stream.h" />
+    <ClInclude Include="..\..\vsf\source\service\stream\vsf_stream_base.h" />
+    <ClInclude Include="..\..\vsf\source\service\stream\vsf_stream_reader.h" />
+    <ClInclude Include="..\..\vsf\source\service\stream\vsf_stream_writer.h" />
+    <ClInclude Include="..\..\vsf\source\service\trace\vsf_trace.h" />
+    <ClInclude Include="..\..\vsf\source\service\vsf_service.h" />
+    <ClInclude Include="..\..\vsf\source\service\vsf_service_cfg.h" />
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image\miniz.h" />
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image\nanosvg.h" />
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image\nanosvgrast.h" />
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image\SDL_image.h" />
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\effects_internal.h" />
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\load_aiff.h" />
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\load_voc.h" />
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\mixer.h" />
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\music.h" />
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\music_cmd.h" />
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\music_flac.h" />
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\music_fluidsynth.h" />
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\music_mad.h" />
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\music_mikmod.h" />
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\music_modplug.h" />
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\music_mpg123.h" />
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\music_nativemidi.h" />
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\music_ogg.h" />
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\music_opus.h" />
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\music_timidity.h" />
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\music_wav.h" />
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\SDL_mixer.h" />
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_net\SDLnetsys.h" />
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_net\SDL_net.h" />
+    <ClInclude Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_ttf\SDL_ttf.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\app\httpd\urihandler\file\__vsf_linux_urihandler_file.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\app\httpd\vsf_linux_httpd.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\app\ntp\vsf_linux_ntp.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\app\telnetd\vsf_linux_telnetd.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\arpa\inet.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\dirent.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\err.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\errno.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\fcntl.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\getopt.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\grp.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\ifaddrs.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\libgen.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\libusb\libusb.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\atomic.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\bitfield.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\bits.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\delay.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\device.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\device\bus.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\device\class.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\device\driver.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\err.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\errno.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\etherdevice.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\fb.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\firmware.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\fs.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\gfp.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\hid.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\hrtimer.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\i2c-dev.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\i2c.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\idr.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\ieee80211.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\if_ether.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\input.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\jiffies.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\kobject.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\kref.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\kstrtox.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\leds.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\limits.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\list.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\llist.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\minmax.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\module.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\mutex.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\pm.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\power_supply.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\printk.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\refcount.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\serial.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\skbuff.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\slab.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\spinlock.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\spi\spidev.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\sysfs.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\timer.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\types.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\uinput.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\usb.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\usb\ch9.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\uuid.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\version.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\wait.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\workqueue.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\netdb.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\netinet\in.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\netinet\ip.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\netinet\tcp.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\netpacket\packet.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\net\if.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\poll.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\pthread.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\pwd.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sched.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\semaphore.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\signal.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\ctype.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\stdatomic.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\stddef.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\stdio.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\stdlib.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\string.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\strings.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\time.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\utime.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\wchar.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\syslog.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\ioctl.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\ipc.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\mount.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\random.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\resource.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\select.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\shm.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\socket.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\stat.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\syscall.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\time.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\types.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\uio.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\un.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\utsname.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\wait.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\termios.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\unistd.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\devfs\vsf_linux_devfs.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\vsf_linux_vfs.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\kernel\fs\vsf_linux_fs.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\kernel\socket\vsf_linux_socket.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\port\busybox\busybox.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\port\busybox\config.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\vsf_linux.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\vsf_linux_cfg.h" />
+    <ClInclude Include="..\..\vsf\source\shell\vsf_shell_wrapper.h" />
+    <ClInclude Include="..\..\vsf\source\utilities\3rd-party\PLOOC\raw\plooc.h" />
+    <ClInclude Include="..\..\vsf\source\utilities\3rd-party\PLOOC\raw\plooc_class.h" />
+    <ClInclude Include="..\..\vsf\source\utilities\3rd-party\PLOOC\raw\plooc_class_black_box.h" />
+    <ClInclude Include="..\..\vsf\source\utilities\3rd-party\PLOOC\raw\plooc_class_simple.h" />
+    <ClInclude Include="..\..\vsf\source\utilities\3rd-party\PLOOC\raw\plooc_class_simple_c90.h" />
+    <ClInclude Include="..\..\vsf\source\utilities\3rd-party\PLOOC\raw\plooc_class_strict.h" />
+    <ClInclude Include="..\..\vsf\source\utilities\compiler\compiler.h" />
+    <ClInclude Include="..\..\vsf\source\utilities\compiler\x86\type.h" />
+    <ClInclude Include="..\..\vsf\source\utilities\compiler\x86\x86_compiler.h" />
+    <ClInclude Include="..\..\vsf\source\utilities\compiler\__common\__compiler.h" />
+    <ClInclude Include="..\..\vsf\source\utilities\compiler\__common\__type.h" />
+    <ClInclude Include="..\..\vsf\source\utilities\language_extension\code_region.h" />
+    <ClInclude Include="..\..\vsf\source\utilities\language_extension\delegate.h" />
+    <ClInclude Include="..\..\vsf\source\utilities\language_extension\language_extension.h" />
+    <ClInclude Include="..\..\vsf\source\utilities\ooc_class.h" />
+    <ClInclude Include="..\..\vsf\source\utilities\preprocessor\mf_u8_dec2str.h" />
+    <ClInclude Include="..\..\vsf\source\utilities\preprocessor\vsf_connect_macro.h" />
+    <ClInclude Include="..\..\vsf\source\utilities\preprocessor\vsf_foreach_macro.h" />
+    <ClInclude Include="..\..\vsf\source\utilities\preprocessor\vsf_macro_calc.h" />
+    <ClInclude Include="..\..\vsf\source\utilities\preprocessor\vsf_preprocessor.h" />
+    <ClInclude Include="..\..\vsf\source\utilities\preprocessor\vsf_repeat_macro.h" />
+    <ClInclude Include="..\..\vsf\source\utilities\template\template.h" />
+    <ClInclude Include="..\..\vsf\source\utilities\template\vsf_bitmap.h" />
+    <ClInclude Include="..\..\vsf\source\utilities\template\vsf_list.h" />
+    <ClInclude Include="..\..\vsf\source\utilities\template\vsf_queue.h" />
+    <ClInclude Include="..\..\vsf\source\utilities\vsf_utilities.h" />
+    <ClInclude Include="..\..\vsf\source\utilities\vsf_utilities_cfg.h" />
+    <ClInclude Include="..\..\vsf\source\vsf.h" />
+    <ClInclude Include="..\..\vsf\source\vsf_cfg.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\application\3rd-party\sdl\audio\ogg\src\bitwise.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\audio\ogg\src\framing.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\analysis.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\barkmel.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\bitrate.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\block.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\codebook.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\envelope.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\floor0.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\floor1.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\info.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\lookup.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\lpc.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\lsp.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\mapping0.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\mdct.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\misc.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\psy.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\psytune.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\registry.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\res0.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\sharedbook.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\smallft.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\synthesis.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\tone.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\vorbisenc.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\vorbisfile.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\audio\vorbis\lib\window.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\bxthread.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\config.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\3dnow.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\access.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\access2.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\aes.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\apic.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\arith16.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\arith32.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\arith64.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\arith8.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\avx\avx.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\avx\avx2.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\avx\avx512.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\avx\avx512_bitalg.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\avx\avx512_broadcast.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\avx\avx512_cvt.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\avx\avx512_fma.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\avx\avx512_mask16.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\avx\avx512_mask32.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\avx\avx512_mask64.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\avx\avx512_mask8.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\avx\avx512_move.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\avx\avx512_pfp.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\avx\avx512_rcp14.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\avx\avx512_rsqrt14.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\avx\avx_cvt.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\avx\avx_fma.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\avx\avx_ifma52.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\avx\avx_pfp.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\avx\gather.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\avx\tbm32.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\avx\tbm64.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\avx\vnni.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\avx\xop.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\bcd.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\bit.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\bit16.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\bit32.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\bit64.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\bmi32.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\bmi64.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\call_far.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cet.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cmpccxadd32.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cmpccxadd64.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpu.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpudb\amd\amd_k6_2_chomper.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpudb\amd\athlon64_clawhammer.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpudb\amd\athlon64_venice.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpudb\amd\phenomx3_8650_toliman.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpudb\amd\ryzen.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpudb\amd\trinity_apu.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpudb\amd\turion64_tyler.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpudb\amd\zambezi.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpudb\intel\atom_n270.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpudb\intel\broadwell_ult.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpudb\intel\core2_penryn_t9600.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpudb\intel\corei3_cnl.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpudb\intel\corei5_arrandale_m520.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpudb\intel\corei5_lynnfield_750.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpudb\intel\corei7_haswell_4770.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpudb\intel\corei7_icelake-u.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpudb\intel\corei7_ivy_bridge_3770K.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpudb\intel\corei7_sandy_bridge_2600K.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpudb\intel\corei7_skylake-x.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpudb\intel\core_duo_t2400_yonah.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpudb\intel\p2_klamath.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpudb\intel\p3_katmai.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpudb\intel\p4_prescott_celeron_336.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpudb\intel\p4_willamette.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpudb\intel\pentium.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpudb\intel\pentium_mmx.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpudb\intel\tigerlake.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\cpuid.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\crc32.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\crregs.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\ctrl_xfer16.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\ctrl_xfer32.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\ctrl_xfer64.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\ctrl_xfer_pro.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\data_xfer16.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\data_xfer32.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\data_xfer64.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\data_xfer8.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\debugstuff.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\decoder\disasm.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\decoder\fetchdecode32.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\decoder\fetchdecode64.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\event.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\exception.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\faststring.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\flag_ctrl.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\flag_ctrl_pro.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\fpu\f2xm1.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\fpu\ferr.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\fpu\fpatan.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\fpu\fprem.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\fpu\fpu.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\fpu\fpu_arith.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\fpu\fpu_cmov.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\fpu\fpu_compare.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\fpu\fpu_const.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\fpu\fpu_load_store.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\fpu\fpu_misc.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\fpu\fpu_trans.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\fpu\fsincos.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\fpu\fyl2x.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\fpu\poly.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\fpu\softfloat-muladd.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\fpu\softfloat-round-pack.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\fpu\softfloat-specialize.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\fpu\softfloat.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\fpu\softfloat16.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\fpu\softfloatx80.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\fpu_emu.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\generic_cpuid.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\gf2.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\icache.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\init.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\io.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\iret.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\jmp_far.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\load.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\logical16.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\logical32.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\logical64.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\logical8.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\mmx.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\msr.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\mult16.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\mult32.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\mult64.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\mult8.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\mwait.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\paging.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\proc_ctrl.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\protect_ctrl.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\rdrand.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\ret_far.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\segment_ctrl.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\segment_ctrl_pro.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\sha.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\shift16.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\shift32.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\shift64.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\shift8.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\smm.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\soft_int.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\sse.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\sse_move.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\sse_pfp.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\sse_rcp.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\sse_string.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\stack.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\stack16.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\stack32.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\stack64.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\string.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\svm.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\tasking.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\vapic.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\vm8086.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\vmcs.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\vmexit.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\vmfunc.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\vmx.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\wide_int.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\cpu\xsave.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\crc.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\gui\gui.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\gui\keymap.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\gui\nogui.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\gui\paramtree.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\gui\sdl2.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\gui\siminterface.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\gui\textconfig.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\instrument\stubs\instrument.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\acpi.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\biosdev.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\busmouse.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\cmos.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\devices.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\display\banshee.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\display\ddc.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\display\svga_cirrus.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\display\vga.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\display\vgacore.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\display\voodoo.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\dma.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\extfpuirq.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\floppy.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\gameport.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\harddrv.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\hdimage\cdrom.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\hdimage\hdimage.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\hdimage\vbox.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\hdimage\vmware3.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\hdimage\vmware4.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\hdimage\vpc.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\hdimage\vvfat.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\hpet.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\ioapic.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\keyboard.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\network\e1000.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\network\eth_linux.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\network\eth_null.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\network\eth_socket.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\network\eth_vnet.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\network\ne2k.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\network\netmod.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\network\netutil.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\parallel.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\pci.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\pci2isa.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\pci_ide.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\pic.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\pit.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\pit82c54.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\scancodes.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\serial.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\slowdown_timer.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\sound\es1370.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\sound\opl.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\sound\sb16.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\sound\sounddummy.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\sound\soundfile.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\sound\soundlow.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\sound\soundmod.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\sound\soundsdl.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\speaker.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\unmapped.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\usb\scsi_device.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\usb\uhci_core.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\usb\usb_common.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\usb\usb_ehci.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\usb\usb_floppy.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\usb\usb_hid.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\usb\usb_hub.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\usb\usb_msd.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\usb\usb_ohci.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\usb\usb_pcap.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\usb\usb_printer.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\usb\usb_uhci.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\usb\usb_xhci.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\virt_timer.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\logio.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\main.cc">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\memory\memory.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\memory\misc_mem.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\osdep.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\pc_system.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\plugin.cc" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\port\sdl2_platform_vsf.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\port\src\audio\vsf\SDL_vsfaudio.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\port\src\main\vsf\SDL_vsf_main.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\port\src\video\vsf\SDL_vsfvideo.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\atomic\SDL_atomic.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\atomic\SDL_spinlock.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\audio\dummy\SDL_dummyaudio.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\audio\SDL_audio.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\audio\SDL_audiocvt.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\audio\SDL_audiodev.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\audio\SDL_audiotypecvt.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\audio\SDL_mixer.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\audio\SDL_wave.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\cpuinfo\SDL_cpuinfo.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\events\imKStoUCS.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\events\SDL_clipboardevents.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\events\SDL_displayevents.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\events\SDL_dropevents.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\events\SDL_events.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\events\SDL_gesture.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\events\SDL_keyboard.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\events\SDL_mouse.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\events\SDL_quit.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\events\SDL_touch.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\events\SDL_windowevents.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\filesystem\unix\SDL_sysfilesystem.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\file\SDL_rwops.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\joystick\dummy\SDL_sysjoystick.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\joystick\SDL_gamecontroller.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\joystick\SDL_joystick.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\render\SDL_d3dmath.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\render\SDL_render.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\render\SDL_yuv_sw.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\render\software\SDL_blendfillrect.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\render\software\SDL_blendline.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\render\software\SDL_blendpoint.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\render\software\SDL_drawline.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\render\software\SDL_drawpoint.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\render\software\SDL_render_sw.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\render\software\SDL_rotate.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\render\software\SDL_triangle.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\SDL.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\SDL_assert.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\SDL_dataqueue.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\SDL_error.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\SDL_hints.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\SDL_list.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\SDL_log.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\stdlib\SDL_crc32.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\stdlib\SDL_getenv.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\stdlib\SDL_iconv.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\stdlib\SDL_malloc.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\stdlib\SDL_qsort.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\stdlib\SDL_stdlib.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\stdlib\SDL_string.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\stdlib\SDL_strtokr.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\thread\pthread\SDL_syscond.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\thread\pthread\SDL_sysmutex.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\thread\pthread\SDL_syssem.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\thread\pthread\SDL_systhread.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\thread\pthread\SDL_systls.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\thread\SDL_thread.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\timer\SDL_timer.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\timer\unix\SDL_systimer.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\video\dummy\SDL_nullevents.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\video\dummy\SDL_nullframebuffer.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\video\dummy\SDL_nullvideo.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\video\SDL_blit.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\video\SDL_blit_0.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\video\SDL_blit_1.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\video\SDL_blit_A.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\video\SDL_blit_auto.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\video\SDL_blit_copy.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\video\SDL_blit_N.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\video\SDL_blit_slow.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\video\SDL_bmp.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\video\SDL_clipboard.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\video\SDL_egl.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\video\SDL_fillrect.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\video\SDL_pixels.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\video\SDL_rect.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\video\SDL_RLEaccel.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\video\SDL_shape.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\video\SDL_stretch.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\video\SDL_surface.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\video\SDL_video.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\video\SDL_vulkan_utils.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\video\SDL_yuv.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\video\yuv2rgb\yuv_rgb.c" />
+    <ClCompile Include="..\..\application\vsf_main.c" />
+    <ClCompile Include="..\..\vsf\example\template\demo\common\usrapp_audio_common.c" />
+    <ClCompile Include="..\..\vsf\example\template\demo\common\usrapp_common.c" />
+    <ClCompile Include="..\..\vsf\example\template\demo\common\usrapp_net_common.c" />
+    <ClCompile Include="..\..\vsf\example\template\demo\common\usrapp_ui_common.c" />
+    <ClCompile Include="..\..\vsf\example\template\demo\common\usrapp_usbd_common.c" />
+    <ClCompile Include="..\..\vsf\example\template\demo\common\usrapp_usbh_common.c" />
+    <ClCompile Include="..\..\vsf\example\template\demo\linux_demo\libusb_demo.c" />
+    <ClCompile Include="..\..\vsf\example\template\demo\linux_demo\mount_demo.c" />
+    <ClCompile Include="..\..\vsf\example\template\demo\linux_demo\ntpdate_demo.c" />
+    <ClCompile Include="..\..\vsf\example\template\demo\linux_demo\telnetd_demo.c" />
+    <ClCompile Include="..\..\vsf\example\template\demo\lwip_demo\lwip_demo.c" />
+    <ClCompile Include="..\..\vsf\example\template\demo\scsi_demo\scsi_demo.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\autofit\autofit.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\base\ftbase.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\base\ftbbox.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\base\ftbdf.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\base\ftbitmap.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\base\ftcid.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\base\ftdebug.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\base\ftfstype.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\base\ftgasp.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\base\ftglyph.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\base\ftgxval.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\base\ftinit.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\base\ftmm.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\base\ftotval.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\base\ftpfr.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\base\ftstroke.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\base\ftsynth.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\base\ftsystem.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\base\fttype1.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\base\ftwinfnt.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\bdf\bdf.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\bzip2\ftbzip2.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\cache\ftcache.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\cff\cff.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\cid\type1cid.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\gxvalid\gxvalid.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\gzip\ftgzip.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\lzw\ftlzw.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\otvalid\otvalid.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\pcf\pcf.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\pfr\pfr.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\psaux\psaux.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\pshinter\pshinter.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\psnames\psnames.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\raster\raster.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\sfnt\sfnt.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\smooth\smooth.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\truetype\truetype.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\type1\type1.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\type42\type42.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\freetype\raw\src\winfonts\winfnt.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\libpng\raw\png.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\libpng\raw\pngerror.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\libpng\raw\pngget.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\libpng\raw\pngmem.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\libpng\raw\pngpread.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\libpng\raw\pngread.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\libpng\raw\pngrio.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\libpng\raw\pngrtran.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\libpng\raw\pngrutil.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\libpng\raw\pngset.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\libpng\raw\pngtrans.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\libpng\raw\pngwio.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\libpng\raw\pngwrite.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\libpng\raw\pngwtran.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\libpng\raw\pngwutil.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\zlib\raw\adler32.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\zlib\raw\compress.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\zlib\raw\crc32.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\zlib\raw\deflate.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\zlib\raw\gzclose.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\zlib\raw\gzlib.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\zlib\raw\gzread.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\zlib\raw\gzwrite.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\zlib\raw\infback.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\zlib\raw\inffast.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\zlib\raw\inflate.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\zlib\raw\inftrees.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\zlib\raw\trees.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\zlib\raw\uncompr.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\zlib\raw\zutil.c" />
+    <ClCompile Include="..\..\vsf\source\component\av\audio\decoder\wav\vsf_wav.c" />
+    <ClCompile Include="..\..\vsf\source\component\av\audio\driver\winsound\vsf_winsound.c" />
+    <ClCompile Include="..\..\vsf\source\component\av\audio\vsf_audio.c" />
+    <ClCompile Include="..\..\vsf\source\component\crypto\hash\crc\vsf_crc.c" />
+    <ClCompile Include="..\..\vsf\source\component\debugger\nulink\NuConsole_stream.c" />
+    <ClCompile Include="..\..\vsf\source\component\debugger\segger\segger_rtt_stream.c" />
+    <ClCompile Include="..\..\vsf\source\component\fs\driver\fatfs\vsf_fatfs.c" />
+    <ClCompile Include="..\..\vsf\source\component\fs\driver\malfs\vsf_malfs.c" />
+    <ClCompile Include="..\..\vsf\source\component\fs\driver\memfs\vsf_memfs.c" />
+    <ClCompile Include="..\..\vsf\source\component\fs\driver\winfs\vsf_winfs.c" />
+    <ClCompile Include="..\..\vsf\source\component\fs\vsf_fs.c" />
+    <ClCompile Include="..\..\vsf\source\component\input\driver\hid\vsf_input_hid.c" />
+    <ClCompile Include="..\..\vsf\source\component\input\driver\nspro\vsf_input_nspro.c" />
+    <ClCompile Include="..\..\vsf\source\component\input\protocol\vsf_input_gamepad.c" />
+    <ClCompile Include="..\..\vsf\source\component\input\protocol\vsf_input_keyboard.c" />
+    <ClCompile Include="..\..\vsf\source\component\input\protocol\vsf_input_mouse.c" />
+    <ClCompile Include="..\..\vsf\source\component\input\protocol\vsf_input_sensor.c" />
+    <ClCompile Include="..\..\vsf\source\component\input\protocol\vsf_input_touchscreen.c" />
+    <ClCompile Include="..\..\vsf\source\component\input\vsf_input.c" />
+    <ClCompile Include="..\..\vsf\source\component\mal\driver\fakefat32_mal\vsf_fakefat32_mal.c" />
+    <ClCompile Include="..\..\vsf\source\component\mal\driver\file_mal\vsf_file_mal.c" />
+    <ClCompile Include="..\..\vsf\source\component\mal\driver\mem_mal\vsf_mem_mal.c" />
+    <ClCompile Include="..\..\vsf\source\component\mal\driver\mim_mal\vsf_mim_mal.c" />
+    <ClCompile Include="..\..\vsf\source\component\mal\driver\scsi_mal\vsf_scsi_mal.c" />
+    <ClCompile Include="..\..\vsf\source\component\mal\vsf_mal.c" />
+    <ClCompile Include="..\..\vsf\source\component\scsi\driver\mal_scsi\vsf_mal_scsi.c" />
+    <ClCompile Include="..\..\vsf\source\component\scsi\driver\virtual_scsi\vsf_virtual_scsi.c" />
+    <ClCompile Include="..\..\vsf\source\component\scsi\vsf_scsi.c" />
+    <ClCompile Include="..\..\vsf\source\component\tcpip\netdrv\driver\wpcap\vsf_netdrv_wpcap.c" />
+    <ClCompile Include="..\..\vsf\source\component\tcpip\netdrv\vsf_netdrv.c" />
+    <ClCompile Include="..\..\vsf\source\component\tcpip\socket\driver\lwip\vsf_socket_lwip.c" />
+    <ClCompile Include="..\..\vsf\source\component\tcpip\socket\driver\win\vsf_socket_win.c" />
+    <ClCompile Include="..\..\vsf\source\component\tcpip\socket\vsf_socket.c" />
+    <ClCompile Include="..\..\vsf\source\component\ui\disp\driver\fb\vsf_disp_fb.c" />
+    <ClCompile Include="..\..\vsf\source\component\ui\disp\driver\sdl2\vsf_disp_sdl2.c" />
+    <ClCompile Include="..\..\vsf\source\component\ui\disp\driver\sitronix\common\vsf_disp_sitronix_common.c" />
+    <ClCompile Include="..\..\vsf\source\component\ui\disp\driver\sitronix\st7735\vsf_disp_st7735.c" />
+    <ClCompile Include="..\..\vsf\source\component\ui\disp\driver\sitronix\st7789\vsf_disp_st7789.c" />
+    <ClCompile Include="..\..\vsf\source\component\ui\disp\driver\solomon-systech\common\vsf_disp_solomon_systech_common.c" />
+    <ClCompile Include="..\..\vsf\source\component\ui\disp\driver\solomon-systech\ssd1306\vsf_disp_ssd1306.c" />
+    <ClCompile Include="..\..\vsf\source\component\ui\disp\driver\usbd_uvc\vsf_disp_usbd_uvc.c" />
+    <ClCompile Include="..\..\vsf\source\component\ui\disp\driver\vga\m480\vsf_disp_vga_m480.c" />
+    <ClCompile Include="..\..\vsf\source\component\ui\disp\driver\wingdi\vsf_disp_wingdi.c" />
+    <ClCompile Include="..\..\vsf\source\component\ui\disp\vsf_disp.c" />
+    <ClCompile Include="..\..\vsf\source\component\ui\tgui\controls\vsf_tgui_button.c" />
+    <ClCompile Include="..\..\vsf\source\component\ui\tgui\controls\vsf_tgui_control.c" />
+    <ClCompile Include="..\..\vsf\source\component\ui\tgui\controls\vsf_tgui_controls_common.c" />
+    <ClCompile Include="..\..\vsf\source\component\ui\tgui\controls\vsf_tgui_label.c" />
+    <ClCompile Include="..\..\vsf\source\component\ui\tgui\controls\vsf_tgui_list.c" />
+    <ClCompile Include="..\..\vsf\source\component\ui\tgui\controls\vsf_tgui_panel.c" />
+    <ClCompile Include="..\..\vsf\source\component\ui\tgui\controls\vsf_tgui_text_list.c" />
+    <ClCompile Include="..\..\vsf\source\component\ui\tgui\controls\__vk_tgui_slider.c" />
+    <ClCompile Include="..\..\vsf\source\component\ui\tgui\utilities\vsf_tgui_text.c" />
+    <ClCompile Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_button.c" />
+    <ClCompile Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_color.c" />
+    <ClCompile Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_container.c" />
+    <ClCompile Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_control.c" />
+    <ClCompile Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_draw.c" />
+    <ClCompile Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_font.c" />
+    <ClCompile Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_label.c" />
+    <ClCompile Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_list.c" />
+    <ClCompile Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_panel.c" />
+    <ClCompile Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_style.c" />
+    <ClCompile Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_text_list.c" />
+    <ClCompile Include="..\..\vsf\source\component\ui\tgui\view\template\vsf_tgui_v_button.c" />
+    <ClCompile Include="..\..\vsf\source\component\ui\tgui\view\template\vsf_tgui_v_container.c" />
+    <ClCompile Include="..\..\vsf\source\component\ui\tgui\view\template\vsf_tgui_v_control.c" />
+    <ClCompile Include="..\..\vsf\source\component\ui\tgui\view\template\vsf_tgui_v_label.c" />
+    <ClCompile Include="..\..\vsf\source\component\ui\tgui\view\template\vsf_tgui_v_panel.c" />
+    <ClCompile Include="..\..\vsf\source\component\ui\tgui\view\vsf_tgui_v.c" />
+    <ClCompile Include="..\..\vsf\source\component\ui\tgui\vsf_tgui.c" />
+    <ClCompile Include="..\..\vsf\source\component\ui\tgui\vsf_tgui_common.c" />
+    <ClCompile Include="..\..\vsf\source\component\ui\tgui\vsf_tgui_input.c" />
+    <ClCompile Include="..\..\vsf\source\component\usb\device\class\CDC\vsf_usbd_CDC.c" />
+    <ClCompile Include="..\..\vsf\source\component\usb\device\class\CDC\vsf_usbd_CDCACM.c" />
+    <ClCompile Include="..\..\vsf\source\component\usb\device\class\HID\vsf_usbd_HID.c" />
+    <ClCompile Include="..\..\vsf\source\component\usb\device\class\MSC\vsf_usbd_MSC.c" />
+    <ClCompile Include="..\..\vsf\source\component\usb\device\class\UVC\vsf_usbd_UVC.c" />
+    <ClCompile Include="..\..\vsf\source\component\usb\device\vsf_usbd.c" />
+    <ClCompile Include="..\..\vsf\source\component\usb\driver\dcd\usbip_dcd\backend\vsf_usbip_dcd_lwip.c" />
+    <ClCompile Include="..\..\vsf\source\component\usb\driver\dcd\usbip_dcd\backend\vsf_usbip_dcd_win.c" />
+    <ClCompile Include="..\..\vsf\source\component\usb\driver\dcd\usbip_dcd\vsf_usbip_dcd.c" />
+    <ClCompile Include="..\..\vsf\source\component\usb\driver\hcd\libusb_hcd\vsf_libusb_hcd.c" />
+    <ClCompile Include="..\..\vsf\source\component\usb\driver\hcd\ohci\vsf_ohci.c" />
+    <ClCompile Include="..\..\vsf\source\component\usb\driver\hcd\winusb_hcd\vsf_winusb_hcd.c" />
+    <ClCompile Include="..\..\vsf\source\component\usb\driver\otg\dwcotg\vsf_dwcotg_common.c" />
+    <ClCompile Include="..\..\vsf\source\component\usb\driver\otg\dwcotg\vsf_dwcotg_dcd.c" />
+    <ClCompile Include="..\..\vsf\source\component\usb\driver\otg\dwcotg\vsf_dwcotg_hcd.c" />
+    <ClCompile Include="..\..\vsf\source\component\usb\driver\otg\musb\fdrc\vsf_musb_fdrc_dcd.c" />
+    <ClCompile Include="..\..\vsf\source\component\usb\driver\otg\musb\fdrc\__vsf_musb_fdrc_common.c" />
+    <ClCompile Include="..\..\vsf\source\component\usb\host\class\BTHCI\vsf_usbh_BTHCI.c" />
+    <ClCompile Include="..\..\vsf\source\component\usb\host\class\CDC\vsf_usbh_CDC.c" />
+    <ClCompile Include="..\..\vsf\source\component\usb\host\class\CDC\vsf_usbh_CDCECM.c" />
+    <ClCompile Include="..\..\vsf\source\component\usb\host\class\DFU\vsf_usbh_dfu.c" />
+    <ClCompile Include="..\..\vsf\source\component\usb\host\class\DL1x5\vsf_usbh_dl1x5.c" />
+    <ClCompile Include="..\..\vsf\source\component\usb\host\class\HID\vsf_usbh_ds4.c" />
+    <ClCompile Include="..\..\vsf\source\component\usb\host\class\HID\vsf_usbh_HID.c" />
+    <ClCompile Include="..\..\vsf\source\component\usb\host\class\HID\vsf_usbh_nspro.c" />
+    <ClCompile Include="..\..\vsf\source\component\usb\host\class\HID\vsf_usbh_xb360.c" />
+    <ClCompile Include="..\..\vsf\source\component\usb\host\class\HUB\vsf_usbh_HUB.c" />
+    <ClCompile Include="..\..\vsf\source\component\usb\host\class\libusb\vsf_usbh_libusb.c" />
+    <ClCompile Include="..\..\vsf\source\component\usb\host\class\MSC\vsf_usbh_msc.c" />
+    <ClCompile Include="..\..\vsf\source\component\usb\host\class\UAC\vsf_usbh_uac.c" />
+    <ClCompile Include="..\..\vsf\source\component\usb\host\class\XB1\vsf_usbh_xb1.c" />
+    <ClCompile Include="..\..\vsf\source\component\usb\host\vsf_usbh.c" />
+    <ClCompile Include="..\..\vsf\source\component\vsf_component.c" />
+    <ClCompile Include="..\..\vsf\source\hal\arch\vsf_arch_abstraction.c" />
+    <ClCompile Include="..\..\vsf\source\hal\arch\x86\win\win_generic.c" />
+    <ClCompile Include="..\..\vsf\source\hal\arch\x86\win\win_generic_simple.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\adc\adc_common.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\flash\flash_common.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\gpio\gpio_common.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\i2c\i2c_common.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\i2s\i2s_common.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\io\io_common.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\mmc\mmc_common.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\pwm\pwm_common.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\rng\rng_common.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\rtc\rtc_common.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\spi\fifo2req_spi.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\spi\spi_common.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\timer\timer_common.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\usart\fifo2req_usart.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\usart\usart_common.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\vsf\distbus\usbd\vsf_hal_distbus_usbd.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\vsf\distbus\vsf_hal_distbus.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\x86\win\driver.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\x86\win\rtc\rtc.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\x86\win\uart\uart.c" />
+    <ClCompile Include="..\..\vsf\source\hal\utilities\remap\adc\vsf_remapped_adc.c" />
+    <ClCompile Include="..\..\vsf\source\hal\utilities\remap\dac\vsf_remapped_dac.c" />
+    <ClCompile Include="..\..\vsf\source\hal\utilities\remap\gpio\vsf_remapped_gpio.c" />
+    <ClCompile Include="..\..\vsf\source\hal\utilities\remap\i2c\vsf_remapped_i2c.c" />
+    <ClCompile Include="..\..\vsf\source\hal\utilities\remap\i2s\vsf_remapped_i2s.c" />
+    <ClCompile Include="..\..\vsf\source\hal\utilities\remap\io\vsf_remapped_io.c" />
+    <ClCompile Include="..\..\vsf\source\hal\utilities\remap\mmc\vsf_remapped_mmc.c" />
+    <ClCompile Include="..\..\vsf\source\hal\utilities\remap\pwm\vsf_remapped_pwm.c" />
+    <ClCompile Include="..\..\vsf\source\hal\utilities\remap\spi\vsf_remapped_spi.c" />
+    <ClCompile Include="..\..\vsf\source\hal\utilities\remap\usart\vsf_remapped_usart.c" />
+    <ClCompile Include="..\..\vsf\source\hal\vsf_hal.c" />
+    <ClCompile Include="..\..\vsf\source\kernel\shell\simple\vsf_simple_bmpevt.c" />
+    <ClCompile Include="..\..\vsf\source\kernel\shell\simple\vsf_simple_task.c" />
+    <ClCompile Include="..\..\vsf\source\kernel\shell\vsf_shell.c" />
+    <ClCompile Include="..\..\vsf\source\kernel\task\vsf_task.c" />
+    <ClCompile Include="..\..\vsf\source\kernel\task\vsf_thread.c" />
+    <ClCompile Include="..\..\vsf\source\kernel\vsf_eda.c" />
+    <ClCompile Include="..\..\vsf\source\kernel\vsf_eda_slist_queue.c" />
+    <ClCompile Include="..\..\vsf\source\kernel\vsf_evtq_array.c" />
+    <ClCompile Include="..\..\vsf\source\kernel\vsf_evtq_list.c" />
+    <ClCompile Include="..\..\vsf\source\kernel\vsf_kernel_bsp.c" />
+    <ClCompile Include="..\..\vsf\source\kernel\vsf_os.c" />
+    <ClCompile Include="..\..\vsf\source\osa_service\msg_tree\vsf_msg_tree.c" />
+    <ClCompile Include="..\..\vsf\source\osa_service\vsf_osa_service.c" />
+    <ClCompile Include="..\..\vsf\source\service\distbus\vsf_distbus.c" />
+    <ClCompile Include="..\..\vsf\source\service\dynarr\vsf_dynarr.c" />
+    <ClCompile Include="..\..\vsf\source\service\dynstack\vsf_dynstack.c" />
+    <ClCompile Include="..\..\vsf\source\service\fifo\vsf_fifo.c" />
+    <ClCompile Include="..\..\vsf\source\service\heap\vsf_heap.c" />
+    <ClCompile Include="..\..\vsf\source\service\json\vsf_json.c" />
+    <ClCompile Include="..\..\vsf\source\service\pbuf\vsf_pbuf.c" />
+    <ClCompile Include="..\..\vsf\source\service\pbuf\vsf_pbuf_pool.c" />
+    <ClCompile Include="..\..\vsf\source\service\pool\vsf_pool.c" />
+    <ClCompile Include="..\..\vsf\source\service\simple_stream\block_stream\vsf_block_stream.c" />
+    <ClCompile Include="..\..\vsf\source\service\simple_stream\distbus_stream\vsf_distbus_stream.c" />
+    <ClCompile Include="..\..\vsf\source\service\simple_stream\fifo_stream\vsf_fifo_stream.c" />
+    <ClCompile Include="..\..\vsf\source\service\simple_stream\mem_stream\vsf_mem_stream.c" />
+    <ClCompile Include="..\..\vsf\source\service\simple_stream\queue_stream\vsf_queue_stream.c" />
+    <ClCompile Include="..\..\vsf\source\service\simple_stream\vsf_simple_stream.c" />
+    <ClCompile Include="..\..\vsf\source\service\stream\pbuf_queue\vsf_pbuf_queue.c" />
+    <ClCompile Include="..\..\vsf\source\service\stream\vsf_stream.c" />
+    <ClCompile Include="..\..\vsf\source\service\stream\vsf_stream_base.c" />
+    <ClCompile Include="..\..\vsf\source\service\stream\vsf_stream_reader.c" />
+    <ClCompile Include="..\..\vsf\source\service\stream\vsf_stream_writer.c" />
+    <ClCompile Include="..\..\vsf\source\service\trace\vsf_trace.c" />
+    <ClCompile Include="..\..\vsf\source\service\vsf_service.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image\IMG.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image\IMG_bmp.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image\IMG_gif.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image\IMG_jpg.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image\IMG_lbm.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image\IMG_pcx.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image\IMG_png.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image\IMG_pnm.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image\IMG_svg.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image\IMG_tga.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image\IMG_tif.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image\IMG_webp.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image\IMG_WIC.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image\IMG_xcf.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image\IMG_xpm.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image\IMG_xv.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image\IMG_xxx.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\effects_internal.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\effect_position.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\effect_stereoreverse.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\load_aiff.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\load_voc.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\mixer.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\music.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\music_cmd.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\music_flac.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\music_fluidsynth.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\music_mad.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\music_mikmod.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\music_modplug.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\music_mpg123.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\music_nativemidi.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\music_ogg.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\music_opus.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\music_timidity.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer\music_wav.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_net\SDLnet.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_net\SDLnetselect.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_net\SDLnetTCP.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_net\SDLnetUDP.c" />
+    <ClCompile Include="..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_ttf\SDL_ttf.c" />
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\app\httpd\vsf_linux_httpd.c" />
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\app\ntp\vsf_linux_ntp.c" />
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\app\telnetd\vsf_linux_telnetd.c" />
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\devfs\vsf_linux_devfs.c" />
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\vsf_linux_vfs.c" />
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\kernel\fs\vsf_linux_fs.c" />
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\kernel\socket\inet\vsf_linux_socket_inet_hostsock.c" />
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\kernel\socket\inet\vsf_linux_socket_inet_lwip.c" />
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\kernel\socket\unix\vsf_linux_socket_unix.c" />
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\kernel\socket\vsf_linux_socket.c" />
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\glibc\3rd-party\getopt_long.c" />
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\glibc\vsf_linux_glibc.c" />
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\glibc\vsf_linux_glibcpp_string.cpp" />
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\glibc\vsf_linux_glibc_ctype.c" />
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\glibc\vsf_linux_glibc_pthread.c" />
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\glibc\vsf_linux_glibc_sem.c" />
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\glibc\vsf_linux_glibc_stdio.c" />
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\glibc\vsf_linux_glibc_stdlib.c" />
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\glibc\vsf_linux_glibc_string.c" />
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\glibc\vsf_linux_glibc_time.c" />
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\libgen\vsf_linux_libgen.c" />
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\libusb\vsf_linux_libusb.c" />
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\port\busybox\busybox.c" />
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\port\busybox\shell\vsh.c" />
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\vsf_linux.c" />
+    <ClCompile Include="..\..\vsf\source\utilities\compiler\x86\x86_compiler.c" />
+    <ClCompile Include="..\..\vsf\source\utilities\compiler\__common\__retarget_io.c" />
+    <ClCompile Include="..\..\vsf\source\utilities\language_extension\code_region.c" />
+    <ClCompile Include="..\..\vsf\source\utilities\language_extension\delegate.c" />
+    <ClCompile Include="..\..\vsf\source\utilities\language_extension\simple_sprintf.c" />
+    <ClCompile Include="..\..\vsf\source\utilities\language_extension\simple_sscanf.c" />
+    <ClCompile Include="..\..\vsf\source\utilities\language_extension\simple_swprintf.c" />
+    <ClCompile Include="..\..\vsf\source\utilities\template\vsf_bitmap.c" />
+    <ClCompile Include="..\..\vsf\source\utilities\template\vsf_list.c" />
+    <ClCompile Include="..\..\vsf\source\utilities\template\vsf_queue.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\vsf\source\hal\arch\common\arch_without_thread_suspend\vsf_arch_without_thread_suspend_template.inc" />
+    <CustomBuild Include="..\..\vsf\source\hal\arch\x86\win\setjmp_x64.asm">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ml64 /Fo $(IntDir)%(fileName).obj /c %(FullPath)</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)%(Filename).obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ml64 /Fo $(IntDir)%(fileName).obj /c %(FullPath)</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)%(Filename).obj</Outputs>
+    </CustomBuild>
+    <None Include="..\..\vsf\source\hal\driver\common\rtc\rtc_template.inc" />
+    <None Include="..\..\vsf\source\hal\driver\common\usart\usart_template.inc" />
+    <None Include="..\..\vsf\source\shell\sys\linux\app\httpd\urihandler\file\__vsf_linux_urihandler_file.inc" />
+    <None Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\cmath" />
+    <None Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\cstdio" />
+    <None Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\cstdlib" />
+    <None Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\cstring" />
+    <None Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\string" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{A77D8512-2E1C-4A55-A1DE-218BF944D49B}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>vsfusbhwin</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>ClangCL</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>ClangCL</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>ClangCL</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>ClangCL</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <UseMultiToolTask>true</UseMultiToolTask>
+    <OutDir>$(SolutionDir)\$(ProjectName)\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectName)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <UseMultiToolTask>true</UseMultiToolTask>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Full</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>__VSF__;__CPU_X86__;__WIN__;__OOC_CPP__;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;VSF_USE_SDL2=ENABLED;SIGWINCH=28;VSF_APP_ENTRY=SDL_main;VSF_SDL2_CFG_COLOR=VSF_DISP_COLOR_RGB565;MUSIC_OGG=MUSIC_OGG;MUSIC_WAV=MUSIC_WAV;FT2_BUILD_LIBRARY;APP_USE_BOCHS_DEMO=ENABLED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\sdl\include;$(ProjectDir)..\..\application\3rd-party\sdl\include\SDL2;$(ProjectDir)..\..\application\3rd-party\sdl\audio\ogg\include;$(ProjectDir)..\..\application\3rd-party\sdl\audio\vorbis\include;$(ProjectDir)..\..\application\3rd-party\sdl\port\bochs;$(ProjectDir)..\..\application\3rd-party\sdl\Bochs\bochs;$(ProjectDir)..\..\application\3rd-party\sdl\Bochs\bochs\cpu;$(ProjectDir)..\..\application\3rd-party\sdl\Bochs\bochs\iodev;$(ProjectDir)..\..\application\3rd-party\sdl\Bochs\bochs\instrument\stubs;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\lua\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\raw;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_ttf;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_net;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-fms-extensions -Wno-c++11-narrowing %(AdditionalOptions)</AdditionalOptions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <OmitFramePointers>false</OmitFramePointers>
+      <AssemblerListingLocation>$(IntDir)/__sub0/__sub1/__sub2/__sub3/%(RelativeDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)/__sub0/__sub1/__sub2/__sub3/%(RelativeDir)</ObjectFileName>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <UACExecutionLevel>
+      </UACExecutionLevel>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <AdditionalOptions>/SAFESEH:NO %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>__VSF__;__CPU_X64__;__WIN__;__OOC_CPP__;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;VSF_USE_SDL2=ENABLED;SIGWINCH=28;VSF_APP_ENTRY=SDL_main;VSF_SDL2_CFG_COLOR=VSF_DISP_COLOR_RGB565;MUSIC_OGG=MUSIC_OGG;MUSIC_WAV=MUSIC_WAV;FT2_BUILD_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\sdl\include;$(ProjectDir)..\..\application\3rd-party\sdl\include\SDL2;$(ProjectDir)..\..\application\3rd-party\sdl\audio\ogg\include;$(ProjectDir)..\..\application\3rd-party\sdl\audio\vorbis\include;$(ProjectDir)..\..\application\3rd-party\sdl\port\bochs;$(ProjectDir)..\..\application\3rd-party\sdl\Bochs\bochs;$(ProjectDir)..\..\application\3rd-party\sdl\Bochs\bochs\instrument\stubs;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\lua\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\raw;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_ttf;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_net;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-fms-extensions %(AdditionalOptions)</AdditionalOptions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <OmitFramePointers>false</OmitFramePointers>
+      <AssemblerListingLocation>$(IntDir)/__sub0/__sub1/__sub2/__sub3/%(RelativeDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)/__sub0/__sub1/__sub2/__sub3/%(RelativeDir)</ObjectFileName>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <UACExecutionLevel>
+      </UACExecutionLevel>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>__VSF__;__CPU_X86__;__WIN__;__OOC_RELEASE__;__OOC_CPP__;NDEBUG;_CONSOLE;VSF_USE_SDL2=ENABLED;SIGWINCH=28;VSF_APP_ENTRY=SDL_main;VSF_SDL2_CFG_COLOR=VSF_DISP_COLOR_RGB565;MUSIC_OGG=MUSIC_OGG;MUSIC_WAV=MUSIC_WAV;FT2_BUILD_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\sdl\include;$(ProjectDir)..\..\application\3rd-party\sdl\include\SDL2;$(ProjectDir)..\..\application\3rd-party\sdl\audio\ogg\include;$(ProjectDir)..\..\application\3rd-party\sdl\audio\vorbis\include;$(ProjectDir)..\..\application\3rd-party\sdl\port\bochs;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\lua\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\raw;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_ttf;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_net;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AssemblerListingLocation>$(IntDir)/__sub0/__sub1/__sub2/__sub3/%(RelativeDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)/__sub0/__sub1/__sub2/__sub3/%(RelativeDir)</ObjectFileName>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>__VSF__;__CPU_X64__;__WIN__;__OOC_RELEASE__;__OOC_CPP__;NDEBUG;_CONSOLE;VSF_USE_SDL2=ENABLED;SIGWINCH=28;VSF_APP_ENTRY=SDL_main;VSF_SDL2_CFG_COLOR=VSF_DISP_COLOR_RGB565;MUSIC_OGG=MUSIC_OGG;MUSIC_WAV=MUSIC_WAV;FT2_BUILD_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\sdl\include;$(ProjectDir)..\..\application\3rd-party\sdl\include\SDL2;$(ProjectDir)..\..\application\3rd-party\sdl\audio\ogg\include;$(ProjectDir)..\..\application\3rd-party\sdl\audio\vorbis\include;$(ProjectDir)..\..\application\3rd-party\sdl\port\bochs;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\lua\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\freetype\raw\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\raw;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_image;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_ttf;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_mixer;$(ProjectDir)..\..\vsf\source\shell\media\sdl2\3rd-party\SDL_net;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AssemblerListingLocation>$(IntDir)/__sub0/__sub1/__sub2/__sub3/%(RelativeDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)/__sub0/__sub1/__sub2/__sub3/%(RelativeDir)</ObjectFileName>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>
