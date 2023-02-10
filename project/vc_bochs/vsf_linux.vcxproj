@@ -1511,6 +1511,7 @@
     <ClCompile Include="..\..\vsf\source\utilities\compiler\x86\x86_compiler.c" />
     <ClCompile Include="..\..\vsf\source\utilities\compiler\__common\__retarget_io.c" />
     <ClCompile Include="..\..\vsf\source\utilities\language_extension\code_region.c" />
+    <ClCompile Include="..\..\vsf\source\utilities\language_extension\cpp\vsf_cpp.cpp" />
     <ClCompile Include="..\..\vsf\source\utilities\language_extension\delegate.c" />
     <ClCompile Include="..\..\vsf\source\utilities\language_extension\simple_sprintf.c" />
     <ClCompile Include="..\..\vsf\source\utilities\language_extension\simple_sscanf.c" />

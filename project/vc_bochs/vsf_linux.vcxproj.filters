@@ -901,6 +901,9 @@
     <Filter Include="application\3rd-party\bochs\cpu\cpudb\intel">
       <UniqueIdentifier>{51e96a43-7ac4-4d42-9923-64b8954877ab}</UniqueIdentifier>
     </Filter>
+    <Filter Include="vsf\utilities\language_externsion\cpp">
+      <UniqueIdentifier>{4a3f7155-49e7-424f-88c7-44dd07382b18}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vsf\source\vsf.h">
