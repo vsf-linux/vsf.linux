@@ -1,0 +1,65 @@
+ bochs/logio.cc | 15 +++++++++++++--
+ 1 file changed, 13 insertions(+), 2 deletions(-)
+
+diff --git a/bochs/logio.cc b/bochs/logio.cc
+index a3ddf6732..88c2bfbf6 100644
+--- a/bochs/logio.cc
++++ b/bochs/logio.cc
+@@ -90,7 +90,7 @@ void iofunctions::init(void)
+   // sets the default logprefix
+   strcpy(logprefix,"%t%e%d");
+   n_logfn = 0;
+-  init_log(stderr);
++  init_log();
+   log = new logfunc_t(this);
+   log->put("logio", "IO");
+   log->ldebug("Init(log file: '%s').",logfn);
+@@ -123,6 +123,13 @@ void iofunctions::set_log_action(int loglevel, int action)
+     logfn_list[i]->setonoff(loglevel, action);
+ }
+ 
++void iofunctions::init_log(void)
++{
++  assert(magic==MAGIC_LOGNUM);
++  logfn = "(unknown)";
++  logfd = NULL;
++}
++
+ void iofunctions::init_log(const char *fn)
+ {
+   assert(magic==MAGIC_LOGNUM);
+@@ -201,6 +208,10 @@ void iofunctions::out(int level, const char *prefix, const char *fmt, va_list ap
+   char c = ' ', *s;
+   char tmpstr[80], msgpfx[80], msg[1024];
+ 
++  if (NULL == logfd) {
++    init_log(stderr);
++  }
++
+   assert(magic==MAGIC_LOGNUM);
+   assert(this != NULL);
+   assert(logfd != NULL);
+@@ -318,7 +329,7 @@ logfunctions::logfunctions(void)
+   put("?", " ");
+   if (io == NULL && Allocio == 0) {
+     Allocio = 1;
+-    io = new iofunc_t(stderr);
++    io = new iofunc_t();
+   }
+   setio(io);
+   // BUG: unfortunately this can be called before the bochsrc is read,
+ bochs/logio.h | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/bochs/logio.h b/bochs/logio.h
+index 5c473122b..bb8ac8b3c 100644
+--- a/bochs/logio.h
++++ b/bochs/logio.h
+@@ -108,6 +108,7 @@ public:
+ 
+   void out(int level, const char *pre, const char *fmt, va_list ap);
+ 
++  void init_log(void);
+   void init_log(const char *fn);
+   void init_log(int fd);
+   void init_log(FILE *fs);
