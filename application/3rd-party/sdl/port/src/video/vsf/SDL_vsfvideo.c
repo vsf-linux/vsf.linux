@@ -327,6 +327,9 @@ VSF_VideoInit(_THIS)
         display.desktop_mode = mode;
         display.current_mode = mode;
         display.orientation = SDL_ORIENTATION_UNKNOWN;
+        if (SDL_AddDisplayMode(&display, &mode) < 0) {
+            return -1;
+        }
         if (SDL_AddVideoDisplay(&display, SDL_FALSE) < 0) {
             return -1;
         }

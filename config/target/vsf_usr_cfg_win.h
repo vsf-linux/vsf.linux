@@ -60,7 +60,10 @@
 #   define VSF_LINUX_CFG_STACKSIZE                      (128 * 1024)
 #   define VSF_LINUX_CFG_PRINT_BUFF_SIZE                1024
 #   define VSF_LINUX_CFG_RTC                            vsf_hw_rtc0
-#   define VSF_LINUX_SIMPLE_STDLIB_CFG_HEAP_MONITOR     ENABLED
+// For cpp support, heap_monitor will break initialization of static instance of cpp.
+//  Because heap_monitor depends on vsf_linux environment, which is not available
+//  when initialing static instance of cpp.
+#   define VSF_LINUX_SIMPLE_STDLIB_CFG_HEAP_MONITOR     DISABLED
 #       define VSF_LINUX_SIMPLE_STDLIB_HEAP_MONITOR_TRACE_DEPTH (32 * 1024)
 #       define VSF_LINUX_SIMPLE_STDLIB_HEAP_MONITOR_QUIET       ENABLED
 // if VSF_LINUX_USE_SIMPLE_LIBC is enabled, need VSF_USE_SIMPLE_SSCANF and VSF_USE_SIMPLE_SPRINTF
