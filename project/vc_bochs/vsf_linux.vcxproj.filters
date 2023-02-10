@@ -5348,6 +5348,9 @@
     <ClCompile Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\hdimage\cdrom.cc">
       <Filter>application\3rd-party\bochs\iodev\hdimage</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\vsf\source\utilities\language_extension\cpp\vsf_cpp.cpp">
+      <Filter>vsf\utilities\language_externsion\cpp</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\vsf\source\hal\arch\common\arch_without_thread_suspend\vsf_arch_without_thread_suspend_template.inc">
