@@ -1,0 +1,16 @@
+ bochs/main.cc | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/bochs/main.cc b/bochs/main.cc
+index 423202d46..7ce85e2c2 100644
+--- a/bochs/main.cc
++++ b/bochs/main.cc
+@@ -521,7 +521,7 @@ int WINAPI WinMain(
+ #if !defined(__WXMSW__)
+ // normal main function, presently in for all cases except for
+ // wxWidgets under win32.
+-int CDECL main(int argc, char *argv[])
++extern "C" int CDECL bochs_main(int argc, char *argv[])
+ {
+   bx_startup_flags.argc = argc;
+   bx_startup_flags.argv = argv;
