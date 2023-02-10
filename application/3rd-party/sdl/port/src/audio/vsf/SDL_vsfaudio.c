@@ -156,6 +156,9 @@ VSFAUDIO_OpenDevice(_THIS, const char *devname)
         return SDL_SetError("%s: Fail to start audio", VSF_AUDIO_MOD);
     }
 
+    if (NULL == _this->handle) {
+        _this->handle = audio_dev;
+    }
     _this->hidden = (struct SDL_PrivateAudioData *)ctx;
     return 0;
 }
