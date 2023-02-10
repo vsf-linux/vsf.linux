@@ -87,6 +87,7 @@
 
 #undef _WIN32
 #undef _MSC_VER
+#define _CONST_RETURN
 #define MSVC_TARGET 32
 #if defined(_MSC_VER) && defined(MSVC_TARGET)
 #if defined(_M_X64) && (MSVC_TARGET != 64)
