@@ -213,7 +213,9 @@ VSFAUDIO_CloseDevice(_THIS)
     vk_audio_dev_t *audio_dev = _this->handle;
     VSFAUDIO_ctx_t *ctx = (VSFAUDIO_ctx_t *)_this->hidden;
     vk_audio_stop(audio_dev, ctx->audio_stream->stream_index);
-    SDL_free(_this->hidden);
+    if (_this->handle != SDL_platform.cfg.audio_dev) {
+        SDL_free(_this->hidden);
+    }
 }
 
 static void
