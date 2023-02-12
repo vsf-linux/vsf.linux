@@ -55,3 +55,6 @@
 [submodule "application/3rd-party/sdl/mgba"]
 	path = application/3rd-party/sdl/mgba
 	url = ../mgba
+[submodule "application/3rd-party/libmodbus/raw"]
+	path = application/3rd-party/libmodbus/raw
+	url = ../libmodbus
