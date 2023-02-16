@@ -21,6 +21,19 @@
   <ItemGroup>
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\examples\widgets\mainwindows\application\debug\moc_predefs.h" />
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\examples\widgets\mainwindows\application\mainwindow.h" />
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\animation\qabstractanimation.h" />
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\animation\qabstractanimation_p.h" />
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\animation\qanimationgroup.h" />
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\animation\qanimationgroup_p.h" />
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\animation\qparallelanimationgroup.h" />
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\animation\qparallelanimationgroup_p.h" />
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\animation\qpauseanimation.h" />
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\animation\qpropertyanimation.h" />
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\animation\qpropertyanimation_p.h" />
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\animation\qsequentialanimationgroup.h" />
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\animation\qsequentialanimationgroup_p.h" />
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\animation\qvariantanimation.h" />
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\animation\qvariantanimation_p.h" />
     <ClInclude Include="..\..\config\3rd-party\mbedtls\config.h" />
     <ClInclude Include="..\..\config\target\vsf_usr_cfg_win.h" />
     <ClInclude Include="..\..\config\vsf_usr_cfg.h" />
@@ -455,6 +468,13 @@
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">main=qt_main;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\examples\widgets\mainwindows\application\mainwindow.cpp" />
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\animation\qabstractanimation.cpp" />
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\animation\qanimationgroup.cpp" />
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\animation\qparallelanimationgroup.cpp" />
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\animation\qpauseanimation.cpp" />
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\animation\qpropertyanimation.cpp" />
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\animation\qsequentialanimationgroup.cpp" />
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\animation\qvariantanimation.cpp" />
     <ClCompile Include="..\..\application\vsf_main.c" />
     <ClCompile Include="..\..\vsf\example\template\demo\common\usrapp_audio_common.c" />
     <ClCompile Include="..\..\vsf\example\template\demo\common\usrapp_common.c" />
@@ -800,9 +820,9 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>__VSF__;__CPU_X86__;__WIN__;__OOC_CPP__;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;QT_NO_OPENGL;offsetof=__builtin_offsetof;__has_cpp_attribute(...)=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>__VSF__;__CPU_X86__;__WIN__;__OOC_CPP__;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;QT_STATIC;QT_NO_OPENGL;offsetof=__builtin_offsetof;__has_cpp_attribute(...)=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;F:\qt6\include;F:\qt6\include\QTCore;F:\qt6\include\QtWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)..\..\application\3rd-party\qt\raw\qt6-build\qtbase\src\corelib\Core_autogen\include;$(ProjectDir)..\..\application\3rd-party\qt\raw\qt6-build\qtbase\include\QtCore\6.4.2;$(ProjectDir)..\..\application\3rd-party\qt\raw\qt6-build\qtbase\include\QtCore\6.4.2\QtCore;F:\qt6\include;F:\qt6\include\QTCore;F:\qt6\include\QtWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-fms-extensions %(AdditionalOptions)</AdditionalOptions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -829,9 +849,9 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>__VSF__;__CPU_X64__;__WIN__;__OOC_CPP__;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;QT_NO_OPENGL;offsetof=__builtin_offsetof;__has_cpp_attribute(...)=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>__VSF__;__CPU_X64__;__WIN__;__OOC_CPP__;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;QT_STATIC;QT_NO_OPENGL;offsetof=__builtin_offsetof;__has_cpp_attribute(...)=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;F:\qt6\include;F:\qt6\include\QTCore;F:\qt6\include\QtWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)..\..\application\3rd-party\qt\raw\qt6-build\qtbase\src\corelib\Core_autogen\include;$(ProjectDir)..\..\application\3rd-party\qt\raw\qt6-build\qtbase\include\QtCore\6.4.2;$(ProjectDir)..\..\application\3rd-party\qt\raw\qt6-build\qtbase\include\QtCore\6.4.2\QtCore;F:\qt6\include;F:\qt6\include\QTCore;F:\qt6\include\QtWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-fms-extensions %(AdditionalOptions)</AdditionalOptions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -861,9 +881,9 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>__VSF__;__CPU_X86__;__WIN__;__OOC_RELEASE__;__OOC_CPP__;NDEBUG;_CONSOLE;QT_NO_OPENGL;offsetof=__builtin_offsetof;__has_cpp_attribute(...)=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>__VSF__;__CPU_X86__;__WIN__;__OOC_RELEASE__;__OOC_CPP__;NDEBUG;_CONSOLE;QT_STATIC;QT_NO_OPENGL;offsetof=__builtin_offsetof;__has_cpp_attribute(...)=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;F:\qt6\include;F:\qt6\include\QTCore;F:\qt6\include\QtWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)..\..\application\3rd-party\qt\raw\qt6-build\qtbase\src\corelib\Core_autogen\include;$(ProjectDir)..\..\application\3rd-party\qt\raw\qt6-build\qtbase\include\QtCore\6.4.2;$(ProjectDir)..\..\application\3rd-party\qt\raw\qt6-build\qtbase\include\QtCore\6.4.2\QtCore;F:\qt6\include;F:\qt6\include\QTCore;F:\qt6\include\QtWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <AssemblerListingLocation>$(IntDir)/__sub0/__sub1/__sub2/__sub3/%(RelativeDir)</AssemblerListingLocation>
@@ -889,9 +909,9 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>__VSF__;__CPU_X64__;__WIN__;__OOC_RELEASE__;__OOC_CPP__;NDEBUG;_CONSOLE;QT_NO_OPENGL;offsetof=__builtin_offsetof;__has_cpp_attribute(...)=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>__VSF__;__CPU_X64__;__WIN__;__OOC_RELEASE__;__OOC_CPP__;NDEBUG;_CONSOLE;QT_STATIC;QT_NO_OPENGL;offsetof=__builtin_offsetof;__has_cpp_attribute(...)=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;F:\qt6\include;F:\qt6\include\QTCore;F:\qt6\include\QtWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)..\..\application\3rd-party\qt\raw\qt6-build\qtbase\src\corelib\Core_autogen\include;$(ProjectDir)..\..\application\3rd-party\qt\raw\qt6-build\qtbase\include\QtCore\6.4.2;$(ProjectDir)..\..\application\3rd-party\qt\raw\qt6-build\qtbase\include\QtCore\6.4.2\QtCore;F:\qt6\include;F:\qt6\include\QTCore;F:\qt6\include\QtWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <AssemblerListingLocation>$(IntDir)/__sub0/__sub1/__sub2/__sub3/%(RelativeDir)</AssemblerListingLocation>

@@ -742,6 +742,15 @@
     <Filter Include="application\3rd-party\qt\app">
       <UniqueIdentifier>{f43b0b90-a979-46a6-b50d-3119a16187e2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="application\3rd-party\qt\raw\qtbase\src">
+      <UniqueIdentifier>{1c7679b6-4cdf-4cb5-bcf8-11dab0a8a5ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\qt\raw\qtbase\src\corelib">
+      <UniqueIdentifier>{ad4a86a3-3f5a-4874-96bc-e7636ac8cb9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\qt\raw\qtbase\src\corelib\animation">
+      <UniqueIdentifier>{e90bcbae-7d5b-475d-b85e-527d170fcab1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vsf\source\vsf.h">
@@ -2019,6 +2028,45 @@
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\examples\widgets\mainwindows\application\debug\moc_predefs.h">
       <Filter>application\3rd-party\qt\app</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\animation\qabstractanimation.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\animation\qabstractanimation_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\animation\qanimationgroup.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\animation\qanimationgroup_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\animation\qparallelanimationgroup.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\animation\qparallelanimationgroup_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\animation\qpauseanimation.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\animation\qpropertyanimation.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\animation\qpropertyanimation_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\animation\qsequentialanimationgroup.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\animation\qsequentialanimationgroup_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\animation\qvariantanimation.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\animation\qvariantanimation_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\animation</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\vsf\source\utilities\template\vsf_bitmap.c">
@@ -2737,6 +2785,27 @@
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\examples\widgets\mainwindows\application\debug\qrc_application.cpp">
       <Filter>application\3rd-party\qt\app</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\animation\qabstractanimation.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\animation\qanimationgroup.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\animation\qparallelanimationgroup.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\animation\qpauseanimation.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\animation\qpropertyanimation.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\animation\qsequentialanimationgroup.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\animation\qvariantanimation.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\animation</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
