@@ -2901,21 +2901,6 @@
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfilesystemmetadata_p.h">
       <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfilesystemwatcher.h">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfilesystemwatcher_fsevents_p.h">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfilesystemwatcher_kqueue_p.h">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfilesystemwatcher_p.h">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfilesystemwatcher_polling_p.h">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfsfileengine_iterator_p.h">
       <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
     </ClInclude>
@@ -4395,15 +4380,6 @@
       <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfilesystemiterator_unix.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfilesystemwatcher.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfilesystemwatcher_kqueue.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfilesystemwatcher_polling.cpp">
       <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfsfileengine.cpp">

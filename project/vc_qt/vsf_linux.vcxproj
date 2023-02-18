@@ -97,11 +97,6 @@
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfilesystementry_p.h" />
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfilesystemiterator_p.h" />
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfilesystemmetadata_p.h" />
-    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfilesystemwatcher.h" />
-    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfilesystemwatcher_fsevents_p.h" />
-    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfilesystemwatcher_kqueue_p.h" />
-    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfilesystemwatcher_p.h" />
-    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfilesystemwatcher_polling_p.h" />
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfile_p.h" />
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfsfileengine_iterator_p.h" />
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfsfileengine_p.h" />
@@ -851,9 +846,6 @@
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfilesystemengine_unix.cpp" />
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfilesystementry.cpp" />
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfilesystemiterator_unix.cpp" />
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfilesystemwatcher.cpp" />
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfilesystemwatcher_kqueue.cpp" />
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfilesystemwatcher_polling.cpp" />
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfsfileengine.cpp" />
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfsfileengine_iterator.cpp" />
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfsfileengine_unix.cpp" />
