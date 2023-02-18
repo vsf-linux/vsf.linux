@@ -751,11 +751,38 @@
     <Filter Include="application\3rd-party\qt\raw\qtbase\src\corelib\animation">
       <UniqueIdentifier>{e90bcbae-7d5b-475d-b85e-527d170fcab1}</UniqueIdentifier>
     </Filter>
-    <Filter Include="application\3rd-party\qt\raw\qtbase\src\corelib\compat">
-      <UniqueIdentifier>{62c3a433-00de-4bb9-9d01-08593dc3c26e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="application\3rd-party\qt\raw\qtbase\src\corelib\kernel">
       <UniqueIdentifier>{65026f80-c9de-47df-9975-8995a7febc6e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\qt\raw\qtbase\src\corelib\text">
+      <UniqueIdentifier>{a526eeb3-e14e-4bab-b389-2cab3aa69574}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\qt\raw\qtbase\src\corelib\thread">
+      <UniqueIdentifier>{3aa80901-0e9f-438b-a232-ae7cbf6cf0b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\qt\raw\qtbase\src\corelib\time">
+      <UniqueIdentifier>{084d899f-4db9-4660-8896-820a4d42f656}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\qt\raw\qtbase\src\corelib\tools">
+      <UniqueIdentifier>{a9e62039-258e-493a-9f1c-f170bc63210c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\qt\raw\qtbase\src\corelib\serialization">
+      <UniqueIdentifier>{5ee2ea20-75e3-438e-b341-ccd4bae4a875}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\qt\raw\qtbase\src\corelib\mimetypes">
+      <UniqueIdentifier>{683a1f31-368e-488d-9809-4133035ccf22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\qt\raw\qtbase\src\corelib\itemmodels">
+      <UniqueIdentifier>{da304048-6fbd-4f4a-94b8-c8d8636c7425}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\qt\raw\qtbase\src\corelib\io">
+      <UniqueIdentifier>{f8b97a04-e11e-4d00-bba2-4fbd0bc7e6ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\qt\raw\qtbase\src\corelib\global">
+      <UniqueIdentifier>{83216860-6732-4cc5-b975-003d07916cfd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\qt\app\debug">
+      <UniqueIdentifier>{f071e2a3-ba76-45ec-9e8b-8fab3cd40564}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -2031,9 +2058,6 @@
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\examples\widgets\mainwindows\application\mainwindow.h">
       <Filter>application\3rd-party\qt\app</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\examples\widgets\mainwindows\application\debug\moc_predefs.h">
-      <Filter>application\3rd-party\qt\app</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\animation\qabstractanimation.h">
       <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\animation</Filter>
     </ClInclude>
@@ -2267,6 +2291,858 @@
     </ClInclude>
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\kernel\qvariantmap.h">
       <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qanystringview.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qbytearray.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qbytearray_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qbytearrayalgorithms.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qbytearraylist.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qbytearraymatcher.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qbytearrayview.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qbytedata_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qchar.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qcollator.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qcollator_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qdoublescanprint_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qlocale.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qlocale_data_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qlocale_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qlocale_tools_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qregularexpression.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qstring.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qstringalgorithms.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qstringalgorithms_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qstringbuilder.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qstringconverter.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qstringconverter_base.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qstringconverter_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qstringfwd.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qstringiterator_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qstringlist.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qstringliteral.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qstringmatcher.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qstringtokenizer.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qstringview.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qtextboundaryfinder.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qunicodetables_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qunicodetools_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qutf8stringview.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qatomic.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qatomic_bootstrap.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qatomic_cxx11.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qbasicatomic.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qexception.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qfutex_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qfuture.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qfuture_impl.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qfutureinterface.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qfutureinterface_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qfuturesynchronizer.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qfuturewatcher.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qfuturewatcher_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qgenericatomic.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qlocking_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qmutex.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qmutex_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qorderedmutexlocker_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qpromise.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qreadwritelock.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qreadwritelock_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qresultstore.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qrunnable.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qsemaphore.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qthread.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qthread_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qthreadpool.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qthreadpool_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qthreadstorage.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qtsan_impl.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qwaitcondition.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qwaitcondition_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\time\qcalendar.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\time</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\time\qcalendarbackend_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\time</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\time\qcalendarmath_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\time</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\time\qdatetime.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\time</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\time\qdatetime_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\time</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\time\qdatetimeparser_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\time</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\time\qgregoriancalendar_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\time</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\time\qhijricalendar_data_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\time</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\time\qhijricalendar_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\time</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\time\qislamiccivilcalendar_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\time</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\time\qjalalicalendar_data_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\time</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\time\qjalalicalendar_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\time</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\time\qjuliancalendar_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\time</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\time\qlocaltime_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\time</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\time\qmilankoviccalendar_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\time</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\time\qromancalendar_data_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\time</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\time\qromancalendar_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\time</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\time\qtimezone.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\time</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\time\qtimezoneprivate_data_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\time</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\time\qtimezoneprivate_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\time</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qalgorithms.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qarraydata.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qarraydataops.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qarraydatapointer.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qatomicscopedvaluerollback_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qbitarray.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qcache.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qcommandlineoption.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qcommandlineparser.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qcontainerfwd.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qcontainertools_impl.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qcontiguouscache.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qcryptographichash.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qduplicatetracker_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qeasingcurve.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qflatmap_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qfreelist_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qhash.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qhashfunctions.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qiterator.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qline.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qlist.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qmakearray_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qmap.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qmargins.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qmessageauthenticationcode.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qoffsetstringarray_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qpair.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qpoint.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qqueue.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qrect.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qrefcount.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qringbuffer_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qscopedpointer.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qscopedvaluerollback.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qscopeguard.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qset.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qshareddata.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qshareddata_impl.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qsharedpointer.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qsharedpointer_impl.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qsize.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qstack.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qtaggedpointer.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qtimeline.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qtools_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qvarlengtharray.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qvector.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qversionnumber.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qcborarray.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qcborcommon.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qcborcommon_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qcbormap.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qcborstream.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qcborstreamreader.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qcborstreamwriter.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qcborvalue.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qcborvalue_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qdatastream.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qdatastream_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qjson_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qjsonarray.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qjsondocument.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qjsonobject.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qjsonparser_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qjsonvalue.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qjsonwriter_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qtextstream.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qtextstream_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qxmlstream.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qxmlstream_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qxmlstreamgrammar_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qxmlstreamparser_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qxmlutils_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\mimetypes\qmimedatabase.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\mimetypes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\mimetypes\qmimedatabase_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\mimetypes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\mimetypes\qmimeglobpattern_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\mimetypes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\mimetypes\qmimemagicrule_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\mimetypes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\mimetypes\qmimemagicrulematcher_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\mimetypes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\mimetypes\qmimeprovider_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\mimetypes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\mimetypes\qmimetype.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\mimetypes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\mimetypes\qmimetype_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\mimetypes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\mimetypes\qmimetypeparser_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\mimetypes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\itemmodels\qabstractitemmodel.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\itemmodels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\itemmodels\qabstractitemmodel_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\itemmodels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\itemmodels\qabstractproxymodel.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\itemmodels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\itemmodels\qabstractproxymodel_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\itemmodels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\itemmodels\qconcatenatetablesproxymodel.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\itemmodels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\itemmodels\qidentityproxymodel.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\itemmodels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\itemmodels\qidentityproxymodel_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\itemmodels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\itemmodels\qitemselectionmodel.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\itemmodels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\itemmodels\qitemselectionmodel_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\itemmodels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\itemmodels\qsortfilterproxymodel.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\itemmodels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\itemmodels\qstringlistmodel.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\itemmodels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\itemmodels\qtransposeproxymodel.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\itemmodels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\itemmodels\qtransposeproxymodel_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\itemmodels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qabstractfileengine_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qbuffer.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qdataurl_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qdebug.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qdebug_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qdir.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qdir_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qdiriterator.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfile.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfile_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfiledevice.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfiledevice_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfileinfo.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfileinfo_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfileselector.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfileselector_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfilesystemengine_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfilesystementry_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfilesystemiterator_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfilesystemmetadata_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfilesystemwatcher.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfilesystemwatcher_fsevents_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfilesystemwatcher_kqueue_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfilesystemwatcher_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfilesystemwatcher_polling_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfsfileengine_iterator_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfsfileengine_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qiodevice.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qiodevice_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qiodevicebase.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qipaddress_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qlockfile.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qlockfile_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qloggingcategory.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qloggingregistry_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qnoncontiguousbytedevice_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qntdll_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qresource.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qresource_iterator_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qresource_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qsavefile.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qsavefile_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qsettings.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qsettings_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qstandardpaths.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qstorageinfo.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qstorageinfo_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qtemporarydir.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qtemporaryfile.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qtemporaryfile_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qurl.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qurl_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qurlquery.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\minimum-linux_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\q20algorithm.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\q20functional.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\q20iterator.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\q23functional.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qcompare.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qcompare_impl.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qcompilerdetection.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qconfig-bootstrapped.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qcontainerinfo.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qendian.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qendian_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qflags.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qfloat16.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qforeach.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qglobal.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qglobal_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qglobalstatic.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qhooks_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qlibraryinfo.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qlibraryinfo_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qlogging.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qlogging_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qnamespace.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qnativeinterface.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qnativeinterface_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qnumeric.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qnumeric_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qoperatingsystemversion.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qoperatingsystemversion_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qprocessordetection.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qrandom.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qrandom_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qsimd.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qsimd_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qsysinfo.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qsystemdetection.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qt_pch.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qtconfigmacros.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qtrace_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qtypeinfo.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qversiontagging.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qvolatile_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qxpfunctional.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\event.h">
+      <Filter>vsf\shell\sys\linux\include\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\file.h">
+      <Filter>vsf\shell\sys\linux\include\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\sendfile.h">
+      <Filter>vsf\shell\sys\linux\include\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\examples\widgets\mainwindows\application\debug\moc_predefs.h">
+      <Filter>application\3rd-party\qt\app\debug</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -2981,12 +3857,6 @@
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\examples\widgets\mainwindows\application\mainwindow.cpp">
       <Filter>application\3rd-party\qt\app</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\examples\widgets\mainwindows\application\debug\moc_mainwindow.cpp">
-      <Filter>application\3rd-party\qt\app</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\examples\widgets\mainwindows\application\debug\qrc_application.cpp">
-      <Filter>application\3rd-party\qt\app</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\animation\qabstractanimation.cpp">
       <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\animation</Filter>
     </ClCompile>
@@ -3007,9 +3877,6 @@
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\animation\qvariantanimation.cpp">
       <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\animation</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\compat\removed_api.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\compat</Filter>
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\kernel\qabstracteventdispatcher.cpp">
       <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\kernel</Filter>
@@ -3133,6 +4000,531 @@
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\kernel\qvariant.cpp">
       <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qbytearray.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qbytearraylist.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qbytearraymatcher.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qchar.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qcollator.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qcollator_icu.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qcollator_macx.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qcollator_posix.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qcollator_win.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qlocale.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qlocale_icu.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qlocale_tools.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qlocale_unix.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qlocale_win.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qregularexpression.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qstring.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qstringbuilder.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qstringconverter.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qstringlist.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qstringmatcher.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qstringtokenizer.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qstringview.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qtextboundaryfinder.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qunicodetables.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qunicodetools.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qvsnprintf.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qatomic.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qexception.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qfutureinterface.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qfuturewatcher.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qmutex.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qmutex_mac.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qmutex_unix.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qreadwritelock.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qresultstore.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qrunnable.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qsemaphore.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qthread.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qthread_unix.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qthreadpool.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qthreadstorage.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qwaitcondition_unix.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\time\qcalendar.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\time</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\time\qdatetime.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\time</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\time\qdatetimeparser.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\time</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\time\qgregoriancalendar.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\time</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\time\qhijricalendar.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\time</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\time\qislamiccivilcalendar.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\time</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\time\qjalalicalendar.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\time</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\time\qjuliancalendar.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\time</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\time\qlocaltime.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\time</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\time\qmilankoviccalendar.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\time</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\time\qromancalendar.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\time</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\time\qtimezone.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\time</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\time\qtimezoneprivate.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\time</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\time\qtimezoneprivate_android.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\time</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\time\qtimezoneprivate_icu.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\time</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\time\qtimezoneprivate_tz.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\time</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\time\qtimezoneprivate_win.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\time</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qarraydata.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qbitarray.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qcommandlineoption.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qcommandlineparser.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qcontiguouscache.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qcryptographichash.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qeasingcurve.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qfreelist.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qhash.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qline.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qmargins.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qmessageauthenticationcode.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qpoint.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qqueue.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qrect.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qrefcount.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qringbuffer.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qscopedpointer.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qscopedvaluerollback.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qshareddata.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qsharedpointer.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qsize.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qstack.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qtimeline.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qversionnumber.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qcborarray.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\serialization</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qcborcommon.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\serialization</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qcbordiagnostic.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\serialization</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qcbormap.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\serialization</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qcborstreamreader.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\serialization</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qcborstreamwriter.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\serialization</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qcborvalue.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\serialization</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qdatastream.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\serialization</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qjsonarray.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\serialization</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qjsoncbor.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\serialization</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qjsondocument.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\serialization</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qjsonobject.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\serialization</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qjsonparser.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\serialization</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qjsonvalue.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\serialization</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qjsonwriter.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\serialization</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qtextstream.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\serialization</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qxmlstream.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\serialization</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qxmlstreamgrammar.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\serialization</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qxmlutils.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\serialization</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\mimetypes\qmimedatabase.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\mimetypes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\mimetypes\qmimeglobpattern.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\mimetypes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\mimetypes\qmimemagicrule.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\mimetypes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\mimetypes\qmimemagicrulematcher.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\mimetypes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\mimetypes\qmimeprovider.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\mimetypes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\mimetypes\qmimetype.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\mimetypes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\mimetypes\qmimetypeparser.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\mimetypes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\itemmodels\qabstractitemmodel.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\itemmodels</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\itemmodels\qabstractproxymodel.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\itemmodels</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\itemmodels\qconcatenatetablesproxymodel.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\itemmodels</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\itemmodels\qidentityproxymodel.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\itemmodels</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\itemmodels\qitemselectionmodel.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\itemmodels</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\itemmodels\qsortfilterproxymodel.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\itemmodels</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\itemmodels\qstringlistmodel.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\itemmodels</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\itemmodels\qtransposeproxymodel.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\itemmodels</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qabstractfileengine.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qbuffer.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qdataurl.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qdebug.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qdir.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qdiriterator.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfile.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfiledevice.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfileinfo.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfileselector.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfilesystemengine.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfilesystemengine_unix.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfilesystementry.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfilesystemiterator_unix.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfilesystemwatcher.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfilesystemwatcher_kqueue.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfilesystemwatcher_polling.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfsfileengine.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfsfileengine_iterator.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qfsfileengine_unix.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qiodevice.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qipaddress.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qlockfile.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qlockfile_unix.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qloggingcategory.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qloggingregistry.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qnoncontiguousbytedevice.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qresource.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qresource_iterator.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qsavefile.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qsettings.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qstandardpaths.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qstandardpaths_unix.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qstorageinfo.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qstorageinfo_unix.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qtemporarydir.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qtemporaryfile.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qurl.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qurlidna.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qurlquery.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qurlrecode.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\archdetect.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qendian.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qfloat16.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qfloat16tables.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qglobal.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qhooks.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qlibraryinfo.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qlogging.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qmalloc.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qnumeric.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qoperatingsystemversion.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qrandom.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qsimd.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qversiontagging.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\examples\widgets\mainwindows\application\debug\moc_mainwindow.cpp">
+      <Filter>application\3rd-party\qt\app\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\examples\widgets\mainwindows\application\debug\qrc_application.cpp">
+      <Filter>application\3rd-party\qt\app\debug</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
