@@ -1,3 +1,4 @@
+sudo apt install gcc g++ ninja-build cmake pkg-config perl
 git clone https://github.com/qt/qt5 raw
 cd raw
 git checkout v6.2.4
