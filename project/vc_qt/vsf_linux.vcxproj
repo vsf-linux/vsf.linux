@@ -660,6 +660,7 @@
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\fb.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\firmware.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\fs.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\futex.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\gfp.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\hid.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\hrtimer.h" />
@@ -730,6 +731,7 @@
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\ipc.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\mman.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\mount.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\prctl.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\random.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\resource.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\select.h" />
