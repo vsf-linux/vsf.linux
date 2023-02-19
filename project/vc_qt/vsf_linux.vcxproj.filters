@@ -811,6 +811,24 @@
     <Filter Include="application\3rd-party\qt\raw\qtbase\src\widgets\dialogs">
       <UniqueIdentifier>{bce81bb9-a93b-4070-b3a7-6662474a539d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="application\3rd-party\qt\raw\qtbase\src\corelib\plugin">
+      <UniqueIdentifier>{873dcc6b-80df-463b-b34a-5c91a98d2d56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\component\3rd-party\zlib">
+      <UniqueIdentifier>{ba0770de-3d54-4a06-94d2-b66e5613d0a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\component\3rd-party\zlib\raw">
+      <UniqueIdentifier>{26cf04a2-0ad0-44b1-bf9e-6791bbb84183}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\component\3rd-party\zlib\libpng">
+      <UniqueIdentifier>{41d04179-7343-47c2-b310-0b70f397c77b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\component\3rd-party\zlib\libpng\port">
+      <UniqueIdentifier>{3f9b8f80-9c67-4fda-b9ed-495c3b176eba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\component\3rd-party\zlib\libpng\raw">
+      <UniqueIdentifier>{20590500-fff0-4d6f-8fa2-6ee1a5376295}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vsf\source\vsf.h">
@@ -4038,6 +4056,66 @@
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\widgets\dialogs\qwizard_win_p.h">
       <Filter>application\3rd-party\qt\raw\qtbase\src\widgets\dialogs</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\plugin\quuid.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\zlib\raw\crc32.h">
+      <Filter>vsf\component\3rd-party\zlib\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\zlib\raw\deflate.h">
+      <Filter>vsf\component\3rd-party\zlib\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\zlib\raw\gzguts.h">
+      <Filter>vsf\component\3rd-party\zlib\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\zlib\raw\inffast.h">
+      <Filter>vsf\component\3rd-party\zlib\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\zlib\raw\inffixed.h">
+      <Filter>vsf\component\3rd-party\zlib\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\zlib\raw\inflate.h">
+      <Filter>vsf\component\3rd-party\zlib\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\zlib\raw\inftrees.h">
+      <Filter>vsf\component\3rd-party\zlib\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\zlib\raw\trees.h">
+      <Filter>vsf\component\3rd-party\zlib\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\zlib\raw\zconf.h">
+      <Filter>vsf\component\3rd-party\zlib\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\zlib\raw\zlib.h">
+      <Filter>vsf\component\3rd-party\zlib\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\zlib\raw\zutil.h">
+      <Filter>vsf\component\3rd-party\zlib\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\libpng\port\pnglibconf.h">
+      <Filter>vsf\component\3rd-party\zlib\libpng\port</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\libpng\raw\png.h">
+      <Filter>vsf\component\3rd-party\zlib\libpng\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\libpng\raw\pngconf.h">
+      <Filter>vsf\component\3rd-party\zlib\libpng\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\libpng\raw\pngdebug.h">
+      <Filter>vsf\component\3rd-party\zlib\libpng\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\libpng\raw\pnginfo.h">
+      <Filter>vsf\component\3rd-party\zlib\libpng\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\libpng\raw\pngpriv.h">
+      <Filter>vsf\component\3rd-party\zlib\libpng\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\libpng\raw\pngstruct.h">
+      <Filter>vsf\component\3rd-party\zlib\libpng\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\examples\widgets\mainwindows\application\debug\moc_predefs.h">
+      <Filter>application\3rd-party\qt\app\debug</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\vsf\source\utilities\template\vsf_bitmap.c">
@@ -6019,6 +6097,105 @@
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\widgets\dialogs\qwizard_win.cpp">
       <Filter>application\3rd-party\qt\raw\qtbase\src\widgets\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\plugin\quuid.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\plugin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\zlib\raw\adler32.c">
+      <Filter>vsf\component\3rd-party\zlib\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\zlib\raw\compress.c">
+      <Filter>vsf\component\3rd-party\zlib\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\zlib\raw\crc32.c">
+      <Filter>vsf\component\3rd-party\zlib\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\zlib\raw\deflate.c">
+      <Filter>vsf\component\3rd-party\zlib\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\zlib\raw\gzclose.c">
+      <Filter>vsf\component\3rd-party\zlib\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\zlib\raw\gzlib.c">
+      <Filter>vsf\component\3rd-party\zlib\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\zlib\raw\gzread.c">
+      <Filter>vsf\component\3rd-party\zlib\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\zlib\raw\gzwrite.c">
+      <Filter>vsf\component\3rd-party\zlib\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\zlib\raw\infback.c">
+      <Filter>vsf\component\3rd-party\zlib\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\zlib\raw\inffast.c">
+      <Filter>vsf\component\3rd-party\zlib\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\zlib\raw\inflate.c">
+      <Filter>vsf\component\3rd-party\zlib\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\zlib\raw\inftrees.c">
+      <Filter>vsf\component\3rd-party\zlib\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\zlib\raw\trees.c">
+      <Filter>vsf\component\3rd-party\zlib\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\zlib\raw\uncompr.c">
+      <Filter>vsf\component\3rd-party\zlib\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\zlib\raw\zutil.c">
+      <Filter>vsf\component\3rd-party\zlib\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\libpng\raw\png.c">
+      <Filter>vsf\component\3rd-party\zlib\libpng\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\libpng\raw\pngerror.c">
+      <Filter>vsf\component\3rd-party\zlib\libpng\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\libpng\raw\pngget.c">
+      <Filter>vsf\component\3rd-party\zlib\libpng\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\libpng\raw\pngmem.c">
+      <Filter>vsf\component\3rd-party\zlib\libpng\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\libpng\raw\pngpread.c">
+      <Filter>vsf\component\3rd-party\zlib\libpng\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\libpng\raw\pngread.c">
+      <Filter>vsf\component\3rd-party\zlib\libpng\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\libpng\raw\pngrio.c">
+      <Filter>vsf\component\3rd-party\zlib\libpng\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\libpng\raw\pngrtran.c">
+      <Filter>vsf\component\3rd-party\zlib\libpng\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\libpng\raw\pngrutil.c">
+      <Filter>vsf\component\3rd-party\zlib\libpng\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\libpng\raw\pngset.c">
+      <Filter>vsf\component\3rd-party\zlib\libpng\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\libpng\raw\pngtrans.c">
+      <Filter>vsf\component\3rd-party\zlib\libpng\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\libpng\raw\pngwio.c">
+      <Filter>vsf\component\3rd-party\zlib\libpng\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\libpng\raw\pngwrite.c">
+      <Filter>vsf\component\3rd-party\zlib\libpng\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\libpng\raw\pngwtran.c">
+      <Filter>vsf\component\3rd-party\zlib\libpng\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\libpng\raw\pngwutil.c">
+      <Filter>vsf\component\3rd-party\zlib\libpng\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\examples\widgets\mainwindows\application\debug\moc_mainwindow.cpp">
+      <Filter>application\3rd-party\qt\app\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qfloat16_f16c.c">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
