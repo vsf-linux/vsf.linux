@@ -2409,33 +2409,6 @@
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qbasicatomic.h">
       <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qexception.h">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qfutex_p.h">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qfuture.h">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qfuture_impl.h">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qfutureinterface.h">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qfutureinterface_p.h">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qfuturesynchronizer.h">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qfuturewatcher.h">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qfuturewatcher_p.h">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qgenericatomic.h">
       <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
     </ClInclude>
@@ -2458,9 +2431,6 @@
       <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
     </ClInclude>
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qreadwritelock_p.h">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qresultstore.h">
       <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
     </ClInclude>
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qrunnable.h">
@@ -4058,15 +4028,6 @@
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qatomic.cpp">
       <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qexception.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qfutureinterface.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qfuturewatcher.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qmutex.cpp">
       <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
     </ClCompile>
@@ -4074,9 +4035,6 @@
       <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qreadwritelock.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qresultstore.cpp">
       <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qrunnable.cpp">
@@ -4437,9 +4395,6 @@
       <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qfloat16.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qfloat16tables.cpp">
       <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\global</Filter>
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qglobal.cpp">

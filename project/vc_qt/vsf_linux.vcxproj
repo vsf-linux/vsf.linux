@@ -277,15 +277,6 @@
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qatomic_bootstrap.h" />
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qatomic_cxx11.h" />
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qbasicatomic.h" />
-    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qexception.h" />
-    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qfutex_p.h" />
-    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qfuture.h" />
-    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qfutureinterface.h" />
-    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qfutureinterface_p.h" />
-    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qfuturesynchronizer.h" />
-    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qfuturewatcher.h" />
-    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qfuturewatcher_p.h" />
-    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qfuture_impl.h" />
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qgenericatomic.h" />
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qlocking_p.h" />
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qmutex.h" />
@@ -294,7 +285,6 @@
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qpromise.h" />
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qreadwritelock.h" />
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qreadwritelock_p.h" />
-    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qresultstore.h" />
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qrunnable.h" />
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qsemaphore.h" />
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qthread.h" />
@@ -823,7 +813,6 @@
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\archdetect.cpp" />
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qendian.cpp" />
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qfloat16.cpp" />
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qfloat16tables.cpp" />
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qglobal.cpp" />
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qhooks.cpp" />
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qlibraryinfo.cpp">
@@ -1033,13 +1022,9 @@
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qunicodetools.cpp" />
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qvsnprintf.cpp" />
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qatomic.cpp" />
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qexception.cpp" />
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qfutureinterface.cpp" />
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qfuturewatcher.cpp" />
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qmutex.cpp" />
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qmutex_unix.cpp" />
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qreadwritelock.cpp" />
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qresultstore.cpp" />
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qrunnable.cpp" />
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qsemaphore.cpp" />
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qthread.cpp" />
@@ -1499,6 +1484,7 @@
       <AssemblerListingLocation>$(IntDir)/__sub0/__sub1/__sub2/__sub3/%(RelativeDir)</AssemblerListingLocation>
       <ObjectFileName>$(IntDir)/__sub0/__sub1/__sub2/__sub3/%(RelativeDir)</ObjectFileName>
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalOptions>-fms-extensions %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -1527,6 +1513,7 @@
       <AssemblerListingLocation>$(IntDir)/__sub0/__sub1/__sub2/__sub3/%(RelativeDir)</AssemblerListingLocation>
       <ObjectFileName>$(IntDir)/__sub0/__sub1/__sub2/__sub3/%(RelativeDir)</ObjectFileName>
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalOptions>-fms-extensions %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
