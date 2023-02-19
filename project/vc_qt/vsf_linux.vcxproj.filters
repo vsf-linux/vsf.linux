@@ -2532,9 +2532,6 @@
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\time\qjuliancalendar_p.h">
       <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\time</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\time\qlocaltime_p.h">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\time</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\time\qmilankoviccalendar_p.h">
       <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\time</Filter>
     </ClInclude>
@@ -3128,6 +3125,9 @@
     </ClInclude>
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\examples\widgets\mainwindows\application\debug\moc_predefs.h">
       <Filter>application\3rd-party\qt\app\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\xlocale.h">
+      <Filter>vsf\shell\sys\linux\include\simple_libc</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -4001,31 +4001,16 @@
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qcollator.cpp">
       <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qcollator_icu.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qcollator_macx.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qcollator_posix.cpp">
       <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qcollator_win.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qlocale.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qlocale_icu.cpp">
       <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qlocale_tools.cpp">
       <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qlocale_unix.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qlocale_win.cpp">
       <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qregularexpression.cpp">
@@ -4077,9 +4062,6 @@
       <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qmutex.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qmutex_mac.cpp">
       <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\thread</Filter>
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\thread\qmutex_unix.cpp">
@@ -4136,9 +4118,6 @@
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\time\qjuliancalendar.cpp">
       <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\time</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\time\qlocaltime.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\time</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\time\qmilankoviccalendar.cpp">
       <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\time</Filter>
     </ClCompile>
@@ -4151,16 +4130,7 @@
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\time\qtimezoneprivate.cpp">
       <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\time</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\time\qtimezoneprivate_android.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\time</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\time\qtimezoneprivate_icu.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\time</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\time\qtimezoneprivate_tz.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\time</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\time\qtimezoneprivate_win.cpp">
       <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\time</Filter>
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qarraydata.cpp">
