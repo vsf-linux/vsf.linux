@@ -895,6 +895,12 @@
     <Filter Include="application\3rd-party\qt\raw\qtbase\src\3rdparty\md4c">
       <UniqueIdentifier>{12649cf1-4d01-41b7-8a87-7be946905517}</UniqueIdentifier>
     </Filter>
+    <Filter Include="application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2">
+      <UniqueIdentifier>{860adb56-0f43-4cba-a6ab-2bf982d42582}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2\autogen">
+      <UniqueIdentifier>{7e8635e5-8517-4d79-b59f-d73022d3e138}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vsf\source\vsf.h">
@@ -4848,6 +4854,24 @@
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\3rdparty\md4c\md4c.h">
       <Filter>application\3rd-party\qt\raw\qtbase\src\3rdparty\md4c</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2\src\config.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2\src\pcre2.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2\src\pcre2_internal.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2\src\pcre2_intmodedep.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2\src\pcre2_ucp.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2\src\BundledPcre2_autogen\moc_predefs.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2\autogen</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\vsf\source\utilities\template\vsf_bitmap.c">
@@ -7579,6 +7603,87 @@
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\3rdparty\md4c\md4c.c">
       <Filter>application\3rd-party\qt\raw\qtbase\src\3rdparty\md4c</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2\src\pcre2_auto_possess.c">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2\src\pcre2_chartables.c">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2\src\pcre2_compile.c">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2\src\pcre2_config.c">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2\src\pcre2_context.c">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2\src\pcre2_dfa_match.c">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2\src\pcre2_error.c">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2\src\pcre2_extuni.c">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2\src\pcre2_find_bracket.c">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2\src\pcre2_jit_compile.c">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2\src\pcre2_maketables.c">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2\src\pcre2_match.c">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2\src\pcre2_match_data.c">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2\src\pcre2_newline.c">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2\src\pcre2_ord2utf.c">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2\src\pcre2_pattern_info.c">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2\src\pcre2_script_run.c">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2\src\pcre2_serialize.c">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2\src\pcre2_string_utils.c">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2\src\pcre2_study.c">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2\src\pcre2_substitute.c">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2\src\pcre2_substring.c">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2\src\pcre2_tables.c">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2\src\pcre2_ucd.c">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2\src\pcre2_valid_utf.c">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2\src\pcre2_xclass.c">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2\src\BundledPcre2_autogen\mocs_compilation.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2\autogen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
