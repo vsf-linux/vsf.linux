@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClInclude Include="..\..\application\3rd-party\qt\port\qplatformvsf.h" />
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\examples\widgets\mainwindows\application\mainwindow.h" />
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\3rdparty\md4c\md4c.h" />
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\animation\qabstractanimation.h" />
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\animation\qabstractanimation_p.h" />
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\animation\qanimationgroup.h" />
@@ -1346,6 +1347,7 @@
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">main=qt_main;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\examples\widgets\mainwindows\application\mainwindow.cpp" />
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\3rdparty\md4c\md4c.c" />
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\.rcc\qmimeprovider_database.cpp" />
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\animation\qabstractanimation.cpp" />
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\animation\qanimationgroup.cpp" />
@@ -1354,6 +1356,7 @@
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\animation\qpropertyanimation.cpp" />
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\animation\qsequentialanimationgroup.cpp" />
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\animation\qvariantanimation.cpp" />
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\Core_autogen\43AIQRLLGG\moc_qnamespace.cpp" />
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\archdetect.cpp" />
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qendian.cpp" />
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qfloat16.cpp" />

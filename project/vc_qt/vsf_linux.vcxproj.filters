@@ -886,6 +886,15 @@
     <Filter Include="application\3rd-party\qt\raw\qtbase\src\gui\.rcc">
       <UniqueIdentifier>{93949b4e-bb3c-4886-acd5-c03ce9253a71}</UniqueIdentifier>
     </Filter>
+    <Filter Include="application\3rd-party\qt\raw\qtbase\src\corelib\autogen">
+      <UniqueIdentifier>{a6f0603d-478c-4fbc-ba4f-ef76361570be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\qt\raw\qtbase\src\3rdparty">
+      <UniqueIdentifier>{4d17b5f4-f960-4a4e-9d42-670fdf9c1f9a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\qt\raw\qtbase\src\3rdparty\md4c">
+      <UniqueIdentifier>{12649cf1-4d01-41b7-8a87-7be946905517}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vsf\source\vsf.h">
@@ -4836,6 +4845,9 @@
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\plugin\quuid.h">
       <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\plugin</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\3rdparty\md4c\md4c.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\3rdparty\md4c</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\vsf\source\utilities\template\vsf_bitmap.c">
@@ -7561,6 +7573,12 @@
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\.rcc\qrc_qpdf.cpp">
       <Filter>application\3rd-party\qt\raw\qtbase\src\gui\.rcc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\Core_autogen\43AIQRLLGG\moc_qnamespace.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\autogen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\3rdparty\md4c\md4c.c">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\3rdparty\md4c</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
