@@ -20,7 +20,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\application\3rd-party\qt\port\qplatformvsf.h" />
-    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\examples\widgets\mainwindows\application\debug\moc_predefs.h" />
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\examples\widgets\mainwindows\application\mainwindow.h" />
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\animation\qabstractanimation.h" />
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\animation\qabstractanimation_p.h" />
@@ -214,7 +213,6 @@
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\mimetypes\qmimetype.h" />
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\mimetypes\qmimetypeparser_p.h" />
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\mimetypes\qmimetype_p.h" />
-    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\plugin\quuid.h" />
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qcborarray.h" />
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qcborcommon.h" />
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qcborcommon_p.h" />
@@ -1305,7 +1303,6 @@
     <ClInclude Include="..\..\vsf\source\vsf_cfg.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\examples\widgets\mainwindows\application\debug\moc_mainwindow.cpp" />
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\examples\widgets\mainwindows\application\debug\qrc_application.cpp" />
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\examples\widgets\mainwindows\application\main.cpp">
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">main=qt_main;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -1324,7 +1321,6 @@
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\archdetect.cpp" />
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qendian.cpp" />
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qfloat16.cpp" />
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qfloat16_f16c.c" />
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qglobal.cpp" />
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qhooks.cpp" />
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global\qlibraryinfo.cpp">
@@ -1375,7 +1371,12 @@
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qstandardpaths.cpp" />
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qstandardpaths_unix.cpp" />
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qstorageinfo.cpp" />
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qstorageinfo_unix.cpp" />
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qstorageinfo_unix.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qtemporarydir.cpp" />
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qtemporaryfile.cpp" />
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\io\qurl.cpp" />
@@ -1442,12 +1443,48 @@
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\mimetypes\qmimeprovider.cpp" />
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\mimetypes\qmimetype.cpp" />
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\mimetypes\qmimetypeparser.cpp" />
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\plugin\quuid.cpp" />
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qcborcommon.cpp" />
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qcbordiagnostic.cpp" />
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qcborstreamreader.cpp" />
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qcborstreamwriter.cpp" />
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qcborvalue.cpp" />
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qcborarray.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qcborcommon.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qcbordiagnostic.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qcbormap.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qcborstreamreader.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qcborstreamwriter.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qcborvalue.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qdatastream.cpp" />
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qjsonarray.cpp" />
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qjsoncbor.cpp" />
@@ -1468,7 +1505,12 @@
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qlocale.cpp" />
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qlocale_tools.cpp" />
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qlocale_unix.cpp" />
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qregularexpression.cpp" />
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qregularexpression.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qstring.cpp" />
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qstringbuilder.cpp" />
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qstringconverter.cpp" />
@@ -1605,6 +1647,8 @@
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\image\qimagereaderwriterhelpers.cpp" />
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\image\qimagewriter.cpp" />
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\image\qimage_conversions.cpp" />
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\image\qimage_mips_dspr2.cpp" />
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\image\qimage_neon.cpp" />
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\image\qmovie.cpp" />
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\image\qpaintengine_pic.cpp" />
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\image\qpicture.cpp" />
@@ -1729,6 +1773,7 @@
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\painting\qtransform.cpp" />
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\painting\qtriangulatingstroker.cpp" />
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\painting\qtriangulator.cpp" />
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\painting\webgradients.cpp" />
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\text\qabstracttextdocumentlayout.cpp" />
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\text\qcssparser.cpp" />
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\text\qdistancefield.cpp" />
@@ -1937,6 +1982,9 @@
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\widgets\widgets\qwidgetlinecontrol.cpp" />
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\widgets\widgets\qwidgetresizehandler.cpp" />
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\widgets\widgets\qwidgettextcontrol.cpp" />
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\widgets\Widgets_autogen\7GB2EGQPHR\moc_qwidgetrepaintmanager_p.cpp" />
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\widgets\Widgets_autogen\7GB2EGQPHR\moc_qwidget_p.cpp" />
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\widgets\Widgets_autogen\NHPNRXPXNK\moc_qpixmapstyle_p.cpp" />
     <ClCompile Include="..\..\application\vsf_main.c" />
     <ClCompile Include="..\..\vsf\example\template\demo\common\usrapp_audio_common.c" />
     <ClCompile Include="..\..\vsf\example\template\demo\common\usrapp_common.c" />
@@ -2204,7 +2252,6 @@
     <ClCompile Include="..\..\vsf\source\utilities\template\vsf_queue.c" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\painting\qpaintdevice.qdoc" />
     <None Include="..\..\vsf\source\hal\arch\common\arch_without_thread_suspend\vsf_arch_without_thread_suspend_template.inc" />
     <CustomBuild Include="..\..\vsf\source\hal\arch\x86\win\setjmp_x64.asm">
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ml64 /Fo $(IntDir)%(fileName).obj /c %(FullPath)</Command>
@@ -2315,7 +2362,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>__VSF__;__CPU_X86__;__WIN__;__OOC_CPP__;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;HAVE_CONFIG_H;QT_STATIC;offsetof=__builtin_offsetof;_DISABLE_EXTENDED_ALIGNED_STORAGE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\raw;$(ProjectDir)..\..\application\3rd-party\qt\port;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\mkspecs\linux-clang-32;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2\src;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\3rdparty\tinycbor\src;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtCore;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtCore\6.2.4;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtCore\6.2.4\QtCore;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtGui;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtGui\6.2.4;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtGui\6.2.4\QtGui;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtWidgets;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtWidgets\6.2.4;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtWidgets\6.2.4\QtWidgets;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\corelib;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\corelib\.rcc;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\corelib\Core_autogen\include;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\gui;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\gui\.rcc;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\include;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\widgets;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\widgets\.rcc;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\widgets\Widgets_autogen\include;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\widgets\dialogs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\raw;$(ProjectDir)..\..\application\3rd-party\qt\port;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\mkspecs\linux-clang-32;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtCore;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtCore\6.2.4;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtCore\6.2.4\QtCore;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtGui;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtGui\6.2.4;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtGui\6.2.4\QtGui;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtWidgets;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtWidgets\6.2.4;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtWidgets\6.2.4\QtWidgets;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\corelib;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\corelib\.rcc;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\corelib\Core_autogen\include;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\gui;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\gui\.rcc;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\include;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\widgets;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\widgets\.rcc;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\widgets\Widgets_autogen\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-fms-extensions %(AdditionalOptions)</AdditionalOptions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -2345,7 +2392,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>__VSF__;__CPU_X64__;__WIN__;__OOC_CPP__;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;HAVE_CONFIG_H;QT_STATIC;offsetof=__builtin_offsetof;_DISABLE_EXTENDED_ALIGNED_STORAGE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\raw;$(ProjectDir)..\..\application\3rd-party\qt\port;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\mkspecs\linux-clang-32;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2\src;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\3rdparty\tinycbor\src;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtCore;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtCore\6.2.4;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtCore\6.2.4\QtCore;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtGui;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtGui\6.2.4;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtGui\6.2.4\QtGui;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtWidgets;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtWidgets\6.2.4;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtWidgets\6.2.4\QtWidgets;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\corelib;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\corelib\.rcc;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\corelib\Core_autogen\include;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\gui;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\gui\.rcc;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\include;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\widgets;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\widgets\.rcc;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\widgets\Widgets_autogen\include;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\widgets\dialogs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\raw;$(ProjectDir)..\..\application\3rd-party\qt\port;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\mkspecs\linux-clang-32;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtCore;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtCore\6.2.4;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtCore\6.2.4\QtCore;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtGui;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtGui\6.2.4;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtGui\6.2.4\QtGui;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtWidgets;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtWidgets\6.2.4;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtWidgets\6.2.4\QtWidgets;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\corelib;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\corelib\.rcc;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\corelib\Core_autogen\include;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\gui;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\gui\.rcc;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\include;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\widgets;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\widgets\.rcc;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\widgets\Widgets_autogen\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-fms-extensions %(AdditionalOptions)</AdditionalOptions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -2378,7 +2425,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>__VSF__;__CPU_X86__;__WIN__;__OOC_RELEASE__;__OOC_CPP__;NDEBUG;_CONSOLE;HAVE_CONFIG_H;QT_STATIC;offsetof=__builtin_offsetof;_DISABLE_EXTENDED_ALIGNED_STORAGE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\raw;$(ProjectDir)..\..\application\3rd-party\qt\port;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\mkspecs\linux-clang-32;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2\src;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\3rdparty\tinycbor\src;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtCore;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtCore\6.2.4;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtCore\6.2.4\QtCore;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtGui;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtGui\6.2.4;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtGui\6.2.4\QtGui;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtWidgets;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtWidgets\6.2.4;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtWidgets\6.2.4\QtWidgets;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\corelib;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\corelib\.rcc;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\corelib\Core_autogen\include;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\gui;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\gui\.rcc;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\include;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\widgets;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\widgets\.rcc;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\widgets\Widgets_autogen\include;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\widgets\dialogs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\raw;$(ProjectDir)..\..\application\3rd-party\qt\port;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\mkspecs\linux-clang-32;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtCore;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtCore\6.2.4;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtCore\6.2.4\QtCore;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtGui;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtGui\6.2.4;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtGui\6.2.4\QtGui;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtWidgets;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtWidgets\6.2.4;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtWidgets\6.2.4\QtWidgets;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\corelib;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\corelib\.rcc;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\corelib\Core_autogen\include;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\gui;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\gui\.rcc;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\include;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\widgets;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\widgets\.rcc;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\widgets\Widgets_autogen\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <AssemblerListingLocation>$(IntDir)/__sub0/__sub1/__sub2/__sub3/%(RelativeDir)</AssemblerListingLocation>
@@ -2408,7 +2455,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>__VSF__;__CPU_X64__;__WIN__;__OOC_RELEASE__;__OOC_CPP__;NDEBUG;_CONSOLE;HAVE_CONFIG_H;QT_STATIC;offsetof=__builtin_offsetof;_DISABLE_EXTENDED_ALIGNED_STORAGE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\raw;$(ProjectDir)..\..\application\3rd-party\qt\port;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\mkspecs\linux-clang-32;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2\src;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\3rdparty\tinycbor\src;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtCore;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtCore\6.2.4;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtCore\6.2.4\QtCore;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtGui;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtGui\6.2.4;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtGui\6.2.4\QtGui;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtWidgets;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtWidgets\6.2.4;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtWidgets\6.2.4\QtWidgets;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\corelib;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\corelib\.rcc;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\corelib\Core_autogen\include;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\gui;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\gui\.rcc;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\include;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\widgets;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\widgets\.rcc;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\widgets\Widgets_autogen\include;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\widgets\dialogs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\port;$(ProjectDir)..\..\vsf\source\component\3rd-party\libpng\raw;$(ProjectDir)..\..\application\3rd-party\qt\port;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\mkspecs\linux-clang-32;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtCore;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtCore\6.2.4;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtCore\6.2.4\QtCore;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtGui;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtGui\6.2.4;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtGui\6.2.4\QtGui;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtWidgets;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtWidgets\6.2.4;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\include\QtWidgets\6.2.4\QtWidgets;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\corelib;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\corelib\.rcc;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\corelib\global;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\corelib\Core_autogen\include;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\gui;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\gui\.rcc;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\include;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\widgets;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\widgets\.rcc;$(ProjectDir)..\..\application\3rd-party\qt\raw\qtbase\src\widgets\Widgets_autogen\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <AssemblerListingLocation>$(IntDir)/__sub0/__sub1/__sub2/__sub3/%(RelativeDir)</AssemblerListingLocation>
