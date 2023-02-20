@@ -853,6 +853,39 @@
     <Filter Include="vsf\component\3rd-party\zlib\raw">
       <UniqueIdentifier>{b717145d-42ba-43c3-852f-b7aeac36e2bd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="application\3rd-party\qt\raw\qtbase\src\widgets\accessible">
+      <UniqueIdentifier>{0ac84c84-7937-4e85-907f-8dedf3eb60c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\qt\raw\qtbase\src\gui\accessible">
+      <UniqueIdentifier>{a9d7e445-7f02-4c2d-962d-61bf706fe7ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\qt\raw\qtbase\src\widgets\effects">
+      <UniqueIdentifier>{5dba17c1-6f04-496a-bc96-81727fab52a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\qt\raw\qtbase\src\gui\math3d">
+      <UniqueIdentifier>{ee4b5705-c37f-48e7-a6f7-0c6e62918bbd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\qt\raw\qtbase\src\gui\platform">
+      <UniqueIdentifier>{c5d035da-af75-440e-9511-9883a94d63c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\qt\raw\qtbase\src\gui\platform\unix">
+      <UniqueIdentifier>{674f35fa-3c50-47ff-a0e3-3f0d82e75710}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\qt\raw\qtbase\src\corelib\plugin">
+      <UniqueIdentifier>{9dfb28a2-1816-4d39-b594-bb5d9e7a99c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\qt\raw\qtbase\src\gui\animation">
+      <UniqueIdentifier>{f5c09452-060e-4c34-8276-0ac7d923a276}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\qt\raw\qtbase\src\corelib\.rcc">
+      <UniqueIdentifier>{2182c4a9-42d5-4aba-8a31-24ffaf36f357}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\qt\raw\qtbase\src\widgets\.rcc">
+      <UniqueIdentifier>{2fff0406-a479-465b-8d8f-68475c0b515a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\qt\raw\qtbase\src\gui\.rcc">
+      <UniqueIdentifier>{93949b4e-bb3c-4886-acd5-c03ce9253a71}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vsf\source\vsf.h">
@@ -4701,6 +4734,108 @@
     <ClInclude Include="..\..\vsf\source\component\3rd-party\zlib\raw\zutil.h">
       <Filter>vsf\component\3rd-party\zlib\raw</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\widgets\accessible\complexwidgets_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\widgets\accessible</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\widgets\accessible\itemviews_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\widgets\accessible</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\widgets\accessible\qaccessiblemenu_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\widgets\accessible</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\widgets\accessible\qaccessiblewidget.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\widgets\accessible</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\widgets\accessible\qaccessiblewidgetfactory_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\widgets\accessible</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\widgets\accessible\qaccessiblewidgets_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\widgets\accessible</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\widgets\accessible\rangecontrols_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\widgets\accessible</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\widgets\accessible\simplewidgets_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\widgets\accessible</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\accessible\qaccessible.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\accessible</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\accessible\qaccessiblebridge.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\accessible</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\accessible\qaccessiblebridgeutils_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\accessible</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\accessible\qaccessiblecache_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\accessible</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\accessible\qaccessibleobject.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\accessible</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\accessible\qaccessibleplugin.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\accessible</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\accessible\qplatformaccessibility.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\accessible</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\widgets\effects\qgraphicseffect.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\widgets\effects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\widgets\effects\qgraphicseffect_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\widgets\effects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\widgets\effects\qpixmapfilter_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\widgets\effects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\math3d\qgenericmatrix.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\math3d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\math3d\qmatrix4x4.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\math3d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\math3d\qquaternion.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\math3d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\math3d\qvector2d.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\math3d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\math3d\qvector3d.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\math3d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\math3d\qvector4d.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\math3d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\math3d\qvectornd.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\math3d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\platform\unix\qgenericunixeventdispatcher_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\platform\unix</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\platform\unix\qgenericunixservices_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\platform\unix</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\platform\unix\qgenericunixthemes_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\platform\unix</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\platform\unix\qunixeventdispatcher_qpa_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\platform\unix</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\plugin\qfactoryloader_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\plugin\qplugin.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\plugin\qplugin_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\plugin\qpluginloader.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\plugin\quuid.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\plugin</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\vsf\source\utilities\template\vsf_bitmap.c">
@@ -5594,9 +5729,6 @@
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qstringlist.cpp">
       <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qstringmatcher.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\text\qstringtokenizer.cpp">
       <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\text</Filter>
     </ClCompile>
@@ -5759,16 +5891,10 @@
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\tools\qversionnumber.cpp">
       <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\tools</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qcborarray.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\serialization</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qcborcommon.cpp">
       <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\serialization</Filter>
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qcbordiagnostic.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\serialization</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qcbormap.cpp">
       <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\serialization</Filter>
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\serialization\qcborstreamreader.cpp">
@@ -6593,12 +6719,6 @@
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\image\qimage_conversions.cpp">
       <Filter>application\3rd-party\qt\raw\qtbase\src\gui\image</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\image\qimage_mips_dspr2.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\image</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\image\qimage_neon.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\image</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\image\qimageiohandler.cpp">
       <Filter>application\3rd-party\qt\raw\qtbase\src\gui\image</Filter>
     </ClCompile>
@@ -6831,9 +6951,6 @@
       <Filter>application\3rd-party\qt\raw\qtbase\src\gui\painting</Filter>
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\painting\qtriangulator.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\painting</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\painting\webgradients.cpp">
       <Filter>application\3rd-party\qt\raw\qtbase\src\gui\painting</Filter>
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\7GB2EGQPHR\moc_qactiongroup.cpp">
@@ -7336,6 +7453,114 @@
     </ClCompile>
     <ClCompile Include="..\..\vsf\source\component\3rd-party\zlib\raw\zutil.c">
       <Filter>vsf\component\3rd-party\zlib\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\examples\widgets\mainwindows\application\debug\moc_mainwindow.cpp">
+      <Filter>application\3rd-party\qt\app\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\widgets\accessible\complexwidgets.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\widgets\accessible</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\widgets\accessible\itemviews.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\widgets\accessible</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\widgets\accessible\qaccessiblemenu.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\widgets\accessible</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\widgets\accessible\qaccessiblewidget.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\widgets\accessible</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\widgets\accessible\qaccessiblewidgetfactory.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\widgets\accessible</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\widgets\accessible\qaccessiblewidgets.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\widgets\accessible</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\widgets\accessible\rangecontrols.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\widgets\accessible</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\widgets\accessible\simplewidgets.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\widgets\accessible</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\accessible\qaccessible.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\accessible</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\accessible\qaccessiblebridge.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\accessible</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\accessible\qaccessiblebridgeutils.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\accessible</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\accessible\qaccessiblecache.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\accessible</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\accessible\qaccessibleobject.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\accessible</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\accessible\qaccessibleplugin.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\accessible</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\accessible\qplatformaccessibility.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\accessible</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\widgets\effects\qgraphicseffect.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\widgets\effects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\widgets\effects\qpixmapfilter.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\widgets\effects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\math3d\qgenericmatrix.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\math3d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\math3d\qmatrix4x4.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\math3d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\math3d\qquaternion.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\math3d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\math3d\qvectornd.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\math3d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\painting\qdrawhelper_avx2.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\painting</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\platform\unix\qgenericunixeventdispatcher.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\platform\unix</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\platform\unix\qgenericunixservices.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\platform\unix</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\platform\unix\qgenericunixthemes.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\platform\unix</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\platform\unix\qunixeventdispatcher.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\platform\unix</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\platform\unix\qunixnativeinterface.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\platform\unix</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\plugin\qfactoryloader.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\plugin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\plugin\qpluginloader.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\plugin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\plugin\quuid.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\plugin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\animation\qguivariantanimation.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\.rcc\qmimeprovider_database.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\.rcc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\widgets\.rcc\qrc_qmessagebox.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\widgets\.rcc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\widgets\.rcc\qrc_qstyle.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\widgets\.rcc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\.rcc\qrc_qpdf.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\.rcc</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
