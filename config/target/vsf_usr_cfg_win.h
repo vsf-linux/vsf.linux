@@ -101,6 +101,7 @@
 //#define VSF_ASSERT(...)
 #define VSF_HAL_USE_DEBUG_STREAM                        ENABLED
 #define VSF_SYSTIMER_FREQ                               (0ul)
+#define VSF_HAL_USE_RNG                                 ENABLED
 
 #define VSF_AUDIO_USE_WINSOUND                          ENABLED
 
