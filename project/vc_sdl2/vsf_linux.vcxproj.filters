@@ -967,6 +967,9 @@
     <Filter Include="vsf\hal\utilities\remap\usart">
       <UniqueIdentifier>{53235d63-8102-40eb-87f9-5e09ae3faba1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="vsf\hal\driver\x86\win\rng">
+      <UniqueIdentifier>{558aaffd-8f86-47f1-8b44-5bc38a24b200}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vsf\source\vsf.h">
@@ -3278,6 +3281,9 @@
     </ClInclude>
     <ClInclude Include="..\..\vsf\source\hal\utilities\remap\usart\vsf_remapped_usart.h">
       <Filter>vsf\hal\utilities\remap\usart</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\driver\x86\win\rng\rng.h">
+      <Filter>vsf\hal\driver\x86\win\rng</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -5680,6 +5686,9 @@
     </ClCompile>
     <ClCompile Include="..\..\vsf\source\hal\utilities\remap\usart\vsf_remapped_usart.c">
       <Filter>vsf\hal\utilities\remap\usart</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\hal\driver\x86\win\rng\rng.c">
+      <Filter>vsf\hal\driver\x86\win\rng</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
