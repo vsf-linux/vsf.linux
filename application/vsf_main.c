@@ -196,6 +196,10 @@ int vsf_linux_create_fhs(void)
     extern int audio_play_main(int argc, char *argv[]);
     busybox_bind(VSF_LINUX_CFG_BIN_PATH "/play_audio", audio_play_main);
 #endif
+#if APP_USE_QT_DEMO == ENABLED
+    extern int qt_main(int argc, char *argv[]);
+    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/qt_demo", qt_main);
+#endif
 
 #if APP_USE_LWS_DEMO == ENABLED
     mkdir("/etc", 0);
