@@ -4872,6 +4872,15 @@
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2\src\BundledPcre2_autogen\moc_predefs.h">
       <Filter>application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2\autogen</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\param.h">
+      <Filter>vsf\shell\sys\linux\include\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\statvfs.h">
+      <Filter>vsf\shell\sys\linux\include\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\sysmacros.h">
+      <Filter>vsf\shell\sys\linux\include\sys</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\vsf\source\utilities\template\vsf_bitmap.c">

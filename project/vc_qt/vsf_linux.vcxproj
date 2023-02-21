@@ -1271,6 +1271,7 @@
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\ipc.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\mman.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\mount.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\param.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\prctl.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\random.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\resource.h" />
@@ -1281,8 +1282,10 @@
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\signalfd.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\socket.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\stat.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\statvfs.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\syscall.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\syslog.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\sysmacros.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\time.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\times.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\types.h" />
