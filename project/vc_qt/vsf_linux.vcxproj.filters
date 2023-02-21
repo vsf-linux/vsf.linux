@@ -901,6 +901,54 @@
     <Filter Include="application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2\autogen">
       <UniqueIdentifier>{7e8635e5-8517-4d79-b59f-d73022d3e138}</UniqueIdentifier>
     </Filter>
+    <Filter Include="application\3rd-party\qt\raw\qtbase\src\plugins">
+      <UniqueIdentifier>{dac09c99-aec2-4ca0-8310-99efadfe339c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\qt\raw\qtbase\src\plugins\platforms">
+      <UniqueIdentifier>{8fe0defc-ea6c-4a84-811b-e5e01f6511ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\qt\raw\qtbase\src\plugins\platforms\linuxfb">
+      <UniqueIdentifier>{b7bcac14-9a13-4a61-98d1-43b4ef8cebeb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\qt\raw\qtbase\src\plugins\platforms\linuxfb\autogen">
+      <UniqueIdentifier>{d7585cea-9c73-43fa-8b23-889e615abe05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\qt\raw\qtbase\src\platformsupport">
+      <UniqueIdentifier>{d24fb28c-a8fe-44fa-954e-719798b7fd68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\qt\raw\qtbase\src\platformsupport\fbconvenience">
+      <UniqueIdentifier>{e5f06239-c492-49ef-8d86-e42e2505f43f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\qt\raw\qtbase\src\platformsupport\fbconvenience\autiogen">
+      <UniqueIdentifier>{a36c25d9-ae72-4163-b713-db15755a079b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\qt\raw\qtbase\src\platformsupport\input">
+      <UniqueIdentifier>{8d9627f1-6e5f-4b85-96c2-9c113522d13d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\qt\raw\qtbase\src\platformsupport\input\evdevkeyboard">
+      <UniqueIdentifier>{ada271d7-c1fe-429c-aa2d-63d2557784c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\qt\raw\qtbase\src\platformsupport\input\shared">
+      <UniqueIdentifier>{8ea2e172-0d5f-43ce-b804-45777940bf01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\qt\raw\qtbase\src\platformsupport\devicediscovery">
+      <UniqueIdentifier>{11d751f5-914b-4a7b-ada3-2596432c91a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\qt\raw\qtbase\src\platformsupport\devicediscovery\autogen">
+      <UniqueIdentifier>{8b890a88-0946-40e4-b0c0-c2c9a6686481}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\qt\raw\qtbase\src\platformsupport\input\evdevmouse">
+      <UniqueIdentifier>{4b9ec7cc-465a-4f1c-9e0c-b951443ffc16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\qt\raw\qtbase\src\platformsupport\input\autogen">
+      <UniqueIdentifier>{78b7b472-fe76-41f7-9fc4-33e99a39291b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\qt\raw\qtbase\src\platformsupport\input\evdevtouch">
+      <UniqueIdentifier>{99e243c2-9376-42d8-8b6a-c6774673c129}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\qt\raw\qtbase\src\gui\text\freetype">
+      <UniqueIdentifier>{bdbf9edb-183c-46c7-9fd4-c4b9c7e5e466}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vsf\source\vsf.h">
@@ -4881,6 +4929,78 @@
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\sysmacros.h">
       <Filter>vsf\shell\sys\linux\include\sys</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\plugins\platforms\linuxfb\qlinuxfbintegration.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\plugins\platforms\linuxfb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\plugins\platforms\linuxfb\qlinuxfbscreen.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\plugins\platforms\linuxfb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\plugins\platforms\linuxfb\QLinuxFbIntegrationPlugin_autogen\moc_predefs.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\plugins\platforms\linuxfb\autogen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\linux\kd.h">
+      <Filter>vsf\shell\sys\linux\include\linux</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\platformsupport\fbconvenience\qfbbackingstore_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\platformsupport\fbconvenience</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\platformsupport\fbconvenience\qfbcursor_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\platformsupport\fbconvenience</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\platformsupport\fbconvenience\qfbscreen_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\platformsupport\fbconvenience</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\platformsupport\fbconvenience\qfbvthandler_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\platformsupport\fbconvenience</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\platformsupport\fbconvenience\qfbwindow_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\platformsupport\fbconvenience</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\platformsupport\input\evdevkeyboard\qevdevkeyboard_defaultmap_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\platformsupport\input\evdevkeyboard</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\platformsupport\input\evdevkeyboard\qevdevkeyboardhandler_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\platformsupport\input\evdevkeyboard</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\platformsupport\input\evdevkeyboard\qevdevkeyboardmanager_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\platformsupport\input\evdevkeyboard</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\platformsupport\input\shared\devicehandlerlist_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\platformsupport\input\shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\platformsupport\input\shared\qevdevutil_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\platformsupport\input\shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\platformsupport\input\shared\qoutputmapping_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\platformsupport\input\shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\platformsupport\devicediscovery\qdevicediscovery_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\platformsupport\devicediscovery</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\platformsupport\devicediscovery\qdevicediscovery_static_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\platformsupport\devicediscovery</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\platformsupport\input\evdevmouse\qevdevmousehandler_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\platformsupport\input\evdevmouse</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\platformsupport\input\evdevmouse\qevdevmousemanager_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\platformsupport\input\evdevmouse</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\platformsupport\input\evdevtouch\qevdevtouchfilter_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\platformsupport\input\evdevtouch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\platformsupport\input\evdevtouch\qevdevtouchhandler_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\platformsupport\input\evdevtouch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\platformsupport\input\evdevtouch\qevdevtouchmanager_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\platformsupport\input\evdevtouch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\text\freetype\qfontengine_ft_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\text\freetype</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\text\freetype\qfreetypefontdatabase_p.h">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\text\freetype</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\vsf\source\utilities\template\vsf_bitmap.c">
@@ -6998,177 +7118,6 @@
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\painting\qtriangulator.cpp">
       <Filter>application\3rd-party\qt\raw\qtbase\src\gui\painting</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\7GB2EGQPHR\moc_qactiongroup.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\7GB2EGQPHR\moc_qclipboard.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\7GB2EGQPHR\moc_qdnd_p.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\7GB2EGQPHR\moc_qdrag.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\7GB2EGQPHR\moc_qevent.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\7GB2EGQPHR\moc_qeventpoint.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\7GB2EGQPHR\moc_qgenericplugin.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\7GB2EGQPHR\moc_qhighdpiscaling_p.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\7GB2EGQPHR\moc_qinputdevice.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\7GB2EGQPHR\moc_qinputdevicemanager_p.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\7GB2EGQPHR\moc_qinternalmimedata_p.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\7GB2EGQPHR\moc_qkeymapper_p.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\7GB2EGQPHR\moc_qkeysequence.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\7GB2EGQPHR\moc_qoffscreensurface.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\7GB2EGQPHR\moc_qpaintdevicewindow.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\7GB2EGQPHR\moc_qpalette.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\7GB2EGQPHR\moc_qplatformdialoghelper.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\7GB2EGQPHR\moc_qplatformgraphicsbuffer.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\7GB2EGQPHR\moc_qplatforminputcontext.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\7GB2EGQPHR\moc_qplatforminputcontextplugin_p.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\7GB2EGQPHR\moc_qplatformintegrationplugin.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\7GB2EGQPHR\moc_qplatformmenu.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\7GB2EGQPHR\moc_qplatformnativeinterface.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\7GB2EGQPHR\moc_qplatformsharedgraphicscache.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\7GB2EGQPHR\moc_qplatformthemeplugin.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\7GB2EGQPHR\moc_qpointingdevice.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\7GB2EGQPHR\moc_qrasterwindow.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\7GB2EGQPHR\moc_qscreen.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\7GB2EGQPHR\moc_qsessionmanager.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\7GB2EGQPHR\moc_qshapedpixmapdndwindow_p.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\7GB2EGQPHR\moc_qstylehints.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\7GB2EGQPHR\moc_qsurface.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\7GB2EGQPHR\moc_qsurfaceformat.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\DQLST3DAWY\moc_qbrush.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\DQLST3DAWY\moc_qcolorspace.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\DQLST3DAWY\moc_qpainter.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\DQLST3DAWY\moc_qpdfwriter.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\DQLST3DAWY\moc_qplatformbackingstore.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\F2RM4LQ465\moc_qaccessible.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\F2RM4LQ465\moc_qaccessiblebridge.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\F2RM4LQ465\moc_qaccessiblecache_p.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\F2RM4LQ465\moc_qaccessibleplugin.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\GRLPFIQMKL\moc_qfont.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\GRLPFIQMKL\moc_qfontdatabase.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\GRLPFIQMKL\moc_qinputcontrol_p.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\GRLPFIQMKL\moc_qtextdocument.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\GRLPFIQMKL\moc_qtextformat.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\GRLPFIQMKL\moc_qtextimagehandler_p.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\GRLPFIQMKL\moc_qtextlist.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\GRLPFIQMKL\moc_qtextobject.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\GRLPFIQMKL\moc_qtexttable.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\KH43KSYMFX\moc_qlayoutpolicy_p.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\KH43KSYMFX\moc_qvalidator.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\LYI5KOYLNB\moc_qiconengineplugin.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\LYI5KOYLNB\moc_qimage.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\LYI5KOYLNB\moc_qimageiohandler.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\SRUCZLW52P\moc_qunixeventdispatcher_qpa_p.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\autogen</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\util\qabstractlayoutstyleinfo.cpp">
       <Filter>application\3rd-party\qt\raw\qtbase\src\gui\util</Filter>
     </ClCompile>
@@ -7207,15 +7156,6 @@
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\util\qvalidator.cpp">
       <Filter>application\3rd-party\qt\raw\qtbase\src\gui\util</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\widgets\Widgets_autogen\7GB2EGQPHR\moc_qwidget_p.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\widgets\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\widgets\Widgets_autogen\7GB2EGQPHR\moc_qwidgetrepaintmanager_p.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\widgets\autogen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\widgets\Widgets_autogen\NHPNRXPXNK\moc_qpixmapstyle_p.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\widgets\autogen</Filter>
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\widgets\styles\qcommonstyle.cpp">
       <Filter>application\3rd-party\qt\raw\qtbase\src\widgets\style</Filter>
@@ -7607,9 +7547,6 @@
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\.rcc\qrc_qpdf.cpp">
       <Filter>application\3rd-party\qt\raw\qtbase\src\gui\.rcc</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\Core_autogen\43AIQRLLGG\moc_qnamespace.cpp">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\autogen</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\3rdparty\md4c\md4c.c">
       <Filter>application\3rd-party\qt\raw\qtbase\src\3rdparty\md4c</Filter>
     </ClCompile>
@@ -7693,6 +7630,84 @@
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2\src\BundledPcre2_autogen\mocs_compilation.cpp">
       <Filter>application\3rd-party\qt\raw\qtbase\src\3rdparty\pcre2\autogen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\plugins\platforms\linuxfb\main.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\plugins\platforms\linuxfb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\plugins\platforms\linuxfb\qlinuxfbintegration.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\plugins\platforms\linuxfb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\plugins\platforms\linuxfb\qlinuxfbscreen.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\plugins\platforms\linuxfb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\plugins\platforms\linuxfb\QLinuxFbIntegrationPlugin_autogen\mocs_compilation.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\plugins\platforms\linuxfb\autogen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\Gui_autogen\mocs_compilation.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\autogen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\platformsupport\fbconvenience\qfbbackingstore.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\platformsupport\fbconvenience</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\platformsupport\fbconvenience\qfbcursor.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\platformsupport\fbconvenience</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\platformsupport\fbconvenience\qfbscreen.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\platformsupport\fbconvenience</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\platformsupport\fbconvenience\qfbvthandler.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\platformsupport\fbconvenience</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\platformsupport\fbconvenience\qfbwindow.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\platformsupport\fbconvenience</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\platformsupport\fbconvenience\FbSupportPrivate_autogen\mocs_compilation.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\platformsupport\fbconvenience\autiogen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\platformsupport\input\evdevkeyboard\qevdevkeyboardhandler.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\platformsupport\input\evdevkeyboard</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\platformsupport\input\evdevkeyboard\qevdevkeyboardmanager.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\platformsupport\input\evdevkeyboard</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\widgets\Widgets_autogen\mocs_compilation.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\widgets\autogen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\Core_autogen\mocs_compilation.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\autogen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\platformsupport\input\shared\qevdevutil.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\platformsupport\input\shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\platformsupport\input\shared\qoutputmapping.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\platformsupport\input\shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\platformsupport\devicediscovery\qdevicediscovery_static.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\platformsupport\devicediscovery</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\platformsupport\devicediscovery\DeviceDiscoverySupportPrivate_autogen\mocs_compilation.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\platformsupport\devicediscovery\autogen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\platformsupport\input\evdevmouse\qevdevmousehandler.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\platformsupport\input\evdevmouse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\platformsupport\input\evdevmouse\qevdevmousemanager.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\platformsupport\input\evdevmouse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\platformsupport\input\InputSupportPrivate_autogen\mocs_compilation.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\platformsupport\input\autogen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\platformsupport\input\evdevtouch\qevdevtouchhandler.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\platformsupport\input\evdevtouch</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\platformsupport\input\evdevtouch\qevdevtouchmanager.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\platformsupport\input\evdevtouch</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\text\freetype\qfontengine_ft.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\text\freetype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\qt\raw\qtbase\src\gui\text\freetype\qfreetypefontdatabase.cpp">
+      <Filter>application\3rd-party\qt\raw\qtbase\src\gui\text\freetype</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
