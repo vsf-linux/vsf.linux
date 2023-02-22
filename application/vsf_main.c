@@ -65,6 +65,13 @@ int vsf_linux_create_fhs(void)
     vsf_linux_libusb_startup();
 #   endif
 #endif
+    if (NULL == usrapp_ui_common.disp) {
+        printf("waiting display...");
+        while (NULL == usrapp_ui_common.disp) {
+            sleep(1);
+        }
+    }
+    vsf_linux_fs_bind_disp("/dev/fb0", usrapp_ui_common.disp);
 
     // 2. fs
 #if APP_USE_SCSI_DEMO == ENABLED
@@ -125,12 +132,6 @@ int vsf_linux_create_fhs(void)
 #endif
 
 #if VSF_USE_SDL2 == ENABLED
-    if (NULL == usrapp_ui_common.disp) {
-        printf("waiting display...");
-        while (NULL == usrapp_ui_common.disp) {
-            sleep(1);
-        }
-    }
     *(vk_disp_color_type_t *)&usrapp_ui_common.disp->param.color = VSF_SDL2_CFG_COLOR;
     vsf_sdl2_cfg_t cfg = {
         .disp_dev = usrapp_ui_common.disp,
