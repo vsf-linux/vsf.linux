@@ -65,6 +65,7 @@ int vsf_linux_create_fhs(void)
     vsf_linux_libusb_startup();
 #   endif
 #endif
+#if VSF_USE_UI == ENABLED
     if (NULL == usrapp_ui_common.disp) {
         printf("waiting display...");
         while (NULL == usrapp_ui_common.disp) {
@@ -72,6 +73,23 @@ int vsf_linux_create_fhs(void)
         }
     }
     vsf_linux_fs_bind_disp("/dev/fb0", usrapp_ui_common.disp);
+#endif
+#if VSF_USE_INPUT == ENABLED
+    static vk_input_notifier_t __event_notifier_keyboard = {
+        .mask = 1 << VSF_INPUT_TYPE_KEYBOARD,
+    };
+    vsf_linux_fs_bind_input("/dev/event/input0", &__event_notifier_keyboard);
+
+    static vk_input_notifier_t __event_notifier_mouse = {
+        .mask = 1 << VSF_INPUT_TYPE_MOUSE,
+    };
+    vsf_linux_fs_bind_input("/dev/event/input1", &__event_notifier_mouse);
+
+    static vk_input_notifier_t __event_notifier_touchscreen = {
+        .mask = 1 << VSF_INPUT_TYPE_TOUCHSCREEN,
+    };
+    vsf_linux_fs_bind_input("/dev/event/input2", &__event_notifier_touchscreen);
+#endif
 
     // 2. fs
 #if APP_USE_SCSI_DEMO == ENABLED
@@ -199,6 +217,10 @@ int vsf_linux_create_fhs(void)
 #endif
 #if APP_USE_QT_DEMO == ENABLED
     extern int qt_main(int argc, char *argv[]);
+    putenv("QT_QPA_PLATFORM=linuxfb");
+    putenv("QT_QPA_EVDEV_KEYBOARD_PARAMETERS=/dev/event/input0");
+    putenv("QT_QPA_EVDEV_MOUSE_PARAMETERS=/dev/event/input1");
+    putenv("QT_QPA_EVDEV_TOUCHSCREEN_PARAMETERS=/dev/event/input2");
     busybox_bind(VSF_LINUX_CFG_BIN_PATH "/qt_demo", qt_main);
 #endif
 
