@@ -221,6 +221,7 @@ int vsf_linux_create_fhs(void)
     putenv("QT_QPA_EVDEV_KEYBOARD_PARAMETERS=/dev/event/input0");
     putenv("QT_QPA_EVDEV_MOUSE_PARAMETERS=/dev/event/input1");
     putenv("QT_QPA_EVDEV_TOUCHSCREEN_PARAMETERS=/dev/event/input2");
+    putenv("QT_QPA_FONTDIR=/mnt/hostfs/qt/lib/fonts");
     busybox_bind(VSF_LINUX_CFG_BIN_PATH "/qt_demo", qt_main);
 #endif
 

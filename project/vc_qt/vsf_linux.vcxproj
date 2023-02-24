@@ -185,7 +185,6 @@
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\kernel\qobjectdefs_impl.h" />
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\kernel\qobject_impl.h" />
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\kernel\qobject_p.h" />
-    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\kernel\qobject_p_p.h" />
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\kernel\qpointer.h" />
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\kernel\qpoll_p.h" />
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\kernel\qproperty.h" />
@@ -202,7 +201,6 @@
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\kernel\qtestsupport_core.h" />
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\kernel\qtimer.h" />
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\kernel\qtimerinfo_unix_p.h" />
-    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\kernel\qtimer_p.h" />
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\kernel\qtmetamacros.h" />
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\kernel\qtranslator.h" />
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\kernel\qtranslator_p.h" />

@@ -2391,9 +2391,6 @@
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\kernel\qobject_p.h">
       <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\kernel</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\kernel\qobject_p_p.h">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\kernel</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\kernel\qobjectcleanuphandler.h">
       <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\kernel</Filter>
     </ClInclude>
@@ -2446,9 +2443,6 @@
       <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\kernel</Filter>
     </ClInclude>
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\kernel\qtimer.h">
-      <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\kernel</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\kernel\qtimer_p.h">
       <Filter>application\3rd-party\qt\raw\qtbase\src\corelib\kernel</Filter>
     </ClInclude>
     <ClInclude Include="..\..\application\3rd-party\qt\raw\qtbase\src\corelib\kernel\qtimerinfo_unix_p.h">
