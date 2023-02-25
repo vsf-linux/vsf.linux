@@ -970,6 +970,9 @@
     <Filter Include="vsf\hal\driver\x86\win\rng">
       <UniqueIdentifier>{558aaffd-8f86-47f1-8b44-5bc38a24b200}</UniqueIdentifier>
     </Filter>
+    <Filter Include="application\3rd-party\sdl2_vnc">
+      <UniqueIdentifier>{5d765e73-2d2f-47dc-9328-fd86e5594c07}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vsf\source\vsf.h">
@@ -3284,6 +3287,9 @@
     </ClInclude>
     <ClInclude Include="..\..\vsf\source\hal\driver\x86\win\rng\rng.h">
       <Filter>vsf\hal\driver\x86\win\rng</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\sdl2_vnc\SDL2_vnc.h">
+      <Filter>application\3rd-party\sdl2_vnc</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -5689,6 +5695,12 @@
     </ClCompile>
     <ClCompile Include="..\..\vsf\source\hal\driver\x86\win\rng\rng.c">
       <Filter>vsf\hal\driver\x86\win\rng</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdl2_vnc\SDL2_vnc.c">
+      <Filter>application\3rd-party\sdl2_vnc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\sdl2_vnc\vncc.c">
+      <Filter>application\3rd-party\sdl2_vnc</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

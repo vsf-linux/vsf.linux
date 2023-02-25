@@ -202,6 +202,10 @@ int vsf_linux_create_fhs(void)
     extern int bochs_main(int argc, char **argv);
     busybox_bind(VSF_LINUX_CFG_BIN_PATH "/bochs", bochs_main);
 #endif
+#if APP_USE_SDLVNC_DEMO == ENABLED
+    extern int sdlvnc_main(int argc, char **argv);
+    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/sdlvnc", sdlvnc_main);
+#endif
 #endif      // VSF_USE_SDL2
 
 #if VSF_USE_QUICKJS == ENABLED

@@ -58,3 +58,6 @@
 [submodule "application/3rd-party/libmodbus/raw"]
 	path = application/3rd-party/libmodbus/raw
 	url = ../libmodbus
+[submodule "application/3rd-party/sdl/sdl2_vnc"]
+	path = application/3rd-party/sdl/sdl2_vnc
+	url = ../sdl2_vnc
