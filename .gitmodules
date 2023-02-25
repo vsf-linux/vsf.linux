@@ -61,3 +61,6 @@
 [submodule "application/3rd-party/sdl/sdl2_vnc"]
 	path = application/3rd-party/sdl/sdl2_vnc
 	url = ../sdl2_vnc
+[submodule "application/3rd-party/ffmpeg/raw"]
+	path = application/3rd-party/ffmpeg/raw
+	url = ../FFmpeg
