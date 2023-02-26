@@ -530,6 +530,7 @@
     <ClInclude Include="..\..\application\3rd-party\ffmpeg\raw\libavcodec\xwd.h" />
     <ClInclude Include="..\..\application\3rd-party\ffmpeg\raw\libavcodec\zlib_wrapper.h" />
     <ClInclude Include="..\..\application\3rd-party\ffmpeg\raw\libavdevice\avdevice.h" />
+    <ClInclude Include="..\..\application\3rd-party\ffmpeg\raw\libavdevice\fbdev_common.h" />
     <ClInclude Include="..\..\application\3rd-party\ffmpeg\raw\libavdevice\version.h" />
     <ClInclude Include="..\..\application\3rd-party\ffmpeg\raw\libavfilter\af_afir.h" />
     <ClInclude Include="..\..\application\3rd-party\ffmpeg\raw\libavfilter\af_afirdsp.h" />
@@ -2600,6 +2601,9 @@
     <ClCompile Include="..\..\application\3rd-party\ffmpeg\raw\libavcodec\zmbvenc.c" />
     <ClCompile Include="..\..\application\3rd-party\ffmpeg\raw\libavdevice\alldevices.c" />
     <ClCompile Include="..\..\application\3rd-party\ffmpeg\raw\libavdevice\avdevice.c" />
+    <ClCompile Include="..\..\application\3rd-party\ffmpeg\raw\libavdevice\fbdev_common.c" />
+    <ClCompile Include="..\..\application\3rd-party\ffmpeg\raw\libavdevice\fbdev_dec.c" />
+    <ClCompile Include="..\..\application\3rd-party\ffmpeg\raw\libavdevice\fbdev_enc.c" />
     <ClCompile Include="..\..\application\3rd-party\ffmpeg\raw\libavdevice\lavfi.c" />
     <ClCompile Include="..\..\application\3rd-party\ffmpeg\raw\libavdevice\utils.c" />
     <ClCompile Include="..\..\application\3rd-party\ffmpeg\raw\libavdevice\version.c" />

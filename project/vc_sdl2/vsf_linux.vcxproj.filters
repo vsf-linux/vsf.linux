@@ -5910,6 +5910,9 @@
     <ClInclude Include="..\..\application\3rd-party\ffmpeg\raw\libavdevice\version.h">
       <Filter>application\3rd-party\ffmpeg\raw\libavdevice</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\ffmpeg\raw\libavdevice\fbdev_common.h">
+      <Filter>application\3rd-party\ffmpeg\raw\libavdevice</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\vsf\source\utilities\template\vsf_bitmap.c">
@@ -14529,6 +14532,15 @@
       <Filter>application\3rd-party\ffmpeg\raw\libavdevice</Filter>
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\ffmpeg\raw\libavdevice\lavfi.c">
+      <Filter>application\3rd-party\ffmpeg\raw\libavdevice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ffmpeg\raw\libavdevice\fbdev_common.c">
+      <Filter>application\3rd-party\ffmpeg\raw\libavdevice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ffmpeg\raw\libavdevice\fbdev_dec.c">
+      <Filter>application\3rd-party\ffmpeg\raw\libavdevice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ffmpeg\raw\libavdevice\fbdev_enc.c">
       <Filter>application\3rd-party\ffmpeg\raw\libavdevice</Filter>
     </ClCompile>
   </ItemGroup>
