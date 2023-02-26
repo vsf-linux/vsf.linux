@@ -1015,6 +1015,12 @@
     <Filter Include="application\3rd-party\ffmpeg\raw\libavfilter\dnn">
       <UniqueIdentifier>{54114737-97ae-44d8-b326-53261e90ec21}</UniqueIdentifier>
     </Filter>
+    <Filter Include="application\3rd-party\ffmpeg\raw\fftools">
+      <UniqueIdentifier>{1821f916-66c7-447c-866d-520a64a0eae2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\ffmpeg\raw\libavdevice">
+      <UniqueIdentifier>{76a64e42-f2ac-401f-bf8d-29bdbbd0d3cb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vsf\source\vsf.h">
@@ -5891,6 +5897,18 @@
     </ClInclude>
     <ClInclude Include="..\..\application\3rd-party\ffmpeg\raw\libavfilter\dnn_filter_common.h">
       <Filter>application\3rd-party\ffmpeg\raw\libavfilter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\ffmpeg\raw\fftools\cmdutils.h">
+      <Filter>application\3rd-party\ffmpeg\raw\fftools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\ffmpeg\raw\fftools\opt_common.h">
+      <Filter>application\3rd-party\ffmpeg\raw\fftools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\ffmpeg\raw\libavdevice\avdevice.h">
+      <Filter>application\3rd-party\ffmpeg\raw\libavdevice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\ffmpeg\raw\libavdevice\version.h">
+      <Filter>application\3rd-party\ffmpeg\raw\libavdevice</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -14488,6 +14506,30 @@
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\ffmpeg\raw\libavfilter\dnn_filter_common.c">
       <Filter>application\3rd-party\ffmpeg\raw\libavfilter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ffmpeg\raw\fftools\ffplay.c">
+      <Filter>application\3rd-party\ffmpeg\raw\fftools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ffmpeg\raw\fftools\cmdutils.c">
+      <Filter>application\3rd-party\ffmpeg\raw\fftools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ffmpeg\raw\fftools\opt_common.c">
+      <Filter>application\3rd-party\ffmpeg\raw\fftools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ffmpeg\raw\libavdevice\alldevices.c">
+      <Filter>application\3rd-party\ffmpeg\raw\libavdevice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ffmpeg\raw\libavdevice\avdevice.c">
+      <Filter>application\3rd-party\ffmpeg\raw\libavdevice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ffmpeg\raw\libavdevice\version.c">
+      <Filter>application\3rd-party\ffmpeg\raw\libavdevice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ffmpeg\raw\libavdevice\utils.c">
+      <Filter>application\3rd-party\ffmpeg\raw\libavdevice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ffmpeg\raw\libavdevice\lavfi.c">
+      <Filter>application\3rd-party\ffmpeg\raw\libavdevice</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

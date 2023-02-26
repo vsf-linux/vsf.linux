@@ -19,6 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\application\3rd-party\ffmpeg\raw\fftools\cmdutils.h" />
+    <ClInclude Include="..\..\application\3rd-party\ffmpeg\raw\fftools\opt_common.h" />
     <ClInclude Include="..\..\application\3rd-party\ffmpeg\raw\libavcodec\a64colors.h" />
     <ClInclude Include="..\..\application\3rd-party\ffmpeg\raw\libavcodec\a64tables.h" />
     <ClInclude Include="..\..\application\3rd-party\ffmpeg\raw\libavcodec\aac.h" />
@@ -527,6 +529,8 @@
     <ClInclude Include="..\..\application\3rd-party\ffmpeg\raw\libavcodec\xvmc.h" />
     <ClInclude Include="..\..\application\3rd-party\ffmpeg\raw\libavcodec\xwd.h" />
     <ClInclude Include="..\..\application\3rd-party\ffmpeg\raw\libavcodec\zlib_wrapper.h" />
+    <ClInclude Include="..\..\application\3rd-party\ffmpeg\raw\libavdevice\avdevice.h" />
+    <ClInclude Include="..\..\application\3rd-party\ffmpeg\raw\libavdevice\version.h" />
     <ClInclude Include="..\..\application\3rd-party\ffmpeg\raw\libavfilter\af_afir.h" />
     <ClInclude Include="..\..\application\3rd-party\ffmpeg\raw\libavfilter\af_afirdsp.h" />
     <ClInclude Include="..\..\application\3rd-party\ffmpeg\raw\libavfilter\af_anlmdndsp.h" />
@@ -1646,6 +1650,14 @@
     <ClInclude Include="..\..\vsf\source\vsf_cfg.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\application\3rd-party\ffmpeg\raw\fftools\cmdutils.c" />
+    <ClCompile Include="..\..\application\3rd-party\ffmpeg\raw\fftools\ffplay.c">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">main=ffplay_main;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">main=ffplay_main;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">main=ffplay_main;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">main=ffplay_main;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\ffmpeg\raw\fftools\opt_common.c" />
     <ClCompile Include="..\..\application\3rd-party\ffmpeg\raw\libavcodec\012v.c" />
     <ClCompile Include="..\..\application\3rd-party\ffmpeg\raw\libavcodec\4xm.c" />
     <ClCompile Include="..\..\application\3rd-party\ffmpeg\raw\libavcodec\8bps.c" />
@@ -2586,6 +2598,11 @@
     <ClCompile Include="..\..\application\3rd-party\ffmpeg\raw\libavcodec\zlib_wrapper.c" />
     <ClCompile Include="..\..\application\3rd-party\ffmpeg\raw\libavcodec\zmbv.c" />
     <ClCompile Include="..\..\application\3rd-party\ffmpeg\raw\libavcodec\zmbvenc.c" />
+    <ClCompile Include="..\..\application\3rd-party\ffmpeg\raw\libavdevice\alldevices.c" />
+    <ClCompile Include="..\..\application\3rd-party\ffmpeg\raw\libavdevice\avdevice.c" />
+    <ClCompile Include="..\..\application\3rd-party\ffmpeg\raw\libavdevice\lavfi.c" />
+    <ClCompile Include="..\..\application\3rd-party\ffmpeg\raw\libavdevice\utils.c" />
+    <ClCompile Include="..\..\application\3rd-party\ffmpeg\raw\libavdevice\version.c" />
     <ClCompile Include="..\..\application\3rd-party\ffmpeg\raw\libavfilter\aeval.c" />
     <ClCompile Include="..\..\application\3rd-party\ffmpeg\raw\libavfilter\af_acontrast.c" />
     <ClCompile Include="..\..\application\3rd-party\ffmpeg\raw\libavfilter\af_acopy.c" />
