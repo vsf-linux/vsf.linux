@@ -4792,7 +4792,7 @@
       <PrecompiledHeader>
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <Optimization>Full</Optimization>
+      <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>__VSF__;__CPU_X86__;__WIN__;__OOC_CPP__;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;VSF_USE_SDL2=ENABLED;SIGWINCH=28;VSF_APP_ENTRY=SDL_main;VSF_SDL2_CFG_COLOR=VSF_DISP_COLOR_RGB565;MUSIC_OGG=MUSIC_OGG;MUSIC_WAV=MUSIC_WAV;FT2_BUILD_LIBRARY;APP_USE_SDLPAL_DEMO=ENABLED;APP_USE_DUNGEONRUSH_DEMO=ENABLED;SOFTWARE_ACC;APP_USE_GNUBOY_DEMO=ENABLED;IS_LITTLE_ENDIAN;APP_USE_NOFRENDO_DEMO=ENABLED;NOFRENDO_DEBUG;APP_USE_MGBA_DEMO=ENABLED;_7ZIP_ST;APP_USE_SDLVNC_DEMO=ENABLED;APP_USE_FFMPEG_DEMO=ENABLED;HAVE_AV_CONFIG_H=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>

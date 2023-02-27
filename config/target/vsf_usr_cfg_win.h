@@ -36,6 +36,9 @@
 #define VSF_ARCH_LIMIT_NO_SET_STACK
 #define VSF_OS_CFG_ADD_EVTQ_TO_IDLE                     ENABLED
 #define __VSF_X86_WIN_SINGLE_PRIORITY
+// disable arch_heap for better debug experience
+// enable arch_heap for better performance
+#define VSF_ARCH_PROVIDE_HEAP                           DISABLED
 
 // cpu usage is not supported in windows/linux/macos
 #define VSF_KERNEL_CFG_CPU_USAGE                        DISABLED
