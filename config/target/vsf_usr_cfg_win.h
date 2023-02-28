@@ -38,6 +38,9 @@
 #define __VSF_X86_WIN_SINGLE_PRIORITY
 // disable arch_heap for better debug experience
 // enable arch_heap for better performance
+// IMPORTANT: for cpp applications, if there is static instance,
+//  VSF_ARCH_PROVIDE_HEAP MUST be enabled, because arch_heap is available before
+//  vsf system started.
 #define VSF_ARCH_PROVIDE_HEAP                           DISABLED
 
 // cpu usage is not supported in windows/linux/macos
