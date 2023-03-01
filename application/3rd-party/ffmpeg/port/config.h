@@ -4,7 +4,8 @@
 
 #ifdef __VSF__
 #    undef _WIN32
-#    undef _WIN64
+// some c libraries in ucrt need _WIN64 to detect x86/x64
+//#    undef _WIN64
 #    define __linux__
 #endif
 

@@ -41,7 +41,7 @@
 // IMPORTANT: for cpp applications, if there is static instance,
 //  VSF_ARCH_PROVIDE_HEAP MUST be enabled, because arch_heap is available before
 //  vsf system started.
-#define VSF_ARCH_PROVIDE_HEAP                           DISABLED
+#define VSF_ARCH_PROVIDE_HEAP                           ENABLED
 
 // cpu usage is not supported in windows/linux/macos
 #define VSF_KERNEL_CFG_CPU_USAGE                        DISABLED
