@@ -64,3 +64,6 @@
 [submodule "application/3rd-party/ffmpeg/raw"]
 	path = application/3rd-party/ffmpeg/raw
 	url = ../FFmpeg
+[submodule "application/3rd-party/libtuv/raw"]
+	path = application/3rd-party/libtuv/raw
+	url = ../libtuv
