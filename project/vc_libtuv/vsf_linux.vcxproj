@@ -293,6 +293,8 @@
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\app\ntp\vsf_linux_ntp.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\app\telnetd\vsf_linux_telnetd.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\arpa\inet.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\asm\ioctls.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\asm\unistd.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\dirent.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\err.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\errno.h" />
@@ -378,21 +380,30 @@
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\wchar.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\syslog.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\epoll.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\event.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\eventfd.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\file.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\ioctl.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\ipc.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\mman.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\mount.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\param.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\prctl.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\random.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\resource.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\select.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\sem.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\sendfile.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\shm.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\signalfd.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\socket.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\stat.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\statvfs.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\syscall.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\sysctl.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\sysinfo.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\syslog.h" />
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\sysmacros.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\time.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\times.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\types.h" />
@@ -469,16 +480,13 @@
     <ClCompile Include="..\..\application\3rd-party\libtuv\raw\src\unix\fs.c" />
     <ClCompile Include="..\..\application\3rd-party\libtuv\raw\src\unix\getaddrinfo.c" />
     <ClCompile Include="..\..\application\3rd-party\libtuv\raw\src\unix\getnameinfo.c" />
-    <ClCompile Include="..\..\application\3rd-party\libtuv\raw\src\unix\kqueue.c" />
     <ClCompile Include="..\..\application\3rd-party\libtuv\raw\src\unix\linux-core.c" />
-    <ClCompile Include="..\..\application\3rd-party\libtuv\raw\src\unix\linux-inotify.c" />
     <ClCompile Include="..\..\application\3rd-party\libtuv\raw\src\unix\linux-syscalls.c" />
     <ClCompile Include="..\..\application\3rd-party\libtuv\raw\src\unix\loop-watcher.c" />
     <ClCompile Include="..\..\application\3rd-party\libtuv\raw\src\unix\loop.c" />
     <ClCompile Include="..\..\application\3rd-party\libtuv\raw\src\unix\pipe.c" />
     <ClCompile Include="..\..\application\3rd-party\libtuv\raw\src\unix\poll.c" />
     <ClCompile Include="..\..\application\3rd-party\libtuv\raw\src\unix\process.c" />
-    <ClCompile Include="..\..\application\3rd-party\libtuv\raw\src\unix\proctitle.c" />
     <ClCompile Include="..\..\application\3rd-party\libtuv\raw\src\unix\pthread-barrier.c" />
     <ClCompile Include="..\..\application\3rd-party\libtuv\raw\src\unix\pthread-fixes.c" />
     <ClCompile Include="..\..\application\3rd-party\libtuv\raw\src\unix\signal.c" />
@@ -486,7 +494,6 @@
     <ClCompile Include="..\..\application\3rd-party\libtuv\raw\src\unix\tcp.c" />
     <ClCompile Include="..\..\application\3rd-party\libtuv\raw\src\unix\thread.c" />
     <ClCompile Include="..\..\application\3rd-party\libtuv\raw\src\unix\timer.c" />
-    <ClCompile Include="..\..\application\3rd-party\libtuv\raw\src\unix\tty.c" />
     <ClCompile Include="..\..\application\3rd-party\libtuv\raw\src\unix\udp.c" />
     <ClCompile Include="..\..\application\3rd-party\libtuv\raw\src\uv-common.c" />
     <ClCompile Include="..\..\application\3rd-party\libtuv\raw\src\version.c" />
@@ -834,7 +841,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>__VSF__;__CPU_X86__;__WIN__;__OOC_CPP__;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>__VSF__;__CPU_X86__;__WIN__;__OOC_CPP__;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;TUV_FEATURE_PIPE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\application\3rd-party\libtuv\port;$(ProjectDir)..\..\application\3rd-party\libtuv\raw\include;$(ProjectDir)..\..\application\3rd-party\libtuv\raw\src;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-fms-extensions %(AdditionalOptions)</AdditionalOptions>
@@ -862,7 +869,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>__VSF__;__CPU_X64__;__WIN__;__OOC_CPP__;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>__VSF__;__CPU_X64__;__WIN__;__OOC_CPP__;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;TUV_FEATURE_PIPE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\application\3rd-party\libtuv\port;$(ProjectDir)..\..\application\3rd-party\libtuv\raw\include;$(ProjectDir)..\..\application\3rd-party\libtuv\raw\src;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-fms-extensions %(AdditionalOptions)</AdditionalOptions>
@@ -892,7 +899,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>__VSF__;__CPU_X86__;__WIN__;__OOC_RELEASE__;__OOC_CPP__;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>__VSF__;__CPU_X86__;__WIN__;__OOC_RELEASE__;__OOC_CPP__;NDEBUG;_CONSOLE;TUV_FEATURE_PIPE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\application\3rd-party\libtuv\port;$(ProjectDir)..\..\application\3rd-party\libtuv\raw\include;$(ProjectDir)..\..\application\3rd-party\libtuv\raw\src;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
@@ -919,7 +926,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>__VSF__;__CPU_X64__;__WIN__;__OOC_RELEASE__;__OOC_CPP__;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>__VSF__;__CPU_X64__;__WIN__;__OOC_RELEASE__;__OOC_CPP__;NDEBUG;_CONSOLE;TUV_FEATURE_PIPE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\application\3rd-party\libtuv\port;$(ProjectDir)..\..\application\3rd-party\libtuv\raw\include;$(ProjectDir)..\..\application\3rd-party\libtuv\raw\src;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>

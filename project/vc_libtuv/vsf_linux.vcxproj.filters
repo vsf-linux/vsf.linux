@@ -745,6 +745,9 @@
     <Filter Include="application\3rd-party\libtuv\raw\src\unix">
       <UniqueIdentifier>{49fcb7b4-e62c-44da-a350-e4763dd73564}</UniqueIdentifier>
     </Filter>
+    <Filter Include="vsf\shell\sys\linux\include\asm">
+      <UniqueIdentifier>{b6d578e6-377a-44cf-8646-0897ef5a0bc9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vsf\source\vsf.h">
@@ -2046,6 +2049,39 @@
     <ClInclude Include="..\..\application\3rd-party\libtuv\raw\src\unix\spinlock.h">
       <Filter>application\3rd-party\libtuv\raw\src\unix</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\event.h">
+      <Filter>vsf\shell\sys\linux\include\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\file.h">
+      <Filter>vsf\shell\sys\linux\include\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\param.h">
+      <Filter>vsf\shell\sys\linux\include\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\prctl.h">
+      <Filter>vsf\shell\sys\linux\include\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\sendfile.h">
+      <Filter>vsf\shell\sys\linux\include\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\statvfs.h">
+      <Filter>vsf\shell\sys\linux\include\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\sysctl.h">
+      <Filter>vsf\shell\sys\linux\include\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\sysinfo.h">
+      <Filter>vsf\shell\sys\linux\include\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\sysmacros.h">
+      <Filter>vsf\shell\sys\linux\include\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\asm\ioctls.h">
+      <Filter>vsf\shell\sys\linux\include\asm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\asm\unistd.h">
+      <Filter>vsf\shell\sys\linux\include\asm</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\vsf\source\utilities\template\vsf_bitmap.c">
@@ -2789,13 +2825,7 @@
     <ClCompile Include="..\..\application\3rd-party\libtuv\raw\src\unix\getnameinfo.c">
       <Filter>application\3rd-party\libtuv\raw\src\unix</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\libtuv\raw\src\unix\kqueue.c">
-      <Filter>application\3rd-party\libtuv\raw\src\unix</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\libtuv\raw\src\unix\linux-core.c">
-      <Filter>application\3rd-party\libtuv\raw\src\unix</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\libtuv\raw\src\unix\linux-inotify.c">
       <Filter>application\3rd-party\libtuv\raw\src\unix</Filter>
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\libtuv\raw\src\unix\linux-syscalls.c">
@@ -2814,9 +2844,6 @@
       <Filter>application\3rd-party\libtuv\raw\src\unix</Filter>
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\libtuv\raw\src\unix\process.c">
-      <Filter>application\3rd-party\libtuv\raw\src\unix</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\libtuv\raw\src\unix\proctitle.c">
       <Filter>application\3rd-party\libtuv\raw\src\unix</Filter>
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\libtuv\raw\src\unix\pthread-barrier.c">
@@ -2838,9 +2865,6 @@
       <Filter>application\3rd-party\libtuv\raw\src\unix</Filter>
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\libtuv\raw\src\unix\timer.c">
-      <Filter>application\3rd-party\libtuv\raw\src\unix</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\libtuv\raw\src\unix\tty.c">
       <Filter>application\3rd-party\libtuv\raw\src\unix</Filter>
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\libtuv\raw\src\unix\udp.c">
