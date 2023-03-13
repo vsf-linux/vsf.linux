@@ -67,3 +67,6 @@
 [submodule "application/3rd-party/libtuv/raw"]
 	path = application/3rd-party/libtuv/raw
 	url = ../libtuv
+[submodule "application/3rd-party/xone"]
+	path = application/3rd-party/xone
+	url = ../xone

@@ -2,6 +2,11 @@
 #define __VSF_DISP_CLASS_INHERIT__
 #include <unistd.h>
 
+#if APP_USE_LINUX_XONE_DEMO == ENABLED
+#   include <linux/workqueue.h>
+#   include <linux/usb.h>
+#endif
+
 #if VSF_USE_USB_HOST == ENABLED && VSF_LINUX_USE_LIBUSB == ENABLED
 #   include <libusb.h>
 #endif
@@ -89,6 +94,10 @@ int vsf_linux_create_fhs(void)
         .mask = 1 << VSF_INPUT_TYPE_TOUCHSCREEN,
     };
     vsf_linux_fs_bind_input("/dev/event/input2", &__event_notifier_touchscreen);
+#endif
+#if APP_USE_LINUX_XONE_DEMO == ENABLED
+    vsf_linux_usb_init(&usrapp_usbh_common.host);
+    system_wq = create_workqueue("system_wq");
 #endif
 
     // 2. fs
@@ -249,6 +258,10 @@ int vsf_linux_create_fhs(void)
     busybox_bind(VSF_LINUX_CFG_BIN_PATH "/loadelf", elfloader_main);
 #endif
 
+#if APP_USE_LINUX_XONE_DEMO == ENABLED
+    module_usb_driver_init(xone_dongle_driver);
+    module_run_init(gip_bus_init);
+#endif
 #if APP_USE_USRAPP == ENABLED
     extern int usr_main(int argc, char *argv[]);
     busybox_bind(VSF_LINUX_CFG_BIN_PATH "/app", usr_main);
