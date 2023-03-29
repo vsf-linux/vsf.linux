@@ -1,113 +1,156 @@
- progress.c | 23 ++++++++++++-----------
- progress.h | 12 ++++++------
- 2 files changed, 18 insertions(+), 17 deletions(-)
+ builtin/blame.c          | 2 +-
+ builtin/commit-graph.c   | 2 +-
+ builtin/fsck.c           | 2 +-
+ builtin/index-pack.c     | 2 +-
+ builtin/log.c            | 2 +-
+ builtin/pack-objects.c   | 2 +-
+ builtin/prune.c          | 2 +-
+ builtin/receive-pack.c   | 2 +-
+ builtin/rev-list.c       | 2 +-
+ builtin/unpack-objects.c | 2 +-
+ progress.c               | 2 +-
+ 11 files changed, 11 insertions(+), 11 deletions(-)
 
+diff --git a/builtin/blame.c b/builtin/blame.c
+index dd656e5d7f..66a2e4701a 100644
+--- a/builtin/blame.c
++++ b/builtin/blame.c
+@@ -23,7 +23,7 @@
+ #include "line-range.h"
+ #include "line-log.h"
+ #include "dir.h"
+-#include "progress.h"
++#include "../progress.h"
+ #include "object-store.h"
+ #include "blame.h"
+ #include "refs.h"
+diff --git a/builtin/commit-graph.c b/builtin/commit-graph.c
+index cdc427dd47..e52860420b 100644
+--- a/builtin/commit-graph.c
++++ b/builtin/commit-graph.c
+@@ -6,7 +6,7 @@
+ #include "repository.h"
+ #include "commit-graph.h"
+ #include "object-store.h"
+-#include "progress.h"
++#include "../progress.h"
+ #include "tag.h"
+ 
+ #define BUILTIN_COMMIT_GRAPH_VERIFY_USAGE \
+diff --git a/builtin/fsck.c b/builtin/fsck.c
+index 0d02cf8264..ba69eb2411 100644
+--- a/builtin/fsck.c
++++ b/builtin/fsck.c
+@@ -14,7 +14,7 @@
+ #include "fsck.h"
+ #include "parse-options.h"
+ #include "dir.h"
+-#include "progress.h"
++#include "../progress.h"
+ #include "streaming.h"
+ #include "decorate.h"
+ #include "packfile.h"
+diff --git a/builtin/index-pack.c b/builtin/index-pack.c
+index 62dea86f30..5955281a32 100644
+--- a/builtin/index-pack.c
++++ b/builtin/index-pack.c
+@@ -7,7 +7,7 @@
+ #include "commit.h"
+ #include "tag.h"
+ #include "tree.h"
+-#include "progress.h"
++#include "../progress.h"
+ #include "fsck.h"
+ #include "exec-cmd.h"
+ #include "streaming.h"
+diff --git a/builtin/log.c b/builtin/log.c
+index 4b493408cc..8eab570619 100644
+--- a/builtin/log.c
++++ b/builtin/log.c
+@@ -30,7 +30,7 @@
+ #include "version.h"
+ #include "mailmap.h"
+ #include "gpg-interface.h"
+-#include "progress.h"
++#include "../progress.h"
+ #include "commit-slab.h"
+ #include "repository.h"
+ #include "commit-reach.h"
+diff --git a/builtin/pack-objects.c b/builtin/pack-objects.c
+index ba2006f221..bb34890a27 100644
+--- a/builtin/pack-objects.c
++++ b/builtin/pack-objects.c
+@@ -19,7 +19,7 @@
+ #include "list-objects-filter.h"
+ #include "list-objects-filter-options.h"
+ #include "pack-objects.h"
+-#include "progress.h"
++#include "../progress.h"
+ #include "refs.h"
+ #include "streaming.h"
+ #include "thread-utils.h"
+diff --git a/builtin/prune.c b/builtin/prune.c
+index c2bcdc07db..97e5bd6264 100644
+--- a/builtin/prune.c
++++ b/builtin/prune.c
+@@ -5,7 +5,7 @@
+ #include "builtin.h"
+ #include "reachable.h"
+ #include "parse-options.h"
+-#include "progress.h"
++#include "../progress.h"
+ #include "prune-packed.h"
+ #include "object-store.h"
+ #include "shallow.h"
+diff --git a/builtin/receive-pack.c b/builtin/receive-pack.c
+index 9f4a0b816c..82aa7d463f 100644
+--- a/builtin/receive-pack.c
++++ b/builtin/receive-pack.c
+@@ -12,7 +12,7 @@
+ #include "commit.h"
+ #include "object.h"
+ #include "remote.h"
+-#include "connect.h"
++#include "../connect.h"
+ #include "string-list.h"
+ #include "oid-array.h"
+ #include "connected.h"
+diff --git a/builtin/rev-list.c b/builtin/rev-list.c
+index 777558e9b0..4b93265f64 100644
+--- a/builtin/rev-list.c
++++ b/builtin/rev-list.c
+@@ -14,7 +14,7 @@
+ #include "log-tree.h"
+ #include "graph.h"
+ #include "bisect.h"
+-#include "progress.h"
++#include "../progress.h"
+ #include "reflog-walk.h"
+ #include "oidset.h"
+ #include "packfile.h"
+diff --git a/builtin/unpack-objects.c b/builtin/unpack-objects.c
+index 4a9466295b..cedfacc663 100644
+--- a/builtin/unpack-objects.c
++++ b/builtin/unpack-objects.c
+@@ -10,7 +10,7 @@
+ #include "tag.h"
+ #include "tree.h"
+ #include "tree-walk.h"
+-#include "progress.h"
++#include "../progress.h"
+ #include "decorate.h"
+ #include "fsck.h"
+ 
 diff --git a/progress.c b/progress.c
-index cad6c2b064..ecf460acc8 100644
+index cad6c2b064..f3eaa117b3 100644
 --- a/progress.c
 +++ b/progress.c
-@@ -33,8 +33,8 @@ struct throughput {
- 
- struct progress {
- 	const char *title;
--	uint64_t last_value;
--	uint64_t total;
-+	uint32_t last_value;
-+	uint32_t total;
- 	unsigned last_percent;
- 	unsigned delay;
- 	unsigned sparse;
-@@ -129,7 +129,7 @@ static int is_foreground_fd(int fd)
- 	return tpgrp < 0 || tpgrp == getpgid(0);
- }
- 
--static void display(struct progress *progress, uint64_t n, const char *done)
-+static void display(struct progress *progress, uint32_t n, const char *done)
- {
- 	const char *tp;
- 	struct strbuf *counters_sb = &progress->counters_sb;
-@@ -148,8 +148,9 @@ static void display(struct progress *progress, uint64_t n, const char *done)
- 
- 			strbuf_reset(counters_sb);
- 			strbuf_addf(counters_sb,
--				    "%3u%% (%"PRIuMAX"/%"PRIuMAX")%s", percent,
--				    (uintmax_t)n, (uintmax_t)progress->total,
-+//				    "%3u%% (%"PRIuMAX"/%"PRIuMAX")%s", percent,
-+				    "%3u%% (%d/%d)%s", percent,
-+				    (uint32_t)n, (uint32_t)progress->total,
- 				    tp);
- 			show_update = 1;
- 		}
-@@ -208,7 +209,7 @@ static uint64_t progress_getnanotime(struct progress *progress)
- 		return getnanotime();
- }
- 
--void display_throughput(struct progress *progress, uint64_t total)
-+void display_throughput(struct progress *progress, uint32_t total)
- {
- 	struct throughput *tp;
- 	uint64_t now_ns;
-@@ -268,7 +269,7 @@ void display_throughput(struct progress *progress, uint64_t total)
- 		display(progress, progress->last_value, NULL);
- }
- 
--void display_progress(struct progress *progress, uint64_t n)
-+void display_progress(struct progress *progress, uint32_t n)
- {
- 	if (progress)
- 		display(progress, n, NULL);
-@@ -311,12 +312,12 @@ static int get_default_delay(void)
- #endif
- }
- 
--struct progress *start_delayed_progress(const char *title, uint64_t total)
-+struct progress *start_delayed_progress(const char *title, uint32_t total)
- {
- 	return start_progress_delay(title, total, get_default_delay(), 0);
- }
- 
--struct progress *start_progress(const char *title, uint64_t total)
-+struct progress *start_progress(const char *title, uint32_t total)
- {
- 	return start_progress_delay(title, total, 0, 0);
- }
-@@ -330,13 +331,13 @@ struct progress *start_progress(const char *title, uint64_t total)
-  * When "sparse" is set, stop_progress() will automatically force the done
-  * message to show 100%.
-  */
--struct progress *start_sparse_progress(const char *title, uint64_t total)
-+struct progress *start_sparse_progress(const char *title, uint32_t total)
- {
- 	return start_progress_delay(title, total, 0, 1);
- }
- 
- struct progress *start_delayed_sparse_progress(const char *title,
--					       uint64_t total)
-+					       uint32_t total)
- {
- 	return start_progress_delay(title, total, get_default_delay(), 1);
- }
-diff --git a/progress.h b/progress.h
-index f1913acf73..37ed976acd 100644
---- a/progress.h
-+++ b/progress.h
-@@ -11,13 +11,13 @@ void progress_test_force_update(void);
- 
- #endif
- 
--void display_throughput(struct progress *progress, uint64_t total);
--void display_progress(struct progress *progress, uint64_t n);
--struct progress *start_progress(const char *title, uint64_t total);
--struct progress *start_sparse_progress(const char *title, uint64_t total);
--struct progress *start_delayed_progress(const char *title, uint64_t total);
-+void display_throughput(struct progress *progress, uint32_t total);
-+void display_progress(struct progress *progress, uint32_t n);
-+struct progress *start_progress(const char *title, uint32_t total);
-+struct progress *start_sparse_progress(const char *title, uint32_t total);
-+struct progress *start_delayed_progress(const char *title, uint32_t total);
- struct progress *start_delayed_sparse_progress(const char *title,
--					       uint64_t total);
-+					       uint32_t total);
- void stop_progress(struct progress **progress);
- void stop_progress_msg(struct progress **progress, const char *msg);
- 
+@@ -11,7 +11,7 @@
+ #define GIT_TEST_PROGRESS_ONLY
+ #include "cache.h"
+ #include "gettext.h"
+-#include "progress.h"
++#include "./progress.h"
+ #include "strbuf.h"
+ #include "trace.h"
+ #include "utf8.h"

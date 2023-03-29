@@ -829,6 +829,12 @@
     <Filter Include="vsf\hal\driver\x86\win\rng">
       <UniqueIdentifier>{0abfe4ad-f22f-4cf4-b3b5-01d47242e31f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="vsf\hal\driver\common\i2s">
+      <UniqueIdentifier>{d1f3847e-2918-478c-83f5-55fa6109fa30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\hal\driver\common\mmc">
+      <UniqueIdentifier>{75e5c30c-e121-4349-a769-4f68034b94da}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vsf\source\vsf.h">
@@ -3290,6 +3296,15 @@
     </ClInclude>
     <ClInclude Include="..\..\vsf\source\hal\driver\x86\win\rng\rng.h">
       <Filter>vsf\hal\driver\x86\win\rng</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\i2s\i2s_template.h">
+      <Filter>vsf\hal\driver\common\i2s</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\mmc\mmc_probe.h">
+      <Filter>vsf\hal\driver\common\mmc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\mmc\mmc_template.h">
+      <Filter>vsf\hal\driver\common\mmc</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -6620,6 +6635,15 @@
     <ClCompile Include="..\..\vsf\source\hal\driver\x86\win\rng\rng.c">
       <Filter>vsf\hal\driver\x86\win\rng</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\i2s\i2s_common.c">
+      <Filter>vsf\hal\driver\common\i2s</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\mmc\mmc_common.c">
+      <Filter>vsf\hal\driver\common\mmc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\mmc\mmc_probe.c">
+      <Filter>vsf\hal\driver\common\mmc</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\vsf\source\hal\arch\common\arch_without_thread_suspend\vsf_arch_without_thread_suspend_template.inc">
@@ -6660,6 +6684,12 @@
     </None>
     <None Include="..\..\vsf\source\hal\driver\common\usart\usart_template.inc">
       <Filter>vsf\hal\driver\common\usart</Filter>
+    </None>
+    <None Include="..\..\vsf\source\hal\driver\common\i2s\i2s_template.inc">
+      <Filter>vsf\hal\driver\common\i2s</Filter>
+    </None>
+    <None Include="..\..\vsf\source\hal\driver\common\mmc\mmc_template.inc">
+      <Filter>vsf\hal\driver\common\mmc</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
