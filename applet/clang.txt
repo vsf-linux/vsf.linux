@@ -1,7 +1,7 @@
-CortexM4:
-${CLANG_PATH}/bin/clang.exe --target=armv7m-none-eabi -mcpu=cortex-m4 -mthumb -fropi -frwpi -fms-extensions -Oz -I . -I ./include -I ../vsf/source -I ../vsf/source/shell/sys/linux/include -I ../vsf/source/shell/sys/linux/include/libusb -I ../vsf/source/shell/sys/linux/include/simple_libc -I ../vsf/source/utilities/compiler/arm/3rd-party/CMSIS/CMSIS/Core/Include -o main.o -c main.c
+CortexM4, Clang:
+${CLANG_PATH}/bin/clang.exe --target=armv7m-none-eabi -mcpu=cortex-m4 -mthumb -fropi -frwpi -fms-extensions -fno-builtin-printf -Oz -I . -I ./include -I ../vsf/source -I ../vsf/source/shell/sys/linux/include -I ../vsf/source/shell/sys/linux/include/libusb -I ../vsf/source/shell/sys/linux/include/simple_libc -I ../vsf/source/utilities/compiler/arm/3rd-party/CMSIS/CMSIS/Core/Include -o main.o -c main.c
 ${CLANG_PATH}/bin/clang.exe --target=armv7m-none-eabi -mcpu=cortex-m4 -mthumb --sysroot ${CLANG_PATH}/lib/clang-runtimes/armv7m_soft_nofp -nostdlib -T linker.ld -z max-page-size=4 -o main.elf main.o
 ${CLANG_PATH}/bin/llvm-strip.exe main.elf
 
-x86_64, compiled on Linux:
+x86_64, compiled on Linux, GCC:
 gcc -o applet main.c -I . -I ${VSF_PATH}/source -I ${VSF_PATH}/source/shell/sys/linux/include -I ${VSF_PATH}/source/shell/sys/linux/include/libusb -I ${VSF_PATH}/source/shell/sys/linux/include/simple_libc -fms-extensions -nostdlib -z max-page-size=4 -shared -fPIC

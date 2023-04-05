@@ -7,20 +7,23 @@
 /*============================ MACROS ========================================*/
 
 #define __VSF_APPLET__
+#define __LINUX__
 
-// arch
+// ARCH
 
-// arm
-
-#define __CPU_ARM__
+#if defined(__ARM_ARCH_PROFILE)
+#   define __CPU_ARM__
 // no program_start from CMSIS Core
-#define __PROGRAM_START                                 _start
+#   define __PROGRAM_START                                 _start
+#else
+#   define __VSF64__
+#   define __CPU_X64__
 
-// linux
-
-//#define __VSF64__
-//#define __CPU_GENERIC__
-//#define __LINUX__
+#   define VSF_APPLET_CFG_ABI_PATCH                     ENABLED
+#   define VSF_OS_CFG_ADD_EVTQ_TO_IDLE                  ENABLED
+#   define VSF_KERNEL_CFG_CPU_USAGE                     DISABLED
+#   define VSF_KERNEL_CFG_EDA_SUPPORT_TIMER             ENABLED
+#endif
 
 // components
 
