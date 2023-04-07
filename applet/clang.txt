@@ -4,4 +4,7 @@ ${CLANG_PATH}/bin/clang.exe --target=armv7m-none-eabi -mcpu=cortex-m4 -mthumb --
 ${CLANG_PATH}/bin/llvm-strip.exe main.elf
 
 x86_64, compiled on Linux, GCC:
-gcc -o applet main.c -D __CPU_X64__ -I . -I ${VSF_PATH}/source -I ${VSF_PATH}/source/shell/sys/linux/include -I ${VSF_PATH}/source/shell/sys/linux/include/libusb -I ${VSF_PATH}/source/shell/sys/linux/include/simple_libc -fms-extensions -nostdlib -z max-page-size=4 -shared -fPIC
+gcc -o applet main.c -D __CPU_X64__ -I . -I ${VSF_PATH}/source -I ${VSF_PATH}/source/shell/sys/linux/include -I ${VSF_PATH}/source/shell/sys/linux/include/libusb -I ${VSF_PATH}/source/shell/sys/linux/include/simple_libc -fms-extensions -nostdlib -shared -fPIC -z max-page-size=4
+
+x86_64, compiled on Linux, TinyCC:
+tcc -o applet main.c -D __CPU_X64__ -I . -I ${VSF_PATH}/source -I ${VSF_PATH}/source/shell/sys/linux/include -I ${VSF_PATH}/source/shell/sys/linux/include/libusb -I ${VSF_PATH}/source/shell/sys/linux/include/simple_libc -fms-extensions -nostdlib -shared -fPIC -Wl,-section-alignment=4
