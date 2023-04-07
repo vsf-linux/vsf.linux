@@ -739,6 +739,15 @@
     <Filter Include="application\3rd-party\tcc\port">
       <UniqueIdentifier>{34167940-8e86-4e37-a527-c6dafd6870e7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="vsf\service\loader">
+      <UniqueIdentifier>{bc9e66c0-d1e7-4a76-a48f-70b350de48e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\service\loader\elf">
+      <UniqueIdentifier>{1bbeef11-3a77-4580-b793-a6c42b6c9802}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\service\loader\elf\arch">
+      <UniqueIdentifier>{4fcd6d1e-4ebf-491c-ba34-7d471e627e06}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vsf\source\vsf.h">
@@ -2019,6 +2028,30 @@
     <ClInclude Include="..\..\application\3rd-party\tcc\port\config.h">
       <Filter>application\3rd-party\tcc\port</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\dlfcn.h">
+      <Filter>vsf\shell\sys\linux\include\simple_libc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\mntent.h">
+      <Filter>vsf\shell\sys\linux\include\simple_libc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\paths.h">
+      <Filter>vsf\shell\sys\linux\include\simple_libc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\xlocale.h">
+      <Filter>vsf\shell\sys\linux\include\simple_libc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\service\loader\vsf_loader.h">
+      <Filter>vsf\service\loader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\service\loader\elf\elf.h">
+      <Filter>vsf\service\loader\elf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\service\loader\elf\vsf_elfloader.h">
+      <Filter>vsf\service\loader\elf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\ucontext.h">
+      <Filter>vsf\shell\sys\linux\include\sys</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\vsf\source\utilities\template\vsf_bitmap.c">
@@ -2729,6 +2762,24 @@
     <ClCompile Include="..\..\application\3rd-party\tcc\raw\tcc.c">
       <Filter>application\3rd-party\tcc\raw</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\vsf\source\vsf.c">
+      <Filter>vsf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\example\template\demo\linux_demo\elfloader_demo.c">
+      <Filter>application\linux_demo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\service\loader\vsf_loader.c">
+      <Filter>vsf\service\loader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\service\loader\elf\vsf_elfloader.c">
+      <Filter>vsf\service\loader\elf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\service\loader\elf\arch\vsf_elfloader_arm.c">
+      <Filter>vsf\service\loader\elf\arch</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\service\loader\elf\arch\vsf_elfloader_x64.c">
+      <Filter>vsf\service\loader\elf\arch</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\vsf\source\hal\arch\common\arch_without_thread_suspend\vsf_arch_without_thread_suspend_template.inc">
@@ -2804,6 +2855,9 @@
       <Filter>vsf\shell\sys\linux\include\simple_libc</Filter>
     </None>
     <None Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\thread">
+      <Filter>vsf\shell\sys\linux\include\simple_libc</Filter>
+    </None>
+    <None Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\string_view">
       <Filter>vsf\shell\sys\linux\include\simple_libc</Filter>
     </None>
   </ItemGroup>
