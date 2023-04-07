@@ -1,6 +1,44 @@
- tcc.h | 10 ++++++++++
- 1 file changed, 10 insertions(+)
+ lib/bcheck.c |  2 +-
+ libtcc.c     |  4 ++--
+ tcc.h        | 10 ++++++++++
+ tccrun.c     | 10 +++++-----
+ 4 files changed, 18 insertions(+), 8 deletions(-)
 
+diff --git a/lib/bcheck.c b/lib/bcheck.c
+index b8dd1c5..31d5b86 100644
+--- a/lib/bcheck.c
++++ b/lib/bcheck.c
+@@ -913,7 +913,7 @@ static void __bound_long_jump(jmp_buf env, int val, int sig, const char *func)
+ #if !defined(_WIN32)
+     sig ? siglongjmp(env, val) :
+ #endif
+-    longjmp (env, val);
++    tcc_longjmp (env, val);
+ }
+ 
+ void __bound_longjmp(jmp_buf env, int val)
+diff --git a/libtcc.c b/libtcc.c
+index de8343f..03f1603 100644
+--- a/libtcc.c
++++ b/libtcc.c
+@@ -601,7 +601,7 @@ no_file:
+         if (mode != ERROR_ERROR)
+             return;
+         if (s1->error_set_jmp_enabled)
+-            longjmp(s1->error_jmp_buf, 1);
++            tcc_longjmp(s1->error_jmp_buf, 1);
+     }
+     exit(1);
+ }
+@@ -721,7 +721,7 @@ static int tcc_compile(TCCState *s1, int filetype, const char *str, int fd)
+     tcc_enter_state(s1);
+     s1->error_set_jmp_enabled = 1;
+ 
+-    if (setjmp(s1->error_jmp_buf) == 0) {
++    if (tcc_setjmp(s1->error_jmp_buf) == 0) {
+         s1->nb_errors = 0;
+ 
+         if (fd == -1) {
 diff --git a/tcc.h b/tcc.h
 index 9702464..d4d8a29 100644
 --- a/tcc.h
@@ -29,3 +67,40 @@ index 9702464..d4d8a29 100644
  #if defined CONFIG_TCC_BACKTRACE && CONFIG_TCC_BACKTRACE==0
  # undef CONFIG_TCC_BACKTRACE
  #else
+diff --git a/tccrun.c b/tccrun.c
+index a6a82b9..0af7c02 100644
+--- a/tccrun.c
++++ b/tccrun.c
+@@ -205,9 +205,9 @@ static void run_exit(int code)
+ 
+     e->exit_called = 1;
+ #ifdef CONFIG_TCC_BACKTRACE
+-    longjmp((&g_rtctxt)->jmp_buf, code ? code : 256);
++    tcc_longjmp((&g_rtctxt)->jmp_buf, code ? code : 256);
+ #else
+-    longjmp(e->run_jmp_buf, code ? code : 256);
++    tcc_longjmp(e->run_jmp_buf, code ? code : 256);
+ #endif
+ }
+ 
+@@ -289,9 +289,9 @@ LIBTCCAPI int tcc_run(TCCState *s1, int argc, char **argv)
+     /* These aren't C symbols, so don't need leading underscore handling.  */
+     run_cdtors(s1, "__init_array_start", "__init_array_end", argc, argv, envp);
+ #ifdef CONFIG_TCC_BACKTRACE
+-    if (!(ret = setjmp(rc->jmp_buf)))
++    if (!(ret = tcc_setjmp(rc->jmp_buf)))
+ #else
+-    if (!(ret = setjmp((&g_exit_context)->run_jmp_buf)))
++    if (!(ret = tcc_setjmp((&g_exit_context)->run_jmp_buf)))
+ #endif
+     {
+         ret = prog_main(argc, argv, envp);
+@@ -1098,7 +1098,7 @@ static void rt_exit(int code)
+ {
+     rt_context *rc = &g_rtctxt;
+     if (rc->do_jmp)
+-        longjmp(rc->jmp_buf, code ? code : 256);
++        tcc_longjmp(rc->jmp_buf, code ? code : 256);
+     exit(code);
+ }
+ 

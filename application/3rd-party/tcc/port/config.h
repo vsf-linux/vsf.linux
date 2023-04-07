@@ -3,3 +3,12 @@
 # define CONFIG_TCCDIR "/usr/local/lib/tcc"
 #endif
 #define TCC_VERSION "0.9.27"
+
+#include <vsf.h>
+
+#ifdef VSF_ARCH_SETJMP
+# define tcc_setjmp     VSF_ARCH_SETJMP
+#endif
+#ifdef VSF_ARCH_LONGJMP
+# define tcc_longjmp    VSF_ARCH_LONGJMP
+#endif
