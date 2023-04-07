@@ -1,0 +1,31 @@
+ tcc.h | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+diff --git a/tcc.h b/tcc.h
+index 9702464..d4d8a29 100644
+--- a/tcc.h
++++ b/tcc.h
+@@ -39,6 +39,12 @@
+ #include <setjmp.h>
+ #include <time.h>
+ 
++#ifdef __VSF__
++# undef _WIN32
++# undef _WIN64
++# undef _MSCVER
++#endif
++
+ #ifndef _WIN32
+ # include <unistd.h>
+ # include <sys/time.h>
+@@ -197,6 +203,10 @@ extern long double strtold (const char *__nptr, char **__endptr);
+ # endif
+ #endif
+ 
++#ifdef __VSF__
++# undef TCC_IS_NATIVE
++#endif
++
+ #if defined CONFIG_TCC_BACKTRACE && CONFIG_TCC_BACKTRACE==0
+ # undef CONFIG_TCC_BACKTRACE
+ #else
