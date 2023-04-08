@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <pthread.h>
 
-void *thread_entry(void *param)
+static void *thread_entry(void *param)
 {
     printf("hello world\n");
     return NULL;
