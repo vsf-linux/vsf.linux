@@ -95,7 +95,7 @@ target_include_directories(${CMAKE_PROJECT_NAME} PUBLIC
     $ENV{VSF_PATH}/example/template/demo/common
 )
 target_compile_definitions(${CMAKE_PROJECT_NAME} PUBLIC
-    APP_USE_LINUX_ELFLOADER_DEMO=ENABLED
+    APP_USE_LINUX_DYNLOADER_DEMO=ENABLED
 )
 target_sources(${CMAKE_PROJECT_NAME} PUBLIC
     $ENV{VSF_PATH}/example/template/demo/linux_demo/tty_demo.c
@@ -103,7 +103,7 @@ target_sources(${CMAKE_PROJECT_NAME} PUBLIC
     $ENV{VSF_PATH}/example/template/demo/linux_demo/mount_demo.c
     $ENV{VSF_PATH}/example/template/demo/linux_demo/ntpdate_demo.c
     $ENV{VSF_PATH}/example/template/demo/linux_demo/telnetd_demo.c
-    $ENV{VSF_PATH}/example/template/demo/linux_demo/elfloader_demo.c
+    $ENV{VSF_PATH}/example/template/demo/linux_demo/dynloader_demo.c
 )
 
 # type conversion and show size

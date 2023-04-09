@@ -43,9 +43,12 @@
 #define VSF_USE_DISTBUS                                 ENABLED
 #define VSF_USE_SIMPLE_STREAM                           ENABLED
 #define VSF_USE_STREAM                                  DISABLED
-#define VSF_USE_LOADER                                  APP_USE_LINUX_ELFLOADER_DEMO
+#define VSF_USE_LOADER                                  APP_USE_LINUX_DYNLOADER_DEMO
 #   define VSF_LOADER_USE_ELF                           ENABLED
 //#   define VSF_ELFLOADER_CFG_DEBUG                      ENABLED
+#   ifdef __WIN__
+#       define VSF_LOADER_USE_PE                        ENABLED
+#   endif
 
 #if VSF_AUDIO_USE_WINSOUND == ENABLED || VSF_AUDIO_USE_DUMMY == ENABLED
 #   define VSF_USE_AUDIO                                ENABLED

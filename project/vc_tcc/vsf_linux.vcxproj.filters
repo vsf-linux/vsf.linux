@@ -748,6 +748,9 @@
     <Filter Include="vsf\service\loader\elf\arch">
       <UniqueIdentifier>{4fcd6d1e-4ebf-491c-ba34-7d471e627e06}</UniqueIdentifier>
     </Filter>
+    <Filter Include="vsf\service\loader\pe">
+      <UniqueIdentifier>{662e8a55-5337-4a8d-adcd-cbbe7b507260}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vsf\source\vsf.h">
@@ -2052,6 +2055,9 @@
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\ucontext.h">
       <Filter>vsf\shell\sys\linux\include\sys</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\vsf\source\service\loader\pe\vsf_peloader.h">
+      <Filter>vsf\service\loader\pe</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\vsf\source\utilities\template\vsf_bitmap.c">
@@ -2765,9 +2771,6 @@
     <ClCompile Include="..\..\vsf\source\vsf.c">
       <Filter>vsf</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\vsf\example\template\demo\linux_demo\elfloader_demo.c">
-      <Filter>application\linux_demo</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\vsf\source\service\loader\vsf_loader.c">
       <Filter>vsf\service\loader</Filter>
     </ClCompile>
@@ -2779,6 +2782,12 @@
     </ClCompile>
     <ClCompile Include="..\..\vsf\source\service\loader\elf\arch\vsf_elfloader_x64.c">
       <Filter>vsf\service\loader\elf\arch</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\service\loader\pe\vsf_peloader.c">
+      <Filter>vsf\service\loader\pe</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\example\template\demo\linux_demo\dynloader_demo.c">
+      <Filter>application\linux_demo</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

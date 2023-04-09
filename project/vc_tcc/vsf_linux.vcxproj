@@ -249,6 +249,7 @@
     <ClInclude Include="..\..\vsf\source\service\json\vsf_json.h" />
     <ClInclude Include="..\..\vsf\source\service\loader\elf\elf.h" />
     <ClInclude Include="..\..\vsf\source\service\loader\elf\vsf_elfloader.h" />
+    <ClInclude Include="..\..\vsf\source\service\loader\pe\vsf_peloader.h" />
     <ClInclude Include="..\..\vsf\source\service\loader\vsf_loader.h" />
     <ClInclude Include="..\..\vsf\source\service\pbuf\vsf_pbuf.h" />
     <ClInclude Include="..\..\vsf\source\service\pbuf\vsf_pbuf_pool.h" />
@@ -468,7 +469,7 @@
     <ClCompile Include="..\..\vsf\example\template\demo\common\usrapp_ui_common.c" />
     <ClCompile Include="..\..\vsf\example\template\demo\common\usrapp_usbd_common.c" />
     <ClCompile Include="..\..\vsf\example\template\demo\common\usrapp_usbh_common.c" />
-    <ClCompile Include="..\..\vsf\example\template\demo\linux_demo\elfloader_demo.c" />
+    <ClCompile Include="..\..\vsf\example\template\demo\linux_demo\dynloader_demo.c" />
     <ClCompile Include="..\..\vsf\example\template\demo\linux_demo\libusb_demo.c" />
     <ClCompile Include="..\..\vsf\example\template\demo\linux_demo\mount_demo.c" />
     <ClCompile Include="..\..\vsf\example\template\demo\linux_demo\ntpdate_demo.c" />
@@ -640,6 +641,7 @@
     <ClCompile Include="..\..\vsf\source\service\loader\elf\arch\vsf_elfloader_arm.c" />
     <ClCompile Include="..\..\vsf\source\service\loader\elf\arch\vsf_elfloader_x64.c" />
     <ClCompile Include="..\..\vsf\source\service\loader\elf\vsf_elfloader.c" />
+    <ClCompile Include="..\..\vsf\source\service\loader\pe\vsf_peloader.c" />
     <ClCompile Include="..\..\vsf\source\service\loader\vsf_loader.c" />
     <ClCompile Include="..\..\vsf\source\service\pbuf\vsf_pbuf.c" />
     <ClCompile Include="..\..\vsf\source\service\pbuf\vsf_pbuf_pool.c" />
@@ -812,7 +814,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>__VSF__;__CPU_X86__;__WIN__;__OOC_CPP__;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;APP_USE_LINUX_TCC_DEMO=ENABLED;TCC_TARGET_I386;APP_USE_LINUX_ELFLOADER_DEMO=ENABLED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>__VSF__;__CPU_X86__;__WIN__;__OOC_CPP__;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;APP_USE_LINUX_TCC_DEMO=ENABLED;TCC_TARGET_I386;APP_USE_LINUX_DYNLOADER_DEMO=ENABLED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\tcc\port;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-fms-extensions %(AdditionalOptions)</AdditionalOptions>
@@ -840,7 +842,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>__VSF__;__CPU_X64__;__WIN__;__OOC_CPP__;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;APP_USE_LINUX_TCC_DEMO=ENABLED;TCC_TARGET_X86_64;APP_USE_LINUX_ELFLOADER_DEMO=ENABLED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>__VSF__;__CPU_X64__;__WIN__;__OOC_CPP__;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;APP_USE_LINUX_TCC_DEMO=ENABLED;TCC_TARGET_X86_64;APP_USE_LINUX_DYNLOADER_DEMO=ENABLED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\tcc\port;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-fms-extensions %(AdditionalOptions)</AdditionalOptions>
@@ -870,7 +872,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>__VSF__;__CPU_X86__;__WIN__;__OOC_RELEASE__;__OOC_CPP__;NDEBUG;_CONSOLE;APP_USE_LINUX_TCC_DEMO=ENABLED;TCC_TARGET_I386;APP_USE_LINUX_ELFLOADER_DEMO=ENABLED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>__VSF__;__CPU_X86__;__WIN__;__OOC_RELEASE__;__OOC_CPP__;NDEBUG;_CONSOLE;APP_USE_LINUX_TCC_DEMO=ENABLED;TCC_TARGET_I386;APP_USE_LINUX_DYNLOADER_DEMO=ENABLED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\tcc\port;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
@@ -898,7 +900,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>__VSF__;__CPU_X64__;__WIN__;__OOC_RELEASE__;__OOC_CPP__;NDEBUG;_CONSOLE;APP_USE_LINUX_TCC_DEMO=ENABLED;TCC_TARGET_X86_64;APP_USE_LINUX_ELFLOADER_DEMO=ENABLED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>__VSF__;__CPU_X64__;__WIN__;__OOC_RELEASE__;__OOC_CPP__;NDEBUG;_CONSOLE;APP_USE_LINUX_TCC_DEMO=ENABLED;TCC_TARGET_X86_64;APP_USE_LINUX_DYNLOADER_DEMO=ENABLED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\tcc\port;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
