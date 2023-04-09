@@ -12,3 +12,5 @@
 #ifdef VSF_ARCH_LONGJMP
 # define tcc_longjmp    VSF_ARCH_LONGJMP
 #endif
+
+#define CONFIG_TCC_BCHECK 0

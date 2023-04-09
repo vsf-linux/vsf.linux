@@ -107,23 +107,34 @@
 
 // linux init scripts
 #if     defined(__WIN__)
-#   define VSF_LINUX_HOSTFS_INIT_SCRIPTS                                        \
-            "mkdir -p /mnt/hostfs",                                             \
-            "mount -t winfs . /mnt/hostfs",                                     \
-            "cd /mnt/hostfs",
+#   define VSF_LINUX_HOSTFS_TYPE                        "winfs"
+#   define VSF_LINUX_PATH                               "../.."
 #elif   defined(__LINUX__)
-#   define VSF_LINUX_HOSTFS_INIT_SCRIPTS                                        \
-            "mkdir -p /mnt/hostfs",                                             \
-            "mount -t linfs . /mnt/hostfs",                                     \
-            "cd /mnt/hostfs",
+#   define VSF_LINUX_HOSTFS_TYPE                        "linfs"
+#   define VSF_LINUX_PATH                               "../../.."
 #else
-#   define VSF_LINUX_HOSTFS_INIT_SCRIPTS
+#   define VSF_LINUX_HOSTFS_TYPE
 #endif
+
+# define VSF_LINUX_HOSTFS_INIT_SCRIPTS                                          \
+            "mkdir -p /mnt/hostfs",                                             \
+            "mount -t " VSF_LINUX_HOSTFS_TYPE " . /mnt/hostfs",                 \
+            "cd /mnt/hostfs",
+
 #if APP_USE_LINUX_GIT_DEMO == ENABLED
 #   define VSF_LINUX_GIT_INIT_SCRIPTS                                           \
             "export GIT_SSL_NO_VERIFY=",
 #else
 #   define VSF_LINUX_GIT_INIT_SCRIPTS
+#endif
+#if APP_USE_LINUX_TCC_DEMO == ENABLED && defined(VSF_LINUX_PATH)
+#   define VSF_LINUX_TCC_INIT_SCRIPTS                                           \
+            "mkdir -p /mnt/vsf_linux",                                          \
+            "mount -t " VSF_LINUX_HOSTFS_TYPE " " VSF_LINUX_PATH " /mnt/vsf_linux",\
+            "export VSF_PATH=/mnt/vsf_linux/vsf",                               \
+            "cd /mnt/vsf_linux/applet",
+#else
+#   define VSF_LINUX_TCC_INIT_SCRIPTS
 #endif
 #if APP_USE_USRAPP == ENABLED
 #   define VSF_LINUX_USRAPP_INIT_SCRIPTS                                        \
@@ -136,7 +147,8 @@
             "echo \"vsf build on " __DATE__ "\"",                               \
             VSF_LINUX_HOSTFS_INIT_SCRIPTS                                       \
             VSF_LINUX_GIT_INIT_SCRIPTS                                          \
-            VSF_LINUX_USRAPP_INIT_SCRIPTS
+            VSF_LINUX_USRAPP_INIT_SCRIPTS                                       \
+            VSF_LINUX_TCC_INIT_SCRIPTS
 
 /*============================ TYPES =========================================*/
 /*============================ GLOBAL VARIABLES ==============================*/
