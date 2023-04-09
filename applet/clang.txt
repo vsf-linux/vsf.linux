@@ -3,11 +3,11 @@ ${CLANG_PATH}/bin/clang.exe --target=armv7m-none-eabi -mcpu=cortex-m4 -mthumb -f
 ${CLANG_PATH}/bin/clang.exe --target=armv7m-none-eabi -mcpu=cortex-m4 -mthumb --sysroot ${CLANG_PATH}/lib/clang-runtimes/armv7m_soft_nofp -nostdlib -T linker.ld -z max-page-size=4 -o main.elf main.o
 ${CLANG_PATH}/bin/llvm-strip.exe main.elf
 
-x86_64, compiled on Linux, GCC:
-gcc -o applet main.c -D __CPU_X64__ -I . -I ${VSF_PATH}/source -I ${VSF_PATH}/source/shell/sys/linux/include -I ${VSF_PATH}/source/shell/sys/linux/include/libusb -I ${VSF_PATH}/source/shell/sys/linux/include/simple_libc -fms-extensions -nostdlib -shared -fPIC -z max-page-size=4
+x86_64, compiled on Linux with GCC, run on Windows:
+gcc -o applet main.c -D __CPU_X64__ -D VSF_APPLET_CFG_ABI_PATCH=ENABLED -I . -I ${VSF_PATH}/source -I ${VSF_PATH}/source/shell/sys/linux/include -I ${VSF_PATH}/source/shell/sys/linux/include/libusb -I ${VSF_PATH}/source/shell/sys/linux/include/simple_libc -fms-extensions -nostdlib -shared -fPIC -z max-page-size=4
 
-x86_64, compiled on Linux, TinyCC:
+x86_64, compiled on Linux with TinyCC, run on Linux:
 tcc -o applet main.c -D __CPU_X64__ -I . -I ${VSF_PATH}/source -I ${VSF_PATH}/source/shell/sys/linux/include -I ${VSF_PATH}/source/shell/sys/linux/include/libusb -I ${VSF_PATH}/source/shell/sys/linux/include/simple_libc -fms-extensions -nostdlib -shared -fPIC -Wl,-section-alignment=4
 
-x86_64, compiled on VSF.Linux, TinyCC:
-tcc -o applet main.c -D __CPU_X64__ -I . -I ./include -I ./include/tcc -I ${VSF_PATH}/source -I ${VSF_PATH}/source/shell/sys/linux/include -I ${VSF_PATH}/source/shell/sys/linux/include/libusb -I ${VSF_PATH}/source/shell/sys/linux/include/simple_libc -fms-extensions -nostdlib -shared -fPIC -Wl,-section-alignment=4
+x86_64, compiled on VSF.Linux with TinyCC on Windows, run on Windows:
+tcc -o applet main.c -D __CPU_X64__ -D __WIN__ -I . -I ./include -I ./include/tcc -I ${VSF_PATH}/source -I ${VSF_PATH}/source/shell/sys/linux/include -I ${VSF_PATH}/source/shell/sys/linux/include/libusb -I ${VSF_PATH}/source/shell/sys/linux/include/simple_libc -fms-extensions -nostdlib -shared -fPIC -Wl,-section-alignment=4

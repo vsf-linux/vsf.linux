@@ -17,7 +17,6 @@
 #elif   defined(__CPU_X64__)
 #   define __VSF64__
 
-#   define VSF_APPLET_CFG_ABI_PATCH                     ENABLED
 #   define VSF_OS_CFG_ADD_EVTQ_TO_IDLE                  ENABLED
 #   define VSF_KERNEL_CFG_CPU_USAGE                     DISABLED
 #   define VSF_KERNEL_CFG_EDA_SUPPORT_TIMER             ENABLED
