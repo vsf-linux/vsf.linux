@@ -10,4 +10,4 @@ x86_64, compiled on Linux with TinyCC, run on Linux:
 tcc -o applet main.c -D __CPU_X64__ -I . -I ${VSF_PATH}/source -I ${VSF_PATH}/source/shell/sys/linux/include -I ${VSF_PATH}/source/shell/sys/linux/include/libusb -I ${VSF_PATH}/source/shell/sys/linux/include/simple_libc -fms-extensions -nostdlib -shared -fPIC -Wl,-section-alignment=4
 
 x86_64, compiled on VSF.Linux with TinyCC on Windows, run on Windows:
-tcc -o applet main.c -D __CPU_X64__ -D __WIN__ -I . -I ./include -I ./include/tcc -I ${VSF_PATH}/source -I ${VSF_PATH}/source/shell/sys/linux/include -I ${VSF_PATH}/source/shell/sys/linux/include/libusb -I ${VSF_PATH}/source/shell/sys/linux/include/simple_libc -fms-extensions -nostdlib -shared -fPIC -Wl,-section-alignment=4
+tcc -o applet main.c -D __CPU_X64__ -D __WIN__ -I . -I ./include -I ./include/tcc -I ${VSF_PATH}/source -I ${VSF_PATH}/source/shell/sys/linux/include -I ${VSF_PATH}/source/shell/sys/linux/include/libusb -I ${VSF_PATH}/source/shell/sys/linux/include/simple_libc -fms-extensions -nostdlib -shared -fPIC
