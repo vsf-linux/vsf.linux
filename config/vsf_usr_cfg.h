@@ -48,6 +48,7 @@
 //#   define VSF_ELFLOADER_CFG_DEBUG                      ENABLED
 #   ifdef __WIN__
 #       define VSF_LOADER_USE_PE                        ENABLED
+//#       define VSF_PELOADER_CFG_DEBUG                   ENABLED
 #   endif
 
 #if VSF_AUDIO_USE_WINSOUND == ENABLED || VSF_AUDIO_USE_DUMMY == ENABLED
