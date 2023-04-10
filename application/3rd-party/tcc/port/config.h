@@ -6,11 +6,4 @@
 
 #include <vsf.h>
 
-#ifdef VSF_ARCH_SETJMP
-# define tcc_setjmp     VSF_ARCH_SETJMP
-#endif
-#ifdef VSF_ARCH_LONGJMP
-# define tcc_longjmp    VSF_ARCH_LONGJMP
-#endif
-
 #define CONFIG_TCC_BCHECK 0
