@@ -136,6 +136,7 @@
             "mkdir -p /mnt/vsf_linux",                                          \
             "mount -t " VSF_LINUX_HOSTFS_TYPE " " VSF_LINUX_PATH " /mnt/vsf_linux",\
             "export VSF_PATH=/mnt/vsf_linux/vsf",                               \
+            "export TCC_PATH=/mnt/vsf_linux/application/3rd-party/tcc/raw",     \
             "cd /mnt/vsf_linux/applet",
 #else
 #   define VSF_LINUX_TCC_INIT_SCRIPTS
