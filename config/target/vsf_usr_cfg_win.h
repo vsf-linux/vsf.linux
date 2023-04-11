@@ -85,7 +85,8 @@
 #   define VSF_USE_SIMPLE_SPRINTF                       DISABLED
 #   define VSF_USE_SIMPLE_SWPRINTF                      DISABLED
 #endif
-#   define VSH_CMD_SIZE                                 512
+#   define VSH_CMD_SIZE                                 4096
+#   define VSF_LINUX_CFG_MAX_ARG_NUM                    256
 
 // component configure
 #define VSF_USE_HEAP                                    ENABLED
@@ -103,8 +104,6 @@
 //#endif
 
 #define VSF_USE_TRACE                                   ENABLED
-#define VSF_ASSERT(...)                                 assert(__VA_ARGS__)
-//#define VSF_ASSERT(...)
 #define VSF_HAL_USE_DEBUG_STREAM                        ENABLED
 #define VSF_SYSTIMER_FREQ                               (0ul)
 #define VSF_HAL_USE_RNG                                 ENABLED
