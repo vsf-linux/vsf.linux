@@ -121,9 +121,15 @@
 #   define VSF_LINUX_HOSTFS_TYPE
 #endif
 
-# define VSF_LINUX_HOSTFS_INIT_SCRIPTS                                          \
+#define VSF_LINUX_CFG_PATH                              "/bin:/usr/bin:."
+
+#define VSF_LINUX_HOSTFS_INIT_SCRIPTS                                           \
             "mkdir -p /mnt/hostfs",                                             \
             "mount -t " VSF_LINUX_HOSTFS_TYPE " . /mnt/hostfs",                 \
+            "mkdir -p /usr",                                                    \
+            "mount -t " VSF_LINUX_HOSTFS_TYPE " ./usr /usr",                    \
+            "export TERM=vt100",                                                \
+            "export TERMINFO=/usr/share/terminfo",                              \
             "cd /mnt/hostfs",
 
 #if APP_USE_LINUX_GIT_DEMO == ENABLED
