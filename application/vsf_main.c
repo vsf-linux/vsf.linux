@@ -130,6 +130,10 @@ int vsf_linux_create_fhs(void)
     extern int telnetd_main(int argc, char *argv[]);
     busybox_bind(VSF_LINUX_CFG_BIN_PATH "/telnetd", telnetd_main);
 #endif
+#if APP_USE_LINUX_DYNLOADER_DEMO == ENABLED
+    extern int dynloader_main(int argc, char *argv[]);
+    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/load", dynloader_main);
+#endif
 
 #if APP_USE_LINUX_LESS_DEMO == ENABLED
     extern int less_main(int argc, char *argv[]);
@@ -253,10 +257,6 @@ int vsf_linux_create_fhs(void)
     busybox_bind(VSF_LINUX_CFG_BIN_PATH "/lws-minimal-http-client", lws_minimal_http_client_main);
 #endif
 
-#if VSF_USE_LOADER == ENABLED && VSF_LOADER_USE_ELF == ENABLED && APP_USE_LINUX_DYNLOADER_DEMO == ENABLED
-    extern int dynloader_main(int argc, char *argv[]);
-    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/load", dynloader_main);
-#endif
 #if APP_USE_LINUX_TCC_DEMO == ENABLED
     extern int tcc_main(int argc, char *argv[]);
     busybox_bind(VSF_LINUX_CFG_BIN_PATH "/tcc", tcc_main);

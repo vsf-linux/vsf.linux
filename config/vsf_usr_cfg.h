@@ -43,7 +43,7 @@
 #define VSF_USE_DISTBUS                                 ENABLED
 #define VSF_USE_SIMPLE_STREAM                           ENABLED
 #define VSF_USE_STREAM                                  DISABLED
-#define VSF_USE_LOADER                                  APP_USE_LINUX_DYNLOADER_DEMO
+#define VSF_USE_LOADER                                  ENABLED
 #   define VSF_LOADER_USE_ELF                           ENABLED
 //#   define VSF_ELFLOADER_CFG_DEBUG                      ENABLED
 #   ifdef __WIN__
@@ -100,6 +100,7 @@
 // APP configuration
 #define APP_USE_LINUX_DEMO                              ENABLED
 #define APP_USE_LINUX_MOUNT_DEMO                        ENABLED
+#define APP_USE_LINUX_DYNLOADER_DEMO                    ENABLED
 #if VSF_USE_USB_HOST == ENABLED && VSF_LINUX_USE_LIBUSB == ENABLED
 #   define APP_USE_LINUX_LIBUSB_DEMO                    ENABLED
 #endif

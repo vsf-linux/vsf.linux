@@ -247,6 +247,7 @@
     <ClInclude Include="..\..\vsf\source\service\json\vsf_json.h" />
     <ClInclude Include="..\..\vsf\source\service\loader\elf\elf.h" />
     <ClInclude Include="..\..\vsf\source\service\loader\elf\vsf_elfloader.h" />
+    <ClInclude Include="..\..\vsf\source\service\loader\pe\vsf_peloader.h" />
     <ClInclude Include="..\..\vsf\source\service\loader\vsf_loader.h" />
     <ClInclude Include="..\..\vsf\source\service\pbuf\vsf_pbuf.h" />
     <ClInclude Include="..\..\vsf\source\service\pbuf\vsf_pbuf_pool.h" />
@@ -641,6 +642,7 @@
     <ClCompile Include="..\..\vsf\source\service\loader\elf\arch\vsf_elfloader_arm.c" />
     <ClCompile Include="..\..\vsf\source\service\loader\elf\arch\vsf_elfloader_x64.c" />
     <ClCompile Include="..\..\vsf\source\service\loader\elf\vsf_elfloader.c" />
+    <ClCompile Include="..\..\vsf\source\service\loader\pe\vsf_peloader.c" />
     <ClCompile Include="..\..\vsf\source\service\loader\vsf_loader.c" />
     <ClCompile Include="..\..\vsf\source\service\pbuf\vsf_pbuf.c" />
     <ClCompile Include="..\..\vsf\source\service\pbuf\vsf_pbuf_pool.c" />
