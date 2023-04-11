@@ -122,15 +122,19 @@
 #endif
 
 #define VSF_LINUX_CFG_PATH                              "/bin:/usr/bin:."
-
+#define VSF_LINUX_CFG_INIT_SCRIPT_FILE                  "/home/root/.bashrc"
 #define VSF_LINUX_HOSTFS_INIT_SCRIPTS                                           \
             "mkdir -p /mnt/hostfs",                                             \
             "mount -t " VSF_LINUX_HOSTFS_TYPE " . /mnt/hostfs",                 \
             "mkdir -p /usr",                                                    \
             "mount -t " VSF_LINUX_HOSTFS_TYPE " ./usr /usr",                    \
+            "mkdir -p /home",                                                   \
+            "mount -t " VSF_LINUX_HOSTFS_TYPE " ./home /home",                  \
+            "mkdir -p /etc",                                                    \
+            "mount -t " VSF_LINUX_HOSTFS_TYPE " ./etc /etc",                    \
             "export TERM=vt100",                                                \
             "export TERMINFO=/usr/share/terminfo",                              \
-            "cd /mnt/hostfs",
+            "cd /home/root",
 
 #if APP_USE_LINUX_GIT_DEMO == ENABLED
 #   define VSF_LINUX_GIT_INIT_SCRIPTS                                           \
