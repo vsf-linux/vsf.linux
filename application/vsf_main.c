@@ -261,6 +261,10 @@ int vsf_linux_create_fhs(void)
     extern int tcc_main(int argc, char *argv[]);
     busybox_bind(VSF_LINUX_CFG_BIN_PATH "/tcc", tcc_main);
 #endif
+#if APP_USE_LINUX_MAKE_DEMO == ENABLED
+    extern int make_main(int argc, char *argv[]);
+    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/make", make_main);
+#endif
 
 #if APP_USE_LINUX_XONE_DEMO == ENABLED
     module_usb_driver_init(xone_dongle_driver);
