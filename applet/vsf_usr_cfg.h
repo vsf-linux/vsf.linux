@@ -30,6 +30,7 @@
 #define VSF_USE_FS                                      ENABLED
 #define VSF_USE_SIMPLE_STREAM                           ENABLED
 #define VSF_USE_USB_HOST                                ENABLED
+#define VSF_USE_HEAP                                    ENABLED
 
 // linux
 
