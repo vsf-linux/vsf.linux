@@ -121,7 +121,7 @@
 #   define VSF_LINUX_HOSTFS_TYPE
 #endif
 
-#define VSF_LINUX_CFG_PATH                              "/bin:/usr/bin:."
+#define VSF_LINUX_CFG_PATH                              "/bin:/usr/local/bin:."
 #define VSF_LINUX_CFG_INIT_SCRIPT_FILE                  "/home/root/.bashrc"
 #define VSF_LINUX_HOSTFS_INIT_SCRIPTS                                           \
             "mkdir -p /mnt/hostfs",                                             \
