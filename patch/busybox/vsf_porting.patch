@@ -1,19 +1,20 @@
- editors/awk.c                    |  4 ++--
- include/libbb.h                  | 18 +++++++++++++++++-
- include/platform.h               |  6 +++++-
- libbb/getopt32.c                 | 14 +++++++-------
- libbb/makedev.c                  |  4 +++-
- libbb/u_signal_names.c           |  2 +-
- libbb/xfuncs.c                   |  2 +-
- loginutils/addgroup.c            |  2 +-
- loginutils/adduser.c             |  2 +-
- miscutils/fbsplash.c             |  2 +-
- networking/libiproute/rt_names.c | 20 ++++++++++----------
- networking/libiproute/rtm_map.c  |  2 +-
- networking/netstat.c             |  4 ++--
- networking/tls.c                 |  2 +-
- shell/ash.c                      |  2 +-
- 15 files changed, 54 insertions(+), 32 deletions(-)
+ editors/awk.c                    |   4 +-
+ include/libbb.h                  |  18 ++++++-
+ include/platform.h               |   6 ++-
+ init/init.c                      | 101 +++++++++++++++++++++++++++++++++++++++
+ libbb/getopt32.c                 |  14 +++---
+ libbb/makedev.c                  |   4 +-
+ libbb/u_signal_names.c           |   2 +-
+ libbb/xfuncs.c                   |   2 +-
+ loginutils/addgroup.c            |   2 +-
+ loginutils/adduser.c             |   2 +-
+ miscutils/fbsplash.c             |   2 +-
+ networking/libiproute/rt_names.c |  20 ++++----
+ networking/libiproute/rtm_map.c  |   2 +-
+ networking/netstat.c             |   4 +-
+ networking/tls.c                 |   2 +-
+ shell/ash.c                      |   2 +-
+ 16 files changed, 155 insertions(+), 32 deletions(-)
 
 diff --git a/editors/awk.c b/editors/awk.c
 index 728ee8685..b3b52f106 100644
@@ -105,6 +106,135 @@ index ea0512f36..7b0acfa99 100644
  # ifndef __attribute__
  #  define __attribute__(x)
  # endif
+diff --git a/init/init.c b/init/init.c
+index 1e1ce833d..3b0de78ef 100644
+--- a/init/init.c
++++ b/init/init.c
+@@ -476,6 +476,104 @@ static void init_exec(const char *command)
+ }
+ 
+ /* Used only by run_actions */
++#ifdef __VSF__
++
++#define __VSF_LINUX_CLASS_INHERIT__
++#include <unistd.h>
++#include <spawn.h>
++
++extern int __vsf_linux_spawn(pid_t *pid, vsf_linux_main_entry_t entry,
++                const posix_spawn_file_actions_t *actions,
++                const posix_spawnattr_t *attr,
++                char * const argv[], char * const env[]);
++
++static int __action_process(int argc, char *argv[])
++{
++	const struct init_action *a = (const struct init_action *)strtoull(argv[0], NULL, 16);
++
++	/* Reset signal handlers that were set by the parent process */
++	reset_sighandlers_and_unblock_sigs();
++
++	/* Create a new session and make ourself the process group leader */
++	setsid();
++
++	/* Open the new terminal device */
++	if (!open_stdio_to_tty(a->terminal))
++		_exit(EXIT_FAILURE);
++
++	/* NB: on NOMMU we can't wait for input in child, so
++	 * "askfirst" will work the same as "respawn". */
++	if (BB_MMU && (a->action_type & ASKFIRST)) {
++		static const char press_enter[] ALIGN1 =
++#ifdef CUSTOMIZED_BANNER
++#include CUSTOMIZED_BANNER
++#endif
++			"\nPlease press Enter to activate this console. ";
++		char c;
++		/*
++		 * Save memory by not exec-ing anything large (like a shell)
++		 * before the user wants it. This is critical if swap is not
++		 * enabled and the system has low memory. Generally this will
++		 * be run on the second virtual console, and the first will
++		 * be allowed to start a shell or whatever an init script
++		 * specifies.
++		 */
++		dbg_message(L_LOG, "waiting for enter to start '%s'"
++					"(pid %d, tty '%s')\n",
++				a->command, getpid(), a->terminal);
++		full_write(STDOUT_FILENO, press_enter, sizeof(press_enter) - 1);
++		while (safe_read(STDIN_FILENO, &c, 1) == 1 && c != '\n')
++			continue;
++	}
++
++	/*
++	 * When a file named /.init_enable_core exists, setrlimit is called
++	 * before processes are spawned to set core file size as unlimited.
++	 * This is for debugging only.  Don't use this is production, unless
++	 * you want core dumps lying about....
++	 */
++	if (ENABLE_FEATURE_INIT_COREDUMPS) {
++		if (access("/.init_enable_core", F_OK) == 0) {
++			struct rlimit limit;
++			limit.rlim_cur = RLIM_INFINITY;
++			limit.rlim_max = RLIM_INFINITY;
++			setrlimit(RLIMIT_CORE, &limit);
++		}
++	}
++
++	/* Log the process name and args */
++	message(L_LOG, "starting pid %u, tty '%s': '%s'",
++			(int)getpid(), a->terminal, a->command);
++
++	/* Now run it.  The new program will take over this PID,
++	 * so nothing further in init.c should be run. */
++	if (a->command[0] == '-') {
++		init_exec(a->command + 1);
++	} else {
++		init_exec(a->command);
++	}
++	/* We're still here?  Some error happened. */
++	_exit(-1);
++}
++
++static pid_t run(const struct init_action *a)
++{
++	char str_action_addr[32];
++	sprintf(str_action_addr, "%llx", (uint64_t)a);
++	
++	char *argv[] = {
++		str_action_addr,
++		NULL,
++	};
++	pid_t pid = -1;
++	if ((__vsf_linux_spawn(&pid, __action_process, NULL, NULL, (char * const *)argv, NULL) < 0) || (pid < 0)) {
++		message(L_LOG | L_CONSOLE, "can't spawn");
++		return -1;
++	}
++	return pid;
++}
++
++#else
+ static pid_t run(const struct init_action *a)
+ {
+ 	pid_t pid;
+@@ -552,6 +650,7 @@ static pid_t run(const struct init_action *a)
+ 	/* We're still here?  Some error happened. */
+ 	_exit(-1);
+ }
++#endif
+ 
+ static struct init_action *mark_terminated(pid_t pid)
+ {
+@@ -682,9 +781,11 @@ static void parse_inittab(void)
+ 		/* Askfirst shell on tty1-4 */
+ 		new_init_action(ASKFIRST, bb_default_login_shell, "");
+ //TODO: VC_1 instead of ""? "" is console -> ctty problems -> angry users
++#ifndef __VSF__
+ 		new_init_action(ASKFIRST, bb_default_login_shell, VC_2);
+ 		new_init_action(ASKFIRST, bb_default_login_shell, VC_3);
+ 		new_init_action(ASKFIRST, bb_default_login_shell, VC_4);
++#endif
+ 		/* Reboot on Ctrl-Alt-Del */
+ 		new_init_action(CTRLALTDEL, "reboot", "");
+ 		/* Umount all filesystems on halt/reboot */
 diff --git a/libbb/getopt32.c b/libbb/getopt32.c
 index e861d0567..eb6ec7159 100644
 --- a/libbb/getopt32.c
@@ -371,10 +501,10 @@ index 8d074c058..52d56fded 100644
  
  static void tls_aesgcm_decrypt(tls_state_t *tls, uint8_t *buf, int size)
 diff --git a/shell/ash.c b/shell/ash.c
-index 5f8c8ea19..a862872a5 100644
+index 18ccc1329..832924b4e 100644
 --- a/shell/ash.c
 +++ b/shell/ash.c
-@@ -11715,7 +11715,7 @@ getopts(char *optstr, char *optvar, char **optfirst)
+@@ -11714,7 +11714,7 @@ getopts(char *optstr, char *optvar, char **optfirst)
  		setvar0("OPTARG", nullstr);
   out:
  	ind = optnext - optfirst + 1;

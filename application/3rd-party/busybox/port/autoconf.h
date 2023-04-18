@@ -2,7 +2,7 @@
  * Automatically generated C config: don't edit
  * Busybox version: 1.37.0.git
  */
-#define AUTOCONF_TIMESTAMP "2023-04-18 20:08:36 CST"
+#define AUTOCONF_TIMESTAMP "2023-04-19 01:11:36 CST"
 
 #define CONFIG_HAVE_DOT_CONFIG 1
 #define ENABLE_HAVE_DOT_CONFIG 1
@@ -1696,10 +1696,14 @@
 # define IF_MKFIFO(...) __VA_ARGS__
 #endif
 #define IF_NOT_MKFIFO(...)
-#undef CONFIG_MKNOD
-#define ENABLE_MKNOD 0
-#define IF_MKNOD(...)
-#define IF_NOT_MKNOD(...) __VA_ARGS__
+#define CONFIG_MKNOD 1
+#define ENABLE_MKNOD 1
+#ifdef MAKE_SUID
+# define IF_MKNOD(...) __VA_ARGS__ "CONFIG_MKNOD"
+#else
+# define IF_MKNOD(...) __VA_ARGS__
+#endif
+#define IF_NOT_MKNOD(...)
 #define CONFIG_MKTEMP 1
 #define ENABLE_MKTEMP 1
 #ifdef MAKE_SUID
@@ -3112,14 +3116,10 @@
 # define IF_FEATURE_INIT_SCTTY(...) __VA_ARGS__
 #endif
 #define IF_NOT_FEATURE_INIT_SCTTY(...)
-#define CONFIG_FEATURE_INIT_SYSLOG 1
-#define ENABLE_FEATURE_INIT_SYSLOG 1
-#ifdef MAKE_SUID
-# define IF_FEATURE_INIT_SYSLOG(...) __VA_ARGS__ "CONFIG_FEATURE_INIT_SYSLOG"
-#else
-# define IF_FEATURE_INIT_SYSLOG(...) __VA_ARGS__
-#endif
-#define IF_NOT_FEATURE_INIT_SYSLOG(...)
+#undef CONFIG_FEATURE_INIT_SYSLOG
+#define ENABLE_FEATURE_INIT_SYSLOG 0
+#define IF_FEATURE_INIT_SYSLOG(...)
+#define IF_NOT_FEATURE_INIT_SYSLOG(...) __VA_ARGS__
 #define CONFIG_FEATURE_INIT_QUIET 1
 #define ENABLE_FEATURE_INIT_QUIET 1
 #ifdef MAKE_SUID
