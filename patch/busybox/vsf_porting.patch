@@ -1,0 +1,385 @@
+ editors/awk.c                    |  4 ++--
+ include/libbb.h                  | 18 +++++++++++++++++-
+ include/platform.h               |  6 +++++-
+ libbb/getopt32.c                 | 14 +++++++-------
+ libbb/makedev.c                  |  4 +++-
+ libbb/u_signal_names.c           |  2 +-
+ libbb/xfuncs.c                   |  2 +-
+ loginutils/addgroup.c            |  2 +-
+ loginutils/adduser.c             |  2 +-
+ miscutils/fbsplash.c             |  2 +-
+ networking/libiproute/rt_names.c | 20 ++++++++++----------
+ networking/libiproute/rtm_map.c  |  2 +-
+ networking/netstat.c             |  4 ++--
+ networking/tls.c                 |  2 +-
+ shell/ash.c                      |  2 +-
+ 15 files changed, 54 insertions(+), 32 deletions(-)
+
+diff --git a/editors/awk.c b/editors/awk.c
+index 728ee8685..b3b52f106 100644
+--- a/editors/awk.c
++++ b/editors/awk.c
+@@ -991,7 +991,7 @@ static void setari_u(var *a, int idx, const char *s)
+ {
+ 	var *v;
+ 
+-	v = findvar(iamarray(a), itoa(idx));
++	v = findvar(iamarray(a), busybox_itoa(idx));
+ 	setvar_u(v, s);
+ }
+ 
+@@ -3264,7 +3264,7 @@ static var *evaluate(node *op, var *res)
+ # endif
+ 				R_d = (double)v / 0x8000000000000000ULL;
+ #else
+-# error Not implemented for this value of RAND_MAX
++				R_d = (double)rand() / (RAND_MAX + 1);
+ #endif
+ 				break;
+ 			}
+diff --git a/include/libbb.h b/include/libbb.h
+index cca33a177..4954400c5 100644
+--- a/include/libbb.h
++++ b/include/libbb.h
+@@ -55,6 +55,20 @@
+ #include <sys/param.h>
+ #include <pwd.h>
+ #include <grp.h>
++
++#ifdef __VSF__
++# include <getopt.h>
++
++// remove __reserved in sal.h from M$
++# ifdef __reserved
++#  undef __reserved
++# endif
++
++# ifndef SIGWINCH
++#  define SIGWINCH 28
++# endif
++#endif
++
+ #if ENABLE_FEATURE_SHADOWPASSWDS
+ # if !ENABLE_USE_BB_SHADOW
+ /* If using busybox's shadow implementation, do not include the shadow.h
+@@ -182,7 +196,9 @@
+ 
+ /* Some libc's forget to declare these, do it ourself */
+ 
++#ifndef __VSF__
+ extern char **environ;
++#endif
+ /* klogctl is in libc's klog.h, but we cheat and not #include that */
+ int klogctl(int type, char *b, int len);
+ #ifndef PATH_MAX
+@@ -1085,7 +1101,7 @@ char *safe_gethostname(void) FAST_FUNC;
+ char* str_tolower(char *str) FAST_FUNC;
+ 
+ char *utoa(unsigned n) FAST_FUNC;
+-char *itoa(int n) FAST_FUNC;
++char *busybox_itoa(int n) FAST_FUNC;
+ /* Returns a pointer past the formatted number, does NOT null-terminate */
+ char *utoa_to_buf(unsigned n, char *buf, unsigned buflen) FAST_FUNC;
+ char *itoa_to_buf(int n, char *buf, unsigned buflen) FAST_FUNC;
+diff --git a/include/platform.h b/include/platform.h
+index ea0512f36..7b0acfa99 100644
+--- a/include/platform.h
++++ b/include/platform.h
+@@ -7,6 +7,10 @@
+ #ifndef BB_PLATFORM_H
+ #define BB_PLATFORM_H 1
+ 
++#ifdef __VSF__
++# include "autoconf.h"
++# undef UNICODE
++#endif
+ 
+ /* Convenience macros to test the version of gcc. */
+ #undef __GNUC_PREREQ
+@@ -24,7 +28,7 @@
+ # endif
+ #endif
+ 
+-#if !__GNUC_PREREQ(2,7)
++#if !__GNUC_PREREQ(2,7) && !defined(__VSF__)
+ # ifndef __attribute__
+ #  define __attribute__(x)
+ # endif
+diff --git a/libbb/getopt32.c b/libbb/getopt32.c
+index e861d0567..eb6ec7159 100644
+--- a/libbb/getopt32.c
++++ b/libbb/getopt32.c
+@@ -311,7 +311,7 @@ typedef struct {
+ 	unsigned switch_off;
+ 	unsigned incongruously;
+ 	unsigned requires;
+-	void **optarg;  /* char**, llist_t** or int *. */
++	void **poptarg;  /* char**, llist_t** or int *. */
+ 	int *counter;
+ } t_complementary;
+ 
+@@ -383,7 +383,7 @@ vgetopt32(char **argv, const char *applet_opts, const char *applet_long_options,
+ 		on_off->opt_char = *s;
+ 		on_off->switch_on = (1U << c);
+ 		if (*++s == ':') {
+-			on_off->optarg = va_arg(p, void **);
++			on_off->poptarg = va_arg(p, void **);
+ 			if (s[1] == '+' || s[1] == '*') {
+ 				/* 'o:+' or 'o:*' */
+ 				on_off->param_type = (s[1] == '+') ?
+@@ -433,7 +433,7 @@ vgetopt32(char **argv, const char *applet_opts, const char *applet_long_options,
+ 			on_off->opt_char = l_o->val;
+ 			on_off->switch_on = (1U << c);
+ 			if (l_o->has_arg != no_argument)
+-				on_off->optarg = va_arg(p, void **);
++				on_off->poptarg = va_arg(p, void **);
+ 			c++;
+  next_long: ;
+ 		}
+@@ -561,12 +561,12 @@ vgetopt32(char **argv, const char *applet_opts, const char *applet_long_options,
+ 			(*(on_off->counter))++;
+ 		if (optarg) {
+ 			if (on_off->param_type == PARAM_LIST) {
+-				llist_add_to_end((llist_t **)(on_off->optarg), optarg);
++				llist_add_to_end((llist_t **)(on_off->poptarg), optarg);
+ 			} else if (on_off->param_type == PARAM_INT) {
+ //TODO: xatoi_positive indirectly pulls in printf machinery
+-				*(unsigned*)(on_off->optarg) = xatoi_positive(optarg);
+-			} else if (on_off->optarg) {
+-				*(char **)(on_off->optarg) = optarg;
++				*(unsigned*)(on_off->poptarg) = xatoi_positive(optarg);
++			} else if (on_off->poptarg) {
++				*(char **)(on_off->poptarg) = optarg;
+ 			}
+ 		}
+ 	}
+diff --git a/libbb/makedev.c b/libbb/makedev.c
+index 06c4039a3..d4a5c9e10 100644
+--- a/libbb/makedev.c
++++ b/libbb/makedev.c
+@@ -14,7 +14,9 @@
+  || defined(__APPLE__)
+ # include <sys/types.h>
+ #else
+-# include <features.h>
++# ifndef __VSF__
++#  include <features.h>
++# endif
+ # include <sys/sysmacros.h>
+ #endif
+ 
+diff --git a/libbb/u_signal_names.c b/libbb/u_signal_names.c
+index f7d598c7a..b76618d04 100644
+--- a/libbb/u_signal_names.c
++++ b/libbb/u_signal_names.c
+@@ -238,7 +238,7 @@ const char* FAST_FUNC get_signame(int number)
+ 			return signals[number];
+ 	}
+ 
+-	return itoa(number);
++	return busybox_itoa(number);
+ }
+ 
+ 
+diff --git a/libbb/xfuncs.c b/libbb/xfuncs.c
+index 465e5366c..23cc21df4 100644
+--- a/libbb/xfuncs.c
++++ b/libbb/xfuncs.c
+@@ -121,7 +121,7 @@ char* FAST_FUNC utoa(unsigned n)
+ }
+ 
+ /* Convert signed integer to ascii using a static buffer (returned). */
+-char* FAST_FUNC itoa(int n)
++char* FAST_FUNC busybox_itoa(int n)
+ {
+ 	*(itoa_to_buf(n, local_buf, sizeof(local_buf) - 1)) = '\0';
+ 
+diff --git a/loginutils/addgroup.c b/loginutils/addgroup.c
+index 2a83c8a15..62af88c43 100644
+--- a/loginutils/addgroup.c
++++ b/loginutils/addgroup.c
+@@ -76,7 +76,7 @@ static void xgroup_study(struct group *g)
+ 		}
+ 		if (option_mask32 & OPT_GID) {
+ 			/* -g N, cannot pick gid other than N: error */
+-			bb_error_msg_and_die("%s '%s' in use", "gid", itoa(g->gr_gid));
++			bb_error_msg_and_die("%s '%s' in use", "gid", busybox_itoa(g->gr_gid));
+ 			/* this format strings is reused in adduser and addgroup */
+ 		}
+ 		if (g->gr_gid == max) {
+diff --git a/loginutils/adduser.c b/loginutils/adduser.c
+index d3c795afa..d491531b9 100644
+--- a/loginutils/adduser.c
++++ b/loginutils/adduser.c
+@@ -110,7 +110,7 @@ static void passwd_study(struct passwd *p)
+ 	while (getpwuid(p->pw_uid) || (p->pw_gid == (gid_t)-1 && getgrgid(p->pw_uid))) {
+ 		if (option_mask32 & OPT_UID) {
+ 			/* -u N, cannot pick uid other than N: error */
+-			bb_error_msg_and_die("%s '%s' in use", "uid", itoa(p->pw_uid));
++			bb_error_msg_and_die("%s '%s' in use", "uid", busybox_itoa(p->pw_uid));
+ 			/* this format string is reused in adduser and addgroup */
+ 		}
+ 		if (p->pw_uid == max) {
+diff --git a/miscutils/fbsplash.c b/miscutils/fbsplash.c
+index 2934d8eb7..8d9ba6c5c 100644
+--- a/miscutils/fbsplash.c
++++ b/miscutils/fbsplash.c
+@@ -555,7 +555,7 @@ int fbsplash_main(int argc UNUSED_PARAM, char **argv)
+ 		num = atoi(num_buf);
+ 		if (isdigit(num_buf[0]) && (num <= 100)) {
+ #if DEBUG
+-			DEBUG_MESSAGE(itoa(num));
++			DEBUG_MESSAGE(busybox_itoa(num));
+ #endif
+ 			fb_drawprogressbar(num);
+ 		}
+diff --git a/networking/libiproute/rt_names.c b/networking/libiproute/rt_names.c
+index 3c2fad912..5999f3b8d 100644
+--- a/networking/libiproute/rt_names.c
++++ b/networking/libiproute/rt_names.c
+@@ -104,14 +104,14 @@ static void rtnl_rtprot_initialize(void)
+ const char* FAST_FUNC rtnl_rtprot_n2a(int id)
+ {
+ 	if (id < 0 || id > RT_TABLE_MAX) {
+-		return itoa(id);
++		return busybox_itoa(id);
+ 	}
+ 
+ 	rtnl_rtprot_initialize();
+ 
+ 	if (rtnl_rtprot_tab->tab[id])
+ 		return rtnl_rtprot_tab->tab[id];
+-	return itoa(id);
++	return busybox_itoa(id);
+ }
+ #endif
+ 
+@@ -140,14 +140,14 @@ static void rtnl_rtscope_initialize(void)
+ const char* FAST_FUNC rtnl_rtscope_n2a(int id)
+ {
+ 	if (id < 0 || id > RT_TABLE_MAX) {
+-		return itoa(id);
++		return busybox_itoa(id);
+ 	}
+ 
+ 	rtnl_rtscope_initialize();
+ 
+ 	if (rtnl_rtscope_tab->tab[id])
+ 		return rtnl_rtscope_tab->tab[id];
+-	return itoa(id);
++	return busybox_itoa(id);
+ }
+ 
+ int FAST_FUNC rtnl_rtscope_a2n(uint32_t *id, char *arg)
+@@ -177,14 +177,14 @@ int FAST_FUNC rtnl_rtrealm_a2n(uint32_t *id, char *arg)
+ const char* FAST_FUNC rtnl_rtrealm_n2a(int id)
+ {
+ 	if (id < 0 || id > RT_TABLE_MAX) {
+-		return itoa(id);
++		return busybox_itoa(id);
+ 	}
+ 
+ 	rtnl_rtrealm_initialize();
+ 
+ 	if (rtnl_rtrealm_tab->tab[id])
+ 		return rtnl_rtrealm_tab->tab[id];
+-	return itoa(id);
++	return busybox_itoa(id);
+ }
+ #endif
+ 
+@@ -202,14 +202,14 @@ static void rtnl_rtdsfield_initialize(void)
+ const char* FAST_FUNC rtnl_dsfield_n2a(int id)
+ {
+ 	if (id < 0 || id > RT_TABLE_MAX) {
+-		return itoa(id);
++		return busybox_itoa(id);
+ 	}
+ 
+ 	rtnl_rtdsfield_initialize();
+ 
+ 	if (rtnl_rtdsfield_tab->tab[id])
+ 		return rtnl_rtdsfield_tab->tab[id];
+-	return itoa(id);
++	return busybox_itoa(id);
+ }
+ 
+ int FAST_FUNC rtnl_dsfield_a2n(uint32_t *id, char *arg)
+@@ -238,14 +238,14 @@ static void rtnl_rttable_initialize(void)
+ const char* FAST_FUNC rtnl_rttable_n2a(int id)
+ {
+ 	if (id < 0 || id > RT_TABLE_MAX) {
+-		return itoa(id);
++		return busybox_itoa(id);
+ 	}
+ 
+ 	rtnl_rttable_initialize();
+ 
+ 	if (rtnl_rttable_tab->tab[id])
+ 		return rtnl_rttable_tab->tab[id];
+-	return itoa(id);
++	return busybox_itoa(id);
+ }
+ 
+ int FAST_FUNC rtnl_rttable_a2n(uint32_t *id, char *arg)
+diff --git a/networking/libiproute/rtm_map.c b/networking/libiproute/rtm_map.c
+index 8b94c2f24..a3746f9f9 100644
+--- a/networking/libiproute/rtm_map.c
++++ b/networking/libiproute/rtm_map.c
+@@ -61,7 +61,7 @@ const char* FAST_FUNC rtnl_rtntype_n2a(int id)
+ 	case RTN_XRESOLVE:
+ 		return str_xresolve;
+ 	default:
+-		return itoa(id);
++		return busybox_itoa(id);
+ 	}
+ }
+ 
+diff --git a/networking/netstat.c b/networking/netstat.c
+index 807800a62..82889307d 100644
+--- a/networking/netstat.c
++++ b/networking/netstat.c
+@@ -386,7 +386,7 @@ static const char *get_sname(int port, const char *proto, int numeric)
+ 			return se->s_name;
+ 	}
+ 	/* hummm, we may return static buffer here!! */
+-	return itoa(ntohs(port));
++	return busybox_itoa(ntohs(port));
+ }
+ 
+ static char *ip_port_str(struct sockaddr *addr, int port, const char *proto, int numeric)
+@@ -539,7 +539,7 @@ static int FAST_FUNC raw_do_one(char *line)
+ 		return 1;
+ 
+ 	have_remaddr = NOT_NULL_ADDR(param.remaddr);
+-	print_inet_line(&param, itoa(param.state), "raw", have_remaddr);
++	print_inet_line(&param, busybox_itoa(param.state), "raw", have_remaddr);
+ 	return 0;
+ }
+ 
+diff --git a/networking/tls.c b/networking/tls.c
+index 8d074c058..52d56fded 100644
+--- a/networking/tls.c
++++ b/networking/tls.c
+@@ -990,7 +990,7 @@ static const char *alert_text(int code)
+ 	case 80:  return "internal error";
+ 	case 112: return "unrecognized name";
+ 	}
+-	return itoa(code);
++	return busybox_itoa(code);
+ }
+ 
+ static void tls_aesgcm_decrypt(tls_state_t *tls, uint8_t *buf, int size)
+diff --git a/shell/ash.c b/shell/ash.c
+index 5f8c8ea19..a862872a5 100644
+--- a/shell/ash.c
++++ b/shell/ash.c
+@@ -11715,7 +11715,7 @@ getopts(char *optstr, char *optvar, char **optfirst)
+ 		setvar0("OPTARG", nullstr);
+  out:
+ 	ind = optnext - optfirst + 1;
+-	setvar("OPTIND", itoa(ind), VNOFUNC);
++	setvar("OPTIND", busybox_itoa(ind), VNOFUNC);
+ 	sbuf[0] = c;
+ 	/*sbuf[1] = '\0'; - already is */
+ 	setvar0(optvar, sbuf);
