@@ -60,7 +60,9 @@ int vsf_linux_create_fhs(void)
 {
     // 0. devfs, busybox, etc
     vsf_linux_vfs_init();
+#if VSF_LINUX_USE_BUSYBOX == ENABLED
     busybox_install();
+#endif
 
     // 1. hardware driver related demo
     vsf_board_init();
@@ -95,6 +97,16 @@ int vsf_linux_create_fhs(void)
     };
     vsf_linux_fs_bind_input("/dev/event/input2", &__event_notifier_touchscreen);
 #endif
+#if VSF_USE_SDL2 == ENABLED
+    *(vk_disp_color_type_t *)&usrapp_ui_common.disp->param.color = VSF_SDL2_CFG_COLOR;
+    vsf_sdl2_cfg_t cfg = {
+        .disp_dev = usrapp_ui_common.disp,
+#   if VSF_USE_AUDIO == ENABLED
+        .audio_dev = usrapp_audio_common.default_dev,
+#   endif
+    };
+    vsf_sdl2_init(&cfg);
+#endif
 #if APP_USE_LINUX_XONE_DEMO == ENABLED
     vsf_linux_usb_init(&usrapp_usbh_common.host);
     system_wq = create_workqueue("system_wq");
@@ -108,73 +120,64 @@ int vsf_linux_create_fhs(void)
     // 3. install executables
 #if VSF_USE_LWIP == ENABLED && !defined(__AIC8800__)
     extern int lwip_main(int argc, char *argv[]);
-    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/lwip", lwip_main);
+    vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/lwip", lwip_main);
 #endif
 #if VSF_USE_USB_HOST == ENABLED && VSF_LINUX_USE_LIBUSB == ENABLED && APP_USE_LINUX_LIBUSB_DEMO == ENABLED
     extern int lsusb_main(int argc, char *argv[]);
-    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/lsusb", lsusb_main);
+    vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/lsusb", lsusb_main);
 #   if APP_USE_LIBUVC_DEMO == ENABLED
     extern int uvc_main(int argc, char *argv[]);
-    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/uvc", uvc_main);
+    vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/uvc", uvc_main);
 #   endif
 #endif
 #if APP_USE_LINUX_MOUNT_DEMO == ENABLED
     extern int mount_main(int argc, char *argv[]);
-    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/mount", mount_main);
+    vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/mount", mount_main);
 #endif
 #if APP_USE_LINUX_NTPDATE_DEMO == ENABLED
     extern int ntpdate_main(int argc, char *argv[]);
-    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/ntpdate", ntpdate_main);
+    vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/ntpdate", ntpdate_main);
 #endif
-#if APP_USE_LINUX_TELNETD_DEMO == ENABLED
+#if APP_USE_LINUX_TELNETD_DEMO == ENABLED && VSF_LINUX_USE_BUSYBOX == ENABLED
     extern int telnetd_main(int argc, char *argv[]);
-    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/telnetd", telnetd_main);
+    vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/telnetd", telnetd_main);
 #endif
 #if APP_USE_LINUX_DYNLOADER_DEMO == ENABLED
     extern int dynloader_main(int argc, char *argv[]);
-    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/load", dynloader_main);
+    vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/load", dynloader_main);
 #endif
 
 #if APP_USE_LINUX_LESS_DEMO == ENABLED
     extern int less_main(int argc, char *argv[]);
-    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/less", less_main);
+    vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/less", less_main);
 #endif
 #if APP_USE_LINUX_CURL_DEMO == ENABLED
     extern int curl_main(int argc, char *argv[]);
-    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/curl", curl_main);
+    vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/curl", curl_main);
 #endif
 #if APP_USE_LINUX_GIT_DEMO == ENABLED
     extern int git_main(int argc, char **argv);
-    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/git", git_main);
-    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/git-remote-https", git_main);
-    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/git-remote-http", git_main);
+    vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/git", git_main);
+    vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/git-remote-https", git_main);
+    vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/git-remote-http", git_main);
 #endif
 #if APP_USE_WAMR_DEMO == ENABLED
     extern int iwasm_main(int argc, char *argv[]);
-    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/iwasm", iwasm_main);
+    vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/iwasm", iwasm_main);
 #endif
 #if APP_USE_OPENOCD_DEMO == ENABLED
     extern int openocd_main(int argc, char *argv[]);
-    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/openocd", openocd_main);
+    vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/openocd", openocd_main);
 #endif
 #if APP_USE_XFEL_DEMO == ENABLED
     extern int xfel_main(int argc, char *argv[]);
-    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/xfel", xfel_main);
+    vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/xfel", xfel_main);
 #endif
 
 #if VSF_USE_SDL2 == ENABLED
-    *(vk_disp_color_type_t *)&usrapp_ui_common.disp->param.color = VSF_SDL2_CFG_COLOR;
-    vsf_sdl2_cfg_t cfg = {
-        .disp_dev = usrapp_ui_common.disp,
-#if VSF_USE_AUDIO == ENABLED
-        .audio_dev = usrapp_audio_common.default_dev,
-#endif
-    };
-    vsf_sdl2_init(&cfg);
-
 #if APP_USE_LUA_DEMO == ENABLED
     extern int lua_main(int argc, char *argv[]);
-    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/lua", lua_main);
+    vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/lua", lua_main);
 
 #   if APP_USE_LUA_DEMO_LITE == ENABLED
     usrapp_ui_common.disp->ui_data = vsf_eda_get_cur();
@@ -183,58 +186,58 @@ int vsf_linux_create_fhs(void)
     vsf_thread_wfe(VSF_EVT_USER);
 
     extern int lite_main(int argc, char **argv);
-    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/lite", lite_main);
+    vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/lite", lite_main);
 #   endif
 #endif
 
 #if APP_USE_8086TINY_DEMO == ENABLED
     extern int x8086tiny_main(int argc, char **argv);
-    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/8086tiny", x8086tiny_main);
+    vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/8086tiny", x8086tiny_main);
 #endif
 
 #if APP_USE_SDLPAL_DEMO == ENABLED
-    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/sdlpal", __sdlpal_main);
+    vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/sdlpal", __sdlpal_main);
 #endif
 #if APP_USE_DUNGEONRUSH_DEMO == ENABLED
     extern int dung_main(int argc, char **argv);
-    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/dung", dung_main);
+    vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/dung", dung_main);
 #endif
 #if APP_USE_GNUBOY_DEMO == ENABLED
     extern int gnuboy_main(int argc, char **argv);
-    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/gnuboy", gnuboy_main);
+    vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/gnuboy", gnuboy_main);
 #endif
 #if APP_USE_NOFRENDO_DEMO == ENABLED
     extern int nofrendo_main(int argc, char **argv);
-    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/nofrendo", nofrendo_main);
+    vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/nofrendo", nofrendo_main);
 #endif
 #if APP_USE_MGBA_DEMO == ENABLED
     extern int mgba_main(int argc, char **argv);
-    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/mgba", mgba_main);
+    vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/mgba", mgba_main);
 #endif
 #if APP_USE_BOCHS_DEMO == ENABLED
     extern int bochs_main(int argc, char **argv);
-    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/bochs", bochs_main);
+    vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/bochs", bochs_main);
 #endif
 #if APP_USE_SDLVNC_DEMO == ENABLED
     extern int sdlvnc_main(int argc, char **argv);
-    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/sdlvnc", sdlvnc_main);
+    vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/sdlvnc", sdlvnc_main);
 #endif
 #if APP_USE_FFMPEG_DEMO == ENABLED
     extern int ffplay_main(int argc, char **argv);
-    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/ffplay", ffplay_main);
+    vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/ffplay", ffplay_main);
 #endif
 #endif      // VSF_USE_SDL2
 
 #if VSF_USE_QUICKJS == ENABLED
 #if APP_USE_MEUI_DEMO == ENABLED
     extern int meui_main(int argc, char **argv);
-    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/meui", meui_main);
+    vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/meui", meui_main);
 #endif
 #endif
 
 #if APP_USE_AUDIO_DEMO == ENABLED
     extern int audio_play_main(int argc, char *argv[]);
-    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/play_audio", audio_play_main);
+    vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/play_audio", audio_play_main);
 #endif
 #if APP_USE_QT_DEMO == ENABLED
     extern int qt_main(int argc, char *argv[]);
@@ -243,7 +246,7 @@ int vsf_linux_create_fhs(void)
     putenv("QT_QPA_EVDEV_MOUSE_PARAMETERS=/dev/event/input1");
     putenv("QT_QPA_EVDEV_TOUCHSCREEN_PARAMETERS=/dev/event/input2");
     putenv("QT_QPA_FONTDIR=/mnt/hostfs/qt/lib/fonts");
-    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/qt_demo", qt_main);
+    vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/qt_demo", qt_main);
 #endif
 
 #if APP_USE_LWS_DEMO == ENABLED
@@ -254,16 +257,16 @@ int vsf_linux_create_fhs(void)
         fwrite(dns_cfg, strlen(dns_cfg), 1, f);
     }
     extern int lws_minimal_http_client_main(int argc, char *argv[]);
-    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/lws-minimal-http-client", lws_minimal_http_client_main);
+    vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/lws-minimal-http-client", lws_minimal_http_client_main);
 #endif
 
 #if APP_USE_LINUX_TCC_DEMO == ENABLED
     extern int tcc_main(int argc, char *argv[]);
-    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/tcc", tcc_main);
+    vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/tcc", tcc_main);
 #endif
 #if APP_USE_LINUX_MAKE_DEMO == ENABLED
     extern int make_main(int argc, char *argv[]);
-    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/make", make_main);
+    vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/make", make_main);
 #endif
 
 #if APP_USE_LINUX_XONE_DEMO == ENABLED
@@ -272,7 +275,13 @@ int vsf_linux_create_fhs(void)
 #endif
 #if APP_USE_USRAPP == ENABLED
     extern int usr_main(int argc, char *argv[]);
-    busybox_bind(VSF_LINUX_CFG_BIN_PATH "/app", usr_main);
+    vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/app", usr_main);
+#endif
+
+#if APP_USE_LINUX_BUSYBOX_DEMO == ENABLED
+    extern int lbb_main(int argc, char *argv[]);
+    vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/init", lbb_main);
+    vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/sh", lbb_main);
 #endif
     return 0;
 }

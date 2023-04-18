@@ -82,7 +82,11 @@
 
 #define VSF_USE_LINUX                                   ENABLED
 #   define VSF_USE_POSIX                                ENABLED
-#   define VSF_LINUX_USE_BUSYBOX                        ENABLED
+#   if APP_USE_LINUX_BUSYBOX_DEMO == ENABLED
+#       define VSF_LINUX_USE_BUSYBOX                    DISABLED
+#   else
+#       define VSF_LINUX_USE_BUSYBOX                    ENABLED
+#   endif
 #   define VSF_LINUX_USE_SOCKET                         ENABLED
 #       define VSF_LINUX_SOCKET_USE_UNIX                ENABLED
 #       define VSF_LINUX_SOCKET_USE_INET                VSF_USE_TCPIP

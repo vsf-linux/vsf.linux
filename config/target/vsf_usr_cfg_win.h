@@ -23,8 +23,7 @@
 
 /*============================ INCLUDES ======================================*/
 
-#define __VSF_HEADER_ONLY_SHOW_COMPILER_INFO__
-#include "utilities/compiler/compiler.h"
+#include "utilities/compiler/compiler_detect.h"
 
 /*============================ MACROS ========================================*/
 
