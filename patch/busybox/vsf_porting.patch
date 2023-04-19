@@ -1,20 +1,21 @@
- editors/awk.c                    |   4 +-
- include/libbb.h                  |  18 ++++++-
- include/platform.h               |   6 ++-
- init/init.c                      | 101 +++++++++++++++++++++++++++++++++++++++
- libbb/getopt32.c                 |  14 +++---
- libbb/makedev.c                  |   4 +-
- libbb/u_signal_names.c           |   2 +-
- libbb/xfuncs.c                   |   2 +-
- loginutils/addgroup.c            |   2 +-
- loginutils/adduser.c             |   2 +-
- miscutils/fbsplash.c             |   2 +-
- networking/libiproute/rt_names.c |  20 ++++----
- networking/libiproute/rtm_map.c  |   2 +-
- networking/netstat.c             |   4 +-
- networking/tls.c                 |   2 +-
- shell/ash.c                      |   2 +-
- 16 files changed, 155 insertions(+), 32 deletions(-)
+ editors/awk.c                    |  4 +-
+ include/libbb.h                  | 18 +++++++-
+ include/platform.h               |  6 ++-
+ init/init.c                      | 95 ++++++++++++++++++++++++++++++++++++++
+ libbb/getopt32.c                 | 14 +++---
+ libbb/makedev.c                  |  4 +-
+ libbb/u_signal_names.c           |  2 +-
+ libbb/xfuncs.c                   |  2 +-
+ loginutils/addgroup.c            |  2 +-
+ loginutils/adduser.c             |  2 +-
+ miscutils/fbsplash.c             |  2 +-
+ networking/libiproute/rt_names.c | 20 ++++----
+ networking/libiproute/rtm_map.c  |  2 +-
+ networking/netstat.c             |  4 +-
+ networking/tls.c                 |  2 +-
+ shell/ash.c                      |  2 +-
+ shell/hush.c                     | 99 ++++++++++++++++++++++++++++++++++++++++
+ 17 files changed, 248 insertions(+), 32 deletions(-)
 
 diff --git a/editors/awk.c b/editors/awk.c
 index 728ee8685..b3b52f106 100644
@@ -107,10 +108,10 @@ index ea0512f36..7b0acfa99 100644
  #  define __attribute__(x)
  # endif
 diff --git a/init/init.c b/init/init.c
-index 1e1ce833d..3b0de78ef 100644
+index 1e1ce833d..51fdbaec2 100644
 --- a/init/init.c
 +++ b/init/init.c
-@@ -476,6 +476,104 @@ static void init_exec(const char *command)
+@@ -476,6 +476,98 @@ static void init_exec(const char *command)
  }
  
  /* Used only by run_actions */
@@ -123,11 +124,12 @@ index 1e1ce833d..3b0de78ef 100644
 +extern int __vsf_linux_spawn(pid_t *pid, vsf_linux_main_entry_t entry,
 +                const posix_spawn_file_actions_t *actions,
 +                const posix_spawnattr_t *attr,
-+                char * const argv[], char * const env[]);
++                char * const argv[], char * const env[], void *priv, int priv_size);
++extern void * __vsf_linux_get_process_priv(vsf_linux_process_t *process);
 +
 +static int __action_process(int argc, char *argv[])
 +{
-+	const struct init_action *a = (const struct init_action *)strtoull(argv[0], NULL, 16);
++	const struct init_action *a = *(const struct init_action **)__vsf_linux_get_process_priv(NULL);
 +
 +	/* Reset signal handlers that were set by the parent process */
 +	reset_sighandlers_and_unblock_sigs();
@@ -196,15 +198,8 @@ index 1e1ce833d..3b0de78ef 100644
 +
 +static pid_t run(const struct init_action *a)
 +{
-+	char str_action_addr[32];
-+	sprintf(str_action_addr, "%llx", (uint64_t)a);
-+	
-+	char *argv[] = {
-+		str_action_addr,
-+		NULL,
-+	};
 +	pid_t pid = -1;
-+	if ((__vsf_linux_spawn(&pid, __action_process, NULL, NULL, (char * const *)argv, NULL) < 0) || (pid < 0)) {
++	if ((__vsf_linux_spawn(&pid, __action_process, NULL, NULL, NULL, NULL, (void *)a, sizeof(a)) < 0) || (pid < 0)) {
 +		message(L_LOG | L_CONSOLE, "can't spawn");
 +		return -1;
 +	}
@@ -215,7 +210,7 @@ index 1e1ce833d..3b0de78ef 100644
  static pid_t run(const struct init_action *a)
  {
  	pid_t pid;
-@@ -552,6 +650,7 @@ static pid_t run(const struct init_action *a)
+@@ -552,6 +644,7 @@ static pid_t run(const struct init_action *a)
  	/* We're still here?  Some error happened. */
  	_exit(-1);
  }
@@ -223,7 +218,7 @@ index 1e1ce833d..3b0de78ef 100644
  
  static struct init_action *mark_terminated(pid_t pid)
  {
-@@ -682,9 +781,11 @@ static void parse_inittab(void)
+@@ -682,9 +775,11 @@ static void parse_inittab(void)
  		/* Askfirst shell on tty1-4 */
  		new_init_action(ASKFIRST, bb_default_login_shell, "");
  //TODO: VC_1 instead of ""? "" is console -> ctty problems -> angry users
@@ -513,3 +508,127 @@ index 18ccc1329..832924b4e 100644
  	sbuf[0] = c;
  	/*sbuf[1] = '\0'; - already is */
  	setvar0(optvar, sbuf);
+diff --git a/shell/hush.c b/shell/hush.c
+index d111f0cc5..35f916245 100644
+--- a/shell/hush.c
++++ b/shell/hush.c
+@@ -9229,6 +9229,93 @@ static int redirect_and_varexp_helper(
+ 
+ 	return setup_redirects(command, sqp);
+ }
++
++#ifdef __VSF__
++
++#include <spawn.h>
++
++extern int __vsf_linux_spawn(pid_t *pid, vsf_linux_main_entry_t entry,
++                const posix_spawn_file_actions_t *actions,
++                const posix_spawnattr_t *attr,
++                char * const argv[], char * const env[], void *priv, int priv_size);
++extern void * __vsf_linux_get_process_priv(vsf_linux_process_t *process);
++
++struct pipe_process_priv {
++	int next_infd;
++	struct fd_pair pipefds;
++	struct pipe *pi;
++	struct command *command;
++	volatile nommu_save_t nommu_save;
++	char **argv_expanded;
++};
++
++static NOINLINE int pipe_process(int argc, char *argv[])
++{
++	struct pipe_process_priv *priv = __vsf_linux_get_process_priv(NULL);
++	int next_infd = priv->next_infd;
++	struct fd_pair pipefds = priv->pipefds;
++	struct pipe *pi = priv->pi;
++	struct command *command = priv->command;
++	volatile nommu_save_t nommu_save = priv->nommu_save;
++
++#if ENABLE_HUSH_JOB
++	disable_restore_tty_pgrp_on_exit();
++	CLEAR_RANDOM_T(&G.random_gen); /* or else $RANDOM repeats in child */
++
++	/* Every child adds itself to new process group
++	 * with pgid == pid_of_first_child_in_pipe */
++	if (G.run_list_level == 1 && G_interactive_fd) {
++		pid_t pgrp;
++		pgrp = pi->pgrp;
++		if (pgrp < 0) /* true for 1st process only */
++			pgrp = getpid();
++		if (setpgid(0, pgrp) == 0
++		 && pi->followup != PIPE_BG
++		 && G_saved_tty_pgrp /* we have ctty */
++		) {
++			/* We do it in *every* child, not just first,
++			 * to avoid races */
++			tcsetpgrp(G_interactive_fd, pgrp);
++		}
++	}
++#endif
++	if (pi->alive_cmds == 0 && pi->followup == PIPE_BG) {
++		/* 1st cmd in backgrounded pipe
++		 * should have its stdin /dev/null'ed */
++		close(0);
++		if (open(bb_dev_null, O_RDONLY))
++			xopen("/", O_RDONLY);
++	} else {
++		xmove_fd(next_infd, 0);
++	}
++	xmove_fd(pipefds.wr, 1);
++	if (pipefds.rd > 1)
++		close(pipefds.rd);
++	/* Like bash, explicit redirects override pipes,
++	 * and the pipe fd (fd#1) is available for dup'ing:
++	 * "cmd1 2>&1 | cmd2": fd#1 is duped to fd#2, thus stderr
++	 * of cmd1 goes into pipe.
++	 */
++	if (setup_redirects(command, NULL)) {
++		/* Happens when redir file can't be opened:
++		 * $ hush -c 'echo FOO >&2 | echo BAR 3>/qwe/rty; echo BAZ'
++		 * FOO
++		 * hush: can't open '/qwe/rty': No such file or directory
++		 * BAZ
++		 * (echo BAR is not executed, it hits _exit(1) below)
++		 */
++		_exit(1);
++	}
++
++	/* Stores to nommu_save list of env vars putenv'ed
++	 * (NOMMU, on MMU we don't need that) */
++	/* cast away volatility... */
++	pseudo_exec((nommu_save_t*) &nommu_save, command, argv);
++	/* pseudo_exec() does not return */
++}
++
++#endif
++
+ static NOINLINE int run_pipe(struct pipe *pi)
+ {
+ 	static const char *const null_ptr = NULL;
+@@ -9584,6 +9671,17 @@ static NOINLINE int run_pipe(struct pipe *pi)
+ 		G.execute_lineno = command->lineno;
+ #endif
+ 
++#ifdef __VSF__
++		struct pipe_process_priv priv = {
++			.next_infd		= next_infd,
++			.pipefds		= pipefds,
++			.pi				= pi,
++			.command		= command,
++			.nommu_save		= nommu_save,
++		};
++		command->pid = -1;
++		__vsf_linux_spawn(&command->pid, pipe_process, NULL, NULL, argv_expanded, NULL, &priv, sizeof(priv));
++#else
+ 		command->pid = BB_MMU ? fork() : vfork();
+ 		if (!command->pid) { /* child */
+ #if ENABLE_HUSH_JOB
+@@ -9641,6 +9739,7 @@ static NOINLINE int run_pipe(struct pipe *pi)
+ 			pseudo_exec((nommu_save_t*) &nommu_save, command, argv_expanded);
+ 			/* pseudo_exec() does not return */
+ 		}
++#endif
+ 
+ 		/* parent or error */
+ #if ENABLE_HUSH_FAST
