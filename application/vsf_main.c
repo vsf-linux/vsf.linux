@@ -282,6 +282,8 @@ int vsf_linux_create_fhs(void)
     extern int lbb_main(int argc, char *argv[]);
     vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/init", lbb_main);
     vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/sh", lbb_main);
+    vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/ls", lbb_main);
+    vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/cd", lbb_main);
 #endif
     return 0;
 }
