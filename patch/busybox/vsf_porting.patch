@@ -1,21 +1,21 @@
- editors/awk.c                    |  4 +-
- include/libbb.h                  | 18 +++++++-
- include/platform.h               |  6 ++-
- init/init.c                      | 95 ++++++++++++++++++++++++++++++++++++++
- libbb/getopt32.c                 | 14 +++---
- libbb/makedev.c                  |  4 +-
- libbb/u_signal_names.c           |  2 +-
- libbb/xfuncs.c                   |  2 +-
- loginutils/addgroup.c            |  2 +-
- loginutils/adduser.c             |  2 +-
- miscutils/fbsplash.c             |  2 +-
- networking/libiproute/rt_names.c | 20 ++++----
- networking/libiproute/rtm_map.c  |  2 +-
- networking/netstat.c             |  4 +-
- networking/tls.c                 |  2 +-
- shell/ash.c                      |  2 +-
- shell/hush.c                     | 99 ++++++++++++++++++++++++++++++++++++++++
- 17 files changed, 248 insertions(+), 32 deletions(-)
+ editors/awk.c                    |   4 +-
+ include/libbb.h                  |  18 ++++++-
+ include/platform.h               |   6 ++-
+ init/init.c                      | 103 +++++++++++++++++++++++++++++++++++++++
+ libbb/getopt32.c                 |  14 +++---
+ libbb/makedev.c                  |   4 +-
+ libbb/u_signal_names.c           |   2 +-
+ libbb/xfuncs.c                   |   2 +-
+ loginutils/addgroup.c            |   2 +-
+ loginutils/adduser.c             |   2 +-
+ miscutils/fbsplash.c             |   2 +-
+ networking/libiproute/rt_names.c |  20 ++++----
+ networking/libiproute/rtm_map.c  |   2 +-
+ networking/netstat.c             |   4 +-
+ networking/tls.c                 |   2 +-
+ shell/ash.c                      |   2 +-
+ shell/hush.c                     |  99 +++++++++++++++++++++++++++++++++++++
+ 17 files changed, 256 insertions(+), 32 deletions(-)
 
 diff --git a/editors/awk.c b/editors/awk.c
 index 728ee8685..b3b52f106 100644
@@ -108,10 +108,10 @@ index ea0512f36..7b0acfa99 100644
  #  define __attribute__(x)
  # endif
 diff --git a/init/init.c b/init/init.c
-index 1e1ce833d..51fdbaec2 100644
+index 1e1ce833d..4e438155b 100644
 --- a/init/init.c
 +++ b/init/init.c
-@@ -476,6 +476,98 @@ static void init_exec(const char *command)
+@@ -476,6 +476,106 @@ static void init_exec(const char *command)
  }
  
  /* Used only by run_actions */
@@ -127,9 +127,14 @@ index 1e1ce833d..51fdbaec2 100644
 +                char * const argv[], char * const env[], void *priv, int priv_size);
 +extern void * __vsf_linux_get_process_priv(vsf_linux_process_t *process);
 +
++struct action_process_ctx {
++	const struct init_action *a;
++};
++
 +static int __action_process(int argc, char *argv[])
 +{
-+	const struct init_action *a = *(const struct init_action **)__vsf_linux_get_process_priv(NULL);
++	struct action_process_ctx *ctx = (struct action_process_ctx *)__vsf_linux_get_process_priv(NULL);
++	const struct init_action *a = ctx->a;
 +
 +	/* Reset signal handlers that were set by the parent process */
 +	reset_sighandlers_and_unblock_sigs();
@@ -198,8 +203,11 @@ index 1e1ce833d..51fdbaec2 100644
 +
 +static pid_t run(const struct init_action *a)
 +{
++	struct action_process_ctx ctx = {
++		.a	= a,
++	};
 +	pid_t pid = -1;
-+	if ((__vsf_linux_spawn(&pid, __action_process, NULL, NULL, NULL, NULL, (void *)a, sizeof(a)) < 0) || (pid < 0)) {
++	if ((__vsf_linux_spawn(&pid, __action_process, NULL, NULL, NULL, NULL, (void *)&ctx, sizeof(ctx)) < 0) || (pid < 0)) {
 +		message(L_LOG | L_CONSOLE, "can't spawn");
 +		return -1;
 +	}
@@ -210,7 +218,7 @@ index 1e1ce833d..51fdbaec2 100644
  static pid_t run(const struct init_action *a)
  {
  	pid_t pid;
-@@ -552,6 +644,7 @@ static pid_t run(const struct init_action *a)
+@@ -552,6 +652,7 @@ static pid_t run(const struct init_action *a)
  	/* We're still here?  Some error happened. */
  	_exit(-1);
  }
@@ -218,7 +226,7 @@ index 1e1ce833d..51fdbaec2 100644
  
  static struct init_action *mark_terminated(pid_t pid)
  {
-@@ -682,9 +775,11 @@ static void parse_inittab(void)
+@@ -682,9 +783,11 @@ static void parse_inittab(void)
  		/* Askfirst shell on tty1-4 */
  		new_init_action(ASKFIRST, bb_default_login_shell, "");
  //TODO: VC_1 instead of ""? "" is console -> ctty problems -> angry users
