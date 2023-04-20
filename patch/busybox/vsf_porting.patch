@@ -1,7 +1,7 @@
  editors/awk.c                    |   4 +-
  include/libbb.h                  | 133 ++++++++++++++++++++++++++++++++++++++-
  include/platform.h               |   6 +-
- init/init.c                      | 103 ++++++++++++++++++++++++++++++
+ init/init.c                      | 105 +++++++++++++++++++++++++++++++
  libbb/appletlib.c                |   2 +
  libbb/auto_string.c              |   5 ++
  libbb/bbunit.c                   |   6 ++
@@ -31,8 +31,8 @@
  networking/netstat.c             |   4 +-
  networking/tls.c                 |   2 +-
  shell/ash.c                      |   2 +-
- shell/hush.c                     | 104 ++++++++++++++++++++++++++++++
- 34 files changed, 441 insertions(+), 32 deletions(-)
+ shell/hush.c                     | 106 +++++++++++++++++++++++++++++++
+ 34 files changed, 445 insertions(+), 32 deletions(-)
 
 diff --git a/editors/awk.c b/editors/awk.c
 index 728ee8685..b3b52f106 100644
@@ -328,10 +328,10 @@ index ea0512f36..7b0acfa99 100644
  #  define __attribute__(x)
  # endif
 diff --git a/init/init.c b/init/init.c
-index 1e1ce833d..432379c73 100644
+index 1e1ce833d..5b8f77d81 100644
 --- a/init/init.c
 +++ b/init/init.c
-@@ -476,6 +476,106 @@ static void init_exec(const char *command)
+@@ -476,6 +476,108 @@ static void init_exec(const char *command)
  }
  
  /* Used only by run_actions */
@@ -356,7 +356,9 @@ index 1e1ce833d..432379c73 100644
 +	struct __busybox_libbb_ctx *lbb_ctx = (struct __busybox_libbb_ctx *)__vsf_linux_get_process_priv(NULL);
 +	struct action_process_ctx *ctx = (struct action_process_ctx *)lbb_ctx->__args.buffer;
 +	const struct init_action *a = ctx->a;
-+	vsf_linux_dynlib_ctx_set(&vsf_busybox_mod_name(libbb), lbb_ctx);
++
++	declare_vsf_busybox_mod(libbb_fork);
++	vsf_linux_dynlib_ctx_set(&vsf_busybox_mod_name(libbb_fork), lbb_ctx);
 +
 +	/* Reset signal handlers that were set by the parent process */
 +	reset_sighandlers_and_unblock_sigs();
@@ -438,7 +440,7 @@ index 1e1ce833d..432379c73 100644
  static pid_t run(const struct init_action *a)
  {
  	pid_t pid;
-@@ -552,6 +652,7 @@ static pid_t run(const struct init_action *a)
+@@ -552,6 +654,7 @@ static pid_t run(const struct init_action *a)
  	/* We're still here?  Some error happened. */
  	_exit(-1);
  }
@@ -446,7 +448,7 @@ index 1e1ce833d..432379c73 100644
  
  static struct init_action *mark_terminated(pid_t pid)
  {
-@@ -682,9 +783,11 @@ static void parse_inittab(void)
+@@ -682,9 +785,11 @@ static void parse_inittab(void)
  		/* Askfirst shell on tty1-4 */
  		new_init_action(ASKFIRST, bb_default_login_shell, "");
  //TODO: VC_1 instead of ""? "" is console -> ctty problems -> angry users
@@ -1037,10 +1039,10 @@ index 18ccc1329..832924b4e 100644
  	/*sbuf[1] = '\0'; - already is */
  	setvar0(optvar, sbuf);
 diff --git a/shell/hush.c b/shell/hush.c
-index d111f0cc5..4df6e273b 100644
+index d111f0cc5..db90194bc 100644
 --- a/shell/hush.c
 +++ b/shell/hush.c
-@@ -9229,6 +9229,95 @@ static int redirect_and_varexp_helper(
+@@ -9229,6 +9229,97 @@ static int redirect_and_varexp_helper(
  
  	return setup_redirects(command, sqp);
  }
@@ -1073,7 +1075,9 @@ index d111f0cc5..4df6e273b 100644
 +	struct pipe *pi = priv->pi;
 +	struct command *command = priv->command;
 +	volatile nommu_save_t nommu_save = priv->nommu_save;
-+	vsf_linux_dynlib_ctx_set(&vsf_busybox_mod_name(libbb), lbb_ctx);
++
++	declare_vsf_busybox_mod(libbb_fork);
++	vsf_linux_dynlib_ctx_set(&vsf_busybox_mod_name(libbb_fork), lbb_ctx);
 +
 +#if ENABLE_HUSH_JOB
 +	disable_restore_tty_pgrp_on_exit();
@@ -1136,7 +1140,7 @@ index d111f0cc5..4df6e273b 100644
  static NOINLINE int run_pipe(struct pipe *pi)
  {
  	static const char *const null_ptr = NULL;
-@@ -9584,6 +9673,20 @@ static NOINLINE int run_pipe(struct pipe *pi)
+@@ -9584,6 +9675,20 @@ static NOINLINE int run_pipe(struct pipe *pi)
  		G.execute_lineno = command->lineno;
  #endif
  
@@ -1157,7 +1161,7 @@ index d111f0cc5..4df6e273b 100644
  		command->pid = BB_MMU ? fork() : vfork();
  		if (!command->pid) { /* child */
  #if ENABLE_HUSH_JOB
-@@ -9641,6 +9744,7 @@ static NOINLINE int run_pipe(struct pipe *pi)
+@@ -9641,6 +9746,7 @@ static NOINLINE int run_pipe(struct pipe *pi)
  			pseudo_exec((nommu_save_t*) &nommu_save, command, argv_expanded);
  			/* pseudo_exec() does not return */
  		}

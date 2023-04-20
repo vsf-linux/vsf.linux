@@ -17,5 +17,6 @@ static void __busybox_libbb_init(void *ctx)
     mod_ctx->verror_msg.syslog_level = LOG_ERR;
 }
 define_vsf_busybox_mod(libbb, sizeof(struct __busybox_libbb_ctx), VSF_BUSYBOX_MOD_LIBBB, __busybox_libbb_init)
+define_vsf_busybox_mod(libbb_fork, 0, VSF_BUSYBOX_MOD_LIBBB, NULL)
 
 #endif      // __VSF__
