@@ -280,6 +280,7 @@ int vsf_linux_create_fhs(void)
 
 #if APP_USE_LINUX_BUSYBOX_DEMO == ENABLED
     extern int lbb_main(int argc, char *argv[]);
+    vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/busybox", lbb_main);
     vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/init", lbb_main);
     vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/sh", lbb_main);
     vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/ls", lbb_main);
