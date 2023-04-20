@@ -1,21 +1,38 @@
  editors/awk.c                    |   4 +-
- include/libbb.h                  |  18 ++++++-
- include/platform.h               |   6 ++-
- init/init.c                      | 103 +++++++++++++++++++++++++++++++++++++++
- libbb/getopt32.c                 |  14 +++---
+ include/libbb.h                  | 130 ++++++++++++++++++++++++++++++++++++++-
+ include/platform.h               |   6 +-
+ init/init.c                      | 102 ++++++++++++++++++++++++++++++
+ libbb/appletlib.c                |   2 +
+ libbb/auto_string.c              |   5 ++
+ libbb/bbunit.c                   |   6 ++
+ libbb/common_bufsiz.c            |   2 +
+ libbb/crc32.c                    |   2 +
+ libbb/default_error_retval.c     |   2 +
+ libbb/getopt32.c                 |  16 ++---
+ libbb/hash_md5_sha.c             |   4 ++
+ libbb/inet_common.c              |   7 +++
+ libbb/inode_hash.c               |   4 ++
+ libbb/lineedit.c                 |   4 ++
+ libbb/lineedit_ptr_hack.c        |   2 +
  libbb/makedev.c                  |   4 +-
+ libbb/pidfile.c                  |   2 +
+ libbb/procps.c                   |   4 ++
+ libbb/ptr_to_globals.c           |   2 +
+ libbb/pw_encrypt.c               |   5 ++
+ libbb/signals.c                  |   2 +
  libbb/u_signal_names.c           |   2 +-
- libbb/xfuncs.c                   |   2 +-
+ libbb/verror_msg.c               |   4 ++
+ libbb/xfuncs.c                   |   6 +-
  loginutils/addgroup.c            |   2 +-
  loginutils/adduser.c             |   2 +-
  miscutils/fbsplash.c             |   2 +-
- networking/libiproute/rt_names.c |  20 ++++----
+ networking/libiproute/rt_names.c |  20 +++---
  networking/libiproute/rtm_map.c  |   2 +-
  networking/netstat.c             |   4 +-
  networking/tls.c                 |   2 +-
  shell/ash.c                      |   2 +-
- shell/hush.c                     |  99 +++++++++++++++++++++++++++++++++++++
- 17 files changed, 256 insertions(+), 32 deletions(-)
+ shell/hush.c                     | 102 ++++++++++++++++++++++++++++++
+ 34 files changed, 435 insertions(+), 32 deletions(-)
 
 diff --git a/editors/awk.c b/editors/awk.c
 index 728ee8685..b3b52f106 100644
@@ -40,16 +57,17 @@ index 728ee8685..b3b52f106 100644
  				break;
  			}
 diff --git a/include/libbb.h b/include/libbb.h
-index cca33a177..4954400c5 100644
+index cca33a177..8ed9bd653 100644
 --- a/include/libbb.h
 +++ b/include/libbb.h
-@@ -55,6 +55,20 @@
+@@ -55,6 +55,21 @@
  #include <sys/param.h>
  #include <pwd.h>
  #include <grp.h>
 +
 +#ifdef __VSF__
 +# include <getopt.h>
++# include "vsf_porting/libbb_dynlib.h"
 +
 +// remove __reserved in sal.h from M$
 +# ifdef __reserved
@@ -64,7 +82,7 @@ index cca33a177..4954400c5 100644
  #if ENABLE_FEATURE_SHADOWPASSWDS
  # if !ENABLE_USE_BB_SHADOW
  /* If using busybox's shadow implementation, do not include the shadow.h
-@@ -182,7 +196,9 @@
+@@ -182,7 +197,9 @@
  
  /* Some libc's forget to declare these, do it ourself */
  
@@ -74,7 +92,105 @@ index cca33a177..4954400c5 100644
  /* klogctl is in libc's klog.h, but we cheat and not #include that */
  int klogctl(int type, char *b, int len);
  #ifndef PATH_MAX
-@@ -1085,7 +1101,7 @@ char *safe_gethostname(void) FAST_FUNC;
+@@ -383,10 +400,85 @@ struct BUG_off_t_size_is_misdetected {
+ # define BB_GLOBAL_CONST const
+ #endif
+ 
++#ifdef __VSF__
++struct globals;
++struct addr;
++struct ino_dev_hash_bucket_struct;
++typedef struct cache_t cache_t;
++struct lineedit_statics;
++struct const_des_ctx;
++struct des_ctx;
++typedef struct llist_t {
++	struct llist_t *link;
++	char *data;
++} llist_t;
++struct __busybox_libbb_ctx {
++	int * bb_errno;
++	const char *applet_name;
++	smallint bb_got_signal;
++	bool re_execed;
++	uint32_t option_mask32;
++	smallint wrote_pidfile;
++	const char *msg_eol;
++	smallint logmode;
++	uint8_t xfunc_error_retval;
++	uint32_t *global_crc32_table;
++	struct globals *ptr_to_globals;
++	char bb_common_bufsiz1[1024];
++
++	// verror_msg.c
++	struct {
++		smallint syslog_level;
++	} verror_msg;
++	// bbunit.c
++	struct {
++		llist_t *tests;
++		unsigned tests_registered;
++		int test_retval;
++	} bbunit;
++	struct {
++		char *saved[4];
++		uint8_t cur_saved;
++	} auto_string;
++#if ENABLE_SHA1_HWACCEL || ENABLE_SHA256_HWACCEL
++	struct {
++		smallint shaNI;
++	} hash_md5_sha;
++#endif
++	struct {
++		struct {
++			struct addr *cache;
++		} fn_INET_rresolve;
++	} inet_common;
++	struct {
++		struct ino_dev_hash_bucket_struct **ino_dev_hashtable;
++	} inode_hash;
++	struct {
++		struct lineedit_statics *lineedit_ptr_to_statics;
++	} lineedit_ptr_hack;
++	struct {
++		cache_t *cache_user_group;
++	} procps;
++	struct {
++		struct const_des_ctx *des_cctx;
++		struct des_ctx *des_ctx;
++	} pw_encrypt;
++	struct {
++		char local_buf[sizeof(int) * 3];
++	} xfuncs;
++};
++declare_vsf_busybox_mod(libbb)
++# define libbb_ctx ((struct __busybox_libbb_ctx *)vsf_linux_dynlib_ctx(&vsf_busybox_mod_name(libbb)))
++#endif
++
+ #if defined(errno)
+ /* If errno is a define, assume it's "define errno (*__errno_location())"
+  * and we will cache it's result in this variable */
++# ifdef __VSF__
++#  define bb_errno (libbb_ctx->bb_errno)
++# else
+ extern int *BB_GLOBAL_CONST bb_errno;
++# endif
+ # undef errno
+ # define errno (*bb_errno)
+ # define bb_cached_errno_ptr 1
+@@ -637,7 +729,11 @@ int sigprocmask_allsigs(int how) FAST_FUNC;
+ /* Return old set in the same set: */
+ int sigprocmask2(int how, sigset_t *set) FAST_FUNC;
+ /* Standard handler which just records signo */
++# ifdef __VSF__
++# define bb_got_signal (libbb_ctx->bb_got_signal)
++#else
+ extern smallint bb_got_signal;
++#endif
+ void record_signo(int signo); /* not FAST_FUNC! */
+ 
+ 
+@@ -1085,7 +1181,7 @@ char *safe_gethostname(void) FAST_FUNC;
  char* str_tolower(char *str) FAST_FUNC;
  
  char *utoa(unsigned n) FAST_FUNC;
@@ -83,6 +199,107 @@ index cca33a177..4954400c5 100644
  /* Returns a pointer past the formatted number, does NOT null-terminate */
  char *utoa_to_buf(unsigned n, char *buf, unsigned buflen) FAST_FUNC;
  char *itoa_to_buf(int n, char *buf, unsigned buflen) FAST_FUNC;
+@@ -1318,7 +1414,11 @@ enum {
+ # define bb_daemonize_or_rexec(flags, argv) bb_daemonize_or_rexec(flags)
+ # define bb_daemonize(flags)                bb_daemonize_or_rexec(flags, bogus)
+ #else
++# ifdef __VSF__
++#  define re_execed (libbb_ctx->re_execed)
++# else
+   extern bool re_execed;
++# endif
+   /* Note: re_exec() and fork_or_rexec() do argv[0][0] |= 0x80 on NOMMU!
+    * _Parent_ needs to undo it if it doesn't want to have argv[0] mangled.
+    */
+@@ -1343,7 +1443,11 @@ int sanitize_env_if_suid(void) FAST_FUNC;
+ void make_all_argv_opts(char **argv) FAST_FUNC;
+ char* single_argv(char **argv) FAST_FUNC;
+ extern const char *const bb_argv_dash[]; /* { "-", NULL } */
++# ifdef __VSF__
++#  define option_mask32 (libbb_ctx->option_mask32)
++# else
+ extern uint32_t option_mask32;
++# endif
+ uint32_t getopt32(char **argv, const char *applet_opts, ...) FAST_FUNC;
+ # define No_argument "\0"
+ # define Required_argument "\001"
+@@ -1380,10 +1484,12 @@ uint32_t getopt32long(char **argv, const char *optstring, const char *longopts,
+  * of "llist-compatible" structs, and using llist_FOO functions
+  * on them.
+  */
++#ifndef __VSF__
+ typedef struct llist_t {
+ 	struct llist_t *link;
+ 	char *data;
+ } llist_t;
++#endif
+ void llist_add_to(llist_t **old_head, void *data) FAST_FUNC;
+ void llist_add_to_end(llist_t **list_head, void *data) FAST_FUNC;
+ void *llist_pop(llist_t **elm) FAST_FUNC;
+@@ -1399,7 +1505,11 @@ llist_t *llist_find_str(llist_t *first, const char *str) FAST_FUNC;
+  * to create pidfiles regardless of FEATURE_PIDFILE */
+ #if ENABLE_FEATURE_PIDFILE || defined(WANT_PIDFILE)
+ /* True only if we created pidfile which is *file*, not /dev/null etc */
++# ifdef __VSF__
++#  define wrote_pidfile (libbb_ctx->wrote_pidfile)
++# else
+ extern smallint wrote_pidfile;
++# endif
+ void write_pidfile(const char *path) FAST_FUNC;
+ void write_pidfile_std_path_and_ext(const char *path) FAST_FUNC;
+ void remove_pidfile_std_path_and_ext(const char *path) FAST_FUNC;
+@@ -1418,9 +1528,15 @@ enum {
+ 	LOGMODE_SYSLOG = (1 << 1) * ENABLE_FEATURE_SYSLOG,
+ 	LOGMODE_BOTH = LOGMODE_SYSLOG + LOGMODE_STDIO,
+ };
++#ifdef __VSF__
++# define msg_eol (libbb_ctx->msg_eol)
++# define logmode (libbb_ctx->logmode)
++# define xfunc_error_retval (libbb_ctx->xfunc_error_retval)
++#else
+ extern const char *msg_eol;
+ extern smallint logmode;
+ extern uint8_t xfunc_error_retval;
++#endif
+ extern void (*die_func)(void);
+ void xfunc_die(void) NORETURN FAST_FUNC;
+ void bb_show_usage(void) NORETURN FAST_FUNC;
+@@ -2189,7 +2305,11 @@ enum {
+ 	SHA3_OUTSIZE   = 28,
+ };
+ 
++#ifdef __VSF__
++# define global_crc32_table (libbb_ctx->global_crc32_table)
++#else
+ extern uint32_t *global_crc32_table;
++#endif
+ uint32_t *crc32_filltable(uint32_t *tbl256, int endian) FAST_FUNC;
+ uint32_t *crc32_new_table_le(void) FAST_FUNC;
+ uint32_t *global_crc32_new_table_le(void) FAST_FUNC;
+@@ -2228,7 +2348,11 @@ unsigned ubi_devnum_from_devname(const char *str) FAST_FUNC;
+ int ubi_get_volid_by_name(unsigned ubi_devnum, const char *vol_name) FAST_FUNC;
+ 
+ 
++#ifdef __VSF__
++# define applet_name (libbb_ctx->applet_name)
++#else
+ extern const char *applet_name;
++#endif
+ 
+ /* Some older linkers don't perform string merging, we used to have common strings
+  * as global arrays to do it by hand. But:
+@@ -2294,7 +2418,11 @@ struct globals;
+ /* '*const' ptr makes gcc optimize code much better.
+  * Magic prevents ptr_to_globals from going into rodata.
+  * If you want to assign a value, use SET_PTR_TO_GLOBALS(x) */
++#ifdef __VSF__
++# define ptr_to_globals (libbb_ctx->ptr_to_globals)
++#else
+ extern struct globals *BB_GLOBAL_CONST ptr_to_globals;
++#endif
+ 
+ #define barrier() asm volatile ("":::"memory")
+ 
 diff --git a/include/platform.h b/include/platform.h
 index ea0512f36..7b0acfa99 100644
 --- a/include/platform.h
@@ -108,10 +325,10 @@ index ea0512f36..7b0acfa99 100644
  #  define __attribute__(x)
  # endif
 diff --git a/init/init.c b/init/init.c
-index 1e1ce833d..4e438155b 100644
+index 1e1ce833d..0e7bd827d 100644
 --- a/init/init.c
 +++ b/init/init.c
-@@ -476,6 +476,106 @@ static void init_exec(const char *command)
+@@ -476,6 +476,105 @@ static void init_exec(const char *command)
  }
  
  /* Used only by run_actions */
@@ -128,12 +345,14 @@ index 1e1ce833d..4e438155b 100644
 +extern void * __vsf_linux_get_process_priv(vsf_linux_process_t *process);
 +
 +struct action_process_ctx {
++	struct __busybox_libbb_ctx lbb_ctx;
 +	const struct init_action *a;
 +};
 +
 +static int __action_process(int argc, char *argv[])
 +{
 +	struct action_process_ctx *ctx = (struct action_process_ctx *)__vsf_linux_get_process_priv(NULL);
++	*libbb_ctx = ctx->lbb_ctx;
 +	const struct init_action *a = ctx->a;
 +
 +	/* Reset signal handlers that were set by the parent process */
@@ -192,11 +411,7 @@ index 1e1ce833d..4e438155b 100644
 +
 +	/* Now run it.  The new program will take over this PID,
 +	 * so nothing further in init.c should be run. */
-+	if (a->command[0] == '-') {
-+		init_exec(a->command + 1);
-+	} else {
-+		init_exec(a->command);
-+	}
++	init_exec(a->command);
 +	/* We're still here?  Some error happened. */
 +	_exit(-1);
 +}
@@ -204,7 +419,8 @@ index 1e1ce833d..4e438155b 100644
 +static pid_t run(const struct init_action *a)
 +{
 +	struct action_process_ctx ctx = {
-+		.a	= a,
++		.lbb_ctx	= *libbb_ctx,
++		.a			= a,
 +	};
 +	pid_t pid = -1;
 +	if ((__vsf_linux_spawn(&pid, __action_process, NULL, NULL, NULL, NULL, (void *)&ctx, sizeof(ctx)) < 0) || (pid < 0)) {
@@ -218,7 +434,7 @@ index 1e1ce833d..4e438155b 100644
  static pid_t run(const struct init_action *a)
  {
  	pid_t pid;
-@@ -552,6 +652,7 @@ static pid_t run(const struct init_action *a)
+@@ -552,6 +651,7 @@ static pid_t run(const struct init_action *a)
  	/* We're still here?  Some error happened. */
  	_exit(-1);
  }
@@ -226,7 +442,7 @@ index 1e1ce833d..4e438155b 100644
  
  static struct init_action *mark_terminated(pid_t pid)
  {
-@@ -682,9 +783,11 @@ static void parse_inittab(void)
+@@ -682,9 +782,11 @@ static void parse_inittab(void)
  		/* Askfirst shell on tty1-4 */
  		new_init_action(ASKFIRST, bb_default_login_shell, "");
  //TODO: VC_1 instead of ""? "" is console -> ctty problems -> angry users
@@ -238,11 +454,105 @@ index 1e1ce833d..4e438155b 100644
  		/* Reboot on Ctrl-Alt-Del */
  		new_init_action(CTRLALTDEL, "reboot", "");
  		/* Umount all filesystems on halt/reboot */
+diff --git a/libbb/appletlib.c b/libbb/appletlib.c
+index d5335d353..cce2fdf58 100644
+--- a/libbb/appletlib.c
++++ b/libbb/appletlib.c
+@@ -283,10 +283,12 @@ void lbb_prepare(const char *applet
+  * (--gc-sections would be even better....)
+  */
+ 
++#ifndef __VSF__
+ const char *applet_name;
+ #if !BB_MMU
+ bool re_execed;
+ #endif
++#endif
+ 
+ 
+ /* If not built as a single-applet executable... */
+diff --git a/libbb/auto_string.c b/libbb/auto_string.c
+index ae940069a..b90cdc533 100644
+--- a/libbb/auto_string.c
++++ b/libbb/auto_string.c
+@@ -12,8 +12,13 @@
+ 
+ char* FAST_FUNC auto_string(char *str)
+ {
++#ifdef __VSF__
++# define saved (libbb_ctx->auto_string.saved)
++# define cur_saved (libbb_ctx->auto_string.cur_saved)
++#else
+ 	static char *saved[4];
+ 	static uint8_t cur_saved; /* = 0 */
++#endif
+ 
+ 	free(saved[cur_saved]);
+ 	saved[cur_saved] = str;
+diff --git a/libbb/bbunit.c b/libbb/bbunit.c
+index ccd909d78..487628219 100644
+--- a/libbb/bbunit.c
++++ b/libbb/bbunit.c
+@@ -17,9 +17,15 @@
+ 
+ #include "libbb.h"
+ 
++#ifdef __VSF__
++# define tests (libbb_ctx->bbunit.tests)
++# define tests_registered (libbb_ctx->bbunit.tests_registered)
++# define test_retval (libbb_ctx->bbunit.test_retval)
++#else
+ static llist_t *tests = NULL;
+ static unsigned tests_registered = 0;
+ static int test_retval;
++#endif
+ 
+ void bbunit_registertest(struct bbunit_listelem *test)
+ {
+diff --git a/libbb/common_bufsiz.c b/libbb/common_bufsiz.c
+index 6bc6d7bc9..d926de13f 100644
+--- a/libbb/common_bufsiz.c
++++ b/libbb/common_bufsiz.c
+@@ -50,7 +50,9 @@
+ /* We use it for "global" data via *(struct global*)bb_common_bufsiz1.
+  * Since gcc insists on aligning struct global's members, it would be a pity
+  * (and an alignment fault on some CPUs) to mess it up. */
++# ifndef __VSF__
+ char bb_common_bufsiz1[COMMON_BUFSIZE] ALIGNED(sizeof(long long));
++# endif
+ 
+ #else
+ 
+diff --git a/libbb/crc32.c b/libbb/crc32.c
+index 728bcb736..33d7ad501 100644
+--- a/libbb/crc32.c
++++ b/libbb/crc32.c
+@@ -17,7 +17,9 @@
+  */
+ #include "libbb.h"
+ 
++#ifndef __VSF__
+ uint32_t *global_crc32_table;
++#endif
+ 
+ uint32_t* FAST_FUNC crc32_filltable(uint32_t *crc_table, int endian)
+ {
+diff --git a/libbb/default_error_retval.c b/libbb/default_error_retval.c
+index fc6a5364a..c797a20c8 100644
+--- a/libbb/default_error_retval.c
++++ b/libbb/default_error_retval.c
+@@ -13,4 +13,6 @@
+  */
+ #include "libbb.h"
+ 
++#ifndef __VSF__
+ uint8_t xfunc_error_retval = EXIT_FAILURE;
++#endif
 diff --git a/libbb/getopt32.c b/libbb/getopt32.c
-index e861d0567..eb6ec7159 100644
+index e861d0567..0d611e089 100644
 --- a/libbb/getopt32.c
 +++ b/libbb/getopt32.c
-@@ -311,7 +311,7 @@ typedef struct {
+@@ -311,11 +311,13 @@ typedef struct {
  	unsigned switch_off;
  	unsigned incongruously;
  	unsigned requires;
@@ -251,7 +561,13 @@ index e861d0567..eb6ec7159 100644
  	int *counter;
  } t_complementary;
  
-@@ -383,7 +383,7 @@ vgetopt32(char **argv, const char *applet_opts, const char *applet_long_options,
++#ifndef __VSF__
+ uint32_t option_mask32;
++#endif
+ 
+ #if ENABLE_LONG_OPTS
+ static const struct option bb_null_long_options[1] = {
+@@ -383,7 +385,7 @@ vgetopt32(char **argv, const char *applet_opts, const char *applet_long_options,
  		on_off->opt_char = *s;
  		on_off->switch_on = (1U << c);
  		if (*++s == ':') {
@@ -260,7 +576,7 @@ index e861d0567..eb6ec7159 100644
  			if (s[1] == '+' || s[1] == '*') {
  				/* 'o:+' or 'o:*' */
  				on_off->param_type = (s[1] == '+') ?
-@@ -433,7 +433,7 @@ vgetopt32(char **argv, const char *applet_opts, const char *applet_long_options,
+@@ -433,7 +435,7 @@ vgetopt32(char **argv, const char *applet_opts, const char *applet_long_options,
  			on_off->opt_char = l_o->val;
  			on_off->switch_on = (1U << c);
  			if (l_o->has_arg != no_argument)
@@ -269,7 +585,7 @@ index e861d0567..eb6ec7159 100644
  			c++;
   next_long: ;
  		}
-@@ -561,12 +561,12 @@ vgetopt32(char **argv, const char *applet_opts, const char *applet_long_options,
+@@ -561,12 +563,12 @@ vgetopt32(char **argv, const char *applet_opts, const char *applet_long_options,
  			(*(on_off->counter))++;
  		if (optarg) {
  			if (on_off->param_type == PARAM_LIST) {
@@ -286,6 +602,94 @@ index e861d0567..eb6ec7159 100644
  			}
  		}
  	}
+diff --git a/libbb/hash_md5_sha.c b/libbb/hash_md5_sha.c
+index 880ffab01..de31d54e2 100644
+--- a/libbb/hash_md5_sha.c
++++ b/libbb/hash_md5_sha.c
+@@ -22,7 +22,11 @@ static void cpuid(unsigned *eax, unsigned *ebx, unsigned *ecx, unsigned *edx)
+ 		: "0"(*eax),  "1"(*ebx),  "2"(*ecx),  "3"(*edx)
+ 	);
+ }
++#  ifdef __VSF__
++#   define shaNI (libbb_ctx->hash_md5_sha.shaNI)
++#  else
+ static smallint shaNI;
++#  endif
+ void FAST_FUNC sha1_process_block64_shaNI(sha1_ctx_t *ctx);
+ void FAST_FUNC sha256_process_block64_shaNI(sha256_ctx_t *ctx);
+ #  if defined(__i386__)
+diff --git a/libbb/inet_common.c b/libbb/inet_common.c
+index e9fbde7dc..0c1249b6a 100644
+--- a/libbb/inet_common.c
++++ b/libbb/inet_common.c
+@@ -86,7 +86,11 @@ char* FAST_FUNC INET_rresolve(struct sockaddr_in *s_in, int numeric, uint32_t ne
+ 		smallint is_host;
+ 		char name[1];
+ 	};
++#ifdef __VSF__
++# define cache (libbb_ctx->inet_common.fn_INET_rresolve.cache)
++#else
+ 	static struct addr *cache = NULL;
++#endif
+ 
+ 	struct addr *pn;
+ 	char *name;
+@@ -145,6 +149,9 @@ char* FAST_FUNC INET_rresolve(struct sockaddr_in *s_in, int numeric, uint32_t ne
+ 	cache = pn;
+ 
+ 	return name;
++#ifdef __VSF__
++# undef cache
++#endif
+ }
+ 
+ #if ENABLE_FEATURE_IPV6
+diff --git a/libbb/inode_hash.c b/libbb/inode_hash.c
+index a125244ca..616fbc68a 100644
+--- a/libbb/inode_hash.c
++++ b/libbb/inode_hash.c
+@@ -29,7 +29,11 @@ typedef struct ino_dev_hash_bucket_struct {
+ #define hash_inode(i)  ((unsigned)(i) % HASH_SIZE)
+ 
+ /* array of [HASH_SIZE] elements */
++#ifdef __VSF__
++# define ino_dev_hashtable (libbb_ctx->inode_hash.ino_dev_hashtable)
++#else
+ static ino_dev_hashtable_bucket_t **ino_dev_hashtable;
++#endif
+ 
+ /*
+  * Return name if statbuf->st_ino && statbuf->st_dev are recorded in
+diff --git a/libbb/lineedit.c b/libbb/lineedit.c
+index d6b2e76ff..eeca42428 100644
+--- a/libbb/lineedit.c
++++ b/libbb/lineedit.c
+@@ -189,7 +189,11 @@ struct lineedit_statics {
+ };
+ 
+ /* See lineedit_ptr_hack.c */
++#ifdef __VSF__
++# define lineedit_ptr_to_statics (libbb_ctx->lineedit_ptr_hack.lineedit_ptr_to_statics)
++#else
+ extern struct lineedit_statics *BB_GLOBAL_CONST lineedit_ptr_to_statics;
++#endif
+ 
+ #define S (*lineedit_ptr_to_statics)
+ #define state            (S.state           )
+diff --git a/libbb/lineedit_ptr_hack.c b/libbb/lineedit_ptr_hack.c
+index dc45855d5..fc5af16fd 100644
+--- a/libbb/lineedit_ptr_hack.c
++++ b/libbb/lineedit_ptr_hack.c
+@@ -11,7 +11,9 @@ struct lineedit_statics;
+ 
+ /* We cheat here. It is declared as const ptr in libbb.h,
+  * but here we make it live in R/W memory */
++#ifndef __VSF__
+ struct lineedit_statics *lineedit_ptr_to_statics;
++#endif
+ 
+ #else
+ 
 diff --git a/libbb/makedev.c b/libbb/makedev.c
 index 06c4039a3..d4a5c9e10 100644
 --- a/libbb/makedev.c
@@ -301,6 +705,86 @@ index 06c4039a3..d4a5c9e10 100644
  # include <sys/sysmacros.h>
  #endif
  
+diff --git a/libbb/pidfile.c b/libbb/pidfile.c
+index a6a282562..581d2a423 100644
+--- a/libbb/pidfile.c
++++ b/libbb/pidfile.c
+@@ -11,7 +11,9 @@
+ #define WANT_PIDFILE 1
+ #include "libbb.h"
+ 
++#ifndef __VSF__
+ smallint wrote_pidfile;
++#endif
+ 
+ void FAST_FUNC write_pidfile(const char *path)
+ {
+diff --git a/libbb/procps.c b/libbb/procps.c
+index f56b71b21..2471a491d 100644
+--- a/libbb/procps.c
++++ b/libbb/procps.c
+@@ -21,7 +21,11 @@ typedef struct cache_t {
+ 	int size;
+ } cache_t;
+ 
++#ifdef __VSF__
++# define cache_user_group (libbb_ctx->procps.cache_user_group)
++#else
+ static cache_t *cache_user_group;
++#endif
+ 
+ void FAST_FUNC clear_username_cache(void)
+ {
+diff --git a/libbb/ptr_to_globals.c b/libbb/ptr_to_globals.c
+index 2232c6864..b179c1d03 100644
+--- a/libbb/ptr_to_globals.c
++++ b/libbb/ptr_to_globals.c
+@@ -12,11 +12,13 @@ struct globals;
+ 
+ /* We cheat here. It is declared as const ptr in libbb.h,
+  * but here we make it live in R/W memory */
++#ifndef __VSF__
+ struct globals *ptr_to_globals;
+ 
+ #ifdef errno
+ int *bb_errno;
+ #endif
++#endif
+ 
+ 
+ #else
+diff --git a/libbb/pw_encrypt.c b/libbb/pw_encrypt.c
+index 3463fd95b..1151ce682 100644
+--- a/libbb/pw_encrypt.c
++++ b/libbb/pw_encrypt.c
+@@ -103,8 +103,13 @@ to64(char *s, unsigned v, int n)
+ /* Other advanced crypt ids (TODO?): */
+ /* $2$ or $2a$: Blowfish */
+ 
++#ifdef __VSF__
++# define des_cctx (libbb_ctx->pw_encrypt.des_cctx)
++# define des_ctx (libbb_ctx->pw_encrypt.des_ctx)
++#else
+ static struct const_des_ctx *des_cctx;
+ static struct des_ctx *des_ctx;
++#endif
+ 
+ /* my_crypt returns malloc'ed data */
+ static char *my_crypt(const char *key, const char *salt)
+diff --git a/libbb/signals.c b/libbb/signals.c
+index 0bebc847d..d8a2fb607 100644
+--- a/libbb/signals.c
++++ b/libbb/signals.c
+@@ -11,7 +11,9 @@
+ #include "libbb.h"
+ 
+ /* All known arches use small ints for signals */
++#ifndef __VSF__
+ smallint bb_got_signal;
++#endif
+ 
+ void record_signo(int signo)
+ {
 diff --git a/libbb/u_signal_names.c b/libbb/u_signal_names.c
 index f7d598c7a..b76618d04 100644
 --- a/libbb/u_signal_names.c
@@ -314,11 +798,43 @@ index f7d598c7a..b76618d04 100644
  }
  
  
+diff --git a/libbb/verror_msg.c b/libbb/verror_msg.c
+index 71512aee2..0b865cadd 100644
+--- a/libbb/verror_msg.c
++++ b/libbb/verror_msg.c
+@@ -11,11 +11,15 @@
+ # include <syslog.h>
+ #endif
+ 
++#ifdef __VSF__
++# define syslog_level (libbb_ctx->verror_msg.syslog_level)
++#else
+ #if ENABLE_FEATURE_SYSLOG
+ static smallint syslog_level = LOG_ERR;
+ #endif
+ smallint logmode = LOGMODE_STDIO;
+ const char *msg_eol = "\n";
++#endif
+ 
+ void FAST_FUNC bb_verror_msg(const char *s, va_list p, const char* strerr)
+ {
 diff --git a/libbb/xfuncs.c b/libbb/xfuncs.c
-index 465e5366c..23cc21df4 100644
+index 465e5366c..af1feeaaf 100644
 --- a/libbb/xfuncs.c
 +++ b/libbb/xfuncs.c
-@@ -121,7 +121,7 @@ char* FAST_FUNC utoa(unsigned n)
+@@ -110,7 +110,11 @@ char* FAST_FUNC itoa_to_buf(int n, char *buf, unsigned buflen)
+ // It so happens that sizeof(int) * 3 is enough for 32+ bit ints.
+ // (sizeof(int) * 3 + 2 is correct for any width, even 8-bit)
+ 
++#ifdef __VSF__
++# define local_buf (libbb_ctx->xfuncs.local_buf)
++#else
+ static char local_buf[sizeof(int) * 3];
++#endif
+ 
+ /* Convert unsigned integer to ascii using a static buffer (returned). */
+ char* FAST_FUNC utoa(unsigned n)
+@@ -121,7 +125,7 @@ char* FAST_FUNC utoa(unsigned n)
  }
  
  /* Convert signed integer to ascii using a static buffer (returned). */
@@ -517,10 +1033,10 @@ index 18ccc1329..832924b4e 100644
  	/*sbuf[1] = '\0'; - already is */
  	setvar0(optvar, sbuf);
 diff --git a/shell/hush.c b/shell/hush.c
-index d111f0cc5..35f916245 100644
+index d111f0cc5..c98a14ed5 100644
 --- a/shell/hush.c
 +++ b/shell/hush.c
-@@ -9229,6 +9229,93 @@ static int redirect_and_varexp_helper(
+@@ -9229,6 +9229,95 @@ static int redirect_and_varexp_helper(
  
  	return setup_redirects(command, sqp);
  }
@@ -536,6 +1052,7 @@ index d111f0cc5..35f916245 100644
 +extern void * __vsf_linux_get_process_priv(vsf_linux_process_t *process);
 +
 +struct pipe_process_priv {
++	struct __busybox_libbb_ctx lbb_ctx;
 +	int next_infd;
 +	struct fd_pair pipefds;
 +	struct pipe *pi;
@@ -547,6 +1064,7 @@ index d111f0cc5..35f916245 100644
 +static NOINLINE int pipe_process(int argc, char *argv[])
 +{
 +	struct pipe_process_priv *priv = __vsf_linux_get_process_priv(NULL);
++	*libbb_ctx = priv->lbb_ctx;
 +	int next_infd = priv->next_infd;
 +	struct fd_pair pipefds = priv->pipefds;
 +	struct pipe *pi = priv->pi;
@@ -614,12 +1132,13 @@ index d111f0cc5..35f916245 100644
  static NOINLINE int run_pipe(struct pipe *pi)
  {
  	static const char *const null_ptr = NULL;
-@@ -9584,6 +9671,17 @@ static NOINLINE int run_pipe(struct pipe *pi)
+@@ -9584,6 +9673,18 @@ static NOINLINE int run_pipe(struct pipe *pi)
  		G.execute_lineno = command->lineno;
  #endif
  
 +#ifdef __VSF__
 +		struct pipe_process_priv priv = {
++			.lbb_ctx		= *libbb_ctx,
 +			.next_infd		= next_infd,
 +			.pipefds		= pipefds,
 +			.pi				= pi,
@@ -632,7 +1151,7 @@ index d111f0cc5..35f916245 100644
  		command->pid = BB_MMU ? fork() : vfork();
  		if (!command->pid) { /* child */
  #if ENABLE_HUSH_JOB
-@@ -9641,6 +9739,7 @@ static NOINLINE int run_pipe(struct pipe *pi)
+@@ -9641,6 +9742,7 @@ static NOINLINE int run_pipe(struct pipe *pi)
  			pseudo_exec((nommu_save_t*) &nommu_save, command, argv_expanded);
  			/* pseudo_exec() does not return */
  		}

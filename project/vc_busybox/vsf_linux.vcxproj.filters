@@ -796,6 +796,9 @@
     <Filter Include="application\3rd-party\busybox\raw\shell">
       <UniqueIdentifier>{d58404e4-4b4a-4062-802a-14c6e8dc78ba}</UniqueIdentifier>
     </Filter>
+    <Filter Include="application\3rd-party\busybox\port\vsf_porting">
+      <UniqueIdentifier>{317ec887-5412-495f-8c9a-5ed3ab96cad3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vsf\source\vsf.h">
@@ -2156,6 +2159,9 @@
     </ClInclude>
     <ClInclude Include="..\..\application\3rd-party\busybox\raw\archival\rpm.h">
       <Filter>application\3rd-party\busybox\raw\archival</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\busybox\port\vsf_porting\libbb_dynlib.h">
+      <Filter>application\3rd-party\busybox\port\vsf_porting</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -3835,6 +3841,9 @@
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\busybox\raw\coreutils\mknod.c">
       <Filter>application\3rd-party\busybox\raw\coreutils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\busybox\port\vsf_porting\libbb_dynlib.c">
+      <Filter>application\3rd-party\busybox\port\vsf_porting</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

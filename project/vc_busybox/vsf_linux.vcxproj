@@ -26,6 +26,7 @@
     <ClInclude Include="..\..\application\3rd-party\busybox\port\embedded_scripts.h" />
     <ClInclude Include="..\..\application\3rd-party\busybox\port\NUM_APPLETS.h" />
     <ClInclude Include="..\..\application\3rd-party\busybox\port\usage_compressed.h" />
+    <ClInclude Include="..\..\application\3rd-party\busybox\port\vsf_porting\libbb_dynlib.h" />
     <ClInclude Include="..\..\application\3rd-party\busybox\raw\archival\rpm.h" />
     <ClInclude Include="..\..\application\3rd-party\busybox\raw\coreutils\libcoreutils\coreutils.h" />
     <ClInclude Include="..\..\application\3rd-party\busybox\raw\init\reboot.h" />
@@ -474,6 +475,7 @@
     <ClInclude Include="..\..\vsf\source\vsf_cfg.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\application\3rd-party\busybox\port\vsf_porting\libbb_dynlib.c" />
     <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\ar.c" />
     <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\bbunzip.c" />
     <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\bzip2.c" />
