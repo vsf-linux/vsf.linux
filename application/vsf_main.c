@@ -6,6 +6,10 @@
 #   include <linux/workqueue.h>
 #   include <linux/usb.h>
 #endif
+#if APP_USE_LINUX_BUSYBOX_DEMO == ENABLED
+#   include <spawn.h>
+#   include <sys/wait.h>
+#endif
 
 #if VSF_USE_USB_HOST == ENABLED && VSF_LINUX_USE_LIBUSB == ENABLED
 #   include <libusb.h>
@@ -279,11 +283,42 @@ int vsf_linux_create_fhs(void)
 #endif
 
 #if APP_USE_LINUX_BUSYBOX_DEMO == ENABLED
+    int __vsf_linux_spawn(pid_t *pid, vsf_linux_main_entry_t entry,
+                const posix_spawn_file_actions_t *actions,
+                const posix_spawnattr_t *attr,
+                char * const argv[], char * const env[], void *priv, int priv_size);
+
+    // embedded busybox will not run, so setup basic directory structures here
+    // temperary path to make mount command available
+    putenv("PATH=/bin");
+    pid_t pid;
+    mkdir("/usr", 0);
+    const char *mount_usr_argv[] = {
+        "mount", "-t", VSF_LINUX_HOSTFS_TYPE, "./usr", "/usr", NULL,
+    };
+    posix_spawnp(&pid, "mount", NULL, NULL, mount_usr_argv, NULL);
+    waitpid(pid, NULL, 0);
+
+    mkdir("/etc", 0);
+    const char *mount_etc_argv[] = {
+        "mount", "-t", VSF_LINUX_HOSTFS_TYPE, "./etc", "/etc", NULL,
+    };
+    posix_spawnp(&pid, "mount", NULL, NULL, mount_etc_argv, NULL);
+    waitpid(pid, NULL, 0);
+
+    mkdir("/home", 0);
+    const char *mount_home_argv[] = {
+        "mount", "-t", VSF_LINUX_HOSTFS_TYPE, "./home", "/home", NULL,
+    };
+    posix_spawnp(&pid, "mount", NULL, NULL, mount_home_argv, NULL);
+    waitpid(pid, NULL, 0);
+
     extern int lbb_main(int argc, char *argv[]);
     vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/busybox", lbb_main);
     vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/init", lbb_main);
     vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/sh", lbb_main);
     vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/ls", lbb_main);
+    vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/vi", lbb_main);
 #endif
     return 0;
 }
