@@ -318,6 +318,7 @@ int vsf_linux_create_fhs(void)
     vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/init", lbb_main);
     vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/sh", lbb_main);
     vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/ls", lbb_main);
+    vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/cat", lbb_main);
     vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/vi", lbb_main);
 #endif
     return 0;
