@@ -66,6 +66,7 @@
 
 #define VSF_FS_USE_LINFS                                ENABLED
 
+#define VSF_USE_UI                                      ENABLED
 #define VSF_DISP_USE_SDL2                               ENABLED
 #   define VSF_DISP_SDL2_CFG_INCLUDE                    <SDL2/SDL.h>
 // use mouse for meui

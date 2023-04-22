@@ -77,7 +77,7 @@
 #   define VSF_USBH_USE_UAC                             ENABLED
 
 #define VSF_USE_TCPIP                                   ENABLED
-#define VSF_USE_UI                                      ENABLED
+//#define VSF_USE_UI                                      ENABLED
 #   define VSF_DISP_USE_DL1X5                           ENABLED
 
 #define VSF_USE_LINUX                                   ENABLED

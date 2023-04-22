@@ -138,6 +138,7 @@
 
 #define VSF_FS_USE_WINFS                                ENABLED
 
+#define VSF_USE_UI                                      ENABLED
 #define VSF_DISP_USE_WINGDI                             ENABLED
 #   define APP_DISP_WINGDI_HEIGHT                       960
 #   define APP_DISP_WINGDI_WIDTH                        1440
