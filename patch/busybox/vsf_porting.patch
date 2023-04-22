@@ -31,8 +31,8 @@
  networking/netstat.c             |   4 +-
  networking/tls.c                 |   2 +-
  shell/ash.c                      |   2 +-
- shell/hush.c                     | 106 +++++++++++++++++++++++++++
- 34 files changed, 466 insertions(+), 35 deletions(-)
+ shell/hush.c                     | 109 ++++++++++++++++++++++++++++
+ 34 files changed, 469 insertions(+), 35 deletions(-)
 
 diff --git a/editors/awk.c b/editors/awk.c
 index 728ee8685..b3b52f106 100644
@@ -1084,10 +1084,22 @@ index 18ccc1329..832924b4e 100644
  	/*sbuf[1] = '\0'; - already is */
  	setvar0(optvar, sbuf);
 diff --git a/shell/hush.c b/shell/hush.c
-index d111f0cc5..db90194bc 100644
+index d111f0cc5..2d036a74d 100644
 --- a/shell/hush.c
 +++ b/shell/hush.c
-@@ -9229,6 +9229,97 @@ static int redirect_and_varexp_helper(
+@@ -2099,8 +2099,11 @@ static void hush_exit(int exitcode)
+ 		cur_var = G.top_var;
+ 		while (cur_var) {
+ 			struct variable *tmp = cur_var;
++# ifndef __VSF__
++			// environment is freed in vsf
+ 			if (!cur_var->max_len)
+ 				free(cur_var->varstr);
++# endif
+ 			cur_var = cur_var->next;
+ 			free(tmp);
+ 		}
+@@ -9229,6 +9232,97 @@ static int redirect_and_varexp_helper(
  
  	return setup_redirects(command, sqp);
  }
@@ -1185,7 +1197,7 @@ index d111f0cc5..db90194bc 100644
  static NOINLINE int run_pipe(struct pipe *pi)
  {
  	static const char *const null_ptr = NULL;
-@@ -9584,6 +9675,20 @@ static NOINLINE int run_pipe(struct pipe *pi)
+@@ -9584,6 +9678,20 @@ static NOINLINE int run_pipe(struct pipe *pi)
  		G.execute_lineno = command->lineno;
  #endif
  
@@ -1206,7 +1218,7 @@ index d111f0cc5..db90194bc 100644
  		command->pid = BB_MMU ? fork() : vfork();
  		if (!command->pid) { /* child */
  #if ENABLE_HUSH_JOB
-@@ -9641,6 +9746,7 @@ static NOINLINE int run_pipe(struct pipe *pi)
+@@ -9641,6 +9749,7 @@ static NOINLINE int run_pipe(struct pipe *pi)
  			pseudo_exec((nommu_save_t*) &nommu_save, command, argv_expanded);
  			/* pseudo_exec() does not return */
  		}
