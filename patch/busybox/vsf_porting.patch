@@ -1,38 +1,38 @@
  editors/awk.c                    |   4 +-
- include/libbb.h                  | 137 ++++++++++++++++++++++++++++++++++++++-
+ include/libbb.h                  | 153 ++++++++++++++++++++++++++++++++++++++-
  include/platform.h               |  10 ++-
- init/init.c                      | 105 ++++++++++++++++++++++++++++++
+ init/init.c                      | 105 +++++++++++++++++++++++++++
  libbb/appletlib.c                |   2 +
  libbb/auto_string.c              |   5 ++
  libbb/bbunit.c                   |   6 ++
  libbb/common_bufsiz.c            |   2 +
  libbb/crc32.c                    |   2 +
  libbb/default_error_retval.c     |   2 +
- libbb/getopt32.c                 |  16 +++--
- libbb/hash_md5_sha.c             |   4 ++
+ libbb/getopt32.c                 |  16 ++--
+ libbb/hash_md5_sha.c             |   4 +
  libbb/inet_common.c              |   7 ++
- libbb/inode_hash.c               |   4 ++
- libbb/lineedit.c                 |   4 ++
+ libbb/inode_hash.c               |   4 +
+ libbb/lineedit.c                 |   4 +
  libbb/lineedit_ptr_hack.c        |   2 +
  libbb/makedev.c                  |   4 +-
  libbb/pidfile.c                  |   2 +
- libbb/procps.c                   |   4 ++
+ libbb/procps.c                   |   4 +
  libbb/ptr_to_globals.c           |   2 +
  libbb/pw_encrypt.c               |   5 ++
  libbb/signals.c                  |   2 +
  libbb/u_signal_names.c           |   2 +-
- libbb/verror_msg.c               |   4 ++
+ libbb/verror_msg.c               |   4 +
  libbb/xfuncs.c                   |   6 +-
  loginutils/addgroup.c            |   2 +-
  loginutils/adduser.c             |   2 +-
  miscutils/fbsplash.c             |   2 +-
- networking/libiproute/rt_names.c |  20 +++---
+ networking/libiproute/rt_names.c |  20 ++---
  networking/libiproute/rtm_map.c  |   2 +-
  networking/netstat.c             |   4 +-
  networking/tls.c                 |   2 +-
  shell/ash.c                      |   2 +-
- shell/hush.c                     | 106 ++++++++++++++++++++++++++++++
- 34 files changed, 451 insertions(+), 34 deletions(-)
+ shell/hush.c                     | 106 +++++++++++++++++++++++++++
+ 34 files changed, 466 insertions(+), 35 deletions(-)
 
 diff --git a/editors/awk.c b/editors/awk.c
 index 728ee8685..b3b52f106 100644
@@ -57,7 +57,7 @@ index 728ee8685..b3b52f106 100644
  				break;
  			}
 diff --git a/include/libbb.h b/include/libbb.h
-index cca33a177..465b177de 100644
+index cca33a177..c5a9abcac 100644
 --- a/include/libbb.h
 +++ b/include/libbb.h
 @@ -55,6 +55,21 @@
@@ -92,7 +92,30 @@ index cca33a177..465b177de 100644
  /* klogctl is in libc's klog.h, but we cheat and not #include that */
  int klogctl(int type, char *b, int len);
  #ifndef PATH_MAX
-@@ -383,10 +400,88 @@ struct BUG_off_t_size_is_misdetected {
+@@ -311,7 +328,21 @@ typedef unsigned long long uoff_t;
+  * Even if sizeof(off_t) == sizeof(int), off_t is typedef'ed to long anyway.
+  * gcc will throw warnings on printf("%d", off_t)... Have to use %ld etc.
+  */
+-# if UINT_MAX == ULONG_MAX
++# ifdef __VSF__
++#  ifdef __VSF64__
++typedef unsigned long long uoff_t;
++#   define XATOOFF(a) xatoull_range((a), 0, LLONG_MAX)
++#   define BB_STRTOOFF bb_strtoull
++#   define STRTOOFF strtoull
++#   define OFF_FMT "ll"
++#  else
++typedef unsigned long uoff_t;
++#   define XATOOFF(a) xatoi_positive(a)
++#   define BB_STRTOOFF bb_strtou
++#   define STRTOOFF strtol
++#   define OFF_FMT "l"
++#  endif
++# elif UINT_MAX == ULONG_MAX
+ typedef unsigned long uoff_t;
+ #  define XATOOFF(a) xatoi_positive(a)
+ #  define BB_STRTOOFF bb_strtou
+@@ -383,10 +414,88 @@ struct BUG_off_t_size_is_misdetected {
  # define BB_GLOBAL_CONST const
  #endif
  
@@ -181,7 +204,7 @@ index cca33a177..465b177de 100644
  # undef errno
  # define errno (*bb_errno)
  # define bb_cached_errno_ptr 1
-@@ -637,7 +732,11 @@ int sigprocmask_allsigs(int how) FAST_FUNC;
+@@ -637,7 +746,11 @@ int sigprocmask_allsigs(int how) FAST_FUNC;
  /* Return old set in the same set: */
  int sigprocmask2(int how, sigset_t *set) FAST_FUNC;
  /* Standard handler which just records signo */
@@ -193,7 +216,7 @@ index cca33a177..465b177de 100644
  void record_signo(int signo); /* not FAST_FUNC! */
  
  
-@@ -1085,7 +1184,7 @@ char *safe_gethostname(void) FAST_FUNC;
+@@ -1085,7 +1198,7 @@ char *safe_gethostname(void) FAST_FUNC;
  char* str_tolower(char *str) FAST_FUNC;
  
  char *utoa(unsigned n) FAST_FUNC;
@@ -202,7 +225,7 @@ index cca33a177..465b177de 100644
  /* Returns a pointer past the formatted number, does NOT null-terminate */
  char *utoa_to_buf(unsigned n, char *buf, unsigned buflen) FAST_FUNC;
  char *itoa_to_buf(int n, char *buf, unsigned buflen) FAST_FUNC;
-@@ -1318,7 +1417,11 @@ enum {
+@@ -1318,7 +1431,11 @@ enum {
  # define bb_daemonize_or_rexec(flags, argv) bb_daemonize_or_rexec(flags)
  # define bb_daemonize(flags)                bb_daemonize_or_rexec(flags, bogus)
  #else
@@ -214,7 +237,7 @@ index cca33a177..465b177de 100644
    /* Note: re_exec() and fork_or_rexec() do argv[0][0] |= 0x80 on NOMMU!
     * _Parent_ needs to undo it if it doesn't want to have argv[0] mangled.
     */
-@@ -1343,7 +1446,11 @@ int sanitize_env_if_suid(void) FAST_FUNC;
+@@ -1343,7 +1460,11 @@ int sanitize_env_if_suid(void) FAST_FUNC;
  void make_all_argv_opts(char **argv) FAST_FUNC;
  char* single_argv(char **argv) FAST_FUNC;
  extern const char *const bb_argv_dash[]; /* { "-", NULL } */
@@ -226,7 +249,7 @@ index cca33a177..465b177de 100644
  uint32_t getopt32(char **argv, const char *applet_opts, ...) FAST_FUNC;
  # define No_argument "\0"
  # define Required_argument "\001"
-@@ -1380,10 +1487,12 @@ uint32_t getopt32long(char **argv, const char *optstring, const char *longopts,
+@@ -1380,10 +1501,12 @@ uint32_t getopt32long(char **argv, const char *optstring, const char *longopts,
   * of "llist-compatible" structs, and using llist_FOO functions
   * on them.
   */
@@ -239,7 +262,7 @@ index cca33a177..465b177de 100644
  void llist_add_to(llist_t **old_head, void *data) FAST_FUNC;
  void llist_add_to_end(llist_t **list_head, void *data) FAST_FUNC;
  void *llist_pop(llist_t **elm) FAST_FUNC;
-@@ -1399,7 +1508,11 @@ llist_t *llist_find_str(llist_t *first, const char *str) FAST_FUNC;
+@@ -1399,7 +1522,11 @@ llist_t *llist_find_str(llist_t *first, const char *str) FAST_FUNC;
   * to create pidfiles regardless of FEATURE_PIDFILE */
  #if ENABLE_FEATURE_PIDFILE || defined(WANT_PIDFILE)
  /* True only if we created pidfile which is *file*, not /dev/null etc */
@@ -251,7 +274,7 @@ index cca33a177..465b177de 100644
  void write_pidfile(const char *path) FAST_FUNC;
  void write_pidfile_std_path_and_ext(const char *path) FAST_FUNC;
  void remove_pidfile_std_path_and_ext(const char *path) FAST_FUNC;
-@@ -1418,9 +1531,15 @@ enum {
+@@ -1418,9 +1545,15 @@ enum {
  	LOGMODE_SYSLOG = (1 << 1) * ENABLE_FEATURE_SYSLOG,
  	LOGMODE_BOTH = LOGMODE_SYSLOG + LOGMODE_STDIO,
  };
@@ -267,7 +290,7 @@ index cca33a177..465b177de 100644
  extern void (*die_func)(void);
  void xfunc_die(void) NORETURN FAST_FUNC;
  void bb_show_usage(void) NORETURN FAST_FUNC;
-@@ -2189,7 +2308,11 @@ enum {
+@@ -2189,7 +2322,11 @@ enum {
  	SHA3_OUTSIZE   = 28,
  };
  
@@ -279,7 +302,7 @@ index cca33a177..465b177de 100644
  uint32_t *crc32_filltable(uint32_t *tbl256, int endian) FAST_FUNC;
  uint32_t *crc32_new_table_le(void) FAST_FUNC;
  uint32_t *global_crc32_new_table_le(void) FAST_FUNC;
-@@ -2228,7 +2351,11 @@ unsigned ubi_devnum_from_devname(const char *str) FAST_FUNC;
+@@ -2228,7 +2365,11 @@ unsigned ubi_devnum_from_devname(const char *str) FAST_FUNC;
  int ubi_get_volid_by_name(unsigned ubi_devnum, const char *vol_name) FAST_FUNC;
  
  
@@ -291,7 +314,7 @@ index cca33a177..465b177de 100644
  
  /* Some older linkers don't perform string merging, we used to have common strings
   * as global arrays to do it by hand. But:
-@@ -2294,7 +2421,11 @@ struct globals;
+@@ -2294,7 +2435,11 @@ struct globals;
  /* '*const' ptr makes gcc optimize code much better.
   * Magic prevents ptr_to_globals from going into rodata.
   * If you want to assign a value, use SET_PTR_TO_GLOBALS(x) */
@@ -303,7 +326,7 @@ index cca33a177..465b177de 100644
  
  #define barrier() asm volatile ("":::"memory")
  
-@@ -2414,7 +2545,9 @@ do { \
+@@ -2414,7 +2559,9 @@ do { \
  	(sizeof(field) == 4 ? SWAP_LE32(field) : BUG_wrong_field_size())
  
  
