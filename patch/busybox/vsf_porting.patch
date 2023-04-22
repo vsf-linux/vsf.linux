@@ -1,16 +1,16 @@
  editors/awk.c                    |   4 +-
- include/libbb.h                  | 133 ++++++++++++++++++++++++++++++++++++++-
- include/platform.h               |   6 +-
- init/init.c                      | 105 +++++++++++++++++++++++++++++++
+ include/libbb.h                  | 137 ++++++++++++++++++++++++++++++++++++++-
+ include/platform.h               |  10 ++-
+ init/init.c                      | 105 ++++++++++++++++++++++++++++++
  libbb/appletlib.c                |   2 +
  libbb/auto_string.c              |   5 ++
  libbb/bbunit.c                   |   6 ++
  libbb/common_bufsiz.c            |   2 +
  libbb/crc32.c                    |   2 +
  libbb/default_error_retval.c     |   2 +
- libbb/getopt32.c                 |  16 ++---
+ libbb/getopt32.c                 |  16 +++--
  libbb/hash_md5_sha.c             |   4 ++
- libbb/inet_common.c              |   7 +++
+ libbb/inet_common.c              |   7 ++
  libbb/inode_hash.c               |   4 ++
  libbb/lineedit.c                 |   4 ++
  libbb/lineedit_ptr_hack.c        |   2 +
@@ -31,8 +31,8 @@
  networking/netstat.c             |   4 +-
  networking/tls.c                 |   2 +-
  shell/ash.c                      |   2 +-
- shell/hush.c                     | 106 +++++++++++++++++++++++++++++++
- 34 files changed, 445 insertions(+), 32 deletions(-)
+ shell/hush.c                     | 106 ++++++++++++++++++++++++++++++
+ 34 files changed, 451 insertions(+), 34 deletions(-)
 
 diff --git a/editors/awk.c b/editors/awk.c
 index 728ee8685..b3b52f106 100644
@@ -57,7 +57,7 @@ index 728ee8685..b3b52f106 100644
  				break;
  			}
 diff --git a/include/libbb.h b/include/libbb.h
-index cca33a177..b460bfa6b 100644
+index cca33a177..465b177de 100644
 --- a/include/libbb.h
 +++ b/include/libbb.h
 @@ -55,6 +55,21 @@
@@ -303,8 +303,19 @@ index cca33a177..b460bfa6b 100644
  
  #define barrier() asm volatile ("":::"memory")
  
+@@ -2414,7 +2545,9 @@ do { \
+ 	(sizeof(field) == 4 ? SWAP_LE32(field) : BUG_wrong_field_size())
+ 
+ 
+-#define ARRAY_SIZE(x) ((unsigned)(sizeof(x) / sizeof((x)[0])))
++#ifndef ARRAY_SIZE
++# define ARRAY_SIZE(x) ((unsigned)(sizeof(x) / sizeof((x)[0])))
++#endif
+ #define BUILD_BUG_ON(condition) ((void)sizeof(char[1 - 2*!!(condition)]))
+ 
+ 
 diff --git a/include/platform.h b/include/platform.h
-index ea0512f36..7b0acfa99 100644
+index ea0512f36..3eeeaf85d 100644
 --- a/include/platform.h
 +++ b/include/platform.h
 @@ -7,6 +7,10 @@
@@ -327,6 +338,17 @@ index ea0512f36..7b0acfa99 100644
  # ifndef __attribute__
  #  define __attribute__(x)
  # endif
+@@ -318,7 +322,9 @@ typedef unsigned smalluint;
+  || defined __dietlibc__ \
+  || defined __BIONIC__ \
+  || defined _NEWLIB_VERSION
+-# include <features.h>
++# ifndef __VSF__
++#  include <features.h>
++# endif
+ #endif
+ 
+ /* Define bb_setpgrp */
 diff --git a/init/init.c b/init/init.c
 index 1e1ce833d..5b8f77d81 100644
 --- a/init/init.c
