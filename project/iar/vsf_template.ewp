@@ -2399,9 +2399,6 @@
             <file>
                 <name>$PROJ_DIR$\..\..\vsf\example\template\demo\aic8800\aic8800_demo.c</name>
             </file>
-            <file>
-                <name>$PROJ_DIR$\..\..\vsf\example\template\demo\aic8800\aic8800_driver_init.c</name>
-            </file>
         </group>
         <group>
             <name>btstack_demo</name>
@@ -2454,7 +2451,7 @@
         <group>
             <name>linux_demo</name>
             <file>
-                <name>$PROJ_DIR$\..\..\vsf\example\template\demo\linux_demo\elfloader_demo.c</name>
+                <name>$PROJ_DIR$\..\..\vsf\example\template\demo\linux_demo\dynloader_demo.c</name>
             </file>
             <file>
                 <name>$PROJ_DIR$\..\..\vsf\example\template\demo\linux_demo\libusb_demo.c</name>
@@ -5894,10 +5891,13 @@
                         <group>
                             <name>mipi_lcd</name>
                             <file>
-                                <name>$PROJ_DIR$\..\..\vsf\source\component\ui\disp\driver\mipi_lcd\vsf_disp_mipi_lcd.c</name>
+                                <name>$PROJ_DIR$\..\..\vsf\source\component\ui\disp\driver\mipi_lcd\vsf_disp_mipi_lcd_dcs.h</name>
                             </file>
                             <file>
-                                <name>$PROJ_DIR$\..\..\vsf\source\component\ui\disp\driver\mipi_lcd\vsf_disp_mipi_lcd.h</name>
+                                <name>$PROJ_DIR$\..\..\vsf\source\component\ui\disp\driver\mipi_lcd\vsf_disp_mipi_spi_lcd.c</name>
+                            </file>
+                            <file>
+                                <name>$PROJ_DIR$\..\..\vsf\source\component\ui\disp\driver\mipi_lcd\vsf_disp_mipi_spi_lcd.h</name>
                             </file>
                         </group>
                         <group>
@@ -6681,6 +6681,15 @@
                             </file>
                             <file>
                                 <name>$PROJ_DIR$\..\..\vsf\source\hal\driver\AIC\AIC8800\i2c\i2c.h</name>
+                            </file>
+                        </group>
+                        <group>
+                            <name>io</name>
+                            <file>
+                                <name>$PROJ_DIR$\..\..\vsf\source\hal\driver\AIC\AIC8800\io\io.c</name>
+                            </file>
+                            <file>
+                                <name>$PROJ_DIR$\..\..\vsf\source\hal\driver\AIC\AIC8800\io\io.h</name>
                             </file>
                         </group>
                         <group>
@@ -7816,6 +7825,12 @@
                         </file>
                         <file>
                             <name>$PROJ_DIR$\..\..\vsf\source\hal\driver\common\i2c\multiplex_i2c.h</name>
+                        </file>
+                    </group>
+                    <group>
+                        <name>io</name>
+                        <file>
+                            <name>$PROJ_DIR$\..\..\vsf\source\hal\driver\common\io\io_common.c</name>
                         </file>
                     </group>
                     <group>
@@ -9471,13 +9486,31 @@
                     <group>
                         <name>lib</name>
                         <group>
-                            <name>glibc</name>
+                            <name>3rd-party</name>
                             <group>
-                                <name>3rd-party</name>
+                                <name>getopt</name>
                                 <file>
-                                    <name>$PROJ_DIR$\..\..\vsf\source\shell\sys\linux\lib\glibc\3rd-party\getopt_long.c</name>
+                                    <name>$PROJ_DIR$\..\..\vsf\source\shell\sys\linux\lib\3rd-party\getopt\getopt_long.c</name>
                                 </file>
                             </group>
+                            <group>
+                                <name>regex</name>
+                                <file>
+                                    <name>$PROJ_DIR$\..\..\vsf\source\shell\sys\linux\lib\3rd-party\regex\regcomp.c</name>
+                                </file>
+                                <file>
+                                    <name>$PROJ_DIR$\..\..\vsf\source\shell\sys\linux\lib\3rd-party\regex\regerror.c</name>
+                                </file>
+                                <file>
+                                    <name>$PROJ_DIR$\..\..\vsf\source\shell\sys\linux\lib\3rd-party\regex\regexec.c</name>
+                                </file>
+                                <file>
+                                    <name>$PROJ_DIR$\..\..\vsf\source\shell\sys\linux\lib\3rd-party\regex\regfree.c</name>
+                                </file>
+                            </group>
+                        </group>
+                        <group>
+                            <name>glibc</name>
                             <file>
                                 <name>$PROJ_DIR$\..\..\vsf\source\shell\sys\linux\lib\glibc\vsf_linux_glibc.c</name>
                             </file>
@@ -9696,6 +9729,9 @@
                 <name>$PROJ_DIR$\..\..\vsf\source\utilities\vsf_utilities.h</name>
             </file>
         </group>
+        <file>
+            <name>$PROJ_DIR$\..\..\vsf\source\vsf.c</name>
+        </file>
         <file>
             <name>$PROJ_DIR$\..\..\vsf\source\vsf.h</name>
         </file>
