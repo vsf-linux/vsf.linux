@@ -57,6 +57,23 @@ static int __sdlpal_main(int argc, char *argv[])
 }
 #endif
 
+#if APP_USE_LINUX_BUSYBOX_DEMO == ENABLED
+extern int lbb_main(int argc, char *argv[]);
+static int __busybox_export(int argc, char *argv[])
+{
+    char path[PATH_MAX], *app_pos;
+    strcpy(path, VSF_LINUX_CFG_BIN_PATH "/");
+    app_pos = &path[strlen(path)];
+
+    argv++;
+    argc--;
+    while (argc-- > 0) {
+        strcpy(app_pos, *argv++);
+        vsf_linux_fs_bind_executable(path, lbb_main);
+    }
+}
+#endif
+
 WEAK(vsf_board_init)
 void vsf_board_init(void) {}
 
@@ -313,12 +330,17 @@ int vsf_linux_create_fhs(void)
     posix_spawnp(&pid, "mount", NULL, NULL, mount_home_argv, NULL);
     waitpid(pid, NULL, 0);
 
-    extern int lbb_main(int argc, char *argv[]);
+    vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/busybox_export", __busybox_export);
     vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/busybox", lbb_main);
     vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/init", lbb_main);
     vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/sh", lbb_main);
     vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/ls", lbb_main);
     vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/cat", lbb_main);
+    vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/rm", lbb_main);
+    vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/mkdir", lbb_main);
+    vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/chmod", lbb_main);
+    vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/touch", lbb_main);
+    vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/uname", lbb_main);
     vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/vi", lbb_main);
 #endif
     return 0;
