@@ -766,9 +766,6 @@
     <Filter Include="application\3rd-party\busybox\raw\archival">
       <UniqueIdentifier>{5e3577d1-79b5-4182-bf65-640cf0300561}</UniqueIdentifier>
     </Filter>
-    <Filter Include="application\3rd-party\busybox\raw\archival\libarchive">
-      <UniqueIdentifier>{2ec94651-4cf0-400c-88aa-3b89945955f8}</UniqueIdentifier>
-    </Filter>
     <Filter Include="vsf\service\loader\pe">
       <UniqueIdentifier>{80dc039c-58b9-421c-b712-9ad9cac97ed3}</UniqueIdentifier>
     </Filter>
@@ -798,6 +795,9 @@
     </Filter>
     <Filter Include="application\3rd-party\busybox\port\vsf_porting">
       <UniqueIdentifier>{317ec887-5412-495f-8c9a-5ed3ab96cad3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\busybox\raw\archival\libarchive">
+      <UniqueIdentifier>{d05248e0-f0eb-444a-8e06-148b93971f1d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -2157,9 +2157,6 @@
     <ClInclude Include="..\..\application\3rd-party\busybox\raw\coreutils\libcoreutils\coreutils.h">
       <Filter>application\3rd-party\busybox\raw\coreutils\libcoreutils</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\busybox\raw\archival\rpm.h">
-      <Filter>application\3rd-party\busybox\raw\archival</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\application\3rd-party\busybox\port\vsf_porting\libbb_dynlib.h">
       <Filter>application\3rd-party\busybox\port\vsf_porting</Filter>
     </ClInclude>
@@ -3311,132 +3308,6 @@
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\regex\regexec.c">
       <Filter>vsf\shell\sys\linux\lib\3rd-party\regex</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\bbunzip.c">
-      <Filter>application\3rd-party\busybox\raw\archival</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\bzip2.c">
-      <Filter>application\3rd-party\busybox\raw\archival</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\chksum_and_xwrite_tar_header.c">
-      <Filter>application\3rd-party\busybox\raw\archival</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\gzip.c">
-      <Filter>application\3rd-party\busybox\raw\archival</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\lzop.c">
-      <Filter>application\3rd-party\busybox\raw\archival</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\unzip.c">
-      <Filter>application\3rd-party\busybox\raw\archival</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\libarchive\common.c">
-      <Filter>application\3rd-party\busybox\raw\archival\libarchive</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\libarchive\data_align.c">
-      <Filter>application\3rd-party\busybox\raw\archival\libarchive</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\libarchive\data_extract_to_command.c">
-      <Filter>application\3rd-party\busybox\raw\archival\libarchive</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\libarchive\data_extract_to_stdout.c">
-      <Filter>application\3rd-party\busybox\raw\archival\libarchive</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\libarchive\data_skip.c">
-      <Filter>application\3rd-party\busybox\raw\archival\libarchive</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\libarchive\decompress_bunzip2.c">
-      <Filter>application\3rd-party\busybox\raw\archival\libarchive</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\libarchive\decompress_gunzip.c">
-      <Filter>application\3rd-party\busybox\raw\archival\libarchive</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\libarchive\decompress_uncompress.c">
-      <Filter>application\3rd-party\busybox\raw\archival\libarchive</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\libarchive\decompress_unlzma.c">
-      <Filter>application\3rd-party\busybox\raw\archival\libarchive</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\libarchive\decompress_unxz.c">
-      <Filter>application\3rd-party\busybox\raw\archival\libarchive</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\libarchive\filter_accept_all.c">
-      <Filter>application\3rd-party\busybox\raw\archival\libarchive</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\libarchive\filter_accept_list.c">
-      <Filter>application\3rd-party\busybox\raw\archival\libarchive</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\libarchive\filter_accept_list_reassign.c">
-      <Filter>application\3rd-party\busybox\raw\archival\libarchive</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\libarchive\filter_accept_reject_list.c">
-      <Filter>application\3rd-party\busybox\raw\archival\libarchive</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\libarchive\find_list_entry.c">
-      <Filter>application\3rd-party\busybox\raw\archival\libarchive</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\libarchive\get_header_ar.c">
-      <Filter>application\3rd-party\busybox\raw\archival\libarchive</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\libarchive\get_header_cpio.c">
-      <Filter>application\3rd-party\busybox\raw\archival\libarchive</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\libarchive\get_header_tar.c">
-      <Filter>application\3rd-party\busybox\raw\archival\libarchive</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\libarchive\get_header_tar_bz2.c">
-      <Filter>application\3rd-party\busybox\raw\archival\libarchive</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\libarchive\get_header_tar_gz.c">
-      <Filter>application\3rd-party\busybox\raw\archival\libarchive</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\libarchive\get_header_tar_lzma.c">
-      <Filter>application\3rd-party\busybox\raw\archival\libarchive</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\libarchive\get_header_tar_xz.c">
-      <Filter>application\3rd-party\busybox\raw\archival\libarchive</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\libarchive\header_list.c">
-      <Filter>application\3rd-party\busybox\raw\archival\libarchive</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\libarchive\header_skip.c">
-      <Filter>application\3rd-party\busybox\raw\archival\libarchive</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\libarchive\header_verbose_list.c">
-      <Filter>application\3rd-party\busybox\raw\archival\libarchive</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\libarchive\init_handle.c">
-      <Filter>application\3rd-party\busybox\raw\archival\libarchive</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\libarchive\lzo1x_1.c">
-      <Filter>application\3rd-party\busybox\raw\archival\libarchive</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\libarchive\lzo1x_1o.c">
-      <Filter>application\3rd-party\busybox\raw\archival\libarchive</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\libarchive\lzo1x_9x.c">
-      <Filter>application\3rd-party\busybox\raw\archival\libarchive</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\libarchive\lzo1x_d.c">
-      <Filter>application\3rd-party\busybox\raw\archival\libarchive</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\libarchive\open_transformer.c">
-      <Filter>application\3rd-party\busybox\raw\archival\libarchive</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\libarchive\seek_by_jump.c">
-      <Filter>application\3rd-party\busybox\raw\archival\libarchive</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\libarchive\seek_by_read.c">
-      <Filter>application\3rd-party\busybox\raw\archival\libarchive</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\libarchive\unpack_ar_archive.c">
-      <Filter>application\3rd-party\busybox\raw\archival\libarchive</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\libarchive\unsafe_prefix.c">
-      <Filter>application\3rd-party\busybox\raw\archival\libarchive</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\libarchive\unsafe_symlink_target.c">
-      <Filter>application\3rd-party\busybox\raw\archival\libarchive</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\vsf\source\service\loader\pe\vsf_peloader.c">
       <Filter>vsf\service\loader\pe</Filter>
     </ClCompile>
@@ -3818,32 +3689,20 @@
     <ClCompile Include="..\..\application\3rd-party\busybox\raw\libbb\copy_file.c">
       <Filter>application\3rd-party\busybox\raw\libbb</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\libarchive\data_extract_all.c">
-      <Filter>application\3rd-party\busybox\raw\archival\libarchive</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\ar.c">
-      <Filter>application\3rd-party\busybox\raw\archival</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\cpio.c">
-      <Filter>application\3rd-party\busybox\raw\archival</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\dpkg.c">
-      <Filter>application\3rd-party\busybox\raw\archival</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\dpkg_deb.c">
-      <Filter>application\3rd-party\busybox\raw\archival</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\rpm.c">
-      <Filter>application\3rd-party\busybox\raw\archival</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\tar.c">
-      <Filter>application\3rd-party\busybox\raw\archival</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\busybox\raw\coreutils\mknod.c">
       <Filter>application\3rd-party\busybox\raw\coreutils</Filter>
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\busybox\port\vsf_porting\libbb_dynlib.c">
       <Filter>application\3rd-party\busybox\port\vsf_porting</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\libarchive\decompress_bunzip2.c">
+      <Filter>application\3rd-party\busybox\raw\archival\libarchive</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\libarchive\open_transformer.c">
+      <Filter>application\3rd-party\busybox\raw\archival\libarchive</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\bbunzip.c">
+      <Filter>application\3rd-party\busybox\raw\archival</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
