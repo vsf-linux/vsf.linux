@@ -319,22 +319,25 @@ int vsf_linux_create_fhs(void)
     const char *mount_usr_argv[] = {
         "mount", "-t", VSF_LINUX_HOSTFS_TYPE, "./usr", "/usr", NULL,
     };
-    posix_spawnp(&pid, "mount", NULL, NULL, (char * const *)mount_usr_argv, NULL);
-    waitpid(pid, NULL, 0);
+    if (!posix_spawnp(&pid, "mount", NULL, NULL, (char * const *)mount_usr_argv, NULL)) {
+        waitpid(pid, NULL, 0);
+    }
 
     mkdir("/etc", 0);
     const char *mount_etc_argv[] = {
         "mount", "-t", VSF_LINUX_HOSTFS_TYPE, "./etc", "/etc", NULL,
     };
-    posix_spawnp(&pid, "mount", NULL, NULL, (char * const *)mount_etc_argv, NULL);
-    waitpid(pid, NULL, 0);
+    if (!posix_spawnp(&pid, "mount", NULL, NULL, (char * const *)mount_etc_argv, NULL)) {
+        waitpid(pid, NULL, 0);
+    }
 
     mkdir("/home", 0);
     const char *mount_home_argv[] = {
         "mount", "-t", VSF_LINUX_HOSTFS_TYPE, "./home", "/home", NULL,
     };
-    posix_spawnp(&pid, "mount", NULL, NULL, (char * const *)mount_home_argv, NULL);
-    waitpid(pid, NULL, 0);
+    if (!posix_spawnp(&pid, "mount", NULL, NULL, (char * const *)mount_home_argv, NULL)) {
+        waitpid(pid, NULL, 0);
+    }
 #else
     const char *inittab_content = ":1:askfirst:/bin/sh\n";
     mkdir("/etc", 0);
