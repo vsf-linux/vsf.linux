@@ -7,7 +7,7 @@ target_sources(${CMAKE_PROJECT_NAME} PUBLIC
 if(APP_USE_LINUX_CURL_DEMO)
     add_subdirectory(3rd-party/curl)
 endif()
-if(APP_USE_LINUX_CURL_DEMO)
+if(APP_USE_LINUX_BUSYBOX_DEMO)
     add_subdirectory(3rd-party/busybox)
 endif()
 if(APP_USE_LINUX_WAMR_DEMO)
