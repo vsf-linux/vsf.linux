@@ -2,7 +2,7 @@
  * Automatically generated C config: don't edit
  * Busybox version: 1.37.0.git
  */
-#define AUTOCONF_TIMESTAMP "2023-04-22 19:24:22 CST"
+#define AUTOCONF_TIMESTAMP "2023-04-22 22:20:11 CST"
 
 #define CONFIG_HAVE_DOT_CONFIG 1
 #define ENABLE_HAVE_DOT_CONFIG 1
@@ -64,14 +64,10 @@
 # define IF_FEATURE_COMPRESS_USAGE(...) __VA_ARGS__
 #endif
 #define IF_NOT_FEATURE_COMPRESS_USAGE(...)
-#define CONFIG_LFS 1
-#define ENABLE_LFS 1
-#ifdef MAKE_SUID
-# define IF_LFS(...) __VA_ARGS__ "CONFIG_LFS"
-#else
-# define IF_LFS(...) __VA_ARGS__
-#endif
-#define IF_NOT_LFS(...)
+#undef CONFIG_LFS
+#define ENABLE_LFS 0
+#define IF_LFS(...)
+#define IF_NOT_LFS(...) __VA_ARGS__
 #undef CONFIG_PAM
 #define ENABLE_PAM 0
 #define IF_PAM(...)
