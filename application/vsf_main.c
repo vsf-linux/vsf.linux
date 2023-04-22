@@ -21,6 +21,9 @@
 #   include <SDL2/SDL.h>
 #endif
 
+#include <fcntl.h>
+#include <stdio.h>
+
 #ifndef VSF_APP_ENTRY
 #   define VSF_APP_ENTRY        VSF_USER_ENTRY
 #endif
@@ -71,6 +74,7 @@ static int __busybox_export(int argc, char *argv[])
         strcpy(app_pos, *argv++);
         vsf_linux_fs_bind_executable(path, lbb_main);
     }
+    return 0;
 }
 #endif
 
@@ -300,6 +304,8 @@ int vsf_linux_create_fhs(void)
 #endif
 
 #if APP_USE_LINUX_BUSYBOX_DEMO == ENABLED
+
+#if defined(__WIN__) || defined(__LINUX__)
     int __vsf_linux_spawn(pid_t *pid, vsf_linux_main_entry_t entry,
                 const posix_spawn_file_actions_t *actions,
                 const posix_spawnattr_t *attr,
@@ -313,22 +319,31 @@ int vsf_linux_create_fhs(void)
     const char *mount_usr_argv[] = {
         "mount", "-t", VSF_LINUX_HOSTFS_TYPE, "./usr", "/usr", NULL,
     };
-    posix_spawnp(&pid, "mount", NULL, NULL, mount_usr_argv, NULL);
+    posix_spawnp(&pid, "mount", NULL, NULL, (char * const *)mount_usr_argv, NULL);
     waitpid(pid, NULL, 0);
 
     mkdir("/etc", 0);
     const char *mount_etc_argv[] = {
         "mount", "-t", VSF_LINUX_HOSTFS_TYPE, "./etc", "/etc", NULL,
     };
-    posix_spawnp(&pid, "mount", NULL, NULL, mount_etc_argv, NULL);
+    posix_spawnp(&pid, "mount", NULL, NULL, (char * const *)mount_etc_argv, NULL);
     waitpid(pid, NULL, 0);
 
     mkdir("/home", 0);
     const char *mount_home_argv[] = {
         "mount", "-t", VSF_LINUX_HOSTFS_TYPE, "./home", "/home", NULL,
     };
-    posix_spawnp(&pid, "mount", NULL, NULL, mount_home_argv, NULL);
+    posix_spawnp(&pid, "mount", NULL, NULL, (char * const *)mount_home_argv, NULL);
     waitpid(pid, NULL, 0);
+#else
+    const char *inittab_content = ":1:askfirst:/bin/sh\n";
+    mkdir("/etc", 0);
+    int fd = open("/etc/inittab", O_CREAT);
+    if (fd >= 0) {
+        write(fd, inittab_content, strlen(inittab_content));
+        close(fd);
+    }
+#endif
 
     vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/busybox_export", __busybox_export);
     vsf_linux_fs_bind_executable(VSF_LINUX_CFG_BIN_PATH "/busybox", lbb_main);
