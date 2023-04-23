@@ -2,7 +2,7 @@
  include/libbb.h                  | 153 ++++++++++++++++++++++++++++++++++++++-
  include/platform.h               |  10 ++-
  init/init.c                      | 105 +++++++++++++++++++++++++++
- libbb/appletlib.c                |   2 +
+ libbb/appletlib.c                |   4 +
  libbb/auto_string.c              |   5 ++
  libbb/bbunit.c                   |   6 ++
  libbb/common_bufsiz.c            |   2 +
@@ -32,7 +32,7 @@
  networking/tls.c                 |   2 +-
  shell/ash.c                      |   2 +-
  shell/hush.c                     | 109 ++++++++++++++++++++++++++++
- 34 files changed, 469 insertions(+), 35 deletions(-)
+ 34 files changed, 471 insertions(+), 35 deletions(-)
 
 diff --git a/editors/awk.c b/editors/awk.c
 index 728ee8685..b3b52f106 100644
@@ -506,7 +506,7 @@ index 1e1ce833d..5b8f77d81 100644
  		new_init_action(CTRLALTDEL, "reboot", "");
  		/* Umount all filesystems on halt/reboot */
 diff --git a/libbb/appletlib.c b/libbb/appletlib.c
-index d5335d353..cce2fdf58 100644
+index d5335d353..e3c73a0bf 100644
 --- a/libbb/appletlib.c
 +++ b/libbb/appletlib.c
 @@ -283,10 +283,12 @@ void lbb_prepare(const char *applet
@@ -522,6 +522,15 @@ index d5335d353..cce2fdf58 100644
  
  
  /* If not built as a single-applet executable... */
+@@ -1028,6 +1030,8 @@ get_script_content(unsigned n UNUSED_PARAM)
+ 
+ #if ENABLE_BUILD_LIBBUSYBOX
+ int lbb_main(char **argv)
++#elif defined(__VSF__) && !defined(__VSF_APPLET__)
++int lbb_main(int argc UNUSED_PARAM, char **argv)
+ #else
+ int main(int argc UNUSED_PARAM, char **argv)
+ #endif
 diff --git a/libbb/auto_string.c b/libbb/auto_string.c
 index ae940069a..b90cdc533 100644
 --- a/libbb/auto_string.c
