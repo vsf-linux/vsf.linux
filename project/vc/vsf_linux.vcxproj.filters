@@ -748,6 +748,9 @@
     <Filter Include="vsf\shell\sys\linux\lib\3rd-party\regex">
       <UniqueIdentifier>{886b6405-6e7c-4358-aab7-4ebc91f3a086}</UniqueIdentifier>
     </Filter>
+    <Filter Include="vsf\shell\sys\linux\lib\3rd-party\fnmatch">
+      <UniqueIdentifier>{ca202ba3-f34d-49db-9fa2-4603b167e456}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vsf\source\vsf.h">
@@ -2815,6 +2818,9 @@
     </ClCompile>
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\regex\regfree.c">
       <Filter>vsf\shell\sys\linux\lib\3rd-party\regex</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\fnmatch\fnmatch.c">
+      <Filter>vsf\shell\sys\linux\lib\3rd-party\fnmatch</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

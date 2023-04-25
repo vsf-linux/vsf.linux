@@ -565,9 +565,6 @@
     <Filter Include="vsf\shell\sys\linux\kernel\socket\unix">
       <UniqueIdentifier>{b4aafc7e-3552-4b52-89d7-6d411052cf54}</UniqueIdentifier>
     </Filter>
-    <Filter Include="vsf\shell\sys\linux\lib\glibc\3rd-party">
-      <UniqueIdentifier>{15158a93-39d2-4015-bdf2-063d78c7f496}</UniqueIdentifier>
-    </Filter>
     <Filter Include="vsf\shell\sys\linux\kernel\fs\vfs">
       <UniqueIdentifier>{0913cb33-3d9c-4909-bbe6-4d8870fe17c1}</UniqueIdentifier>
     </Filter>
@@ -750,6 +747,18 @@
     </Filter>
     <Filter Include="vsf\service\loader\pe">
       <UniqueIdentifier>{662e8a55-5337-4a8d-adcd-cbbe7b507260}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\shell\sys\linux\lib\3rd-party">
+      <UniqueIdentifier>{24f3abe1-d7b8-4f89-abed-15f6073c305d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\shell\sys\linux\lib\3rd-party\getopt">
+      <UniqueIdentifier>{2dfc9e21-675e-4886-a8b6-1090c418b4e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\shell\sys\linux\lib\3rd-party\fnmatch">
+      <UniqueIdentifier>{8e648258-9103-4c37-a390-f6bad37f4eb4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\shell\sys\linux\lib\3rd-party\regex">
+      <UniqueIdentifier>{92d0a046-247d-4287-8ab6-c36e4a7486ad}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -2591,9 +2600,6 @@
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\kernel\fs\vsf_linux_fs.c">
       <Filter>vsf\shell\sys\linux\kernel\fs</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\glibc\3rd-party\getopt_long.c">
-      <Filter>vsf\shell\sys\linux\lib\glibc\3rd-party</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\vsf_linux_vfs.c">
       <Filter>vsf\shell\sys\linux\kernel\fs\vfs</Filter>
     </ClCompile>
@@ -2788,6 +2794,24 @@
     </ClCompile>
     <ClCompile Include="..\..\vsf\example\template\demo\linux_demo\dynloader_demo.c">
       <Filter>application\linux_demo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\getopt\getopt_long.c">
+      <Filter>vsf\shell\sys\linux\lib\3rd-party\getopt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\fnmatch\fnmatch.c">
+      <Filter>vsf\shell\sys\linux\lib\3rd-party\fnmatch</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\regex\regcomp.c">
+      <Filter>vsf\shell\sys\linux\lib\3rd-party\regex</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\regex\regerror.c">
+      <Filter>vsf\shell\sys\linux\lib\3rd-party\regex</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\regex\regexec.c">
+      <Filter>vsf\shell\sys\linux\lib\3rd-party\regex</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\regex\regfree.c">
+      <Filter>vsf\shell\sys\linux\lib\3rd-party\regex</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
