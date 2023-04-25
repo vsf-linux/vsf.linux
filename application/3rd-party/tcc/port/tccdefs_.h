@@ -8,5 +8,6 @@
 #define __VSF__\n\
 #define __CPU_X64__\n\
 #define __WIN__\n\
+#define __VSF_APPLET__\n\
 #include <tccdefs.h>\n\
 "
