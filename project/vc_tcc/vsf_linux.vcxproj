@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\application\3rd-party\tcc\port\config.h" />
+    <ClInclude Include="..\..\application\3rd-party\tcc\port\tccdefs_.h" />
     <ClInclude Include="..\..\application\3rd-party\tcc\raw\tcc.h" />
     <ClInclude Include="..\..\config\3rd-party\mbedtls\config.h" />
     <ClInclude Include="..\..\config\target\vsf_usr_cfg_win.h" />

@@ -2067,6 +2067,9 @@
     <ClInclude Include="..\..\vsf\source\service\loader\pe\vsf_peloader.h">
       <Filter>vsf\service\loader\pe</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\tcc\port\tccdefs_.h">
+      <Filter>application\3rd-party\tcc\port</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\vsf\source\utilities\template\vsf_bitmap.c">

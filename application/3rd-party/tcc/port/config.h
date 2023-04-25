@@ -17,6 +17,9 @@
         "/usr/src/vsf/source/shell/sys/linux/include/simple_libc/stdint"PATHSEP\
         "/usr/src/vsf/source/shell/sys/linux/include/simple_libc/uchar"
 #endif
+#ifndef CONFIG_TCC_PREDEFS
+# define CONFIG_TCC_PREDEFS 1
+#endif
 #define TCC_VERSION "0.9.27"
 
 #include <vsf.h>
