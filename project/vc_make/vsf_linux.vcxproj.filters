@@ -565,9 +565,6 @@
     <Filter Include="vsf\shell\sys\linux\kernel\socket\unix">
       <UniqueIdentifier>{b4aafc7e-3552-4b52-89d7-6d411052cf54}</UniqueIdentifier>
     </Filter>
-    <Filter Include="vsf\shell\sys\linux\lib\glibc\3rd-party">
-      <UniqueIdentifier>{15158a93-39d2-4015-bdf2-063d78c7f496}</UniqueIdentifier>
-    </Filter>
     <Filter Include="vsf\shell\sys\linux\kernel\fs\vfs">
       <UniqueIdentifier>{0913cb33-3d9c-4909-bbe6-4d8870fe17c1}</UniqueIdentifier>
     </Filter>
@@ -750,6 +747,21 @@
     </Filter>
     <Filter Include="application\3rd-party\make\raw\src">
       <UniqueIdentifier>{4008fda7-b7f6-41b1-af71-d974b27e3784}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\shell\sys\linux\lib\3rd-party">
+      <UniqueIdentifier>{f3b8899f-aeeb-4ca2-8a96-7ff544fe5071}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\shell\sys\linux\lib\3rd-party\getopt">
+      <UniqueIdentifier>{7093e383-e7fd-451a-89ef-8b73875363e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\shell\sys\linux\lib\3rd-party\fnmatch">
+      <UniqueIdentifier>{c47e7ee6-b97d-4e45-a9b1-bd620479fae9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\shell\sys\linux\lib\3rd-party\glob">
+      <UniqueIdentifier>{06741343-bec2-4212-af6c-8e74dc75a5c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\shell\sys\linux\lib\3rd-party\regex">
+      <UniqueIdentifier>{d516b8cf-7d80-4421-97f9-13abd48ee752}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -2654,9 +2666,6 @@
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\kernel\fs\vsf_linux_fs.c">
       <Filter>vsf\shell\sys\linux\kernel\fs</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\glibc\3rd-party\getopt_long.c">
-      <Filter>vsf\shell\sys\linux\lib\glibc\3rd-party</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\vsf_linux_vfs.c">
       <Filter>vsf\shell\sys\linux\kernel\fs\vfs</Filter>
     </ClCompile>
@@ -2932,6 +2941,27 @@
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\make\raw\src\remote-stub.c">
       <Filter>application\3rd-party\make\raw\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\getopt\getopt_long.c">
+      <Filter>vsf\shell\sys\linux\lib\3rd-party\getopt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\fnmatch\fnmatch.c">
+      <Filter>vsf\shell\sys\linux\lib\3rd-party\fnmatch</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\glob\glob.c">
+      <Filter>vsf\shell\sys\linux\lib\3rd-party\glob</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\regex\regcomp.c">
+      <Filter>vsf\shell\sys\linux\lib\3rd-party\regex</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\regex\regerror.c">
+      <Filter>vsf\shell\sys\linux\lib\3rd-party\regex</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\regex\regexec.c">
+      <Filter>vsf\shell\sys\linux\lib\3rd-party\regex</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\regex\regfree.c">
+      <Filter>vsf\shell\sys\linux\lib\3rd-party\regex</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
