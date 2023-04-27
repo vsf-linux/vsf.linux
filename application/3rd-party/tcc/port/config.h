@@ -6,16 +6,16 @@
 # define CONFIG_TCC_SYSINCLUDEPATHS \
         "{B}/include"PATHSEP\
         "/usr/include"PATHSEP\
-        "/usr/src/vsf/source"PATHSEP\
-        "/usr/src/vsf/source/shell/sys/linux/include"PATHSEP\
-        "/usr/src/vsf/source/shell/sys/linux/include/simple_libc"PATHSEP\
-        "/usr/src/vsf/source/shell/sys/linux/include/simple_libc/assert"PATHSEP\
-        "/usr/src/vsf/source/shell/sys/linux/include/simple_libc/inttypes"PATHSEP\
-        "/usr/src/vsf/source/shell/sys/linux/include/simple_libc/limits"PATHSEP\
-        "/usr/src/vsf/source/shell/sys/linux/include/simple_libc/math"PATHSEP\
-        "/usr/src/vsf/source/shell/sys/linux/include/simple_libc/setjmp"PATHSEP\
-        "/usr/src/vsf/source/shell/sys/linux/include/simple_libc/stdint"PATHSEP\
-        "/usr/src/vsf/source/shell/sys/linux/include/simple_libc/uchar"
+        "/src/vsf/source"PATHSEP\
+        "/src/vsf/source/shell/sys/linux/include"PATHSEP\
+        "/src/vsf/source/shell/sys/linux/include/simple_libc"PATHSEP\
+        "/src/vsf/source/shell/sys/linux/include/simple_libc/assert"PATHSEP\
+        "/src/vsf/source/shell/sys/linux/include/simple_libc/inttypes"PATHSEP\
+        "/src/vsf/source/shell/sys/linux/include/simple_libc/limits"PATHSEP\
+        "/src/vsf/source/shell/sys/linux/include/simple_libc/math"PATHSEP\
+        "/src/vsf/source/shell/sys/linux/include/simple_libc/setjmp"PATHSEP\
+        "/src/vsf/source/shell/sys/linux/include/simple_libc/stdint"PATHSEP\
+        "/src/vsf/source/shell/sys/linux/include/simple_libc/uchar"
 #endif
 #ifndef CONFIG_TCC_PREDEFS
 # define CONFIG_TCC_PREDEFS 1
