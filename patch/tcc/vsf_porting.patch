@@ -1,7 +1,29 @@
+ libtcc.c |  2 ++
  tcc.h    | 13 +++++++++++++
  tccelf.c |  4 ++--
- 2 files changed, 15 insertions(+), 2 deletions(-)
+ tccpe.c  |  4 ++++
+ 4 files changed, 21 insertions(+), 2 deletions(-)
 
+diff --git a/libtcc.c b/libtcc.c
+index de8343f..873966a 100644
+--- a/libtcc.c
++++ b/libtcc.c
+@@ -799,6 +799,7 @@ LIBTCCAPI TCCState *tcc_new(void)
+     s->warn_implicit_function_declaration = 1;
+     s->warn_discarded_qualifiers = 1;
+     s->ms_extensions = 1;
++    s->output_type = TCC_OUTPUT_DLL;
+ 
+ #ifdef CHAR_IS_UNSIGNED
+     s->char_is_unsigned = 1;
+@@ -1939,6 +1940,7 @@ reparse:
+         case TCC_OPTION_c:
+             x = TCC_OUTPUT_OBJ;
+         set_output_type:
++            x = TCC_OUTPUT_DLL;
+             if (s->output_type)
+                 tcc_warning("-%s: overriding compiler action already specified", popt->name);
+             s->output_type = x;
 diff --git a/tcc.h b/tcc.h
 index 9702464..13ef188 100644
 --- a/tcc.h
@@ -48,3 +70,30 @@ index 15ed168..a3833dd 100644
              }
              ph->p_paddr = ph->p_vaddr;
              ++n;
+diff --git a/tccpe.c b/tccpe.c
+index 0196999..3651d2f 100644
+--- a/tccpe.c
++++ b/tccpe.c
+@@ -1919,18 +1919,22 @@ static void pe_add_runtime(TCCState *s1, struct pe_info *pe)
+     set_global_sym(s1, start_symbol, NULL, 0);
+ 
+     if (0 == s1->nostdlib) {
++#ifndef __VSF__
+         static const char * const libs[] = {
+             "msvcrt", "kernel32", "", "user32", "gdi32", NULL
+         };
+         const char * const *pp, *p;
++#endif
+         if (TCC_LIBTCC1[0])
+             tcc_add_support(s1, TCC_LIBTCC1);
++#ifndef __VSF__
+         for (pp = libs; 0 != (p = *pp); ++pp) {
+             if (*p)
+                 tcc_add_library_err(s1, p);
+             else if (PE_DLL != pe_type && PE_GUI != pe_type)
+                 break;
+         }
++#endif
+     }
+ 
+     /* need this for 'tccelf.c:relocate_sections()' */
