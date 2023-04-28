@@ -751,6 +751,9 @@
     <Filter Include="vsf\shell\sys\linux\lib\3rd-party\fnmatch">
       <UniqueIdentifier>{ca202ba3-f34d-49db-9fa2-4603b167e456}</UniqueIdentifier>
     </Filter>
+    <Filter Include="vsf\shell\sys\linux\lib\3rd-party\glob">
+      <UniqueIdentifier>{af17d655-1f0b-45bc-b352-1b091be2a8c1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vsf\source\vsf.h">
@@ -2821,6 +2824,9 @@
     </ClCompile>
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\fnmatch\fnmatch.c">
       <Filter>vsf\shell\sys\linux\lib\3rd-party\fnmatch</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\glob\glob.c">
+      <Filter>vsf\shell\sys\linux\lib\3rd-party\glob</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

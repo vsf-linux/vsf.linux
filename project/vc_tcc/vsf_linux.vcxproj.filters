@@ -760,6 +760,9 @@
     <Filter Include="vsf\shell\sys\linux\lib\3rd-party\regex">
       <UniqueIdentifier>{92d0a046-247d-4287-8ab6-c36e4a7486ad}</UniqueIdentifier>
     </Filter>
+    <Filter Include="vsf\shell\sys\linux\lib\3rd-party\glob">
+      <UniqueIdentifier>{dabc783f-e42c-4aa3-996b-1a77f4ee619d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vsf\source\vsf.h">
@@ -2815,6 +2818,9 @@
     </ClCompile>
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\regex\regfree.c">
       <Filter>vsf\shell\sys\linux\lib\3rd-party\regex</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\glob\glob.c">
+      <Filter>vsf\shell\sys\linux\lib\3rd-party\glob</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
