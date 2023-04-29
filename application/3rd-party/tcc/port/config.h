@@ -20,6 +20,11 @@
 #ifndef CONFIG_TCC_PREDEFS
 # define CONFIG_TCC_PREDEFS 1
 #endif
+#ifndef CONFIG_TCC_LIBPATHS
+#  define CONFIG_TCC_LIBPATHS \
+        "{B}/lib"PATHSEP\
+        "/usr/lib"
+#endif
 #define TCC_VERSION "0.9.27"
 
 #include <vsf.h>
