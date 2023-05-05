@@ -580,9 +580,6 @@
     <Filter Include="vsf\shell\sys\linux\kernel\socket\unix">
       <UniqueIdentifier>{b4aafc7e-3552-4b52-89d7-6d411052cf54}</UniqueIdentifier>
     </Filter>
-    <Filter Include="vsf\shell\sys\linux\lib\glibc\3rd-party">
-      <UniqueIdentifier>{15158a93-39d2-4015-bdf2-063d78c7f496}</UniqueIdentifier>
-    </Filter>
     <Filter Include="vsf\shell\sys\linux\kernel\fs\vfs">
       <UniqueIdentifier>{0913cb33-3d9c-4909-bbe6-4d8870fe17c1}</UniqueIdentifier>
     </Filter>
@@ -730,9 +727,6 @@
     <Filter Include="application\3rd-party\git\raw\compat">
       <UniqueIdentifier>{f8da3426-561b-41ec-b456-1bfbe5e66ab9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="application\3rd-party\git\raw\compat\regex">
-      <UniqueIdentifier>{1b6ae9b8-a0ad-4ba1-bbc1-c48f5ba2cb38}</UniqueIdentifier>
-    </Filter>
     <Filter Include="application\3rd-party\git\raw\compat\linux">
       <UniqueIdentifier>{534a9369-696c-42d1-aa96-b63c7e78540e}</UniqueIdentifier>
     </Filter>
@@ -834,6 +828,33 @@
     </Filter>
     <Filter Include="vsf\hal\driver\common\mmc">
       <UniqueIdentifier>{75e5c30c-e121-4349-a769-4f68034b94da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\shell\sys\linux\lib\3rd-party">
+      <UniqueIdentifier>{ccba6184-f380-4fcc-8690-24d71b6cc968}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\shell\sys\linux\lib\3rd-party\getopt">
+      <UniqueIdentifier>{a574da75-27c0-4d32-8460-7f7d3524b999}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\shell\sys\linux\lib\3rd-party\fnmatch">
+      <UniqueIdentifier>{64be174e-6943-47bd-88e0-d04cbfc8d9b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\shell\sys\linux\lib\3rd-party\glob">
+      <UniqueIdentifier>{f132eb82-e5d6-425f-b222-857cec359518}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\shell\sys\linux\lib\3rd-party\regex">
+      <UniqueIdentifier>{02d72961-0e60-42d8-a29f-ce5961a326b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\service\loader">
+      <UniqueIdentifier>{5d3e8698-b560-44fd-9f8d-7402e39677de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\service\loader\elf">
+      <UniqueIdentifier>{f145fe41-b186-4a21-80fe-1bad5d8e5b9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\service\loader\elf\arch">
+      <UniqueIdentifier>{183f2a7e-2b0b-4486-bc0f-d47b35eef30f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\service\loader\pe">
+      <UniqueIdentifier>{3b5e0b14-87e6-466e-8cef-aec4cf97dc11}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -3189,9 +3210,6 @@
     <ClInclude Include="..\..\application\3rd-party\git\port\git_config.h">
       <Filter>application\3rd-party\git\port</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\application\3rd-party\git\raw\compat\regex\regex.h">
-      <Filter>application\3rd-party\git\raw\compat\regex</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\vsf\source\hal\driver\x86\win\rtc\rtc.h">
       <Filter>vsf\hal\driver\x86\win\rtc</Filter>
     </ClInclude>
@@ -3305,6 +3323,18 @@
     </ClInclude>
     <ClInclude Include="..\..\vsf\source\hal\driver\common\mmc\mmc_template.h">
       <Filter>vsf\hal\driver\common\mmc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\service\loader\vsf_loader.h">
+      <Filter>vsf\service\loader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\service\loader\elf\elf.h">
+      <Filter>vsf\service\loader\elf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\service\loader\elf\vsf_elfloader.h">
+      <Filter>vsf\service\loader\elf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\service\loader\pe\vsf_peloader.h">
+      <Filter>vsf\service\loader\pe</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -4150,9 +4180,6 @@
     </ClCompile>
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\kernel\fs\vsf_linux_fs.c">
       <Filter>vsf\shell\sys\linux\kernel\fs</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\glibc\3rd-party\getopt_long.c">
-      <Filter>vsf\shell\sys\linux\lib\glibc\3rd-party</Filter>
     </ClCompile>
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\vsf_linux_vfs.c">
       <Filter>vsf\shell\sys\linux\kernel\fs\vfs</Filter>
@@ -6506,9 +6533,6 @@
     <ClCompile Include="..\..\application\3rd-party\git\port\git_port_vsf.c">
       <Filter>application\3rd-party\git\port</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\application\3rd-party\git\raw\compat\regex\regex.c">
-      <Filter>application\3rd-party\git\raw\compat\regex</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\git\raw\compat\memmem.c">
       <Filter>application\3rd-party\git\raw\compat</Filter>
     </ClCompile>
@@ -6643,6 +6667,48 @@
     </ClCompile>
     <ClCompile Include="..\..\vsf\source\hal\driver\common\mmc\mmc_probe.c">
       <Filter>vsf\hal\driver\common\mmc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\getopt\getopt_long.c">
+      <Filter>vsf\shell\sys\linux\lib\3rd-party\getopt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\fnmatch\fnmatch.c">
+      <Filter>vsf\shell\sys\linux\lib\3rd-party\fnmatch</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\glob\glob.c">
+      <Filter>vsf\shell\sys\linux\lib\3rd-party\glob</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\regex\regcomp.c">
+      <Filter>vsf\shell\sys\linux\lib\3rd-party\regex</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\regex\regerror.c">
+      <Filter>vsf\shell\sys\linux\lib\3rd-party\regex</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\regex\regexec.c">
+      <Filter>vsf\shell\sys\linux\lib\3rd-party\regex</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\regex\regfree.c">
+      <Filter>vsf\shell\sys\linux\lib\3rd-party\regex</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\example\template\demo\linux_demo\dynloader_demo.c">
+      <Filter>application\linux_demo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\service\loader\vsf_loader.c">
+      <Filter>vsf\service\loader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\service\loader\elf\vsf_elfloader.c">
+      <Filter>vsf\service\loader\elf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\service\loader\elf\arch\vsf_elfloader_arm.c">
+      <Filter>vsf\service\loader\elf\arch</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\service\loader\elf\arch\vsf_elfloader_x64.c">
+      <Filter>vsf\service\loader\elf\arch</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\service\loader\pe\vsf_peloader.c">
+      <Filter>vsf\service\loader\pe</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\vsf.c">
+      <Filter>vsf</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
