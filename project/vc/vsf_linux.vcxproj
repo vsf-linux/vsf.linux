@@ -180,6 +180,7 @@
     <ClInclude Include="..\..\vsf\source\hal\arch\__vsf_arch_interface.h" />
     <ClInclude Include="..\..\vsf\source\hal\driver\common\adc\adc_template.h" />
     <ClInclude Include="..\..\vsf\source\hal\driver\common\common.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\dac\dac_template.h" />
     <ClInclude Include="..\..\vsf\source\hal\driver\common\flash\flash_template.h" />
     <ClInclude Include="..\..\vsf\source\hal\driver\common\i2c\i2c_request.h" />
     <ClInclude Include="..\..\vsf\source\hal\driver\common\i2c\i2c_template.h" />
@@ -586,6 +587,7 @@
     <ClCompile Include="..\..\vsf\source\hal\arch\x86\win\win_generic.c" />
     <ClCompile Include="..\..\vsf\source\hal\arch\x86\win\win_generic_simple.c" />
     <ClCompile Include="..\..\vsf\source\hal\driver\common\adc\adc_common.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\dac\dac_common.c" />
     <ClCompile Include="..\..\vsf\source\hal\driver\common\flash\flash_common.c" />
     <ClCompile Include="..\..\vsf\source\hal\driver\common\gpio\gpio_common.c" />
     <ClCompile Include="..\..\vsf\source\hal\driver\common\i2c\i2c_common.c" />
@@ -721,6 +723,7 @@
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)%(Filename).obj</Outputs>
     </CustomBuild>
     <None Include="..\..\vsf\source\hal\driver\common\adc\adc_template.inc" />
+    <None Include="..\..\vsf\source\hal\driver\common\dac\dac_template.inc" />
     <None Include="..\..\vsf\source\hal\driver\common\flash\flash_template.inc" />
     <None Include="..\..\vsf\source\hal\driver\common\i2c\i2c_template.inc" />
     <None Include="..\..\vsf\source\hal\driver\common\io\io_template.inc" />

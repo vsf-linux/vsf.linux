@@ -754,6 +754,9 @@
     <Filter Include="vsf\shell\sys\linux\lib\3rd-party\glob">
       <UniqueIdentifier>{af17d655-1f0b-45bc-b352-1b091be2a8c1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="vsf\hal\driver\common\dac">
+      <UniqueIdentifier>{75e81da8-a079-4578-bc7c-fd0ec7a4d1dd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vsf\source\vsf.h">
@@ -2082,6 +2085,9 @@
     <ClInclude Include="..\..\vsf\source\service\loader\pe\vsf_peloader.h">
       <Filter>vsf\service\loader\pe</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\dac\dac_template.h">
+      <Filter>vsf\hal\driver\common\dac</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\vsf\source\utilities\template\vsf_bitmap.c">
@@ -2828,6 +2834,9 @@
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\glob\glob.c">
       <Filter>vsf\shell\sys\linux\lib\3rd-party\glob</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\dac\dac_common.c">
+      <Filter>vsf\hal\driver\common\dac</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\vsf\source\hal\arch\common\arch_without_thread_suspend\vsf_arch_without_thread_suspend_template.inc">
@@ -2907,6 +2916,9 @@
     </None>
     <None Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\string_view">
       <Filter>vsf\shell\sys\linux\include\simple_libc</Filter>
+    </None>
+    <None Include="..\..\vsf\source\hal\driver\common\dac\dac_template.inc">
+      <Filter>vsf\hal\driver\common\dac</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
