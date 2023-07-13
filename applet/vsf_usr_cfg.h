@@ -7,6 +7,7 @@
 /*============================ MACROS ========================================*/
 
 #define __VSF_APPLET__
+#define __VSF_APPLET_LIB__
 #define __LINUX__
 
 // ARCH
