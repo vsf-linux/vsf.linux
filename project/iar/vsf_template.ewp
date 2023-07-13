@@ -5662,6 +5662,15 @@
                         </file>
                     </group>
                     <group>
+                        <name>romfs</name>
+                        <file>
+                            <name>$PROJ_DIR$\..\..\vsf\source\component\fs\driver\romfs\vsf_romfs.c</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\..\vsf\source\component\fs\driver\romfs\vsf_romfs.h</name>
+                        </file>
+                    </group>
+                    <group>
                         <name>winfs</name>
                         <file>
                             <name>$PROJ_DIR$\..\..\vsf\source\component\fs\driver\winfs\vsf_winfs.c</name>

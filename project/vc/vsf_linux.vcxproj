@@ -44,6 +44,7 @@
     <ClInclude Include="..\..\vsf\source\component\fs\driver\fatfs\vsf_fatfs.h" />
     <ClInclude Include="..\..\vsf\source\component\fs\driver\malfs\vsf_malfs.h" />
     <ClInclude Include="..\..\vsf\source\component\fs\driver\memfs\vsf_memfs.h" />
+    <ClInclude Include="..\..\vsf\source\component\fs\driver\romfs\vsf_romfs.h" />
     <ClInclude Include="..\..\vsf\source\component\fs\driver\winfs\vsf_winfs.h" />
     <ClInclude Include="..\..\vsf\source\component\fs\vsf_fs.h" />
     <ClInclude Include="..\..\vsf\source\component\fs\vsf_fs_cfg.h" />
@@ -486,6 +487,7 @@
     <ClCompile Include="..\..\vsf\source\component\fs\driver\fatfs\vsf_fatfs.c" />
     <ClCompile Include="..\..\vsf\source\component\fs\driver\malfs\vsf_malfs.c" />
     <ClCompile Include="..\..\vsf\source\component\fs\driver\memfs\vsf_memfs.c" />
+    <ClCompile Include="..\..\vsf\source\component\fs\driver\romfs\vsf_romfs.c" />
     <ClCompile Include="..\..\vsf\source\component\fs\driver\winfs\vsf_winfs.c" />
     <ClCompile Include="..\..\vsf\source\component\fs\vsf_fs.c" />
     <ClCompile Include="..\..\vsf\source\component\input\driver\hid\vsf_input_hid.c" />
