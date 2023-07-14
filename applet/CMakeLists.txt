@@ -55,8 +55,6 @@ set_target_properties(${CMAKE_PROJECT_NAME} PROPERTIES
 )
 add_custom_command(TARGET ${CMAKE_PROJECT_NAME} POST_BUILD
     COMMAND ${CMAKE_SIZE} $<TARGET_FILE:${CMAKE_PROJECT_NAME}>
-    WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
-    USES_TERMINAL
 )
 
 # add user application source code/include directories
