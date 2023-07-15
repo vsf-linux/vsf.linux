@@ -40,9 +40,11 @@ endif()
 
 project(vsf_applet C CXX ASM)
 
-# target
+# target & configurations
 set(VSF_TARGET CortexM4)
 set(VSF_APPLET 1)
+set(VSF_USE_LINUX 1)
+    set(VSF_LINUX_USE_SIMPLE_LIBC 1)
 include($ENV{VSF_PATH}/script/cmake/vsf.cmake)
 
 # linker
