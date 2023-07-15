@@ -83,4 +83,12 @@ vsf_add_include_directories(
 )
 vsf_add_sources(
     main.c
+    $ENV{VSF_PATH}/source/shell/sys/linux/lib/glibc/vsf_linux_glibc_ctype.c
+    $ENV{VSF_PATH}/source/shell/sys/linux/lib/3rd-party/getopt/getopt_long.c
+    $ENV{VSF_PATH}/source/shell/sys/linux/lib/3rd-party/regex/regcomp.c
+    $ENV{VSF_PATH}/source/shell/sys/linux/lib/3rd-party/regex/regerror.c
+    $ENV{VSF_PATH}/source/shell/sys/linux/lib/3rd-party/regex/regexec.c
+    $ENV{VSF_PATH}/source/shell/sys/linux/lib/3rd-party/regex/regfree.c
 )
+#vsf_add_libraries(
+#)
