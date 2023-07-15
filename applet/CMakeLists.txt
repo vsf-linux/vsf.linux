@@ -25,13 +25,18 @@ if(NOT TRUE)
   include($ENV{VSF_PATH}/script/cmake/compilers/gnuarmemb.cmake)
 else()
   if(NOT DEFINED LLVM_TOOLCHAIN_PATH)
-    message(FATAL_ERROR "Please define LLVM_TOOLCHAIN_PATH, eg: -DLLVM_TOOLCHAIN_PATH=\"E:/Software/armllvm16\"")
+    message(WARNING "LLVM_TOOLCHAIN_PATH not defined, use default: -DLLVM_TOOLCHAIN_PATH=\"E:/Software/armllvm16\"")
+    set(LLVM_TOOLCHAIN_PATH "E:/Software/armllvm16")
   endif()
   if(NOT DEFINED LLVM_TOOLCHAIN_EXE_SUFIX)
-    message(FATAL_ERROR "Please define LLVM_TOOLCHAIN_EXE_SUFIX, eg: -DLLVM_TOOLCHAIN_EXE_SUFIX=\".exe\"")
+    message(WARNING "LLVM_TOOLCHAIN_EXE_SUFIX not defined, use default: -DLLVM_TOOLCHAIN_EXE_SUFIX=\".exe\"")
+    set(LLVM_TOOLCHAIN_EXE_SUFIX ".exe")
+  endif()
+  if(NOT DEFINED LLVM_TOOLCHAIN_SYSROOT)
+    message(WARNING "LLVM_TOOLCHAIN_SYSROOT not defined, use default: -DLLVM_TOOLCHAIN_EXE_SUFIX=\"${LLVM_TOOLCHAIN_PATH}/lib/clang-runtimes/arm-none-eabi/armv7m_soft_nofp\"")
+    set(LLVM_TOOLCHAIN_SYSROOT "${LLVM_TOOLCHAIN_PATH}/lib/clang-runtimes/arm-none-eabi/armv7m_soft_nofp")
   endif()
 
-  set(CMAKE_EXE_LINKER_FLAGS "--sysroot ${LLVM_TOOLCHAIN_PATH}/lib/clang-runtimes/armv7m_soft_nofp -nostdlib")
   set(CMAKE_C_FLAGS
       "-Oz --target=armv7m-none-eabi -mcpu=cortex-m4 -mthumb -fropi -frwpi -fno-builtin-printf -fno-builtin-fprintf"
       CACHE INTERNAL "C compiler common flags"
