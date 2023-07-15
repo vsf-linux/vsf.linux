@@ -27,7 +27,7 @@
 
 // components
 
-//#define VSF_USE_TRACE                                   ENABLED
+#define VSF_USE_TRACE                                   ENABLED
 #define VSF_USE_MAL                                     ENABLED
 #define VSF_USE_FS                                      ENABLED
 #define VSF_USE_SIMPLE_STREAM                           ENABLED
