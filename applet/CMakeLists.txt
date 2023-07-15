@@ -24,7 +24,7 @@ if(NOT TRUE)
   )
   include($ENV{VSF_PATH}/script/cmake/compilers/gnuarmemb.cmake)
 else()
-  set(LLVM_TOOLCHAIN_PATH "E:/Software/armllvm14")
+  set(LLVM_TOOLCHAIN_PATH "E:/Software/armllvm16")
   set(LLVM_TOOLCHAIN_EXE_SUFIX ".exe")
   set(CMAKE_EXE_LINKER_FLAGS "--sysroot ${LLVM_TOOLCHAIN_PATH}/lib/clang-runtimes/armv7m_soft_nofp -nostdlib")
   set(CMAKE_C_FLAGS 
@@ -39,11 +39,11 @@ else()
 endif()
 
 project(vsf_applet C CXX ASM)
-add_executable(${CMAKE_PROJECT_NAME} "")
 
 # target
 set(VSF_TARGET CortexM4)
-include($ENV{VSF_PATH}/script/cmake/targets.cmake)
+set(VSF_APPLET 1)
+include($ENV{VSF_PATH}/script/cmake/vsf.cmake)
 
 # linker
 target_link_options(${CMAKE_PROJECT_NAME} PRIVATE
@@ -58,21 +58,18 @@ add_custom_command(TARGET ${CMAKE_PROJECT_NAME} POST_BUILD
 )
 
 # add user application source code/include directories
-target_compile_definitions(${CMAKE_PROJECT_NAME} PUBLIC
-    __VSF__         # VSF platform
+vsf_add_compile_definitions(
     __OOC_CPP__     # cpp support in PLOOC
-
     __CPU_ARM__     # needed in vsf_usr_cfg.h
 )
-target_include_directories(${CMAKE_PROJECT_NAME} PUBLIC
+vsf_add_include_directories(
     .
     ./include
-    $ENV{VSF_PATH}/source
+    # linux include directories
     $ENV{VSF_PATH}/source/shell/sys/linux/include
     $ENV{VSF_PATH}/source/shell/sys/linux/include/simple_libc
     $ENV{VSF_PATH}/source/shell/sys/linux/include/libusb
-    $ENV{VSF_PATH}/source/utilities/compiler/arm/3rd-party/CMSIS/CMSIS/Core/Include
 )
-target_sources(${CMAKE_PROJECT_NAME} PUBLIC
+vsf_add_sources(
     main.c
 )
