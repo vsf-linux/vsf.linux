@@ -32,12 +32,12 @@ else()
   endif()
 
   set(CMAKE_EXE_LINKER_FLAGS "--sysroot ${LLVM_TOOLCHAIN_PATH}/lib/clang-runtimes/armv7m_soft_nofp -nostdlib")
-  set(CMAKE_C_FLAGS 
-      "-Oz --target=armv7m-none-eabi -mcpu=cortex-m4 -mthumb -fropi -frwpi -fno-builtin-printf"
+  set(CMAKE_C_FLAGS
+      "-Oz --target=armv7m-none-eabi -mcpu=cortex-m4 -mthumb -fropi -frwpi -fno-builtin-printf -fno-builtin-fprintf"
       CACHE INTERNAL "C compiler common flags"
   )
-  set(CMAKE_CXX_FLAGS 
-      "-Oz --target=armv7m-none-eabi -mcpu=cortex-m4 -mthumb -fropi -frwpi -fno-builtin-printf"
+  set(CMAKE_CXX_FLAGS
+      "-Oz --target=armv7m-none-eabi -mcpu=cortex-m4 -mthumb -fropi -frwpi -fno-builtin-printf -fno-builtin-fprintf"
       CACHE INTERNAL "C++ compiler common flags"
   )
   include($ENV{VSF_PATH}/script/cmake/compilers/armllvm.cmake)
