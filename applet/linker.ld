@@ -1,5 +1,3 @@
-/* Linker script for aic8800 */
-
 /* Linker script to configure memory regions. */
 MEMORY
 {
