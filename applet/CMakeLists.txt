@@ -10,16 +10,16 @@ message(STATUS "VSF_PATH: $ENV{VSF_PATH}")
 
 # compiler configurations
 
-if(NOT TRUE)
+if(TRUE)
   # arm-none-eabi-gcc will not pass compiler checker of cmake, so include before project
   # **************** Seems not Working ****************
   # refer to arm-none-eabi-gcc BUG: https://answers.launchpad.net/gcc-arm-embedded/+question/675869
   set(CMAKE_C_FLAGS 
-      "-Ofast -fms-extensions -nostdlib -nostartfiles -e _start -msingle-pic-base -mpic-register=r9 -mno-pic-data-is-text-relative -fPIC -shared -z max-page-size=4"
+      "-Og -fms-extensions -nostdlib -nostartfiles -e _start -msingle-pic-base -mpic-register=r9 -mno-pic-data-is-text-relative -fPIC -shared -z max-page-size=4"
       CACHE INTERNAL "C compiler common flags"
   )
   set(CMAKE_CXX_FLAGS 
-      "-Ofast -fms-extensions -nostdlib -nostartfiles -e _start -msingle-pic-base -mpic-register=r9 -mno-pic-data-is-text-relative -fPIC -shared -z max-page-size=4"
+      "-Og -fms-extensions -nostdlib -nostartfiles -e _start -msingle-pic-base -mpic-register=r9 -mno-pic-data-is-text-relative -fPIC -shared -z max-page-size=4"
       CACHE INTERNAL "C++ compiler common flags"
   )
   include($ENV{VSF_PATH}/script/cmake/compilers/gnuarmemb.cmake)
@@ -38,11 +38,13 @@ else()
   endif()
 
   set(CMAKE_C_FLAGS
-      "-Oz --target=armv7m-none-eabi -mcpu=cortex-m4 -mthumb -fropi -frwpi -fno-builtin-printf -fno-builtin-fprintf"
+#      "-Oz -mthumb -fno-builtin-printf -fno-builtin-fprintf -fPIC -mno-pic-data-is-text-relative"      # GOT-base position independency
+      "-Oz -mthumb -fno-builtin-printf -fno-builtin-fprintf -fropi -frwpi"                              # embedded position independency
       CACHE INTERNAL "C compiler common flags"
   )
   set(CMAKE_CXX_FLAGS
-      "-Oz --target=armv7m-none-eabi -mcpu=cortex-m4 -mthumb -fropi -frwpi -fno-builtin-printf -fno-builtin-fprintf"
+#      "-Oz -mthumb -fno-builtin-printf -fno-builtin-fprintf -fPIC -mno-pic-data-is-text-relative"
+      "-Oz -mthumb -fno-builtin-printf -fno-builtin-fprintf -fropi -frwpi"
       CACHE INTERNAL "C++ compiler common flags"
   )
   include($ENV{VSF_PATH}/script/cmake/compilers/armllvm.cmake)
