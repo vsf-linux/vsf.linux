@@ -402,7 +402,6 @@
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\syscall.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\sysctl.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\sysinfo.h" />
-    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\syslog.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\sysmacros.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\time.h" />
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\times.h" />

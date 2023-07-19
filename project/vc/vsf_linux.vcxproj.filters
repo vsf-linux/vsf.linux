@@ -1821,9 +1821,6 @@
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\syscall.h">
       <Filter>vsf\shell\sys\linux\include\sys</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\syslog.h">
-      <Filter>vsf\shell\sys\linux\include\sys</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\vsf\source\shell\sys\linux\include\sys\times.h">
       <Filter>vsf\shell\sys\linux\include\sys</Filter>
     </ClInclude>
