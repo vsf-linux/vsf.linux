@@ -73,7 +73,7 @@ add_custom_command(TARGET ${CMAKE_PROJECT_NAME} POST_BUILD
 
 # add user application source code/include directories
 vsf_add_compile_definitions(
-    __OOC_CPP__     # cpp support in PLOOC
+    __VSF_CPP__     # cpp support in PLOOC
     __CPU_ARM__     # needed in vsf_usr_cfg.h
 )
 vsf_add_include_directories(

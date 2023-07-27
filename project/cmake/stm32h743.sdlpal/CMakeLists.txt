@@ -41,7 +41,7 @@ include($ENV{VSF_PATH}/script/cmake/vsf.cmake)
 # application configurations
 target_compile_definitions(${CMAKE_PROJECT_NAME} PUBLIC
     __VSF__
-    __OOC_CPP__
+    __VSF_CPP__
 # stm32h7xx.h need this
     STM32H757xx
     CORE_CM7

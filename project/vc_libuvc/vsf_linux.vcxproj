@@ -846,7 +846,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>__VSF__;__CPU_X86__;__WIN__;__OOC_RELEASE__;__OOC_CPP__;NDEBUG;_CONSOLE;APP_USE_LIBUVC_DEMO=ENABLED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>__VSF__;__CPU_X86__;__WIN__;__OOC_RELEASE__;__VSF_CPP__;NDEBUG;_CONSOLE;APP_USE_LIBUVC_DEMO=ENABLED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;$(ProjectDir)..\..\vsf\source\component\3rd-party\lwip\raw\src\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
@@ -873,7 +873,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>__VSF__;__CPU_X64__;__WIN__;__OOC_RELEASE__;__OOC_CPP__;NDEBUG;_CONSOLE;APP_USE_LIBUVC_DEMO=ENABLED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>__VSF__;__CPU_X64__;__WIN__;__OOC_RELEASE__;__VSF_CPP__;NDEBUG;_CONSOLE;APP_USE_LIBUVC_DEMO=ENABLED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\files\terminfo;$(ProjectDir)..\..\config;$(ProjectDir)lib\npcap\Include;$(ProjectDir)..\..\vsf\source\component\3rd-party\lwip\raw\src\include;$(ProjectDir)..\..\vsf\source\component\3rd-party\zlib\raw;$(ProjectDir)..\..\vsf\source\component\3rd-party\mbedtls\raw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
