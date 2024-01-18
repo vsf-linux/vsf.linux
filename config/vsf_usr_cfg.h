@@ -87,6 +87,7 @@
 #   else
 #       define VSF_LINUX_USE_BUSYBOX                    ENABLED
 #   endif
+#   define VSF_LINUX_CFG_LINK_FILE                      ENABLED
 #   define VSF_LINUX_USE_SOCKET                         ENABLED
 #       define VSF_LINUX_SOCKET_USE_UNIX                ENABLED
 #       define VSF_LINUX_SOCKET_USE_INET                VSF_USE_TCPIP
