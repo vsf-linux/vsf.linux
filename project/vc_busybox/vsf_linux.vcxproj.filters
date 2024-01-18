@@ -805,6 +805,18 @@
     <Filter Include="vsf\shell\sys\linux\lib\3rd-party\glob">
       <UniqueIdentifier>{85e9b1a0-1a93-477f-9497-0866e5e85e15}</UniqueIdentifier>
     </Filter>
+    <Filter Include="application\3rd-party\busybox\raw\networking">
+      <UniqueIdentifier>{17f3248d-bfc9-4ba1-a6b0-8f8490cd1b0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\busybox\raw\procps">
+      <UniqueIdentifier>{88dde8c8-08ba-444e-8556-65f0c1fbc478}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\busybox\raw\util-linux">
+      <UniqueIdentifier>{41d0df60-76f5-4317-8bd3-ec5eaf249479}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\busybox\raw\debianutils">
+      <UniqueIdentifier>{49739a9c-3a5a-493d-a210-709dff7264b1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vsf\source\vsf.h">
@@ -3715,6 +3727,138 @@
     </ClCompile>
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\glob\glob.c">
       <Filter>vsf\shell\sys\linux\lib\3rd-party\glob</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\libarchive\decompress_gunzip.c">
+      <Filter>application\3rd-party\busybox\raw\archival\libarchive</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\dpkg.c">
+      <Filter>application\3rd-party\busybox\raw\archival</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\busybox\raw\networking\ftpd.c">
+      <Filter>application\3rd-party\busybox\raw\networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\busybox\raw\networking\httpd.c">
+      <Filter>application\3rd-party\busybox\raw\networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\busybox\raw\networking\nc.c">
+      <Filter>application\3rd-party\busybox\raw\networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\busybox\raw\networking\ntpd.c">
+      <Filter>application\3rd-party\busybox\raw\networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\busybox\raw\networking\ping.c">
+      <Filter>application\3rd-party\busybox\raw\networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\busybox\raw\networking\ssl_client.c">
+      <Filter>application\3rd-party\busybox\raw\networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\busybox\raw\networking\telnet.c">
+      <Filter>application\3rd-party\busybox\raw\networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\busybox\raw\networking\telnetd.c">
+      <Filter>application\3rd-party\busybox\raw\networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\busybox\raw\networking\tftp.c">
+      <Filter>application\3rd-party\busybox\raw\networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\busybox\raw\networking\wget.c">
+      <Filter>application\3rd-party\busybox\raw\networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\busybox\raw\networking\tls.c">
+      <Filter>application\3rd-party\busybox\raw\networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\busybox\raw\networking\tls_aes.c">
+      <Filter>application\3rd-party\busybox\raw\networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\busybox\raw\networking\tls_aesgcm.c">
+      <Filter>application\3rd-party\busybox\raw\networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\busybox\raw\networking\tls_fe.c">
+      <Filter>application\3rd-party\busybox\raw\networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\busybox\raw\networking\tls_pstm.c">
+      <Filter>application\3rd-party\busybox\raw\networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\busybox\raw\networking\tls_pstm_montgomery_reduce.c">
+      <Filter>application\3rd-party\busybox\raw\networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\busybox\raw\networking\tls_pstm_mul_comba.c">
+      <Filter>application\3rd-party\busybox\raw\networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\busybox\raw\networking\tls_pstm_sqr_comba.c">
+      <Filter>application\3rd-party\busybox\raw\networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\busybox\raw\networking\tls_rsa.c">
+      <Filter>application\3rd-party\busybox\raw\networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\busybox\raw\networking\tls_sp_c32.c">
+      <Filter>application\3rd-party\busybox\raw\networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\libarchive\data_align.c">
+      <Filter>application\3rd-party\busybox\raw\archival\libarchive</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\libarchive\data_extract_all.c">
+      <Filter>application\3rd-party\busybox\raw\archival\libarchive</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\libarchive\data_skip.c">
+      <Filter>application\3rd-party\busybox\raw\archival\libarchive</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\libarchive\filter_accept_all.c">
+      <Filter>application\3rd-party\busybox\raw\archival\libarchive</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\libarchive\filter_accept_list.c">
+      <Filter>application\3rd-party\busybox\raw\archival\libarchive</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\libarchive\filter_accept_list_reassign.c">
+      <Filter>application\3rd-party\busybox\raw\archival\libarchive</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\libarchive\find_list_entry.c">
+      <Filter>application\3rd-party\busybox\raw\archival\libarchive</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\libarchive\get_header_ar.c">
+      <Filter>application\3rd-party\busybox\raw\archival\libarchive</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\libarchive\get_header_tar.c">
+      <Filter>application\3rd-party\busybox\raw\archival\libarchive</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\libarchive\get_header_tar_gz.c">
+      <Filter>application\3rd-party\busybox\raw\archival\libarchive</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\libarchive\header_skip.c">
+      <Filter>application\3rd-party\busybox\raw\archival\libarchive</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\libarchive\init_handle.c">
+      <Filter>application\3rd-party\busybox\raw\archival\libarchive</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\libarchive\seek_by_jump.c">
+      <Filter>application\3rd-party\busybox\raw\archival\libarchive</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\libarchive\seek_by_read.c">
+      <Filter>application\3rd-party\busybox\raw\archival\libarchive</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\libarchive\unpack_ar_archive.c">
+      <Filter>application\3rd-party\busybox\raw\archival\libarchive</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\libarchive\unsafe_prefix.c">
+      <Filter>application\3rd-party\busybox\raw\archival\libarchive</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\libarchive\unsafe_symlink_target.c">
+      <Filter>application\3rd-party\busybox\raw\archival\libarchive</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\busybox\raw\procps\free.c">
+      <Filter>application\3rd-party\busybox\raw\procps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\busybox\raw\util-linux\mkfs_vfat.c">
+      <Filter>application\3rd-party\busybox\raw\util-linux</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\busybox\raw\debianutils\which.c">
+      <Filter>application\3rd-party\busybox\raw\debianutils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\busybox\raw\libbb\change_identity.c">
+      <Filter>application\3rd-party\busybox\raw\libbb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\busybox\raw\networking\parse_pasv_epsv.c">
+      <Filter>application\3rd-party\busybox\raw\networking</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
