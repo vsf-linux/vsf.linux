@@ -799,6 +799,12 @@
     <Filter Include="application\3rd-party\busybox\raw\archival\libarchive">
       <UniqueIdentifier>{d05248e0-f0eb-444a-8e06-148b93971f1d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="vsf\shell\sys\linux\lib\3rd-party\fnmatch">
+      <UniqueIdentifier>{c362b21a-130f-4d93-9733-8e40a5b25c6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\shell\sys\linux\lib\3rd-party\glob">
+      <UniqueIdentifier>{85e9b1a0-1a93-477f-9497-0866e5e85e15}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vsf\source\vsf.h">
@@ -3703,6 +3709,12 @@
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\busybox\raw\archival\bbunzip.c">
       <Filter>application\3rd-party\busybox\raw\archival</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\fnmatch\fnmatch.c">
+      <Filter>vsf\shell\sys\linux\lib\3rd-party\fnmatch</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\glob\glob.c">
+      <Filter>vsf\shell\sys\linux\lib\3rd-party\glob</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

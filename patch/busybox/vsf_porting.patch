@@ -1,8 +1,11 @@
+ coreutils/sort.c                 |  11 +++
+ coreutils/test.c                 |   4 +
+ coreutils/test_ptr_hack.c        |   2 +
  editors/awk.c                    |   4 +-
- include/libbb.h                  | 153 ++++++++++++++++++++++++++++++++++++++-
- include/platform.h               |  10 ++-
- init/init.c                      | 105 +++++++++++++++++++++++++++
- libbb/appletlib.c                |   4 +
+ include/libbb.h                  | 186 ++++++++++++++++++++++++++++++++++++++-
+ include/platform.h               |  17 +++-
+ init/init.c                      |   9 ++
+ libbb/appletlib.c                |  22 +++++
  libbb/auto_string.c              |   5 ++
  libbb/bbunit.c                   |   6 ++
  libbb/common_bufsiz.c            |   2 +
@@ -22,6 +25,7 @@
  libbb/signals.c                  |   2 +
  libbb/u_signal_names.c           |   2 +-
  libbb/verror_msg.c               |   4 +
+ libbb/xfunc_die.c                |   2 +
  libbb/xfuncs.c                   |   6 +-
  loginutils/addgroup.c            |   2 +-
  loginutils/adduser.c             |   2 +-
@@ -30,10 +34,69 @@
  networking/libiproute/rtm_map.c  |   2 +-
  networking/netstat.c             |   4 +-
  networking/tls.c                 |   2 +-
+ procps/free.c                    |   4 +-
  shell/ash.c                      |   2 +-
- shell/hush.c                     | 109 ++++++++++++++++++++++++++++
- 34 files changed, 471 insertions(+), 35 deletions(-)
+ 38 files changed, 343 insertions(+), 39 deletions(-)
 
+diff --git a/coreutils/sort.c b/coreutils/sort.c
+index 01b7c44e5..22452d830 100644
+--- a/coreutils/sort.c
++++ b/coreutils/sort.c
+@@ -129,6 +129,16 @@ static const char sort_opt_str[] ALIGN1 = "^"
+ #define OPT_STR (sort_opt_str + 1)
+ 
+ #if ENABLE_FEATURE_SORT_BIG
++
++# ifdef __VSF__
++static struct sort_key {
++	struct sort_key *next_key;  /* linked list */
++	unsigned range[4];          /* start word, start char, end word, end char */
++	unsigned flags;
++};
++#  define key_separator (libbb_ctx->sort.key_separator)
++#  define key_list (libbb_ctx->sort.key_list)
++# else
+ static char key_separator;
+ 
+ static struct sort_key {
+@@ -136,6 +146,7 @@ static struct sort_key {
+ 	unsigned range[4];          /* start word, start char, end word, end char */
+ 	unsigned flags;
+ } *key_list;
++# endif
+ 
+ 
+ /* This is a NOEXEC applet. Be very careful! */
+diff --git a/coreutils/test.c b/coreutils/test.c
+index 1d1e6d18b..5dc2e1ee4 100644
+--- a/coreutils/test.c
++++ b/coreutils/test.c
+@@ -435,7 +435,11 @@ struct test_statics {
+ };
+ 
+ /* See test_ptr_hack.c */
++#ifdef __VSF__
++# define test_ptr_to_statics (libbb_ctx->test_ptr_to_statics)
++#else
+ extern struct test_statics *BB_GLOBAL_CONST test_ptr_to_statics;
++#endif
+ 
+ #define S (*test_ptr_to_statics)
+ #define args            (S.args         )
+diff --git a/coreutils/test_ptr_hack.c b/coreutils/test_ptr_hack.c
+index 5ba9dcc68..5f91ecd0f 100644
+--- a/coreutils/test_ptr_hack.c
++++ b/coreutils/test_ptr_hack.c
+@@ -11,7 +11,9 @@ struct test_statics;
+ 
+ /* We cheat here. It is declared as const ptr in libbb.h,
+  * but here we make it live in R/W memory */
++#ifndef __VSF__
+ struct test_statics *test_ptr_to_statics;
++#endif
+ 
+ #else
+ 
 diff --git a/editors/awk.c b/editors/awk.c
 index 728ee8685..b3b52f106 100644
 --- a/editors/awk.c
@@ -57,17 +120,30 @@ index 728ee8685..b3b52f106 100644
  				break;
  			}
 diff --git a/include/libbb.h b/include/libbb.h
-index cca33a177..c5a9abcac 100644
+index cca33a177..e024f2a02 100644
 --- a/include/libbb.h
 +++ b/include/libbb.h
-@@ -55,6 +55,21 @@
+@@ -55,6 +55,34 @@
  #include <sys/param.h>
  #include <pwd.h>
  #include <grp.h>
 +
 +#ifdef __VSF__
++# include <vsf.h>
 +# include <getopt.h>
 +# include "vsf_porting/libbb_dynlib.h"
++
++# ifndef LONG_BIT
++#  define LONG_BIT 32
++# endif
++# ifdef VSF_ARCH_SETJMP
++#  undef setjmp
++#  define setjmp VSF_ARCH_SETJMP
++# endif
++# ifdef VSF_ARCH_LONGJMP
++#  undef longjmp
++#  define longjmp VSF_ARCH_LONGJMP
++# endif
 +
 +// remove __reserved in sal.h from M$
 +# ifdef __reserved
@@ -82,7 +158,7 @@ index cca33a177..c5a9abcac 100644
  #if ENABLE_FEATURE_SHADOWPASSWDS
  # if !ENABLE_USE_BB_SHADOW
  /* If using busybox's shadow implementation, do not include the shadow.h
-@@ -182,7 +197,9 @@
+@@ -182,7 +210,9 @@
  
  /* Some libc's forget to declare these, do it ourself */
  
@@ -92,7 +168,7 @@ index cca33a177..c5a9abcac 100644
  /* klogctl is in libc's klog.h, but we cheat and not #include that */
  int klogctl(int type, char *b, int len);
  #ifndef PATH_MAX
-@@ -311,7 +328,21 @@ typedef unsigned long long uoff_t;
+@@ -311,7 +341,21 @@ typedef unsigned long long uoff_t;
   * Even if sizeof(off_t) == sizeof(int), off_t is typedef'ed to long anyway.
   * gcc will throw warnings on printf("%d", off_t)... Have to use %ld etc.
   */
@@ -115,7 +191,7 @@ index cca33a177..c5a9abcac 100644
  typedef unsigned long uoff_t;
  #  define XATOOFF(a) xatoi_positive(a)
  #  define BB_STRTOOFF bb_strtou
-@@ -383,10 +414,88 @@ struct BUG_off_t_size_is_misdetected {
+@@ -383,10 +427,107 @@ struct BUG_off_t_size_is_misdetected {
  # define BB_GLOBAL_CONST const
  #endif
  
@@ -127,6 +203,9 @@ index cca33a177..c5a9abcac 100644
 +struct lineedit_statics;
 +struct const_des_ctx;
 +struct des_ctx;
++struct sort_key;
++struct test_statics;
++struct suid_config_t;
 +typedef struct llist_t {
 +	struct llist_t *link;
 +	char *data;
@@ -143,8 +222,15 @@ index cca33a177..c5a9abcac 100644
 +	uint8_t xfunc_error_retval;
 +	uint32_t *global_crc32_table;
 +	struct globals *ptr_to_globals;
++	struct test_statics *test_ptr_to_statics;
++	void (*die_func)(void);
 +	char bb_common_bufsiz1[1024];
 +
++	struct {
++		struct suid_config_t *suid_config;
++		bool suid_cfg_readable;
++		uid_t ruid;
++	} appletlib;
 +	// verror_msg.c
 +	struct {
 +		smallint syslog_level;
@@ -186,6 +272,15 @@ index cca33a177..c5a9abcac 100644
 +		char local_buf[sizeof(int) * 3];
 +	} xfuncs;
 +	struct {
++		struct {
++			int log_fd;
++		} message;
++	} init;
++	struct {
++		char key_separator;
++		struct sort_key *key_list;
++	} sort;
++	struct {
 +		uint8_t buffer[128];
 +	} __args;
 +};
@@ -204,7 +299,7 @@ index cca33a177..c5a9abcac 100644
  # undef errno
  # define errno (*bb_errno)
  # define bb_cached_errno_ptr 1
-@@ -637,7 +746,11 @@ int sigprocmask_allsigs(int how) FAST_FUNC;
+@@ -637,7 +778,11 @@ int sigprocmask_allsigs(int how) FAST_FUNC;
  /* Return old set in the same set: */
  int sigprocmask2(int how, sigset_t *set) FAST_FUNC;
  /* Standard handler which just records signo */
@@ -216,7 +311,7 @@ index cca33a177..c5a9abcac 100644
  void record_signo(int signo); /* not FAST_FUNC! */
  
  
-@@ -1085,7 +1198,7 @@ char *safe_gethostname(void) FAST_FUNC;
+@@ -1085,7 +1230,7 @@ char *safe_gethostname(void) FAST_FUNC;
  char* str_tolower(char *str) FAST_FUNC;
  
  char *utoa(unsigned n) FAST_FUNC;
@@ -225,7 +320,7 @@ index cca33a177..c5a9abcac 100644
  /* Returns a pointer past the formatted number, does NOT null-terminate */
  char *utoa_to_buf(unsigned n, char *buf, unsigned buflen) FAST_FUNC;
  char *itoa_to_buf(int n, char *buf, unsigned buflen) FAST_FUNC;
-@@ -1318,7 +1431,11 @@ enum {
+@@ -1318,7 +1463,11 @@ enum {
  # define bb_daemonize_or_rexec(flags, argv) bb_daemonize_or_rexec(flags)
  # define bb_daemonize(flags)                bb_daemonize_or_rexec(flags, bogus)
  #else
@@ -237,7 +332,7 @@ index cca33a177..c5a9abcac 100644
    /* Note: re_exec() and fork_or_rexec() do argv[0][0] |= 0x80 on NOMMU!
     * _Parent_ needs to undo it if it doesn't want to have argv[0] mangled.
     */
-@@ -1343,7 +1460,11 @@ int sanitize_env_if_suid(void) FAST_FUNC;
+@@ -1343,7 +1492,11 @@ int sanitize_env_if_suid(void) FAST_FUNC;
  void make_all_argv_opts(char **argv) FAST_FUNC;
  char* single_argv(char **argv) FAST_FUNC;
  extern const char *const bb_argv_dash[]; /* { "-", NULL } */
@@ -249,7 +344,7 @@ index cca33a177..c5a9abcac 100644
  uint32_t getopt32(char **argv, const char *applet_opts, ...) FAST_FUNC;
  # define No_argument "\0"
  # define Required_argument "\001"
-@@ -1380,10 +1501,12 @@ uint32_t getopt32long(char **argv, const char *optstring, const char *longopts,
+@@ -1380,10 +1533,12 @@ uint32_t getopt32long(char **argv, const char *optstring, const char *longopts,
   * of "llist-compatible" structs, and using llist_FOO functions
   * on them.
   */
@@ -262,7 +357,7 @@ index cca33a177..c5a9abcac 100644
  void llist_add_to(llist_t **old_head, void *data) FAST_FUNC;
  void llist_add_to_end(llist_t **list_head, void *data) FAST_FUNC;
  void *llist_pop(llist_t **elm) FAST_FUNC;
-@@ -1399,7 +1522,11 @@ llist_t *llist_find_str(llist_t *first, const char *str) FAST_FUNC;
+@@ -1399,7 +1554,11 @@ llist_t *llist_find_str(llist_t *first, const char *str) FAST_FUNC;
   * to create pidfiles regardless of FEATURE_PIDFILE */
  #if ENABLE_FEATURE_PIDFILE || defined(WANT_PIDFILE)
  /* True only if we created pidfile which is *file*, not /dev/null etc */
@@ -274,7 +369,7 @@ index cca33a177..c5a9abcac 100644
  void write_pidfile(const char *path) FAST_FUNC;
  void write_pidfile_std_path_and_ext(const char *path) FAST_FUNC;
  void remove_pidfile_std_path_and_ext(const char *path) FAST_FUNC;
-@@ -1418,9 +1545,15 @@ enum {
+@@ -1418,10 +1577,17 @@ enum {
  	LOGMODE_SYSLOG = (1 << 1) * ENABLE_FEATURE_SYSLOG,
  	LOGMODE_BOTH = LOGMODE_SYSLOG + LOGMODE_STDIO,
  };
@@ -282,15 +377,17 @@ index cca33a177..c5a9abcac 100644
 +# define msg_eol (libbb_ctx->msg_eol)
 +# define logmode (libbb_ctx->logmode)
 +# define xfunc_error_retval (libbb_ctx->xfunc_error_retval)
++# define die_func (libbb_ctx->die_func)
 +#else
  extern const char *msg_eol;
  extern smallint logmode;
  extern uint8_t xfunc_error_retval;
-+#endif
  extern void (*die_func)(void);
++#endif
  void xfunc_die(void) NORETURN FAST_FUNC;
  void bb_show_usage(void) NORETURN FAST_FUNC;
-@@ -2189,7 +2322,11 @@ enum {
+ void bb_error_msg(const char *s, ...) __attribute__ ((format (printf, 1, 2))) FAST_FUNC;
+@@ -2189,7 +2355,11 @@ enum {
  	SHA3_OUTSIZE   = 28,
  };
  
@@ -302,7 +399,7 @@ index cca33a177..c5a9abcac 100644
  uint32_t *crc32_filltable(uint32_t *tbl256, int endian) FAST_FUNC;
  uint32_t *crc32_new_table_le(void) FAST_FUNC;
  uint32_t *global_crc32_new_table_le(void) FAST_FUNC;
-@@ -2228,7 +2365,11 @@ unsigned ubi_devnum_from_devname(const char *str) FAST_FUNC;
+@@ -2228,7 +2398,11 @@ unsigned ubi_devnum_from_devname(const char *str) FAST_FUNC;
  int ubi_get_volid_by_name(unsigned ubi_devnum, const char *vol_name) FAST_FUNC;
  
  
@@ -314,7 +411,7 @@ index cca33a177..c5a9abcac 100644
  
  /* Some older linkers don't perform string merging, we used to have common strings
   * as global arrays to do it by hand. But:
-@@ -2294,7 +2435,11 @@ struct globals;
+@@ -2294,7 +2468,11 @@ struct globals;
  /* '*const' ptr makes gcc optimize code much better.
   * Magic prevents ptr_to_globals from going into rodata.
   * If you want to assign a value, use SET_PTR_TO_GLOBALS(x) */
@@ -326,7 +423,7 @@ index cca33a177..c5a9abcac 100644
  
  #define barrier() asm volatile ("":::"memory")
  
-@@ -2414,7 +2559,9 @@ do { \
+@@ -2414,7 +2592,9 @@ do { \
  	(sizeof(field) == 4 ? SWAP_LE32(field) : BUG_wrong_field_size())
  
  
@@ -338,21 +435,20 @@ index cca33a177..c5a9abcac 100644
  
  
 diff --git a/include/platform.h b/include/platform.h
-index ea0512f36..3eeeaf85d 100644
+index ea0512f36..6f7afb3fe 100644
 --- a/include/platform.h
 +++ b/include/platform.h
-@@ -7,6 +7,10 @@
+@@ -7,6 +7,9 @@
  #ifndef BB_PLATFORM_H
  #define BB_PLATFORM_H 1
  
 +#ifdef __VSF__
-+# include "autoconf.h"
 +# undef UNICODE
 +#endif
  
  /* Convenience macros to test the version of gcc. */
  #undef __GNUC_PREREQ
-@@ -24,7 +28,7 @@
+@@ -24,7 +27,7 @@
  # endif
  #endif
  
@@ -361,7 +457,29 @@ index ea0512f36..3eeeaf85d 100644
  # ifndef __attribute__
  #  define __attribute__(x)
  # endif
-@@ -318,7 +322,9 @@ typedef unsigned smalluint;
+@@ -65,7 +68,9 @@
+  * to the new pointer) after the function returns a non-NULL value."
+  */
+ #define RETURNS_MALLOC __attribute__ ((malloc))
+-#define PACKED __attribute__ ((__packed__))
++#ifndef PACKED
++# define PACKED __attribute__ ((__packed__))
++#endif
+ #define ALIGNED(m) __attribute__ ((__aligned__(m)))
+ 
+ /* __NO_INLINE__: some gcc's do not honor inlining! :( */
+@@ -81,7 +86,9 @@
+ #  define UNUSED_PARAM_RESULT
+ # endif
+ #else
+-# define ALWAYS_INLINE inline
++# ifndef ALWAYS_INLINE
++#  define ALWAYS_INLINE inline
++# endif
+ # define NOINLINE
+ # define DEPRECATED
+ # define UNUSED_PARAM_RESULT
+@@ -318,7 +325,9 @@ typedef unsigned smalluint;
   || defined __dietlibc__ \
   || defined __BIONIC__ \
   || defined _NEWLIB_VERSION
@@ -373,127 +491,32 @@ index ea0512f36..3eeeaf85d 100644
  
  /* Define bb_setpgrp */
 diff --git a/init/init.c b/init/init.c
-index 1e1ce833d..5b8f77d81 100644
+index 1e1ce833d..fd7caf8b4 100644
 --- a/init/init.c
 +++ b/init/init.c
-@@ -476,6 +476,108 @@ static void init_exec(const char *command)
- }
- 
- /* Used only by run_actions */
+@@ -261,7 +261,11 @@ static void message(int where, const char *fmt, ...)
+ 	if (where & L_LOG) {
+ 		/* Take full control of the log tty, and never close it.
+ 		 * It's mine, all mine!  Muhahahaha! */
 +#ifdef __VSF__
-+
-+#define __VSF_LINUX_CLASS_INHERIT__
-+#include <unistd.h>
-+#include <spawn.h>
-+
-+extern int __vsf_linux_spawn(pid_t *pid, vsf_linux_main_entry_t entry,
-+                const posix_spawn_file_actions_t *actions,
-+                const posix_spawnattr_t *attr,
-+                char * const argv[], char * const env[], void *priv, int priv_size);
-+extern void * __vsf_linux_get_process_priv(vsf_linux_process_t *process);
-+
-+struct action_process_ctx {
-+	const struct init_action *a;
-+};
-+
-+static int __action_process(int argc, char *argv[])
-+{
-+	struct __busybox_libbb_ctx *lbb_ctx = (struct __busybox_libbb_ctx *)__vsf_linux_get_process_priv(NULL);
-+	struct action_process_ctx *ctx = (struct action_process_ctx *)lbb_ctx->__args.buffer;
-+	const struct init_action *a = ctx->a;
-+
-+	declare_vsf_busybox_mod(libbb_fork);
-+	vsf_linux_dynlib_ctx_set(&vsf_busybox_mod_name(libbb_fork), lbb_ctx);
-+
-+	/* Reset signal handlers that were set by the parent process */
-+	reset_sighandlers_and_unblock_sigs();
-+
-+	/* Create a new session and make ourself the process group leader */
-+	setsid();
-+
-+	/* Open the new terminal device */
-+	if (!open_stdio_to_tty(a->terminal))
-+		_exit(EXIT_FAILURE);
-+
-+	/* NB: on NOMMU we can't wait for input in child, so
-+	 * "askfirst" will work the same as "respawn". */
-+	if (BB_MMU && (a->action_type & ASKFIRST)) {
-+		static const char press_enter[] ALIGN1 =
-+#ifdef CUSTOMIZED_BANNER
-+#include CUSTOMIZED_BANNER
-+#endif
-+			"\nPlease press Enter to activate this console. ";
-+		char c;
-+		/*
-+		 * Save memory by not exec-ing anything large (like a shell)
-+		 * before the user wants it. This is critical if swap is not
-+		 * enabled and the system has low memory. Generally this will
-+		 * be run on the second virtual console, and the first will
-+		 * be allowed to start a shell or whatever an init script
-+		 * specifies.
-+		 */
-+		dbg_message(L_LOG, "waiting for enter to start '%s'"
-+					"(pid %d, tty '%s')\n",
-+				a->command, getpid(), a->terminal);
-+		full_write(STDOUT_FILENO, press_enter, sizeof(press_enter) - 1);
-+		while (safe_read(STDIN_FILENO, &c, 1) == 1 && c != '\n')
-+			continue;
-+	}
-+
-+	/*
-+	 * When a file named /.init_enable_core exists, setrlimit is called
-+	 * before processes are spawned to set core file size as unlimited.
-+	 * This is for debugging only.  Don't use this is production, unless
-+	 * you want core dumps lying about....
-+	 */
-+	if (ENABLE_FEATURE_INIT_COREDUMPS) {
-+		if (access("/.init_enable_core", F_OK) == 0) {
-+			struct rlimit limit;
-+			limit.rlim_cur = RLIM_INFINITY;
-+			limit.rlim_max = RLIM_INFINITY;
-+			setrlimit(RLIMIT_CORE, &limit);
-+		}
-+	}
-+
-+	/* Log the process name and args */
-+	message(L_LOG, "starting pid %u, tty '%s': '%s'",
-+			(int)getpid(), a->terminal, a->command);
-+
-+	/* Now run it.  The new program will take over this PID,
-+	 * so nothing further in init.c should be run. */
-+	init_exec(a->command);
-+	/* We're still here?  Some error happened. */
-+	_exit(-1);
-+}
-+
-+static pid_t run(const struct init_action *a)
-+{
-+	struct action_process_ctx ctx = {
-+		.a			= a,
-+	};
-+	struct __busybox_libbb_ctx *lbb_ctx = libbb_ctx;
-+	memcpy(lbb_ctx->__args.buffer, &ctx, sizeof(ctx));
-+	pid_t pid = -1;
-+	if ((__vsf_linux_spawn(&pid, __action_process, NULL, NULL, NULL, NULL, lbb_ctx, sizeof(*lbb_ctx)) < 0) || (pid < 0)) {
-+		message(L_LOG | L_CONSOLE, "can't spawn");
-+		return -1;
-+	}
-+	return pid;
-+}
-+
++# define log_fd (libbb_ctx->init.message.log_fd)
 +#else
- static pid_t run(const struct init_action *a)
- {
- 	pid_t pid;
-@@ -552,6 +654,7 @@ static pid_t run(const struct init_action *a)
- 	/* We're still here?  Some error happened. */
- 	_exit(-1);
- }
+ 		static int log_fd = -1;
 +#endif
  
- static struct init_action *mark_terminated(pid_t pid)
- {
-@@ -682,9 +785,11 @@ static void parse_inittab(void)
+ 		if (log_fd < 0) {
+ 			log_fd = STDERR_FILENO;
+@@ -278,6 +282,9 @@ static void message(int where, const char *fmt, ...)
+ 		full_write(log_fd, msg, l);
+ 		if (log_fd == STDERR_FILENO)
+ 			return; /* don't print dup messages */
++#ifdef __VSF__
++# undef log_fd
++#endif
+ 	}
+ #endif
+ 
+@@ -682,9 +689,11 @@ static void parse_inittab(void)
  		/* Askfirst shell on tty1-4 */
  		new_init_action(ASKFIRST, bb_default_login_shell, "");
  //TODO: VC_1 instead of ""? "" is console -> ctty problems -> angry users
@@ -506,10 +529,10 @@ index 1e1ce833d..5b8f77d81 100644
  		new_init_action(CTRLALTDEL, "reboot", "");
  		/* Umount all filesystems on halt/reboot */
 diff --git a/libbb/appletlib.c b/libbb/appletlib.c
-index d5335d353..e3c73a0bf 100644
+index d5335d353..7743c3512 100644
 --- a/libbb/appletlib.c
 +++ b/libbb/appletlib.c
-@@ -283,10 +283,12 @@ void lbb_prepare(const char *applet
+@@ -283,19 +283,36 @@ void lbb_prepare(const char *applet
   * (--gc-sections would be even better....)
   */
  
@@ -522,7 +545,39 @@ index d5335d353..e3c73a0bf 100644
  
  
  /* If not built as a single-applet executable... */
-@@ -1028,6 +1030,8 @@ get_script_content(unsigned n UNUSED_PARAM)
+ #if !defined(SINGLE_APPLET_MAIN)
+ 
++# ifdef __VSF__
++#  define ruid (libbb_ctx->appletlib.ruid)
++# else
+ IF_FEATURE_SUID(static uid_t ruid;)  /* real uid */
++# endif
+ 
+ # if ENABLE_FEATURE_SUID_CONFIG
+ 
++#  ifdef __VSF__
++struct suid_config_t {
++	/* next ptr must be first: this struct needs to be llist-compatible */
++	struct suid_config_t *m_next;
++	struct bb_uidgid_t m_ugid;
++	int m_applet;
++	mode_t m_mode;
++};
++#   define suid_config (libbb_ctx->appletlib.suid_config)
++#   define suid_cfg_readable (libbb_ctx->appletlib.suid_cfg_readable)
++#  else
+ static struct suid_config_t {
+ 	/* next ptr must be first: this struct needs to be llist-compatible */
+ 	struct suid_config_t *m_next;
+@@ -305,6 +322,7 @@ static struct suid_config_t {
+ } *suid_config;
+ 
+ static bool suid_cfg_readable;
++#  endif
+ 
+ /* libbb candidate */
+ static char *get_trimmed_slice(char *s, char *e)
+@@ -1028,6 +1046,8 @@ get_script_content(unsigned n UNUSED_PARAM)
  
  #if ENABLE_BUILD_LIBBUSYBOX
  int lbb_main(char **argv)
@@ -531,6 +586,22 @@ index d5335d353..e3c73a0bf 100644
  #else
  int main(int argc UNUSED_PARAM, char **argv)
  #endif
+@@ -1045,6 +1065,7 @@ int main(int argc UNUSED_PARAM, char **argv)
+ 	printf("_end:%p %u bytes\n", &_end, end_len);
+ #endif
+ 
++#ifndef __VSF__
+ 	/* Tweak malloc for reduced memory consumption */
+ #ifdef M_TRIM_THRESHOLD
+ 	/* M_TRIM_THRESHOLD is the maximum amount of freed top-most memory
+@@ -1059,6 +1080,7 @@ int main(int argc UNUSED_PARAM, char **argv)
+ 	 */
+ 	mallopt(M_MMAP_THRESHOLD, 32 * 1024 - 256);
+ #endif
++#endif
+ #if 0 /*def M_TOP_PAD*/
+ 	/* When the program break is increased, then M_TOP_PAD bytes are added
+ 	 * to the sbrk(2) request. When the heap is trimmed because of free(3),
 diff --git a/libbb/auto_string.c b/libbb/auto_string.c
 index ae940069a..b90cdc533 100644
 --- a/libbb/auto_string.c
@@ -878,6 +949,20 @@ index 71512aee2..0b865cadd 100644
  
  void FAST_FUNC bb_verror_msg(const char *s, va_list p, const char* strerr)
  {
+diff --git a/libbb/xfunc_die.c b/libbb/xfunc_die.c
+index 25b99066d..b74dfc31d 100644
+--- a/libbb/xfunc_die.c
++++ b/libbb/xfunc_die.c
+@@ -11,7 +11,9 @@
+ /* Keeping it separate allows to NOT pull in stdio for VERY small applets.
+  * Try building busybox with only "true" enabled... */
+ 
++#ifndef __VSF__
+ void (*die_func)(void);
++#endif
+ 
+ void FAST_FUNC xfunc_die(void)
+ {
 diff --git a/libbb/xfuncs.c b/libbb/xfuncs.c
 index 465e5366c..af1feeaaf 100644
 --- a/libbb/xfuncs.c
@@ -1079,6 +1164,22 @@ index 8d074c058..52d56fded 100644
  }
  
  static void tls_aesgcm_decrypt(tls_state_t *tls, uint8_t *buf, int size)
+diff --git a/procps/free.c b/procps/free.c
+index 0b68e1b88..1b44ef6b2 100644
+--- a/procps/free.c
++++ b/procps/free.c
+@@ -52,9 +52,9 @@
+ //NB: if we implement -s or -c, need to stop being NOFORK!
+ 
+ #include "libbb.h"
+-#ifdef __linux__
++//#ifdef __linux__
+ # include <sys/sysinfo.h>
+-#endif
++//#endif
+ 
+ struct globals {
+ 	unsigned mem_unit;
 diff --git a/shell/ash.c b/shell/ash.c
 index 18ccc1329..832924b4e 100644
 --- a/shell/ash.c
@@ -1092,146 +1193,3 @@ index 18ccc1329..832924b4e 100644
  	sbuf[0] = c;
  	/*sbuf[1] = '\0'; - already is */
  	setvar0(optvar, sbuf);
-diff --git a/shell/hush.c b/shell/hush.c
-index d111f0cc5..2d036a74d 100644
---- a/shell/hush.c
-+++ b/shell/hush.c
-@@ -2099,8 +2099,11 @@ static void hush_exit(int exitcode)
- 		cur_var = G.top_var;
- 		while (cur_var) {
- 			struct variable *tmp = cur_var;
-+# ifndef __VSF__
-+			// environment is freed in vsf
- 			if (!cur_var->max_len)
- 				free(cur_var->varstr);
-+# endif
- 			cur_var = cur_var->next;
- 			free(tmp);
- 		}
-@@ -9229,6 +9232,97 @@ static int redirect_and_varexp_helper(
- 
- 	return setup_redirects(command, sqp);
- }
-+
-+#ifdef __VSF__
-+
-+#include <spawn.h>
-+
-+extern int __vsf_linux_spawn(pid_t *pid, vsf_linux_main_entry_t entry,
-+                const posix_spawn_file_actions_t *actions,
-+                const posix_spawnattr_t *attr,
-+                char * const argv[], char * const env[], void *priv, int priv_size);
-+extern void * __vsf_linux_get_process_priv(vsf_linux_process_t *process);
-+
-+struct pipe_process_priv {
-+	int next_infd;
-+	struct fd_pair pipefds;
-+	struct pipe *pi;
-+	struct command *command;
-+	volatile nommu_save_t nommu_save;
-+	char **argv_expanded;
-+};
-+
-+static NOINLINE int pipe_process(int argc, char *argv[])
-+{
-+	struct __busybox_libbb_ctx *lbb_ctx = (struct __busybox_libbb_ctx *)__vsf_linux_get_process_priv(NULL);
-+	struct pipe_process_priv *priv = (struct pipe_process_priv *)lbb_ctx->__args.buffer;
-+	int next_infd = priv->next_infd;
-+	struct fd_pair pipefds = priv->pipefds;
-+	struct pipe *pi = priv->pi;
-+	struct command *command = priv->command;
-+	volatile nommu_save_t nommu_save = priv->nommu_save;
-+
-+	declare_vsf_busybox_mod(libbb_fork);
-+	vsf_linux_dynlib_ctx_set(&vsf_busybox_mod_name(libbb_fork), lbb_ctx);
-+
-+#if ENABLE_HUSH_JOB
-+	disable_restore_tty_pgrp_on_exit();
-+	CLEAR_RANDOM_T(&G.random_gen); /* or else $RANDOM repeats in child */
-+
-+	/* Every child adds itself to new process group
-+	 * with pgid == pid_of_first_child_in_pipe */
-+	if (G.run_list_level == 1 && G_interactive_fd) {
-+		pid_t pgrp;
-+		pgrp = pi->pgrp;
-+		if (pgrp < 0) /* true for 1st process only */
-+			pgrp = getpid();
-+		if (setpgid(0, pgrp) == 0
-+		 && pi->followup != PIPE_BG
-+		 && G_saved_tty_pgrp /* we have ctty */
-+		) {
-+			/* We do it in *every* child, not just first,
-+			 * to avoid races */
-+			tcsetpgrp(G_interactive_fd, pgrp);
-+		}
-+	}
-+#endif
-+	if (pi->alive_cmds == 0 && pi->followup == PIPE_BG) {
-+		/* 1st cmd in backgrounded pipe
-+		 * should have its stdin /dev/null'ed */
-+		close(0);
-+		if (open(bb_dev_null, O_RDONLY))
-+			xopen("/", O_RDONLY);
-+	} else {
-+		xmove_fd(next_infd, 0);
-+	}
-+	xmove_fd(pipefds.wr, 1);
-+	if (pipefds.rd > 1)
-+		close(pipefds.rd);
-+	/* Like bash, explicit redirects override pipes,
-+	 * and the pipe fd (fd#1) is available for dup'ing:
-+	 * "cmd1 2>&1 | cmd2": fd#1 is duped to fd#2, thus stderr
-+	 * of cmd1 goes into pipe.
-+	 */
-+	if (setup_redirects(command, NULL)) {
-+		/* Happens when redir file can't be opened:
-+		 * $ hush -c 'echo FOO >&2 | echo BAR 3>/qwe/rty; echo BAZ'
-+		 * FOO
-+		 * hush: can't open '/qwe/rty': No such file or directory
-+		 * BAZ
-+		 * (echo BAR is not executed, it hits _exit(1) below)
-+		 */
-+		_exit(1);
-+	}
-+
-+	/* Stores to nommu_save list of env vars putenv'ed
-+	 * (NOMMU, on MMU we don't need that) */
-+	/* cast away volatility... */
-+	pseudo_exec((nommu_save_t*) &nommu_save, command, argv);
-+	/* pseudo_exec() does not return */
-+}
-+
-+#endif
-+
- static NOINLINE int run_pipe(struct pipe *pi)
- {
- 	static const char *const null_ptr = NULL;
-@@ -9584,6 +9678,20 @@ static NOINLINE int run_pipe(struct pipe *pi)
- 		G.execute_lineno = command->lineno;
- #endif
- 
-+#ifdef __VSF__
-+		struct pipe_process_priv priv = {
-+			.next_infd		= next_infd,
-+			.pipefds		= pipefds,
-+			.pi				= pi,
-+			.command		= command,
-+			.nommu_save		= nommu_save,
-+		};
-+		struct __busybox_libbb_ctx *lbb_ctx = libbb_ctx;
-+		memcpy(lbb_ctx->__args.buffer, &priv, sizeof(priv));
-+
-+		command->pid = -1;
-+		__vsf_linux_spawn(&command->pid, pipe_process, NULL, NULL, argv_expanded, NULL, lbb_ctx, sizeof(*lbb_ctx));
-+#else
- 		command->pid = BB_MMU ? fork() : vfork();
- 		if (!command->pid) { /* child */
- #if ENABLE_HUSH_JOB
-@@ -9641,6 +9749,7 @@ static NOINLINE int run_pipe(struct pipe *pi)
- 			pseudo_exec((nommu_save_t*) &nommu_save, command, argv_expanded);
- 			/* pseudo_exec() does not return */
- 		}
-+#endif
- 
- 		/* parent or error */
- #if ENABLE_HUSH_FAST
