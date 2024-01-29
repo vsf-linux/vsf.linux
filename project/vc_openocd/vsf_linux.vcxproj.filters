@@ -535,9 +535,6 @@
     <Filter Include="vsf\shell\sys\linux\kernel\socket\unix">
       <UniqueIdentifier>{b4aafc7e-3552-4b52-89d7-6d411052cf54}</UniqueIdentifier>
     </Filter>
-    <Filter Include="vsf\shell\sys\linux\lib\glibc\3rd-party">
-      <UniqueIdentifier>{15158a93-39d2-4015-bdf2-063d78c7f496}</UniqueIdentifier>
-    </Filter>
     <Filter Include="vsf\shell\sys\linux\kernel\fs\vfs">
       <UniqueIdentifier>{0913cb33-3d9c-4909-bbe6-4d8870fe17c1}</UniqueIdentifier>
     </Filter>
@@ -705,6 +702,42 @@
     </Filter>
     <Filter Include="vsf\hal\driver\common\usart">
       <UniqueIdentifier>{e414cafd-04c7-41a4-beda-820f0e0e6338}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\shell\sys\linux\lib\3rd-party">
+      <UniqueIdentifier>{547e1eec-5e34-4d5f-a1aa-0990e0fdae66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\shell\sys\linux\lib\3rd-party\getopt">
+      <UniqueIdentifier>{49e7fbd5-9d68-4379-9f8f-ffb8d63df1f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\hal\driver\x86\win\rng">
+      <UniqueIdentifier>{1f44afe6-3724-4d04-9ca9-8dfc26ebe8a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\hal\utilities">
+      <UniqueIdentifier>{597142dd-ee0a-415f-9773-bbb5bf219f7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\hal\utilities\remap">
+      <UniqueIdentifier>{b8e12338-f8c8-4146-bad7-b14059e5ff30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\hal\utilities\remap\usart">
+      <UniqueIdentifier>{59e3ba30-b1eb-412a-af53-11903af98c0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\service\loader">
+      <UniqueIdentifier>{30b21e84-d328-4493-82f9-53a398ffd496}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\service\loader\elf">
+      <UniqueIdentifier>{d9f16d87-1903-4d7a-b45f-1cabfbb1ccba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\service\loader\elf\arch">
+      <UniqueIdentifier>{e1876f4e-e998-403b-9ecf-5d0bbefbbe64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\service\loader\pe">
+      <UniqueIdentifier>{4721d8d2-22b8-4c19-a8f9-59882142018c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\shell\sys\linux\lib\3rd-party\glob">
+      <UniqueIdentifier>{b2325464-62dd-4eac-bfac-4b0b4a309163}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\shell\sys\linux\lib\3rd-party\fnmatch">
+      <UniqueIdentifier>{dff5a9d2-b3b4-4c22-b9b4-b53e1a08ef43}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -2259,6 +2292,24 @@
     <ClInclude Include="..\..\vsf\source\hal\driver\common\usart\fifo2req_usart.h">
       <Filter>vsf\hal\driver\common\usart</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\driver\x86\win\rng\rng.h">
+      <Filter>vsf\hal\driver\x86\win\rng</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\utilities\remap\usart\vsf_remapped_usart.h">
+      <Filter>vsf\hal\utilities\remap\usart</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\service\loader\elf\elf.h">
+      <Filter>vsf\service\loader\elf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\service\loader\elf\vsf_elfloader.h">
+      <Filter>vsf\service\loader\elf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\service\loader\pe\vsf_peloader.h">
+      <Filter>vsf\service\loader\pe</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\service\loader\vsf_loader.h">
+      <Filter>vsf\service\loader</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\vsf\source\utilities\template\vsf_bitmap.c">
@@ -2779,9 +2830,6 @@
     </ClCompile>
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\kernel\fs\vsf_linux_fs.c">
       <Filter>vsf\shell\sys\linux\kernel\fs</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\glibc\3rd-party\getopt_long.c">
-      <Filter>vsf\shell\sys\linux\lib\glibc\3rd-party</Filter>
     </ClCompile>
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\vsf_linux_vfs.c">
       <Filter>vsf\shell\sys\linux\kernel\fs\vfs</Filter>
@@ -3904,6 +3952,39 @@
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\xfel\chips\v853.c">
       <Filter>application\3rd-party\xfel\chips</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\getopt\getopt_long.c">
+      <Filter>vsf\shell\sys\linux\lib\3rd-party\getopt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\hal\driver\x86\win\rng\rng.c">
+      <Filter>vsf\hal\driver\x86\win\rng</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\hal\utilities\remap\usart\vsf_remapped_usart.c">
+      <Filter>vsf\hal\utilities\remap\usart</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\service\loader\elf\vsf_elfloader.c">
+      <Filter>vsf\service\loader\elf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\service\loader\elf\arch\vsf_elfloader_arm.c">
+      <Filter>vsf\service\loader\elf\arch</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\service\loader\elf\arch\vsf_elfloader_x64.c">
+      <Filter>vsf\service\loader\elf\arch</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\service\loader\pe\vsf_peloader.c">
+      <Filter>vsf\service\loader\pe</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\service\loader\vsf_loader.c">
+      <Filter>vsf\service\loader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\vsf.c">
+      <Filter>vsf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\glob\glob.c">
+      <Filter>vsf\shell\sys\linux\lib\3rd-party\glob</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\fnmatch\fnmatch.c">
+      <Filter>vsf\shell\sys\linux\lib\3rd-party\fnmatch</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
