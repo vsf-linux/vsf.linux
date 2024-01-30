@@ -3336,6 +3336,18 @@
     <ClInclude Include="..\..\vsf\source\service\loader\pe\vsf_peloader.h">
       <Filter>vsf\service\loader\pe</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_hash.h">
+      <Filter>vsf\component\3rd-party\mbedtls\raw\library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_cipher.h">
+      <Filter>vsf\component\3rd-party\mbedtls\raw\library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_mac.h">
+      <Filter>vsf\component\3rd-party\mbedtls\raw\library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_aead.h">
+      <Filter>vsf\component\3rd-party\mbedtls\raw\library</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\vsf\source\utilities\template\vsf_bitmap.c">
@@ -6709,6 +6721,24 @@
     </ClCompile>
     <ClCompile Include="..\..\vsf\source\vsf.c">
       <Filter>vsf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\constant_time.c">
+      <Filter>vsf\component\3rd-party\mbedtls\raw\library</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_hash.c">
+      <Filter>vsf\component\3rd-party\mbedtls\raw\library</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_cipher.c">
+      <Filter>vsf\component\3rd-party\mbedtls\raw\library</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_mac.c">
+      <Filter>vsf\component\3rd-party\mbedtls\raw\library</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_aead.c">
+      <Filter>vsf\component\3rd-party\mbedtls\raw\library</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\utilities\compiler\vsf_compiler.c">
+      <Filter>vsf\utilities\compiler</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -462,11 +462,15 @@
     <ClInclude Include="..\..\vsf\example\template\demo\common\usrapp_usbh_common.h" />
     <ClInclude Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\check_crypto_config.h" />
     <ClInclude Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\common.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_aead.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_cipher.h" />
     <ClInclude Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_core.h" />
     <ClInclude Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_driver_wrappers.h" />
     <ClInclude Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_ecp.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_hash.h" />
     <ClInclude Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_invasive.h" />
     <ClInclude Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_its.h" />
+    <ClInclude Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_mac.h" />
     <ClInclude Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_random_impl.h" />
     <ClInclude Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_rsa.h" />
     <ClInclude Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_se.h" />
@@ -1764,6 +1768,7 @@
     <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\cipher.c" />
     <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\cipher_wrap.c" />
     <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\cmac.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\constant_time.c" />
     <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\ctr_drbg.c" />
     <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\debug.c" />
     <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\des.c" />
@@ -1801,9 +1806,13 @@
     <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\platform_util.c" />
     <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\poly1305.c" />
     <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_aead.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_cipher.c" />
     <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_client.c" />
     <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_driver_wrappers.c" />
     <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_ecp.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_hash.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_mac.c" />
     <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_rsa.c" />
     <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_se.c" />
     <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_slot_management.c" />
@@ -2070,6 +2079,7 @@
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\port\busybox\shell\vsh.c" />
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\vsf_linux.c" />
     <ClCompile Include="..\..\vsf\source\shell\sys\xboot\vsf_xboot.c" />
+    <ClCompile Include="..\..\vsf\source\utilities\compiler\vsf_compiler.c" />
     <ClCompile Include="..\..\vsf\source\utilities\compiler\x86\x86_compiler.c" />
     <ClCompile Include="..\..\vsf\source\utilities\compiler\__common\__retarget_io.c" />
     <ClCompile Include="..\..\vsf\source\utilities\language_extension\code_region.c" />
