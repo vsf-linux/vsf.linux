@@ -68,9 +68,10 @@
 // For cpp support, heap_monitor will break initialization of static instance of cpp.
 //  Because heap_monitor depends on vsf_linux environment, which is not available
 //  when initialing static instance of cpp.
-#   define VSF_LINUX_SIMPLE_STDLIB_CFG_HEAP_MONITOR     DISABLED
-#       define VSF_LINUX_SIMPLE_STDLIB_HEAP_MONITOR_TRACE_DEPTH (32 * 1024)
-#       define VSF_LINUX_SIMPLE_STDLIB_HEAP_MONITOR_QUIET       ENABLED
+#   define VSF_LINUX_SIMPLE_STDLIB_CFG_HEAP_MONITOR     ENABLED
+#       define VSF_LINUX_SIMPLE_STDLIB_CFG_HEAP_MONITOR_TRACE_CALLER    ENABLED
+#       define VSF_LINUX_SIMPLE_STDLIB_HEAP_MONITOR_QUIET   DISABLED
+#       define VSF_LINUX_SIMPLE_STDLIB_HEAP_MONITOR_MAX ENABLED
 // if VSF_LINUX_USE_SIMPLE_LIBC is enabled, need VSF_USE_SIMPLE_SSCANF and VSF_USE_SIMPLE_SPRINTF
 #if VSF_LINUX_USE_SIMPLE_LIBC == ENABLED
 #   define VSF_LINUX_LIBC_CFG_CPP                       ENABLED

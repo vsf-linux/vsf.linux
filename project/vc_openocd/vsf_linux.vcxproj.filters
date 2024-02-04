@@ -3986,6 +3986,12 @@
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\fnmatch\fnmatch.c">
       <Filter>vsf\shell\sys\linux\lib\3rd-party\fnmatch</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\vsf\source\utilities\compiler\vsf_compiler.c">
+      <Filter>vsf\utilities\compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\example\template\demo\linux_demo\dynloader_demo.c">
+      <Filter>application\linux_demo</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\vsf\source\hal\arch\common\arch_without_thread_suspend\vsf_arch_without_thread_suspend_template.inc">
