@@ -78,7 +78,7 @@ static int __busybox_export(int argc, char *argv[])
 }
 #endif
 
-WEAK(vsf_board_init)
+VSF_CAL_WEAK(vsf_board_init)
 void vsf_board_init(void) {}
 
 int vsf_linux_create_fhs(void)
