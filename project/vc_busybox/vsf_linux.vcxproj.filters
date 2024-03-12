@@ -3860,6 +3860,9 @@
     <ClCompile Include="..\..\application\3rd-party\busybox\raw\networking\parse_pasv_epsv.c">
       <Filter>application\3rd-party\busybox\raw\networking</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\vsf\source\utilities\compiler\vsf_compiler.c">
+      <Filter>vsf\utilities\compiler</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\vsf\source\hal\arch\common\arch_without_thread_suspend\vsf_arch_without_thread_suspend_template.inc">
