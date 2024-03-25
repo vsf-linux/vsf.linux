@@ -1508,6 +1508,10 @@
     <ClInclude Include="..\..\vsf\source\service\fifo\vsf_fifo.h" />
     <ClInclude Include="..\..\vsf\source\service\heap\vsf_heap.h" />
     <ClInclude Include="..\..\vsf\source\service\json\vsf_json.h" />
+    <ClInclude Include="..\..\vsf\source\service\loader\elf\elf.h" />
+    <ClInclude Include="..\..\vsf\source\service\loader\elf\vsf_elfloader.h" />
+    <ClInclude Include="..\..\vsf\source\service\loader\pe\vsf_peloader.h" />
+    <ClInclude Include="..\..\vsf\source\service\loader\vsf_loader.h" />
     <ClInclude Include="..\..\vsf\source\service\pbuf\vsf_pbuf.h" />
     <ClInclude Include="..\..\vsf\source\service\pbuf\vsf_pbuf_pool.h" />
     <ClInclude Include="..\..\vsf\source\service\pool\vsf_pool.h" />
@@ -4353,6 +4357,7 @@
     <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\cipher.c" />
     <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\cipher_wrap.c" />
     <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\cmac.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\constant_time.c" />
     <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\ctr_drbg.c" />
     <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\debug.c" />
     <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\des.c" />
@@ -4390,9 +4395,13 @@
     <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\platform_util.c" />
     <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\poly1305.c" />
     <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_aead.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_cipher.c" />
     <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_client.c" />
     <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_driver_wrappers.c" />
     <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_ecp.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_hash.c" />
+    <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_mac.c" />
     <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_rsa.c" />
     <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_se.c" />
     <ClCompile Include="..\..\vsf\source\component\3rd-party\mbedtls\raw\library\psa_crypto_slot_management.c" />
@@ -4600,6 +4609,11 @@
     <ClCompile Include="..\..\vsf\source\service\fifo\vsf_fifo.c" />
     <ClCompile Include="..\..\vsf\source\service\heap\vsf_heap.c" />
     <ClCompile Include="..\..\vsf\source\service\json\vsf_json.c" />
+    <ClCompile Include="..\..\vsf\source\service\loader\elf\arch\vsf_elfloader_arm.c" />
+    <ClCompile Include="..\..\vsf\source\service\loader\elf\arch\vsf_elfloader_x64.c" />
+    <ClCompile Include="..\..\vsf\source\service\loader\elf\vsf_elfloader.c" />
+    <ClCompile Include="..\..\vsf\source\service\loader\pe\vsf_peloader.c" />
+    <ClCompile Include="..\..\vsf\source\service\loader\vsf_loader.c" />
     <ClCompile Include="..\..\vsf\source\service\pbuf\vsf_pbuf.c" />
     <ClCompile Include="..\..\vsf\source\service\pbuf\vsf_pbuf_pool.c" />
     <ClCompile Include="..\..\vsf\source\service\pool\vsf_pool.c" />
@@ -4667,7 +4681,13 @@
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\kernel\socket\inet\vsf_linux_socket_inet_lwip.c" />
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\kernel\socket\unix\vsf_linux_socket_unix.c" />
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\kernel\socket\vsf_linux_socket.c" />
-    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\glibc\3rd-party\getopt_long.c" />
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\fnmatch\fnmatch.c" />
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\getopt\getopt_long.c" />
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\glob\glob.c" />
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\regex\regcomp.c" />
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\regex\regerror.c" />
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\regex\regexec.c" />
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\regex\regfree.c" />
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\glibc\vsf_linux_glibc.c" />
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\glibc\vsf_linux_glibcpp_string.cpp" />
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\glibc\vsf_linux_glibc_ctype.c" />
@@ -4682,6 +4702,7 @@
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\port\busybox\busybox.c" />
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\port\busybox\shell\vsh.c" />
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\vsf_linux.c" />
+    <ClCompile Include="..\..\vsf\source\utilities\compiler\vsf_compiler.c" />
     <ClCompile Include="..\..\vsf\source\utilities\compiler\x86\x86_compiler.c" />
     <ClCompile Include="..\..\vsf\source\utilities\compiler\__common\__retarget_io.c" />
     <ClCompile Include="..\..\vsf\source\utilities\language_extension\code_region.c" />
@@ -4692,6 +4713,7 @@
     <ClCompile Include="..\..\vsf\source\utilities\template\vsf_bitmap.c" />
     <ClCompile Include="..\..\vsf\source\utilities\template\vsf_list.c" />
     <ClCompile Include="..\..\vsf\source\utilities\template\vsf_queue.c" />
+    <ClCompile Include="..\..\vsf\source\vsf.c" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\vsf\source\hal\arch\common\arch_without_thread_suspend\vsf_arch_without_thread_suspend_template.inc" />

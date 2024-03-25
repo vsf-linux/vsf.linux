@@ -2,7 +2,7 @@
 
 #ifdef __VSF__
 
-NO_INIT SDL_VSF_platform SDL_platform;
+VSF_CAL_NO_INIT SDL_VSF_platform SDL_platform;
 
 void vsf_sdl2_init(vsf_sdl2_cfg_t *cfg)
 {

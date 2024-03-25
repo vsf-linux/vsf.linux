@@ -182,7 +182,7 @@ VSF_WaitEventTimeout(_THIS, int timeout)
     vsf_protect_t orig = vsf_protect_int();
         is_empty = vsf_slist_queue_is_empty(&SDL_platform.event.queue);
         if (is_empty && timeout > 0) {
-            SECTION(".text.vsf.kernel.vsf_sync")
+            VSF_CAL_SECTION(".text.vsf.kernel.vsf_sync")
             vsf_eda_t * __vsf_eda_set_timeout(vsf_eda_t *eda, vsf_timeout_tick_t timeout);
 
             SDL_platform.event.eda_pending = vsf_eda_get_cur();
@@ -196,7 +196,7 @@ VSF_WaitEventTimeout(_THIS, int timeout)
             is_empty = false;
         }
 
-        SECTION(".text.vsf.kernel.__vsf_teda_cancel_timer")
+        VSF_CAL_SECTION(".text.vsf.kernel.__vsf_teda_cancel_timer")
         vsf_err_t __vsf_teda_cancel_timer(vsf_teda_t *this_ptr);
         __vsf_teda_cancel_timer((vsf_teda_t *)eda);
 
