@@ -133,14 +133,14 @@ VSF_PumpEvents(_THIS)
             }
             break;
         case VSF_INPUT_TYPE_MOUSE:
-            param.mouse.x = vk_input_mouse_evt_get_x(evt);
-            param.mouse.y = vk_input_mouse_evt_get_y(evt);
-            switch (vk_input_mouse_evt_get(evt)) {
+            param.mouse.x = vsf_input_mouse_evt_get_x(evt);
+            param.mouse.y = vsf_input_mouse_evt_get_y(evt);
+            switch (vsf_input_mouse_evt_get(evt)) {
             case VSF_INPUT_MOUSE_EVT_MOVE:
                 SDL_SendMouseMotion(NULL, 0, 0, param.mouse.x, param.mouse.y);
                 break;
             case VSF_INPUT_MOUSE_EVT_BUTTON:
-                param.mouse.button = vk_input_mouse_evt_button_get(evt);
+                param.mouse.button = vsf_input_mouse_evt_button_get(evt);
                 switch (param.mouse.button) {
                 case VSF_INPUT_MOUSE_BUTTON_LEFT:
                     param.mouse.button = SDL_BUTTON_LEFT;
@@ -152,7 +152,7 @@ VSF_PumpEvents(_THIS)
                     param.mouse.button = SDL_BUTTON_RIGHT;
                     break;
                 }
-                if (vk_input_mouse_evt_button_is_down(evt)) {
+                if (vsf_input_mouse_evt_button_is_down(evt)) {
                     SDL_SendMouseButton(NULL, 0, SDL_PRESSED, param.mouse.button);
                 } else {
                     SDL_SendMouseButton(NULL, 0, SDL_RELEASED, param.mouse.button);

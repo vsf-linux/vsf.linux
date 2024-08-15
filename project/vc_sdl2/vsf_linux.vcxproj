@@ -1475,8 +1475,8 @@
     <ClInclude Include="..\..\vsf\source\hal\utilities\remap\i2c\vsf_remapped_i2c.h" />
     <ClInclude Include="..\..\vsf\source\hal\utilities\remap\i2s\vsf_remapped_i2s.h" />
     <ClInclude Include="..\..\vsf\source\hal\utilities\remap\io\vsf_remapped_io.h" />
-    <ClInclude Include="..\..\vsf\source\hal\utilities\remap\mmc\vsf_remapped_mmc.h" />
     <ClInclude Include="..\..\vsf\source\hal\utilities\remap\pwm\vsf_remapped_pwm.h" />
+    <ClInclude Include="..\..\vsf\source\hal\utilities\remap\sdio\vsf_remapped_sdio.h" />
     <ClInclude Include="..\..\vsf\source\hal\utilities\remap\spi\vsf_remapped_spi.h" />
     <ClInclude Include="..\..\vsf\source\hal\utilities\remap\usart\vsf_remapped_usart.h" />
     <ClInclude Include="..\..\vsf\source\hal\utilities\remap\vsf_hal_remap.h" />
@@ -4277,6 +4277,7 @@
     <ClCompile Include="..\..\vsf\example\template\demo\common\usrapp_ui_common.c" />
     <ClCompile Include="..\..\vsf\example\template\demo\common\usrapp_usbd_common.c" />
     <ClCompile Include="..\..\vsf\example\template\demo\common\usrapp_usbh_common.c" />
+    <ClCompile Include="..\..\vsf\example\template\demo\linux_demo\dynloader_demo.c" />
     <ClCompile Include="..\..\vsf\example\template\demo\linux_demo\libusb_demo.c" />
     <ClCompile Include="..\..\vsf\example\template\demo\linux_demo\mount_demo.c" />
     <ClCompile Include="..\..\vsf\example\template\demo\linux_demo\ntpdate_demo.c" />
@@ -4564,10 +4565,11 @@
     <ClCompile Include="..\..\vsf\source\hal\driver\common\i2c\i2c_common.c" />
     <ClCompile Include="..\..\vsf\source\hal\driver\common\i2s\i2s_common.c" />
     <ClCompile Include="..\..\vsf\source\hal\driver\common\io\io_common.c" />
-    <ClCompile Include="..\..\vsf\source\hal\driver\common\mmc\mmc_common.c" />
     <ClCompile Include="..\..\vsf\source\hal\driver\common\pwm\pwm_common.c" />
     <ClCompile Include="..\..\vsf\source\hal\driver\common\rng\rng_common.c" />
     <ClCompile Include="..\..\vsf\source\hal\driver\common\rtc\rtc_common.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\sdio\sdio_common.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\sdio\sdio_probe.c" />
     <ClCompile Include="..\..\vsf\source\hal\driver\common\spi\fifo2req_spi.c" />
     <ClCompile Include="..\..\vsf\source\hal\driver\common\spi\spi_common.c" />
     <ClCompile Include="..\..\vsf\source\hal\driver\common\timer\timer_common.c" />
@@ -4585,8 +4587,8 @@
     <ClCompile Include="..\..\vsf\source\hal\utilities\remap\i2c\vsf_remapped_i2c.c" />
     <ClCompile Include="..\..\vsf\source\hal\utilities\remap\i2s\vsf_remapped_i2s.c" />
     <ClCompile Include="..\..\vsf\source\hal\utilities\remap\io\vsf_remapped_io.c" />
-    <ClCompile Include="..\..\vsf\source\hal\utilities\remap\mmc\vsf_remapped_mmc.c" />
     <ClCompile Include="..\..\vsf\source\hal\utilities\remap\pwm\vsf_remapped_pwm.c" />
+    <ClCompile Include="..\..\vsf\source\hal\utilities\remap\sdio\vsf_remapped_sdio.c" />
     <ClCompile Include="..\..\vsf\source\hal\utilities\remap\spi\vsf_remapped_spi.c" />
     <ClCompile Include="..\..\vsf\source\hal\utilities\remap\usart\vsf_remapped_usart.c" />
     <ClCompile Include="..\..\vsf\source\hal\vsf_hal.c" />
@@ -4725,6 +4727,7 @@
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)%(Filename).obj</Outputs>
     </CustomBuild>
     <None Include="..\..\vsf\source\hal\driver\common\rtc\rtc_template.inc" />
+    <None Include="..\..\vsf\source\hal\driver\common\sdio\sdio_template.inc" />
     <None Include="..\..\vsf\source\hal\driver\common\usart\usart_template.inc" />
     <None Include="..\..\vsf\source\shell\sys\linux\app\httpd\urihandler\file\__vsf_linux_urihandler_file.inc" />
     <None Include="..\..\vsf\source\shell\sys\linux\include\simple_libc\atomic" />
