@@ -6696,15 +6696,6 @@
                             </file>
                         </group>
                         <group>
-                            <name>io</name>
-                            <file>
-                                <name>$PROJ_DIR$\..\..\vsf\source\hal\driver\AIC\AIC8800\io\io.c</name>
-                            </file>
-                            <file>
-                                <name>$PROJ_DIR$\..\..\vsf\source\hal\driver\AIC\AIC8800\io\io.h</name>
-                            </file>
-                        </group>
-                        <group>
                             <name>port</name>
                             <group>
                                 <name>arch</name>
@@ -7825,12 +7816,6 @@
                         </file>
                         <file>
                             <name>$PROJ_DIR$\..\..\vsf\source\hal\driver\common\i2c\multiplex_i2c.h</name>
-                        </file>
-                    </group>
-                    <group>
-                        <name>io</name>
-                        <file>
-                            <name>$PROJ_DIR$\..\..\vsf\source\hal\driver\common\io\io_common.c</name>
                         </file>
                     </group>
                     <group>
