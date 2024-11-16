@@ -1209,9 +1209,6 @@
     <ClInclude Include="..\..\vsf\source\component\ui\tgui\controls\__vk_tgui_slider.h">
       <Filter>vsf\component\ui\tgui\controls</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\vsf\source\component\ui\tgui\controls\__vsf_tgui_controls_common.h">
-      <Filter>vsf\component\ui\tgui\controls</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\vsf\source\component\ui\tgui\controls\vsf_msg_tree_cfg.h">
       <Filter>vsf\component\ui\tgui\controls</Filter>
     </ClInclude>
@@ -1258,9 +1255,6 @@
       <Filter>vsf\component\ui\tgui\view\simple_view</Filter>
     </ClInclude>
     <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_draw.h">
-      <Filter>vsf\component\ui\tgui\view\simple_view</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_font.h">
       <Filter>vsf\component\ui\tgui\view\simple_view</Filter>
     </ClInclude>
     <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_label.h">
@@ -2536,9 +2530,6 @@
     </ClCompile>
     <ClCompile Include="..\..\vsf\source\component\ui\tgui\vsf_tgui_input.c">
       <Filter>vsf\component\ui\tgui</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_font.c">
-      <Filter>vsf\component\ui\tgui\view\simple_view</Filter>
     </ClCompile>
     <ClCompile Include="..\..\vsf\source\component\usb\host\class\DL1x5\vsf_usbh_dl1x5.c">
       <Filter>vsf\component\usb\host\class\DL1x5</Filter>
