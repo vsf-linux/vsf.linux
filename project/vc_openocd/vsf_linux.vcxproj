@@ -22,7 +22,8 @@
     <ClInclude Include="..\..\vsf\source\hal\driver\common\i2c\i2c_request.h" />
     <ClInclude Include="..\..\vsf\source\hal\driver\common\i2c\mrequest_i2c.h" />
     <ClInclude Include="..\..\vsf\source\hal\driver\common\i2c\multiplex_i2c.h" />
-    <ClInclude Include="..\..\vsf\source\hal\driver\common\mmc\mmc_probe.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\sdio\sdio_probe.h" />
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\sdio\sdio_template.h" />
     <ClInclude Include="..\..\vsf\source\hal\driver\common\spi\fifo2req_spi.h" />
     <ClInclude Include="..\..\vsf\source\hal\driver\common\spi\multiplex_spi.h" />
     <ClInclude Include="..\..\vsf\source\hal\driver\common\usart\fifo2req_usart.h" />
@@ -309,7 +310,6 @@
     <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_container.h" />
     <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_control.h" />
     <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_draw.h" />
-    <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_font.h" />
     <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_label.h" />
     <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_list.h" />
     <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_panel.h" />
@@ -554,12 +554,11 @@
     <ClCompile Include="..\..\vsf\source\hal\driver\common\i2c\mrequest_i2c.c" />
     <ClCompile Include="..\..\vsf\source\hal\driver\common\i2c\multiplex_i2c.c" />
     <ClCompile Include="..\..\vsf\source\hal\driver\common\i2s\i2s_common.c" />
-    <ClCompile Include="..\..\vsf\source\hal\driver\common\io\io_common.c" />
-    <ClCompile Include="..\..\vsf\source\hal\driver\common\mmc\mmc_common.c" />
-    <ClCompile Include="..\..\vsf\source\hal\driver\common\mmc\mmc_probe.c" />
     <ClCompile Include="..\..\vsf\source\hal\driver\common\pwm\pwm_common.c" />
     <ClCompile Include="..\..\vsf\source\hal\driver\common\rng\rng_common.c" />
     <ClCompile Include="..\..\vsf\source\hal\driver\common\rtc\rtc_common.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\sdio\sdio_common.c" />
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\sdio\sdio_probe.c" />
     <ClCompile Include="..\..\vsf\source\hal\driver\common\spi\fifo2req_spi.c" />
     <ClCompile Include="..\..\vsf\source\hal\driver\common\spi\multiplex_spi.c" />
     <ClCompile Include="..\..\vsf\source\hal\driver\common\spi\spi_common.c" />
@@ -983,7 +982,6 @@
     <ClCompile Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_container.c" />
     <ClCompile Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_control.c" />
     <ClCompile Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_draw.c" />
-    <ClCompile Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_font.c" />
     <ClCompile Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_label.c" />
     <ClCompile Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_list.c" />
     <ClCompile Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_panel.c" />
@@ -1095,6 +1093,10 @@
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\fnmatch\fnmatch.c" />
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\getopt\getopt_long.c" />
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\glob\glob.c" />
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\regex\regcomp.c" />
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\regex\regerror.c" />
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\regex\regexec.c" />
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\regex\regfree.c" />
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\glibc\vsf_linux_glibc.c" />
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\glibc\vsf_linux_glibc_ctype.c" />
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\glibc\vsf_linux_glibc_pthread.c" />

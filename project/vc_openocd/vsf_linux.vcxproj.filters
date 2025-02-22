@@ -679,12 +679,6 @@
     <Filter Include="vsf\hal\driver\common\i2s">
       <UniqueIdentifier>{f77e9d4f-9678-4c95-8d5c-4f16f6e914d1}</UniqueIdentifier>
     </Filter>
-    <Filter Include="vsf\hal\driver\common\io">
-      <UniqueIdentifier>{40045cff-6efc-4f6d-b951-94d1ac28f066}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="vsf\hal\driver\common\mmc">
-      <UniqueIdentifier>{663746e7-e3e7-460d-b611-3b36bcae2e42}</UniqueIdentifier>
-    </Filter>
     <Filter Include="vsf\hal\driver\common\pwm">
       <UniqueIdentifier>{68c8de43-6f5c-49ef-a880-173aa83c6b06}</UniqueIdentifier>
     </Filter>
@@ -738,6 +732,12 @@
     </Filter>
     <Filter Include="vsf\shell\sys\linux\lib\3rd-party\fnmatch">
       <UniqueIdentifier>{dff5a9d2-b3b4-4c22-b9b4-b53e1a08ef43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\hal\driver\common\sdio">
+      <UniqueIdentifier>{c70a2888-5605-4ce3-bcb7-23c8d40df1e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\shell\sys\linux\lib\3rd-party\regex">
+      <UniqueIdentifier>{84a17cbf-5aa9-42df-b7ad-06d88b3b3453}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -1243,9 +1243,6 @@
       <Filter>vsf\component\ui\tgui\view\simple_view</Filter>
     </ClInclude>
     <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_draw.h">
-      <Filter>vsf\component\ui\tgui\view\simple_view</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_font.h">
       <Filter>vsf\component\ui\tgui\view\simple_view</Filter>
     </ClInclude>
     <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_label.h">
@@ -2280,9 +2277,6 @@
     <ClInclude Include="..\..\vsf\source\hal\driver\common\i2c\multiplex_i2c.h">
       <Filter>vsf\hal\driver\common\i2c</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\vsf\source\hal\driver\common\mmc\mmc_probe.h">
-      <Filter>vsf\hal\driver\common\mmc</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\vsf\source\hal\driver\common\spi\fifo2req_spi.h">
       <Filter>vsf\hal\driver\common\spi</Filter>
     </ClInclude>
@@ -2309,6 +2303,12 @@
     </ClInclude>
     <ClInclude Include="..\..\vsf\source\service\loader\vsf_loader.h">
       <Filter>vsf\service\loader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\sdio\sdio_probe.h">
+      <Filter>vsf\hal\driver\common\sdio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\sdio\sdio_template.h">
+      <Filter>vsf\hal\driver\common\sdio</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -2761,9 +2761,6 @@
     </ClCompile>
     <ClCompile Include="..\..\vsf\source\component\ui\tgui\vsf_tgui_input.c">
       <Filter>vsf\component\ui\tgui</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_font.c">
-      <Filter>vsf\component\ui\tgui\view\simple_view</Filter>
     </ClCompile>
     <ClCompile Include="..\..\vsf\source\component\usb\host\class\DL1x5\vsf_usbh_dl1x5.c">
       <Filter>vsf\component\usb\host\class\DL1x5</Filter>
@@ -3914,15 +3911,6 @@
     <ClCompile Include="..\..\vsf\source\hal\driver\common\i2s\i2s_common.c">
       <Filter>vsf\hal\driver\common\i2s</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\vsf\source\hal\driver\common\io\io_common.c">
-      <Filter>vsf\hal\driver\common\io</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\hal\driver\common\mmc\mmc_common.c">
-      <Filter>vsf\hal\driver\common\mmc</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\hal\driver\common\mmc\mmc_probe.c">
-      <Filter>vsf\hal\driver\common\mmc</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\vsf\source\hal\driver\common\pwm\pwm_common.c">
       <Filter>vsf\hal\driver\common\pwm</Filter>
     </ClCompile>
@@ -3991,6 +3979,24 @@
     </ClCompile>
     <ClCompile Include="..\..\vsf\example\template\demo\linux_demo\dynloader_demo.c">
       <Filter>application\linux_demo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\sdio\sdio_common.c">
+      <Filter>vsf\hal\driver\common\sdio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\sdio\sdio_probe.c">
+      <Filter>vsf\hal\driver\common\sdio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\regex\regcomp.c">
+      <Filter>vsf\shell\sys\linux\lib\3rd-party\regex</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\regex\regerror.c">
+      <Filter>vsf\shell\sys\linux\lib\3rd-party\regex</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\regex\regexec.c">
+      <Filter>vsf\shell\sys\linux\lib\3rd-party\regex</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\regex\regfree.c">
+      <Filter>vsf\shell\sys\linux\lib\3rd-party\regex</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
