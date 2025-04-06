@@ -38,9 +38,9 @@
 // disable arch_heap for better debug experience
 // enable arch_heap for better performance
 // IMPORTANT: for cpp applications, if there is static instance,
-//  VSF_ARCH_PROVIDE_HEAP MUST be enabled, because arch_heap is available before
+//  VSF_USE_ARCH_HEAP MUST be enabled, because arch_heap is available before
 //  vsf system started.
-#define VSF_ARCH_PROVIDE_HEAP                           ENABLED
+#define VSF_USE_ARCH_HEAP                               DISABLED
 
 // cpu usage is not supported in windows/linux/macos
 #define VSF_KERNEL_CFG_CPU_USAGE                        DISABLED
@@ -109,8 +109,6 @@
 #define VSF_HAL_USE_RNG                                 ENABLED
 #define VSF_HAL_USE_DAC                                 DISABLED
 
-#define VSF_AUDIO_USE_WINSOUND                          ENABLED
-
 // winusb does not support hub
 #define VSF_USBH_CFG_ENABLE_ROOT_HUB                    DISABLED
 #define VSF_USBH_USE_HUB                                DISABLED
@@ -160,7 +158,7 @@
 //#   define APP_DISP_SDL2_COLOR                          VSF_DISP_COLOR_RGB565
 //#   define APP_DISP_SDL2_AMPLIFIER                      1
 
-#define VSF_USE_WINSOUND                                ENABLED
+#define VSF_AUDIO_USE_WINSOUND                          ENABLED
 #   define VSF_WINSOUND_CFG_TRACE                       DISABLED
 
 #ifdef __WIN7__

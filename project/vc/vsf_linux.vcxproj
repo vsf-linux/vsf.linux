@@ -705,6 +705,7 @@
     <ClCompile Include="..\..\vsf\source\utilities\language_extension\delegate.c" />
     <ClCompile Include="..\..\vsf\source\utilities\language_extension\simple_sprintf.c" />
     <ClCompile Include="..\..\vsf\source\utilities\language_extension\simple_sscanf.c" />
+    <ClCompile Include="..\..\vsf\source\utilities\language_extension\simple_swprintf.c" />
     <ClCompile Include="..\..\vsf\source\utilities\template\vsf_bitmap.c" />
     <ClCompile Include="..\..\vsf\source\utilities\template\vsf_list.c" />
     <ClCompile Include="..\..\vsf\source\utilities\template\vsf_queue.c" />

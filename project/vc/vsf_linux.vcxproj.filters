@@ -2822,6 +2822,9 @@
     <ClCompile Include="..\..\vsf\source\hal\utilities\remap\sdio\vsf_remapped_sdio.c">
       <Filter>vsf\hal\utilities\remap\sdio</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\vsf\source\utilities\language_extension\simple_swprintf.c">
+      <Filter>vsf\utilities\language_externsion</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\vsf\source\hal\arch\common\arch_without_thread_suspend\vsf_arch_without_thread_suspend_template.inc">
