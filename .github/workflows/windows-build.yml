@@ -48,8 +48,9 @@ jobs:
       run: msbuild /m /p:Configuration=${{matrix.build_config}} project/${{matrix.project_name}}/vsf_linux.sln /property:Configuration=${{matrix.build_config}} /property:Platform=${{matrix.platform}}
 
     - name: Test
+      # TODO: check why only work for wexpect-uv==0.0.2
       run: |
-        pip install pytest pytest-bdd wexpect-uv simple-hexdump
+        pip install pytest pytest-bdd wexpect-uv==0.0.2 simple-hexdump
         if [ ${{matrix.platform}} = x64 ]; then
           template_file="${{github.workspace}}/project/${{matrix.project_name}}/x64/${{matrix.build_config}}/vsf_linux.exe"
         else
