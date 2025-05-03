@@ -49,7 +49,7 @@ jobs:
 
     - name: Test
       run: |
-        pip install pytest pytest-bdd wexpect simple-hexdump
+        pip install pytest pytest-bdd wexpect-uv simple-hexdump
         if [ ${{matrix.platform}} = x64 ]; then
           template_file="${{github.workspace}}/project/${{matrix.project_name}}/x64/${{matrix.build_config}}/vsf_linux.exe"
         else
