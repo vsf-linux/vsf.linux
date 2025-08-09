@@ -907,9 +907,6 @@
     <Filter Include="vsf\hal\driver\common\i2c">
       <UniqueIdentifier>{6e8b0348-39a4-4b10-b142-1d246ee633d0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="vsf\hal\driver\common\io">
-      <UniqueIdentifier>{9062d33f-a62b-4ed1-b078-002065313cb1}</UniqueIdentifier>
-    </Filter>
     <Filter Include="vsf\hal\driver\common\pwm">
       <UniqueIdentifier>{cd893e8d-e2d4-4a17-9f7a-c4825fb0089c}</UniqueIdentifier>
     </Filter>
@@ -948,9 +945,6 @@
     </Filter>
     <Filter Include="vsf\hal\utilities\remap\i2s">
       <UniqueIdentifier>{21f9a498-a60a-4c62-8d7c-3ac79bf6fe35}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="vsf\hal\utilities\remap\io">
-      <UniqueIdentifier>{ab9b3fa7-5a1f-43f0-92f5-75a1552527d8}</UniqueIdentifier>
     </Filter>
     <Filter Include="vsf\hal\utilities\remap\pwm">
       <UniqueIdentifier>{0943a60a-4d87-4b59-a800-dae896bc37a3}</UniqueIdentifier>
@@ -1044,6 +1038,9 @@
     </Filter>
     <Filter Include="vsf\hal\utilities\remap\sdio">
       <UniqueIdentifier>{76d478fd-ffdc-40d4-b848-c2a128e43d09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\component\ui\tgui\view\scgui_view">
+      <UniqueIdentifier>{ea961093-e92e-4532-8b71-9d946600d31c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -1549,9 +1546,6 @@
       <Filter>vsf\component\ui\tgui\view\simple_view</Filter>
     </ClInclude>
     <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_draw.h">
-      <Filter>vsf\component\ui\tgui\view\simple_view</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_font.h">
       <Filter>vsf\component\ui\tgui\view\simple_view</Filter>
     </ClInclude>
     <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_label.h">
@@ -3344,9 +3338,6 @@
     </ClInclude>
     <ClInclude Include="..\..\vsf\source\hal\utilities\remap\i2s\vsf_remapped_i2s.h">
       <Filter>vsf\hal\utilities\remap\i2s</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\vsf\source\hal\utilities\remap\io\vsf_remapped_io.h">
-      <Filter>vsf\hal\utilities\remap\io</Filter>
     </ClInclude>
     <ClInclude Include="..\..\vsf\source\hal\utilities\remap\pwm\vsf_remapped_pwm.h">
       <Filter>vsf\hal\utilities\remap\pwm</Filter>
@@ -5949,6 +5940,42 @@
     <ClInclude Include="..\..\vsf\source\hal\utilities\remap\sdio\vsf_remapped_sdio.h">
       <Filter>vsf\hal\utilities\remap\sdio</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\scgui_view\lvgl.h">
+      <Filter>vsf\component\ui\tgui\view\scgui_view</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\scgui_view\scgui.h">
+      <Filter>vsf\component\ui\tgui\view\scgui_view</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\scgui_view\vsf_tgui_scguiv_button.h">
+      <Filter>vsf\component\ui\tgui\view\scgui_view</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\scgui_view\vsf_tgui_scguiv_container.h">
+      <Filter>vsf\component\ui\tgui\view\scgui_view</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\scgui_view\vsf_tgui_scguiv_control.h">
+      <Filter>vsf\component\ui\tgui\view\scgui_view</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\scgui_view\vsf_tgui_scguiv_label.h">
+      <Filter>vsf\component\ui\tgui\view\scgui_view</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\scgui_view\vsf_tgui_scguiv_list.h">
+      <Filter>vsf\component\ui\tgui\view\scgui_view</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\scgui_view\vsf_tgui_scguiv_panel.h">
+      <Filter>vsf\component\ui\tgui\view\scgui_view</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\scgui_view\vsf_tgui_scguiv_port.h">
+      <Filter>vsf\component\ui\tgui\view\scgui_view</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\scgui_view\vsf_tgui_scguiv_text_list.h">
+      <Filter>vsf\component\ui\tgui\view\scgui_view</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\scgui_view\vsf_tgui_v_template.h">
+      <Filter>vsf\component\ui\tgui\view\scgui_view</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\scgui_view\vsf_tgui_v_type.h">
+      <Filter>vsf\component\ui\tgui\view\scgui_view</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\vsf\source\utilities\template\vsf_bitmap.c">
@@ -6400,9 +6427,6 @@
     </ClCompile>
     <ClCompile Include="..\..\vsf\source\component\ui\tgui\vsf_tgui_input.c">
       <Filter>vsf\component\ui\tgui</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_font.c">
-      <Filter>vsf\component\ui\tgui\view\simple_view</Filter>
     </ClCompile>
     <ClCompile Include="..\..\vsf\source\component\usb\host\class\DL1x5\vsf_usbh_dl1x5.c">
       <Filter>vsf\component\usb\host\class\DL1x5</Filter>
@@ -8294,9 +8318,6 @@
     <ClCompile Include="..\..\vsf\source\hal\driver\common\i2c\i2c_common.c">
       <Filter>vsf\hal\driver\common\i2c</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\vsf\source\hal\driver\common\io\io_common.c">
-      <Filter>vsf\hal\driver\common\io</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\vsf\source\hal\driver\common\pwm\pwm_common.c">
       <Filter>vsf\hal\driver\common\pwm</Filter>
     </ClCompile>
@@ -8332,9 +8353,6 @@
     </ClCompile>
     <ClCompile Include="..\..\vsf\source\hal\utilities\remap\i2s\vsf_remapped_i2s.c">
       <Filter>vsf\hal\utilities\remap\i2s</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\hal\utilities\remap\io\vsf_remapped_io.c">
-      <Filter>vsf\hal\utilities\remap\io</Filter>
     </ClCompile>
     <ClCompile Include="..\..\vsf\source\hal\utilities\remap\pwm\vsf_remapped_pwm.c">
       <Filter>vsf\hal\utilities\remap\pwm</Filter>
@@ -14638,6 +14656,33 @@
     </ClCompile>
     <ClCompile Include="..\..\vsf\source\hal\utilities\remap\sdio\vsf_remapped_sdio.c">
       <Filter>vsf\hal\utilities\remap\sdio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\component\ui\tgui\view\scgui_view\scgui.c">
+      <Filter>vsf\component\ui\tgui\view\scgui_view</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\component\ui\tgui\view\scgui_view\vsf_tgui_scguiv_button.c">
+      <Filter>vsf\component\ui\tgui\view\scgui_view</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\component\ui\tgui\view\scgui_view\vsf_tgui_scguiv_container.c">
+      <Filter>vsf\component\ui\tgui\view\scgui_view</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\component\ui\tgui\view\scgui_view\vsf_tgui_scguiv_control.c">
+      <Filter>vsf\component\ui\tgui\view\scgui_view</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\component\ui\tgui\view\scgui_view\vsf_tgui_scguiv_label.c">
+      <Filter>vsf\component\ui\tgui\view\scgui_view</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\component\ui\tgui\view\scgui_view\vsf_tgui_scguiv_list.c">
+      <Filter>vsf\component\ui\tgui\view\scgui_view</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\component\ui\tgui\view\scgui_view\vsf_tgui_scguiv_panel.c">
+      <Filter>vsf\component\ui\tgui\view\scgui_view</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\component\ui\tgui\view\scgui_view\vsf_tgui_scguiv_port.c">
+      <Filter>vsf\component\ui\tgui\view\scgui_view</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\component\ui\tgui\view\scgui_view\vsf_tgui_scguiv_text_list.c">
+      <Filter>vsf\component\ui\tgui\view\scgui_view</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
