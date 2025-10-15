@@ -209,6 +209,8 @@
     <ClInclude Include="..\..\vsf\source\hal\utilities\remap\i2c\vsf_remapped_i2c.h" />
     <ClInclude Include="..\..\vsf\source\hal\utilities\remap\i2s\vsf_remapped_i2s.h" />
     <ClInclude Include="..\..\vsf\source\hal\utilities\remap\pwm\vsf_remapped_pwm.h" />
+    <ClInclude Include="..\..\vsf\source\hal\utilities\remap\rng\vsf_remapped_rng.h" />
+    <ClInclude Include="..\..\vsf\source\hal\utilities\remap\rtc\vsf_remapped_rtc.h" />
     <ClInclude Include="..\..\vsf\source\hal\utilities\remap\sdio\vsf_remapped_sdio.h" />
     <ClInclude Include="..\..\vsf\source\hal\utilities\remap\spi\vsf_remapped_spi.h" />
     <ClInclude Include="..\..\vsf\source\hal\utilities\remap\usart\vsf_remapped_usart.h" />
@@ -612,6 +614,8 @@
     <ClCompile Include="..\..\vsf\source\hal\utilities\remap\i2c\vsf_remapped_i2c.c" />
     <ClCompile Include="..\..\vsf\source\hal\utilities\remap\i2s\vsf_remapped_i2s.c" />
     <ClCompile Include="..\..\vsf\source\hal\utilities\remap\pwm\vsf_remapped_pwm.c" />
+    <ClCompile Include="..\..\vsf\source\hal\utilities\remap\rng\vsf_remapped_rng.c" />
+    <ClCompile Include="..\..\vsf\source\hal\utilities\remap\rtc\vsf_remapped_rtc.c" />
     <ClCompile Include="..\..\vsf\source\hal\utilities\remap\sdio\vsf_remapped_sdio.c" />
     <ClCompile Include="..\..\vsf\source\hal\utilities\remap\spi\vsf_remapped_spi.c" />
     <ClCompile Include="..\..\vsf\source\hal\utilities\remap\usart\vsf_remapped_usart.c" />

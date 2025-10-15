@@ -754,6 +754,12 @@
     <Filter Include="vsf\hal\utilities\remap\sdio">
       <UniqueIdentifier>{ec94c567-62e1-404a-9d30-ea4da38b1640}</UniqueIdentifier>
     </Filter>
+    <Filter Include="vsf\hal\utilities\remap\rng">
+      <UniqueIdentifier>{bf287dcb-93c9-4637-8d75-600fdc0b70b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\hal\utilities\remap\rtc">
+      <UniqueIdentifier>{c4caa69b-f828-4641-a0d3-9ae916a41f78}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vsf\source\vsf.h">
@@ -2073,6 +2079,12 @@
     <ClInclude Include="..\..\vsf\source\hal\utilities\remap\sdio\vsf_remapped_sdio.h">
       <Filter>vsf\hal\utilities\remap\sdio</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\utilities\remap\rng\vsf_remapped_rng.h">
+      <Filter>vsf\hal\utilities\remap\rng</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\utilities\remap\rtc\vsf_remapped_rtc.h">
+      <Filter>vsf\hal\utilities\remap\rtc</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\vsf\source\utilities\template\vsf_bitmap.c">
@@ -2824,6 +2836,12 @@
     </ClCompile>
     <ClCompile Include="..\..\vsf\source\utilities\language_extension\simple_swprintf.c">
       <Filter>vsf\utilities\language_externsion</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\hal\utilities\remap\rng\vsf_remapped_rng.c">
+      <Filter>vsf\hal\utilities\remap\rng</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\hal\utilities\remap\rtc\vsf_remapped_rtc.c">
+      <Filter>vsf\hal\utilities\remap\rtc</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
