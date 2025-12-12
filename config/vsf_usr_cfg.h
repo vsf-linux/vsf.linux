@@ -105,7 +105,7 @@
 // APP configuration
 #define APP_USE_LINUX_DEMO                              ENABLED
 #define APP_USE_LINUX_MOUNT_DEMO                        ENABLED
-#define APP_USE_LINUX_DYNLOADER_DEMO                    ENABLED
+#define APP_USE_LINUX_DYNLOADER_DEMO                    DISABLED
 #if VSF_USE_USB_HOST == ENABLED && VSF_LINUX_USE_LIBUSB == ENABLED
 #   define APP_USE_LINUX_LIBUSB_DEMO                    ENABLED
 #endif
