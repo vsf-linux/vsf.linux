@@ -40,7 +40,7 @@
 // IMPORTANT: for cpp applications, if there is static instance,
 //  VSF_USE_ARCH_HEAP MUST be enabled, because arch_heap is available before
 //  vsf system started.
-#define VSF_USE_ARCH_HEAP                               DISABLED
+#define VSF_USE_ARCH_HEAP                               ENABLED
 
 // cpu usage is not supported in windows/linux/macos
 #define VSF_KERNEL_CFG_CPU_USAGE                        DISABLED
@@ -69,7 +69,7 @@
 //  Because heap_monitor depends on vsf_linux environment, which is not available
 //  when initialing static instance of cpp.
 #   define VSF_LINUX_SIMPLE_STDLIB_CFG_HEAP_MONITOR     ENABLED
-#       define VSF_LINUX_SIMPLE_STDLIB_CFG_HEAP_MONITOR_TRACE_CALLER    ENABLED
+#       define VSF_LINUX_SIMPLE_STDLIB_CFG_HEAP_MONITOR_TRACE_CALLER    DISABLED
 #       define VSF_LINUX_SIMPLE_STDLIB_HEAP_MONITOR_QUIET   DISABLED
 #       define VSF_LINUX_SIMPLE_STDLIB_HEAP_MONITOR_MAX DISABLED
 // if VSF_LINUX_USE_SIMPLE_LIBC is enabled, need VSF_USE_SIMPLE_SSCANF and VSF_USE_SIMPLE_SPRINTF
@@ -140,8 +140,8 @@
 
 #define VSF_USE_UI                                      ENABLED
 #define VSF_DISP_USE_WINGDI                             ENABLED
-#   define APP_DISP_WINGDI_HEIGHT                       960
-#   define APP_DISP_WINGDI_WIDTH                        1440
+#   define APP_DISP_WINGDI_HEIGHT                       480
+#   define APP_DISP_WINGDI_WIDTH                        640
 #   define APP_DISP_WINGDI_COLOR                        VSF_DISP_COLOR_RGB565
 //#define VSF_DISP_USE_SDL2                               ENABLED
 //#   define VSF_DISP_SDL2_CFG_INCLUDE                    "lib\SDL2\include\SDL.h"

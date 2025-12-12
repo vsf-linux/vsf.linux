@@ -500,6 +500,11 @@ int vsf_linux_create_fhs(void)
     symlink(VSF_LINUX_CFG_BIN_PATH "/busybox", VSF_LINUX_CFG_BIN_PATH "/gunzip");
     symlink(VSF_LINUX_CFG_BIN_PATH "/busybox", VSF_LINUX_CFG_BIN_PATH "/mkfs.vfat");
 #endif
+
+#ifdef __VSF_CPP__
+    // call vsf_arch_cpp_startup only after dependency of cpp initializer is ready
+    vsf_arch_cpp_startup();
+#endif
     return 0;
 }
 
