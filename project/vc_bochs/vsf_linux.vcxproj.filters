@@ -535,9 +535,6 @@
     <Filter Include="vsf\shell\sys\linux\kernel\socket\unix">
       <UniqueIdentifier>{b4aafc7e-3552-4b52-89d7-6d411052cf54}</UniqueIdentifier>
     </Filter>
-    <Filter Include="vsf\shell\sys\linux\lib\glibc\3rd-party">
-      <UniqueIdentifier>{15158a93-39d2-4015-bdf2-063d78c7f496}</UniqueIdentifier>
-    </Filter>
     <Filter Include="vsf\shell\sys\linux\kernel\fs\vfs">
       <UniqueIdentifier>{0913cb33-3d9c-4909-bbe6-4d8870fe17c1}</UniqueIdentifier>
     </Filter>
@@ -775,9 +772,6 @@
     <Filter Include="vsf\hal\driver\common\i2c">
       <UniqueIdentifier>{6e8b0348-39a4-4b10-b142-1d246ee633d0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="vsf\hal\driver\common\io">
-      <UniqueIdentifier>{9062d33f-a62b-4ed1-b078-002065313cb1}</UniqueIdentifier>
-    </Filter>
     <Filter Include="vsf\hal\driver\common\pwm">
       <UniqueIdentifier>{cd893e8d-e2d4-4a17-9f7a-c4825fb0089c}</UniqueIdentifier>
     </Filter>
@@ -789,9 +783,6 @@
     </Filter>
     <Filter Include="vsf\hal\driver\common\i2s">
       <UniqueIdentifier>{a0665efc-4818-44ce-8164-ce257e8e545c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="vsf\hal\driver\common\mmc">
-      <UniqueIdentifier>{b13f2d79-cb31-45a5-8bd0-8cbc7d9ee3dc}</UniqueIdentifier>
     </Filter>
     <Filter Include="vsf\hal\driver\common\spi">
       <UniqueIdentifier>{ba0f6208-c784-4396-92e1-dc4182d3af2e}</UniqueIdentifier>
@@ -822,12 +813,6 @@
     </Filter>
     <Filter Include="vsf\hal\utilities\remap\i2s">
       <UniqueIdentifier>{5343d45a-e21a-4001-937e-421487c7023e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="vsf\hal\utilities\remap\io">
-      <UniqueIdentifier>{e20ffde7-bf53-400c-8d37-72706d0ede6f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="vsf\hal\utilities\remap\mmc">
-      <UniqueIdentifier>{8afa6c0b-7a80-4036-96b3-a863e1dc3866}</UniqueIdentifier>
     </Filter>
     <Filter Include="vsf\hal\utilities\remap\pwm">
       <UniqueIdentifier>{d44103c7-b9f5-4f2f-971a-6712039487b7}</UniqueIdentifier>
@@ -903,6 +888,48 @@
     </Filter>
     <Filter Include="vsf\utilities\language_externsion\cpp">
       <UniqueIdentifier>{4a3f7155-49e7-424f-88c7-44dd07382b18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\hal\driver\common\sdio">
+      <UniqueIdentifier>{5e19feb1-ab5d-4f43-aa3e-dd8cac4d7923}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\hal\utilities\remap\sdio">
+      <UniqueIdentifier>{27c4843b-0e9e-4d21-9b86-120df33363af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\shell\sys\linux\lib\3rd-party">
+      <UniqueIdentifier>{488f8b5e-8ebe-4674-aa38-c741c10e2dfd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\shell\sys\linux\lib\3rd-party\getopt">
+      <UniqueIdentifier>{ecdc917c-5036-4f19-9862-42c008d87391}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\hal\utilities\remap\rtc">
+      <UniqueIdentifier>{d8c3bdfb-8020-4304-9845-652189cbe435}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\hal\driver\x86\win\rng">
+      <UniqueIdentifier>{78196ffb-e72b-4977-9390-50b2be2d96c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\hal\utilities\remap\rng">
+      <UniqueIdentifier>{d13a3193-7988-45d2-8dff-4ea086f44fde}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\shell\sys\linux\lib\3rd-party\glob">
+      <UniqueIdentifier>{e8ec71ec-9707-4a9d-ac17-e3b8e0271860}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\shell\sys\linux\lib\3rd-party\regex">
+      <UniqueIdentifier>{d09bbf81-0464-40ba-8ac9-c4fffa1fa45a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\shell\sys\linux\lib\3rd-party\fnmatch">
+      <UniqueIdentifier>{747a391f-608b-49e9-b164-8601aa3790fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\service\loader">
+      <UniqueIdentifier>{e09653d2-8a2a-4508-b722-e71b047cc3a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\service\loader\elf">
+      <UniqueIdentifier>{7e9abb4c-c80f-4746-9632-1ca59cab28f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\service\loader\elf\arch">
+      <UniqueIdentifier>{efd3a2de-eaec-4c13-81ea-d8b1733a4dec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\service\loader\pe">
+      <UniqueIdentifier>{b3fcc4e7-2f7c-4643-899c-8203e0aab887}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -1408,9 +1435,6 @@
       <Filter>vsf\component\ui\tgui\view\simple_view</Filter>
     </ClInclude>
     <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_draw.h">
-      <Filter>vsf\component\ui\tgui\view\simple_view</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_font.h">
       <Filter>vsf\component\ui\tgui\view\simple_view</Filter>
     </ClInclude>
     <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_label.h">
@@ -2616,12 +2640,6 @@
     <ClInclude Include="..\..\vsf\source\hal\utilities\remap\i2s\vsf_remapped_i2s.h">
       <Filter>vsf\hal\utilities\remap\i2s</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\vsf\source\hal\utilities\remap\io\vsf_remapped_io.h">
-      <Filter>vsf\hal\utilities\remap\io</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\vsf\source\hal\utilities\remap\mmc\vsf_remapped_mmc.h">
-      <Filter>vsf\hal\utilities\remap\mmc</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\vsf\source\hal\utilities\remap\pwm\vsf_remapped_pwm.h">
       <Filter>vsf\hal\utilities\remap\pwm</Filter>
     </ClInclude>
@@ -3231,6 +3249,30 @@
     <ClInclude Include="..\..\application\3rd-party\sdl\Bochs\bochs\iodev\hdimage\cdrom.h">
       <Filter>application\3rd-party\bochs\iodev\hdimage</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\driver\common\sdio\sdio_probe.h">
+      <Filter>vsf\hal\driver\common\sdio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\utilities\remap\sdio\vsf_remapped_sdio.h">
+      <Filter>vsf\hal\utilities\remap\sdio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\utilities\remap\rtc\vsf_remapped_rtc.h">
+      <Filter>vsf\hal\utilities\remap\rtc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\driver\x86\win\rng\rng.h">
+      <Filter>vsf\hal\driver\x86\win\rng</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\utilities\remap\rng\vsf_remapped_rng.h">
+      <Filter>vsf\hal\utilities\remap\rng</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\service\loader\vsf_loader.h">
+      <Filter>vsf\service\loader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\service\loader\elf\vsf_elfloader.h">
+      <Filter>vsf\service\loader\elf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\service\loader\pe\vsf_peloader.h">
+      <Filter>vsf\service\loader\pe</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\vsf\source\utilities\template\vsf_bitmap.c">
@@ -3683,9 +3725,6 @@
     <ClCompile Include="..\..\vsf\source\component\ui\tgui\vsf_tgui_input.c">
       <Filter>vsf\component\ui\tgui</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_font.c">
-      <Filter>vsf\component\ui\tgui\view\simple_view</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\vsf\source\component\usb\host\class\DL1x5\vsf_usbh_dl1x5.c">
       <Filter>vsf\component\usb\host\class\DL1x5</Filter>
     </ClCompile>
@@ -3751,9 +3790,6 @@
     </ClCompile>
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\kernel\fs\vsf_linux_fs.c">
       <Filter>vsf\shell\sys\linux\kernel\fs</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\glibc\3rd-party\getopt_long.c">
-      <Filter>vsf\shell\sys\linux\lib\glibc\3rd-party</Filter>
     </ClCompile>
     <ClCompile Include="..\..\vsf\source\shell\sys\linux\kernel\fs\vfs\vsf_linux_vfs.c">
       <Filter>vsf\shell\sys\linux\kernel\fs\vfs</Filter>
@@ -4535,9 +4571,6 @@
     <ClCompile Include="..\..\vsf\source\hal\driver\common\i2c\i2c_common.c">
       <Filter>vsf\hal\driver\common\i2c</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\vsf\source\hal\driver\common\io\io_common.c">
-      <Filter>vsf\hal\driver\common\io</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\vsf\source\hal\driver\common\pwm\pwm_common.c">
       <Filter>vsf\hal\driver\common\pwm</Filter>
     </ClCompile>
@@ -4549,9 +4582,6 @@
     </ClCompile>
     <ClCompile Include="..\..\vsf\source\hal\driver\common\i2s\i2s_common.c">
       <Filter>vsf\hal\driver\common\i2s</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\hal\driver\common\mmc\mmc_common.c">
-      <Filter>vsf\hal\driver\common\mmc</Filter>
     </ClCompile>
     <ClCompile Include="..\..\vsf\source\hal\driver\common\spi\fifo2req_spi.c">
       <Filter>vsf\hal\driver\common\spi</Filter>
@@ -4579,12 +4609,6 @@
     </ClCompile>
     <ClCompile Include="..\..\vsf\source\hal\utilities\remap\i2s\vsf_remapped_i2s.c">
       <Filter>vsf\hal\utilities\remap\i2s</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\hal\utilities\remap\io\vsf_remapped_io.c">
-      <Filter>vsf\hal\utilities\remap\io</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\hal\utilities\remap\mmc\vsf_remapped_mmc.c">
-      <Filter>vsf\hal\utilities\remap\mmc</Filter>
     </ClCompile>
     <ClCompile Include="..\..\vsf\source\hal\utilities\remap\pwm\vsf_remapped_pwm.c">
       <Filter>vsf\hal\utilities\remap\pwm</Filter>
@@ -5350,6 +5374,66 @@
     </ClCompile>
     <ClCompile Include="..\..\vsf\source\utilities\language_extension\cpp\vsf_cpp.cpp">
       <Filter>vsf\utilities\language_externsion\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\sdio\sdio_common.c">
+      <Filter>vsf\hal\driver\common\sdio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\hal\driver\common\sdio\sdio_probe.c">
+      <Filter>vsf\hal\driver\common\sdio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\hal\utilities\remap\sdio\vsf_remapped_sdio.c">
+      <Filter>vsf\hal\utilities\remap\sdio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\getopt\getopt_long.c">
+      <Filter>vsf\shell\sys\linux\lib\3rd-party\getopt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\hal\utilities\remap\rtc\vsf_remapped_rtc.c">
+      <Filter>vsf\hal\utilities\remap\rtc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\vsf.c">
+      <Filter>vsf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\utilities\compiler\vsf_compiler.c">
+      <Filter>vsf\utilities\compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\hal\driver\x86\win\rng\rng.c">
+      <Filter>vsf\hal\driver\x86\win\rng</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\hal\utilities\remap\rng\vsf_remapped_rng.c">
+      <Filter>vsf\hal\utilities\remap\rng</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\glob\glob.c">
+      <Filter>vsf\shell\sys\linux\lib\3rd-party\glob</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\regex\regcomp.c">
+      <Filter>vsf\shell\sys\linux\lib\3rd-party\regex</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\regex\regerror.c">
+      <Filter>vsf\shell\sys\linux\lib\3rd-party\regex</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\regex\regexec.c">
+      <Filter>vsf\shell\sys\linux\lib\3rd-party\regex</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\regex\regfree.c">
+      <Filter>vsf\shell\sys\linux\lib\3rd-party\regex</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\shell\sys\linux\lib\3rd-party\fnmatch\fnmatch.c">
+      <Filter>vsf\shell\sys\linux\lib\3rd-party\fnmatch</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\service\loader\vsf_loader.c">
+      <Filter>vsf\service\loader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\service\loader\elf\vsf_elfloader.c">
+      <Filter>vsf\service\loader\elf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\service\loader\elf\arch\vsf_elfloader_arm.c">
+      <Filter>vsf\service\loader\elf\arch</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\service\loader\elf\arch\vsf_elfloader_x64.c">
+      <Filter>vsf\service\loader\elf\arch</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\service\loader\pe\vsf_peloader.c">
+      <Filter>vsf\service\loader\pe</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
