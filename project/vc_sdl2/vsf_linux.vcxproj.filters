@@ -1048,6 +1048,15 @@
     <Filter Include="vsf\hal\utilities\remap\rtc">
       <UniqueIdentifier>{e39b559d-a922-445f-8c8a-a4d3362bb022}</UniqueIdentifier>
     </Filter>
+    <Filter Include="application\3rd-party\sdl\raw\src\haptic">
+      <UniqueIdentifier>{55278de3-898e-4657-8954-cdbd2e6f9ee9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\sdl\raw\src\haptic\linux">
+      <UniqueIdentifier>{18ca1c1e-efd7-4be2-a6d8-70d957b17bdb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\sdl\raw\src\joystick\linux">
+      <UniqueIdentifier>{ba05e6a4-079b-4441-9ba6-f5db649dfbb5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vsf\source\vsf.h">
@@ -5987,6 +5996,15 @@
     </ClInclude>
     <ClInclude Include="..\..\vsf\source\hal\utilities\remap\rtc\vsf_remapped_rtc.h">
       <Filter>vsf\hal\utilities\remap\rtc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\haptic\SDL_haptic_c.h">
+      <Filter>application\3rd-party\sdl\raw\src\haptic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\haptic\SDL_syshaptic.h">
+      <Filter>application\3rd-party\sdl\raw\src\haptic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\joystick\linux\SDL_sysjoystick_c.h">
+      <Filter>application\3rd-party\sdl\raw\src\joystick\linux</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -14701,6 +14719,15 @@
     </ClCompile>
     <ClCompile Include="..\..\vsf\source\hal\utilities\remap\rtc\vsf_remapped_rtc.c">
       <Filter>vsf\hal\utilities\remap\rtc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\haptic\SDL_haptic.c">
+      <Filter>application\3rd-party\sdl\raw\src\haptic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\haptic\linux\SDL_syshaptic.c">
+      <Filter>application\3rd-party\sdl\raw\src\haptic\linux</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\joystick\linux\SDL_sysjoystick.c">
+      <Filter>application\3rd-party\sdl\raw\src\joystick\linux</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

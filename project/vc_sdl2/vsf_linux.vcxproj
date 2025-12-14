@@ -1027,7 +1027,10 @@
     <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\events\SDL_sysevents.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\events\SDL_touch_c.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\events\SDL_windowevents_c.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\haptic\SDL_haptic_c.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\haptic\SDL_syshaptic.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\joystick\controller_type.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\joystick\linux\SDL_sysjoystick_c.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\joystick\SDL_gamecontrollerdb.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\joystick\SDL_joystick_c.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\joystick\SDL_sysjoystick.h" />
@@ -4148,7 +4151,10 @@
     <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\events\SDL_windowevents.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\filesystem\unix\SDL_sysfilesystem.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\file\SDL_rwops.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\haptic\linux\SDL_syshaptic.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\haptic\SDL_haptic.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\joystick\dummy\SDL_sysjoystick.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\joystick\linux\SDL_sysjoystick.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\joystick\SDL_gamecontroller.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\joystick\SDL_joystick.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\render\SDL_d3dmath.c" />
