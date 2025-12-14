@@ -1042,6 +1042,12 @@
     <Filter Include="vsf\component\ui\tgui\view\scgui_view">
       <UniqueIdentifier>{ea961093-e92e-4532-8b71-9d946600d31c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="vsf\hal\utilities\remap\rng">
+      <UniqueIdentifier>{3bfa90b3-c00e-4141-be72-5fb466f79834}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\hal\utilities\remap\rtc">
+      <UniqueIdentifier>{e39b559d-a922-445f-8c8a-a4d3362bb022}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vsf\source\vsf.h">
@@ -5975,6 +5981,12 @@
     </ClInclude>
     <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\scgui_view\vsf_tgui_v_type.h">
       <Filter>vsf\component\ui\tgui\view\scgui_view</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\utilities\remap\rng\vsf_remapped_rng.h">
+      <Filter>vsf\hal\utilities\remap\rng</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\utilities\remap\rtc\vsf_remapped_rtc.h">
+      <Filter>vsf\hal\utilities\remap\rtc</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -14683,6 +14695,12 @@
     </ClCompile>
     <ClCompile Include="..\..\vsf\source\component\ui\tgui\view\scgui_view\vsf_tgui_scguiv_text_list.c">
       <Filter>vsf\component\ui\tgui\view\scgui_view</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\hal\utilities\remap\rng\vsf_remapped_rng.c">
+      <Filter>vsf\hal\utilities\remap\rng</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\hal\utilities\remap\rtc\vsf_remapped_rtc.c">
+      <Filter>vsf\hal\utilities\remap\rtc</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
