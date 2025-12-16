@@ -49,10 +49,22 @@ static int __sdlpal_main(int argc, char *argv[])
     fontglyph_cn = &__fontglyph_cn[0];
 
     // unicode_font and font_width should be placed in ram with 65536 size
-    extern unsigned char (*unicode_font)[32], __unicode_font[][32];
-    extern unsigned char *font_width, __font_width[];
-    unicode_font = &__unicode_font[0];
-    font_width = &__font_width[0];
+    extern unsigned char (*unicode_font)[32], __unicode_font[65536][32];
+    extern unsigned char *font_width, __font_width[65536];
+    unicode_font = malloc(sizeof(__unicode_font));
+    if (NULL == unicode_font) {
+        printf("sdlpal: malloc unicode_font failed!\n");
+        return -1;
+    }
+    memcpy(unicode_font, __unicode_font, sizeof(__unicode_font));
+
+    font_width = malloc(sizeof(__font_width));
+    if (NULL == font_width) {
+        printf("sdlpal: malloc font_width failed!\n");
+        free(unicode_font);
+        return -1;
+    }
+    memcpy(font_width, __font_width, sizeof(__font_width));
 #   endif
 
     extern int sdlpal_main(int argc, char *argv[]);
