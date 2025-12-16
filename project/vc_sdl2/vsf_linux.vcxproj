@@ -1010,6 +1010,7 @@
     <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\audio\SDL_audio_resampler_filter.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\audio\SDL_sysaudio.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\audio\SDL_wave.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\core\linux\SDL_evdev_capabilities.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\events\blank_cursor.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\events\default_cursor.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\events\imKStoUCS.h" />
@@ -1034,6 +1035,7 @@
     <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\joystick\SDL_gamecontrollerdb.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\joystick\SDL_joystick_c.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\joystick\SDL_sysjoystick.h" />
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\joystick\steam\SDL_steamcontroller.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\joystick\usb_ids.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\render\SDL_d3dmath.h" />
     <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\render\SDL_sysrender.h" />
@@ -4137,6 +4139,7 @@
     <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\audio\SDL_audiotypecvt.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\audio\SDL_mixer.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\audio\SDL_wave.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\core\linux\SDL_evdev_capabilities.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\cpuinfo\SDL_cpuinfo.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\events\imKStoUCS.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\events\SDL_clipboardevents.c" />
@@ -4157,6 +4160,7 @@
     <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\joystick\linux\SDL_sysjoystick.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\joystick\SDL_gamecontroller.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\joystick\SDL_joystick.c" />
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\joystick\steam\SDL_steamcontroller.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\render\SDL_d3dmath.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\render\SDL_render.c" />
     <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\render\SDL_yuv_sw.c" />

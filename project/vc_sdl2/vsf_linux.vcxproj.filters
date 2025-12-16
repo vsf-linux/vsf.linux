@@ -1057,6 +1057,15 @@
     <Filter Include="application\3rd-party\sdl\raw\src\joystick\linux">
       <UniqueIdentifier>{ba05e6a4-079b-4441-9ba6-f5db649dfbb5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="application\3rd-party\sdl\raw\src\joystick\steam">
+      <UniqueIdentifier>{8ffe9539-db1e-46aa-942f-457d0d5f6000}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\sdl\raw\src\core">
+      <UniqueIdentifier>{70f752ea-a39f-41b0-ae9e-910250d445f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\3rd-party\sdl\raw\src\core\linux">
+      <UniqueIdentifier>{f4364ac3-19cf-4167-bb5a-5435ded163eb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vsf\source\vsf.h">
@@ -6005,6 +6014,12 @@
     </ClInclude>
     <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\joystick\linux\SDL_sysjoystick_c.h">
       <Filter>application\3rd-party\sdl\raw\src\joystick\linux</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\joystick\steam\SDL_steamcontroller.h">
+      <Filter>application\3rd-party\sdl\raw\src\joystick\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\application\3rd-party\sdl\raw\src\core\linux\SDL_evdev_capabilities.h">
+      <Filter>application\3rd-party\sdl\raw\src\core\linux</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -14728,6 +14743,12 @@
     </ClCompile>
     <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\joystick\linux\SDL_sysjoystick.c">
       <Filter>application\3rd-party\sdl\raw\src\joystick\linux</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\joystick\steam\SDL_steamcontroller.c">
+      <Filter>application\3rd-party\sdl\raw\src\joystick\steam</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\application\3rd-party\sdl\raw\src\core\linux\SDL_evdev_capabilities.c">
+      <Filter>application\3rd-party\sdl\raw\src\core\linux</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
