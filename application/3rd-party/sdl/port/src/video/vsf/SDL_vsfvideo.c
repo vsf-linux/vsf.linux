@@ -305,6 +305,20 @@ VSF_UpdateWindowFramebuffer(_THIS, SDL_Window * window, const SDL_Rect * rects, 
     return 0;
 }
 
+static void
+VSF_ShowWindow(SDL_VideoDevice* _this, SDL_Window* window)
+{
+    SDL_SetMouseFocus(window);
+    SDL_SetKeyboardFocus(window);
+}
+
+static void
+VSF_HideWindow(SDL_VideoDevice* _this, SDL_Window* window)
+{
+    SDL_SetMouseFocus(NULL);
+    SDL_SetKeyboardFocus(NULL);
+}
+
 static int
 VSF_VideoInit(_THIS)
 {
@@ -370,6 +384,8 @@ VSF_CreateDevice(int devindex)
     /* Set the function pointers */
     device->VideoInit = VSF_VideoInit;
     device->VideoQuit = VSF_VideoQuit;
+    device->ShowWindow = VSF_ShowWindow;
+    device->HideWindow = VSF_HideWindow;
     device->PumpEvents = VSF_PumpEvents;
     device->WaitEventTimeout = VSF_WaitEventTimeout;
     device->CreateWindowFramebuffer = VSF_CreateWindowFramebuffer;
