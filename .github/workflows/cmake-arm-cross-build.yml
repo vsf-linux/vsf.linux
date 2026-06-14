@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
       with:
         submodules: true # without recursive
 
@@ -25,7 +25,7 @@ jobs:
       run: git -C vsf submodule update --init
 
     - name: arm-none-eabi-gcc
-      uses: carlosperate/arm-none-eabi-gcc-action@v1
+      uses: carlosperate/arm-none-eabi-gcc-action@v1.12.3
       with:
         release: ${{matrix.cc}}
     - name: install depends

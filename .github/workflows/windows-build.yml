@@ -7,7 +7,7 @@ on:
 
 jobs:
   windows-build:
-    runs-on: windows-latest
+    runs-on: ${{ matrix.os }}
 
     strategy:
       fail-fast: false
@@ -18,20 +18,25 @@ jobs:
         platform: [x86, x64]
         # https://docs.microsoft.com/en-us/visualstudio/install/visual-studio-build-numbers-and-release-dates?view=vs-2019
         # https://docs.microsoft.com/en-us/visualstudio/install/visual-studio-build-numbers-and-release-dates?view=vs-2022
-        os: [windows-2019, windows-2022]
+        os: [windows-2019, windows-2022, windows-2025]
         include:
             - os: windows-2019
-              vs-version: '[17.0, 18)'
-            - os: windows-2022
               vs-version: '[16.0, 17)'
+            - os: windows-2022
+              vs-version: '[17.0, 18)'
+            - os: windows-2025
+              vs-version: '[18.0, 19)'
 
     steps:
     - name: Add MSBuild to PATH
-      uses: microsoft/setup-msbuild@v1.0.2
+      uses: microsoft/setup-msbuild@v3
+      with:
+        vs-version: ${{ matrix.vs-version }}
 
     - name: Checkout With Submodule
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
       with:
+        persist-credentials: true
         submodules: true # without recursive
 
     - name: Checkout VSF Submodule
@@ -48,9 +53,9 @@ jobs:
       run: msbuild /m /p:Configuration=${{matrix.build_config}} project/${{matrix.project_name}}/vsf_linux.sln /property:Configuration=${{matrix.build_config}} /property:Platform=${{matrix.platform}}
 
     - name: Test
-      # TODO: check why only work for wexpect-uv==0.0.2
+      # wexpect (was wexpect-uv==0.0.2)
       run: |
-        pip install pytest pytest-bdd wexpect-uv==0.0.2 simple-hexdump
+        pip install pytest pytest-bdd wexpect simple-hexdump
         if [ ${{matrix.platform}} = x64 ]; then
           template_file="${{github.workspace}}/project/${{matrix.project_name}}/x64/${{matrix.build_config}}/vsf_linux.exe"
         else
