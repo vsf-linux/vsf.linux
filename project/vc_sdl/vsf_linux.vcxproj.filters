@@ -766,6 +766,18 @@
     <Filter Include="vsf\hal\driver\x86\win\rng">
       <UniqueIdentifier>{44f4400a-5148-4d12-9ea8-e5f8759f07dc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="vsf\hal\utilities">
+      <UniqueIdentifier>{c43962c1-22c4-43f7-bc92-a145b89c5d0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\hal\utilities\remap">
+      <UniqueIdentifier>{f6921c8a-bfcd-45c6-84b7-613a0a2567e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\hal\utilities\remap\rng">
+      <UniqueIdentifier>{a5ce365e-371b-4eef-b694-87b9b03afe90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\hal\utilities\remap\rtc">
+      <UniqueIdentifier>{79f04a87-b6b3-4541-ae3e-692917df8d3e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vsf\source\vsf.h">
@@ -2337,6 +2349,12 @@
     <ClInclude Include="..\..\vsf\source\hal\driver\x86\win\rng\rng.h">
       <Filter>vsf\hal\driver\x86\win\rng</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\utilities\remap\rng\vsf_remapped_rng.h">
+      <Filter>vsf\hal\utilities\remap\rng</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\utilities\remap\rtc\vsf_remapped_rtc.h">
+      <Filter>vsf\hal\utilities\remap\rtc</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\vsf\source\utilities\template\vsf_bitmap.c">
@@ -3889,6 +3907,15 @@
     </ClCompile>
     <ClCompile Include="..\..\vsf\source\hal\driver\x86\win\rng\rng.c">
       <Filter>vsf\hal\driver\x86\win\rng</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\hal\utilities\remap\rng\vsf_remapped_rng.c">
+      <Filter>vsf\hal\utilities\remap\rng</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\hal\utilities\remap\rtc\vsf_remapped_rtc.c">
+      <Filter>vsf\hal\utilities\remap\rtc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\utilities\language_extension\simple_swprintf.c">
+      <Filter>vsf\utilities\language_externsion</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

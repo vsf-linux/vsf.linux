@@ -372,6 +372,8 @@
     <ClInclude Include="..\..\vsf\source\hal\driver\x86\win\rng\rng.h" />
     <ClInclude Include="..\..\vsf\source\hal\driver\x86\win\rtc\rtc.h" />
     <ClInclude Include="..\..\vsf\source\hal\driver\x86\win\uart\uart.h" />
+    <ClInclude Include="..\..\vsf\source\hal\utilities\remap\rng\vsf_remapped_rng.h" />
+    <ClInclude Include="..\..\vsf\source\hal\utilities\remap\rtc\vsf_remapped_rtc.h" />
     <ClInclude Include="..\..\vsf\source\hal\vsf_hal.h" />
     <ClInclude Include="..\..\vsf\source\hal\vsf_hal_cfg.h" />
     <ClInclude Include="..\..\vsf\source\kernel\shell\simple\vsf_simple.h" />
@@ -962,6 +964,8 @@
     <ClCompile Include="..\..\vsf\source\hal\driver\x86\win\rng\rng.c" />
     <ClCompile Include="..\..\vsf\source\hal\driver\x86\win\rtc\rtc.c" />
     <ClCompile Include="..\..\vsf\source\hal\driver\x86\win\uart\uart.c" />
+    <ClCompile Include="..\..\vsf\source\hal\utilities\remap\rng\vsf_remapped_rng.c" />
+    <ClCompile Include="..\..\vsf\source\hal\utilities\remap\rtc\vsf_remapped_rtc.c" />
     <ClCompile Include="..\..\vsf\source\hal\vsf_hal.c" />
     <ClCompile Include="..\..\vsf\source\kernel\shell\simple\vsf_simple_bmpevt.c" />
     <ClCompile Include="..\..\vsf\source\kernel\shell\simple\vsf_simple_task.c" />
@@ -1062,6 +1066,7 @@
     <ClCompile Include="..\..\vsf\source\utilities\language_extension\delegate.c" />
     <ClCompile Include="..\..\vsf\source\utilities\language_extension\simple_sprintf.c" />
     <ClCompile Include="..\..\vsf\source\utilities\language_extension\simple_sscanf.c" />
+    <ClCompile Include="..\..\vsf\source\utilities\language_extension\simple_swprintf.c" />
     <ClCompile Include="..\..\vsf\source\utilities\template\vsf_bitmap.c" />
     <ClCompile Include="..\..\vsf\source\utilities\template\vsf_list.c" />
     <ClCompile Include="..\..\vsf\source\utilities\template\vsf_queue.c" />
