@@ -625,9 +625,6 @@
     <Filter Include="vsf\hal\driver\common\i2c">
       <UniqueIdentifier>{027e69cc-bb2c-4e15-93ec-5535b5977a1c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="vsf\hal\driver\common\io">
-      <UniqueIdentifier>{2e36809c-b123-4d7a-b52c-0aaff4247867}</UniqueIdentifier>
-    </Filter>
     <Filter Include="vsf\hal\driver\common\rtc">
       <UniqueIdentifier>{cb40b38e-8e30-495c-ab18-c565c395e37d}</UniqueIdentifier>
     </Filter>
@@ -708,9 +705,6 @@
     </Filter>
     <Filter Include="vsf\hal\utilities\remap\spi">
       <UniqueIdentifier>{21b1bf2d-1d57-414c-83c8-ee185baf37f0}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="vsf\hal\utilities\remap\io">
-      <UniqueIdentifier>{9f53e8b0-9a23-40c4-aa0a-4c743150c054}</UniqueIdentifier>
     </Filter>
     <Filter Include="vsf\hal\utilities\remap\pwm">
       <UniqueIdentifier>{fca5b33a-5a00-44f7-bc73-8564efad052b}</UniqueIdentifier>
@@ -816,6 +810,12 @@
     </Filter>
     <Filter Include="vsf\hal\utilities\remap\sdio">
       <UniqueIdentifier>{ec94c567-62e1-404a-9d30-ea4da38b1640}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\hal\utilities\remap\rtc">
+      <UniqueIdentifier>{a6d6cba4-b27c-4796-8432-5b5858fc38c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vsf\hal\utilities\remap\rng">
+      <UniqueIdentifier>{8fc4fbc4-0876-4f20-86fc-18f0119f77cf}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -1321,9 +1321,6 @@
       <Filter>vsf\component\ui\tgui\view\simple_view</Filter>
     </ClInclude>
     <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_draw.h">
-      <Filter>vsf\component\ui\tgui\view\simple_view</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_font.h">
       <Filter>vsf\component\ui\tgui\view\simple_view</Filter>
     </ClInclude>
     <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_label.h">
@@ -1842,9 +1839,6 @@
     <ClInclude Include="..\..\vsf\source\hal\driver\common\pwm\pwm_template.h">
       <Filter>vsf\hal\driver\common\pwm</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\vsf\source\hal\driver\common\io\io_template.h">
-      <Filter>vsf\hal\driver\common\io</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\vsf\source\hal\driver\common\i2c\i2c_request.h">
       <Filter>vsf\hal\driver\common\i2c</Filter>
     </ClInclude>
@@ -2076,9 +2070,6 @@
     <ClInclude Include="..\..\vsf\source\hal\utilities\remap\spi\vsf_remapped_spi.h">
       <Filter>vsf\hal\utilities\remap\spi</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\vsf\source\hal\utilities\remap\io\vsf_remapped_io.h">
-      <Filter>vsf\hal\utilities\remap\io</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\vsf\source\hal\utilities\remap\pwm\vsf_remapped_pwm.h">
       <Filter>vsf\hal\utilities\remap\pwm</Filter>
     </ClInclude>
@@ -2177,6 +2168,12 @@
     </ClInclude>
     <ClInclude Include="..\..\vsf\source\hal\utilities\remap\sdio\vsf_remapped_sdio.h">
       <Filter>vsf\hal\utilities\remap\sdio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\utilities\remap\rtc\vsf_remapped_rtc.h">
+      <Filter>vsf\hal\utilities\remap\rtc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vsf\source\hal\utilities\remap\rng\vsf_remapped_rng.h">
+      <Filter>vsf\hal\utilities\remap\rng</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -2636,9 +2633,6 @@
     <ClCompile Include="..\..\vsf\source\component\ui\tgui\vsf_tgui_input.c">
       <Filter>vsf\component\ui\tgui</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_font.c">
-      <Filter>vsf\component\ui\tgui\view\simple_view</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\vsf\source\component\usb\host\class\DL1x5\vsf_usbh_dl1x5.c">
       <Filter>vsf\component\usb\host\class\DL1x5</Filter>
     </ClCompile>
@@ -2798,9 +2792,6 @@
     <ClCompile Include="..\..\vsf\source\hal\driver\common\pwm\pwm_common.c">
       <Filter>vsf\hal\driver\common\pwm</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\vsf\source\hal\driver\common\io\io_common.c">
-      <Filter>vsf\hal\driver\common\io</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\vsf\source\hal\driver\common\i2c\i2c_common.c">
       <Filter>vsf\hal\driver\common\i2c</Filter>
     </ClCompile>
@@ -2863,9 +2854,6 @@
     </ClCompile>
     <ClCompile Include="..\..\vsf\source\hal\utilities\remap\spi\vsf_remapped_spi.c">
       <Filter>vsf\hal\utilities\remap\spi</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\vsf\source\hal\utilities\remap\io\vsf_remapped_io.c">
-      <Filter>vsf\hal\utilities\remap\io</Filter>
     </ClCompile>
     <ClCompile Include="..\..\vsf\source\hal\utilities\remap\pwm\vsf_remapped_pwm.c">
       <Filter>vsf\hal\utilities\remap\pwm</Filter>
@@ -3866,6 +3854,15 @@
     <ClCompile Include="..\..\vsf\source\hal\utilities\remap\sdio\vsf_remapped_sdio.c">
       <Filter>vsf\hal\utilities\remap\sdio</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\vsf\source\hal\utilities\remap\rtc\vsf_remapped_rtc.c">
+      <Filter>vsf\hal\utilities\remap\rtc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\hal\utilities\remap\rng\vsf_remapped_rng.c">
+      <Filter>vsf\hal\utilities\remap\rng</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vsf\source\utilities\language_extension\simple_swprintf.c">
+      <Filter>vsf\utilities\language_externsion</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\vsf\source\hal\arch\common\arch_without_thread_suspend\vsf_arch_without_thread_suspend_template.inc">
@@ -3894,9 +3891,6 @@
     </None>
     <None Include="..\..\vsf\source\hal\driver\common\pwm\timer_to_pwm.inc">
       <Filter>vsf\hal\driver\common\pwm</Filter>
-    </None>
-    <None Include="..\..\vsf\source\hal\driver\common\io\io_template.inc">
-      <Filter>vsf\hal\driver\common\io</Filter>
     </None>
     <None Include="..\..\vsf\source\hal\driver\common\i2c\i2c_template.inc">
       <Filter>vsf\hal\driver\common\i2c</Filter>

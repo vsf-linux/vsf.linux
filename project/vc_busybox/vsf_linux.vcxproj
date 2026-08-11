@@ -111,7 +111,6 @@
     <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_container.h" />
     <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_control.h" />
     <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_draw.h" />
-    <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_font.h" />
     <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_label.h" />
     <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_list.h" />
     <ClInclude Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_panel.h" />
@@ -194,7 +193,6 @@
     <ClInclude Include="..\..\vsf\source\hal\driver\common\i2c\i2c_request.h" />
     <ClInclude Include="..\..\vsf\source\hal\driver\common\i2c\i2c_template.h" />
     <ClInclude Include="..\..\vsf\source\hal\driver\common\i2c\multiplex_i2c.h" />
-    <ClInclude Include="..\..\vsf\source\hal\driver\common\io\io_template.h" />
     <ClInclude Include="..\..\vsf\source\hal\driver\common\pwm\pwm_template.h" />
     <ClInclude Include="..\..\vsf\source\hal\driver\common\rng\rng_template.h" />
     <ClInclude Include="..\..\vsf\source\hal\driver\common\rtc\rtc_common.h" />
@@ -219,8 +217,9 @@
     <ClInclude Include="..\..\vsf\source\hal\utilities\remap\gpio\vsf_remapped_gpio.h" />
     <ClInclude Include="..\..\vsf\source\hal\utilities\remap\i2c\vsf_remapped_i2c.h" />
     <ClInclude Include="..\..\vsf\source\hal\utilities\remap\i2s\vsf_remapped_i2s.h" />
-    <ClInclude Include="..\..\vsf\source\hal\utilities\remap\io\vsf_remapped_io.h" />
     <ClInclude Include="..\..\vsf\source\hal\utilities\remap\pwm\vsf_remapped_pwm.h" />
+    <ClInclude Include="..\..\vsf\source\hal\utilities\remap\rng\vsf_remapped_rng.h" />
+    <ClInclude Include="..\..\vsf\source\hal\utilities\remap\rtc\vsf_remapped_rtc.h" />
     <ClInclude Include="..\..\vsf\source\hal\utilities\remap\sdio\vsf_remapped_sdio.h" />
     <ClInclude Include="..\..\vsf\source\hal\utilities\remap\spi\vsf_remapped_spi.h" />
     <ClInclude Include="..\..\vsf\source\hal\utilities\remap\usart\vsf_remapped_usart.h" />
@@ -862,7 +861,6 @@
     <ClCompile Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_container.c" />
     <ClCompile Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_control.c" />
     <ClCompile Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_draw.c" />
-    <ClCompile Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_font.c" />
     <ClCompile Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_label.c" />
     <ClCompile Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_list.c" />
     <ClCompile Include="..\..\vsf\source\component\ui\tgui\view\simple_view\vsf_tgui_sv_panel.c" />
@@ -920,7 +918,6 @@
     <ClCompile Include="..\..\vsf\source\hal\driver\common\i2c\i2c_request.c" />
     <ClCompile Include="..\..\vsf\source\hal\driver\common\i2c\multiplex_i2c.c" />
     <ClCompile Include="..\..\vsf\source\hal\driver\common\i2s\i2s_common.c" />
-    <ClCompile Include="..\..\vsf\source\hal\driver\common\io\io_common.c" />
     <ClCompile Include="..\..\vsf\source\hal\driver\common\pwm\pwm_common.c" />
     <ClCompile Include="..\..\vsf\source\hal\driver\common\rng\rng_common.c" />
     <ClCompile Include="..\..\vsf\source\hal\driver\common\rtc\rtc_common.c" />
@@ -942,8 +939,9 @@
     <ClCompile Include="..\..\vsf\source\hal\utilities\remap\gpio\vsf_remapped_gpio.c" />
     <ClCompile Include="..\..\vsf\source\hal\utilities\remap\i2c\vsf_remapped_i2c.c" />
     <ClCompile Include="..\..\vsf\source\hal\utilities\remap\i2s\vsf_remapped_i2s.c" />
-    <ClCompile Include="..\..\vsf\source\hal\utilities\remap\io\vsf_remapped_io.c" />
     <ClCompile Include="..\..\vsf\source\hal\utilities\remap\pwm\vsf_remapped_pwm.c" />
+    <ClCompile Include="..\..\vsf\source\hal\utilities\remap\rng\vsf_remapped_rng.c" />
+    <ClCompile Include="..\..\vsf\source\hal\utilities\remap\rtc\vsf_remapped_rtc.c" />
     <ClCompile Include="..\..\vsf\source\hal\utilities\remap\sdio\vsf_remapped_sdio.c" />
     <ClCompile Include="..\..\vsf\source\hal\utilities\remap\spi\vsf_remapped_spi.c" />
     <ClCompile Include="..\..\vsf\source\hal\utilities\remap\usart\vsf_remapped_usart.c" />
@@ -1037,6 +1035,7 @@
     <ClCompile Include="..\..\vsf\source\utilities\language_extension\delegate.c" />
     <ClCompile Include="..\..\vsf\source\utilities\language_extension\simple_sprintf.c" />
     <ClCompile Include="..\..\vsf\source\utilities\language_extension\simple_sscanf.c" />
+    <ClCompile Include="..\..\vsf\source\utilities\language_extension\simple_swprintf.c" />
     <ClCompile Include="..\..\vsf\source\utilities\template\vsf_bitmap.c" />
     <ClCompile Include="..\..\vsf\source\utilities\template\vsf_list.c" />
     <ClCompile Include="..\..\vsf\source\utilities\template\vsf_queue.c" />
@@ -1053,7 +1052,6 @@
     <None Include="..\..\vsf\source\hal\driver\common\adc\adc_template.inc" />
     <None Include="..\..\vsf\source\hal\driver\common\flash\flash_template.inc" />
     <None Include="..\..\vsf\source\hal\driver\common\i2c\i2c_template.inc" />
-    <None Include="..\..\vsf\source\hal\driver\common\io\io_template.inc" />
     <None Include="..\..\vsf\source\hal\driver\common\pwm\pwm_template.inc" />
     <None Include="..\..\vsf\source\hal\driver\common\pwm\timer_to_pwm.inc" />
     <None Include="..\..\vsf\source\hal\driver\common\rng\rng_template.inc" />
@@ -1154,7 +1152,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>__VSF__;__CPU_X86__;__WIN__;__VSF_CPP__;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;APP_USE_LINUX_BUSYBOX_DEMO=ENABLED;BB_VER="1.37.0.git";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\busybox\port;$(ProjectDir)..\..\application\3rd-party\busybox\raw\include;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\busybox\port;$(ProjectDir)..\..\application\3rd-party\busybox\raw\include;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc\arch\win;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc\limits;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-fms-extensions -Xclang -includeD:\vsf.linux\application\3rd-party\busybox\port\autoconf.h %(AdditionalOptions)</AdditionalOptions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -1182,7 +1180,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>__VSF__;__CPU_X64__;__WIN__;__VSF_CPP__;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;APP_USE_LINUX_BUSYBOX_DEMO=ENABLED;BB_VER="1.37.0.git";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\busybox\port;$(ProjectDir)..\..\application\3rd-party\busybox\raw\include;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc\limits;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\application;$(ProjectDir)..\..\application\3rd-party\busybox\port;$(ProjectDir)..\..\application\3rd-party\busybox\raw\include;$(ProjectDir)..\..\config\3rd-party;$(ProjectDir)..\..\vsf\example\template\demo\common;$(ProjectDir)..\..\vsf\source;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc\arch\win;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\simple_libc\limits;$(ProjectDir)..\..\vsf\source\shell\sys\linux\include\libusb;$(ProjectDir)..\..\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-fms-extensions -Xclang -includeD:\vsf.linux\application\3rd-party\busybox\port\autoconf.h %(AdditionalOptions)</AdditionalOptions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <ExceptionHandling>Sync</ExceptionHandling>
